@@ -27,7 +27,7 @@ export default function Home() {
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Calculate Your ROI with HyperVerge</h2>
             <p className="mx-auto max-w-3xl text-muted-foreground">
-              See how much your organization can save by implementing our AI-powered industry classification solution
+              See how much your organization can save by implementing our industry classification solution
             </p>
           </div>
           <ROICalculator />
