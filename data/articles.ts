@@ -62,7 +62,7 @@ export const articles: Article[] = [
       name: "Sarah Johnson",
       title: "Chief Data Scientist",
       avatar: "/avatar-sarah.png",
-      bio: "Sarah has over 15 years of experience in data science and machine learning, with a focus on financial services applications. She leads the data science team at HyperVerge.",
+      bio: "Sarah has over 15 years of experience in data science and machine learning, with a focus on financial services applications. She leads the data science team at DocsAPI.",
       twitter: "https://twitter.com/sarahjohnson",
       linkedin: "https://linkedin.com/in/sarahjohnson",
     },

@@ -22,9 +22,9 @@ export const newsletters: Newsletter[] = [
   },
   {
     id: "2",
-    title: "HyperVerge Product Updates - August 2023",
-    slug: "hyperverge-product-updates-august-2023",
-    excerpt: "New features, improvements, and integrations added to the HyperVerge platform in the past month.",
+    title: "DocsAPI Product Updates - August 2023",
+    slug: "DocsAPI-product-updates-august-2023",
+    excerpt: "New features, improvements, and integrations added to the DocsAPI platform in the past month.",
     content: "Full newsletter content would go here...",
     date: "August 31, 2023",
     image: "/resources/blog-dashboard.png",

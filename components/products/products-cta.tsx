@@ -10,7 +10,7 @@ export default function ProductsCTA() {
             Ready to Transform Your Lending Operations?
           </h2>
           <p className="text-xl text-indigo-100 mb-8">
-            Join hundreds of financial institutions that have revolutionized their lending processes with HyperVerge's
+            Join hundreds of financial institutions that have revolutionized their lending processes with DocsAPI's
             AI solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

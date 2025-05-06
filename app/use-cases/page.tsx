@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "OCR Software Use Cases for Lending and Fintech | HyperVerge",
+  title: "OCR Software Use Cases for Lending and Fintech | DocsAPI",
   description:
-    "Discover how HyperVerge's AI OCR software powers use cases for mortgage lending, small business financing, consumer lending, and more. Book a demo today!",
+    "Discover how DocsAPI's AI OCR software powers use cases for mortgage lending, small business financing, consumer lending, and more. Book a demo today!",
 }
 
 export default function UseCasesPage() {
@@ -178,7 +178,7 @@ export default function UseCasesPage() {
               AI OCR for Small Business Lending: Automate and Expand
             </h2>
             <p className="text-lg text-gray-700 mb-8">
-              Leverage HyperVerge's AI OCR solution to automate document processing, reduce manual effort, and expand
+              Leverage DocsAPI's AI OCR solution to automate document processing, reduce manual effort, and expand
               your borrower pool. Our technology accurately extracts data from various financial documents, enabling
               faster and more informed lending decisions.
             </p>
@@ -192,7 +192,7 @@ export default function UseCasesPage() {
           <div className="mt-10 lg:mt-0">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
               <div className="bg-indigo-600 text-white p-4">
-                <h4 className="font-semibold text-lg">HyperVerge Small Business Lending Dashboard</h4>
+                <h4 className="font-semibold text-lg">DocsAPI Small Business Lending Dashboard</h4>
               </div>
               <div className="p-6">
                 <div className="grid grid-cols-3 gap-4 mb-6">

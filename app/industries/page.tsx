@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "AI OCR Software for Financial Industries | HyperVerge",
+  title: "AI OCR Software for Financial Industries | DocsAPI",
   description:
-    "Discover how HyperVerge's AI OCR software transforms document processing across banking, fintech, credit unions, and microfinance industries. Book a demo today!",
+    "Discover how DocsAPI's AI OCR software transforms document processing across banking, fintech, credit unions, and microfinance industries. Book a demo today!",
 }
 
 export default function IndustriesPage() {
@@ -826,7 +826,7 @@ export default function IndustriesPage() {
                 <h3 className="text-xl font-semibold">AsiaFinance</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                "HyperVerge's OCR software reduced our loan processing time by 75%, allowing us to serve more small
+                "DocsAPI's OCR software reduced our loan processing time by 75%, allowing us to serve more small
                 businesses with faster approvals."
               </p>
               <div className="flex items-center">
@@ -844,7 +844,7 @@ export default function IndustriesPage() {
                 <h3 className="text-xl font-semibold">Global Lending</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                "We've scaled our fintech operations across 5 countries using HyperVerge's AI document processing, with
+                "We've scaled our fintech operations across 5 countries using DocsAPI's AI document processing, with
                 99.9% accuracy in data extraction."
               </p>
               <div className="flex items-center">
@@ -862,7 +862,7 @@ export default function IndustriesPage() {
                 <h3 className="text-xl font-semibold">CIMB Bank</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                "HyperVerge's OCR technology helped us detect fraud in loan applications, saving over $2M in potential
+                "DocsAPI's OCR technology helped us detect fraud in loan applications, saving over $2M in potential
                 losses in the first year alone."
               </p>
               <div className="flex items-center">

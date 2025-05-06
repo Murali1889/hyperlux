@@ -14,7 +14,7 @@ export default function BlogContent({ blog }: { blog: any }) {
         </p>
 
         <p>
-          This is where artificial intelligence comes in. AI-powered industry classification solutions like HyperVerge
+          This is where artificial intelligence comes in. AI-powered industry classification solutions like DocsAPI
           are transforming how financial institutions approach this essential task, delivering faster, more accurate
           results while reducing operational costs.
         </p>
@@ -46,7 +46,7 @@ export default function BlogContent({ blog }: { blog: any }) {
 
         <h2>How AI is Transforming Industry Classification</h2>
         <p>
-          AI-powered solutions like HyperVerge address these challenges through advanced algorithms and machine learning
+          AI-powered solutions like DocsAPI address these challenges through advanced algorithms and machine learning
           techniques that analyze multiple data points to accurately classify businesses into the correct industry
           codes.
         </p>
@@ -80,7 +80,7 @@ export default function BlogContent({ blog }: { blog: any }) {
         </p>
 
         <blockquote>
-          "HyperVerge's solution has transformed our small business lending operations. We've reduced our classification
+          "DocsAPI's solution has transformed our small business lending operations. We've reduced our classification
           time by 70% while improving accuracy to 95%, allowing us to process more loans with the same team."
           <cite>— Sarah Chen, VP of Operations, Pacific Credit Union</cite>
         </blockquote>

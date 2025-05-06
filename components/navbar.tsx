@@ -21,10 +21,8 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex h-16 items-center justify-between px-4 md:px-6">
       <div className="flex items-center gap-2">
         <Link href="/" className="flex items-center space-x-2">
-          <div className="h-8 w-8 rounded-md bg-indigo-600 flex items-center justify-center text-white font-bold">
-            HV
-          </div>
-          <span className="text-xl font-bold">HYPERVERGE</span>
+          <img src="/docsapi-logo.png" alt="DocsAPI Logo" className="h-8 w-8" />
+          <span className="text-xl font-bold">DocsAPI</span>
         </Link>
       </div>
 
@@ -41,11 +39,6 @@ export default function Navbar() {
       </nav>
 
       <div className="flex items-center gap-4">
-        <Link href="tel:+18005551234" className="hidden md:flex items-center gap-2 text-sm font-medium text-indigo-600">
-          <Phone className="h-4 w-4" />
-          (800) 555-1234
-        </Link>
-
         <Button asChild variant="outline" className="hidden md:inline-flex">
           <Link href="/contact-sales">Contact Sales</Link>
         </Button>

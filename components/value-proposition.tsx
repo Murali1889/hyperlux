@@ -124,7 +124,7 @@ export default function ValueProposition() {
               Transform Your Small Business Lending with Intelligent Industry Classification
             </h2>
             <p className="text-lg text-muted-foreground">
-              Manual industry classification is slow, error-prone, and doesn't scale. HyperVerge's AI-powered solution
+              Manual industry classification is slow, error-prone, and doesn't scale. DocsAPI's AI-powered solution
               automates the entire process, delivering faster decisions and better risk management.
             </p>
 

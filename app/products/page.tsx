@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "AI-Powered OCR Features for Document Processing | HyperVerge",
+  title: "AI-Powered OCR Features for Document Processing | DocsAPI",
   description:
     "Explore AI-powered OCR features: classify, capture, detect, and analyze documents with precision. Optimize lending workflows with our software. Book a demo!",
 }

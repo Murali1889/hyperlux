@@ -166,7 +166,7 @@ export default function ROICalculator() {
 
             {showResults && (
               <div className="pt-6 border-t">
-                <h3 className="text-lg font-bold mb-4">Your Potential Savings with HyperVerge AI</h3>
+                <h3 className="text-lg font-bold mb-4">Your Potential Savings with DocsAPI AI</h3>
                 <div className="grid grid-cols-2 gap-4">
                   <Card>
                     <CardContent className="pt-6">

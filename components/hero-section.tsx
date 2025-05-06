@@ -53,10 +53,8 @@ export default function HeroSection() {
                 <div className="bg-white p-4">
                   <div className="flex justify-between items-center mb-4">
                     <div className="flex items-center gap-2">
-                      <div className="h-8 w-8 rounded-full bg-indigo-600 flex items-center justify-center text-white font-bold text-sm">
-                        HV
-                      </div>
-                      <span className="font-medium">HyperVerge Classification</span>
+                    <img src="/docsapi-logo.png" alt="DocsAPI Logo" className="h-8 w-8" />
+                      <span className="font-medium">DocsAPI Classification</span>
                     </div>
                     <div className="flex gap-2">
                       <div className="h-3 w-3 rounded-full bg-red-500"></div>

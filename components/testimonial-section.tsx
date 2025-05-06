@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 const testimonials = [
   {
     quote:
-      "Over the past year, we've had a phenomenal experience partnering with HyperVerge for our eKYC journey. Their industry classification solution has transformed our small business lending operations.",
+      "Over the past year, we've had a phenomenal experience partnering with DocsAPI for our eKYC journey. Their industry classification solution has transformed our small business lending operations.",
     author: {
       name: "Rachel Nguyen",
       title: "Director, CIMB Vietnam",
@@ -17,12 +17,12 @@ const testimonials = [
     company: {
       name: "CIMB",
       logo: "/placeholder.svg?height=100&width=100",
-      tagline: "CIMB is very proud to be associated with HyperVerge",
+      tagline: "CIMB is very proud to be associated with DocsAPI",
     },
   },
   {
     quote:
-      "HyperVerge's AI-powered industry classification has transformed our underwriting process, reducing classification time by 70% and improving our risk assessment accuracy significantly.",
+      "DocsAPI's AI-powered industry classification has transformed our underwriting process, reducing classification time by 70% and improving our risk assessment accuracy significantly.",
     author: {
       name: "Michael Chen",
       title: "Head of Risk, Asia Finance Group",
@@ -36,7 +36,7 @@ const testimonials = [
   },
   {
     quote:
-      "We've seen a 40% reduction in misclassification risk since implementing HyperVerge's solution. The accuracy and consistency have been game-changing for our portfolio management.",
+      "We've seen a 40% reduction in misclassification risk since implementing DocsAPI's solution. The accuracy and consistency have been game-changing for our portfolio management.",
     author: {
       name: "Sarah Johnson",
       title: "VP of Credit Operations, Global Lending Partners",
@@ -67,7 +67,7 @@ export default function TestimonialSection() {
     <section className="py-16 md:py-24">
       <div className="container px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl mb-12 text-center">
-          Customers love HyperVerge!
+          Customers love DocsAPI!
         </h2>
 
         <div className="relative max-w-4xl mx-auto">

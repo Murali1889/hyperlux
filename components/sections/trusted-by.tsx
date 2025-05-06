@@ -52,7 +52,7 @@ export default function TrustedBy() {
     <Section background="primary" id="trusted-by">
       <SectionHeader
         title="Trusted by Industry Leaders"
-        description="HyperVerge powers industry classification for the world's leading financial institutions"
+        description="DocsAPI powers industry classification for the world's leading financial institutions"
       />
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
