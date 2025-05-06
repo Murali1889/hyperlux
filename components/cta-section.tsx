@@ -13,7 +13,7 @@ export default function CTASection() {
             </h2>
             <p className="text-lg text-indigo-100">
               Join 500+ financial institutions that have revolutionized their industry classification process with
-              HyperVerge's AI-powered solution.
+              DocsAPI's AI-powered solution.
             </p>
             <ul className="space-y-3">
               <li className="flex items-center gap-3">

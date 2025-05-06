@@ -10,7 +10,7 @@ export default function NewsletterContent({ newsletter }: NewsletterContentProps
       <div className="container px-4 md:px-6">
         <div className="mx-auto max-w-3xl">
           <div className="prose prose-indigo max-w-none">
-            <h2>Hello HyperVerge Community,</h2>
+            <h2>Hello DocsAPI Community,</h2>
             <p>
               Welcome to our {newsletter.title} newsletter. We're excited to share the latest updates, insights, and
               trends in AI-powered financial solutions.
@@ -37,24 +37,24 @@ export default function NewsletterContent({ newsletter }: NewsletterContentProps
 
             <h3>Customer Success Story</h3>
             <p>
-              This month, we spotlight how AsiaFinance implemented HyperVerge's solutions to reduce their loan
+              This month, we spotlight how AsiaFinance implemented DocsAPI's solutions to reduce their loan
               processing time by 68% while improving accuracy by 45%.
             </p>
 
             <blockquote>
               <p>
-                "HyperVerge has transformed our lending operations. What used to take days now takes hours, and our team
+                "DocsAPI has transformed our lending operations. What used to take days now takes hours, and our team
                 can focus on building relationships rather than processing paperwork."
               </p>
               <cite>— Sarah Chen, COO at AsiaFinance</cite>
             </blockquote>
 
             <h3>Upcoming Events</h3>
-            <p>Join us at these upcoming events to learn more about HyperVerge solutions:</p>
+            <p>Join us at these upcoming events to learn more about DocsAPI solutions:</p>
             <ul>
               <li>FinTech Forward Conference - June 15-17, Singapore</li>
               <li>Digital Lending Summit - July 8-9, New York</li>
-              <li>HyperVerge Webinar: AI in Risk Assessment - June 22 (Virtual)</li>
+              <li>DocsAPI Webinar: AI in Risk Assessment - June 22 (Virtual)</li>
             </ul>
 
             <h3>Resources You Might Have Missed</h3>
@@ -79,7 +79,7 @@ export default function NewsletterContent({ newsletter }: NewsletterContentProps
             <p>
               Best regards,
               <br />
-              The HyperVerge Team
+              The DocsAPI Team
             </p>
           </div>
         </div>

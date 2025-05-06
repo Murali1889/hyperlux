@@ -10,9 +10,9 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 export const metadata: Metadata = {
-  title: "Book a Demo | HyperVerge",
+  title: "Book a Demo | DocsAPI",
   description:
-    "Schedule a personalized demo of HyperVerge's AI-powered industry classification solution for small business lending.",
+    "Schedule a personalized demo of DocsAPI's AI-powered industry classification solution for small business lending.",
 }
 
 export default function BookDemoPage() {
@@ -24,7 +24,7 @@ export default function BookDemoPage() {
             <div className="inline-block rounded-lg bg-indigo-100 px-3 py-1 text-sm font-medium text-indigo-800">
               Book a Demo
             </div>
-            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">See HyperVerge in Action</h1>
+            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">See DocsAPI in Action</h1>
             <p className="text-xl text-muted-foreground">
               Schedule a personalized demo to see how our AI-powered industry classification solution can transform your
               small business lending process.
@@ -81,7 +81,7 @@ export default function BookDemoPage() {
           <div className="mt-8 rounded-lg border bg-muted/40 p-6">
             <h3 className="text-lg font-medium">What Our Clients Say</h3>
             <blockquote className="mt-4 border-l-4 border-indigo-600 pl-4 italic text-muted-foreground">
-              "The demo was incredibly valuable. It showed us exactly how HyperVerge could integrate with our existing
+              "The demo was incredibly valuable. It showed us exactly how DocsAPI could integrate with our existing
               systems and the potential ROI was compelling. We signed up immediately after."
             </blockquote>
             <div className="mt-4 flex items-center gap-3">
@@ -189,7 +189,7 @@ export default function BookDemoPage() {
                       />
                     </div>
                     <Label htmlFor="terms" className="text-sm text-muted-foreground">
-                      I agree to HyperVerge's{" "}
+                      I agree to DocsAPI's{" "}
                       <Link href="#" className="text-indigo-600 hover:underline">
                         Terms of Service
                       </Link>{" "}

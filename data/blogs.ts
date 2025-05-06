@@ -68,7 +68,7 @@ export const blogs: BlogPost[] = [
       name: "Sarah Johnson",
       title: "Chief Data Scientist",
       avatar: "/avatar-sarah.png",
-      bio: "Sarah has over 15 years of experience in data science and machine learning, with a focus on financial services applications. She leads the data science team at HyperVerge.",
+      bio: "Sarah has over 15 years of experience in data science and machine learning, with a focus on financial services applications. She leads the data science team at DocsAPI.",
       twitter: "https://twitter.com/sarahjohnson",
       linkedin: "https://linkedin.com/in/sarahjohnson",
     },
@@ -201,7 +201,7 @@ export const blogs: BlogPost[] = [
     title: "Integrating AI Classification with Your Existing Lending Platform",
     slug: "integrating-ai-classification-lending-platform",
     excerpt:
-      "A step-by-step guide to seamlessly integrating HyperVerge's API with your current lending technology stack.",
+      "A step-by-step guide to seamlessly integrating DocsAPI's API with your current lending technology stack.",
     content: "Full content would go here...",
     image: "/hero-dashboard.png",
     featuredImage: "/hero-dashboard.png",

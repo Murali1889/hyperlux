@@ -11,7 +11,7 @@ export default function NewslettersCTA() {
               Ready to Transform Your Lending Process?
             </h2>
             <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl">
-              Schedule a demo to see how HyperVerge can help you streamline your operations and increase ROI.
+              Schedule a demo to see how DocsAPI can help you streamline your operations and increase ROI.
             </p>
           </div>
           <div className="flex flex-col gap-2 min-[400px]:flex-row">

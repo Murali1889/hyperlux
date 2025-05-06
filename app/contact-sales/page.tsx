@@ -11,9 +11,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export const metadata: Metadata = {
-  title: "Contact Sales | HyperVerge",
+  title: "Contact Sales | DocsAPI",
   description:
-    "Get in touch with our sales team to learn how HyperVerge can transform your small business lending process.",
+    "Get in touch with our sales team to learn how DocsAPI can transform your small business lending process.",
 }
 
 export default function ContactSalesPage() {
@@ -208,8 +208,8 @@ export default function ContactSalesPage() {
                   <Mail className="h-5 w-5 text-indigo-600" />
                   <div>
                     <p className="font-medium">Email</p>
-                    <a href="mailto:sales@hyperverge.ai" className="text-indigo-600 hover:underline">
-                      sales@hyperverge.ai
+                    <a href="mailto:sales@docsapi.ai" className="text-indigo-600 hover:underline">
+                      sales@docsapi.ai
                     </a>
                   </div>
                 </div>
@@ -296,7 +296,7 @@ export default function ContactSalesPage() {
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-2xl font-bold tracking-tight">Ready for a personalized demo?</h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            See how HyperVerge can transform your small business lending process with our AI-powered industry
+            See how DocsAPI can transform your small business lending process with our AI-powered industry
             classification solution.
           </p>
           <div className="mt-6">

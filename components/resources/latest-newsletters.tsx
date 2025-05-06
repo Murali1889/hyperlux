@@ -20,8 +20,8 @@ const latestNewsletters = [
     excerpt:
       "New features, improvements, and integrations added to our AI-powered OCR platform for enhanced fraud detection and data extraction.",
     date: "August 31, 2023",
-    slug: "hyperverge-product-updates-august-2023",
-    link: "/resources/newsletters/hyperverge-product-updates-august-2023",
+    slug: "docsapi-product-updates-august-2023",
+    link: "/resources/newsletters/docsapi-product-updates-august-2023",
   },
   {
     id: 3,

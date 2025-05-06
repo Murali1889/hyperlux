@@ -9,10 +9,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="h-8 w-8 rounded-md bg-indigo-600 flex items-center justify-center text-white font-bold">
-                HV
-              </div>
-              <span className="text-xl font-bold text-white">HYPERVERGE</span>
+              <img src="/docsapi-logo.png" alt="DocsAPI Logo" className="h-8 w-8" />
+              <span className="text-xl font-bold text-white">DocsAPI</span>
             </Link>
             <p className="text-gray-400">AI-powered solutions for small business lending and financial services.</p>
             <div className="flex space-x-4">
@@ -71,7 +69,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start">
                 <Mail className="h-5 w-5 mr-2 text-indigo-400 flex-shrink-0" />
-                <span>info@hyperverge.ai</span>
+                <span>info@docsapi.ai</span>
               </li>
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-2 text-indigo-400 flex-shrink-0" />
@@ -95,7 +93,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm">© {new Date().getFullYear()} HyperVerge. All rights reserved.</p>
+          <p className="text-gray-500 text-sm">© {new Date().getFullYear()} DocsAPI. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Link href="/privacy" className="text-gray-500 hover:text-white text-sm transition-colors">
               Privacy Policy

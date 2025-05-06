@@ -87,13 +87,13 @@ export default function TransformationSection() {
             </div>
           </div>
 
-          {/* The Bridge - HyperVerge */}
+          {/* The Bridge - DocsAPI */}
           <div className="bg-indigo-600 rounded-xl p-6 shadow-xl border border-indigo-500 text-white relative z-20 transform md:translate-y-[-20px]">
             <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 rounded-full bg-indigo-500 border-4 border-white flex items-center justify-center shadow-md">
               <div className="text-3xl font-bold text-white">2</div>
             </div>
             <div className="pt-10 text-center">
-              <h3 className="text-xl font-bold mb-3">HyperVerge AI Bridge</h3>
+              <h3 className="text-xl font-bold mb-3">DocsAPI AI Bridge</h3>
               <div className="aspect-video bg-indigo-700 rounded-lg mb-4 flex items-center justify-center">
                 <div className="relative w-full h-full p-4">
                   <div className="absolute left-0 right-0 top-1/2 h-2 bg-indigo-500 -translate-y-1/2"></div>

@@ -11,7 +11,7 @@ const successStories = [
     company: "DBS Bank",
     logo: "/placeholder.svg?height=60&width=120",
     quote:
-      "HyperVerge's AI-powered industry classification has transformed our small business lending operations, reducing classification time by 80% and improving accuracy to 95%.",
+      "DocsAPI's AI-powered industry classification has transformed our small business lending operations, reducing classification time by 80% and improving accuracy to 95%.",
     author: "Sarah Chen",
     title: "Head of SME Banking, DBS Bank",
     metrics: [
@@ -24,7 +24,7 @@ const successStories = [
     company: "Standard Chartered",
     logo: "/placeholder.svg?height=60&width=120",
     quote:
-      "We've seen a 40% reduction in misclassification risk and a 30% increase in loan approval rates since implementing HyperVerge's solution.",
+      "We've seen a 40% reduction in misclassification risk and a 30% increase in loan approval rates since implementing DocsAPI's solution.",
     author: "Michael Wong",
     title: "Director of Credit Risk, Standard Chartered",
     metrics: [
@@ -37,7 +37,7 @@ const successStories = [
     company: "OCBC Bank",
     logo: "/placeholder.svg?height=60&width=120",
     quote:
-      "HyperVerge has been a game-changer for our SME lending division. The AI-powered classification system has allowed us to scale our operations while maintaining regulatory compliance.",
+      "DocsAPI has been a game-changer for our SME lending division. The AI-powered classification system has allowed us to scale our operations while maintaining regulatory compliance.",
     author: "David Tan",
     title: "VP of SME Banking, OCBC Bank",
     metrics: [
@@ -106,7 +106,7 @@ export default function SuccessStories() {
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Success Stories</h2>
             <p className="mx-auto max-w-3xl text-muted-foreground">
-              See how leading financial institutions have transformed their lending operations with HyperVerge
+              See how leading financial institutions have transformed their lending operations with DocsAPI
             </p>
           </div>
 

@@ -7,7 +7,7 @@ export default function ArticleCTA() {
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="mb-4 text-3xl font-bold text-white">Want to Learn More About Our AI Solutions?</h2>
           <p className="mb-8 text-lg text-indigo-100">
-            Discover how HyperVerge's AI-powered document processing and risk assessment tools can transform your
+            Discover how DocsAPI's AI-powered document processing and risk assessment tools can transform your
             lending operations.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">

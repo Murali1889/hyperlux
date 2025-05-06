@@ -31,7 +31,7 @@ const competitors = [
     },
   },
   {
-    name: "HyperVerge AI",
+    name: "DocsAPI AI",
     features: {
       Accuracy: true,
       Speed: true,
@@ -47,7 +47,7 @@ export default function CompetitiveAdvantage() {
   return (
     <Section background="muted" id="comparison">
       <SectionHeader
-        title="Why HyperVerge Outperforms Competitors"
+        title="Why DocsAPI Outperforms Competitors"
         description="See how our AI-powered industry classification solution compares to traditional methods and basic automation tools"
       />
 
@@ -87,7 +87,7 @@ export default function CompetitiveAdvantage() {
               {competitor.highlight && (
                 <div className="p-4 bg-indigo-50">
                   <p className="text-sm text-indigo-700">
-                    <span className="font-medium">HyperVerge AI</span> combines multiple data sources, machine learning,
+                    <span className="font-medium">DocsAPI AI</span> combines multiple data sources, machine learning,
                     and industry expertise to deliver superior classification accuracy.
                   </p>
                 </div>
@@ -102,7 +102,7 @@ export default function CompetitiveAdvantage() {
           href="#book-demo"
           className="inline-flex items-center gap-2 text-indigo-600 font-medium hover:text-indigo-700"
         >
-          See how HyperVerge can transform your lending operations
+          See how DocsAPI can transform your lending operations
           <svg
             className="w-5 h-5"
             fill="none"

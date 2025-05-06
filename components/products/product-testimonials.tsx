@@ -3,7 +3,7 @@ import { Quote } from "lucide-react"
 const testimonials = [
   {
     quote:
-      "HyperVerge's Industry Classifier has reduced our classification time by 85% while improving accuracy. It's been a game-changer for our lending operations.",
+      "DocsAPI's Industry Classifier has reduced our classification time by 85% while improving accuracy. It's been a game-changer for our lending operations.",
     author: "Sarah Johnson",
     title: "VP of Lending, AsiaFinance",
     avatar: "/avatar-sarah.png",
@@ -19,7 +19,7 @@ const testimonials = [
   },
   {
     quote:
-      "Implementing HyperVerge's Risk Assessment Engine has helped us reduce default rates by 28% in just six months. The ROI has been exceptional.",
+      "Implementing DocsAPI's Risk Assessment Engine has helped us reduce default rates by 28% in just six months. The ROI has been exceptional.",
     author: "Rachel Kim",
     title: "Chief Risk Officer, Pacific Credit",
     avatar: "/avatar-rachel.png",

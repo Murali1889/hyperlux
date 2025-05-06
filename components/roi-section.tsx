@@ -42,7 +42,7 @@ export default function ROISection() {
               Measurable ROI for Your Lending Business
             </h2>
             <p className="text-lg text-muted-foreground">
-              Our clients see significant improvements in their lending operations after implementing HyperVerge's
+              Our clients see significant improvements in their lending operations after implementing DocsAPI's
               AI-powered industry classification solution.
             </p>
 

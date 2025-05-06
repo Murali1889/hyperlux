@@ -6,7 +6,7 @@ export default function ArticleAuthor({ slug }: { slug: string }) {
   const author = {
     name: "Dr. Sarah Chen",
     role: "Chief Research Officer",
-    bio: "Dr. Sarah Chen leads HyperVerge's research initiatives, focusing on the intersection of artificial intelligence and financial services. With over 15 years of experience in data science and risk modeling, she has published numerous papers on predictive analytics in lending.",
+    bio: "Dr. Sarah Chen leads DocsAPI's research initiatives, focusing on the intersection of artificial intelligence and financial services. With over 15 years of experience in data science and risk modeling, she has published numerous papers on predictive analytics in lending.",
     image: "/customer-avatar-1.png",
     twitter: "https://twitter.com/sarahchen",
     linkedin: "https://linkedin.com/in/sarahchen",

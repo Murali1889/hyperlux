@@ -53,7 +53,7 @@ export default function TrustedBy() {
         <div className="text-center space-y-4 mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Trusted by Industry Leaders</h2>
           <p className="mx-auto max-w-3xl text-muted-foreground">
-            HyperVerge powers industry classification for the world's leading financial institutions
+            DocsAPI powers industry classification for the world's leading financial institutions
           </p>
         </div>
 

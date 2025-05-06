@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "OCR Software Pricing | AI Document Processing | HyperVerge",
+  title: "OCR Software Pricing | AI Document Processing | DocsAPI",
   description:
-    "Explore HyperVerge's flexible OCR software pricing plans for document automation. Choose the right plan for your lending and fintech needs. Book a demo today!",
+    "Explore DocsAPI's flexible OCR software pricing plans for document automation. Choose the right plan for your lending and fintech needs. Book a demo today!",
 }
 
 export default function PricingPage() {

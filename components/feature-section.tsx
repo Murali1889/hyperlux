@@ -13,7 +13,7 @@ export default function FeatureSection() {
           <div>
             <p className="text-lg text-muted-foreground">
               Lending institutions rely on accurate industry classification for risk and compliance, but manual methods
-              are slow, inconsistent, and hard to scale. HyperVerge's AI-driven engine transforms fragmented business
+              are slow, inconsistent, and hard to scale. DocsAPI's AI-driven engine transforms fragmented business
               data into reliable SIC/NAICS codes for faster, smarter decisions.
             </p>
           </div>

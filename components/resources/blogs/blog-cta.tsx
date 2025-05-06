@@ -12,7 +12,7 @@ export default function BlogCTA() {
               Ready to Transform Your Lending Process?
             </h2>
             <p className="text-lg text-indigo-100 max-w-2xl mx-auto">
-              See how HyperVerge's AI-powered industry classification can help you process loans faster, improve
+              See how DocsAPI's AI-powered industry classification can help you process loans faster, improve
               accuracy, and scale your operations.
             </p>
           </div>
