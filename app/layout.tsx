@@ -11,7 +11,10 @@ export const metadata: Metadata = {
   title: "DocsAPI - AI-Powered Industry Classification for Small Business Lending",
   description:
     "Transform your small business lending with AI-powered industry classification that's 5x faster and 3x more accurate than manual processes.",
-    generator: 'v0.dev'
+  generator: 'docsapi.com',
+  icons: {
+    icon: '/docsapi-logo.png',
+  },
 }
 
 export default function RootLayout({

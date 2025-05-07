@@ -11,7 +11,6 @@ const navItems = [
   { name: "Use Cases", href: "/use-cases" },
   { name: "Pricing", href: "/pricing" },
   { name: "Resources", href: "/resources" },
-  { name: "Customer", href: "#customer" },
 ]
 
 export default function Navbar() {
