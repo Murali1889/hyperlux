@@ -16,12 +16,8 @@ export const metadata: Metadata = {
     icon: '/docsapi-logo.png',
   },
   robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
+    index: false,
+    follow: false,
   },
 }
 
