@@ -6,14 +6,12 @@ import { Label } from "@/components/ui/label"
 import { Slider } from "@/components/ui/slider"
 import { Button } from "@/components/ui/button"
 import { Calculator, DollarSign, Clock, Users, TrendingUp, ArrowRight } from "lucide-react"
-import ConfettiAnimation from "./confetti-animation"
 
 export default function ROICalculator() {
   const [applications, setApplications] = useState(1000)
   const [reviewTeamSize, setReviewTeamSize] = useState(10)
   const [location, setLocation] = useState("onshore")
   const [showResults, setShowResults] = useState(false)
-  const [showConfetti, setShowConfetti] = useState(false)
 
   // Calculate metrics based on inputs
   const calculateMetrics = () => {
@@ -51,12 +49,10 @@ export default function ROICalculator() {
 
   const handleCalculate = () => {
     setShowResults(true)
-    setShowConfetti(true)
   }
 
   return (
     <>
-      <ConfettiAnimation show={showConfetti} duration={4000} onComplete={() => setShowConfetti(false)} />
 
       <Card className="w-full max-w-4xl mx-auto">
         <CardHeader>
