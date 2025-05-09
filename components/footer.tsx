@@ -47,11 +47,11 @@ export default function Footer() {
                   Use Cases
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/pricing" className="text-gray-400 hover:text-white transition-colors">
                   Pricing
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/resources" className="text-gray-400 hover:text-white transition-colors">
                   Resources

@@ -11,41 +11,20 @@ const categories = [
     color: "bg-indigo-100 text-indigo-600",
     link: "/resources/blogs",
   },
-  {
-    title: "Articles",
-    description: "In-depth analysis and research on OCR software for mortgage and small business lending",
-    icon: FileText,
-    color: "bg-blue-100 text-blue-600",
-    link: "/resources/articles",
-  },
-  {
-    title: "Newsletters",
-    description: "Regular updates on document automation trends and OCR innovations",
-    icon: Mail,
-    color: "bg-green-100 text-green-600",
-    link: "/resources/newsletters",
-  },
-  {
-    title: "Case Studies",
-    description: "Real-world success stories showcasing 99.9% accurate data extraction and fraud detection",
-    icon: Award,
-    color: "bg-purple-100 text-purple-600",
-    link: "/resources/case-studies",
-  },
-  {
-    title: "Industry Trends",
-    description: "Latest developments in AI-powered OCR software and financial technology",
-    icon: TrendingUp,
-    color: "bg-amber-100 text-amber-600",
-    link: "/resources/trends",
-  },
-  {
-    title: "Guides & Tutorials",
-    description: "Step-by-step instructions for integrating OCR software with your CRM or LOS",
-    icon: Lightbulb,
-    color: "bg-red-100 text-red-600",
-    link: "/resources/guides",
-  },
+  // {
+  //   title: "Case Studies",
+  //   description: "Real-world success stories showcasing 99.9% accurate data extraction and fraud detection",
+  //   icon: Award,
+  //   color: "bg-purple-100 text-purple-600",
+  //   link: "/resources/case-studies",
+  // },
+  // {
+  //   title: "Industry Trends",
+  //   description: "Latest developments in AI-powered OCR software and financial technology",
+  //   icon: TrendingUp,
+  //   color: "bg-amber-100 text-amber-600",
+  //   link: "/resources/trends",
+  // },
 ]
 
 export default function ResourceCategories() {

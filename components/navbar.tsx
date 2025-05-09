@@ -6,10 +6,11 @@ import { Button } from "@/components/ui/button"
 import { Menu, X, Phone } from "lucide-react"
 
 const navItems = [
+  { name: "Home", href: "/" },
   { name: "Products", href: "/products" },
   { name: "Industries", href: "/industries" },
   { name: "Use Cases", href: "/use-cases" },
-  { name: "Pricing", href: "/pricing" },
+  // { name: "Pricing", href: "/pricing" },
   { name: "Resources", href: "/resources" },
 ]
 

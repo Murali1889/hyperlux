@@ -319,7 +319,7 @@ export default function IndustriesPage() {
         <div className="max-w-7xl mx-auto">
           <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
             <div className="order-2 lg:order-1 mt-10 lg:mt-0">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 mb-6">
                 <div className="bg-gradient-to-r from-blue-500 to-indigo-600 p-4 text-white">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
@@ -653,7 +653,7 @@ export default function IndustriesPage() {
         <div className="max-w-7xl mx-auto">
           <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
             <div className="order-2 lg:order-1 mt-10 lg:mt-0">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 mb-6">
                 <div className="bg-gradient-to-r from-teal-500 to-emerald-600 p-4 text-white">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">

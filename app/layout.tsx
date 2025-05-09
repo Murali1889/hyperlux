@@ -15,6 +15,10 @@ export const metadata: Metadata = {
   icons: {
     icon: '/docsapi-logo.png',
   },
+  robots: {
+    index: false,
+    follow: false,
+  },
 }
 
 export default function RootLayout({
