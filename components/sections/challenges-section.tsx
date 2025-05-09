@@ -146,9 +146,9 @@ export default function ChallengesSection() {
                           <div className="h-3 bg-slate-200 rounded w-5/6"></div>
                           <div className="h-3 bg-slate-200 rounded w-4/6"></div>
                         </div>
-                        <div className="absolute bottom-4 right-4 w-16 h-16 rounded-full bg-red-100 flex items-center justify-center">
+                        <div className="absolute top-2 right-2 w-6 h-6 rounded-full bg-red-100 flex items-center justify-center">
                           <svg
-                            className="w-8 h-8 text-red-500"
+                            className="w-5 h-5 text-red-500"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"

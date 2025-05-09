@@ -11,10 +11,10 @@ export default function ResourcesPage() {
     <>
       <ResourcesHero />
       <ResourceCategories />
-      <FeaturedResources />
-      <RecentBlogs />
-      <PopularArticles />
-      <LatestNewsletters />
+      {/* <FeaturedResources /> */}
+      {/* <RecentBlogs /> */}
+      {/* <PopularArticles /> */}
+      {/* <LatestNewsletters /> */}
       <ResourcesCTA />
     </>
   )

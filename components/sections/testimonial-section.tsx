@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Section, SectionHeader } from "@/components/ui/section"
 import { TestimonialCard } from "@/components/ui/testimonial-card"
 import { Button } from "@/components/ui/button"
@@ -62,21 +62,31 @@ export default function TestimonialSection() {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length)
   }
 
+  // Add auto-rotation effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextTestimonial()
+    }, 5000) // Change testimonial every 5 seconds
+
+    return () => clearInterval(interval)
+  }, [])
+
   const currentTestimonial = testimonials[currentIndex]
 
   return (
     <Section id="testimonials">
       <SectionHeader title="Customers love DocsAPI!" />
 
-      <div className="relative max-w-4xl mx-auto">
-        <div className="flex items-center justify-between absolute top-1/2 -translate-y-1/2 w-full">
+      <div className="relative max-w-6xl mx-auto">
+        {/* Navigation buttons */}
+        <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-0 md:px-4">
           <Button
             variant="ghost"
             size="icon"
             className="rounded-full bg-background/80 backdrop-blur-sm shadow-md"
             onClick={prevTestimonial}
           >
-            <ChevronLeft className="h-6 w-6" />
+            <ChevronLeft className="h-8 w-8" />
             <span className="sr-only">Previous testimonial</span>
           </Button>
           <Button
@@ -85,16 +95,19 @@ export default function TestimonialSection() {
             className="rounded-full bg-background/80 backdrop-blur-sm shadow-md"
             onClick={nextTestimonial}
           >
-            <ChevronRight className="h-6 w-6" />
+            <ChevronRight className="h-8 w-8" />
             <span className="sr-only">Next testimonial</span>
           </Button>
         </div>
 
-        <TestimonialCard
-          quote={currentTestimonial.quote}
-          author={currentTestimonial.author}
-          company={currentTestimonial.company}
-        />
+        {/* Testimonial content */}
+        <div className="px-12 md:px-20">
+          <TestimonialCard
+            quote={currentTestimonial.quote}
+            author={currentTestimonial.author}
+            company={currentTestimonial.company}
+          />
+        </div>
       </div>
     </Section>
   )

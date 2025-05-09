@@ -67,32 +67,38 @@ export default function ROISection() {
               <div className="h-full flex flex-col">
                 <div className="flex justify-between items-center mb-4">
                   <div className="space-y-1">
-                    <div className="h-4 bg-indigo-100 rounded w-32"></div>
-                    <div className="h-3 bg-slate-200 rounded w-24"></div>
+                    <h3 className="text-lg font-semibold text-indigo-600">Cost Analysis</h3>
+                    <p className="text-sm text-slate-600">Monthly Comparison</p>
                   </div>
                   <div className="flex gap-2">
-                    <div className="h-8 w-8 rounded-full bg-indigo-100"></div>
-                    <div className="h-8 w-8 rounded-full bg-green-100"></div>
+                    <div className="h-8 w-8 rounded-full bg-indigo-100 flex items-center justify-center">
+                      <span className="text-sm font-medium text-indigo-600">Q1</span>
+                    </div>
+                    <div className="h-8 w-8 rounded-full bg-green-100 flex items-center justify-center">
+                      <span className="text-sm font-medium text-green-600">Q2</span>
+                    </div>
                   </div>
                 </div>
                 <div className="flex-1 grid grid-cols-2 gap-4">
                   <div className="flex flex-col">
-                    <div className="h-24 bg-green-100 rounded-lg mb-2 flex items-center justify-center">
-                      <div className="h-12 w-12 rounded-full bg-green-500 flex items-center justify-center text-white font-bold text-xl">
+                    <div className="h-24 bg-green-100 rounded-lg mb-2 flex flex-col items-center justify-center">
+                      <div className="h-12 w-12 rounded-full bg-green-500 flex items-center justify-center text-white font-bold text-xl mb-1">
                         +
                       </div>
+                      <span className="text-green-700 font-semibold">$45,000</span>
                     </div>
-                    <div className="h-3 bg-slate-200 rounded w-full mb-1"></div>
-                    <div className="h-3 bg-slate-200 rounded w-4/5"></div>
+                    <p className="text-sm font-medium text-slate-800 mb-1">Revenue Increase</p>
+                    <p className="text-xs text-slate-600">Through automated processing</p>
                   </div>
                   <div className="flex flex-col">
-                    <div className="h-24 bg-red-100 rounded-lg mb-2 flex items-center justify-center">
-                      <div className="h-12 w-12 rounded-full bg-red-500 flex items-center justify-center text-white font-bold text-xl">
+                    <div className="h-24 bg-red-100 rounded-lg mb-2 flex flex-col items-center justify-center">
+                      <div className="h-12 w-12 rounded-full bg-red-500 flex items-center justify-center text-white font-bold text-xl mb-1">
                         -
                       </div>
+                      <span className="text-red-700 font-semibold">$15,000</span>
                     </div>
-                    <div className="h-3 bg-slate-200 rounded w-full mb-1"></div>
-                    <div className="h-3 bg-slate-200 rounded w-4/5"></div>
+                    <p className="text-sm font-medium text-slate-800 mb-1">Cost Reduction</p>
+                    <p className="text-xs text-slate-600">In operational expenses</p>
                   </div>
                 </div>
               </div>
