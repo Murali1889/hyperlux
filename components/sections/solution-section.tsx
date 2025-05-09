@@ -246,7 +246,6 @@ export default function SolutionSection() {
             <div className="h-full w-full bg-indigo-800 p-8 flex items-center justify-center">
               <ClassificationDemo />
             </div>
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/80 to-transparent md:hidden"></div>
           </div>
         </div>
       </div>

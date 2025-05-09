@@ -135,10 +135,9 @@ export default function ChallengesSection() {
             <div className="bg-slate-100 p-6 md:p-8">
               <div className="h-full flex flex-col">
                 <h3 className="text-xl font-bold mb-4">Impact on Lending Operations</h3>
-
                 <div className="flex-1 flex items-center justify-center">
                   <div className="w-full max-w-xs">
-                    <div className="relative">
+                    <div className="">
                       <div className="h-48 bg-white rounded-lg shadow-md p-4 mb-4">
                         <div className="space-y-2">
                           <div className="h-4 bg-slate-200 rounded w-3/4"></div>
@@ -146,27 +145,29 @@ export default function ChallengesSection() {
                           <div className="h-3 bg-slate-200 rounded w-5/6"></div>
                           <div className="h-3 bg-slate-200 rounded w-4/6"></div>
                         </div>
-                        <div className="absolute top-2 right-2 w-6 h-6 rounded-full bg-red-100 flex items-center justify-center">
-                          <svg
-                            className="w-5 h-5 text-red-500"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                            />
-                          </svg>
-                        </div>
                       </div>
 
                       <div className="flex justify-between text-sm font-medium mb-2">
                         <span>Loan Application</span>
-                        <span className="text-red-500">Delayed</span>
+                        <div className="flex items-center gap-2">
+                          <div className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center">
+                            <svg
+                              className="w-5 h-5 text-red-500"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                              />
+                            </svg>
+                          </div>
+                          <span className="text-red-500">Delayed</span>
+                        </div>
                       </div>
 
                       <div className="h-4 w-full bg-slate-200 rounded-full overflow-hidden">

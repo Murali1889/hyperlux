@@ -104,7 +104,7 @@ export default function ROISection() {
               </div>
             </div>
           </div>
-          <div className="absolute -bottom-6 -right-6 bg-white rounded-lg p-4 shadow-lg border border-slate-200">
+          <div className="absolute -bottom-6 -right-0 md:-right-6 bg-white rounded-lg p-4 shadow-lg border border-slate-200">
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-100">
                 <TrendingUp className="h-5 w-5 text-green-600" />
