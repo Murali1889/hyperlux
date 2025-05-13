@@ -1,4 +1,5 @@
-import type { Metadata } from "next"
+'use client'
+// import type { Metadata } from "next"
 import Link from "next/link"
 import { CalendarDays, Clock, Users, Building, ArrowRight, Check } from "lucide-react"
 
@@ -8,12 +9,45 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { submitDemoForm } from "@/lib/submitForm"
+import { useState } from "react"
+import toast from "react-hot-toast"
 
-export const metadata: Metadata = {
-  title: "Book a Demo | DocsAPI",
-  description:
-    "Schedule a personalized demo of DocsAPI's AI-powered industry classification solution for small business lending.",
+// export const metadata: Metadata = {
+//   title: "Book a Demo | DocsAPI",
+//   description:
+//     "Schedule a personalized demo of DocsAPI's AI-powered industry classification solution for small business lending.",
+// }
+
+const [isSubmitting, setIsSubmitting] = useState(false)
+
+const handleDemoSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault()
+  setIsSubmitting(true)
+
+  const form = e.currentTarget
+  const data = {
+    e: form['email'].value,
+    p: form['phone'].value,
+    w: form['where-did-you-hear-about-us'].value,
+    ca: new Date().toISOString()
+  }
+
+  try {
+    const result = await submitDemoForm(data)
+    if (result.success) {
+      toast.success("Demo booked successfully! We'll contact you soon.")
+      form.reset()
+    } else {
+      toast.error(`Failed to submit form: ${result.error}`)
+    }
+  } catch (error) {
+    toast.error("Something went wrong. Please try again later.")
+  } finally {
+    setIsSubmitting(false)
+  }
 }
+
 
 export default function BookDemoPage() {
   return (
@@ -105,8 +139,8 @@ export default function BookDemoPage() {
               </p>
             </div>
             <div className="p-6">
-              <form className="space-y-4">
-                <div className="grid gap-4 sm:grid-cols-2">
+              <form onSubmit={handleDemoSubmit} className="space-y-4">
+                {/* <div className="grid gap-4 sm:grid-cols-2">
                   <div className="space-y-2">
                     <Label htmlFor="first-name">First Name</Label>
                     <Input id="first-name" placeholder="John" required />
@@ -115,10 +149,10 @@ export default function BookDemoPage() {
                     <Label htmlFor="last-name">Last Name</Label>
                     <Input id="last-name" placeholder="Doe" required />
                   </div>
-                </div>
+                </div> */}
 
                 <div className="space-y-2">
-                  <Label htmlFor="email">Work Email</Label>
+                  <Label htmlFor="email">Corporate Email</Label>
                   <Input id="email" type="email" placeholder="john.doe@company.com" required />
                 </div>
 
@@ -127,54 +161,21 @@ export default function BookDemoPage() {
                   <Input id="phone" type="tel" placeholder="(123) 456-7890" required />
                 </div>
 
-                <div className="space-y-2">
+                {/* <div className="space-y-2">
                   <Label htmlFor="company">Company Name</Label>
                   <Input id="company" placeholder="Acme Financial" required />
-                </div>
+                </div> */}
 
-                <div className="space-y-2">
+                {/* <div className="space-y-2">
                   <Label htmlFor="job-title">Job Title</Label>
                   <Input id="job-title" placeholder="Lending Manager" required />
-                </div>
+                </div> */}
 
                 <div className="space-y-2">
-                  <Label htmlFor="company-size">Company Size</Label>
-                  <Select defaultValue="50-100">
-                    <SelectTrigger id="company-size">
-                      <SelectValue placeholder="Select company size" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="1-49">1-49 employees</SelectItem>
-                      <SelectItem value="50-100">50-100 employees</SelectItem>
-                      <SelectItem value="101-500">101-500 employees</SelectItem>
-                      <SelectItem value="501-1000">501-1000 employees</SelectItem>
-                      <SelectItem value="1000+">1000+ employees</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="lending-volume">Monthly Small Business Lending Volume</Label>
-                  <Select defaultValue="1-5m">
-                    <SelectTrigger id="lending-volume">
-                      <SelectValue placeholder="Select lending volume" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="<1m">Less than $1 million</SelectItem>
-                      <SelectItem value="1-5m">$1-5 million</SelectItem>
-                      <SelectItem value="5-10m">$5-10 million</SelectItem>
-                      <SelectItem value="10-50m">$10-50 million</SelectItem>
-                      <SelectItem value="50m+">$50+ million</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="message">What specific challenges are you looking to address?</Label>
-                  <Textarea
+                  <Label htmlFor="where-did-you-hear-about-us">Where did you hear about us?</Label>
+                  <Input
                     id="message"
-                    placeholder="Tell us about your current industry classification process and challenges..."
-                    rows={4}
+                    placeholder="Google, LinkedIn, Referral, AI, etc."
                   />
                 </div>
 
@@ -201,8 +202,8 @@ export default function BookDemoPage() {
                   </div>
                 </div>
 
-                <Button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-700">
-                  Book My Demo <ArrowRight className="ml-2 h-4 w-4" />
+                <Button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-700" disabled={isSubmitting}>
+                  {isSubmitting ? "Submitting..." : "Book My Demo"} <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </form>
             </div>

@@ -1,4 +1,5 @@
-import type { Metadata } from "next"
+'use client'
+// import type { Metadata } from "next"
 import Link from "next/link"
 import { Mail, Phone, MessageSquare, Clock, ArrowRight, MapPin, Globe } from "lucide-react"
 
@@ -8,13 +9,38 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { submitSalesForm } from '@/lib/submitForm';
 
-export const metadata: Metadata = {
-  title: "Contact Sales | DocsAPI",
-  description:
-    "Get in touch with our sales team to learn how DocsAPI can transform your small business lending process.",
-}
+// export const metadata: Metadata = {
+//   title: "Contact Sales | DocsAPI",
+//   description:
+//     "Get in touch with our sales team to learn how DocsAPI can transform your small business lending process.",
+// }
+
+
+const handleSalesSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  const form = e.currentTarget;
+  const data = {
+    firstName: form['first-name'].value,
+    lastName: form['last-name'].value,
+    email: form['email'].value,
+    phone: form['phone'].value,
+    company: form['company'].value,
+    jobTitle: form['job-title'].value,
+    message: form['message'].value,
+    createdAt: new Date().toISOString()
+  };
+
+  const result = await submitSalesForm(data);
+  if (result.success) {
+    alert('Message sent successfully!');
+    form.reset();
+  } else {
+    alert('Failed to submit form: ' + result.error);
+  }
+};
 
 export default function ContactSalesPage() {
   return (
@@ -36,14 +62,15 @@ export default function ContactSalesPage() {
         <div className="lg:col-span-2">
           <Card>
             <div className="p-6">
-              <Tabs defaultValue="contact-form">
-                <TabsList className="grid w-full grid-cols-2">
+              <div defaultValue="contact-form">
+                <h3 className="text-lg font-medium w-full text-center">Contact Form</h3>
+                {/* <TabsList className="grid w-full grid-cols-2">
                   <TabsTrigger value="contact-form">Contact Form</TabsTrigger>
                   <TabsTrigger value="schedule-call">Schedule a Call</TabsTrigger>
-                </TabsList>
+                </TabsList> */}
 
-                <TabsContent value="contact-form" className="mt-6">
-                  <form className="space-y-4">
+                <div className="mt-6">
+                  <form className="space-y-4" onSubmit={handleSalesSubmit}>
                     <div className="grid gap-4 sm:grid-cols-2">
                       <div className="space-y-2">
                         <Label htmlFor="first-name">First Name</Label>
@@ -75,7 +102,7 @@ export default function ContactSalesPage() {
                       <Input id="job-title" placeholder="Lending Manager" required />
                     </div>
 
-                    <div className="space-y-2">
+                    {/* <div className="space-y-2">
                       <Label htmlFor="inquiry-type">Type of Inquiry</Label>
                       <Select defaultValue="product-info">
                         <SelectTrigger id="inquiry-type">
@@ -89,7 +116,7 @@ export default function ContactSalesPage() {
                           <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
                       </Select>
-                    </div>
+                    </div> */}
 
                     <div className="space-y-2">
                       <Label htmlFor="message">Message</Label>
@@ -101,100 +128,12 @@ export default function ContactSalesPage() {
                       />
                     </div>
 
-                    <div className="space-y-4">
-                      <div className="flex items-start gap-2">
-                        <div className="flex h-5 items-center">
-                          <input
-                            id="subscribe"
-                            type="checkbox"
-                            className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                          />
-                        </div>
-                        <Label htmlFor="subscribe" className="text-sm text-muted-foreground">
-                          Subscribe to our newsletter for industry insights and product updates
-                        </Label>
-                      </div>
-                    </div>
-
                     <Button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-700">
                       Send Message <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </form>
-                </TabsContent>
-
-                <TabsContent value="schedule-call" className="mt-6">
-                  <form className="space-y-4">
-                    <div className="grid gap-4 sm:grid-cols-2">
-                      <div className="space-y-2">
-                        <Label htmlFor="call-first-name">First Name</Label>
-                        <Input id="call-first-name" placeholder="John" required />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="call-last-name">Last Name</Label>
-                        <Input id="call-last-name" placeholder="Doe" required />
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="call-email">Work Email</Label>
-                      <Input id="call-email" type="email" placeholder="john.doe@company.com" required />
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="call-phone">Phone Number</Label>
-                      <Input id="call-phone" type="tel" placeholder="(123) 456-7890" required />
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="call-date">Preferred Date</Label>
-                      <Input id="call-date" type="date" required />
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="call-time">Preferred Time</Label>
-                      <Select defaultValue="morning">
-                        <SelectTrigger id="call-time">
-                          <SelectValue placeholder="Select preferred time" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="morning">Morning (9am - 12pm)</SelectItem>
-                          <SelectItem value="afternoon">Afternoon (12pm - 3pm)</SelectItem>
-                          <SelectItem value="evening">Evening (3pm - 6pm)</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="call-timezone">Timezone</Label>
-                      <Select defaultValue="est">
-                        <SelectTrigger id="call-timezone">
-                          <SelectValue placeholder="Select timezone" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="est">Eastern Time (ET)</SelectItem>
-                          <SelectItem value="cst">Central Time (CT)</SelectItem>
-                          <SelectItem value="mst">Mountain Time (MT)</SelectItem>
-                          <SelectItem value="pst">Pacific Time (PT)</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="call-topic">Discussion Topic</Label>
-                      <Textarea
-                        id="call-topic"
-                        placeholder="What would you like to discuss on our call?"
-                        rows={4}
-                        required
-                      />
-                    </div>
-
-                    <Button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-700">
-                      Schedule Call <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </form>
-                </TabsContent>
-              </Tabs>
+                </div>
+              </div>
             </div>
           </Card>
         </div>
