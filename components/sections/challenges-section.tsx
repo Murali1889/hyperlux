@@ -1,5 +1,6 @@
 import { Section, SectionHeader } from "@/components/ui/section"
 import { FeatureCard } from "@/components/ui/feature-card"
+import { Clock, Search, Signal, TriangleAlert } from "lucide-react"
 
 const challenges = [
   {
@@ -32,20 +33,7 @@ export default function ChallengesSection() {
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <svg
-                      className="w-4 h-4 text-red-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
+                    <Clock className="w-4 h-4 text-red-500" />
                   </div>
                   <div>
                     <h4 className="font-medium">Time-Consuming Process</h4>
@@ -57,20 +45,7 @@ export default function ChallengesSection() {
 
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <svg
-                      className="w-4 h-4 text-amber-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-                      />
-                    </svg>
+                    <TriangleAlert className="w-4 h-4 text-amber-500" />
                   </div>
                   <div>
                     <h4 className="font-medium">Human Error & Inconsistency</h4>
@@ -82,20 +57,7 @@ export default function ChallengesSection() {
 
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <svg
-                      className="w-4 h-4 text-blue-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                      />
-                    </svg>
+                    <Search className="w-4 h-4 text-blue-500" />
                   </div>
                   <div>
                     <h4 className="font-medium">Limited Data Sources</h4>
@@ -107,20 +69,7 @@ export default function ChallengesSection() {
 
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <svg
-                      className="w-4 h-4 text-indigo-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                      />
-                    </svg>
+                    <Signal className="w-4 h-4 text-indigo-500" />
                   </div>
                   <div>
                     <h4 className="font-medium">Scalability Issues</h4>
@@ -135,10 +84,9 @@ export default function ChallengesSection() {
             <div className="bg-slate-100 p-6 md:p-8">
               <div className="h-full flex flex-col">
                 <h3 className="text-xl font-bold mb-4">Impact on Lending Operations</h3>
-
                 <div className="flex-1 flex items-center justify-center">
                   <div className="w-full max-w-xs">
-                    <div className="relative">
+                    <div className="">
                       <div className="h-48 bg-white rounded-lg shadow-md p-4 mb-4">
                         <div className="space-y-2">
                           <div className="h-4 bg-slate-200 rounded w-3/4"></div>
@@ -146,27 +94,16 @@ export default function ChallengesSection() {
                           <div className="h-3 bg-slate-200 rounded w-5/6"></div>
                           <div className="h-3 bg-slate-200 rounded w-4/6"></div>
                         </div>
-                        <div className="absolute top-2 right-2 w-6 h-6 rounded-full bg-red-100 flex items-center justify-center">
-                          <svg
-                            className="w-5 h-5 text-red-500"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                            />
-                          </svg>
-                        </div>
                       </div>
 
                       <div className="flex justify-between text-sm font-medium mb-2">
                         <span>Loan Application</span>
-                        <span className="text-red-500">Delayed</span>
+                        <div className="flex items-center gap-2">
+                          <div className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center">
+                            <Clock className="w-4 h-4 text-red-500" />
+                          </div>
+                          <span className="text-red-500">Delayed</span>
+                        </div>
                       </div>
 
                       <div className="h-4 w-full bg-slate-200 rounded-full overflow-hidden">

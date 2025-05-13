@@ -13,7 +13,7 @@ export default function TransformationSection() {
         <div className="absolute top-1/2 left-0 right-0 h-2 bg-slate-200 -translate-y-1/2 rounded-full"></div>
 
         {/* Journey Stages */}
-        <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
+        <div className="relative grid grid-cols-1 md:grid-cols-3 gap-16">
           {/* Traditional Lending */}
           <div className="bg-white rounded-xl p-6 shadow-lg border border-slate-200 relative z-10">
             <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 rounded-full bg-slate-100 border-4 border-white flex items-center justify-center shadow-md">

@@ -21,7 +21,7 @@ export default function BlogCTA() {
             <Button asChild size="lg" className="bg-white text-indigo-800 hover:bg-indigo-50">
               <Link href="#book-demo">Book a Demo</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-indigo-700/20">
+            <Button asChild size="lg" variant="outline" className="text-black border-white hover:bg-indigo-700/20 hover:text-white">
               <Link href="/pricing">View Pricing</Link>
             </Button>
           </div>
