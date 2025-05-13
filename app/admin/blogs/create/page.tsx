@@ -1,3 +1,4 @@
+"use client"
 import BlogForm from "@/components/resources/blogs/blog-form"
 import { Card } from "@/components/ui/card"
 

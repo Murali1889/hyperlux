@@ -5,9 +5,14 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Plus, X } from "lucide-react"
+import { Plus, X, Loader2 } from "lucide-react"
+import { generateAndStoreBlog } from "@/lib/blogActions"
+import { useRouter } from "next/navigation"
+import { toast } from "sonner"
 
 export default function BlogForm() {
+    const router = useRouter()
+    const [isLoading, setIsLoading] = useState(false)
     const [secondaryKeywords, setSecondaryKeywords] = useState<string[]>([""])
     const [competitorLinks, setCompetitorLinks] = useState<string[]>([""])
 
@@ -39,15 +44,30 @@ export default function BlogForm() {
         setCompetitorLinks(newLinks)
     }
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
-        // Handle form submission here
-        console.log({
-            primaryKeyword: (e.target as HTMLFormElement).primaryKeyword.value,
-            secondaryKeywords,
-            competitorLinks,
-            blogIntent: (e.target as HTMLFormElement).blogIntent.value,
-        })
+        setIsLoading(true)
+
+        try {
+            const form = e.target as HTMLFormElement
+            const result = await generateAndStoreBlog({
+                primaryKeyword: form.primaryKeyword.value,
+                secondaryKeywords: secondaryKeywords.filter(k => k.trim() !== ""),
+                competitorLinks: competitorLinks.filter(l => l.trim() !== ""),
+                blogIntent: form.blogIntent.value,
+            })
+
+            if (result.success) {
+                toast.success("Blog generated successfully!")
+                router.push(`/admin/blogs/${result.id}`)
+            } else {
+                toast.error(result.error || "Failed to generate blog")
+            }
+        } catch (error: any) {
+            toast.error(error.message || "An error occurred")
+        } finally {
+            setIsLoading(false)
+        }
     }
 
     return (
@@ -59,6 +79,7 @@ export default function BlogForm() {
                     name="primaryKeyword"
                     placeholder="Enter primary keyword"
                     required
+                    disabled={isLoading}
                 />
             </div>
 
@@ -71,6 +92,7 @@ export default function BlogForm() {
                         size="sm"
                         onClick={addSecondaryKeyword}
                         className="h-8"
+                        disabled={isLoading}
                     >
                         <Plus className="h-4 w-4 mr-1" />
                         Add Keyword
@@ -82,6 +104,7 @@ export default function BlogForm() {
                             value={keyword}
                             onChange={(e) => updateSecondaryKeyword(index, e.target.value)}
                             placeholder="Enter secondary keyword"
+                            disabled={isLoading}
                         />
                         {index > 0 && (
                             <Button
@@ -90,6 +113,7 @@ export default function BlogForm() {
                                 size="icon"
                                 onClick={() => removeSecondaryKeyword(index)}
                                 className="h-10 w-10"
+                                disabled={isLoading}
                             >
                                 <X className="h-4 w-4" />
                             </Button>
@@ -98,7 +122,7 @@ export default function BlogForm() {
                 ))}
             </div>
 
-            <div className="space-y-4">
+            {/* <div className="space-y-4">
                 <div className="flex items-center justify-between">
                     <Label>Competitor Pages</Label>
                     <Button
@@ -107,6 +131,7 @@ export default function BlogForm() {
                         size="sm"
                         onClick={addCompetitorLink}
                         className="h-8"
+                        disabled={isLoading}
                     >
                         <Plus className="h-4 w-4 mr-1" />
                         Add Link
@@ -119,6 +144,7 @@ export default function BlogForm() {
                             onChange={(e) => updateCompetitorLink(index, e.target.value)}
                             placeholder="Enter competitor page URL"
                             type="url"
+                            disabled={isLoading}
                         />
                         {index > 0 && (
                             <Button
@@ -127,17 +153,18 @@ export default function BlogForm() {
                                 size="icon"
                                 onClick={() => removeCompetitorLink(index)}
                                 className="h-10 w-10"
+                                disabled={isLoading}
                             >
                                 <X className="h-4 w-4" />
                             </Button>
                         )}
                     </div>
                 ))}
-            </div>
+            </div> */}
 
             <div className="space-y-2">
                 <Label htmlFor="blogIntent">Blog Intent</Label>
-                <Select name="blogIntent" required>
+                <Select name="blogIntent" required disabled={isLoading}>
                     <SelectTrigger>
                         <SelectValue placeholder="Select blog intent" />
                     </SelectTrigger>
@@ -150,8 +177,19 @@ export default function BlogForm() {
                 </Select>
             </div>
 
-            <Button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-700 text-white">
-                Create Blog
+            <Button
+                type="submit"
+                className="w-full bg-indigo-600 hover:bg-indigo-700 text-white"
+                disabled={isLoading}
+            >
+                {isLoading ? (
+                    <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Generating Blog...
+                    </>
+                ) : (
+                    "Create Blog"
+                )}
             </Button>
         </form>
     )

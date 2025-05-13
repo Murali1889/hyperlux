@@ -1,127 +1,298 @@
-import { Section } from "@/components/ui/section"
+"use client"
 
-export default function BlogContent({ blog }: { blog: any }) {
+import { useState, useEffect, useRef } from "react"
+import { ChevronUp, ChevronRight, CheckCircle } from "lucide-react"
+import type { BlogPost } from "@/types/resources"
+
+export default function BlogContent({ blog }: { blog: BlogPost }) {
+  const [activeSection, setActiveSection] = useState("")
+  const [showBackToTop, setShowBackToTop] = useState(false)
+  const [scrollProgress, setScrollProgress] = useState(0)
+  const [tocExpanded, setTocExpanded] = useState(true)
+  const contentRef = useRef<HTMLDivElement>(null)
+  const tocRef = useRef<HTMLDivElement>(null)
+
+  // Generate table of contents from the blog content
+  const generateTableOfContents = (content: string) => {
+    const parser = new DOMParser()
+    const doc = parser.parseFromString(content, 'text/html')
+    const headings = doc.querySelectorAll('h1, h2, h3')
+
+    return Array.from(headings).map((heading) => {
+      const id = heading.textContent?.toLowerCase().replace(/\s+/g, '-') || ''
+      heading.id = id // Add ID to the heading for scroll targeting
+      return {
+        id,
+        title: heading.textContent || '',
+        level: parseInt(heading.tagName[1])
+      }
+    })
+  }
+
+  const tableOfContents = generateTableOfContents(blog.content)
+
+  // Calculate which sections have been read
+  const [readSections, setReadSections] = useState<string[]>([])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show back to top button after scrolling down 300px
+      if (window.scrollY > 300) {
+        setShowBackToTop(true)
+      } else {
+        setShowBackToTop(false)
+      }
+
+      // Calculate scroll progress
+      if (contentRef.current) {
+        const contentTop = contentRef.current.getBoundingClientRect().top
+        const contentHeight = contentRef.current.getBoundingClientRect().height
+        const windowHeight = window.innerHeight
+        const scrollPosition = window.scrollY
+
+        // Calculate how much of the content has been scrolled through
+        const scrollPercentage = Math.min(
+          100,
+          Math.max(0, ((scrollPosition - contentTop + windowHeight) / (contentHeight + windowHeight)) * 100),
+        )
+
+        setScrollProgress(scrollPercentage)
+      }
+
+      // Update active section based on scroll position
+      const sections = document.querySelectorAll("h1, h2, h3")
+      let currentActiveSection = ""
+      const newReadSections = [...readSections]
+
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top
+        // If the section is in the top part of the viewport, mark it as active
+        if (sectionTop < 150) {
+          currentActiveSection = section.id
+          // Add to read sections if not already there
+          if (!newReadSections.includes(section.id)) {
+            newReadSections.push(section.id)
+          }
+        }
+      })
+
+      if (currentActiveSection !== activeSection) {
+        setActiveSection(currentActiveSection)
+      }
+
+      if (newReadSections.length !== readSections.length) {
+        setReadSections(newReadSections)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [activeSection, readSections])
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
+  // Function to process and style HTML content
+  const processHtmlContent = (content: string) => {
+    const parser = new DOMParser()
+    const doc = parser.parseFromString(content, 'text/html')
+
+    // Add IDs to headings for scroll targeting
+    doc.querySelectorAll('h1, h2, h3').forEach((heading) => {
+      const id = heading.textContent?.toLowerCase().replace(/\s+/g, '-') || ''
+      heading.id = id
+    })
+
+    // Add classes to elements for styling
+    doc.querySelectorAll('p').forEach((p) => {
+      p.classList.add('text-slate-700', 'mb-4')
+    })
+
+    doc.querySelectorAll('h1, h2, h3').forEach((heading) => {
+      heading.classList.add('scroll-mt-24', 'font-bold', 'text-slate-900')
+      if (heading.tagName === 'H1') {
+        heading.classList.add('text-3xl', 'mb-6')
+      } else if (heading.tagName === 'H2') {
+        heading.classList.add('text-2xl', 'mb-4')
+      } else {
+        heading.classList.add('text-xl', 'mb-3')
+      }
+    })
+
+    doc.querySelectorAll('ul, ol').forEach((list) => {
+      list.classList.add('list-disc', 'pl-6', 'mb-4')
+    })
+
+    doc.querySelectorAll('li').forEach((item) => {
+      item.classList.add('mb-2')
+    })
+
+    doc.querySelectorAll('img').forEach((img) => {
+      img.classList.add('rounded-lg', 'shadow-md', 'my-6', 'w-full')
+    })
+
+    doc.querySelectorAll('blockquote').forEach((quote) => {
+      quote.classList.add('border-l-4', 'border-indigo-500', 'pl-4', 'italic', 'my-6')
+    })
+
+    return doc.body.innerHTML
+  }
+
   return (
-    <Section className="py-8">
-      <div className="max-w-3xl mx-auto prose prose-lg prose-indigo">
-        <p className="lead">{blog.excerpt}</p>
+    <div className="bg-white py-8" ref={contentRef}>
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Featured Image */}
+        <div className="mb-10 rounded-xl overflow-hidden shadow-lg">
+          <div className="relative aspect-[21/9] w-full">
+            <img
+              src={blog.featuredImage}
+              // alt={blog.title}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/80 to-indigo-900/80 flex items-center justify-center">
+              <div className="relative w-full h-full">
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+                  <div className="text-4xl font-bold mb-4">{blog.title}</div>
+                  <div className="text-xl opacity-80">{blog.excerpt}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <h2>Introduction</h2>
-        <p>
-          Industry classification is a critical component of the lending process, particularly for small business loans.
-          Accurate classification helps lenders assess risk, ensure regulatory compliance, and make informed decisions.
-          However, traditional manual classification methods are time-consuming, inconsistent, and difficult to scale.
-        </p>
+        <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-8">
+          {/* Table of Contents Sidebar */}
+          <div className="hidden lg:block">
+            <div
+              ref={tocRef}
+              className={`sticky top-24 transition-all duration-300 ease-in-out ${tocExpanded ? "w-full" : "w-16"}`}
+            >
+              <div
+                className={`bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden transition-all duration-300 ${tocExpanded ? "p-6" : "p-3"
+                  }`}
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <h3
+                    className={`font-bold transition-opacity duration-200 ${tocExpanded ? "opacity-100" : "opacity-0 w-0"}`}
+                  >
+                    Table of contents
+                  </h3>
+                  <button
+                    onClick={() => setTocExpanded(!tocExpanded)}
+                    className="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 hover:bg-slate-200 transition-colors"
+                  >
+                    <ChevronRight
+                      className={`h-4 w-4 transition-transform duration-300 ${tocExpanded ? "rotate-180" : "rotate-0"}`}
+                    />
+                  </button>
+                </div>
 
-        <p>
-          This is where artificial intelligence comes in. AI-powered industry classification solutions like DocsAPI
-          are transforming how financial institutions approach this essential task, delivering faster, more accurate
-          results while reducing operational costs.
-        </p>
+                {/* Progress bar */}
+                <div className="mb-6">
+                  <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-indigo-600 rounded-full transition-all duration-300 ease-out"
+                      style={{ width: `${scrollProgress}%` }}
+                    ></div>
+                  </div>
+                  <div
+                    className={`flex justify-between mt-1 text-xs text-slate-500 transition-opacity duration-200 ${tocExpanded ? "opacity-100" : "opacity-0"}`}
+                  >
+                    <span>0%</span>
+                    <span>{Math.round(scrollProgress)}%</span>
+                    <span>100%</span>
+                  </div>
+                </div>
 
-        <h2>The Challenges of Traditional Industry Classification</h2>
-        <p>
-          Before diving into the benefits of AI-powered classification, it's important to understand the challenges that
-          traditional methods present:
-        </p>
+                <div
+                  className={`space-y-1 items-start transition-all duration-300 ${tocExpanded ? "" : "opacity-0 h-0 overflow-hidden"}`}
+                >
+                  {tableOfContents.map((item, index) => (
+                    <div
+                      key={item.id}
+                      className={`flex items-start group cursor-pointer`}
+                      onClick={() => scrollToSection(item.id)}
+                    >
+                      <div className="mr-3 flex flex-col items-center">
+                        <div
+                          className={`w-3 h-3 rounded-full flex items-center justify-center transition-all duration-300 ${activeSection === item.id
+                            ? "bg-indigo-600 ring-4 ring-indigo-100"
+                            : readSections.includes(item.id)
+                              ? "bg-indigo-200"
+                              : "bg-slate-200"
+                            }`}
+                        >
+                          {readSections.includes(item.id) && <CheckCircle className="h-2 w-2 text-indigo-600" />}
+                        </div>
+                        {index < tableOfContents.length - 1 && (
+                          <div
+                            className={`w-0.5 h-8 transition-colors duration-300 ${readSections.includes(item.id) ? "bg-indigo-200" : "bg-slate-200"
+                              }`}
+                          />
+                        )}
+                      </div>
+                      <div
+                        className={`text-sm transition-colors duration-200 ${activeSection === item.id
+                          ? "font-medium text-indigo-600"
+                          : readSections.includes(item.id)
+                            ? "text-slate-600"
+                            : "text-slate-500"
+                          }`}
+                      >
+                        {item.title}
+                      </div>
+                    </div>
+                  ))}
+                </div>
 
-        <ul>
-          <li>
-            <strong>Time-Consuming Process:</strong> Manual classification typically takes 30-45 minutes per business,
-            creating bottlenecks in the loan approval process.
-          </li>
-          <li>
-            <strong>Inconsistent Results:</strong> Different analysts may classify the same business differently,
-            leading to inconsistencies in risk assessment and reporting.
-          </li>
-          <li>
-            <strong>Limited Scalability:</strong> As application volumes grow, manual classification becomes
-            increasingly difficult to scale without significant staffing increases.
-          </li>
-          <li>
-            <strong>Error-Prone:</strong> Human error can lead to misclassification, potentially resulting in improper
-            risk assessment and regulatory compliance issues.
-          </li>
-        </ul>
+                {/* Collapsed view */}
+                <div
+                  className={`transition-all duration-300 ${tocExpanded ? "opacity-0 h-0 overflow-hidden" : "opacity-100"}`}
+                >
+                  <div className="flex flex-col items-center space-y-3">
+                    {tableOfContents.map((item) => (
+                      <div
+                        key={item.id}
+                        onClick={() => scrollToSection(item.id)}
+                        className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${activeSection === item.id
+                          ? "bg-indigo-600 ring-4 ring-indigo-100"
+                          : readSections.includes(item.id)
+                            ? "bg-indigo-200"
+                            : "bg-slate-200"
+                          }`}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <h2>How AI is Transforming Industry Classification</h2>
-        <p>
-          AI-powered solutions like DocsAPI address these challenges through advanced algorithms and machine learning
-          techniques that analyze multiple data points to accurately classify businesses into the correct industry
-          codes.
-        </p>
-
-        <h3>Key Benefits of AI-Powered Classification</h3>
-        <p>The benefits of implementing an AI-powered industry classification solution are substantial:</p>
-
-        <ul>
-          <li>
-            <strong>Speed:</strong> Reduce classification time from 45 minutes to just 9 minutes per application,
-            accelerating the entire loan approval process.
-          </li>
-          <li>
-            <strong>Accuracy:</strong> Achieve 95% classification accuracy through multi-source verification and
-            advanced algorithms.
-          </li>
-          <li>
-            <strong>Consistency:</strong> Ensure consistent classification results across all applications, improving
-            risk assessment and regulatory reporting.
-          </li>
-          <li>
-            <strong>Scalability:</strong> Handle growing application volumes without adding staff, allowing your lending
-            operations to scale efficiently.
-          </li>
-        </ul>
-
-        <h2>Real-World Impact: Case Studies</h2>
-        <p>
-          Financial institutions across various sectors have already seen significant improvements after implementing
-          AI-powered industry classification:
-        </p>
-
-        <blockquote>
-          "DocsAPI's solution has transformed our small business lending operations. We've reduced our classification
-          time by 70% while improving accuracy to 95%, allowing us to process more loans with the same team."
-          <cite>— Sarah Chen, VP of Operations, Pacific Credit Union</cite>
-        </blockquote>
-
-        <h2>Implementation Considerations</h2>
-        <p>
-          While the benefits of AI-powered industry classification are clear, successful implementation requires careful
-          planning and consideration:
-        </p>
-
-        <ol>
-          <li>
-            <strong>Integration with Existing Systems:</strong> Ensure the solution can integrate seamlessly with your
-            current lending platform and workflow.
-          </li>
-          <li>
-            <strong>Data Quality:</strong> The accuracy of AI classification depends on the quality of input data.
-            Establish processes to ensure data completeness and accuracy.
-          </li>
-          <li>
-            <strong>Staff Training:</strong> While AI reduces manual classification work, staff still need training to
-            understand the system, interpret results, and handle exceptions.
-          </li>
-          <li>
-            <strong>Compliance Considerations:</strong> Verify that the AI solution meets all regulatory requirements
-            for your specific lending context.
-          </li>
-        </ol>
-
-        <h2>Conclusion</h2>
-        <p>
-          AI-powered industry classification represents a significant advancement for lending institutions of all sizes.
-          By reducing classification time, improving accuracy, and enabling scalability, these solutions help lenders
-          make better decisions faster while reducing operational costs.
-        </p>
-
-        <p>
-          As the lending landscape continues to evolve, embracing AI for industry classification is becoming less of a
-          competitive advantage and more of a necessity for institutions that want to remain efficient and competitive.
-        </p>
+          {/* Main Content */}
+          <div className="prose prose-lg prose-indigo max-w-none">
+            <div dangerouslySetInnerHTML={{ __html: processHtmlContent(blog.content) }} />
+          </div>
+        </div>
       </div>
-    </Section>
+
+      {/* Back to top button */}
+      {showBackToTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 bg-indigo-600 text-white p-3 rounded-full shadow-lg hover:bg-indigo-700 transition-colors"
+          aria-label="Back to top"
+        >
+          <ChevronUp size={20} />
+        </button>
+      )}
+    </div>
   )
 }
