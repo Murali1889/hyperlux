@@ -6,24 +6,17 @@ import Image from "next/image"
 import { blogs } from "@/data/blogs"
 
 export default function FeaturedBlog() {
-  // Get the most recent blog
   const featuredBlog = blogs[0]
 
-  // Update the featured blog title
-  featuredBlog.title = "How AI-Powered OCR Software Transforms Mortgage Lending"
-
-  // Update the excerpt
-  featuredBlog.excerpt =
-    "Discover how our intelligent document automation platform with 99.9% accurate data extraction is helping mortgage lenders reduce origination costs by up to 40% while enhancing compliance and fraud detection."
-
   return (
-    <Section className="py-8">
+    <Section className="py-8 md:py-16">
       <div className="grid md:grid-cols-2 gap-8 items-center">
         <div className="relative aspect-[4/3] md:aspect-auto overflow-hidden rounded-xl bg-slate-100">
           <Image
             src={featuredBlog.image || "/placeholder.svg"}
             alt={featuredBlog.title}
-            fill
+            width={40}
+            height={40}
             className="object-cover w-full h-full"
           />
         </div>
@@ -62,7 +55,7 @@ export default function FeaturedBlog() {
           </div>
           <Button asChild className="mt-2 bg-indigo-600 hover:bg-indigo-700">
             <Link href={`/resources/blogs/${featuredBlog.slug}`} className="flex items-center gap-2">
-              Read Full Article <ArrowRight className="h-4 w-4" />
+              Read Full Blog <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>
         </div>

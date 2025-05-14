@@ -21,9 +21,6 @@ export default function ProductsHero() {
               <Button asChild size="lg" className="bg-indigo-600 hover:bg-indigo-700">
                 <Link href="/book-demo">Book a Demo</Link>
               </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href="/contact-sales">Contact Sales</Link>
-              </Button>
             </div>
           </div>
           <div className="relative lg:h-[500px] rounded-xl overflow-hidden shadow-2xl bg-gradient-to-br from-indigo-600 via-purple-600 to-indigo-800">

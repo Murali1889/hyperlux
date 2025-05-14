@@ -1,8 +1,9 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { ChevronUp, ChevronRight, CheckCircle } from "lucide-react"
+import { ChevronUp, ChevronRight, CheckCircle, ArrowLeft } from "lucide-react"
 import type { BlogPost } from "@/types/resources"
+import Link from "next/link"
 
 export default function BlogContent({ blog }: { blog: BlogPost }) {
   const [activeSection, setActiveSection] = useState("")
@@ -16,7 +17,7 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
   const generateTableOfContents = (content: string) => {
     const parser = new DOMParser()
     const doc = parser.parseFromString(content, 'text/html')
-    const headings = doc.querySelectorAll('h1, h2, h3')
+    const headings = doc.querySelectorAll('h2')
 
     return Array.from(headings).map((heading) => {
       const id = heading.textContent?.toLowerCase().replace(/\s+/g, '-') || ''
@@ -116,14 +117,27 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
       p.classList.add('text-slate-700', 'mb-4')
     })
 
-    doc.querySelectorAll('h1, h2, h3').forEach((heading) => {
+    doc.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach((heading) => {
       heading.classList.add('scroll-mt-24', 'font-bold', 'text-slate-900')
-      if (heading.tagName === 'H1') {
-        heading.classList.add('text-3xl', 'mb-6')
-      } else if (heading.tagName === 'H2') {
-        heading.classList.add('text-2xl', 'mb-4')
-      } else {
-        heading.classList.add('text-xl', 'mb-3')
+      switch (heading.tagName) {
+        case 'H1':
+          heading.classList.add('text-[3rem]', 'my-4', 'mt-6')
+          break
+        case 'H2':
+          heading.classList.add('text-[2rem]', 'mb-2', 'mt-4')
+          break
+        case 'H3':
+          heading.classList.add('text-[1.75rem]', 'mb-2', 'mt-4')
+          break
+        case 'H4':
+          heading.classList.add('text-[1.5rem]', 'mb-2', 'mt-4')
+          break
+        case 'H5':
+          heading.classList.add('text-[1.25rem]', 'mb-2', 'mt-4')
+          break
+        case 'H6':
+          heading.classList.add('text-[1.125rem]', 'mb-2', 'mt-4')
+          break
       }
     })
 
@@ -149,21 +163,79 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
   return (
     <div className="bg-white py-8" ref={contentRef}>
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Back to Blogs Button */}
+        <div className="mb-6">
+          <Link
+            href="/resources/blogs"
+            className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span>Back to Blogs</span>
+          </Link>
+        </div>
+
         {/* Featured Image */}
         <div className="mb-10 rounded-xl overflow-hidden shadow-lg">
           <div className="relative aspect-[21/9] w-full">
-            <img
-              src={blog.featuredImage}
-              // alt={blog.title}
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/80 to-indigo-900/80 flex items-center justify-center">
-              <div className="relative w-full h-full">
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-                  <div className="text-4xl font-bold mb-4">{blog.title}</div>
-                  <div className="text-xl opacity-80">{blog.excerpt}</div>
+            <div className="absolute inset-0 p-8 bg-gradient-to-r from-indigo-600 to-indigo-900 flex items-center justify-center">
+              <div className="text-start text-white">
+                <h1 className="text-[3rem] font-bold mb-4">{blog.title}</h1>
+                <p className="text-base opacity-80">{blog.excerpt}</p>
+              </div>
+              <div className="absolute bottom-0 left-0 p-8">
+                <div className="flex items-center justify-center gap-4 text-white">
+                  <div className="flex items-center gap-2">
+                    <img src={blog.author?.avatar} alt={blog.author?.name} className="w-10 h-10 rounded-full" />
+                    <div className="text-sm">{blog.author?.name}</div>
+                  </div>
+                  <div className="text-sm">|</div>
+                  <div className="text-sm">{blog.date}</div>
+                  <div className="text-sm">|</div>
+                  <div className="text-sm">{blog.readTime}</div>
                 </div>
               </div>
+              {blog.image ?
+                <img src={blog.image} alt={blog.title} className="w-2/3 h-2/3 rounded-lg object-cover" />
+                :
+                <div className="relative w-full h-full">
+                  {/* Abstract document classification visualization */}
+                  <div className="absolute top-1/4 left-[15%] w-32 h-40 bg-white/10 rounded-lg transform rotate-6 backdrop-blur-sm border border-white/20"></div>
+                  <div className="absolute top-1/3 right-[14%] w-40 h-32 bg-white/10 rounded-lg transform -rotate-3 backdrop-blur-sm border border-white/20"></div>
+                  <div className="absolute bottom-1/4 left-[20%] w-36 h-28 bg-white/10 rounded-lg transform rotate-12 backdrop-blur-sm border border-white/20"></div>
+
+                  <svg
+                    className="absolute inset-0 w-full h-full"
+                    viewBox="0 0 1000 500"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M300,150 C400,100 600,100 700,150"
+                      stroke="rgba(255,255,255,0.3)"
+                      strokeWidth="2"
+                      fill="none"
+                    />
+                    <path
+                      d="M300,250 C400,200 600,200 700,250"
+                      stroke="rgba(255,255,255,0.3)"
+                      strokeWidth="2"
+                      fill="none"
+                    />
+                    <path
+                      d="M300,350 C400,300 600,300 700,350"
+                      stroke="rgba(255,255,255,0.3)"
+                      strokeWidth="2"
+                      fill="none"
+                    />
+
+                    <circle cx="300" cy="150" r="8" fill="rgba(255,255,255,0.5)" />
+                    <circle cx="700" cy="150" r="8" fill="rgba(255,255,255,0.5)" />
+                    <circle cx="300" cy="250" r="8" fill="rgba(255,255,255,0.5)" />
+                    <circle cx="700" cy="250" r="8" fill="rgba(255,255,255,0.5)" />
+                    <circle cx="300" cy="350" r="8" fill="rgba(255,255,255,0.5)" />
+                    <circle cx="700" cy="350" r="8" fill="rgba(255,255,255,0.5)" />
+                  </svg>
+                </div>
+              }
             </div>
           </div>
         </div>

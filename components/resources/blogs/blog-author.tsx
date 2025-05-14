@@ -4,7 +4,7 @@ import { Twitter, Linkedin, Mail, Globe } from "lucide-react"
 
 export default function BlogAuthor({ author }: { author: any }) {
   return (
-    <Section className="py-12 bg-slate-50">
+    <Section className="py-8 md:py-16 bg-slate-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <Card className="border-slate-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
           <CardContent className="p-8">
@@ -15,7 +15,7 @@ export default function BlogAuthor({ author }: { author: any }) {
                   <div className="h-full w-full rounded-full overflow-hidden border-4 border-white">
                     <img
                       src={author.avatar || "/placeholder.svg"}
-                      alt={author.name}
+                      // alt={author.name}
                       className="object-cover w-full h-full"
                     />
                   </div>
@@ -27,7 +27,7 @@ export default function BlogAuthor({ author }: { author: any }) {
 
               {/* Author Info */}
               <div className="flex-1 text-center md:text-left">
-                <div className="mb-6">
+                <div className="mb-4">
                   <h3 className="text-2xl font-bold text-slate-900 mb-2">{author.name}</h3>
                   <p className="text-indigo-600 font-medium">{author.title}</p>
                 </div>

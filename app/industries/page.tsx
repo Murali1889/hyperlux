@@ -22,12 +22,6 @@ export default function IndustriesPage() {
             >
               Book a Demo
             </a>
-            <a
-              href="/contact-sales"
-              className="bg-transparent border border-white hover:bg-white/10 px-6 py-3 rounded-lg font-medium text-center"
-            >
-              Contact Sales
-            </a>
           </div>
         </div>
       </div>
@@ -891,12 +885,6 @@ export default function IndustriesPage() {
               className="bg-white text-indigo-700 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium text-center"
             >
               Book a Demo
-            </a>
-            <a
-              href="/contact-sales"
-              className="bg-transparent border border-white hover:bg-white/10 px-8 py-3 rounded-lg font-medium text-center"
-            >
-              Contact Sales
             </a>
           </div>
         </div>

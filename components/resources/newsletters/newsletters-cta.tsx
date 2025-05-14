@@ -19,9 +19,6 @@ export default function NewslettersCTA() {
               Request a Demo
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-            <Button variant="outline" className="border-indigo-200 text-indigo-600 hover:bg-indigo-50">
-              Contact Sales
-            </Button>
           </div>
         </div>
       </div>

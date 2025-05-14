@@ -76,6 +76,7 @@ export function constructPrompt(
     4. Keep paragraphs short and easy to scan.
     5. Use semantic headings to organize the blog well.
     6. The response must include a descriptive **image_prompt** to be used for generating a blog hero image using an image generation model.
+    7. Also add 3 to 5 FAQ question and answer at the bottom of the blog after conclusion.
 
     ## INPUTS
 
@@ -115,7 +116,7 @@ export async function generateBlogPost(
     wordCount = 1200
 ) {
     try {
-        console.log('Generating blog post...')
+        // console.log('Generating blog post...')
         const response = await axios.post('/api/generateBlogPost', {
             primary,
             secondary,

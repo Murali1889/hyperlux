@@ -1,53 +1,8 @@
 'use client'
-// import type { Metadata } from "next"
 import Link from "next/link"
-import { CalendarDays, Clock, Users, Building, ArrowRight, Check } from "lucide-react"
-
-import { Button } from "@/components/ui/button"
+import { CalendarDays, Clock, Users, Building, Check } from "lucide-react"
 import { Card } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { submitDemoForm } from "@/lib/submitForm"
-import { useState } from "react"
-import toast from "react-hot-toast"
-
-// export const metadata: Metadata = {
-//   title: "Book a Demo | DocsAPI",
-//   description:
-//     "Schedule a personalized demo of DocsAPI's AI-powered industry classification solution for small business lending.",
-// }
-
-const [isSubmitting, setIsSubmitting] = useState(false)
-
-const handleDemoSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault()
-  setIsSubmitting(true)
-
-  const form = e.currentTarget
-  const data = {
-    e: form['email'].value,
-    p: form['phone'].value,
-    w: form['where-did-you-hear-about-us'].value,
-    ca: new Date().toISOString()
-  }
-
-  try {
-    const result = await submitDemoForm(data)
-    if (result.success) {
-      toast.success("Demo booked successfully! We'll contact you soon.")
-      form.reset()
-    } else {
-      toast.error(`Failed to submit form: ${result.error}`)
-    }
-  } catch (error) {
-    toast.error("Something went wrong. Please try again later.")
-  } finally {
-    setIsSubmitting(false)
-  }
-}
-
+import { DemoBookingForm } from "@/components/sections/demo-booking-form"
 
 export default function BookDemoPage() {
   return (
@@ -139,73 +94,7 @@ export default function BookDemoPage() {
               </p>
             </div>
             <div className="p-6">
-              <form onSubmit={handleDemoSubmit} className="space-y-4">
-                {/* <div className="grid gap-4 sm:grid-cols-2">
-                  <div className="space-y-2">
-                    <Label htmlFor="first-name">First Name</Label>
-                    <Input id="first-name" placeholder="John" required />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="last-name">Last Name</Label>
-                    <Input id="last-name" placeholder="Doe" required />
-                  </div>
-                </div> */}
-
-                <div className="space-y-2">
-                  <Label htmlFor="email">Corporate Email</Label>
-                  <Input id="email" type="email" placeholder="john.doe@company.com" required />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="phone">Phone Number</Label>
-                  <Input id="phone" type="tel" placeholder="(123) 456-7890" required />
-                </div>
-
-                {/* <div className="space-y-2">
-                  <Label htmlFor="company">Company Name</Label>
-                  <Input id="company" placeholder="Acme Financial" required />
-                </div> */}
-
-                {/* <div className="space-y-2">
-                  <Label htmlFor="job-title">Job Title</Label>
-                  <Input id="job-title" placeholder="Lending Manager" required />
-                </div> */}
-
-                <div className="space-y-2">
-                  <Label htmlFor="where-did-you-hear-about-us">Where did you hear about us?</Label>
-                  <Input
-                    id="message"
-                    placeholder="Google, LinkedIn, Referral, AI, etc."
-                  />
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-start gap-2">
-                    <div className="flex h-5 items-center">
-                      <input
-                        id="terms"
-                        type="checkbox"
-                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                        required
-                      />
-                    </div>
-                    <Label htmlFor="terms" className="text-sm text-muted-foreground">
-                      I agree to DocsAPI's{" "}
-                      <Link href="#" className="text-indigo-600 hover:underline">
-                        Terms of Service
-                      </Link>{" "}
-                      and{" "}
-                      <Link href="#" className="text-indigo-600 hover:underline">
-                        Privacy Policy
-                      </Link>
-                    </Label>
-                  </div>
-                </div>
-
-                <Button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-700" disabled={isSubmitting}>
-                  {isSubmitting ? "Submitting..." : "Book My Demo"} <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </form>
+              <DemoBookingForm />
             </div>
           </Card>
 

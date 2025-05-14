@@ -39,10 +39,6 @@ export default function Navbar() {
       </nav>
 
       <div className="flex items-center gap-4">
-        <Button asChild variant="outline" className="hidden md:inline-flex">
-          <Link href="/contact-sales">Contact Sales</Link>
-        </Button>
-
         <Button asChild className="hidden md:inline-flex bg-indigo-600 hover:bg-indigo-700">
           <Link href="/book-demo">Book a Demo</Link>
         </Button>
@@ -75,11 +71,6 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="grid grid-cols-2 gap-3 pt-4">
-              <Button asChild variant="outline" className="w-full">
-                <Link href="/contact-sales" onClick={() => setMobileMenuOpen(false)}>
-                  Contact Sales
-                </Link>
-              </Button>
               <Button asChild className="w-full bg-indigo-600 hover:bg-indigo-700">
                 <Link href="/book-demo" onClick={() => setMobileMenuOpen(false)}>
                   Book a Demo
