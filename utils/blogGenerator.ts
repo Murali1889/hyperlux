@@ -45,15 +45,16 @@ export async function getTextFromUrl(url: string): Promise<{ text: string; headi
     }
 }
 
-// export async function analyzeCompetitors(urls: string[]): Promise<string> {
-//     const insights: string[] = []
-//     for (let i = 0; i < urls.length; i++) {
-//         const { text, headings } = await getTextFromUrl(urls[i])
-//         const excerpt = text.slice(0, 800)
-//         insights.push(`Competitor ${i + 1} (${urls[i]}):\nHeadings:\n${headings.slice(0, 4).join('\n')}\nContent Excerpt:\n${excerpt}\n`)
-//     }
-//     return insights.join('\n') || 'No competitor insights gathered.'
-// }
+export async function analyzeCompetitors(urls: string[]): Promise<string> {
+    const insights: string[] = []
+    for (let i = 0; i < urls.length; i++) {
+        const { text, headings } = await getTextFromUrl(urls[i])
+        const excerpt = text.slice(0, 800)
+        insights.push(`Competitor ${i + 1} (${urls[i]}):\nHeadings:\n${headings.slice(0, 4).join('\n')}\nContent Excerpt:\n${excerpt}\n`)
+    }
+    console.log('Competitor Insights:', insights.join('\n'))
+    return insights.join('\n') || 'No competitor insights gathered.'
+}
 
 export function constructPrompt(
     primary: string,
@@ -97,8 +98,9 @@ export function constructPrompt(
     \`\`\`json
     {
     "title": "An SEO-optimized blog title here",
-    "meta_description": "A short engaging meta description including the primary keyword.",
-    "html_content": "<h1>Heading</h1><p>Intro paragraph...</p><h2>Subheading</h2><p>Content...</p>",
+    "excerpt": "A short engaging excerpt including the primary keyword.",
+    "meta_tag": "A short engaging meta tag including the primary keyword.",
+    "html_content": "<p>Intro paragraph...</p><h2>Subheading</h2><p>Content...</p>",
     "image_prompt": "A realistic illustration of [describe the blog topic visually]."
     }
     \`\`\`
@@ -107,24 +109,12 @@ export function constructPrompt(
 }
 
 export async function generateBlogPost(
-    primary: string,
-    secondary: string[],
-    intent: string,
-    competitorUrls: string[],
-    audience = 'general audience',
-    tone = 'informative, engaging',
-    wordCount = 1200
+    prompt: string
 ) {
     try {
         // console.log('Generating blog post...')
         const response = await axios.post('/api/generateBlogPost', {
-            primary,
-            secondary,
-            intent,
-            competitorUrls,
-            audience,
-            tone,
-            wordCount,
+            prompt: prompt
         })
 
         if (!response) {
@@ -135,8 +125,9 @@ export async function generateBlogPost(
 
         return {
             title: data.title || 'N/A',
-            meta: data.meta || 'N/A',
-            body: data.body || '',
+            excerpt: data.excerpt || 'N/A',
+            metaTag: data.metaTag || 'N/A',
+            content: data.content || '',
             imagePrompt: data.imagePrompt || '',
         }
     } catch (error) {

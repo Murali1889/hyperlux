@@ -1,23 +1,16 @@
-// pages/api/generateBlogPost.ts
-
-import { constructPrompt } from '@/utils/blogGenerator'
 import axios from 'axios'
 
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY || ''
 const MODEL = 'claude-3-7-sonnet-20250219'
 
 export default async function handler(req, res) {
-  // console.log('Received request body:', req.body)
+  console.log('Received request body:', req.body)
 
   if (req.method === 'POST') {
-    const { primary, secondary, intent, competitorUrls, audience, tone, wordCount } = req.body
+    const { prompt } = req.body
 
     try {
-      // For testing purposes, you can leave competitorSummary empty
-      const competitorSummary = ''
-
-      const prompt = constructPrompt(primary, secondary, intent, competitorSummary, audience, tone, wordCount)
-      // console.log('Generated Prompt:', prompt)
+      console.log('Generated Prompt:', prompt)
 
       // Request to Anthropic API
       const response = await axios.post(
@@ -26,18 +19,19 @@ export default async function handler(req, res) {
           model: MODEL,
           messages: [{ role: 'user', content: prompt }],
           max_tokens: 3500,
-          temperature: 0.7
+          temperature: 0.7,
+          system: "You are an expert SEO blog writer. Your task is to generate high-quality, original blog posts as Humanize in structured JSON format`."
         },
         {
           headers: {
             'x-api-key': ANTHROPIC_API_KEY,
-            'content-type': 'application/json'
+            'content-type': 'application/json',
           }
         }
       )
 
       const rawContent = response.data?.content?.[0]?.text || ''
-      // console.log('Raw content from Anthropic:', rawContent)
+      console.log('Raw content from Anthropic:', rawContent)
 
       // Attempt to match the JSON block within the response content
       const jsonMatch = rawContent.match(/```json([\s\S]*?)```/)
@@ -54,8 +48,9 @@ export default async function handler(req, res) {
         const parsed = JSON.parse(jsonMatch[1].trim())
         return res.status(200).json({
           title: parsed.title || 'N/A',
-          meta: parsed.meta_description || 'N/A',
-          body: parsed.html_content || '',
+          excerpt: parsed.excerpt || 'N/A',
+          metaTag: parsed.meta_tag || 'N/A',
+          content: parsed.html_content || '',
           imagePrompt: parsed.image_prompt || ''
         })
       } catch (err) {
@@ -66,9 +61,10 @@ export default async function handler(req, res) {
       }
 
     } catch (error) {
-      console.error('Error generating blog post:', error)
+      console.error('Error generating blog post:', error.response?.data || error.message)
       return res.status(500).json({
-        error: 'Failed to generate blog post due to API error.'
+        error: 'Failed to generate blog post due to API error.',
+        details: error.response?.data || error.message
       })
     }
   } else {

@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: blog.tag
+    title: blog.metaTag
   }
 }
 
