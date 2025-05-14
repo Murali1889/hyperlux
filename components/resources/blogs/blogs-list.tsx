@@ -8,7 +8,7 @@ import { blogs } from "@/data/blogs"
 
 export default function BlogsList() {
   return (
-    <Section>
+    <Section className="py-4 md:py-8">
       <SectionHeader title="Latest Blog Posts on OCR Software & Document Automation" description="" />
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -47,11 +47,11 @@ export default function BlogsList() {
         ))}
       </div>
 
-      <div className="mt-12 flex justify-center">
+      {/* <div className="mt-12 flex justify-center">
         <Button variant="outline" size="lg">
           Load More
         </Button>
-      </div>
+      </div> */}
     </Section>
   )
 }

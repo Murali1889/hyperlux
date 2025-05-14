@@ -77,19 +77,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
-          <div>
-            <h3 className="text-white font-bold mb-4">Subscribe</h3>
-            <p className="text-gray-400 mb-4">Subscribe to our newsletter to get the latest updates.</p>
-            <form className="space-y-2">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="w-full px-4 py-2 rounded-md bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white"
-              />
-              <Button className="w-full bg-indigo-600 hover:bg-indigo-700">Subscribe</Button>
-            </form>
-          </div>
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
@@ -100,9 +87,6 @@ export default function Footer() {
             </Link>
             <Link href="/terms" className="text-gray-500 hover:text-white text-sm transition-colors">
               Terms of Service
-            </Link>
-            <Link href="/contact-sales" className="text-gray-500 hover:text-white text-sm transition-colors">
-              Contact Sales
             </Link>
             <Link href="/book-demo" className="text-gray-500 hover:text-white text-sm transition-colors">
               Book a Demo

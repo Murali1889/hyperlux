@@ -21,12 +21,6 @@ export default function UseCasesPage() {
             >
               Book a Demo
             </a>
-            <a
-              href="/contact-sales"
-              className="bg-transparent border border-white hover:bg-white/10 px-6 py-3 rounded-lg font-medium text-center"
-            >
-              Contact Sales
-            </a>
           </div>
         </div>
       </div>

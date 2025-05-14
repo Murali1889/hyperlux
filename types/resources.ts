@@ -20,7 +20,7 @@ export interface BlogPost {
   date: string
   readTime: string
   author: Author
-  tags: string[]
+  tag: string
 }
 
 export interface Article {

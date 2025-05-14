@@ -4,12 +4,12 @@ import { Calendar, Clock } from "lucide-react"
 import Link from "next/link"
 import { blogs } from "@/data/blogs"
 
-export default function RelatedBlogs({ currentBlogId }: { currentBlogId: number }) {
+export default function RelatedBlogs({ currentBlogId }: { currentBlogId: string }) {
   // Filter out the current blog and get 3 related blogs
   const relatedBlogs = blogs.filter((blog) => blog.id !== currentBlogId).slice(0, 3)
 
   return (
-    <Section background="muted">
+    <Section background="muted" className="py-8 md:py-16">
       <SectionHeader title="Related Blog Posts" description="" />
 
       <div className="grid md:grid-cols-3 gap-8">

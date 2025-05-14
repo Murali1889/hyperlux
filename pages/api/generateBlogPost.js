@@ -7,7 +7,7 @@ const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY || ''
 const MODEL = 'claude-3-7-sonnet-20250219'
 
 export default async function handler(req, res) {
-  console.log('Received request body:', req.body)
+  // console.log('Received request body:', req.body)
 
   if (req.method === 'POST') {
     const { primary, secondary, intent, competitorUrls, audience, tone, wordCount } = req.body
@@ -17,7 +17,7 @@ export default async function handler(req, res) {
       const competitorSummary = ''
 
       const prompt = constructPrompt(primary, secondary, intent, competitorSummary, audience, tone, wordCount)
-      console.log('Generated Prompt:', prompt)
+      // console.log('Generated Prompt:', prompt)
 
       // Request to Anthropic API
       const response = await axios.post(
@@ -37,7 +37,7 @@ export default async function handler(req, res) {
       )
 
       const rawContent = response.data?.content?.[0]?.text || ''
-      console.log('Raw content from Anthropic:', rawContent)
+      // console.log('Raw content from Anthropic:', rawContent)
 
       // Attempt to match the JSON block within the response content
       const jsonMatch = rawContent.match(/```json([\s\S]*?)```/)

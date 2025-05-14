@@ -4,7 +4,6 @@ import FeaturedResources from "@/components/resources/featured-resources"
 import RecentBlogs from "@/components/resources/recent-blogs"
 import PopularArticles from "@/components/resources/popular-articles"
 import LatestNewsletters from "@/components/resources/latest-newsletters"
-import ResourcesCTA from "@/components/resources/resources-cta"
 
 export default function ResourcesPage() {
   return (
@@ -15,7 +14,6 @@ export default function ResourcesPage() {
       {/* <RecentBlogs /> */}
       {/* <PopularArticles /> */}
       {/* <LatestNewsletters /> */}
-      <ResourcesCTA />
     </>
   )
 }

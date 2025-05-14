@@ -17,9 +17,6 @@ export default function ProductsCTA() {
             <Button asChild size="lg" className="bg-white text-indigo-600 hover:bg-gray-100">
               <Link href="/book-demo">Book a Demo</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-white border-white bg-indigo-600 hover:bg-white hover:text-indigo-600 transition-all duration-300">
-              <Link href="/contact-sales">Contact Sales</Link>
-            </Button>
           </div>
         </div>
       </div>
