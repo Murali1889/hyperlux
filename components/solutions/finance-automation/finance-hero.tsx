@@ -24,13 +24,6 @@ export default function FinanceHero() {
             >
               Request Finance Demo
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-indigo-700 text-indigo-700 hover:bg-indigo-100 px-6 py-4 sm:px-8 sm:py-6 text-base sm:text-lg w-full sm:w-auto"
-            >
-              Contact Sales
-            </Button>
           </div>
         </motion.div>
       </div>

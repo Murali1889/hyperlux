@@ -26,12 +26,6 @@ export default function CustomerExperienceHero() {
               <Button className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-4 sm:py-6 rounded-lg text-base sm:text-lg w-full sm:w-auto">
                 See CX Demo
               </Button>
-              <Button
-                variant="outline"
-                className="border-indigo-700 text-indigo-700 hover:bg-indigo-50 px-6 py-4 sm:py-6 rounded-lg text-base sm:text-lg w-full sm:w-auto"
-              >
-                Contact Sales
-              </Button>
             </div>
           </motion.div>
 

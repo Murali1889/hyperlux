@@ -47,13 +47,6 @@ export default function StickyCTA() {
                 <Button size="lg" className="bg-indigo-700 hover:bg-indigo-800 text-white w-full sm:w-auto">
                   Request Demo
                 </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-indigo-700 text-indigo-700 hover:bg-indigo-50 w-full sm:w-auto"
-                >
-                  Contact Sales
-                </Button>
               </div>
             </div>
           </div>
