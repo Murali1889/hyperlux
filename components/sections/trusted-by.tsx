@@ -1,53 +1,16 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
 import { Section, SectionHeader } from "@/components/ui/section"
-
-const stats = [
-  { value: "500+", label: "Financial Institutions" },
-  { value: "30M+", label: "Loan Applications Processed" },
-  { value: "$12B+", label: "Loan Value Facilitated" },
-  { value: "95%", label: "Classification Accuracy" },
-]
+import Image from "next/image"
 
 const logos = [
-  { name: "HSBC", region: "Global" },
-  { name: "Citibank", region: "Global" },
-  { name: "DBS", region: "Asia" },
-  { name: "OCBC", region: "Asia" },
-  { name: "UOB", region: "Asia" },
-  { name: "Standard Chartered", region: "Global" },
-  { name: "CIMB", region: "Asia" },
-  { name: "Maybank", region: "Asia" },
-  { name: "Bank of America", region: "Americas" },
-  { name: "JP Morgan", region: "Global" },
-  { name: "Goldman Sachs", region: "Global" },
-  { name: "Wells Fargo", region: "Americas" },
+  { name: "HSBC", image: "/logos/hsbc.webp" },
+  { name: "Revolut", image: "/logos/revolut.webp" },
+  { name: "Home Credit", image: "/logos/home-credit.webp" },
+  { name: "Grab", image: "/logos/grab.webp" },
 ]
 
 export default function TrustedBy() {
-  const [visibleLogos, setVisibleLogos] = useState(logos.slice(0, 6))
-  const [currentIndex, setCurrentIndex] = useState(6)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      // Replace one logo at a time
-      const randomIndex = Math.floor(Math.random() * 6)
-      const newLogo = logos[currentIndex % logos.length]
-
-      setVisibleLogos((prev) => {
-        const updated = [...prev]
-        updated[randomIndex] = newLogo
-        return updated
-      })
-
-      setCurrentIndex((prev) => prev + 1)
-    }, 2000)
-
-    return () => clearInterval(interval)
-  }, [currentIndex])
-
   return (
     <Section background="primary" id="trusted-by">
       <SectionHeader
@@ -55,34 +18,28 @@ export default function TrustedBy() {
         description="DocsAPI powers industry classification for the world's leading financial institutions"
       />
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-        {stats.map((stat) => (
-          <div key={stat.label} className="text-center">
-            <div className="text-4xl font-bold text-indigo-600 mb-2">{stat.value}</div>
-            <div className="text-sm text-muted-foreground">{stat.label}</div>
-          </div>
-        ))}
-      </div>
-
       <div className="bg-white rounded-xl p-8 shadow-sm border border-slate-200">
         <h3 className="text-xl font-bold text-center mb-8">Our Global Client Network</h3>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-          {visibleLogos.map((logo, index) => (
-            <motion.div
-              key={`${logo.name}-${index}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5 }}
-              className="flex flex-col items-center"
-            >
-              <div className="h-16 w-40 bg-white rounded-lg shadow-sm border border-slate-200 flex items-center justify-center p-3">
-                <div className="text-lg font-bold text-slate-700">{logo.name}</div>
+        <div className="overflow-hidden">
+          <div
+            className="flex gap-10 animate-marquee"
+            style={{
+              display: 'flex',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            {[...logos, ...logos].map((logo, index) => (
+              <div
+                key={`${logo.name}-${index}`}
+                className="flex-shrink-0 w-40"
+              >
+                <div className="h-24 w-44 bg-white rounded-lg shadow-sm border border-slate-200 flex items-center justify-center p-3">
+                  <img src={logo.image} alt={logo.name} />
+                </div>
               </div>
-              <div className="mt-2 text-xs text-muted-foreground">{logo.region}</div>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
 
         <div className="mt-8 text-center">

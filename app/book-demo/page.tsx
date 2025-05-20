@@ -66,23 +66,6 @@ export default function BookDemoPage() {
               </div>
             </div>
           </div>
-
-          <div className="mt-8 rounded-lg border bg-muted/40 p-6">
-            <h3 className="text-lg font-medium">What Our Clients Say</h3>
-            <blockquote className="mt-4 border-l-4 border-indigo-600 pl-4 italic text-muted-foreground">
-              "The demo was incredibly valuable. It showed us exactly how DocsAPI could integrate with our existing
-              systems and the potential ROI was compelling. We signed up immediately after."
-            </blockquote>
-            <div className="mt-4 flex items-center gap-3">
-              <div className="h-10 w-10 overflow-hidden rounded-full bg-muted">
-                <img src="/avatar-michael.png" alt="Client" className="h-full w-full object-cover" />
-              </div>
-              <div>
-                <p className="font-medium">Michael Rodriguez</p>
-                <p className="text-sm text-muted-foreground">VP of Lending, First Community Bank</p>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div>

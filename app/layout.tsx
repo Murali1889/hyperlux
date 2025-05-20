@@ -36,8 +36,8 @@ export default function RootLayout({
           <div className="flex min-h-screen flex-col">
             <Navbar />
             <main className="flex-1">{children}</main>
-          <Footer />
-          <Toaster position="top-center" />
+            <Footer />
+            <Toaster position="top-center" />
           </div>
       </body>
     </html>
