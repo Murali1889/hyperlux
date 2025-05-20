@@ -1,164 +1,177 @@
-"use client"
+"use client";
 
-import { useState, useEffect, useRef } from "react"
-import { ChevronUp, ChevronRight, CheckCircle, ArrowLeft } from "lucide-react"
-import type { BlogPost } from "@/types/resources"
-import Link from "next/link"
+import { useState, useEffect, useRef } from "react";
+import { ChevronUp, ChevronRight, CheckCircle, ArrowLeft } from "lucide-react";
+import type { BlogPost } from "@/types/resources";
+import Link from "next/link";
 
 export default function BlogContent({ blog }: { blog: BlogPost }) {
-  const [activeSection, setActiveSection] = useState("")
-  const [showBackToTop, setShowBackToTop] = useState(false)
-  const [scrollProgress, setScrollProgress] = useState(0)
-  const [tocExpanded, setTocExpanded] = useState(true)
-  const contentRef = useRef<HTMLDivElement>(null)
-  const tocRef = useRef<HTMLDivElement>(null)
+  const [activeSection, setActiveSection] = useState("");
+  const [showBackToTop, setShowBackToTop] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const [tocExpanded, setTocExpanded] = useState(true);
+  const [tableOfContents, setTableOfContents] = useState<
+    { id: string; title: string; level: number }[]
+  >([]);
+  const [processedContent, setProcessedContent] = useState("");
+  const contentRef = useRef<HTMLDivElement>(null);
+  const tocRef = useRef<HTMLDivElement>(null);
 
   // Generate table of contents from the blog content
   const generateTableOfContents = (content: string) => {
-    const parser = new DOMParser()
-    const doc = parser.parseFromString(content, 'text/html')
-    const headings = doc.querySelectorAll('h2')
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(content, "text/html");
+    const headings = doc.querySelectorAll("h2");
 
     return Array.from(headings).map((heading) => {
-      const id = heading.textContent?.toLowerCase().replace(/\s+/g, '-') || ''
-      heading.id = id // Add ID to the heading for scroll targeting
+      const id = heading.textContent?.toLowerCase().replace(/\s+/g, "-") || "";
+      heading.id = id; // Add ID to the heading for scroll targeting
       return {
         id,
-        title: heading.textContent || '',
-        level: parseInt(heading.tagName[1])
-      }
-    })
-  }
-
-  const tableOfContents = generateTableOfContents(blog.content)
-
-  // Calculate which sections have been read
-  const [readSections, setReadSections] = useState<string[]>([])
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // Show back to top button after scrolling down 300px
-      if (window.scrollY > 300) {
-        setShowBackToTop(true)
-      } else {
-        setShowBackToTop(false)
-      }
-
-      // Calculate scroll progress
-      if (contentRef.current) {
-        const contentTop = contentRef.current.getBoundingClientRect().top
-        const contentHeight = contentRef.current.getBoundingClientRect().height
-        const windowHeight = window.innerHeight
-        const scrollPosition = window.scrollY
-
-        // Calculate how much of the content has been scrolled through
-        const scrollPercentage = Math.min(
-          100,
-          Math.max(0, ((scrollPosition - contentTop + windowHeight) / (contentHeight + windowHeight)) * 100),
-        )
-
-        setScrollProgress(scrollPercentage)
-      }
-
-      // Update active section based on scroll position
-      const sections = document.querySelectorAll("h1, h2, h3")
-      let currentActiveSection = ""
-      const newReadSections = [...readSections]
-
-      sections.forEach((section) => {
-        const sectionTop = section.getBoundingClientRect().top
-        // If the section is in the top part of the viewport, mark it as active
-        if (sectionTop < 150) {
-          currentActiveSection = section.id
-          // Add to read sections if not already there
-          if (!newReadSections.includes(section.id)) {
-            newReadSections.push(section.id)
-          }
-        }
-      })
-
-      if (currentActiveSection !== activeSection) {
-        setActiveSection(currentActiveSection)
-      }
-
-      if (newReadSections.length !== readSections.length) {
-        setReadSections(newReadSections)
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [activeSection, readSections])
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
-  }
-
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId)
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" })
-    }
-  }
+        title: heading.textContent || "",
+        level: parseInt(heading.tagName[1]),
+      };
+    });
+  };
 
   // Function to process and style HTML content
   const processHtmlContent = (content: string) => {
-    const parser = new DOMParser()
-    const doc = parser.parseFromString(content, 'text/html')
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(content, "text/html");
 
     // Add IDs to headings for scroll targeting
-    doc.querySelectorAll('h1, h2, h3').forEach((heading) => {
-      const id = heading.textContent?.toLowerCase().replace(/\s+/g, '-') || ''
-      heading.id = id
-    })
+    doc.querySelectorAll("h1, h2, h3").forEach((heading) => {
+      const id = heading.textContent?.toLowerCase().replace(/\s+/g, "-") || "";
+      heading.id = id;
+    });
 
     // Add classes to elements for styling
-    doc.querySelectorAll('p').forEach((p) => {
-      p.classList.add('text-slate-700', 'mb-4')
-    })
+    doc.querySelectorAll("p").forEach((p) => {
+      p.classList.add("text-slate-700", "mb-4");
+    });
 
-    doc.querySelectorAll('h1, h2, h3, h4, h5, h6').forEach((heading) => {
-      heading.classList.add('scroll-mt-24', 'font-bold', 'text-slate-900')
+    doc.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach((heading) => {
+      heading.classList.add("scroll-mt-24", "font-bold", "text-slate-900");
       switch (heading.tagName) {
-        case 'H1':
-          heading.classList.add('text-[3rem]', 'my-4', 'mt-6')
-          break
-        case 'H2':
-          heading.classList.add('text-[2rem]', 'mb-2', 'mt-4')
-          break
-        case 'H3':
-          heading.classList.add('text-[1.75rem]', 'mb-2', 'mt-4')
-          break
-        case 'H4':
-          heading.classList.add('text-[1.5rem]', 'mb-2', 'mt-4')
-          break
-        case 'H5':
-          heading.classList.add('text-[1.25rem]', 'mb-2', 'mt-4')
-          break
-        case 'H6':
-          heading.classList.add('text-[1.125rem]', 'mb-2', 'mt-4')
-          break
+        case "H1":
+          heading.classList.add("text-[3rem]", "my-4", "mt-6");
+          break;
+        case "H2":
+          heading.classList.add("text-[2rem]", "mb-2", "mt-4");
+          break;
+        case "H3":
+          heading.classList.add("text-[1.75rem]", "mb-2", "mt-4");
+          break;
+        case "H4":
+          heading.classList.add("text-[1.5rem]", "mb-2", "mt-4");
+          break;
+        case "H5":
+          heading.classList.add("text-[1.25rem]", "mb-2", "mt-4");
+          break;
+        case "H6":
+          heading.classList.add("text-[1.125rem]", "mb-2", "mt-4");
+          break;
       }
-    })
+    });
 
-    doc.querySelectorAll('ul, ol').forEach((list) => {
-      list.classList.add('list-disc', 'pl-6', 'mb-4')
-    })
+    doc.querySelectorAll("ul, ol").forEach((list) => {
+      list.classList.add("list-disc", "pl-6", "mb-4");
+    });
 
-    doc.querySelectorAll('li').forEach((item) => {
-      item.classList.add('mb-2')
-    })
+    doc.querySelectorAll("li").forEach((item) => {
+      item.classList.add("mb-2");
+    });
 
-    doc.querySelectorAll('img').forEach((img) => {
-      img.classList.add('rounded-lg', 'shadow-md', 'my-6', 'w-full')
-    })
+    doc.querySelectorAll("img").forEach((img) => {
+      img.classList.add("rounded-lg", "shadow-md", "my-6", "w-full");
+    });
 
-    doc.querySelectorAll('blockquote').forEach((quote) => {
-      quote.classList.add('border-l-4', 'border-indigo-500', 'pl-4', 'italic', 'my-6')
-    })
+    doc.querySelectorAll("blockquote").forEach((quote) => {
+      quote.classList.add(
+        "border-l-4",
+        "border-indigo-500",
+        "pl-4",
+        "italic",
+        "my-6",
+      );
+    });
 
-    return doc.body.innerHTML
-  }
+    return doc.body.innerHTML;
+  };
+
+  // Run DOMParser-dependent functions only on the client
+  useEffect(() => {
+    setTableOfContents(generateTableOfContents(blog.content));
+    setProcessedContent(processHtmlContent(blog.content));
+  }, [blog.content]);
+
+  // Scroll handling
+  const [readSections, setReadSections] = useState<string[]>([]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowBackToTop(true);
+      } else {
+        setShowBackToTop(false);
+      }
+
+      if (contentRef.current) {
+        const contentTop = contentRef.current.getBoundingClientRect().top;
+        const contentHeight = contentRef.current.getBoundingClientRect().height;
+        const windowHeight = window.innerHeight;
+        const scrollPosition = window.scrollY;
+
+        const scrollPercentage = Math.min(
+          100,
+          Math.max(
+            0,
+            ((scrollPosition - contentTop + windowHeight) /
+              (contentHeight + windowHeight)) *
+              100,
+          ),
+        );
+
+        setScrollProgress(scrollPercentage);
+      }
+
+      const sections = document.querySelectorAll("h1, h2, h3");
+      let currentActiveSection = "";
+      const newReadSections = [...readSections];
+
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < 150) {
+          currentActiveSection = section.id;
+          if (!newReadSections.includes(section.id)) {
+            newReadSections.push(section.id);
+          }
+        }
+      });
+
+      if (currentActiveSection !== activeSection) {
+        setActiveSection(currentActiveSection);
+      }
+
+      if (newReadSections.length !== readSections.length) {
+        setReadSections(newReadSections);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [activeSection, readSections]);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="bg-white py-8" ref={contentRef}>
@@ -185,7 +198,11 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
               <div className="absolute bottom-0 left-0 p-8">
                 <div className="flex items-center justify-center gap-4 text-white">
                   <div className="flex items-center gap-2">
-                    <img src={blog.author?.avatar} alt={blog.author?.name} className="w-10 h-10 rounded-full" />
+                    <img
+                      src={blog.author?.avatar}
+                      alt={blog.author?.name}
+                      className="w-10 h-10 rounded-full"
+                    />
                     <div className="text-sm">{blog.author?.name}</div>
                   </div>
                   <div className="text-sm">|</div>
@@ -194,9 +211,13 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
                   <div className="text-sm">{blog.readTime}</div>
                 </div>
               </div>
-              {blog.image ?
-                <img src={blog.image} alt={blog.title} className="w-2/3 h-2/3 rounded-lg object-cover" />
-                :
+              {blog.image ? (
+                <img
+                  src={blog.image}
+                  alt={blog.title}
+                  className="w-2/3 h-2/3 rounded-lg object-cover"
+                />
+              ) : (
                 <div className="relative w-full h-full">
                   {/* Abstract document classification visualization */}
                   <div className="absolute top-1/4 left-[15%] w-32 h-40 bg-white/10 rounded-lg transform rotate-6 backdrop-blur-sm border border-white/20"></div>
@@ -226,7 +247,6 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
                       strokeWidth="2"
                       fill="none"
                     />
-
                     <circle cx="300" cy="150" r="8" fill="rgba(255,255,255,0.5)" />
                     <circle cx="700" cy="150" r="8" fill="rgba(255,255,255,0.5)" />
                     <circle cx="300" cy="250" r="8" fill="rgba(255,255,255,0.5)" />
@@ -235,7 +255,7 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
                     <circle cx="700" cy="350" r="8" fill="rgba(255,255,255,0.5)" />
                   </svg>
                 </div>
-              }
+              )}
             </div>
           </div>
         </div>
@@ -245,15 +265,20 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
           <div className="hidden lg:block">
             <div
               ref={tocRef}
-              className={`sticky top-24 transition-all duration-300 ease-in-out ${tocExpanded ? "w-full" : "w-16"}`}
+              className={`sticky top-24 transition-all duration-300 ease-in-out ${
+                tocExpanded ? "w-full" : "w-16"
+              }`}
             >
               <div
-                className={`bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden transition-all duration-300 ${tocExpanded ? "p-6" : "p-3"
-                  }`}
+                className={`bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden transition-all duration-300 ${
+                  tocExpanded ? "p-6" : "p-3"
+                }`}
               >
                 <div className="flex items-center justify-between mb-4">
                   <h3
-                    className={`font-bold transition-opacity duration-200 ${tocExpanded ? "opacity-100" : "opacity-0 w-0"}`}
+                    className={`font-bold transition-opacity duration-200 ${
+                      tocExpanded ? "opacity-100" : "opacity-0 w-0"
+                    }`}
                   >
                     Table of contents
                   </h3>
@@ -262,7 +287,9 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
                     className="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 hover:bg-slate-200 transition-colors"
                   >
                     <ChevronRight
-                      className={`h-4 w-4 transition-transform duration-300 ${tocExpanded ? "rotate-180" : "rotate-0"}`}
+                      className={`h-4 w-4 transition-transform duration-300 ${
+                        tocExpanded ? "rotate-180" : "rotate-0"
+                      }`}
                     />
                   </button>
                 </div>
@@ -276,7 +303,9 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
                     ></div>
                   </div>
                   <div
-                    className={`flex justify-between mt-1 text-xs text-slate-500 transition-opacity duration-200 ${tocExpanded ? "opacity-100" : "opacity-0"}`}
+                    className={`flex justify-between mt-1 text-xs text-slate-500 transition-opacity duration-200 ${
+                      tocExpanded ? "opacity-100" : "opacity-0"
+                    }`}
                   >
                     <span>0%</span>
                     <span>{Math.round(scrollProgress)}%</span>
@@ -285,7 +314,9 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
                 </div>
 
                 <div
-                  className={`space-y-1 items-start transition-all duration-300 ${tocExpanded ? "" : "opacity-0 h-0 overflow-hidden"}`}
+                  className={`space-y-1 items-start transition-all duration-300 ${
+                    tocExpanded ? "" : "opacity-0 h-0 overflow-hidden"
+                  }`}
                 >
                   {tableOfContents.map((item, index) => (
                     <div
@@ -295,29 +326,36 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
                     >
                       <div className="mr-3 flex flex-col items-center">
                         <div
-                          className={`w-3 h-3 rounded-full flex items-center justify-center transition-all duration-300 ${activeSection === item.id
-                            ? "bg-indigo-600 ring-4 ring-indigo-100"
-                            : readSections.includes(item.id)
+                          className={`w-3 h-3 rounded-full flex items-center justify-center transition-all duration-300 ${
+                            activeSection === item.id
+                              ? "bg-indigo-600 ring-4 ring-indigo-100"
+                              : readSections.includes(item.id)
                               ? "bg-indigo-200"
                               : "bg-slate-200"
-                            }`}
+                          }`}
                         >
-                          {readSections.includes(item.id) && <CheckCircle className="h-2 w-2 text-indigo-600" />}
+                          {readSections.includes(item.id) && (
+                            <CheckCircle className="h-2 w-2 text-indigo-600" />
+                          )}
                         </div>
                         {index < tableOfContents.length - 1 && (
                           <div
-                            className={`w-0.5 h-8 transition-colors duration-300 ${readSections.includes(item.id) ? "bg-indigo-200" : "bg-slate-200"
-                              }`}
+                            className={`w-0.5 h-8 transition-colors duration-300 ${
+                              readSections.includes(item.id)
+                                ? "bg-indigo-200"
+                                : "bg-slate-200"
+                            }`}
                           />
                         )}
                       </div>
                       <div
-                        className={`text-sm transition-colors duration-200 ${activeSection === item.id
-                          ? "font-medium text-indigo-600"
-                          : readSections.includes(item.id)
+                        className={`text-sm transition-colors duration-200 ${
+                          activeSection === item.id
+                            ? "font-medium text-indigo-600"
+                            : readSections.includes(item.id)
                             ? "text-slate-600"
                             : "text-slate-500"
-                          }`}
+                        }`}
                       >
                         {item.title}
                       </div>
@@ -327,19 +365,22 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
 
                 {/* Collapsed view */}
                 <div
-                  className={`transition-all duration-300 ${tocExpanded ? "opacity-0 h-0 overflow-hidden" : "opacity-100"}`}
+                  className={`transition-all duration-300 ${
+                    tocExpanded ? "opacity-0 h-0 overflow-hidden" : "opacity-100"
+                  }`}
                 >
                   <div className="flex flex-col items-center space-y-3">
                     {tableOfContents.map((item) => (
                       <div
                         key={item.id}
                         onClick={() => scrollToSection(item.id)}
-                        className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${activeSection === item.id
-                          ? "bg-indigo-600 ring-4 ring-indigo-100"
-                          : readSections.includes(item.id)
+                        className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${
+                          activeSection === item.id
+                            ? "bg-indigo-600 ring-4 ring-indigo-100"
+                            : readSections.includes(item.id)
                             ? "bg-indigo-200"
                             : "bg-slate-200"
-                          }`}
+                        }`}
                       />
                     ))}
                   </div>
@@ -350,7 +391,9 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
 
           {/* Main Content */}
           <div className="prose prose-lg prose-indigo max-w-none">
-            <div dangerouslySetInnerHTML={{ __html: processHtmlContent(blog.content) }} />
+            <div
+              dangerouslySetInnerHTML={{ __html: processedContent || blog.content }}
+            />
           </div>
         </div>
       </div>
@@ -366,5 +409,5 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
         </button>
       )}
     </div>
-  )
+  );
 }
