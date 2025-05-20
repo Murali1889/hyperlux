@@ -76,7 +76,7 @@ export const blogs: BlogPost[] = [
       twitter: "https://twitter.com/sarahjohnson",
       linkedin: "https://linkedin.com/in/sarahjohnson",
     },
-    tag: "Invoice Processing OCR: Transforming Financial Document Management",
+    metaTag: "Invoice Processing OCR: Transforming Financial Document Management",
   },
   {
     id: "2",
@@ -153,7 +153,7 @@ export const blogs: BlogPost[] = [
       twitter: "https://twitter.com/sarahjohnson",
       linkedin: "https://linkedin.com/in/sarahjohnson",
     },
-    tag: "OCR Technology: Transform Your Document Management | Complete Guide",
+    metaTag: "OCR Technology: Transform Your Document Management | Complete Guide",
   },
   {
     id: "3",
@@ -261,7 +261,7 @@ export const blogs: BlogPost[] = [
       <p>If you're just starting your OCR journey now, you're actually in an ideal position—the technology has matured enough to be reliable, but there's still massive competitive advantage for early adopters.</p>
       <p>My parting advice after guiding countless finance teams through this transformation: Start small, but start now. The companies that have embraced financial document OCR aren't just saving money—they're redeploying their finance talent from data entry to actual financial analysis that drives business value.</p>
       <p>Your competitors are likely already moving in this direction. The question isn't whether you should automate your financial document processing—it's whether you can afford not to.</p>`,
-    image: "",
+    image: "/ocr-api.png",
     featuredImage: "",
     category: "Industry Trends",
     date: "May 12, 2025",
@@ -275,6 +275,6 @@ export const blogs: BlogPost[] = [
       twitter: "https://twitter.com/sarahjohnson",
       linkedin: "https://linkedin.com/in/sarahjohnson",
     },
-    tag: "Automate Document Workflows with OCR API Solutions",
+    metaTag: "Automate Document Workflows with OCR API Solutions",
   },
 ]
