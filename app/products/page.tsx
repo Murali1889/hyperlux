@@ -16,7 +16,7 @@ export default function ProductsPage() {
   return (
     <>
       <ProductsHero />
-      <ProductsList />
+      {/* <ProductsList /> */}
       <ProductFeatures />
       <ProductComparison />
       <ProductIntegrations />

@@ -28,13 +28,6 @@ export default function CtaFooter() {
               <Calendar className="mr-2 h-5 w-5" />
               Book Operations Demo
             </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-indigo-600 px-6 py-4 sm:py-6 rounded-md flex items-center justify-center w-full sm:w-auto"
-            >
-              <Phone className="mr-2 h-5 w-5" />
-              Contact Sales
-            </Button>
           </div>
 
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">

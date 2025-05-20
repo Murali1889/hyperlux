@@ -27,12 +27,6 @@ export default function OperationsHero() {
                 Book Operations Demo
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button
-                variant="outline"
-                className="border-indigo-700 text-indigo-700 hover:bg-indigo-50 px-6 py-6 rounded-md"
-              >
-                Contact Sales
-              </Button>
             </div>
           </motion.div>
 

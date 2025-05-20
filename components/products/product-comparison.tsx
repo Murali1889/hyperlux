@@ -108,18 +108,6 @@ export default function ProductComparison() {
                   <X className="h-6 w-6 text-red-500 mx-auto" />
                 </td>
               </tr>
-              <tr>
-                <td className="py-4 px-6">Human-in-the-loop Validation</td>
-                <td className="py-4 px-6 text-center bg-indigo-50">
-                  <Check className="h-6 w-6 text-green-500 mx-auto" />
-                </td>
-                <td className="py-4 px-6 text-center">
-                  <Check className="h-6 w-6 text-green-500 mx-auto" />
-                </td>
-                <td className="py-4 px-6 text-center">
-                  <X className="h-6 w-6 text-red-500 mx-auto" />
-                </td>
-              </tr>
             </tbody>
           </table>
         </div>

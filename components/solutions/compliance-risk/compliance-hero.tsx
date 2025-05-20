@@ -25,12 +25,6 @@ export default function ComplianceHero() {
               <Button className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-4 sm:py-6 text-base sm:text-lg w-full sm:w-auto">
                 Request Compliance Demo
               </Button>
-              <Button
-                variant="outline"
-                className="border-indigo-700 text-indigo-700 hover:bg-indigo-50 px-6 py-4 sm:py-6 text-base sm:text-lg w-full sm:w-auto"
-              >
-                Contact Sales
-              </Button>
             </div>
           </motion.div>
 
