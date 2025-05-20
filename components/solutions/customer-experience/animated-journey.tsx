@@ -90,6 +90,81 @@ export default function AnimatedJourney() {
               >
                 <div className="bg-white rounded-3xl border-8 border-gray-800 p-4 shadow-xl max-w-xs mx-auto aspect-[9/16] flex flex-col">
                   {/* Phone content */}
+                  <div className="flex flex-col h-full">
+                    <div className="flex justify-between items-center mb-4">
+                      <div className="text-xs font-medium">HyperVerge</div>
+                      <div className="flex space-x-2">
+                        <div className="h-2 w-2 rounded-full bg-gray-800"></div>
+                        <div className="h-2 w-2 rounded-full bg-gray-800"></div>
+                        <div className="h-2 w-2 rounded-full bg-gray-800"></div>
+                      </div>
+                    </div>
+
+                    {currentStep === 0 && (
+                      <div className="flex-1 flex flex-col items-center justify-center text-center">
+                        <div className="bg-indigo-100 p-3 rounded-full mb-4">
+                          <Smartphone className="h-8 w-8 text-indigo-700" />
+                        </div>
+                        <h3 className="text-sm font-bold mb-2">Welcome to HyperVerge</h3>
+                        <p className="text-xs text-gray-600 mb-4">Complete your verification in seconds</p>
+                        <button className="bg-indigo-700 text-white text-xs py-2 px-4 rounded-md">Get Started</button>
+                      </div>
+                    )}
+
+                    {currentStep === 1 && (
+                      <div className="flex-1 flex flex-col items-center justify-center">
+                        <div className="bg-indigo-100 p-3 rounded-full mb-4">
+                          <Camera className="h-8 w-8 text-indigo-700" />
+                        </div>
+                        <div className="border-2 border-dashed border-indigo-300 rounded-lg p-4 mb-4 w-full">
+                          <div className="text-xs text-center text-indigo-700">Position your ID card here</div>
+                        </div>
+                        <button className="bg-indigo-700 text-white text-xs py-2 px-4 rounded-md">Take Photo</button>
+                      </div>
+                    )}
+
+                    {currentStep === 2 && (
+                      <div className="flex-1 flex flex-col">
+                        <h3 className="text-sm font-bold mb-3">Registration Form</h3>
+                        <div className="space-y-3 mb-4">
+                          <div>
+                            <div className="text-xs mb-1">Full Name</div>
+                            <div className="h-6 bg-indigo-50 rounded text-xs px-2 flex items-center">John Smith</div>
+                          </div>
+                          <div>
+                            <div className="text-xs mb-1">ID Number</div>
+                            <div className="h-6 bg-indigo-50 rounded text-xs px-2 flex items-center">AB123456C</div>
+                          </div>
+                          <div>
+                            <div className="text-xs mb-1">Date of Birth</div>
+                            <div className="h-6 bg-indigo-50 rounded text-xs px-2 flex items-center">15/04/1985</div>
+                          </div>
+                          <div>
+                            <div className="text-xs mb-1">Address</div>
+                            <div className="h-6 bg-indigo-50 rounded text-xs px-2 flex items-center">
+                              123 Main St, Anytown
+                            </div>
+                          </div>
+                        </div>
+                        <button className="bg-indigo-700 text-white text-xs py-2 px-4 rounded-md mt-auto">
+                          Confirm Details
+                        </button>
+                      </div>
+                    )}
+
+                    {currentStep === 3 && (
+                      <div className="flex-1 flex flex-col items-center justify-center text-center">
+                        <div className="bg-green-100 p-3 rounded-full mb-4">
+                          <CheckCircle className="h-8 w-8 text-green-600" />
+                        </div>
+                        <h3 className="text-sm font-bold mb-2">Verification Complete!</h3>
+                        <p className="text-xs text-gray-600 mb-4">Your account is now active</p>
+                        <div className="bg-green-50 text-green-700 text-xs py-1 px-3 rounded-full">
+                          Completed in 30 seconds
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </motion.div>
 
@@ -102,6 +177,105 @@ export default function AnimatedJourney() {
                 transition={{ duration: 0.5 }}
               >
                 {/* Step description */}
+                <div>
+                  <div className="flex items-center mb-4">
+                    {steps[currentStep].icon}
+                    <h3 className="text-2xl font-bold text-indigo-900 ml-3">{steps[currentStep].title}</h3>
+                  </div>
+                  <p className="text-gray-700 mb-6">{steps[currentStep].description}</p>
+
+                  {currentStep === 0 && (
+                    <ul className="space-y-2">
+                      <li className="flex items-center">
+                        <div className="h-5 w-5 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
+                          <span className="text-indigo-700 text-xs">1</span>
+                        </div>
+                        <span className="text-gray-700">Customer downloads the app</span>
+                      </li>
+                      <li className="flex items-center">
+                        <div className="h-5 w-5 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
+                          <span className="text-indigo-700 text-xs">2</span>
+                        </div>
+                        <span className="text-gray-700">Creates account with basic information</span>
+                      </li>
+                      <li className="flex items-center">
+                        <div className="h-5 w-5 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
+                          <span className="text-indigo-700 text-xs">3</span>
+                        </div>
+                        <span className="text-gray-700">Begins the verification process</span>
+                      </li>
+                    </ul>
+                  )}
+
+                  {currentStep === 1 && (
+                    <ul className="space-y-2">
+                      <li className="flex items-center">
+                        <div className="h-5 w-5 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
+                          <span className="text-indigo-700 text-xs">1</span>
+                        </div>
+                        <span className="text-gray-700">Camera automatically detects document edges</span>
+                      </li>
+                      <li className="flex items-center">
+                        <div className="h-5 w-5 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
+                          <span className="text-indigo-700 text-xs">2</span>
+                        </div>
+                        <span className="text-gray-700">AI verifies document authenticity in real-time</span>
+                      </li>
+                      <li className="flex items-center">
+                        <div className="h-5 w-5 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
+                          <span className="text-indigo-700 text-xs">3</span>
+                        </div>
+                        <span className="text-gray-700">Glare and blur detection ensures quality capture</span>
+                      </li>
+                    </ul>
+                  )}
+
+                  {currentStep === 2 && (
+                    <ul className="space-y-2">
+                      <li className="flex items-center">
+                        <div className="h-5 w-5 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
+                          <span className="text-indigo-700 text-xs">1</span>
+                        </div>
+                        <span className="text-gray-700">OCR extracts all relevant information</span>
+                      </li>
+                      <li className="flex items-center">
+                        <div className="h-5 w-5 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
+                          <span className="text-indigo-700 text-xs">2</span>
+                        </div>
+                        <span className="text-gray-700">Form fields auto-populate with 99.5% accuracy</span>
+                      </li>
+                      <li className="flex items-center">
+                        <div className="h-5 w-5 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
+                          <span className="text-indigo-700 text-xs">3</span>
+                        </div>
+                        <span className="text-gray-700">Customer only needs to verify, not type</span>
+                      </li>
+                    </ul>
+                  )}
+
+                  {currentStep === 3 && (
+                    <ul className="space-y-2">
+                      <li className="flex items-center">
+                        <div className="h-5 w-5 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
+                          <span className="text-indigo-700 text-xs">1</span>
+                        </div>
+                        <span className="text-gray-700">Account instantly activated</span>
+                      </li>
+                      <li className="flex items-center">
+                        <div className="h-5 w-5 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
+                          <span className="text-indigo-700 text-xs">2</span>
+                        </div>
+                        <span className="text-gray-700">Customer can immediately access all services</span>
+                      </li>
+                      <li className="flex items-center">
+                        <div className="h-5 w-5 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
+                          <span className="text-indigo-700 text-xs">3</span>
+                        </div>
+                        <span className="text-gray-700">Entire process completed in just 30 seconds</span>
+                      </li>
+                    </ul>
+                  )}
+                </div>
               </motion.div>
             </div>
           </div>
