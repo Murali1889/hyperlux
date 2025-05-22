@@ -18,14 +18,93 @@ import {
   NavigationMenuTrigger,
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
-import { Menu, X, Phone } from "lucide-react"
-import { FileText, Briefcase, Shield, Users, Scale } from "lucide-react"
+import { Menu, Phone, FileText, Briefcase, Shield, Users, Scale, CreditCard, FileCheck, BarChart4, Fingerprint, Hospital, Truck, FileSearch, Archive } from "lucide-react"
 
 const navItems = [
   { name: "Home", href: "/" },
   { name: "Products", href: "/products" },
   {
-    name: "Solutions", href: "/solutions", dropdownItems: [
+    name: "Documents",
+    href: "/documents",
+    hasDropdown: true,
+    dropdownItems: [
+      {
+        title: "Financial Documents",
+        description: "Invoices, purchase orders, bank statements, and receipts",
+        href: "/documents/financial-docs",
+        icon: <CreditCard className="h-5 w-5 text-indigo-600" />,
+        children: [
+          {
+            title: "Invoices",
+            description: "Extract data from invoices with 99% accuracy",
+            href: "/documents/financial-docs/invoices",
+            icon: <FileText className="h-5 w-5 text-indigo-600" />,
+          },
+          {
+            title: "Purchase Orders",
+            description: "Process purchase orders in any format",
+            href: "/documents/financial-docs/purchase-orders",
+            icon: <FileCheck className="h-5 w-5 text-indigo-600" />,
+          },
+          {
+            title: "Bank Statements",
+            description: "Extract transaction data from bank statements",
+            href: "/documents/financial-docs/bank-statements",
+            icon: <BarChart4 className="h-5 w-5 text-indigo-600" />,
+          },
+        ],
+      },
+      {
+        title: "Identity Documents",
+        description: "Passports, driver's licenses, ID cards, and proof of address",
+        href: "/documents/identity-docs",
+        icon: <Fingerprint className="h-5 w-5 text-indigo-600" />,
+        children: [
+          {
+            title: "Passports",
+            description: "Extract data from passports with MRZ recognition",
+            href: "/documents/identity-docs/passports",
+            icon: <FileText className="h-5 w-5 text-indigo-600" />,
+          },
+          {
+            title: "National IDs",
+            description: "Process national ID cards from various countries",
+            href: "/documents/identity-docs/national-ids",
+            icon: <FileCheck className="h-5 w-5 text-indigo-600" />,
+          },
+          {
+            title: "Driver Licenses",
+            description: "Extract data from driver licenses worldwide",
+            href: "/documents/identity-docs/driver-licences",
+            icon: <FileText className="h-5 w-5 text-indigo-600" />,
+          },
+        ],
+      },
+      {
+        title: "Legal Documents",
+        description: "Contracts, agreements, NDAs, and legal forms",
+        href: "/documents/legal-docs",
+        icon: <Scale className="h-5 w-5 text-indigo-600" />,
+      },
+      {
+        title: "Medical Documents",
+        description: "Prescriptions, lab reports, and insurance forms",
+        href: "/documents/medical-docs",
+        icon: <Hospital className="h-5 w-5 text-indigo-600" />,
+      },
+      {
+        title: "Shipping Documents",
+        description: "Bills of lading, proofs of delivery, and packing lists",
+        href: "/documents/shipping-docs",
+        icon: <Truck className="h-5 w-5 text-indigo-600" />,
+      },
+    ]
+  },
+  {
+    name: "Solutions",
+    href: "/solutions",
+    hasDropdown: true,
+    dropdownItems: [
       {
         title: "Finance Automation",
         description: "Automate invoices, three-way match and bank-statement parsing",
@@ -59,7 +138,43 @@ const navItems = [
     ]
   },
   { name: "Industries", href: "/industries" },
-  { name: "Use Cases", href: "/use-cases" },
+  {
+    name: "Use Cases",
+    href: "/use-cases",
+    hasDropdown: true,
+    dropdownItems: [
+      {
+        title: "Invoice Processing",
+        description: "Automate invoice data capture and validation to speed up accounts payable",
+        href: "/use-cases/invoice-processing",
+        icon: <FileText className="h-5 w-5 text-indigo-600" />,
+      },
+      {
+        title: "Loan Verification",
+        description: "Accelerate loan application verification by automating document extraction",
+        href: "/use-cases/loan-verification",
+        icon: <FileCheck className="h-5 w-5 text-indigo-600" />,
+      },
+      {
+        title: "ID Proofing",
+        description: "Instantly verify government IDs with AI-powered OCR and face matching",
+        href: "/use-cases/id-proofing",
+        icon: <Fingerprint className="h-5 w-5 text-indigo-600" />,
+      },
+      {
+        title: "Contract Abstraction",
+        description: "Extract key clauses, dates, and terms from contracts to accelerate review",
+        href: "/use-cases/contract-abstraction",
+        icon: <FileSearch className="h-5 w-5 text-indigo-600" />,
+      },
+      {
+        title: "Digital Archiving",
+        description: "Convert paper and scanned documents into searchable digital archives",
+        href: "/use-cases/digital-archiving",
+        icon: <Archive className="h-5 w-5 text-indigo-600" />,
+      },
+    ]
+  },
   { name: "Resources", href: "/resources" },
 ]
 
@@ -74,7 +189,7 @@ export default function Navbar() {
       </Link>
 
       <NavigationMenu className="hidden md:flex">
-        <NavigationMenuList >
+        <NavigationMenuList>
           {navItems.map((item) => (
             <NavigationMenuItem key={item.name}>
               {item.dropdownItems ? (
@@ -82,19 +197,37 @@ export default function Navbar() {
                   <NavigationMenuTrigger className="text-sm font-medium text-muted-foreground hover:text-foreground">
                     {item.name}
                   </NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-white p-4 rounded-lg shadow-xl w-[380px] border-1 border-black md:w-[320px]">
-                    <ul className="grid gap-3">
-                      {item.dropdownItems.map((subItem, index) => (
-                        <li key={index}>
-                          <Link href={subItem.href} legacyBehavior passHref>
-                            <NavigationMenuLink className="flex gap-3 rounded-md p-3 hover:bg-indigo-50">
-                              {subItem.icon}
-                              <div>
-                                <div className="font-medium text-indigo-900">{subItem.title}</div>
-                                <div className="text-sm text-muted-foreground">{subItem.description}</div>
+                  <NavigationMenuContent className="bg-white p-4 rounded-lg shadow-xl min-w-[420px] border max-h-[75vh] overflow-y-auto">
+                    <ul className="flex flex-col gap-4">
+                      {item.dropdownItems.map((subItem, subIndex) => (
+                        <li key={subIndex}>
+                          <Link href={subItem.href} passHref legacyBehavior>
+                            <NavigationMenuLink className="flex gap-3 items-start rounded-md p-3 hover:bg-indigo-50">
+                              <div className="flex-shrink-0">{subItem.icon}</div>
+                              <div className="flex flex-col">
+                                <span className="text-sm font-medium text-indigo-900">{subItem.title}</span>
+                                <span className="text-xs text-muted-foreground">{subItem.description}</span>
                               </div>
                             </NavigationMenuLink>
                           </Link>
+
+                          {subItem.children && (
+                            <ul className="ml-6 mt-2 border-l border-gray-200 pl-4 space-y-2">
+                              {subItem.children.map((child, childIndex) => (
+                                <li key={childIndex}>
+                                  <Link href={child.href} passHref legacyBehavior>
+                                    <NavigationMenuLink className="flex gap-2 items-start rounded-md p-2 hover:bg-indigo-50">
+                                      <div className="flex-shrink-0">{child.icon}</div>
+                                      <div className="flex flex-col">
+                                        <span className="text-sm font-medium text-indigo-900">{child.title}</span>
+                                        <span className="text-xs text-muted-foreground">{child.description}</span>
+                                      </div>
+                                    </NavigationMenuLink>
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -110,8 +243,10 @@ export default function Navbar() {
             </NavigationMenuItem>
           ))}
         </NavigationMenuList>
+
         <NavigationMenuViewport />
       </NavigationMenu>
+
 
       <div className="flex items-center gap-4">
         <Button asChild className="hidden md:inline-flex bg-indigo-600 hover:bg-indigo-700">
