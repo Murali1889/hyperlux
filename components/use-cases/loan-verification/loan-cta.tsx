@@ -29,13 +29,6 @@ export default function LoanCta() {
               Request Demo
               <ArrowRight size={18} />
             </motion.button>
-            <motion.button
-              className="bg-transparent border border-white hover:bg-white/10 px-8 py-3 rounded-lg font-medium transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Contact Sales
-            </motion.button>
           </div>
         </motion.div>
       </div>

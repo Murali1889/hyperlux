@@ -283,12 +283,6 @@ export default function PricingPage() {
 //                   <span>SLA guarantees</span>
 //                 </li>
 //               </ul>
-//               <a
-//                 href="/contact-sales"
-//                 className="block w-full bg-indigo-600 text-white text-center py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors"
-//               >
-//                 Contact Sales
-//               </a>
 //             </div>
 //           </div>
 //         </div>
@@ -424,12 +418,6 @@ export default function PricingPage() {
 //                   <span>Custom API integrations with your existing systems</span>
 //                 </li>
 //               </ul>
-//               <a
-//                 href="/contact-sales"
-//                 className="inline-block bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors"
-//               >
-//                 Contact Sales
-//               </a>
 //             </div>
 //             <div className="mt-10 lg:mt-0 relative">
 //               <div className="bg-gradient-to-br from-indigo-50 to-white p-6 rounded-lg shadow-lg border border-indigo-100">
@@ -487,14 +475,6 @@ export default function PricingPage() {
 //                     <div>
 //                       <div className="font-medium text-gray-800">Dedicated Support</div>
 //                       <div className="text-sm text-gray-600">Personal account manager</div>
-//                     </div>
-//                   </div>
-//                 </div>
-//                 <div className="mt-6 pt-4 border-t border-indigo-100">
-//                   <div className="flex items-center justify-between">
-//                     <div className="text-sm text-gray-600">Annual billing available</div>
-//                     <div className="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium">
-//                       Contact Sales
 //                     </div>
 //                   </div>
 //                 </div>
@@ -568,12 +548,6 @@ export default function PricingPage() {
 //               className="bg-white text-indigo-700 hover:bg-gray-100 px-8 py-3 rounded-lg font-medium text-center"
 //             >
 //               Book a Demo
-//             </a>
-//             <a
-//               href="/contact-sales"
-//               className="bg-transparent border border-white hover:bg-white/10 px-8 py-3 rounded-lg font-medium text-center"
-//             >
-//               Contact Sales
 //             </a>
 //           </div>
 //         </div>

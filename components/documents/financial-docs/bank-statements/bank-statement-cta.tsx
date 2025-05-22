@@ -15,9 +15,6 @@ export default function BankStatementCta() {
           <Button asChild size="lg" className="bg-white text-indigo-900 hover:bg-indigo-50">
             <Link href="#try-api">Try Bank-Statement API</Link>
           </Button>
-          <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-indigo-800">
-            <Link href="#contact-sales">Contact Sales</Link>
-          </Button>
         </div>
       </div>
     </section>

@@ -27,9 +27,6 @@ export default function InvoiceHero() {
               <Button asChild size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white">
                 <Link href="#demo">See Invoice Demo</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-indigo-300 text-white hover:bg-indigo-800">
-                <Link href="/contact">Contact Sales</Link>
-              </Button>
             </div>
           </motion.div>
 
