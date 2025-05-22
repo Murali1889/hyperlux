@@ -21,10 +21,6 @@ export default function ShippingDocsCta() {
             <Button size="lg" className="bg-white text-indigo-700 hover:bg-indigo-50">
               Request Demo <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
-
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-indigo-700">
-              Contact Sales
-            </Button>
           </div>
         </div>
       </div>

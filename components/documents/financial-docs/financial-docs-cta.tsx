@@ -23,12 +23,6 @@ export default function FinancialDocsCta() {
             <Button className="bg-white hover:bg-indigo-50 text-indigo-700 px-6 py-6 text-lg w-full sm:w-auto">
               Request Demo
             </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-indigo-600 px-6 py-6 text-lg w-full sm:w-auto"
-            >
-              Contact Sales
-            </Button>
           </div>
         </motion.div>
       </div>

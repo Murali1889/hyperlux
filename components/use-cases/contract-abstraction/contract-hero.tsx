@@ -27,14 +27,6 @@ export default function ContractHero() {
               <Button size="lg" className="bg-white text-indigo-700 hover:bg-slate-100 text-base font-medium" asChild>
                 <Link href="#demo">See Contract Demo</Link>
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white/10 text-base font-medium"
-                asChild
-              >
-                <Link href="/contact">Contact Sales</Link>
-              </Button>
             </div>
           </motion.div>
 

@@ -24,13 +24,6 @@ export default function DocumentsCta() {
               <Upload className="mr-2 h-5 w-5" />
               Upload Sample PDF
             </Button>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-indigo-600 px-6 py-6 text-lg w-full sm:w-auto flex items-center justify-center"
-            >
-              <Phone className="mr-2 h-5 w-5" />
-              Contact Sales
-            </Button>
           </div>
         </motion.div>
       </div>

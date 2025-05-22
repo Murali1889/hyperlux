@@ -48,9 +48,6 @@ export default function LoanHero() {
                 See Loan Demo
                 <ArrowRight size={18} />
               </button>
-              <button className="bg-transparent border border-white hover:bg-white/10 px-6 py-3 rounded-lg font-medium transition-colors">
-                Contact Sales
-              </button>
             </motion.div>
           </div>
 

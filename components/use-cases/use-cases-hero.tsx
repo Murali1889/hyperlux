@@ -70,14 +70,6 @@ export default function UseCasesHero() {
               <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white" asChild>
                 <a href="#use-cases">Explore Use Cases</a>
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="bg-transparent border-white text-white hover:bg-white/10"
-                asChild
-              >
-                <a href="/contact">Contact Sales</a>
-              </Button>
             </motion.div>
           </div>
 

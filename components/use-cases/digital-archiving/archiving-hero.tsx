@@ -48,9 +48,6 @@ export default function ArchivingHero() {
               <Button size="lg" className="bg-white text-indigo-700 hover:bg-indigo-100">
                 See Archiving Demo
               </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
-                Contact Sales
-              </Button>
             </motion.div>
           </div>
 

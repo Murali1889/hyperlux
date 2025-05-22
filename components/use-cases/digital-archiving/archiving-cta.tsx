@@ -81,9 +81,6 @@ export default function ArchivingCta() {
             <Button size="lg" className="bg-white text-indigo-700 hover:bg-indigo-50 px-8">
               Request Demo
             </Button>
-            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10 px-8">
-              Contact Sales
-            </Button>
           </motion.div>
         </motion.div>
       </div>

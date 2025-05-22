@@ -23,9 +23,6 @@ export default function IdProofingCta() {
             <Button size="lg" className="bg-white text-indigo-700 hover:bg-indigo-50">
               Request Demo
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-              Contact Sales
-            </Button>
           </div>
         </motion.div>
       </div>

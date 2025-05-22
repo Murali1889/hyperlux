@@ -35,9 +35,6 @@ export default function IdProofingHero() {
               <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white">
                 See ID Proofing Demo
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                Contact Sales
-              </Button>
             </div>
           </motion.div>
 
