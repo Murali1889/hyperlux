@@ -9,13 +9,3 @@ export const submitDemoForm = async (data: any) => {
     return { success: false, error: e.message };
   }
 };
-
-export const submitSalesForm = async (data: any) => {
-  try {
-    const docRef = await addDoc(collection(db, 'contact_sales'), data);
-    return { success: true, id: docRef.id };
-  } catch (e: any) {
-    console.error('Error adding sales form document:', e);
-    return { success: false, error: e.message };
-  }
-};

@@ -55,6 +55,7 @@ export function DemoBookingForm() {
                 <Input
                     id="where-did-you-hear-about-us"
                     placeholder="Google, LinkedIn, Referral, AI, etc."
+                    required
                 />
             </div>
 
