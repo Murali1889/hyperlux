@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+<url>
+  <loc>http://docsapi.co/</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/products</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/industries</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/resources</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/book-demo</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/use-cases</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/privacy</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/terms</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/contact-sales</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/resources/blogs</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/use-cases/invoice-processing</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/documents/financial-docs/bank-statements</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/use-cases/id-proofing</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/use-cases/contract-abstraction</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/use-cases/digital-archiving</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/industries#banking</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/industries#insurance</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/industries#supply-chain</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/industries#healthcare</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/industries#legal</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/resources/blogs/revolutionizing-document-management-with-ocr-technology</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/resources/blogs/ocr-apis-the-secret-weapon-smart-finance-teams-are-using-right-now</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/contact</loc>
+</url>
+<url>
+  <loc>http://docsapi.co/pricing</loc>
+</url>
+</urlset>
