@@ -33,7 +33,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-K5PD9TF5DE"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-K5PD9TF5DE');
+            `,
+          }}
+        />
+      </head>
       <body className={inter.className}>
         <FeedbackProviderClient>
           <div className="flex min-h-screen flex-col">
@@ -44,7 +56,6 @@ export default function RootLayout({
           </div>
         </FeedbackProviderClient>
       </body>
-
     </html>
   )
 }
