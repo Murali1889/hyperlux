@@ -54,7 +54,7 @@ export default function HeroSection() {
                   <div className="flex justify-between items-center mb-4">
                     <div className="flex items-center gap-2">
                       <img src="/docsapi-logo.png" alt="DocsAPI Logo" className="h-8 w-8" />
-                      <span className="font-medium">DocsAPI Classification</span>
+                      <span className="font-medium">DocsAPI Verification</span>
                     </div>
                     <div className="flex gap-2">
                       <div className="h-3 w-3 rounded-full bg-red-500"></div>
@@ -174,25 +174,25 @@ export default function HeroSection() {
 
                   <div className="bg-indigo-50 rounded-lg p-4 border border-indigo-100">
                     <div className="flex justify-between items-center mb-2">
-                      <div className="text-sm font-medium text-indigo-800">Classification Results</div>
-                      <div className="text-xs text-indigo-600 bg-indigo-100 px-2 py-0.5 rounded-full">95% Accuracy</div>
+                      <div className="text-sm font-medium text-indigo-800">Verification Results</div>
+                      <div className="text-xs text-indigo-600 bg-indigo-100 px-2 py-0.5 rounded-full">99.9% Verified</div>
                     </div>
                     <div className="space-y-2">
                       <div className="flex justify-between text-sm">
-                        <span>Business Name:</span>
-                        <span className="font-medium">Coastal Cafe & Bakery</span>
+                        <span>Document Type:</span>
+                        <span className="font-medium">Bank Statement</span>
                       </div>
                       <div className="flex justify-between text-sm">
-                        <span>SIC Code:</span>
-                        <span className="font-medium">5812</span>
+                        <span>Identity Check:</span>
+                        <span className="font-medium text-green-600">✓ Verified</span>
                       </div>
                       <div className="flex justify-between text-sm">
-                        <span>NAICS Code:</span>
-                        <span className="font-medium">722511</span>
+                        <span>Fraud Detection:</span>
+                        <span className="font-medium text-green-600">✓ Clean</span>
                       </div>
                       <div className="flex justify-between text-sm">
-                        <span>Industry:</span>
-                        <span className="font-medium">Restaurants, Full-Service</span>
+                        <span>Data Integrity:</span>
+                        <span className="font-medium text-green-600">✓ Valid</span>
                       </div>
                     </div>
                   </div>
@@ -213,8 +213,8 @@ export default function HeroSection() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-sm font-medium">Classification Complete</p>
-                    <p className="text-xs text-muted-foreground">SIC: 5812 | NAICS: 722511</p>
+                    <p className="text-sm font-medium w-[220px]">Document Verification Complete</p>
+                    <p className="text-xs text-muted-foreground">All documents verified successfully</p>
                   </div>
                 </div>
               </div>
