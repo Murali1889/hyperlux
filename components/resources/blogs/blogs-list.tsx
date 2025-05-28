@@ -7,12 +7,17 @@ import Image from "next/image"
 import { blogs } from "@/data/blogs"
 
 export default function BlogsList() {
+  const sortedBlogs = [...blogs].sort((a, b) => {
+    const dateA = new Date(a.date);
+    const dateB = new Date(b.date);
+    return dateB - dateA; // Latest first (descending order)
+  });
   return (
     <Section className="py-4 md:py-8">
       <SectionHeader title="Latest Blog Posts on OCR Software & Document Automation" description="" />
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {blogs.slice(0, 9).map((blog) => (
+        {sortedBlogs.slice(0, 9).map((blog) => (
           <Link key={blog.id} href={`/resources/blogs/${blog.slug}`} className="group">
             <Card className="border-slate-200 overflow-hidden h-full transition-all duration-200 group-hover:border-indigo-300 group-hover:shadow-md">
               <div className="aspect-[16/9] relative overflow-hidden bg-slate-100">
