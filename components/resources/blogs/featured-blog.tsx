@@ -6,7 +6,7 @@ import Image from "next/image"
 import { blogs } from "@/data/blogs"
 
 export default function FeaturedBlog() {
-  const featuredBlog = blogs[0]
+  const featuredBlog = blogs[blogs.length - 1]
 
   return (
     <Section className="py-8 md:py-16">
