@@ -14,16 +14,16 @@ export default function Footer() {
             </Link>
             <p className="text-gray-400">AI-powered solutions for small business lending and financial services.</p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.facebook.com/HyperVerge/" target="blank" className="text-gray-400 hover:text-white transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://twitter.com/HyperVerge/" target="blank" className="text-gray-400 hover:text-white transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/company/hyperverge-inc-/" target="blank" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.instagram.com/hypervergeinc/" target="blank" className="text-gray-400 hover:text-white transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
@@ -47,11 +47,6 @@ export default function Footer() {
                   Use Cases
                 </Link>
               </li>
-              {/* <li>
-                <Link href="/pricing" className="text-gray-400 hover:text-white transition-colors">
-                  Pricing
-                </Link>
-              </li> */}
               <li>
                 <Link href="/resources" className="text-gray-400 hover:text-white transition-colors">
                   Resources
@@ -63,18 +58,18 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-bold mb-4">Contact</h3>
             <ul className="space-y-3">
-              <li className="flex items-start">
+              {/* <li className="flex items-start">
                 <Phone className="h-5 w-5 mr-2 text-indigo-400 flex-shrink-0" />
                 <span>(800) 555-1234</span>
-              </li>
+              </li> */}
               <li className="flex items-start">
                 <Mail className="h-5 w-5 mr-2 text-indigo-400 flex-shrink-0" />
-                <span>info@docsapi.ai</span>
+                <span>contact@hyperverge.co</span>
               </li>
-              <li className="flex items-start">
+              {/* <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-2 text-indigo-400 flex-shrink-0" />
                 <span>123 AI Street, San Francisco, CA 94103</span>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
