@@ -1,102 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?> 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"> 
 <url>
-  <loc>http://docsapi.co/</loc>
+<loc>https://docsapi.co/</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/products</loc>
+<loc>https://docsapi.co/products</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/industries</loc>
+<loc>https://docsapi.co/industries</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/resources</loc>
+<loc>https://docsapi.co/resources</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/book-demo</loc>
+<loc>https://docsapi.co/book-demo</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/use-cases</loc>
+<loc>https://docsapi.co/use-cases</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/privacy</loc>
+<loc>https://docsapi.co/privacy</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/terms</loc>
+<loc>https://docsapi.co/terms</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/contact-sales</loc>
+<loc>https://docsapi.co/contact-sales</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/resources/blogs</loc>
+<loc>https://docsapi.co/resources/blogs</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/use-cases/invoice-processing</loc>
+<loc>https://docsapi.co/use-cases/invoice-processing</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/documents/financial-docs/bank-statements</loc>
+<loc>https://docsapi.co/documents/financial-docs/bank-statements</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/use-cases/id-proofing</loc>
+<loc>https://docsapi.co/use-cases/id-proofing</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/use-cases/contract-abstraction</loc>
+<loc>https://docsapi.co/use-cases/contract-abstraction</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/use-cases/digital-archiving</loc>
+<loc>https://docsapi.co/use-cases/digital-archiving</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/industries#banking</loc>
+<loc>https://docsapi.co/industries#banking</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/industries#insurance</loc>
+<loc>https://docsapi.co/industries#insurance</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/industries#supply-chain</loc>
+<loc>https://docsapi.co/industries#supply-chain</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/industries#healthcare</loc>
+<loc>https://docsapi.co/industries#healthcare</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/industries#legal</loc>
+<loc>https://docsapi.co/industries#legal</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/resources/blogs/revolutionizing-document-management-with-ocr-technology</loc>
+<loc>https://docsapi.co/resources/blogs/ocr-bank-statement-technology-revolutionizing-financial-data-processing</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments</loc>
+<loc>https://docsapi.co/resources/blogs/transforming-financial-services-the-complete-guide-to-document-automation</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/resources/blogs/ocr-apis-the-secret-weapon-smart-finance-teams-are-using-right-now</loc>
+<loc>https://docsapi.co/resources/blogs/legal-document-automation-the-complete-guide-for-modern-law-firms</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/contact</loc>
+<loc>https://docsapi.co/resources/blogs/passport-ocr-revolutionizing-document-processing-with-intelligent-solutions</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/pricing</loc>
+<loc>https://docsapi.co/resources/blogs/ocr-in-finance-transforming-document-processing-for-modern-financial-operations</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/resources/blogs/idp-vs-ocr-understanding-the-key-differences-for-automation-success</loc>
+<loc>https://docsapi.co/resources/blogs/understanding-ocr-accuracy-metrics-challenges-and-improvement-strategies</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/resources/blogs/intelligent-document-processing-the-future-of-automated-data-extraction</loc>
+<loc>https://docsapi.co/resources/blogs/intelligent-document-processing-the-future-of-automated-data-extraction</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/resources/blogs/understanding-ocr-accuracy-metrics-challenges-and-improvement-strategies</loc>
+<loc>https://docsapi.co/resources/blogs/passport-ocr-revolutionizing-identity-verification-with-automated-data-extraction</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/resources/blogs/passport-ocr-revolutionizing-identity-verification-with-automated-data-extraction</loc>
+<loc>https://docsapi.co/resources/blogs/idp-vs-ocr-understanding-the-key-differences-for-automation-success</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/resources/blogs/ocr-in-finance-transforming-document-processing-for-modern-financial-operations</loc>
+<loc>https://docsapi.co/contact</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/resources/blogs/passport-ocr-revolutionizing-document-processing-with-intelligent-solutions</loc>
+<loc>https://docsapi.co/resources/blogs/revolutionizing-document-management-with-ocr-technology</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/resources/blogs/transforming-financial-services-the-complete-guide-to-document-automation</loc>
+<loc>https://docsapi.co/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments</loc>
 </url>
 <url>
-  <loc>http://docsapi.co/resources/blogs/ocr-bank-statement-technology-revolutionizing-financial-data-processing</loc>
+<loc>https://docsapi.co/resources/blogs/ocr-apis-the-secret-weapon-smart-finance-teams-are-using-right-now</loc>
+</url>
+<url>
+<loc>https://docsapi.co/pricing</loc>
 </url>
 </urlset>
