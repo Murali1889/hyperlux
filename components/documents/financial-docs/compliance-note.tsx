@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Shield, FileCheck } from "lucide-react"
 
+
 export default function ComplianceNote() {
   return (
     <section className="py-16 bg-white border-t border-gray-200">
