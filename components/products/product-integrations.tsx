@@ -151,7 +151,7 @@ export default function ProductIntegrations() {
             automation.
           </p>
           <Button asChild className="bg-indigo-600 hover:bg-indigo-700">
-            <Link href="/contact-sales">Talk to Our Integration Specialists</Link>
+            <Link href="/book-demo">Book a Demo</Link>
           </Button>
         </div>
       </div>

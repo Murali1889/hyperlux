@@ -20,7 +20,7 @@ export default function ContractCta() {
             Join leading organizations that have transformed their contract management with our AI-powered solution.
           </p>
           <Button size="lg" className="bg-white text-indigo-700 hover:bg-indigo-50 text-base font-medium" asChild>
-            <Link href="/contact">Request Demo</Link>
+            <Link href="/book-demo">Book a Demo</Link>
           </Button>
         </motion.div>
       </div>
