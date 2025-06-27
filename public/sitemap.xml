@@ -19,13 +19,7 @@
 <loc>https://docsapi.co/use-cases</loc>
 </url>
 <url>
-<loc>https://docsapi.co/privacy</loc>
-</url>
-<url>
 <loc>https://docsapi.co/terms</loc>
-</url>
-<url>
-<loc>https://docsapi.co/contact-sales</loc>
 </url>
 <url>
 <loc>https://docsapi.co/resources/blogs</loc>
@@ -88,9 +82,6 @@
 <loc>https://docsapi.co/resources/blogs/idp-vs-ocr-understanding-the-key-differences-for-automation-success</loc>
 </url>
 <url>
-<loc>https://docsapi.co/contact</loc>
-</url>
-<url>
 <loc>https://docsapi.co/resources/blogs/revolutionizing-document-management-with-ocr-technology</loc>
 </url>
 <url>
@@ -104,5 +95,8 @@
 </url>
 <url>
 <loc>https://docsapi.co/resources/blogs/revolutionizing-finance-how-automated-bank-statement-analysis-transforms-lending-decisions</loc>
+</url>
+<url>
+<loo>https://docsapi.co/resources/blogs/the-ultimate-guide-to-small-business-lending-automation-revolutionizing-sba-loans-and-financing</loo>
 </url>
 </urlset>

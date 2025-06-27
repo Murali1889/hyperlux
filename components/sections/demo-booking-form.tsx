@@ -59,7 +59,7 @@ export function DemoBookingForm() {
                 />
             </div>
 
-            <div className="space-y-4">
+            {/* <div className="space-y-4">
                 <div className="flex items-start gap-2">
                     <div className="flex h-5 items-center">
                         <input
@@ -80,7 +80,7 @@ export function DemoBookingForm() {
                         </Link>
                     </Label>
                 </div>
-            </div>
+            </div> */}
 
             <Button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-700" disabled={isSubmitting}>
                 {isSubmitting ? "Submitting..." : "Book My Demo"} <ArrowRight className="ml-2 h-4 w-4" />

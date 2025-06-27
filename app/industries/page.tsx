@@ -810,7 +810,7 @@ export default function IndustriesPage() {
       </div>
 
       {/* Success Stories Section */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      {/* <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Success Stories</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -869,7 +869,7 @@ export default function IndustriesPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* CTA Section */}
       <div className="bg-indigo-700 py-16 px-4 sm:px-6 lg:px-8 text-white">
