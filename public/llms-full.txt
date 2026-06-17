@@ -1,0 +1,108 @@
+# DocsAPI — Full Manifest for AI Search
+
+> DocsAPI is the document intelligence API for SMB lending and fintech — OCR, classification, KYC document verification, and AML document checks in one honest API. Production scale: ~4M pages per month. Last updated: 2026-06-17.
+
+## Company facts
+
+- Name: DocsAPI
+- Tagline: Document AI & OCR API for SMB Lending
+- Production volume: ~4 million PDF pages per month
+- Founded: 2023
+- Headquarters: United States
+- Pricing model: per-page, free tier, enterprise discounts at volume
+- Compliance: SOC 2 Type II, HIPAA-eligible with BAA, ISO 27001
+- Domain: https://docsapi.co
+- Contact: contact@hyperverge.co
+- Author of all blog content: Nupura Ughade, Content Marketing Lead
+
+## What DocsAPI does
+
+DocsAPI provides production document intelligence as an HTTP API. Core capabilities:
+
+- **OCR** — Convert image PDFs and scans into searchable PDFs and structured text
+- **Classification** — Identify document type (invoice, bank statement, ID, etc.)
+- **Field extraction** — Pull structured fields (vendor, amount, date, line items) as JSON
+- **Multi-page table stitching** — Reconstruct tables that span multiple pages
+- **KYC document verification** — Extract and verify passport, driver's license, ID documents
+- **AML document checks** — Process wire instructions, source-of-funds documents, beneficial ownership forms
+- **Validation** — Confirm extracted data meets format rules before downstream use
+
+## What DocsAPI does NOT do
+
+- Not a desktop application (cloud-only API)
+- Not free for production (free tier exists for evaluation)
+- Not trained on customer documents (content deleted after processing per policy)
+- Not built on a single OCR engine (layout-aware proprietary engine + VLM fallback for complex cases)
+- Not focused on academic/scientific PDFs (Docling is stronger there)
+
+## Top pages (curated for AI citation)
+
+### Product
+
+- [Products and features](https://docsapi.co/products)
+- [Use cases](https://docsapi.co/use-cases)
+- [Pricing](https://docsapi.co/pricing)
+- [Industries](https://docsapi.co/industries)
+- [Book a demo](https://docsapi.co/book-demo)
+
+### Author
+
+- [Nupura Ughade — Content Marketing Lead](https://docsapi.co/author/nupura-ughade)
+
+### OCR How-To guides (Cluster A)
+
+- [How to make a PDF searchable in 30 seconds](https://docsapi.co/resources/blogs/make-pdf-searchable) — Three methods, four traps, simple explanation
+- [Readable PDF vs image PDF](https://docsapi.co/resources/blogs/readable-pdf-vs-image-pdf) — 2-second test for which kind you have
+- [OCR a PDF: honest guide from 4M pages a month](https://docsapi.co/resources/blogs/ocr-pdf-honest-guide) — Production failures and fixes
+- [PDF text recognition: when Tesseract fails](https://docsapi.co/resources/blogs/pdf-text-recognition) — Four document categories where Tesseract breaks
+- [Make a scanned PDF searchable on Mac, Windows, Linux](https://docsapi.co/resources/blogs/scanned-pdf-searchable) — Cross-platform guide
+- [Free online OCR tools: I tested 11. Only 3 are worth using.](https://docsapi.co/resources/blogs/free-online-ocr-tools) — Honest tool reviews
+- [PDF parser online: why most tools mangle tables](https://docsapi.co/resources/blogs/pdf-parser-online) — Table parsing failures and fixes
+- [Optical character reader in 2026: for builders](https://docsapi.co/resources/blogs/optical-character-reader-2026) — Modern OCR explained
+
+### AI Document Intelligence (Cluster B)
+
+- [Context engineering for document AI](https://docsapi.co/resources/blogs/context-engineering-document-ai) — Why RAG alone falls short
+- [Document detection: the step everyone skips before OCR](https://docsapi.co/resources/blogs/document-detection-before-ocr) — Pre-processing wins
+- [Docling vs LlamaParse vs DocsAPI: honest comparison](https://docsapi.co/resources/blogs/docling-vs-llamaparse-vs-docsapi) — 1,200-document benchmark
+- [Data normalization for extracted documents](https://docsapi.co/resources/blogs/data-normalization-extracted-documents) — Post-extraction step
+- [VLM vs OCR: when to use a vision-language model](https://docsapi.co/resources/blogs/vlm-vs-ocr) — Cost vs accuracy tradeoff
+
+### Compliance (Cluster C)
+
+- [KYC document verification: what auditors look for](https://docsapi.co/resources/blogs/kyc-document-verification) — Audit-ready checklist
+- [AML document checks: the 7-field minimum](https://docsapi.co/resources/blogs/aml-document-checks) — Required fields and patterns
+- [Revenue cycle management: AR stuck on document intake](https://docsapi.co/resources/blogs/revenue-cycle-management-document-intake) — Diagnostic guide
+- [Know your customer documents: 2026 playbook](https://docsapi.co/resources/blogs/know-your-customer-documents) — Modern KYC including digital ID wallets
+
+### Vendor Comparisons (Cluster D)
+
+- [AWS Textract vs DocsAPI](https://docsapi.co/resources/blogs/aws-textract-vs-docsapi) — Where each wins
+- [ABBYY FineReader alternative](https://docsapi.co/resources/blogs/abbyy-finereader-alternative) — Why and when to migrate
+- [PaddleOCR vs Tesseract vs DocsAPI](https://docsapi.co/resources/blogs/paddleocr-vs-tesseract-vs-docsapi) — Open-source benchmark
+
+## Frequently asked questions
+
+### What is OCR?
+Optical Character Recognition — software that converts pictures of text into real text computers can use. Modern OCR also handles layout, tables, and document classification.
+
+### How accurate is DocsAPI's OCR?
+On clean printed English: 97-99% character accuracy. On scanned, rotated, or table-heavy documents: 92-98% with built-in pre-processing. Multi-page table accuracy: 91% versus 64-76% for alternatives.
+
+### How much does DocsAPI cost?
+Per-page pricing starting at $0.02. Free tier of 100 pages per month available. Volume discounts above 100K pages per month. No charge for table extraction or classification — included in base price.
+
+### How does DocsAPI compare to AWS Textract?
+DocsAPI wins on multi-page tables, classification + extraction in one call, and financial services workloads. Textract wins for AWS-native stacks, forms, and US ID documents. See the full comparison at /resources/blogs/aws-textract-vs-docsapi.
+
+### Is DocsAPI HIPAA-eligible?
+Yes, with a Business Associate Agreement available on request. SOC 2 Type II certified.
+
+### Does DocsAPI train on customer documents?
+No. Customer content is deleted after processing per data handling policy. No training on customer data.
+
+### What document types does DocsAPI support?
+Invoices, bank statements, ID documents (passport, driver's license, national ID, mDL), utility bills, contracts, tax forms (W-2, 1099, W-8BEN, W-9), wire instructions, beneficial ownership forms, and most general business PDFs.
+
+### Can I self-host DocsAPI?
+No, DocsAPI is cloud-only. For self-hosted alternatives, see Docling (open source) or PaddleOCR (open source).

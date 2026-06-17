@@ -1,5 +1,45 @@
-User-agent: *
-Disallow: 
+# DocsAPI robots.txt
+# Last updated: 2026-06-17
 
-Disallow: /admin
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
 Disallow: /_next/
+
+# Search and retrieval AI bots — explicitly allowed for citation
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Training-only bots — allowed by default; edit to Disallow if you prefer
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+Sitemap: https://docsapi.co/sitemap.xml

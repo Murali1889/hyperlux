@@ -4,25 +4,85 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
-import { Toaster } from 'react-hot-toast';
+import { Toaster } from "react-hot-toast"
 import FeedbackProviderClient from "@/providers/FeedbackProviderClient"
+import { OrganizationJsonLd } from "@/components/json-ld/OrganizationJsonLd"
+import { WebsiteJsonLd } from "@/components/json-ld/WebsiteJsonLd"
+import {
+  SITE_URL,
+  SITE_NAME,
+  SITE_TAGLINE,
+  SITE_DESCRIPTION,
+  SITE_OG_IMAGE,
+} from "@/lib/seo"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "DocsAPI - AI-Powered Industry Classification for Small Business Lending",
-  description:
-    "Transform your small business lending with AI-powered industry classification that's 5x faster and 3x more accurate than manual processes.",
-  generator: 'docsapi.com',
-  icons: {
-    icon: '/docsapi-logo.png',
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
+  generator: "docsapi.co",
+  keywords: [
+    "OCR API",
+    "document AI",
+    "PDF parser",
+    "invoice OCR",
+    "bank statement OCR",
+    "KYC verification",
+    "AML document checks",
+    "intelligent document processing",
+    "PDF to text",
+    "make pdf searchable",
+  ],
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  alternates: {
+    canonical: SITE_URL,
+  },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    description: SITE_DESCRIPTION,
+    images: [
+      {
+        url: SITE_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: SITE_NAME,
+      },
+    ],
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE_NAME} — ${SITE_TAGLINE}`,
+    description: SITE_DESCRIPTION,
+    images: [SITE_OG_IMAGE],
   },
   robots: {
     index: true,
     follow: true,
-    'max-image-preview': 'large',
-    'max-video-preview': 1,
-    'max-snippet': 1,
+    "max-image-preview": "large",
+    "max-video-preview": -1,
+    "max-snippet": -1,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "/docsapi-logo.png",
+    apple: "/docsapi-logo.png",
   },
 }
 
@@ -34,6 +94,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <OrganizationJsonLd />
+        <WebsiteJsonLd />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-K5PD9TF5DE"></script>
         <script
           dangerouslySetInnerHTML={{

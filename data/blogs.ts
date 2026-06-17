@@ -1,6 +1,9 @@
 import type { BlogPost } from "@/types/resources"
+import { nupuraUghade } from "./authors"
+import { newBlogs } from "./new-blogs"
+import { eeatMetadataBySlug } from "./blogs-eeat"
 
-export const blogs: BlogPost[] = [
+const existingBlogsRaw: BlogPost[] = [
   {
     id: "1",
     title: "Revolutionizing Document Management with OCR Technology",
@@ -67,15 +70,7 @@ export const blogs: BlogPost[] = [
     category: "Industry Trends",
     date: "May 12, 2025",
     readTime: "8 min read",
-    author: {
-      id: "1",
-      name: "Nupura Ughade",
-      title: "Content Marketing Lead",
-      avatar: "/avatar/avatar-nupura.webp",
-      bio: "Nupura Ughade creates clear, insightful content focused on document processing, OCR, and fintech solutions. She combines her technical knowledge with real-world finance use cases to help readers navigate digital transformation with confidence.",
-      twitter: "https://twitter.com/sarahjohnson",
-      linkedin: "https://linkedin.com/in/sarahjohnson",
-    },
+    author: nupuraUghade,
     metaTag: "Invoice Processing OCR: Transforming Financial Document Management",
   },
   {
@@ -144,15 +139,7 @@ export const blogs: BlogPost[] = [
     category: "Industry Trends",
     date: "May 12, 2025",
     readTime: "8 min read",
-    author: {
-      id: "1",
-      name: "Nupura Ughade",
-      title: "Content Marketing Lead",
-      avatar: "/avatar/avatar-nupura.webp",
-      bio: "Nupura Ughade creates clear, insightful content focused on document processing, OCR, and fintech solutions. She combines her technical knowledge with real-world finance use cases to help readers navigate digital transformation with confidence.",
-      twitter: "https://twitter.com/sarahjohnson",
-      linkedin: "https://linkedin.com/in/sarahjohnson",
-    },
+    author: nupuraUghade,
     metaTag: "OCR Technology: Transform Your Document Management | Complete Guide",
   },
   {
@@ -266,15 +253,7 @@ export const blogs: BlogPost[] = [
     category: "Industry Trends",
     date: "May 12, 2025",
     readTime: "8 min read",
-    author: {
-      id: "1",
-      name: "Nupura Ughade",
-      title: "Content Marketing Lead",
-      avatar: "/avatar/avatar-nupura.webp",
-      bio: "Nupura Ughade creates clear, insightful content focused on document processing, OCR, and fintech solutions. She combines her technical knowledge with real-world finance use cases to help readers navigate digital transformation with confidence.",
-      twitter: "https://twitter.com/sarahjohnson",
-      linkedin: "https://linkedin.com/in/sarahjohnson",
-    },
+    author: nupuraUghade,
     metaTag: "Automate Document Workflows with OCR API Solutions",
   },
   {
@@ -289,15 +268,7 @@ export const blogs: BlogPost[] = [
     category: "Industry Trends",
     date: "May 27, 2025",
     readTime: "8 min read",
-    author: {
-      id: "1",
-      name: "Nupura Ughade",
-      title: "Content Marketing Lead",
-      avatar: "/avatar/avatar-nupura.webp",
-      bio: "Nupura Ughade creates clear, insightful content focused on document processing, OCR, and fintech solutions. She combines her technical knowledge with real-world finance use cases to help readers navigate digital transformation with confidence.",
-      twitter: "https://twitter.com/sarahjohnson",
-      linkedin: "https://linkedin.com/in/sarahjohnson",
-    },
+    author: nupuraUghade,
     metaTag: "Automate Document Workflows with OCR API Solutions",
   },
   {
@@ -312,15 +283,7 @@ export const blogs: BlogPost[] = [
     category: "Industry Trends",
     date: "May 28, 2025",
     readTime: "8 min read",
-    author: {
-      id: "1",
-      name: "Nupura Ughade",
-      title: "Content Marketing Lead",
-      avatar: "/avatar/avatar-nupura.webp",
-      bio: "Nupura Ughade creates clear, insightful content focused on document processing, OCR, and fintech solutions. She combines her technical knowledge with real-world finance use cases to help readers navigate digital transformation with confidence.",
-      twitter: "https://twitter.com/sarahjohnson",
-      linkedin: "https://linkedin.com/in/sarahjohnson",
-    },
+    author: nupuraUghade,
     metaTag: "Automate Document Workflows with OCR API Solutions",
   },
   {
@@ -335,15 +298,7 @@ export const blogs: BlogPost[] = [
     category: "Industry Trends",
     date: "May 28, 2025",
     readTime: "8 min read",
-    author: {
-      id: "1",
-      name: "Nupura Ughade",
-      title: "Content Marketing Lead",
-      avatar: "/avatar/avatar-nupura.webp",
-      bio: "Nupura Ughade creates clear, insightful content focused on document processing, OCR, and fintech solutions. She combines her technical knowledge with real-world finance use cases to help readers navigate digital transformation with confidence.",
-      twitter: "https://twitter.com/sarahjohnson",
-      linkedin: "https://linkedin.com/in/sarahjohnson",
-    },
+    author: nupuraUghade,
     metaTag: "Automate Document Workflows with OCR API Solutions",
   },
   {
@@ -358,15 +313,7 @@ export const blogs: BlogPost[] = [
     category: "Industry Trends",
     date: "May 28, 2025",
     readTime: "8 min read",
-    author: {
-      id: "1",
-      name: "Nupura Ughade",
-      title: "Content Marketing Lead",
-      avatar: "/avatar/avatar-nupura.webp",
-      bio: "Nupura Ughade creates clear, insightful content focused on document processing, OCR, and fintech solutions. She combines her technical knowledge with real-world finance use cases to help readers navigate digital transformation with confidence.",
-      twitter: "https://twitter.com/sarahjohnson",
-      linkedin: "https://linkedin.com/in/sarahjohnson",
-    },
+    author: nupuraUghade,
     metaTag: "Automate Document Workflows with OCR API Solutions",
   },
   {
@@ -381,15 +328,7 @@ export const blogs: BlogPost[] = [
     category: "Industry Trends",
     date: "June 2, 2025",
     readTime: "8 min read",
-    author: {
-      id: "1",
-      name: "Nupura Ughade",
-      title: "Content Marketing Lead",
-      avatar: "/avatar/avatar-nupura.webp",
-      bio: "Nupura Ughade creates clear, insightful content focused on document processing, OCR, and fintech solutions. She combines her technical knowledge with real-world finance use cases to help readers navigate digital transformation with confidence.",
-      twitter: "https://twitter.com/sarahjohnson",
-      linkedin: "https://linkedin.com/in/sarahjohnson",
-    },
+    author: nupuraUghade,
     metaTag: "Automate Document Workflows with OCR API Solutions",
   },
   {
@@ -404,15 +343,7 @@ export const blogs: BlogPost[] = [
     category: "Industry Trends",
     date: "June 3, 2025",
     readTime: "8 min read",
-    author: {
-      id: "1",
-      name: "Nupura Ughade",
-      title: "Content Marketing Lead",
-      avatar: "/avatar/avatar-nupura.webp",
-      bio: "Nupura Ughade creates clear, insightful content focused on document processing, OCR, and fintech solutions. She combines her technical knowledge with real-world finance use cases to help readers navigate digital transformation with confidence.",
-      twitter: "https://twitter.com/sarahjohnson",
-      linkedin: "https://linkedin.com/in/sarahjohnson",
-    },
+    author: nupuraUghade,
     metaTag: "Automate Document Workflows with OCR API Solutions",
   },
   {
@@ -427,15 +358,7 @@ export const blogs: BlogPost[] = [
     category: "Industry Trends",
     date: "June 5, 2025",
     readTime: "8 min read",
-    author: {
-      id: "1",
-      name: "Nupura Ughade",
-      title: "Content Marketing Lead",
-      avatar: "/avatar/avatar-nupura.webp",
-      bio: "Nupura Ughade creates clear, insightful content focused on document processing, OCR, and fintech solutions. She combines her technical knowledge with real-world finance use cases to help readers navigate digital transformation with confidence.",
-      twitter: "https://twitter.com/sarahjohnson",
-      linkedin: "https://linkedin.com/in/sarahjohnson",
-    },
+    author: nupuraUghade,
     metaTag: "Automate Document Workflows with OCR API Solutions",
   },
   {
@@ -449,15 +372,7 @@ export const blogs: BlogPost[] = [
     category: "Industry Trends",
     date: "June 9, 2025",
     readTime: "8 min read",
-    author: {
-      id: "1",
-      name: "Nupura Ughade",
-      title: "Content Marketing Lead",
-      avatar: "/avatar/avatar-nupura.webp",
-      bio: "Nupura Ughade creates clear, insightful content focused on document processing, OCR, and fintech solutions. She combines her technical knowledge with real-world finance use cases to help readers navigate digital transformation with confidence.",
-      twitter: "https://twitter.com/sarahjohnson",
-      linkedin: "https://linkedin.com/in/sarahjohnson",
-    },
+    author: nupuraUghade,
     metaTag: "Learn how document automation for financial services streamlines operations, reduces manual processing, and improves accuracy in financial document management.",
   },
   {
@@ -471,15 +386,7 @@ export const blogs: BlogPost[] = [
     category: "Industry Trends",
     date: "June 12, 2025",
     readTime: "8 min read",
-    author: {
-      id: "1",
-      name: "Nupura Ughade",
-      title: "Content Marketing Lead",
-      avatar: "/avatar/avatar-nupura.webp",
-      bio: "Nupura Ughade creates clear, insightful content focused on document processing, OCR, and fintech solutions. She combines her technical knowledge with real-world finance use cases to help readers navigate digital transformation with confidence.",
-      twitter: "https://twitter.com/sarahjohnson",
-      linkedin: "https://linkedin.com/in/sarahjohnson",
-    },
+    author: nupuraUghade,
     metaTag: "Learn how OCR bank statement technology automates data extraction, improves accuracy, and streamlines financial processes for businesses and accounting professionals.",
   },
   {
@@ -493,15 +400,7 @@ export const blogs: BlogPost[] = [
     category: "Industry Trends",
     date: "June 18, 2025",
     readTime: "8 min read",
-    author: {
-      id: "1",
-      name: "Nupura Ughade",
-      title: "Content Marketing Lead",
-      avatar: "/avatar/avatar-nupura.webp",
-      bio: "Nupura Ughade creates clear, insightful content focused on document processing, OCR, and fintech solutions. She combines her technical knowledge with real-world finance use cases to help readers navigate digital transformation with confidence.",
-      twitter: "https://twitter.com/sarahjohnson",
-      linkedin: "https://linkedin.com/in/sarahjohnson",
-    },
+    author: nupuraUghade,
     metaTag: "Learn how OCR bank statement technology automates data extraction, improves accuracy, and streamlines financial processes for businesses and accounting professionals.",
   },
   {
@@ -515,15 +414,14 @@ export const blogs: BlogPost[] = [
     category: "Industry Trends",
     date: "June 27, 2025",
     readTime: "8 min read",
-    author: {
-      id: "1",
-      name: "Nupura Ughade",
-      title: "Content Marketing Lead",
-      avatar: "/avatar/avatar-nupura.webp",
-      bio: "Nupura Ughade creates clear, insightful content focused on document processing, OCR, and fintech solutions. She combines her technical knowledge with real-world finance use cases to help readers navigate digital transformation with confidence.",
-      twitter: "https://twitter.com/sarahjohnson",
-      linkedin: "https://linkedin.com/in/sarahjohnson",
-    },
+    author: nupuraUghade,
     metaTag: "Learn how small business lending automation is revolutionizing access to capital, improving approval rates, and accelerating the funding process for entrepreneurs",
   },
 ]
+
+const existingBlogs: BlogPost[] = existingBlogsRaw.map((b) => {
+  const augment = eeatMetadataBySlug[b.slug] ?? {}
+  return { ...augment, ...b }
+})
+
+export const blogs: BlogPost[] = [...newBlogs, ...existingBlogs]

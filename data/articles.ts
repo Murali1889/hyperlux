@@ -15,6 +15,7 @@ export const articles: Article[] = [
     readTime: "12 min read",
     author: {
       id: "1",
+      slug: "daniel-martinez",
       name: "Daniel Martinez",
       title: "Industry Classification Expert",
       avatar: "/customer-avatar-1.png",
@@ -37,6 +38,7 @@ export const articles: Article[] = [
     readTime: "10 min read",
     author: {
       id: "2",
+      slug: "elizabeth-carter",
       name: "Elizabeth Carter",
       title: "Compliance Officer",
       avatar: "/customer-avatar-2.png",
@@ -59,6 +61,7 @@ export const articles: Article[] = [
     readTime: "15 min read",
     author: {
       id: "3",
+      slug: "sarah-johnson",
       name: "Sarah Johnson",
       title: "Chief Data Scientist",
       avatar: "/avatar-sarah.png",
@@ -81,6 +84,7 @@ export const articles: Article[] = [
     readTime: "14 min read",
     author: {
       id: "4",
+      slug: "rachel-nguyen",
       name: "Rachel Nguyen",
       title: "Risk Management Director",
       avatar: "/avatar-rachel.png",
