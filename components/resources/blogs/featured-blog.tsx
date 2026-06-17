@@ -6,7 +6,10 @@ import Image from "next/image"
 import { blogs } from "@/data/blogs"
 
 export default function FeaturedBlog() {
-  const featuredBlog = blogs[blogs.length - 1]
+  const sortedBlogs = [...blogs].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  )
+  const featuredBlog = sortedBlogs[0]
 
   return (
     <Section className="py-8 md:py-16">
