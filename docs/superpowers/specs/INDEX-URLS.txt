@@ -1,0 +1,76 @@
+# DocsAPI — Index Request URLs
+# Copy-paste-friendly list for Google Search Console "Request Indexing"
+# Ordered by priority (top = submit first). Total: 50 URLs.
+# Plan: docs/superpowers/specs/SEO-LAUNCH-PLAN.md
+
+# ============================================================
+# TIER 0 — Sitemap and core infra (submit on Day 1 via GSC Sitemaps tab)
+# ============================================================
+https://docsapi.co/sitemap.xml
+https://docsapi.co/robots.txt
+
+# ============================================================
+# TIER 1 — Core pages + lowest-KD blogs (submit Day 2)
+# ============================================================
+https://docsapi.co
+https://docsapi.co/products
+https://docsapi.co/use-cases
+https://docsapi.co/pricing
+https://docsapi.co/author/nupura-ughade
+https://docsapi.co/resources/blogs
+https://docsapi.co/resources/blogs/document-detection-before-ocr
+https://docsapi.co/resources/blogs/make-pdf-searchable
+https://docsapi.co/resources/blogs/scanned-pdf-searchable
+https://docsapi.co/resources/blogs/readable-pdf-vs-image-pdf
+
+# ============================================================
+# TIER 2 — High-volume new blogs (submit Day 3)
+# ============================================================
+https://docsapi.co/resources/blogs/context-engineering-document-ai
+https://docsapi.co/resources/blogs/kyc-document-verification
+https://docsapi.co/resources/blogs/aml-document-checks
+https://docsapi.co/resources/blogs/data-normalization-extracted-documents
+https://docsapi.co/resources/blogs/ocr-pdf-honest-guide
+https://docsapi.co/resources/blogs/docling-vs-llamaparse-vs-docsapi
+https://docsapi.co/resources/blogs/know-your-customer-documents
+https://docsapi.co/resources/blogs/optical-character-reader-2026
+https://docsapi.co/resources/blogs/pdf-parser-online
+https://docsapi.co/resources/blogs/vlm-vs-ocr
+
+# ============================================================
+# TIER 3 — Commercial intent + remaining new blogs (submit Day 4)
+# ============================================================
+https://docsapi.co/resources/blogs/aws-textract-vs-docsapi
+https://docsapi.co/resources/blogs/abbyy-finereader-alternative
+https://docsapi.co/resources/blogs/paddleocr-vs-tesseract-vs-docsapi
+https://docsapi.co/resources/blogs/pdf-text-recognition
+https://docsapi.co/resources/blogs/free-online-ocr-tools
+https://docsapi.co/resources/blogs/revenue-cycle-management-document-intake
+
+# ============================================================
+# TIER 4 — Existing 14 blogs (optional, Day 5-7)
+# Already indexed; re-request only to refresh dateModified
+# ============================================================
+https://docsapi.co/resources/blogs/revolutionizing-document-management-with-ocr-technology
+https://docsapi.co/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments
+https://docsapi.co/resources/blogs/ocr-apis-the-secret-weapon-smart-finance-teams-are-using-right-now
+https://docsapi.co/resources/blogs/idp-vs-ocr-understanding-the-key-differences-for-automation-success
+https://docsapi.co/resources/blogs/understanding-ocr-accuracy-metrics-challenges-and-improvement-strategies
+https://docsapi.co/resources/blogs/intelligent-document-processing-the-future-of-automated-data-extraction
+https://docsapi.co/resources/blogs/passport-ocr-revolutionizing-identity-verification-with-automated-data-extraction
+https://docsapi.co/resources/blogs/ocr-in-finance-transforming-document-processing-for-modern-financial-operations
+https://docsapi.co/resources/blogs/passport-ocr-revolutionizing-document-processing-with-intelligent-solutions
+https://docsapi.co/resources/blogs/legal-document-automation-the-complete-guide-for-modern-law-firms
+https://docsapi.co/resources/blogs/transforming-financial-services-the-complete-guide-to-document-automation
+https://docsapi.co/resources/blogs/ocr-bank-statement-technology-revolutionizing-financial-data-processing
+https://docsapi.co/resources/blogs/revolutionizing-finance-how-automated-bank-statement-analysis-transforms-lending-decisions
+https://docsapi.co/resources/blogs/the-ultimate-guide-to-small-business-lending-automation-revolutionizing-sba-loans-and-financing
+
+# ============================================================
+# Other indexable pages (optional, Day 5-7)
+# ============================================================
+https://docsapi.co/industries
+https://docsapi.co/documents
+https://docsapi.co/book-demo
+https://docsapi.co/resources/articles
+https://docsapi.co/resources/newsletters
