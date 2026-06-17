@@ -365,13 +365,15 @@ Curated AI manifest per the GEO skill:
 
 These will be encoded as TODO comments + clearly-marked placeholders in the spec, ready for find-replace:
 
-| Item | Default I'll ship if unanswered | Action needed |
+Tracked in `docs/superpowers/specs/BLOCKERS.md`. Ask user at the end.
+
+| Item | Default shipped | Status |
 |---|---|---|
-| Nupura's real LinkedIn URL | `https://www.linkedin.com/in/nupura-ughade` | Confirm or correct |
-| Nupura's real Twitter URL | `https://twitter.com/nupura_ughade` | Confirm, correct, or remove |
-| Production domain | `https://docsapi.com` | Confirm |
-| Organization contact email | `hello@docsapi.com` | Confirm |
-| Google Search Console verification code | (not added) | Provide if available |
+| Nupura's real LinkedIn URL | `https://www.linkedin.com/in/nupura-ughade` | OPEN — ask at end |
+| Nupura's real Twitter URL | `https://twitter.com/nupura_ughade` | OPEN — ask at end |
+| Production domain | `https://docsapi.com` | ✅ CONFIRMED 2026-06-17 |
+| Organization contact email | `hello@docsapi.com` | OPEN — ask at end |
+| Google Search Console verification code | (not added) | OPEN — ask at end |
 
 ---
 
