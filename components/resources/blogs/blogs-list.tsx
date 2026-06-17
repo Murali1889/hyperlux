@@ -7,17 +7,15 @@ import Image from "next/image"
 import { blogs } from "@/data/blogs"
 
 export default function BlogsList() {
-  const sortedBlogs = [...blogs].sort((a, b) => {
-    const dateA = new Date(a.date);
-    const dateB = new Date(b.date);
-    return dateB - dateA; // Latest first (descending order)
-  });
+  const sortedBlogs = [...blogs].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  )
   return (
     <Section className="py-4 md:py-8">
       <SectionHeader title="Latest Blog Posts on OCR Software & Document Automation" description="" />
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {sortedBlogs.slice(0, 9).map((blog) => (
+        {sortedBlogs.map((blog) => (
           <Link key={blog.id} href={`/resources/blogs/${blog.slug}`} className="group">
             <Card className="border-slate-200 overflow-hidden h-full transition-all duration-200 group-hover:border-indigo-300 group-hover:shadow-md">
               <div className="aspect-[16/9] relative overflow-hidden bg-slate-100">
@@ -52,11 +50,9 @@ export default function BlogsList() {
         ))}
       </div>
 
-      {/* <div className="mt-12 flex justify-center">
-        <Button variant="outline" size="lg">
-          Load More
-        </Button>
-      </div> */}
+      <div className="mt-10 text-center text-sm text-slate-500">
+        Showing all {sortedBlogs.length} guides
+      </div>
     </Section>
   )
 }
