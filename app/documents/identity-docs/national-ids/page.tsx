@@ -8,12 +8,14 @@ import DeveloperOutput from "@/components/documents/identity-docs/national-ids/d
 import RegionalComplianceNote from "@/components/documents/identity-docs/national-ids/regional-compliance-note"
 import NationalIdFAQ from "@/components/documents/identity-docs/national-ids/national-id-faq"
 import NationalIdCta from "@/components/documents/identity-docs/national-ids/national-id-cta"
+import { buildPageMetadata } from "@/lib/page-metadata"
 
-export const metadata: Metadata = {
-  title: "National ID OCR Template | Barcode & Text Extraction",
+export const metadata: Metadata = buildPageMetadata({
+  title: "National ID Card OCR — Global Coverage, KYC-Ready",
   description:
-    "Extract data from national identity cards worldwide, including barcodes, QR codes and hologram text, with 99% accuracy.",
-}
+    "Extract identity fields from national ID cards worldwide — barcodes, QR codes, hologram text. 99% accuracy, validation built-in.",
+  path: "/documents/identity-docs/national-ids",
+})
 
 export default function NationalIdsPage() {
   return (

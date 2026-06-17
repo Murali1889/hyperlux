@@ -1,8 +1,12 @@
-export const metadata = {
-  title: "AI OCR Software for Financial Industries | DocsAPI",
+import type { Metadata } from "next"
+import { buildPageMetadata } from "@/lib/page-metadata"
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "OCR for Banking, Fintech, Lending — DocsAPI Industries",
   description:
-    "Discover how DocsAPI's AI OCR software transforms document processing across banking, fintech, credit unions, and microfinance industries. Book a demo today!",
-}
+    "Document AI for banking, fintech, credit unions, lending, and insurance. SOC 2 and HIPAA-eligible. Automate KYC, AML, and underwriting workflows.",
+  path: "/industries",
+})
 
 export default function IndustriesPage() {
   return (

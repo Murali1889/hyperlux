@@ -8,11 +8,14 @@ import DemoAnimation from "@/components/solutions/finance-automation/demo-animat
 import CaseStudy from "@/components/solutions/finance-automation/case-study"
 import FAQSection from "@/components/solutions/finance-automation/faq-section"
 import StickyCTA from "@/components/solutions/finance-automation/sticky-cta"
+import { buildPageMetadata } from "@/lib/page-metadata"
 
-export const metadata: Metadata = {
-  title: "Finance Automation OCR | Invoice & Reconciliation AI",
-  description: "Automate invoices, three-way match and bank-statement parsing. 65% faster AP close, 99% accuracy.",
-}
+export const metadata: Metadata = buildPageMetadata({
+  title: "Finance Automation OCR — Invoice & Reconciliation",
+  description:
+    "Automate invoices, three-way match, and bank statement parsing. 65% faster AP close, 99% accuracy on financial documents.",
+  path: "/solutions/finance-automation",
+})
 
 export default function FinanceAutomationPage() {
   return (

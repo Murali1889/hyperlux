@@ -9,12 +9,14 @@ import CustomerExperienceBenefit from "@/components/documents/financial-docs/ban
 import ComplianceNote from "@/components/documents/financial-docs/bank-statements/compliance-note"
 import BankStatementFAQ from "@/components/documents/financial-docs/bank-statements/bank-statement-faq"
 import BankStatementCta from "@/components/documents/financial-docs/bank-statements/bank-statement-cta"
+import { buildPageMetadata } from "@/lib/page-metadata"
 
-export const metadata: Metadata = {
-  title: "Bank Statement OCR Template | Transaction-Level Extraction",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Bank Statement OCR — Multi-Page Transaction Extraction",
   description:
-    "Convert PDF bank statements into structured transactions with 99% line accuracy and AML-ready CSV output.",
-}
+    "Convert PDF bank statements into structured transaction data. 99% line accuracy, multi-page table stitching, AML-ready CSV and JSON output.",
+  path: "/documents/financial-docs/bank-statements",
+})
 
 export default function BankStatementsPage() {
   return (

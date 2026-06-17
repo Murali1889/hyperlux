@@ -7,19 +7,14 @@ import BusinessBenefits from "@/components/use-cases/digital-archiving/business-
 import DemoAnimation from "@/components/use-cases/digital-archiving/demo-animation"
 import ArchivingFaq from "@/components/use-cases/digital-archiving/archiving-faq"
 import ArchivingCta from "@/components/use-cases/digital-archiving/archiving-cta"
+import { buildPageMetadata } from "@/lib/page-metadata"
 
-export const metadata: Metadata = {
-  title: "Digital Archiving AI | Searchable Document Repositories",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Digital Archiving OCR — Search Every Document",
   description:
-    "Convert paper and scanned documents into searchable digital archives with AI-powered OCR, improving compliance and retrieval speed.",
-  openGraph: {
-    title: "Digital Archiving AI | Searchable Document Repositories",
-    description:
-      "Convert paper and scanned documents into searchable digital archives with AI-powered OCR, improving compliance and retrieval speed.",
-    type: "website",
-    locale: "en_US",
-  },
-}
+    "Convert paper and scanned archives into searchable structured data with AI-powered OCR. 30-second turnaround per document.",
+  path: "/use-cases/digital-archiving",
+})
 
 export default function DigitalArchivingPage() {
   return (

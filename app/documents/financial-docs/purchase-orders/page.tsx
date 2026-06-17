@@ -8,12 +8,14 @@ import DeveloperOutput from "@/components/documents/financial-docs/purchase-orde
 import OperationalImpact from "@/components/documents/financial-docs/purchase-orders/operational-impact"
 import PurchaseOrderFAQ from "@/components/documents/financial-docs/purchase-orders/purchase-order-faq"
 import PurchaseOrderCta from "@/components/documents/financial-docs/purchase-orders/purchase-order-cta"
+import { buildPageMetadata } from "@/lib/page-metadata"
 
-export const metadata: Metadata = {
-  title: "Purchase Order OCR Template | PO Header & Line Extraction",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Purchase Order OCR — Automated PO Processing",
   description:
-    "Capture PO numbers, vendor codes, SKUs and quantities with 98% accuracy, powering true three-way match automation.",
-}
+    "Extract PO numbers, vendor codes, SKUs, line items, and quantities with 98% accuracy. Powers true three-way match against invoices.",
+  path: "/documents/financial-docs/purchase-orders",
+})
 
 export default function PurchaseOrdersPage() {
   return (

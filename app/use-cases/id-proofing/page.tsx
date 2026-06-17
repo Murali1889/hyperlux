@@ -7,12 +7,14 @@ import OutcomesBenefits from "@/components/use-cases/id-proofing/outcomes-benefi
 import DemoAnimation from "@/components/use-cases/id-proofing/demo-animation"
 import IdProofingFaq from "@/components/use-cases/id-proofing/id-proofing-faq"
 import IdProofingCta from "@/components/use-cases/id-proofing/id-proofing-cta"
+import { buildPageMetadata } from "@/lib/page-metadata"
 
-export const metadata: Metadata = {
-  title: "ID Proofing with AI-OCR | Fast & Accurate Identity Verification",
+export const metadata: Metadata = buildPageMetadata({
+  title: "ID Proofing API — Passport, License, mDL Verify",
   description:
-    "Instantly verify government IDs with AI-powered OCR and face matching to reduce fraud and accelerate onboarding.",
-}
+    "Verify passports, driver's licenses, national IDs, and mobile DLs with OCR plus liveness check and sanctions screening in one API call.",
+  path: "/use-cases/id-proofing",
+})
 
 export default function IdProofingPage() {
   return (

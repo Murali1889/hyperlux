@@ -3,66 +3,51 @@ import { blogs } from "@/data/blogs"
 import { authors } from "@/data/authors"
 import { SITE_URL } from "@/lib/seo"
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const today = "2026-06-17"
+const TODAY = "2026-06-17"
 
-  const staticPages: MetadataRoute.Sitemap = [
-    { url: SITE_URL, lastModified: today, changeFrequency: "weekly", priority: 1 },
-    {
-      url: `${SITE_URL}/products`,
-      lastModified: today,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/use-cases`,
-      lastModified: today,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/industries`,
-      lastModified: today,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/pricing`,
-      lastModified: today,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/resources/blogs`,
-      lastModified: today,
-      changeFrequency: "weekly",
-      priority: 0.8,
-    },
-    {
-      url: `${SITE_URL}/resources/articles`,
-      lastModified: today,
-      changeFrequency: "weekly",
-      priority: 0.7,
-    },
-    {
-      url: `${SITE_URL}/resources/newsletters`,
-      lastModified: today,
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${SITE_URL}/documents`,
-      lastModified: today,
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
-      url: `${SITE_URL}/book-demo`,
-      lastModified: today,
-      changeFrequency: "yearly",
-      priority: 0.7,
-    },
-  ]
+// All real, indexable static routes (excludes /pricing which 404s,
+// and dynamic [slug] routes which are expanded separately).
+const STATIC_ROUTES: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
+  { path: "", priority: 1.0, changeFrequency: "weekly" },
+  { path: "/products", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/use-cases", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/use-cases/invoice-processing", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/use-cases/loan-verification", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/use-cases/id-proofing", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/use-cases/contract-abstraction", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/use-cases/digital-archiving", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/solutions/finance-automation", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/solutions/legal-automation", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/solutions/compliance-risk", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/solutions/customer-experience", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/solutions/operations-efficiency", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/industries", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/documents", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/documents/financial-docs", priority: 0.75, changeFrequency: "monthly" },
+  { path: "/documents/financial-docs/bank-statements", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/documents/financial-docs/invoices", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/documents/financial-docs/purchase-orders", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/documents/identity-docs", priority: 0.75, changeFrequency: "monthly" },
+  { path: "/documents/identity-docs/passports", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/documents/identity-docs/driver-licences", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/documents/identity-docs/national-ids", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/documents/legal-docs", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/documents/medical-docs", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/documents/shipping-docs", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/resources", priority: 0.7, changeFrequency: "weekly" },
+  { path: "/resources/blogs", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/resources/articles", priority: 0.6, changeFrequency: "weekly" },
+  { path: "/resources/newsletters", priority: 0.5, changeFrequency: "monthly" },
+  { path: "/book-demo", priority: 0.7, changeFrequency: "yearly" },
+]
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const staticPages: MetadataRoute.Sitemap = STATIC_ROUTES.map((r) => ({
+    url: `${SITE_URL}${r.path}`,
+    lastModified: TODAY,
+    changeFrequency: r.changeFrequency,
+    priority: r.priority,
+  }))
 
   const blogPages: MetadataRoute.Sitemap = blogs.map((b) => ({
     url: `${SITE_URL}/resources/blogs/${b.slug}`,
@@ -70,14 +55,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ? b.dateModified.split("T")[0]
       : b.datePublished
         ? b.datePublished.split("T")[0]
-        : today,
+        : TODAY,
     changeFrequency: "monthly",
     priority: 0.7,
   }))
 
   const authorPages: MetadataRoute.Sitemap = authors.map((a) => ({
     url: `${SITE_URL}/author/${a.slug}`,
-    lastModified: today,
+    lastModified: TODAY,
     changeFrequency: "monthly",
     priority: 0.5,
   }))

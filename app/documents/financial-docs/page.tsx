@@ -8,12 +8,14 @@ import CustomerExperienceImpact from "@/components/documents/financial-docs/cust
 import DeveloperOutput from "@/components/documents/financial-docs/developer-output"
 import ComplianceNote from "@/components/documents/financial-docs/compliance-note"
 import FinancialDocsCta from "@/components/documents/financial-docs/financial-docs-cta"
+import { buildPageMetadata } from "@/lib/page-metadata"
 
-export const metadata: Metadata = {
-  title: "Financial Document OCR Templates | Invoices, POs, Statements",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Financial Document OCR — Statements, Invoices, POs",
   description:
-    "Automate data capture from invoices, purchase orders and bank statements with 99% header + line-item accuracy.",
-}
+    "Extract data from bank statements, invoices, purchase orders, and financial reports. 99% header + line-item accuracy. Structured JSON output.",
+  path: "/documents/financial-docs",
+})
 
 export default function FinancialDocsPage() {
   return (

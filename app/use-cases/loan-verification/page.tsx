@@ -7,12 +7,14 @@ import BusinessOutcomes from "@/components/use-cases/loan-verification/business-
 import DemoVideo from "@/components/use-cases/loan-verification/demo-video"
 import LoanFaq from "@/components/use-cases/loan-verification/loan-faq"
 import LoanCta from "@/components/use-cases/loan-verification/loan-cta"
+import { buildPageMetadata } from "@/lib/page-metadata"
 
-export const metadata: Metadata = {
-  title: "Loan Verification Automation | AI-OCR for Faster Lending",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Loan Verification OCR — From 45 Days to 5 Days",
   description:
-    "Accelerate loan application verification by automating bank statement and document extraction with 98% accuracy and compliance-ready audits.",
-}
+    "Accelerate loan verification with automated bank statement OCR, ID checks, and compliance audits. 98% accuracy on financial documents.",
+  path: "/use-cases/loan-verification",
+})
 
 export default function LoanVerificationPage() {
   return (

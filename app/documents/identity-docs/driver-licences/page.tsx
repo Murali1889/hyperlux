@@ -8,12 +8,14 @@ import DeveloperOutput from "@/components/documents/identity-docs/driver-licence
 import UserExperienceBenefit from "@/components/documents/identity-docs/driver-licences/user-experience-benefit"
 import DriverLicenceFAQ from "@/components/documents/identity-docs/driver-licences/driver-licence-faq"
 import DriverLicenceCta from "@/components/documents/identity-docs/driver-licences/driver-licence-cta"
+import { buildPageMetadata } from "@/lib/page-metadata"
 
-export const metadata: Metadata = {
-  title: "Driver Licence OCR Template | Front & Back Extraction",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Driver's License OCR — 50 US States + International",
   description:
-    "Extract licence number, class, expiry and barcode data from driver licences with 98% accuracy in under 10 seconds.",
-}
+    "Extract license number, name, DOB, class, expiry, and PDF417 barcode data from driver's licenses. 98% accuracy in under 10 seconds.",
+  path: "/documents/identity-docs/driver-licences",
+})
 
 export default function DriverLicencePage() {
   return (

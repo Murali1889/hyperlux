@@ -8,12 +8,14 @@ import PrivacySecurity from "@/components/documents/medical-docs/privacy-securit
 import CaseStudyHighlight from "@/components/documents/medical-docs/case-study-highlight"
 import MedicalDocsFAQ from "@/components/documents/medical-docs/medical-docs-faq"
 import MedicalDocsCta from "@/components/documents/medical-docs/medical-docs-cta"
+import { buildPageMetadata } from "@/lib/page-metadata"
 
-export const metadata: Metadata = {
-  title: "Medical Document OCR | Prescriptions, Lab Reports & Insurance Forms",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Medical Document OCR — Prescriptions, Lab Reports",
   description:
-    "Digitize medical prescriptions, lab results and insurance forms with 98% field accuracy. Improve patient care by automating data capture and reducing manual errors.",
-}
+    "Digitize medical prescriptions, lab results, and insurance forms with 98% field accuracy. HIPAA-eligible with BAA. Reduce manual errors.",
+  path: "/documents/medical-docs",
+})
 
 export default function MedicalDocsPage() {
   return (

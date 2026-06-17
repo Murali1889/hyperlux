@@ -7,12 +7,14 @@ import TimeFraudSavings from "@/components/documents/identity-docs/time-fraud-sa
 import ComplianceNote from "@/components/documents/identity-docs/compliance-note"
 import DeveloperOutputSample from "@/components/documents/identity-docs/developer-output-sample"
 import IdentityDocsCta from "@/components/documents/identity-docs/identity-docs-cta"
+import { buildPageMetadata } from "@/lib/page-metadata"
 
-export const metadata: Metadata = {
-  title: "Identity Document OCR | Passports, National IDs & Driver Licences",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Identity Document OCR — Passport, License, ID Cards",
   description:
-    "Extract MRZ, barcodes and face data from passports, national IDs and driver licences with 99.8 % accuracy in under 12 seconds.",
-}
+    "Extract MRZ, barcodes, and face data from passports, national IDs, and driver licenses. 99.8% accuracy in under 12 seconds. KYC-ready.",
+  path: "/documents/identity-docs",
+})
 
 export default function IdentityDocsPage() {
   return (

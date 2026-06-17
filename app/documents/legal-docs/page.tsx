@@ -8,12 +8,14 @@ import SecurityCompliance from "@/components/documents/legal-docs/security-compl
 import CaseStudyHighlight from "@/components/documents/legal-docs/case-study-highlight"
 import LegalDocsFAQ from "@/components/documents/legal-docs/legal-docs-faq"
 import LegalDocsCta from "@/components/documents/legal-docs/legal-docs-cta"
+import { buildPageMetadata } from "@/lib/page-metadata"
 
-export const metadata: Metadata = {
-  title: "Legal Document OCR | Contracts, NDAs & Litigation Bundle Automation",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Legal Document OCR — Contracts, NDAs, Litigation",
   description:
-    "Extract clauses, key dates, and confidential info from contracts, NDAs, and legal bundles with 95 %+ accuracy. Accelerate legal review and reduce risk.",
-}
+    "Extract clauses, dates, parties, and obligations from contracts, NDAs, and legal bundles. 95%+ accuracy on multi-column layouts.",
+  path: "/documents/legal-docs",
+})
 
 export default function LegalDocsPage() {
   return (

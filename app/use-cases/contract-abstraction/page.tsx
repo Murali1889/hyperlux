@@ -7,19 +7,14 @@ import BusinessImpact from "@/components/use-cases/contract-abstraction/business
 import DemoVideo from "@/components/use-cases/contract-abstraction/demo-video"
 import ContractFaq from "@/components/use-cases/contract-abstraction/contract-faq"
 import ContractCta from "@/components/use-cases/contract-abstraction/contract-cta"
+import { buildPageMetadata } from "@/lib/page-metadata"
 
-export const metadata: Metadata = {
-  title: "Contract Abstraction AI | Extract Clauses & Dates from Documents",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Contract Abstraction AI — Extract Clauses & Dates",
   description:
-    "Automatically extract key clauses, dates, and terms from contracts to accelerate review cycles and reduce legal risks.",
-  openGraph: {
-    title: "Contract Abstraction AI | Extract Clauses & Dates from Documents",
-    description:
-      "Automatically extract key clauses, dates, and terms from contracts to accelerate review cycles and reduce legal risks.",
-    type: "website",
-    locale: "en_US",
-  },
-}
+    "Extract key clauses, dates, parties, and obligations from contracts automatically. Save hours of legal review per agreement.",
+  path: "/use-cases/contract-abstraction",
+})
 
 export default function ContractAbstractionPage() {
   return (

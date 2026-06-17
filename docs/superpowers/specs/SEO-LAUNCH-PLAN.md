@@ -69,7 +69,6 @@ Highest value. Submit one per slot. These are new pages or pages with fresh cont
 https://docsapi.co
 https://docsapi.co/products
 https://docsapi.co/use-cases
-https://docsapi.co/pricing
 https://docsapi.co/author/nupura-ughade
 https://docsapi.co/resources/blogs
 https://docsapi.co/resources/blogs/document-detection-before-ocr

@@ -8,12 +8,14 @@ import DeveloperOutputExample from "@/components/documents/identity-docs/passpor
 import ComplianceHighlight from "@/components/documents/identity-docs/passports/compliance-highlight"
 import PassportFAQ from "@/components/documents/identity-docs/passports/passport-faq"
 import PassportCta from "@/components/documents/identity-docs/passports/passport-cta"
+import { buildPageMetadata } from "@/lib/page-metadata"
 
-export const metadata: Metadata = {
-  title: "Passport OCR Template | MRZ & Face Extraction AI",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Passport OCR — MRZ + Face Extraction in 8 Seconds",
   description:
-    "Capture passport MRZ, name, date-of-birth and expiry with 99.9 % accuracy and 8-second SLA for global ICAO formats.",
-}
+    "Extract MRZ, name, DOB, and expiry from passports. 99.9% accuracy on global ICAO formats, sub-5-second per document, KYC-ready output.",
+  path: "/documents/identity-docs/passports",
+})
 
 export default function PassportsPage() {
   return (
