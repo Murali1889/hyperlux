@@ -42,4 +42,4 @@ Allow: /
 User-agent: Meta-ExternalAgent
 Allow: /
 
-Sitemap: https://docsapi.com/sitemap.xml
+Sitemap: https://docsapi.co/sitemap.xml

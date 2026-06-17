@@ -1,7 +1,7 @@
 # DocsAPI SEO + E-E-A-T + 20-Blog Cluster Design
 
 **Date:** 2026-06-17
-**Owner:** Murali (founder, docsapi.com)
+**Owner:** Murali (founder, docsapi.co)
 **Primary author for content:** Nupura Ughade (Content Marketing Lead)
 **Scope:** One pass — write 20 publish-ready blogs, rewrite 3 existing blogs, add full E-E-A-T infrastructure, rewire internal linking hub-and-spoke, upgrade page metadata + JSON-LD across the site.
 
@@ -9,7 +9,7 @@
 
 ## 1. Goal & Non-Goals
 
-**Goal.** Ship a production-ready SEO foundation for docsapi.com so the next 30 days of organic growth comes from a real content cluster, not from a few isolated blog posts. The work must satisfy every SEO + E-E-A-T requirement in the `seo-optimizer` skill: title/meta lengths, heading structure, schema markup (BlogPosting + BreadcrumbList + FAQPage + Organization + WebSite + WebApplication + Person), canonical tags, OG/Twitter cards, sitemap.xml, robots.txt, llms.txt/llms-full.txt, hub-and-spoke internal linking, and author pages.
+**Goal.** Ship a production-ready SEO foundation for docsapi.co so the next 30 days of organic growth comes from a real content cluster, not from a few isolated blog posts. The work must satisfy every SEO + E-E-A-T requirement in the `seo-optimizer` skill: title/meta lengths, heading structure, schema markup (BlogPosting + BreadcrumbList + FAQPage + Organization + WebSite + WebApplication + Person), canonical tags, OG/Twitter cards, sitemap.xml, robots.txt, llms.txt/llms-full.txt, hub-and-spoke internal linking, and author pages.
 
 **Non-goals.**
 - No new product features, pricing changes, or admin UI work.
@@ -281,7 +281,7 @@ Current state: only sets `title`. Upgrade `generateMetadata` to return full Meta
 return {
   title: blog.metaTag,
   description: blog.description ?? blog.excerpt,
-  alternates: { canonical: `https://docsapi.com/resources/blogs/${slug}` },
+  alternates: { canonical: `https://docsapi.co/resources/blogs/${slug}` },
   openGraph: { title, description, type: 'article', publishedTime, modifiedTime, authors, images },
   twitter: { card: 'summary_large_image', title, description, images },
   robots: { index: true, follow: true, 'max-image-preview': 'large' },
@@ -299,7 +299,7 @@ import { blogs } from '@/data/blogs'
 import { authors } from '@/data/authors'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const base = 'https://docsapi.com'
+  const base = 'https://docsapi.co'
   return [
     { url: base, lastModified: '2026-06-17', priority: 1 },
     { url: `${base}/products`, priority: 0.9 },
@@ -321,7 +321,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 - `User-agent: *` → allow `/`, disallow `/api/`, `/admin/`
 - Explicitly allow search/retrieval AI bots: `OAI-SearchBot`, `ChatGPT-User`, `Claude-SearchBot`, `Claude-User`, `PerplexityBot`, `Perplexity-User`, `Google-Extended`
 - Training bots: leave allowed for now (Murali can flip later)
-- `Sitemap: https://docsapi.com/sitemap.xml`
+- `Sitemap: https://docsapi.co/sitemap.xml`
 
 ### 8.3 `public/llms.txt` and `public/llms-full.txt`
 Curated AI manifest per the GEO skill:
@@ -371,8 +371,8 @@ Tracked in `docs/superpowers/specs/BLOCKERS.md`. Ask user at the end.
 |---|---|---|
 | Nupura's real LinkedIn URL | `https://www.linkedin.com/in/nupura-ughade` | OPEN — ask at end |
 | Nupura's real Twitter URL | `https://twitter.com/nupura_ughade` | OPEN — ask at end |
-| Production domain | `https://docsapi.com` | ✅ CONFIRMED 2026-06-17 |
-| Organization contact email | `hello@docsapi.com` | OPEN — ask at end |
+| Production domain | `https://docsapi.co` | ✅ CONFIRMED 2026-06-17 |
+| Organization contact email | `contact@hyperverge.co` | OPEN — ask at end |
 | Google Search Console verification code | (not added) | OPEN — ask at end |
 
 ---

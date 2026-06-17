@@ -1,6 +1,5 @@
 import type { Author } from "@/types/resources"
 
-// TODO(BLOCKER-LINKEDIN), TODO(BLOCKER-TWITTER) — see docs/superpowers/specs/BLOCKERS.md
 export const nupuraUghade: Author = {
   id: "1",
   slug: "nupura-ughade",
@@ -28,8 +27,7 @@ export const nupuraUghade: Author = {
     "Shipped 100+ technical explainers for engineering and operations readers",
     "Contributing voice on document automation and AI infrastructure",
   ],
-  twitter: "https://twitter.com/nupura_ughade",
-  linkedin: "https://www.linkedin.com/in/nupura-ughade",
+  linkedin: "https://www.linkedin.com/in/nupura-ughade/",
 }
 
 export const authors: Author[] = [nupuraUghade]

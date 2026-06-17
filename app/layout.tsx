@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
-  generator: "docsapi.com",
+  generator: "docsapi.co",
   keywords: [
     "OCR API",
     "document AI",

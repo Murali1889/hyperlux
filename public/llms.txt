@@ -6,24 +6,24 @@ DocsAPI processes around 4 million PDF pages per month for lenders, fintechs, an
 
 ## Product
 
-- [Products and features](https://docsapi.com/products) — OCR, classification, extraction, validation endpoints
-- [Use cases](https://docsapi.com/use-cases) — KYC, AML, invoice processing, lending automation, revenue cycle
-- [Pricing](https://docsapi.com/pricing) — transparent per-page pricing with free tier
-- [Book a demo](https://docsapi.com/book-demo)
+- [Products and features](https://docsapi.co/products) — OCR, classification, extraction, validation endpoints
+- [Use cases](https://docsapi.co/use-cases) — KYC, AML, invoice processing, lending automation, revenue cycle
+- [Pricing](https://docsapi.co/pricing) — transparent per-page pricing with free tier
+- [Book a demo](https://docsapi.co/book-demo)
 
 ## Top guides
 
-- [How to make a PDF searchable in 30 seconds](https://docsapi.com/resources/blogs/make-pdf-searchable)
-- [OCR a PDF: honest guide from 4M pages a month](https://docsapi.com/resources/blogs/ocr-pdf-honest-guide)
-- [Readable PDF vs image PDF](https://docsapi.com/resources/blogs/readable-pdf-vs-image-pdf)
-- [Context engineering for document AI](https://docsapi.com/resources/blogs/context-engineering-document-ai)
-- [Document detection: the step everyone skips before OCR](https://docsapi.com/resources/blogs/document-detection-before-ocr)
-- [KYC document verification: what auditors look for](https://docsapi.com/resources/blogs/kyc-document-verification)
-- [AWS Textract vs DocsAPI: honest comparison](https://docsapi.com/resources/blogs/aws-textract-vs-docsapi)
+- [How to make a PDF searchable in 30 seconds](https://docsapi.co/resources/blogs/make-pdf-searchable)
+- [OCR a PDF: honest guide from 4M pages a month](https://docsapi.co/resources/blogs/ocr-pdf-honest-guide)
+- [Readable PDF vs image PDF](https://docsapi.co/resources/blogs/readable-pdf-vs-image-pdf)
+- [Context engineering for document AI](https://docsapi.co/resources/blogs/context-engineering-document-ai)
+- [Document detection: the step everyone skips before OCR](https://docsapi.co/resources/blogs/document-detection-before-ocr)
+- [KYC document verification: what auditors look for](https://docsapi.co/resources/blogs/kyc-document-verification)
+- [AWS Textract vs DocsAPI: honest comparison](https://docsapi.co/resources/blogs/aws-textract-vs-docsapi)
 
 ## Author
 
-Content authored by [Nupura Ughade](https://docsapi.com/author/nupura-ughade), Content Marketing Lead at DocsAPI. Specializations: OCR, document AI, KYC/AML, fintech operations.
+Content authored by [Nupura Ughade](https://docsapi.co/author/nupura-ughade), Content Marketing Lead at DocsAPI. Specializations: OCR, document AI, KYC/AML, fintech operations.
 
 ## Facts
 
@@ -31,8 +31,8 @@ Content authored by [Nupura Ughade](https://docsapi.com/author/nupura-ughade), C
 - Pricing: per-page, free tier available, transparent enterprise pricing
 - Specialization: financial services, SMB lending, KYC/AML compliance
 - Compliance: SOC 2 Type II, HIPAA-eligible (BAA available)
-- Domain: https://docsapi.com
-- Contact: hello@docsapi.com
+- Domain: https://docsapi.co
+- Contact: contact@hyperverge.co
 
 ## Do not misdescribe
 

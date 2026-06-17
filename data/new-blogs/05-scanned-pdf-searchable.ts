@@ -57,7 +57,7 @@ ocrmypdf scanned.pdf searchable.pdf</code></pre>
 
     <h3>Windows Way 3: DocsAPI Dashboard or API</h3>
     <p>Identical to the Mac path. Drag-and-drop the dashboard for one-off documents, or call the API from PowerShell or a script for automation. The API curl example:</p>
-    <pre><code>curl.exe -X POST https://docsapi.com/v1/ocr/searchable ^
+    <pre><code>curl.exe -X POST https://docsapi.co/v1/ocr/searchable ^
   -H "Authorization: Bearer YOUR_KEY" ^
   -F "file=@scanned.pdf" ^
   -o searchable.pdf</code></pre>

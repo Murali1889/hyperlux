@@ -1,16 +1,15 @@
-export const SITE_URL = "https://docsapi.com"
+export const SITE_URL = "https://docsapi.co"
 export const SITE_NAME = "DocsAPI"
 export const SITE_TAGLINE = "Document AI & OCR API for Builders"
 export const SITE_DESCRIPTION =
   "DocsAPI is the document intelligence API for SMB lending and fintech — OCR, classification, KYC, and AML document checks in one API."
 export const SITE_LOGO = `${SITE_URL}/docsapi-logo.png`
 export const SITE_OG_IMAGE = `${SITE_URL}/og-default.png`
-export const ORG_CONTACT_EMAIL = "hello@docsapi.com"
+export const ORG_CONTACT_EMAIL = "contact@hyperverge.co"
 export const ORG_FOUNDING_DATE = "2023-01-01"
 
 export const ORG_SAME_AS = [
   "https://www.linkedin.com/company/docsapi",
-  "https://twitter.com/docsapi",
   "https://github.com/docsapi",
 ]
 
