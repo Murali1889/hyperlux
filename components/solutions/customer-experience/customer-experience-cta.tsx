@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import Link from "next/link"
 
 export default function CustomerExperienceCta() {
   return (
@@ -24,8 +23,8 @@ export default function CustomerExperienceCta() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button asChild className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-4 sm:py-6 rounded-lg text-base sm:text-lg w-full sm:w-auto">
-              <Link href="/book-demo">Request Demo</Link>
+            <Button className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-4 sm:py-6 rounded-lg text-base sm:text-lg w-full sm:w-auto">
+              Request Demo
             </Button>
           </div>
 

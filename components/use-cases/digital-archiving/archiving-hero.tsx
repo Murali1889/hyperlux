@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { Database, FileSearch, FolderArchive } from "lucide-react"
 import { useState, useEffect } from "react"
-import Link from "next/link"
 
 export default function ArchivingHero() {
   const [currentAnimation, setCurrentAnimation] = useState(0)
@@ -46,8 +45,8 @@ export default function ArchivingHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <Button asChild size="lg" className="bg-white text-indigo-700 hover:bg-indigo-100">
-                <Link href="/book-demo">See Archiving Demo</Link>
+              <Button size="lg" className="bg-white text-indigo-700 hover:bg-indigo-100">
+                See Archiving Demo
               </Button>
             </motion.div>
           </div>

@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import Link from "next/link"
 
 export default function FinanceHero() {
   return (
@@ -20,11 +19,10 @@ export default function FinanceHero() {
           {/* Text content removed as requested */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Button
-              asChild
               size="lg"
               className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-4 sm:px-8 sm:py-6 text-base sm:text-lg w-full sm:w-auto"
             >
-              <Link href="/book-demo">Request Finance Demo</Link>
+              Request Finance Demo
             </Button>
           </div>
         </motion.div>

@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button"
 import { Truck, ArrowRight } from "lucide-react"
-import Link from "next/link"
 
 export default function ShippingDocsCta() {
   return (
@@ -19,10 +18,8 @@ export default function ShippingDocsCta() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-indigo-700 hover:bg-indigo-50">
-              <Link href="/book-demo">
-                Request Demo <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+            <Button size="lg" className="bg-white text-indigo-700 hover:bg-indigo-50">
+              Request Demo <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
         </div>

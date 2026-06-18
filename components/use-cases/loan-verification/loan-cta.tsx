@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
-import Link from "next/link"
 
 export default function LoanCta() {
   return (
@@ -22,13 +21,14 @@ export default function LoanCta() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/book-demo"
+            <motion.button
               className="bg-white text-indigo-700 hover:bg-indigo-50 px-8 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               Request Demo
               <ArrowRight size={18} />
-            </Link>
+            </motion.button>
           </div>
         </motion.div>
       </div>

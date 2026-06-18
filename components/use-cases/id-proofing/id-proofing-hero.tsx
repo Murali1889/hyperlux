@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
-import Link from "next/link"
 
 export default function IdProofingHero() {
   const [animationStep, setAnimationStep] = useState(0)
@@ -33,8 +32,8 @@ export default function IdProofingHero() {
               matching, ensuring regulatory compliance while accelerating customer onboarding.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button asChild size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white">
-                <Link href="/book-demo">See ID Proofing Demo</Link>
+              <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white">
+                See ID Proofing Demo
               </Button>
             </div>
           </motion.div>

@@ -165,7 +165,7 @@ export default function SuccessStories() {
 
           <div className="mt-12 text-center">
             <Button asChild className="bg-indigo-600 hover:bg-indigo-700">
-              <a href="/book-demo" className="flex items-center gap-2">
+              <a href="#book-demo" className="flex items-center gap-2">
                 Get Similar Results for Your Business <ArrowRight className="h-4 w-4" />
               </a>
             </Button>

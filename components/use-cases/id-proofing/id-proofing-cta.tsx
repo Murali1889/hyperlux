@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import Link from "next/link"
 
 export default function IdProofingCta() {
   return (
@@ -21,8 +20,8 @@ export default function IdProofingCta() {
             ID proofing solution.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-white text-indigo-700 hover:bg-indigo-50">
-              <Link href="/book-demo">Request Demo</Link>
+            <Button size="lg" className="bg-white text-indigo-700 hover:bg-indigo-50">
+              Request Demo
             </Button>
           </div>
         </motion.div>

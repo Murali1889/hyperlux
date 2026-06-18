@@ -16,7 +16,7 @@ export default function IdentityDocsCta() {
           </div>
           <div className="flex flex-col gap-2 min-[400px]:flex-row">
             <Button asChild className="bg-white text-indigo-700 hover:bg-indigo-50">
-              <Link href="/book-demo">Request Demo</Link>
+              <Link href="#">Request Demo</Link>
             </Button>
           </div>
         </div>

@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
-import Link from "next/link"
 
 export default function LoanHero() {
   const [animationStep, setAnimationStep] = useState(0)
@@ -45,10 +44,10 @@ export default function LoanHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <Link href="/book-demo" className="bg-white text-indigo-700 hover:bg-slate-100 px-6 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition-colors">
+              <button className="bg-white text-indigo-700 hover:bg-slate-100 px-6 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition-colors">
                 See Loan Demo
                 <ArrowRight size={18} />
-              </Link>
+              </button>
             </motion.div>
           </div>
 

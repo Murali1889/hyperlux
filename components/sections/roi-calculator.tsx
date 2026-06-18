@@ -229,7 +229,7 @@ export default function ROICalculator() {
                       </p>
                     </div>
                     <Button asChild className="bg-indigo-600 hover:bg-indigo-700 whitespace-nowrap">
-                      <a href="/book-demo" className="flex items-center gap-2">
+                      <a href="#book-demo" className="flex items-center gap-2">
                         Book a Demo <ArrowRight className="h-4 w-4" />
                       </a>
                     </Button>

@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import Link from "next/link"
 
 export default function LegalHero() {
   return (
@@ -24,8 +23,8 @@ export default function LegalHero() {
                 legal document solution.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-3 rounded-md text-lg w-full sm:w-auto">
-                  <Link href="/book-demo">Request Legal Demo</Link>
+                <Button className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-3 rounded-md text-lg w-full sm:w-auto">
+                  Request Legal Demo
                 </Button>
               </div>
             </motion.div>

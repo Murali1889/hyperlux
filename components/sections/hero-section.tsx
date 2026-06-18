@@ -20,7 +20,7 @@ export default function HeroSection() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-indigo-600 hover:bg-indigo-700">
-                <Link href="/book-demo">Book a Demo</Link>
+                <Link href="#book-demo">Book a Demo</Link>
               </Button>
               <Button asChild size="lg" variant="outline">
                 <Link href="#how-it-works">See How It Works</Link>

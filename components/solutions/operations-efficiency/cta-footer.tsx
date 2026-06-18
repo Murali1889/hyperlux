@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { Calendar, Phone } from "lucide-react"
-import Link from "next/link"
 
 export default function CtaFooter() {
   return (
@@ -25,11 +24,9 @@ export default function CtaFooter() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-4 sm:py-6 rounded-md flex items-center justify-center w-full sm:w-auto">
-              <Link href="/book-demo">
-                <Calendar className="mr-2 h-5 w-5" />
-                Book Operations Demo
-              </Link>
+            <Button className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-4 sm:py-6 rounded-md flex items-center justify-center w-full sm:w-auto">
+              <Calendar className="mr-2 h-5 w-5" />
+              Book Operations Demo
             </Button>
           </div>
 

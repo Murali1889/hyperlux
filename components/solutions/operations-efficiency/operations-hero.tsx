@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { ArrowRight, Truck, ClipboardCheck } from "lucide-react"
-import Link from "next/link"
 
 export default function OperationsHero() {
   return (
@@ -24,11 +23,9 @@ export default function OperationsHero() {
               supply chain operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-4 sm:py-6 rounded-md w-full sm:w-auto">
-                <Link href="/book-demo">
-                  Book Operations Demo
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+              <Button className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-4 sm:py-6 rounded-md w-full sm:w-auto">
+                Book Operations Demo
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
           </motion.div>

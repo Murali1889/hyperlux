@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import Link from "next/link"
 
 export default function LegalCTA() {
   return (
@@ -20,8 +19,8 @@ export default function LegalCTA() {
             Transform your legal operations with AI-powered document automation
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button asChild className="bg-white hover:bg-indigo-50 text-indigo-700 px-6 py-3 rounded-md text-lg w-full sm:w-auto">
-              <Link href="/book-demo">Request Demo</Link>
+            <Button className="bg-white hover:bg-indigo-50 text-indigo-700 px-6 py-3 rounded-md text-lg w-full sm:w-auto">
+              Request Demo
             </Button>
           </div>
         </motion.div>

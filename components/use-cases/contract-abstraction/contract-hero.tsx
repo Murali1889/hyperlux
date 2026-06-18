@@ -25,7 +25,7 @@ export default function ContractHero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button size="lg" className="bg-white text-indigo-700 hover:bg-slate-100 text-base font-medium" asChild>
-                <Link href="/book-demo">See Contract Demo</Link>
+                <Link href="#demo">See Contract Demo</Link>
               </Button>
             </div>
           </motion.div>

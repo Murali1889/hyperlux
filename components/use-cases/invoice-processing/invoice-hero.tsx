@@ -25,7 +25,7 @@ export default function InvoiceHero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button asChild size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white">
-                <Link href="/book-demo">See Invoice Demo</Link>
+                <Link href="#demo">See Invoice Demo</Link>
               </Button>
             </div>
           </motion.div>
