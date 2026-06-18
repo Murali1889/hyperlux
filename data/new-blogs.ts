@@ -19,6 +19,14 @@ import { blog17 } from "./new-blogs/17-know-your-customer-documents"
 import { blog18 } from "./new-blogs/18-aws-textract-vs-docsapi"
 import { blog19 } from "./new-blogs/19-abbyy-finereader-alternative"
 import { blog20 } from "./new-blogs/20-paddleocr-vs-tesseract-vs-docsapi"
+import { blog21 } from "./new-blogs/21-ocr-accounting"
+import { blog22 } from "./new-blogs/22-ocr-banking"
+import { blog23 } from "./new-blogs/23-document-fraud-detection-api"
+import { blog24 } from "./new-blogs/24-mortgage-ocr"
+import { blog25 } from "./new-blogs/25-credit-card-statement-ocr"
+import { blog26 } from "./new-blogs/26-document-classification-software"
+import { blog27 } from "./new-blogs/27-ocr-meaning-finance"
+import { blog28 } from "./new-blogs/28-real-time-document-validation-api"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -41,4 +49,12 @@ export const newBlogs: BlogPost[] = [
   blog18,
   blog19,
   blog20,
+  blog21,
+  blog22,
+  blog23,
+  blog24,
+  blog25,
+  blog26,
+  blog27,
+  blog28,
 ]

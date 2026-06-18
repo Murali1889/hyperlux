@@ -20,7 +20,7 @@ export function FeatureCard({
   iconColor = "text-indigo-600",
   className,
 }: FeatureCardProps) {
-  const IconComponent = typeof icon === "function" ? icon : null
+  const IconComponent = typeof icon === "function" ? (icon as LucideIcon) : null
 
   return (
     <Card className={cn("bg-background/60 backdrop-blur-sm", className)}>
@@ -31,7 +31,7 @@ export function FeatureCard({
               <IconComponent className={`w-8 h-8 ${iconColor}`} />
             </div>
           ) : (
-            icon
+            (icon as React.ReactNode)
           )}
         </div>
         <h3 className="text-lg font-medium">{title}</h3>
