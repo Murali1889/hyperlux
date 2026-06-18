@@ -37,6 +37,19 @@ https://docsapi.co/resources/blogs/pdf-parser-online
 https://docsapi.co/resources/blogs/vlm-vs-ocr
 
 # ============================================================
+# PHASE-2 BLOGS — Target GSC queries we already rank for at pos 80+
+# (submit Day 2-3; these unlock the fastest impression gains)
+# ============================================================
+https://docsapi.co/resources/blogs/ocr-accounting
+https://docsapi.co/resources/blogs/ocr-technology-in-banking
+https://docsapi.co/resources/blogs/document-fraud-detection-api
+https://docsapi.co/resources/blogs/mortgage-ocr
+https://docsapi.co/resources/blogs/credit-card-statement-ocr
+https://docsapi.co/resources/blogs/document-classification-software
+https://docsapi.co/resources/blogs/ocr-meaning-in-finance
+https://docsapi.co/resources/blogs/real-time-document-validation-api
+
+# ============================================================
 # TIER 3 — Commercial intent blogs + use-case + solutions (submit Day 4)
 # ============================================================
 https://docsapi.co/resources/blogs/aws-textract-vs-docsapi
