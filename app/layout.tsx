@@ -5,7 +5,6 @@ import "./globals.css"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import { Toaster } from "react-hot-toast"
-import FeedbackProviderClient from "@/providers/FeedbackProviderClient"
 import { OrganizationJsonLd } from "@/components/json-ld/OrganizationJsonLd"
 import { WebsiteJsonLd } from "@/components/json-ld/WebsiteJsonLd"
 import {
@@ -120,14 +119,12 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <FeedbackProviderClient>
-          <div className="flex min-h-screen flex-col">
-            <Navbar />
-            <main className="flex-1">{children}</main>
-            <Footer />
-            <Toaster position="top-center" />
-          </div>
-        </FeedbackProviderClient>
+        <div className="flex min-h-screen flex-col">
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <Toaster position="top-center" />
+        </div>
       </body>
     </html>
   )
