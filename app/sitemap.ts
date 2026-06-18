@@ -3,7 +3,7 @@ import { blogs } from "@/data/blogs"
 import { authors } from "@/data/authors"
 import { SITE_URL } from "@/lib/seo"
 
-const TODAY = "2026-06-17"
+const TODAY = "2026-06-18"
 
 // All real, indexable static routes (excludes /pricing which 404s,
 // and dynamic [slug] routes which are expanded separately).
