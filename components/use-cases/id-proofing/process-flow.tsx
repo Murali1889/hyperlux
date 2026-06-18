@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useAnimation } from "framer-motion"
+import { motion, useAnimation, type Variants } from "framer-motion"
 import { useEffect } from "react"
 import { useInView } from "react-intersection-observer"
 
@@ -94,7 +94,7 @@ export default function ProcessFlow() {
     },
   }
 
-  const lineVariants = {
+  const lineVariants: Variants = {
     hidden: { width: "0%" },
     visible: {
       width: "100%",

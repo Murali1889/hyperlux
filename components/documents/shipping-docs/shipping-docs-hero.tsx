@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
-import { motion, useAnimation } from "framer-motion"
+import { motion, useAnimation, type Variants } from "framer-motion"
 import { TruckIcon, FileTextIcon, BarChart3Icon } from "lucide-react"
 
 export default function ShippingDocsHero() {
@@ -52,7 +52,7 @@ export default function ShippingDocsHero() {
     },
   }
 
-  const progressVariants = {
+  const progressVariants: Variants = {
     hidden: { width: 0 },
     visible: {
       width: "100%",
