@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 export default function ComplianceHero() {
   return (
@@ -22,8 +23,8 @@ export default function ComplianceHero() {
               controls, and GDPR PII redaction—all with complete audit trails.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-4 sm:py-6 text-base sm:text-lg w-full sm:w-auto">
-                Request Compliance Demo
+              <Button asChild className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-4 sm:py-6 text-base sm:text-lg w-full sm:w-auto">
+                <Link href="/book-demo">Request Compliance Demo</Link>
               </Button>
             </div>
           </motion.div>

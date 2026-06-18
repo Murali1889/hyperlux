@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function ComplianceCTA() {
   return (
@@ -22,8 +23,8 @@ export default function ComplianceCTA() {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button className="bg-white hover:bg-indigo-50 text-indigo-700 px-6 py-4 sm:py-6 text-base sm:text-lg w-full sm:w-auto">
-              Request Demo
+            <Button asChild className="bg-white hover:bg-indigo-50 text-indigo-700 px-6 py-4 sm:py-6 text-base sm:text-lg w-full sm:w-auto">
+              <Link href="/book-demo">Request Demo</Link>
             </Button>
           </div>
         </motion.div>
