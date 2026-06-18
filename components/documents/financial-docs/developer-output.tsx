@@ -55,7 +55,7 @@ export default function DeveloperOutput() {
       "tax_id": "GSTIN98765432109"
     },
     "customer": {
-      "name": "HyperVerge Technologies",
+      "name": "DocsAPI Technologies",
       "address": "456 Tech Hub, Bangalore 560001",
       "tax_id": "GSTIN12345678901"
     },

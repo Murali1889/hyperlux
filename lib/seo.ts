@@ -8,10 +8,23 @@ export const SITE_OG_IMAGE = `${SITE_URL}/og-default.png`
 export const ORG_CONTACT_EMAIL = "contact@hyperverge.co"
 export const ORG_FOUNDING_DATE = "2023-01-01"
 
+// DocsAPI is a HyperVerge product — sameAs reflects the parent brand
+// social presence since DocsAPI does not maintain separate accounts.
 export const ORG_SAME_AS = [
-  "https://www.linkedin.com/company/docsapi",
-  "https://github.com/docsapi",
+  "https://www.linkedin.com/company/hyperverge-inc-/",
+  "https://twitter.com/HyperVerge",
+  "https://www.facebook.com/HyperVerge/",
+  "https://www.instagram.com/hypervergeinc/",
 ]
+
+export const PARENT_ORG = {
+  name: "HyperVerge",
+  url: "https://hyperverge.co",
+  sameAs: [
+    "https://www.linkedin.com/company/hyperverge-inc-/",
+    "https://twitter.com/HyperVerge",
+  ],
+}
 
 export function absoluteUrl(path: string): string {
   if (path.startsWith("http")) return path

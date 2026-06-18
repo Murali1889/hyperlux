@@ -18,7 +18,11 @@ export function buildPageMetadata({
   type = "website",
   noindex = false,
 }: PageMetaInput): Metadata {
-  const url = `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`
+  // Root path → bare domain (no trailing slash) to avoid canonical-with-slash duplicates
+  const url =
+    path === "/" || path === ""
+      ? SITE_URL
+      : `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`
   const ogImage = image ?? SITE_OG_IMAGE
 
   return {

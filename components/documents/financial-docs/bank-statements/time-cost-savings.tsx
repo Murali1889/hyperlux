@@ -28,7 +28,7 @@ export default function TimeCostSavings() {
               </div>
 
               <div className="flex items-center justify-between mb-4">
-                <span className="text-gray-600">With HyperVerge OCR:</span>
+                <span className="text-gray-600">With DocsAPI OCR:</span>
                 <span className="font-bold text-green-600">45 seconds</span>
               </div>
 

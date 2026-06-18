@@ -58,7 +58,7 @@ export default function BusinessImpact() {
             </div>
             <div>
               <p className="text-slate-700 italic mb-4">
-                "Implementing HyperVerge's invoice automation solution reduced our invoice processing costs by 62% while
+                "Implementing DocsAPI's invoice automation solution reduced our invoice processing costs by 62% while
                 enabling our AP team to focus on strategic vendor management instead of data entry. The ROI was evident
                 within the first quarter."
               </p>

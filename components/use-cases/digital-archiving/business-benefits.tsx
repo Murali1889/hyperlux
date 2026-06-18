@@ -139,7 +139,7 @@ export default function BusinessBenefits() {
             </div>
             <div>
               <p className="text-slate-700 italic mb-4">
-                "After implementing HyperVerge's digital archiving solution, our team reduced document retrieval time
+                "After implementing DocsAPI's digital archiving solution, our team reduced document retrieval time
                 from minutes to seconds. The automatic metadata tagging has transformed how we organize and access
                 critical information, making compliance audits significantly less stressful."
               </p>

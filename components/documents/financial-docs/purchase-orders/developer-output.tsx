@@ -47,11 +47,11 @@ export default function DeveloperOutput() {
   "vendor_code": "SUPP-001",
   "issue_date": "2023-06-15",
   "ship_to": {
-    "name": "HyperVerge Warehouse",
+    "name": "DocsAPI Warehouse",
     "address": "123 Logistics Way, Mumbai 400001"
   },
   "bill_to": {
-    "name": "HyperVerge Technologies",
+    "name": "DocsAPI Technologies",
     "address": "456 Tech Hub, Bangalore 560001"
   },
   "line_items": [

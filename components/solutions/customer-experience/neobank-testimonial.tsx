@@ -28,7 +28,7 @@ export default function NeobankTestimonial() {
             <div className="md:w-2/3 p-8">
               <Quote className="w-12 h-12 text-indigo-500 mb-4" />
               <blockquote className="text-white text-xl font-medium mb-6">
-                "Our KYC wait time dropped dramatically from 24 hours to just 90 seconds after implementing HyperVerge's
+                "Our KYC wait time dropped dramatically from 24 hours to just 90 seconds after implementing DocsAPI's
                 document OCR solution. Customer satisfaction scores increased by 22% and account opening completion
                 rates improved by 35%. This technology has been transformative for our digital onboarding experience."
               </blockquote>

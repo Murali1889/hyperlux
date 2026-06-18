@@ -45,7 +45,7 @@ export default function SecurityCompliance() {
 
           <div className="mt-8 border-t border-slate-200 pt-6">
             <p className="text-center text-sm text-slate-500">
-              HyperVerge maintains strict access controls and regular security audits to ensure your shipping data
+              DocsAPI maintains strict access controls and regular security audits to ensure your shipping data
               remains protected throughout its lifecycle.
             </p>
           </div>

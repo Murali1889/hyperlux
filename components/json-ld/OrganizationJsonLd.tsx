@@ -7,6 +7,7 @@ import {
   ORG_CONTACT_EMAIL,
   ORG_FOUNDING_DATE,
   SITE_DESCRIPTION,
+  PARENT_ORG,
 } from "@/lib/seo"
 
 export function OrganizationJsonLd() {
@@ -27,6 +28,12 @@ export function OrganizationJsonLd() {
         description: SITE_DESCRIPTION,
         foundingDate: ORG_FOUNDING_DATE,
         sameAs: ORG_SAME_AS,
+        parentOrganization: {
+          "@type": "Organization",
+          name: PARENT_ORG.name,
+          url: PARENT_ORG.url,
+          sameAs: PARENT_ORG.sameAs,
+        },
         contactPoint: {
           "@type": "ContactPoint",
           email: ORG_CONTACT_EMAIL,

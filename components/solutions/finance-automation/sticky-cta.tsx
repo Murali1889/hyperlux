@@ -41,7 +41,7 @@ export default function StickyCTA() {
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="mb-4 md:mb-0 text-center md:text-left">
                 <h3 className="text-xl font-bold text-indigo-900">Start your finance automation journey</h3>
-                <p className="text-gray-600">Transform your finance operations with HyperVerge AI</p>
+                <p className="text-gray-600">Transform your finance operations with DocsAPI AI</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Button size="lg" className="bg-indigo-700 hover:bg-indigo-800 text-white w-full sm:w-auto">
