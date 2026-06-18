@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function NationalIdCta() {
   return (
@@ -14,7 +15,9 @@ export default function NationalIdCta() {
             </p>
           </div>
           <div className="flex flex-col gap-2 min-[400px]:flex-row">
-            <Button className="bg-indigo-700 hover:bg-indigo-800">Request Demo</Button>
+            <Button asChild className="bg-indigo-700 hover:bg-indigo-800">
+              <Link href="/book-demo">Request Demo</Link>
+            </Button>
             <Button variant="outline" className="border-indigo-700 text-indigo-700 hover:bg-indigo-50">
               View Documentation
             </Button>

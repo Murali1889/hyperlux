@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function MedicalDocsCta() {
   return (
@@ -14,7 +15,9 @@ export default function MedicalDocsCta() {
             </p>
           </div>
           <div className="flex flex-col gap-2 min-[400px]:flex-row">
-            <Button className="bg-white text-indigo-700 hover:bg-indigo-100">Request Demo</Button>
+            <Button asChild className="bg-white text-indigo-700 hover:bg-indigo-100">
+              <Link href="/book-demo">Request Demo</Link>
+            </Button>
           </div>
         </div>
       </div>

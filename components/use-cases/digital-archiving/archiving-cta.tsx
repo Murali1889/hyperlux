@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Database, FileSearch, ShieldCheck } from "lucide-react"
+import Link from "next/link"
 
 export default function ArchivingCta() {
   return (
@@ -78,8 +79,8 @@ export default function ArchivingCta() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Button size="lg" className="bg-white text-indigo-700 hover:bg-indigo-50 px-8">
-              Request Demo
+            <Button asChild size="lg" className="bg-white text-indigo-700 hover:bg-indigo-50 px-8">
+              <Link href="/book-demo">Request Demo</Link>
             </Button>
           </motion.div>
         </motion.div>
