@@ -127,7 +127,7 @@ export default function OutcomesBenefits() {
             </div>
             <div className="md:w-3/4">
               <blockquote className="text-slate-700 italic mb-4">
-                "Implementing HyperVerge's ID proofing solution reduced our customer onboarding time from days to
+                "Implementing DocsAPI's ID proofing solution reduced our customer onboarding time from days to
                 minutes while significantly improving our fraud detection capabilities. The seamless user experience has
                 dramatically increased our conversion rates."
               </blockquote>

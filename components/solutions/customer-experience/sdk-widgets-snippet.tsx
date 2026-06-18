@@ -36,21 +36,21 @@ export default function SdkWidgetsSnippet() {
                   <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 </div>
-                <div className="ml-4 text-gray-400 text-sm">hyperverge-sdk-implementation.js</div>
+                <div className="ml-4 text-gray-400 text-sm">docsapi-sdk-implementation.js</div>
                 <Button variant="ghost" size="sm" className="ml-auto text-gray-400 hover:text-white">
                   <Copy className="w-4 h-4" />
                 </Button>
               </div>
               <div className="p-4 text-xs sm:text-sm font-mono overflow-x-auto">
-                <pre className="text-green-400">// Initialize the HyperVerge SDK</pre>
+                <pre className="text-green-400">// Initialize the DocsAPI SDK</pre>
                 <pre className="text-white">
-                  <span className="text-blue-400">import</span> <span className="text-yellow-400">HyperVergeSDK</span>{" "}
+                  <span className="text-blue-400">import</span> <span className="text-yellow-400">DocsAPISDK</span>{" "}
                   <span className="text-blue-400">from</span>{" "}
-                  <span className="text-green-400">'@hyperverge/cx-sdk'</span>;
+                  <span className="text-green-400">'@docsapi/sdk'</span>;
                 </pre>
                 <pre className="text-white">
-                  <span className="text-blue-400">const</span> <span className="text-yellow-400">hyperverge</span> ={" "}
-                  <span className="text-blue-400">new</span> <span className="text-yellow-400">HyperVergeSDK</span>(
+                  <span className="text-blue-400">const</span> <span className="text-yellow-400">docsapi</span> ={" "}
+                  <span className="text-blue-400">new</span> <span className="text-yellow-400">DocsAPISDK</span>(
                   {"{"}
                 </pre>
                 <pre className="text-white pl-4">
@@ -63,7 +63,7 @@ export default function SdkWidgetsSnippet() {
                 <pre className="text-white">{"}"});</pre>
                 <pre className="text-white">
                   <span className="text-blue-400">const</span> <span className="text-yellow-400">documentScanner</span>{" "}
-                  = <span className="text-yellow-400">hyperverge</span>.
+                  = <span className="text-yellow-400">docsapi</span>.
                   <span className="text-yellow-400">initDocumentScanner</span>({"{"}
                 </pre>
                 <pre className="text-white pl-4">

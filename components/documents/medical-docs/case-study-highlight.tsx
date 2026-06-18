@@ -41,7 +41,7 @@ export default function CaseStudyHighlight() {
                   <div>
                     <h3 className="text-lg font-bold text-indigo-700 mb-2">Solution</h3>
                     <p className="text-gray-600">
-                      Implemented HyperVerge's medical document OCR platform to automatically process lab reports from
+                      Implemented DocsAPI's medical document OCR platform to automatically process lab reports from
                       multiple facilities and integrate results directly into their Epic EHR system.
                     </p>
                   </div>

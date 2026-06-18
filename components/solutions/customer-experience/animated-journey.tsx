@@ -92,7 +92,7 @@ export default function AnimatedJourney() {
                   {/* Phone content */}
                   <div className="flex flex-col h-full">
                     <div className="flex justify-between items-center mb-4">
-                      <div className="text-xs font-medium">HyperVerge</div>
+                      <div className="text-xs font-medium">DocsAPI</div>
                       <div className="flex space-x-2">
                         <div className="h-2 w-2 rounded-full bg-gray-800"></div>
                         <div className="h-2 w-2 rounded-full bg-gray-800"></div>
@@ -105,7 +105,7 @@ export default function AnimatedJourney() {
                         <div className="bg-indigo-100 p-3 rounded-full mb-4">
                           <Smartphone className="h-8 w-8 text-indigo-700" />
                         </div>
-                        <h3 className="text-sm font-bold mb-2">Welcome to HyperVerge</h3>
+                        <h3 className="text-sm font-bold mb-2">Welcome to DocsAPI</h3>
                         <p className="text-xs text-gray-600 mb-4">Complete your verification in seconds</p>
                         <button className="bg-indigo-700 text-white text-xs py-2 px-4 rounded-md">Get Started</button>
                       </div>

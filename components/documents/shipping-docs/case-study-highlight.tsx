@@ -89,7 +89,7 @@ export default function CaseStudyHighlight() {
                 </div>
 
                 <blockquote className="text-slate-300 italic mb-6">
-                  "By implementing HyperVerge's OCR solution, we've transformed our proof of delivery process from a
+                  "By implementing DocsAPI's OCR solution, we've transformed our proof of delivery process from a
                   time-consuming paper nightmare into a streamlined digital workflow. Our customers now have instant
                   visibility into their shipments, and our dispute rate has plummeted."
                 </blockquote>

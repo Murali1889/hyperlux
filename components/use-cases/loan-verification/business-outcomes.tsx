@@ -105,7 +105,7 @@ export default function BusinessOutcomes() {
             </div>
             <div className="md:w-3/4">
               <blockquote className="text-slate-700 italic mb-4">
-                "Implementing HyperVerge's AI-powered loan verification solution has transformed our lending operations.
+                "Implementing DocsAPI's AI-powered loan verification solution has transformed our lending operations.
                 We've reduced our verification time by 75% while improving accuracy and compliance. Our loan officers
                 can now focus on customer relationships instead of paperwork, and we've seen a 30% increase in loan
                 throughput with the same team size."

@@ -115,7 +115,7 @@ export default function BusinessImpact() {
             </div>
             <div>
               <p className="text-slate-600 italic mb-4">
-                "Implementing HyperVerge's contract abstraction solution has transformed our legal operations. We've
+                "Implementing DocsAPI's contract abstraction solution has transformed our legal operations. We've
                 reduced contract review time by half and virtually eliminated missed renewal deadlines. Our team now
                 focuses on strategic work instead of manual document review, delivering more value to the business."
               </p>

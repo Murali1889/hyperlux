@@ -67,7 +67,7 @@ export default function PrivacySecurity() {
             <div>
               <h3 className="text-xl font-bold mb-4 text-indigo-700">Our Commitment to Data Security</h3>
               <p className="text-gray-600 mb-4">
-                HyperVerge's medical document OCR platform is built with security as a foundational principle. Our
+                DocsAPI's medical document OCR platform is built with security as a foundational principle. Our
                 infrastructure undergoes regular penetration testing and security audits to ensure the highest level of
                 protection for sensitive patient information.
               </p>
