@@ -75,7 +75,7 @@ export default function CompetitiveAdvantage() {
                 {features.map((feature) => (
                   <div key={feature.name} className="flex items-center justify-between p-4">
                     <span className="text-sm">{feature.name}</span>
-                    {competitor.features[feature.name] ? (
+                    {(competitor.features as Record<string, boolean>)[feature.name] ? (
                       <CheckCircle className="h-5 w-5 text-green-500" />
                     ) : (
                       <XCircle className="h-5 w-5 text-red-400" />

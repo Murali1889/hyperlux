@@ -85,7 +85,7 @@ export default function Metrics() {
   }, [hasAnimated])
 
   // Easing function for smoother animation
-  const easeOutQuad = (t) => t * (2 - t)
+  const easeOutQuad = (t: number): number => t * (2 - t)
 
   return (
     <section className="py-20 bg-white" ref={ref}>
