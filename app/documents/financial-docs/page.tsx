@@ -8,16 +8,20 @@ import CustomerExperienceImpact from "@/components/documents/financial-docs/cust
 import DeveloperOutput from "@/components/documents/financial-docs/developer-output"
 import ComplianceNote from "@/components/documents/financial-docs/compliance-note"
 import FinancialDocsCta from "@/components/documents/financial-docs/financial-docs-cta"
+import { buildPageMetadata } from "@/lib/page-metadata"
+import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
-export const metadata: Metadata = {
-  title: "Financial Document OCR Templates | Invoices, POs, Statements",
-  description:
-    "Automate data capture from invoices, purchase orders and bank statements with 99% header + line-item accuracy.",
-}
+const PATH = "/documents/financial-docs"
+const TITLE = "Financial Document OCR — Statements, Invoices, POs"
+const DESCRIPTION =
+  "Extract data from bank statements, invoices, purchase orders, and financial reports. 99% header + line-item accuracy. Structured JSON output."
+
+export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
 export default function FinancialDocsPage() {
   return (
     <main className="min-h-screen">
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} />
       <FinancialDocsHero />
       <SupportedFileTypes />
       <FieldCoverageTable />

@@ -12,31 +12,21 @@ import LeadCapturePopup from "@/components/ui/lead-capture-popup"
 import TrustedBy from "@/components/sections/trusted-by"
 import TryDemo from "@/components/try-demo"
 import { WebApplicationJsonLd } from "@/components/json-ld/WebApplicationJsonLd"
-import { SITE_URL, SITE_NAME } from "@/lib/seo"
+import { buildPageMetadata } from "@/lib/page-metadata"
+import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
+const PATH = "/"
 const TITLE = "DocsAPI — Document AI & OCR API for SMB Lending"
 const DESCRIPTION =
   "DocsAPI is the document intelligence API for SMB lending and fintech — OCR, classification, KYC, and AML document checks in one honest API."
 
-export const metadata: Metadata = {
-  title: TITLE,
-  description: DESCRIPTION,
-  alternates: { canonical: SITE_URL },
-  openGraph: {
-    type: "website",
-    url: SITE_URL,
-    title: TITLE,
-    description: DESCRIPTION,
-    siteName: SITE_NAME,
-  },
-  twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION },
-  robots: { index: true, follow: true, "max-image-preview": "large" },
-}
+export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
 export default function Home() {
   return (
     <>
       <WebApplicationJsonLd />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} />
       <HeroSection />
       <TrustedBy />
       <ValueProposition />

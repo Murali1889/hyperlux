@@ -8,16 +8,20 @@ import DeveloperOutputExample from "@/components/documents/identity-docs/passpor
 import ComplianceHighlight from "@/components/documents/identity-docs/passports/compliance-highlight"
 import PassportFAQ from "@/components/documents/identity-docs/passports/passport-faq"
 import PassportCta from "@/components/documents/identity-docs/passports/passport-cta"
+import { buildPageMetadata } from "@/lib/page-metadata"
+import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
-export const metadata: Metadata = {
-  title: "Passport OCR Template | MRZ & Face Extraction AI",
-  description:
-    "Capture passport MRZ, name, date-of-birth and expiry with 99.9 % accuracy and 8-second SLA for global ICAO formats.",
-}
+const PATH = "/documents/identity-docs/passports"
+const TITLE = "Passport OCR — MRZ + Face Extraction in 8 Seconds"
+const DESCRIPTION =
+  "Extract MRZ, name, DOB, and expiry from passports. 99.9% accuracy on global ICAO formats, sub-5-second per document, KYC-ready output."
+
+export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
 export default function PassportsPage() {
   return (
     <main className="flex flex-col min-h-screen">
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} />
       <PassportHero />
       <FieldReference />
       <AccuracyBenchmarks />

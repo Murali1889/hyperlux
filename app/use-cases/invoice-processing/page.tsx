@@ -7,22 +7,20 @@ import BusinessImpact from "@/components/use-cases/invoice-processing/business-i
 import DemoAnimation from "@/components/use-cases/invoice-processing/demo-animation"
 import InvoiceFaq from "@/components/use-cases/invoice-processing/invoice-faq"
 import InvoiceCta from "@/components/use-cases/invoice-processing/invoice-cta"
+import { buildPageMetadata } from "@/lib/page-metadata"
+import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
-export const metadata: Metadata = {
-  title: "Invoice Processing Automation | AI-OCR for Faster AP",
-  description:
-    "Automate invoice data capture and validation to speed up accounts payable with 99% accuracy and significant cost savings.",
-  openGraph: {
-    title: "Invoice Processing Automation | AI-OCR for Faster AP",
-    description:
-      "Automate invoice data capture and validation to speed up accounts payable with 99% accuracy and significant cost savings.",
-    type: "website",
-    locale: "en_US",
-  },
-}
+const PATH = "/use-cases/invoice-processing"
+const TITLE = "Invoice Processing OCR — Cut AP Time 80% With AI"
+const DESCRIPTION =
+  "Automate invoice data capture, three-way match, and AP approval. 99% extraction accuracy. From $14 to $2.70 per invoice in production."
+
+export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
 export default function InvoiceProcessingPage() {
   return (
+    <>
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service />
     <main className="flex flex-col min-h-screen">
       <InvoiceHero />
       <ManualChallenges />
@@ -33,5 +31,6 @@ export default function InvoiceProcessingPage() {
       <InvoiceFaq />
       <InvoiceCta />
     </main>
+    </>
   )
 }

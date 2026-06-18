@@ -7,16 +7,20 @@ import BusinessOutcomes from "@/components/use-cases/loan-verification/business-
 import DemoVideo from "@/components/use-cases/loan-verification/demo-video"
 import LoanFaq from "@/components/use-cases/loan-verification/loan-faq"
 import LoanCta from "@/components/use-cases/loan-verification/loan-cta"
+import { buildPageMetadata } from "@/lib/page-metadata"
+import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
-export const metadata: Metadata = {
-  title: "Loan Verification Automation | AI-OCR for Faster Lending",
-  description:
-    "Accelerate loan application verification by automating bank statement and document extraction with 98% accuracy and compliance-ready audits.",
-}
+const PATH = "/use-cases/loan-verification"
+const TITLE = "Loan Verification OCR — From 45 Days to 5 Days"
+const DESCRIPTION =
+  "Accelerate loan verification with automated bank statement OCR, ID checks, and compliance audits. 98% accuracy on financial documents."
+
+export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
 export default function LoanVerificationPage() {
   return (
     <main className="flex flex-col min-h-screen">
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service />
       <LoanHero />
       <ManualPainPoints />
       <KeyFeatures />

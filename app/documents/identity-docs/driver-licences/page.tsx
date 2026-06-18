@@ -8,16 +8,20 @@ import DeveloperOutput from "@/components/documents/identity-docs/driver-licence
 import UserExperienceBenefit from "@/components/documents/identity-docs/driver-licences/user-experience-benefit"
 import DriverLicenceFAQ from "@/components/documents/identity-docs/driver-licences/driver-licence-faq"
 import DriverLicenceCta from "@/components/documents/identity-docs/driver-licences/driver-licence-cta"
+import { buildPageMetadata } from "@/lib/page-metadata"
+import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
-export const metadata: Metadata = {
-  title: "Driver Licence OCR Template | Front & Back Extraction",
-  description:
-    "Extract licence number, class, expiry and barcode data from driver licences with 98% accuracy in under 10 seconds.",
-}
+const PATH = "/documents/identity-docs/driver-licences"
+const TITLE = "Driver's License OCR — 50 US States + International"
+const DESCRIPTION =
+  "Extract license number, name, DOB, class, expiry, and PDF417 barcode data from driver's licenses. 98% accuracy in under 10 seconds."
+
+export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
 export default function DriverLicencePage() {
   return (
     <main className="flex flex-col min-h-screen">
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} />
       <DriverLicenceHero />
       <FieldReference />
       <AccuracyBenchmarks />

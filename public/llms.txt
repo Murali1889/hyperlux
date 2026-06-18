@@ -8,7 +8,6 @@ DocsAPI processes around 4 million PDF pages per month for lenders, fintechs, an
 
 - [Products and features](https://docsapi.co/products) — OCR, classification, extraction, validation endpoints
 - [Use cases](https://docsapi.co/use-cases) — KYC, AML, invoice processing, lending automation, revenue cycle
-- [Pricing](https://docsapi.co/pricing) — transparent per-page pricing with free tier
 - [Book a demo](https://docsapi.co/book-demo)
 
 ## Top guides

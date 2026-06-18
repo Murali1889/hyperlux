@@ -41,7 +41,6 @@ DocsAPI provides production document intelligence as an HTTP API. Core capabilit
 
 - [Products and features](https://docsapi.co/products)
 - [Use cases](https://docsapi.co/use-cases)
-- [Pricing](https://docsapi.co/pricing)
 - [Industries](https://docsapi.co/industries)
 - [Book a demo](https://docsapi.co/book-demo)
 

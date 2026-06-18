@@ -71,7 +71,7 @@ const existingBlogsRaw: BlogPost[] = [
     date: "May 12, 2025",
     readTime: "8 min read",
     author: nupuraUghade,
-    metaTag: "Invoice Processing OCR: Transforming Financial Document Management",
+    metaTag: "OCR Document Management — Real Stories & Numbers",
   },
   {
     id: "2",
@@ -140,7 +140,7 @@ const existingBlogsRaw: BlogPost[] = [
     date: "May 12, 2025",
     readTime: "8 min read",
     author: nupuraUghade,
-    metaTag: "OCR Technology: Transform Your Document Management | Complete Guide",
+    metaTag: "Invoice Processing OCR — From $14 to $2.70/Doc",
   },
   {
     id: "3",
@@ -254,7 +254,7 @@ const existingBlogsRaw: BlogPost[] = [
     date: "May 12, 2025",
     readTime: "8 min read",
     author: nupuraUghade,
-    metaTag: "Automate Document Workflows with OCR API Solutions",
+    metaTag: "OCR API Guide — Why Finance Teams Are Switching",
   },
   {
     id: "4",
@@ -269,7 +269,7 @@ const existingBlogsRaw: BlogPost[] = [
     date: "May 27, 2025",
     readTime: "8 min read",
     author: nupuraUghade,
-    metaTag: "Automate Document Workflows with OCR API Solutions",
+    metaTag: "IDP vs OCR — The Real Differences in 2026",
   },
   {
     id: "5",
@@ -284,7 +284,7 @@ const existingBlogsRaw: BlogPost[] = [
     date: "May 28, 2025",
     readTime: "8 min read",
     author: nupuraUghade,
-    metaTag: "Automate Document Workflows with OCR API Solutions",
+    metaTag: "OCR Accuracy — Metrics, Challenges, Real Fixes",
   },
   {
     id: "6",
@@ -299,7 +299,7 @@ const existingBlogsRaw: BlogPost[] = [
     date: "May 28, 2025",
     readTime: "8 min read",
     author: nupuraUghade,
-    metaTag: "Automate Document Workflows with OCR API Solutions",
+    metaTag: "Intelligent Document Processing (IDP) Guide 2026",
   },
   {
     id: "7",
@@ -314,7 +314,7 @@ const existingBlogsRaw: BlogPost[] = [
     date: "May 28, 2025",
     readTime: "8 min read",
     author: nupuraUghade,
-    metaTag: "Automate Document Workflows with OCR API Solutions",
+    metaTag: "Passport OCR — ID Verification in 5 Seconds",
   },
   {
     id: "8",
@@ -329,7 +329,7 @@ const existingBlogsRaw: BlogPost[] = [
     date: "June 2, 2025",
     readTime: "8 min read",
     author: nupuraUghade,
-    metaTag: "Automate Document Workflows with OCR API Solutions",
+    metaTag: "OCR in Finance — Document Processing Done Right",
   },
   {
     id: "9",
@@ -344,7 +344,7 @@ const existingBlogsRaw: BlogPost[] = [
     date: "June 3, 2025",
     readTime: "8 min read",
     author: nupuraUghade,
-    metaTag: "Automate Document Workflows with OCR API Solutions",
+    metaTag: "Passport OCR Software — 2026 Build & Buy Guide",
   },
   {
     id: "10",
@@ -359,7 +359,7 @@ const existingBlogsRaw: BlogPost[] = [
     date: "June 5, 2025",
     readTime: "8 min read",
     author: nupuraUghade,
-    metaTag: "Automate Document Workflows with OCR API Solutions",
+    metaTag: "Legal Document Automation for Law Firms (2026)",
   },
   {
     id: "11",
@@ -373,7 +373,7 @@ const existingBlogsRaw: BlogPost[] = [
     date: "June 9, 2025",
     readTime: "8 min read",
     author: nupuraUghade,
-    metaTag: "Learn how document automation for financial services streamlines operations, reduces manual processing, and improves accuracy in financial document management.",
+    metaTag: "Document Automation for Financial Services",
   },
   {
     id: "12",
@@ -387,7 +387,7 @@ const existingBlogsRaw: BlogPost[] = [
     date: "June 12, 2025",
     readTime: "8 min read",
     author: nupuraUghade,
-    metaTag: "Learn how OCR bank statement technology automates data extraction, improves accuracy, and streamlines financial processes for businesses and accounting professionals.",
+    metaTag: "Bank Statement OCR — Multi-Page Tables Mastery",
   },
   {
     id: "13",
@@ -401,7 +401,7 @@ const existingBlogsRaw: BlogPost[] = [
     date: "June 18, 2025",
     readTime: "8 min read",
     author: nupuraUghade,
-    metaTag: "Learn how OCR bank statement technology automates data extraction, improves accuracy, and streamlines financial processes for businesses and accounting professionals.",
+    metaTag: "Automated Bank Statement Analysis for Lenders",
   },
   {
     id: "14",
@@ -415,7 +415,7 @@ const existingBlogsRaw: BlogPost[] = [
     date: "June 27, 2025",
     readTime: "8 min read",
     author: nupuraUghade,
-    metaTag: "Learn how small business lending automation is revolutionizing access to capital, improving approval rates, and accelerating the funding process for entrepreneurs",
+    metaTag: "Small Business Lending Automation — SBA Guide",
   },
 ]
 

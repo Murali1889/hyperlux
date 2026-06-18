@@ -8,16 +8,20 @@ import SecurityCompliance from "@/components/documents/legal-docs/security-compl
 import CaseStudyHighlight from "@/components/documents/legal-docs/case-study-highlight"
 import LegalDocsFAQ from "@/components/documents/legal-docs/legal-docs-faq"
 import LegalDocsCta from "@/components/documents/legal-docs/legal-docs-cta"
+import { buildPageMetadata } from "@/lib/page-metadata"
+import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
-export const metadata: Metadata = {
-  title: "Legal Document OCR | Contracts, NDAs & Litigation Bundle Automation",
-  description:
-    "Extract clauses, key dates, and confidential info from contracts, NDAs, and legal bundles with 95 %+ accuracy. Accelerate legal review and reduce risk.",
-}
+const PATH = "/documents/legal-docs"
+const TITLE = "Legal Document OCR — Contracts, NDAs, Litigation"
+const DESCRIPTION =
+  "Extract clauses, dates, parties, and obligations from contracts, NDAs, and legal bundles. 95%+ accuracy on multi-column layouts."
+
+export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
 export default function LegalDocsPage() {
   return (
     <main className="flex flex-col min-h-screen">
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} />
       <LegalDocsHero />
       <DocumentTypesSupported />
       <KeyFieldsExtracted />

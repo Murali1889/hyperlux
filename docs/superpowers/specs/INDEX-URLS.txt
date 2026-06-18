@@ -1,23 +1,22 @@
-# DocsAPI — Index Request URLs
+# DocsAPI — Index Request URLs (Full Audit Complete)
 # Copy-paste-friendly list for Google Search Console "Request Indexing"
-# Ordered by priority (top = submit first). Total: 50 URLs.
+# Ordered by priority (top = submit first). Total: 75 URLs.
 # Plan: docs/superpowers/specs/SEO-LAUNCH-PLAN.md
 
 # ============================================================
-# TIER 0 — Sitemap and core infra (submit on Day 1 via GSC Sitemaps tab)
+# TIER 0 — Sitemap (submit via GSC Sitemaps tab, not Request Indexing)
 # ============================================================
 https://docsapi.co/sitemap.xml
-https://docsapi.co/robots.txt
 
 # ============================================================
-# TIER 1 — Core pages + lowest-KD blogs (submit Day 2)
+# TIER 1 — Core pillars + lowest-KD blogs (submit Day 2, ~10/day GSC limit)
 # ============================================================
 https://docsapi.co
 https://docsapi.co/products
 https://docsapi.co/use-cases
-https://docsapi.co/pricing
+https://docsapi.co/industries
+https://docsapi.co/documents
 https://docsapi.co/author/nupura-ughade
-https://docsapi.co/resources/blogs
 https://docsapi.co/resources/blogs/document-detection-before-ocr
 https://docsapi.co/resources/blogs/make-pdf-searchable
 https://docsapi.co/resources/blogs/scanned-pdf-searchable
@@ -38,18 +37,49 @@ https://docsapi.co/resources/blogs/pdf-parser-online
 https://docsapi.co/resources/blogs/vlm-vs-ocr
 
 # ============================================================
-# TIER 3 — Commercial intent + remaining new blogs (submit Day 4)
+# TIER 3 — Commercial intent blogs + use-case + solutions (submit Day 4)
 # ============================================================
 https://docsapi.co/resources/blogs/aws-textract-vs-docsapi
 https://docsapi.co/resources/blogs/abbyy-finereader-alternative
 https://docsapi.co/resources/blogs/paddleocr-vs-tesseract-vs-docsapi
+https://docsapi.co/use-cases/invoice-processing
+https://docsapi.co/use-cases/loan-verification
+https://docsapi.co/use-cases/id-proofing
+https://docsapi.co/solutions/finance-automation
+https://docsapi.co/solutions/compliance-risk
+https://docsapi.co/solutions/legal-automation
 https://docsapi.co/resources/blogs/pdf-text-recognition
-https://docsapi.co/resources/blogs/free-online-ocr-tools
-https://docsapi.co/resources/blogs/revenue-cycle-management-document-intake
 
 # ============================================================
-# TIER 4 — Existing 14 blogs (optional, Day 5-7)
-# Already indexed; re-request only to refresh dateModified
+# TIER 4 — Remaining new blogs + document templates (submit Day 5)
+# ============================================================
+https://docsapi.co/resources/blogs/free-online-ocr-tools
+https://docsapi.co/resources/blogs/revenue-cycle-management-document-intake
+https://docsapi.co/documents/identity-docs/passports
+https://docsapi.co/documents/financial-docs/bank-statements
+https://docsapi.co/documents/financial-docs/invoices
+https://docsapi.co/documents/identity-docs
+https://docsapi.co/documents/financial-docs
+https://docsapi.co/use-cases/contract-abstraction
+https://docsapi.co/use-cases/digital-archiving
+https://docsapi.co/solutions/customer-experience
+
+# ============================================================
+# TIER 5 — Remaining document templates + solutions (submit Day 6)
+# ============================================================
+https://docsapi.co/documents/identity-docs/driver-licences
+https://docsapi.co/documents/identity-docs/national-ids
+https://docsapi.co/documents/financial-docs/purchase-orders
+https://docsapi.co/documents/legal-docs
+https://docsapi.co/documents/medical-docs
+https://docsapi.co/documents/shipping-docs
+https://docsapi.co/solutions/operations-efficiency
+https://docsapi.co/resources
+https://docsapi.co/resources/blogs
+https://docsapi.co/book-demo
+
+# ============================================================
+# TIER 6 — Existing 14 blogs (submit Day 7+, optional, re-crawl for dateModified)
 # ============================================================
 https://docsapi.co/resources/blogs/revolutionizing-document-management-with-ocr-technology
 https://docsapi.co/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments
@@ -67,10 +97,12 @@ https://docsapi.co/resources/blogs/revolutionizing-finance-how-automated-bank-st
 https://docsapi.co/resources/blogs/the-ultimate-guide-to-small-business-lending-automation-revolutionizing-sba-loans-and-financing
 
 # ============================================================
-# Other indexable pages (optional, Day 5-7)
+# TIER 7 — Minor resource pages (optional)
 # ============================================================
-https://docsapi.co/industries
-https://docsapi.co/documents
-https://docsapi.co/book-demo
 https://docsapi.co/resources/articles
 https://docsapi.co/resources/newsletters
+
+# ============================================================
+# EXCLUDED (DO NOT SUBMIT) — broken or non-indexable
+# ============================================================
+# https://docsapi.co/pricing  → returns 404 on live site, route disabled

@@ -1,7 +1,7 @@
 import type { BlogPost } from "@/types/resources"
 
-const LAST_UPDATED = "June 17, 2026"
-const DATE_MODIFIED = "2026-06-17T00:00:00.000Z"
+const LAST_UPDATED = "June 18, 2026"
+const DATE_MODIFIED = "2026-06-18T00:00:00.000Z"
 
 export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
   "revolutionizing-document-management-with-ocr-technology": {
