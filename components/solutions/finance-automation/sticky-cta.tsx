@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function StickyCTA() {
   const [isVisible, setIsVisible] = useState(false)
@@ -44,8 +45,8 @@ export default function StickyCTA() {
                 <p className="text-gray-600">Transform your finance operations with DocsAPI AI</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button size="lg" className="bg-indigo-700 hover:bg-indigo-800 text-white w-full sm:w-auto">
-                  Request Demo
+                <Button asChild size="lg" className="bg-indigo-700 hover:bg-indigo-800 text-white w-full sm:w-auto">
+                  <Link href="/book-demo">Request Demo</Link>
                 </Button>
               </div>
             </div>

@@ -16,7 +16,7 @@ export default function BankStatementHero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-indigo-600 hover:bg-indigo-700">
-                <Link href="#demo">Try Bank Statement API</Link>
+                <Link href="/book-demo">Try Bank Statement API</Link>
               </Button>
               <Button
                 asChild
