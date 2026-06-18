@@ -9,17 +9,19 @@ import CaseStudy from "@/components/solutions/finance-automation/case-study"
 import FAQSection from "@/components/solutions/finance-automation/faq-section"
 import StickyCTA from "@/components/solutions/finance-automation/sticky-cta"
 import { buildPageMetadata } from "@/lib/page-metadata"
+import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
-export const metadata: Metadata = buildPageMetadata({
-  title: "Finance Automation OCR — Invoice & Reconciliation",
-  description:
-    "Automate invoices, three-way match, and bank statement parsing. 65% faster AP close, 99% accuracy on financial documents.",
-  path: "/solutions/finance-automation",
-})
+const PATH = "/solutions/finance-automation"
+const TITLE = "Finance Automation OCR — Invoice & Reconciliation"
+const DESCRIPTION =
+  "Automate invoices, three-way match, and bank statement parsing. 65% faster AP close, 99% accuracy on financial documents."
+
+export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
 export default function FinanceAutomationPage() {
   return (
     <main className="min-h-screen bg-white">
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service />
       <FinanceHero />
       <PainPointTrio />
       <FeatureGallery />

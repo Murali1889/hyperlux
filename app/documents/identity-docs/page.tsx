@@ -8,17 +8,19 @@ import ComplianceNote from "@/components/documents/identity-docs/compliance-note
 import DeveloperOutputSample from "@/components/documents/identity-docs/developer-output-sample"
 import IdentityDocsCta from "@/components/documents/identity-docs/identity-docs-cta"
 import { buildPageMetadata } from "@/lib/page-metadata"
+import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
-export const metadata: Metadata = buildPageMetadata({
-  title: "Identity Document OCR — Passport, License, ID Cards",
-  description:
-    "Extract MRZ, barcodes, and face data from passports, national IDs, and driver licenses. 99.8% accuracy in under 12 seconds. KYC-ready.",
-  path: "/documents/identity-docs",
-})
+const PATH = "/documents/identity-docs"
+const TITLE = "Identity Document OCR — Passport, License, ID Cards"
+const DESCRIPTION =
+  "Extract MRZ, barcodes, and face data from passports, national IDs, and driver licenses. 99.8% accuracy in under 12 seconds. KYC-ready."
+
+export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
 export default function IdentityDocsPage() {
   return (
     <main className="flex flex-col min-h-screen">
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} />
       <IdentityDocsHero />
       <SupportedFileTypes />
       <FieldCoverageTable />

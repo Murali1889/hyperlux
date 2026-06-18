@@ -1,16 +1,18 @@
 import type { Metadata } from "next"
 import { buildPageMetadata } from "@/lib/page-metadata"
+import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
-export const metadata: Metadata = buildPageMetadata({
-  title: "OCR for Banking, Fintech, Lending — DocsAPI Industries",
-  description:
-    "Document AI for banking, fintech, credit unions, lending, and insurance. SOC 2 and HIPAA-eligible. Automate KYC, AML, and underwriting workflows.",
-  path: "/industries",
-})
+const PATH = "/industries"
+const TITLE = "OCR for Banking, Fintech, Lending — DocsAPI Industries"
+const DESCRIPTION =
+  "Document AI for banking, fintech, credit unions, lending, and insurance. SOC 2 and HIPAA-eligible. Automate KYC, AML, and underwriting workflows."
+
+export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
 export default function IndustriesPage() {
   return (
     <main className="flex flex-col min-h-screen">
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} />
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-indigo-600 to-indigo-800 py-20 px-4 sm:px-6 lg:px-8 text-white">
         <div className="max-w-7xl mx-auto">

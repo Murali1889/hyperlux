@@ -9,17 +9,19 @@ import OperationalImpact from "@/components/documents/financial-docs/purchase-or
 import PurchaseOrderFAQ from "@/components/documents/financial-docs/purchase-orders/purchase-order-faq"
 import PurchaseOrderCta from "@/components/documents/financial-docs/purchase-orders/purchase-order-cta"
 import { buildPageMetadata } from "@/lib/page-metadata"
+import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
-export const metadata: Metadata = buildPageMetadata({
-  title: "Purchase Order OCR — Automated PO Processing",
-  description:
-    "Extract PO numbers, vendor codes, SKUs, line items, and quantities with 98% accuracy. Powers true three-way match against invoices.",
-  path: "/documents/financial-docs/purchase-orders",
-})
+const PATH = "/documents/financial-docs/purchase-orders"
+const TITLE = "Purchase Order OCR — Automated PO Processing"
+const DESCRIPTION =
+  "Extract PO numbers, vendor codes, SKUs, line items, and quantities with 98% accuracy. Powers true three-way match against invoices."
+
+export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
 export default function PurchaseOrdersPage() {
   return (
     <main className="min-h-screen">
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} />
       <PurchaseOrderHero />
       <FieldReference />
       <AccuracyBenchmarks />

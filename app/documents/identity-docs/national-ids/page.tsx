@@ -9,17 +9,19 @@ import RegionalComplianceNote from "@/components/documents/identity-docs/nationa
 import NationalIdFAQ from "@/components/documents/identity-docs/national-ids/national-id-faq"
 import NationalIdCta from "@/components/documents/identity-docs/national-ids/national-id-cta"
 import { buildPageMetadata } from "@/lib/page-metadata"
+import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
-export const metadata: Metadata = buildPageMetadata({
-  title: "National ID Card OCR — Global Coverage, KYC-Ready",
-  description:
-    "Extract identity fields from national ID cards worldwide — barcodes, QR codes, hologram text. 99% accuracy, validation built-in.",
-  path: "/documents/identity-docs/national-ids",
-})
+const PATH = "/documents/identity-docs/national-ids"
+const TITLE = "National ID Card OCR — Global Coverage, KYC-Ready"
+const DESCRIPTION =
+  "Extract identity fields from national ID cards worldwide — barcodes, QR codes, hologram text. 99% accuracy, validation built-in."
+
+export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
 export default function NationalIdsPage() {
   return (
     <main className="flex flex-col min-h-screen">
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} />
       <NationalIdHero />
       <FieldReference />
       <AccuracyBenchmarks />

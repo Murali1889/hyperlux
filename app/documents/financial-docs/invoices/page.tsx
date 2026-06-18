@@ -9,17 +9,19 @@ import CustomerExperienceNote from "@/components/documents/financial-docs/invoic
 import InvoiceFAQ from "@/components/documents/financial-docs/invoices/invoice-faq"
 import InvoiceCta from "@/components/documents/financial-docs/invoices/invoice-cta"
 import { buildPageMetadata } from "@/lib/page-metadata"
+import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
-export const metadata: Metadata = buildPageMetadata({
-  title: "Invoice OCR — Vendor, Total, Line Items as JSON",
-  description:
-    "Extract invoice numbers, vendor, dates, VAT, line items, and totals automatically. 99% field accuracy, sub-30-second SLA, AP-ready output.",
-  path: "/documents/financial-docs/invoices",
-})
+const PATH = "/documents/financial-docs/invoices"
+const TITLE = "Invoice OCR — Vendor, Total, Line Items as JSON"
+const DESCRIPTION =
+  "Extract invoice numbers, vendor, dates, VAT, line items, and totals automatically. 99% field accuracy, sub-30-second SLA, AP-ready output."
+
+export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
 export default function InvoicesPage() {
   return (
     <main className="min-h-screen">
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} />
       <InvoiceHero />
       <FieldReference />
       <AccuracyBenchmarks />

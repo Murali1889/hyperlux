@@ -9,17 +9,19 @@ import CaseStudyHighlight from "@/components/documents/medical-docs/case-study-h
 import MedicalDocsFAQ from "@/components/documents/medical-docs/medical-docs-faq"
 import MedicalDocsCta from "@/components/documents/medical-docs/medical-docs-cta"
 import { buildPageMetadata } from "@/lib/page-metadata"
+import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
-export const metadata: Metadata = buildPageMetadata({
-  title: "Medical Document OCR — Prescriptions, Lab Reports",
-  description:
-    "Digitize medical prescriptions, lab results, and insurance forms with 98% field accuracy. HIPAA-eligible with BAA. Reduce manual errors.",
-  path: "/documents/medical-docs",
-})
+const PATH = "/documents/medical-docs"
+const TITLE = "Medical Document OCR — Prescriptions, Lab Reports"
+const DESCRIPTION =
+  "Digitize medical prescriptions, lab results, and insurance forms with 98% field accuracy. HIPAA-eligible with BAA. Reduce manual errors."
+
+export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
 export default function MedicalDocsPage() {
   return (
     <div className="flex flex-col min-h-screen">
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} />
       <main className="flex-1">
         <MedicalDocsHero />
         <DocumentTypesSupported />

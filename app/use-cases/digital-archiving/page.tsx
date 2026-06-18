@@ -8,17 +8,19 @@ import DemoAnimation from "@/components/use-cases/digital-archiving/demo-animati
 import ArchivingFaq from "@/components/use-cases/digital-archiving/archiving-faq"
 import ArchivingCta from "@/components/use-cases/digital-archiving/archiving-cta"
 import { buildPageMetadata } from "@/lib/page-metadata"
+import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
-export const metadata: Metadata = buildPageMetadata({
-  title: "Digital Archiving OCR — Search Every Document",
-  description:
-    "Convert paper and scanned archives into searchable structured data with AI-powered OCR. 30-second turnaround per document.",
-  path: "/use-cases/digital-archiving",
-})
+const PATH = "/use-cases/digital-archiving"
+const TITLE = "Digital Archiving OCR — Search Every Document"
+const DESCRIPTION =
+  "Convert paper and scanned archives into searchable structured data with AI-powered OCR. 30-second turnaround per document."
+
+export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
 export default function DigitalArchivingPage() {
   return (
     <main className="min-h-screen bg-slate-50">
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service />
       <ArchivingHero />
       <ArchivingChallenges />
       <FeaturesOverview />

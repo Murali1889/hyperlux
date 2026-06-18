@@ -9,17 +9,19 @@ import CaseStudyHighlight from "@/components/documents/shipping-docs/case-study-
 import ShippingDocsFaq from "@/components/documents/shipping-docs/shipping-docs-faq"
 import ShippingDocsCta from "@/components/documents/shipping-docs/shipping-docs-cta"
 import { buildPageMetadata } from "@/lib/page-metadata"
+import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
-export const metadata: Metadata = buildPageMetadata({
-  title: "Shipping Document OCR — BOL, PODs, Packing Lists",
-  description:
-    "Extract data from bills of lading, proofs of delivery, packing lists, and manifests. 97% accuracy, real-time shipment visibility.",
-  path: "/documents/shipping-docs",
-})
+const PATH = "/documents/shipping-docs"
+const TITLE = "Shipping Document OCR — BOL, PODs, Packing Lists"
+const DESCRIPTION =
+  "Extract data from bills of lading, proofs of delivery, packing lists, and manifests. 97% accuracy, real-time shipment visibility."
+
+export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
 export default function ShippingDocsPage() {
   return (
     <main className="flex flex-col min-h-screen">
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} />
       <ShippingDocsHero />
       <DocumentTypesSupported />
       <KeyFieldsExtracted />
