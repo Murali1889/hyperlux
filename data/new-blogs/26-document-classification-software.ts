@@ -38,7 +38,7 @@ export const blog26: BlogPost = {
     <p>Most production pipelines need all three levels. The best classification software handles them in one model call.</p>
 
     <h2>How Modern Classification Software Works</h2>
-    <p>Three techniques, often combined:</p>
+    <p>Modern document classification uses three techniques, usually combined: visual classification (computer vision model assigns a class from page imagery), text-based classification (a text classifier reads OCR'd content and assigns a class), and hybrid (visual + text together). Each technique returns a confidence score per class so the pipeline can route low-confidence documents to a human review queue. The hybrid approach is the 2026 default.</p>
 
     <h3>1. Visual Classification</h3>
     <p>A computer vision model that looks at the document image and assigns a class based on visual features. Fast, works without OCR running first. Catches obvious categories well.</p>

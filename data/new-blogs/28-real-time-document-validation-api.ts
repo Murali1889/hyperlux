@@ -20,7 +20,7 @@ export const blog28: BlogPost = {
     <p>Our <a href="/resources/blogs/document-fraud-detection-api">document fraud detection piece</a> covers the security checks. This guide focuses on the API and pipeline architecture that makes the whole thing fast.</p>
 
     <h2>What "Real-Time" Means in Practice</h2>
-    <p>Latency matters. The user experience is different at each band.</p>
+    <p>In document validation, "real-time" means the full verification verdict — file integrity, OCR extraction, fraud checks, and sanctions screening — completes within the user-facing workflow window. For login or in-line fraud checks, that means under 1 second. For payment workflows and onboarding, under 5 seconds. Anything past 10 seconds is a background job dressed up as real-time, and users will start to wonder if the system is broken.</p>
 
     <table>
       <thead><tr><th>Latency</th><th>User experience</th><th>Use cases</th></tr></thead>
