@@ -15,7 +15,7 @@ export const blog11: BlogPost = {
     <p>I am the founder of DocsAPI. I tried to be honest about where it lost. This guide is the writeup.</p>
 
     <h2>What These Three Tools Actually Are</h2>
-    <p>Before comparing them, a quick honest description of each:</p>
+    <p>Docling is IBM's open-source Python parser for academic and scientific PDFs. LlamaParse is LlamaIndex's hosted API for turning documents into RAG-ready Markdown. DocsAPI is a hosted document-intelligence API built for production financial-services workflows — OCR, classification, extraction, validation. All three solve overlapping problems differently: open-source vs hosted, RAG-shaped output vs structured fields, generalist vs vertical. Pick by document type and engineering bandwidth.</p>
 
     <h3>Docling (IBM, Open Source)</h3>
     <p>Docling is IBM's open-source document parser. It is designed to turn documents into structured data that LLMs can consume. Strong on academic papers, scientific PDFs, and clean technical documents. Less strong on dirty real-world business documents like scanned receipts or photos.</p>
@@ -152,8 +152,8 @@ export const blog11: BlogPost = {
   category: "AI Document Intelligence",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-06-17T00:00:00.000Z",
-  last_updated: "June 17, 2026",
+  dateModified: "2026-06-22T00:00:00.000Z",
+  last_updated: "June 22, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "docling",

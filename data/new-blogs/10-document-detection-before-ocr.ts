@@ -47,7 +47,7 @@ export const blog10: BlogPost = {
     <p>How: small image classifier or layout-based heuristic. Production systems usually train a model on tens of thousands of labeled documents per class. Open source classifiers exist for common types.</p>
 
     <h2>Why Teams Skip Document Detection</h2>
-    <p>Honest answers from talking with dozens of teams:</p>
+    <p>Most teams skip document detection because they assume the OCR vendor handles it, the marketing budget is concentrated on the OCR engine itself, and clean demo documents hide the failures that real-world documents produce. The result is a pipeline that hits 85% accuracy on production data instead of 95%+, then spends months building manual review workflows to catch the gap that one pre-processing pass would have closed.</p>
 
     <h3>"The vendor said it was built in"</h3>
     <p>Some vendors include document detection. Some claim they do but it is shallow (only handles 0/90/180/270 rotation, not arbitrary skew, not page boundaries). Read the docs carefully.</p>
@@ -127,8 +127,8 @@ ocrmypdf --deskew --rotate-pages --remove-background input.pdf output.pdf</code>
   category: "AI Document Intelligence",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-06-17T00:00:00.000Z",
-  last_updated: "June 17, 2026",
+  dateModified: "2026-06-22T00:00:00.000Z",
+  last_updated: "June 22, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "document detection",

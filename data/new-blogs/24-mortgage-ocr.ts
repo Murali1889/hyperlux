@@ -46,6 +46,7 @@ export const blog24: BlogPost = {
     <p>Driver's license, passport, or state ID for each borrower. Solved problem — OCR + MRZ checks (see our <a href="/resources/blogs/kyc-document-verification">KYC document verification guide</a>).</p>
 
     <h2>The Honest Time Math</h2>
+    <p>A typical mortgage packet takes 8-15 hours of manual processing per file: 2-4 hours sorting intake, 4-8 hours on data entry across the eight document types, 1-2 hours of cross-document validation, and an hour of loan-origination-system entry. With layout-aware mortgage OCR plus a human exception queue, the same packet drops to roughly 90 minutes end-to-end. The savings compound across the team because processors stop being the bottleneck for underwriting.</p>
 
     <table>
       <thead><tr><th>Step</th><th>Manual</th><th>With Mortgage OCR</th></tr></thead>
