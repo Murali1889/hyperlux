@@ -85,15 +85,20 @@ function htmlToMarkdown(html: string): string {
     const headHtml = headRowMatch ? headRowMatch[1] : ""
     const bodyHtml = bodyRowsMatch ? bodyRowsMatch[1] : inner
 
-    const extractCells = (rowHtml: string): string[] =>
-      Array.from(rowHtml.matchAll(/<t[hd][^>]*>([\s\S]*?)<\/t[hd]>/gi)).map(
-        (m: RegExpMatchArray) => stripTags(m[1]).trim().replace(/\|/g, "\\|"),
-      )
+    const extractCells = (rowHtml: string): string[] => {
+      const cells: string[] = []
+      for (const m of rowHtml.matchAll(/<t[hd][^>]*>([\s\S]*?)<\/t[hd]>/gi)) {
+        cells.push(stripTags(m[1]).trim().replace(/\|/g, "\\|"))
+      }
+      return cells
+    }
 
     const headerCells = extractCells(headHtml)
-    const bodyRows = Array.from(bodyHtml.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/gi))
-      .map((m: RegExpMatchArray) => extractCells(m[1]))
-      .filter((row) => row.length > 0)
+    const bodyRows: string[][] = []
+    for (const m of bodyHtml.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/gi)) {
+      const cells = extractCells(m[1])
+      if (cells.length > 0) bodyRows.push(cells)
+    }
 
     if (headerCells.length === 0 && bodyRows.length === 0) return ""
 
@@ -116,23 +121,21 @@ function htmlToMarkdown(html: string): string {
   })
 
   // Lists
-  md = md.replace(/<ul[^>]*>([\s\S]*?)<\/ul>/gi, (_, inner) => {
-    return (
-      "\n\n" +
-      Array.from(inner.matchAll(/<li[^>]*>([\s\S]*?)<\/li>/gi))
-        .map((m: RegExpMatchArray) => `- ${stripTags(m[1]).trim()}`)
-        .join("\n") +
-      "\n\n"
-    )
+  md = md.replace(/<ul[^>]*>([\s\S]*?)<\/ul>/gi, (_, inner: string) => {
+    const items: string[] = []
+    for (const m of inner.matchAll(/<li[^>]*>([\s\S]*?)<\/li>/gi)) {
+      items.push(`- ${stripTags(m[1]).trim()}`)
+    }
+    return "\n\n" + items.join("\n") + "\n\n"
   })
-  md = md.replace(/<ol[^>]*>([\s\S]*?)<\/ol>/gi, (_, inner) => {
-    return (
-      "\n\n" +
-      Array.from(inner.matchAll(/<li[^>]*>([\s\S]*?)<\/li>/gi))
-        .map((m: RegExpMatchArray, i: number) => `${i + 1}. ${stripTags(m[1]).trim()}`)
-        .join("\n") +
-      "\n\n"
-    )
+  md = md.replace(/<ol[^>]*>([\s\S]*?)<\/ol>/gi, (_, inner: string) => {
+    const items: string[] = []
+    let i = 0
+    for (const m of inner.matchAll(/<li[^>]*>([\s\S]*?)<\/li>/gi)) {
+      items.push(`${i + 1}. ${stripTags(m[1]).trim()}`)
+      i++
+    }
+    return "\n\n" + items.join("\n") + "\n\n"
   })
 
   // Blockquote
