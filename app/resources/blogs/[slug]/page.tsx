@@ -38,7 +38,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     keywords: [blog.primary_keyword, ...(blog.secondary_keywords ?? [])]
       .filter(Boolean)
       .join(", "),
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      types: {
+        "text/markdown": `${url}/markdown`,
+      },
+    },
     openGraph: {
       type: "article",
       url,
