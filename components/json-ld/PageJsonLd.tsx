@@ -25,6 +25,7 @@ export function PageJsonLd({
 }: PageJsonLdProps) {
   const url = `${SITE_URL}${path}`
   const breadcrumbs = buildBreadcrumbs(path)
+  const hasBreadcrumbs = breadcrumbs.length >= 2
 
   return (
     <>
@@ -38,7 +39,7 @@ export function PageJsonLd({
           name: title,
           description,
           isPartOf: { "@id": `${SITE_URL}/#website` },
-          breadcrumb: { "@id": `${url}#breadcrumb` },
+          ...(hasBreadcrumbs && { breadcrumb: { "@id": `${url}#breadcrumb` } }),
           datePublished,
           dateModified,
           inLanguage: "en-US",

@@ -6,6 +6,7 @@ export interface Crumb {
 }
 
 export function BreadcrumbJsonLd({ items }: { items: Crumb[] }) {
+  if (items.length < 2) return null
   return (
     <JsonLd
       data={{
