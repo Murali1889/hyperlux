@@ -27,6 +27,7 @@ import { blog25 } from "./new-blogs/25-credit-card-statement-ocr"
 import { blog26 } from "./new-blogs/26-document-classification-software"
 import { blog27 } from "./new-blogs/27-ocr-meaning-finance"
 import { blog28 } from "./new-blogs/28-real-time-document-validation-api"
+import { blog29 } from "./new-blogs/29-ocr-finance"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -57,4 +58,5 @@ export const newBlogs: BlogPost[] = [
   blog26,
   blog27,
   blog28,
+  blog29,
 ]
