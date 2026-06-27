@@ -6,15 +6,16 @@ export interface Crumb {
 }
 
 export function BreadcrumbJsonLd({ items }: { items: Crumb[] }) {
-  if (items.length < 2) return null
-  const pageUrl = items[items.length - 1].url
+  const valid = items.filter((it) => it.name && it.url)
+  if (valid.length < 2) return null
+  const pageUrl = valid[valid.length - 1].url
   return (
     <JsonLd
       data={{
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "@id": `${pageUrl}#breadcrumb`,
-        itemListElement: items.map((item, i) => ({
+        itemListElement: valid.map((item, i) => ({
           "@type": "ListItem",
           position: i + 1,
           name: item.name,

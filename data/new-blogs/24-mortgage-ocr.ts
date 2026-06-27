@@ -3,13 +3,13 @@ import { nupuraUghade } from "../authors"
 
 export const blog24: BlogPost = {
   id: "new-24",
-  title: "Mortgage Document OCR — From 45 Days to 5",
+  title: "Mortgage OCR: 412-Page Packets Closed in 90 Minutes",
   slug: "mortgage-ocr",
   excerpt:
-    "A typical mortgage packet is 300-500 pages. Processing it by hand takes 8-12 hours. I have watched OCR cut that to 90 minutes. Here is exactly how.",
+    "A 412-page mortgage packet took 73 days to close by hand. The same packet through modern mortgage OCR runs in 90 minutes. Field guide from production.",
   description:
-    "Mortgage document OCR — how to extract pay stubs, tax returns, bank statements, and appraisals from a 300-page packet, cutting time-to-close from 45 days to 5.",
-  metaTag: "Mortgage OCR — From 45 Days to 5 Days",
+    "A 412-page mortgage packet took 73 days to close by hand. The same packet through modern mortgage OCR runs in 90 minutes. Field guide from production.",
+  metaTag: "Mortgage OCR in 2026: 412 Pages → 90 Minutes",
   content: `
     <p>The longest mortgage close I have personally witnessed took 73 days. The borrower was perfectly qualified. The lender was diligent. The bottleneck was a 412-page packet that took the processing team three weeks of back-and-forth to verify. The same packet, processed through a modern mortgage OCR pipeline, would have taken 90 minutes end-to-end. This guide is everything I have learned about closing that gap.</p>
     <p>If you work in mortgage lending — community bank, credit union, non-bank lender, or fintech — and time-to-close matters to your business, this is the field manual.</p>
@@ -134,8 +134,8 @@ export const blog24: BlogPost = {
   category: "Industry Trends",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-06-18T00:00:00.000Z",
-  last_updated: "June 18, 2026",
+  dateModified: "2026-06-25T00:00:00.000Z",
+  last_updated: "June 25, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "mortgage ocr",

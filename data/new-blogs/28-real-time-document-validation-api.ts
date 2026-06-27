@@ -3,13 +3,13 @@ import { nupuraUghade } from "../authors"
 
 export const blog28: BlogPost = {
   id: "new-28",
-  title: "Real-Time Document Validation API — Patterns That Work",
+  title: "Real-Time Document Validation API: 1.8s p50 in 2026",
   slug: "real-time-document-validation-api",
   excerpt:
-    "Our first 'real-time' validation API took 47 seconds per document. The customer onboarding team called it 'real-time only by lawyer standards.' Here is how we got to under 2 seconds.",
+    "Our first real-time validation API took 47 seconds per doc. After three architecture rewrites it runs at 1.8s p50. The patterns that got us there.",
   description:
-    "Real-time document validation API — the architecture patterns that actually deliver sub-2-second validation for KYC, onboarding, and payment workflows.",
-  metaTag: "Real-Time Document Validation API — Patterns",
+    "Our first real-time validation API took 47 seconds per doc. After three architecture rewrites it runs at 1.8s p50. The patterns that got us there.",
+  metaTag: "Real-Time Document Validation API: 1.8s p50 (2026)",
   content: `
     <p>Our first attempt at a real-time document validation API took 47 seconds per document. The customer onboarding team called it "real-time only by lawyer standards." Six months and three architecture rewrites later, we shipped a 1.8-second median latency. This guide is what changed.</p>
     <p>If you are building or buying a real-time document validation pipeline — for KYC, customer onboarding, payment processing, or payroll — and the word "real-time" actually matters to your users, read this.</p>
@@ -140,8 +140,8 @@ export const blog28: BlogPost = {
   category: "AI Document Intelligence",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-06-18T00:00:00.000Z",
-  last_updated: "June 18, 2026",
+  dateModified: "2026-06-25T00:00:00.000Z",
+  last_updated: "June 25, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "real-time document validation api",
