@@ -3,13 +3,13 @@ import { nupuraUghade } from "../authors"
 
 export const blog03: BlogPost = {
   id: "new-03",
-  title: "OCR a PDF: The Honest Guide From 4M Pages a Month",
+  title: "OCR a PDF: 4M-Pages-a-Month Lessons From Production (2026)",
   slug: "ocr-pdf-honest-guide",
   excerpt:
-    "Everything I learned running OCR on 4 million PDF pages a month — what breaks, what works, and the corners that marketing decks always skip.",
+    "Everything I learned running OCR on 4 million PDF pages a month — what breaks, what works, and the engineering corners marketing decks always skip.",
   description:
-    "Honest guide to OCR-ing PDFs from a team processing 4 million pages a month — failures, fixes, and the engineering corners most blogs skip.",
-  metaTag: "OCR a PDF: Honest Guide From 4M Pages a Month",
+    "What 4M PDF pages a month taught us about OCR: rotated pages, broken tables, faded scans, and the engineering corners marketing decks skip. Founder write-up, 2026.",
+  metaTag: "OCR a PDF: 4M Pages/Month Production Lessons (2026)",
   content: `
     <p>I run a system that turns about four million PDF pages a month into searchable text. None of it is glamorous. Most of my time goes to fighting rotated pages, broken tables, and faded scans that look fine to a human and look like static to a computer.</p>
     <p>This guide is the unromantic version of what OCR-ing PDFs is actually like. I will explain it simply enough that a kid could follow along, and honestly enough that an engineer at scale will still find it useful.</p>
@@ -126,8 +126,8 @@ export const blog03: BlogPost = {
   category: "OCR How-To",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-06-17T00:00:00.000Z",
-  last_updated: "June 17, 2026",
+  dateModified: "2026-06-29T00:00:00.000Z",
+  last_updated: "June 29, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "ocr pdf",
