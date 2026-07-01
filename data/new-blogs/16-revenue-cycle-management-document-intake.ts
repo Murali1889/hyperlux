@@ -3,13 +3,13 @@ import { nupuraUghade } from "../authors"
 
 export const blog16: BlogPost = {
   id: "new-16",
-  title: "Revenue Cycle Management: Why Your AR Is Stuck on Document Intake",
+  title: "RCM: Why 12-Day Document Intake Is Killing Your AR (2026)",
   slug: "revenue-cycle-management-document-intake",
   excerpt:
-    "Our AR aging report blamed customers. The real problem was 12-day document intake. Here is how to find your own stuck step and fix it.",
+    "Our AR aging report blamed customers. The real problem was 12-day document intake. Here's how we found our stuck step and cut intake to 18 hours.",
   description:
-    "Revenue cycle management explained — why most stuck AR traces back to document intake, how to measure your own intake time, and the fix.",
-  metaTag: "Revenue Cycle Management: AR Stuck on Document Intake",
+    "Our AR aging report blamed customers. The real problem was 12-day document intake. How to find your own stuck step and cut RCM intake from days to hours in 2026.",
+  metaTag: "RCM: 12-Day Intake Is Killing Your AR (Fix in 2026)",
   content: `
     <p>Our AR aging report told a story: customers paying slowly, lots of disputed invoices, cash flow lumpy. The fix everyone proposed was "send more reminders" and "tighten credit terms". We did. It barely moved the needle.</p>
     <p>The real problem was 12-day document intake. Between a customer sending us the documents needed to process their claim and us actually having those documents in our system as structured data, twelve days passed on average. Most of our AR drag was upstream of payment. This is the story of how we found it and fixed it.</p>
@@ -130,8 +130,8 @@ export const blog16: BlogPost = {
   category: "Compliance",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-06-17T00:00:00.000Z",
-  last_updated: "June 17, 2026",
+  dateModified: "2026-06-29T00:00:00.000Z",
+  last_updated: "June 29, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "what is revenue cycle management",

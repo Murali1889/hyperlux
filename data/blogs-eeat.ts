@@ -42,35 +42,53 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
 
   "smarter-invoice-processing-the-ocr-advantage-for-finance-departments": {
     description:
-      "From $14 per invoice to $2.70 — the exact playbook one finance team used to cut AP processing time by 96% with OCR.",
+      "One AP team took invoice cost from $14 to $2.70 in 90 days. Field manual: 6-step pipeline, staged rollout, tools by volume tier, and the 4 mistakes that kill projects.",
     primary_keyword: "invoice processing ocr",
     secondary_keywords: [
       "ocr invoice",
       "invoice ocr software",
+      "invoice ocr api",
+      "invoice processing api",
+      "ocr invoice processing",
       "accounts payable automation",
       "automated invoice processing",
       "ap automation",
     ],
     datePublished: "2025-05-12T00:00:00.000Z",
-    dateModified: DATE_MODIFIED,
-    last_updated: LAST_UPDATED,
+    dateModified: "2026-07-01T00:00:00.000Z",
+    last_updated: "July 1, 2026",
     tags: ["invoice processing", "OCR", "AP automation", "finance"],
     cluster: "ocr",
     faq: [
       {
+        question: "What is OCR invoice processing?",
+        answer:
+          "OCR invoice processing is software that reads incoming invoices (PDF, scan, or image) and converts them into structured data — vendor, invoice number, PO, line items, total, due date — that flows into your AP system. Unlike generic OCR, invoice OCR validates totals, matches to purchase orders, and routes low-confidence extractions to a human review queue.",
+      },
+      {
         question: "How much does OCR reduce invoice processing cost?",
         answer:
-          "Real customer data: from roughly $14 per invoice (manual) to $2.70 per invoice with OCR. Most teams see 70-85% cost reduction within six months.",
+          "Real customer data: from roughly $14 per invoice (manual) to $2.70 per invoice with OCR — 80% cost reduction. Most teams see 70-85% reduction within six months. Payback below one quarter for teams processing 2,000+ invoices per month.",
+      },
+      {
+        question: "What's the touchless processing rate on invoice OCR in 2026?",
+        answer:
+          "60-80% for repeat-vendor invoices with modern layout-aware OCR. 30-50% for first-time vendors. Near-zero for handwritten invoices. Touchless rate is the number that actually matters for AP economics — it directly drives per-invoice cost.",
       },
       {
         question: "What's the error rate on OCR invoice extraction?",
         answer:
-          "Modern invoice OCR averages 95-99% on clean PDFs. Touchless processing rates (no human review) typically reach 60-80% for repeat vendors.",
+          "Modern invoice OCR averages 97-99% field-level accuracy on clean PDFs from repeat vendors. Touchless processing rates (no human review) typically reach 60-80% for repeats. Error rate on the four critical fields (vendor, PO, total, due date) is typically under 1% on repeat-vendor invoices.",
+      },
+      {
+        question: "What's the best invoice OCR software in 2026?",
+        answer:
+          "Depends on volume and ERP. Under 500/month with QuickBooks/Xero: Bill.com or Melio. 500-5,000/month mid-market: AvidXchange or Tipalti. 5,000+/month enterprise: Basware, Coupa, or custom stack on AWS Textract, Google Document AI, or DocsAPI. Trial on your real invoices before signing.",
       },
       {
         question: "Can OCR handle invoices from new vendors?",
         answer:
-          "AI-powered OCR doesn't need per-vendor templates anymore. It identifies invoice fields by context — vendor name, total, due date, line items — even on layouts it has never seen.",
+          "AI-powered OCR doesn't need per-vendor templates anymore. It identifies invoice fields by context — vendor name, total, due date, line items — even on layouts it has never seen. First-time-vendor touchless rate typically 30-50%; repeat vendors climb to 60-80% within 3 months.",
       },
     ],
   },

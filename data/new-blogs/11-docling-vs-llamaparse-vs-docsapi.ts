@@ -3,13 +3,13 @@ import { nupuraUghade } from "../authors"
 
 export const blog11: BlogPost = {
   id: "new-11",
-  title: "Docling vs LlamaParse vs DocsAPI: An Honest Comparison",
+  title: "Docling vs LlamaParse vs DocsAPI: 1,200-Doc Benchmark (2026)",
   slug: "docling-vs-llamaparse-vs-docsapi",
   excerpt:
-    "We benchmarked all three on 1,200 real documents over a weekend. Here is which won on tables, which won on speed, and which won on developer experience.",
+    "We benchmarked all three on 1,200 real documents over a weekend. Which won on tables, which on speed, which on developer experience — and which lost.",
   description:
-    "Docling vs LlamaParse vs DocsAPI — honest benchmarks on 1,200 real documents covering tables, speed, accuracy, and developer experience.",
-  metaTag: "Docling vs LlamaParse vs DocsAPI: Honest Comparison",
+    "Benchmarked on 1,200 real docs: which of Docling, LlamaParse, or DocsAPI wins on tables, speed, accuracy, and developer experience in 2026. Founder write-up.",
+  metaTag: "Docling vs LlamaParse vs DocsAPI: 1,200-Doc Test (2026)",
   content: `
     <p>We benchmarked Docling, LlamaParse, and DocsAPI on 1,200 real documents over a weekend in May. The results surprised me. Each tool wins on a specific axis. None of them is the universal answer, and most blog posts comparing them are wrong about which is best at what.</p>
     <p>I am the founder of DocsAPI. I tried to be honest about where it lost. This guide is the writeup.</p>
@@ -152,8 +152,8 @@ export const blog11: BlogPost = {
   category: "AI Document Intelligence",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-06-22T00:00:00.000Z",
-  last_updated: "June 22, 2026",
+  dateModified: "2026-06-29T00:00:00.000Z",
+  last_updated: "June 29, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "docling",

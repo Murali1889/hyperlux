@@ -3,13 +3,13 @@ import { nupuraUghade } from "../authors"
 
 export const blog15: BlogPost = {
   id: "new-15",
-  title: "Anti-Money Laundering Document Checks: The 7-Field Minimum",
+  title: "AML Document Checks: The 7-Field Minimum (Audited 2026)",
   slug: "aml-document-checks",
   excerpt:
-    "FinCEN does not tell you which fields actually matter. After three audits and a year of operations, here is the seven-field minimum that survives review.",
+    "FinCEN doesn't tell you which fields actually matter. After 3 audits and a year of operations, here's the 7-field minimum that survives review.",
   description:
-    "Anti-Money Laundering document checks — the seven fields that survive regulatory review, common compliance failures, and how to operationalize AML doc workflows.",
-  metaTag: "AML Document Checks: The 7-Field Minimum (2026)",
+    "FinCEN doesn't tell you which fields matter. After 3 audits and a year in production, here's the 7-field AML minimum that survives review in 2026.",
+  metaTag: "AML Document Checks: 7-Field Minimum (3 Audits Survived)",
   content: `
     <p>FinCEN does not tell you which fields actually matter in AML document checks. The CFR has the high-level rules. The exam manual has examples. Neither tells you "if you capture these seven fields per document, you will pass audit." After three audits and a year of operations, I have a working answer.</p>
     <p>This guide is the seven-field minimum that has survived review, the patterns that fail, and how to operationalize AML document workflows without overengineering.</p>
@@ -137,8 +137,8 @@ export const blog15: BlogPost = {
   category: "Compliance",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-06-17T00:00:00.000Z",
-  last_updated: "June 17, 2026",
+  dateModified: "2026-06-29T00:00:00.000Z",
+  last_updated: "June 29, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "anti-money laundering",
