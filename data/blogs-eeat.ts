@@ -281,31 +281,7 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
     ],
   },
 
-  "passport-ocr-revolutionizing-document-processing-with-intelligent-solutions": {
-    description:
-      "Modern passport OCR explained: how MRZ scanning, document detection, and AI verification combine for sub-5-second identity checks.",
-    primary_keyword: "passport ocr software",
-    secondary_keywords: [
-      "passport scanner",
-      "passport verification",
-      "kyc onboarding",
-      "id document automation",
-      "mrz extraction",
-    ],
-    datePublished: "2025-06-03T00:00:00.000Z",
-    dateModified: DATE_MODIFIED,
-    last_updated: LAST_UPDATED,
-    tags: ["passport OCR", "KYC", "identity verification"],
-    cluster: "compliance",
-    faq: [
-      {
-        question: "How accurate is passport OCR?",
-        answer:
-          "Top systems hit 99%+ on the MRZ (it's designed for machine reading) and 97-99% on the visual inspection zone. Edge cases: damaged passports, photocopies, and emergency travel documents.",
-      },
-    ],
-  },
-
+  
   "legal-document-automation-the-complete-guide-for-modern-law-firms": {
     description:
       "Practical guide to legal document automation: what works, what doesn't, and the change-management traps law firms keep falling into.",
