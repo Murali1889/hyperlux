@@ -3,12 +3,12 @@ import { nupuraUghade } from "../authors"
 
 export const blog18: BlogPost = {
   id: "new-18",
-  title: "AWS Textract vs DocsAPI: Where Textract Wins, Where It Doesn't",
+  title: "AWS Textract vs DocsAPI: Honest 2026 Comparison",
   slug: "aws-textract-vs-docsapi",
   excerpt:
     "I built on AWS Textract for two years. Here is an honest breakdown of where Textract is the right pick and where I eventually moved off.",
   description:
-    "AWS Textract vs DocsAPI — honest comparison from someone who shipped on Textract for two years. Where Textract wins, where it falls short, and the migration path.",
+    "AWS Textract vs DocsAPI — honest comparison from shipping on Textract for two years. Where Textract wins, falls short, and the migration path.",
   metaTag: "AWS Textract vs DocsAPI: An Honest Comparison",
   content: `
     <p>I built on AWS Textract for two years. It was the right call when we started. By month 20 the gaps were big enough that we moved to a different stack. This is the honest breakdown of where Textract still wins, where it doesn't, and what to consider if you are picking between Textract and DocsAPI today.</p>

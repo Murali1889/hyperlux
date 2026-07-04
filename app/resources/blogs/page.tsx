@@ -6,7 +6,7 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/resources/blogs"
-const TITLE = "OCR & Document AI Blog — DocsAPI"
+const TITLE = "OCR & Document AI Blog — Honest 2026 Guides"
 const DESCRIPTION =
   "Honest guides on OCR, PDF parsing, document AI, KYC/AML compliance, and lending automation. 34 in-depth posts from the DocsAPI team."
 

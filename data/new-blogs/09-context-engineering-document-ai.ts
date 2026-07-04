@@ -3,7 +3,7 @@ import { nupuraUghade } from "../authors"
 
 export const blog09: BlogPost = {
   id: "new-09",
-  title: "Context Engineering for Document AI: Why RAG Alone Falls Short",
+  title: "Context Engineering for Document AI (Beyond RAG, 2026)",
   slug: "context-engineering-document-ai",
   excerpt:
     "My first RAG demo for invoice Q&A failed in front of the CFO. The fix was not better embeddings — it was better context engineering. Here is what I learned.",
