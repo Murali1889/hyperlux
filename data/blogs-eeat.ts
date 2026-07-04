@@ -6,7 +6,7 @@ const DATE_MODIFIED = "2026-06-18T00:00:00.000Z"
 export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
   "revolutionizing-document-management-with-ocr-technology": {
     description:
-      "An honest, story-driven look at how AI-powered OCR is rewriting document management — what works, what fails, and the numbers behind the change.",
+      "OCR document management in 2026: the five-layer stack, cost comparison across 5 approaches ($0 to $360K/year), 90-day rollout playbook, and 6 FAQs.",
     primary_keyword: "ocr document management",
     secondary_keywords: [
       "ocr technology",
@@ -15,10 +15,12 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "ocr software",
       "intelligent document processing",
       "automated data extraction",
+      "document management system ocr",
+      "ocr document management system",
     ],
     datePublished: "2025-05-12T00:00:00.000Z",
-    dateModified: DATE_MODIFIED,
-    last_updated: LAST_UPDATED,
+    dateModified: "2026-07-04T00:00:00.000Z",
+    last_updated: "July 4, 2026",
     tags: ["OCR", "document management", "AI", "automation", "fintech"],
     cluster: "ocr",
     faq: [
