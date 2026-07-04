@@ -29,6 +29,7 @@ import { blog27 } from "./new-blogs/27-ocr-meaning-finance"
 import { blog28 } from "./new-blogs/28-real-time-document-validation-api"
 import { blog29 } from "./new-blogs/29-ocr-finance"
 import { blog30 } from "./new-blogs/30-accounts-payable-ocr"
+import { blog31 } from "./new-blogs/31-best-ocr-software-accounts-payable"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -61,4 +62,5 @@ export const newBlogs: BlogPost[] = [
   blog28,
   blog29,
   blog30,
+  blog31,
 ]

@@ -8,8 +8,8 @@ export const blog26: BlogPost = {
   excerpt:
     "The single step that improved our OCR pipeline accuracy by 8 percentage points was not better OCR. It was classification. Here is what classification software actually does and how to pick one.",
   description:
-    "Adding classification before OCR lifted our pipeline accuracy 8 percentage points. What classification software does, how to pick one in 2026.",
-  metaTag: "Document Classification Software: 8-Point Accuracy Lift",
+    "Document classification software identifies invoices, statements, IDs, and tax forms before extraction — lifting downstream OCR accuracy 8 points. Tools, cost, how to pick, in 2026.",
+  metaTag: "Document Classification Software (Tools + Cost, 2026)",
   content: `
     <p>The single step that improved our OCR pipeline accuracy by 8 percentage points was not switching OCR engines. It was adding a document classification step before OCR. The model says "this is a bank statement" or "this is an invoice", we route to the right extraction template, and accuracy on per-field extraction jumps. Classification is the most underrated step in document AI. This guide is what it actually does and how to pick a vendor.</p>
     <p>If you are building any pipeline that processes more than one document type — and almost all real pipelines do — read this.</p>
@@ -136,8 +136,8 @@ export const blog26: BlogPost = {
   category: "AI Document Intelligence",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-06-25T00:00:00.000Z",
-  last_updated: "June 25, 2026",
+  dateModified: "2026-07-04T00:00:00.000Z",
+  last_updated: "July 4, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "document classification software",

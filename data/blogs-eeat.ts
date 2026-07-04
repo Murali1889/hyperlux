@@ -125,30 +125,53 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
 
   "idp-vs-ocr-understanding-the-key-differences-for-automation-success": {
     description:
-      "OCR reads text. IDP understands documents. Here's where the line actually is — and which one your stack needs.",
+      "OCR reads pixels. IDP runs a workflow. The 2026 comparison — accuracy, cost, output type, plus when each wins and named vendors in every category.",
     primary_keyword: "idp vs ocr",
     secondary_keywords: [
-      "intelligent document processing",
-      "ocr technology",
-      "document ai",
       "ocr vs idp",
+      "ocr idp",
+      "idp ocr",
+      "what is the difference between ocr and idp",
+      "intelligent document processing vs ocr",
+      "intelligent document processing",
+      "document ai",
       "document automation",
     ],
     datePublished: "2025-05-27T00:00:00.000Z",
-    dateModified: DATE_MODIFIED,
-    last_updated: LAST_UPDATED,
+    dateModified: "2026-07-04T00:00:00.000Z",
+    last_updated: "July 4, 2026",
     tags: ["IDP", "OCR", "comparison", "document AI"],
     cluster: "ocr",
     faq: [
       {
+        question: "What's the difference between OCR and IDP?",
+        answer:
+          "OCR converts pixels into text — nothing more. IDP bundles OCR with classification (what type of document?), extraction (which values?), validation (do totals reconcile?), and routing (where does structured output go?). Every IDP platform contains OCR; no OCR API contains IDP.",
+      },
+      {
         question: "Is IDP just a rebrand of OCR?",
         answer:
-          "No. OCR converts pixels into text. IDP wraps OCR with classification, extraction, validation, and routing into business systems. IDP includes OCR as one component — you can have OCR without IDP, not the other way around.",
+          "No. IDP is a workflow layer built on top of OCR. OCR reads text; IDP classifies documents, extracts fields, validates business rules, and routes structured output to downstream systems. In production, OCR gets you 82% field accuracy; IDP typically hits 92-99% because the validation layer catches errors OCR alone can't.",
       },
       {
         question: "When should I pick OCR over IDP?",
         answer:
-          "Pick plain OCR when documents are highly uniform (single template) and downstream systems just need raw text. Pick IDP when document layouts vary, when you need structured field extraction, or when downstream systems expect classified, validated data.",
+          "Pick pure OCR when documents are highly uniform (single template), downstream systems need only raw searchable text (archival, discovery), or you have engineering capacity to build the classification + validation + routing layers yourself and want to control every step. Pick OCR at 10K+ docs/month if unit economics matter — DIY often beats IDP at scale.",
+      },
+      {
+        question: "When should I pick IDP over OCR?",
+        answer:
+          "Pick IDP when document layouts vary, when you need structured field extraction into an ERP or workflow tool, or when you don't have engineering capacity to build the classification + validation + routing layers yourself. IDP is the right pick under 500 docs/month with multiple types — the engineering time to build the layers dwarfs the vendor fee.",
+      },
+      {
+        question: "What's the accuracy difference between OCR and IDP?",
+        answer:
+          "In production, OCR alone typically stalls at 80-85% field-level usable accuracy because there's no validation layer. IDP hits 92-99% because it reconciles extracted totals against document totals, applies business rules, and routes low-confidence rows to a human review queue. The gap is 10-15 percentage points on the same underlying OCR engine.",
+      },
+      {
+        question: "Which OCR and IDP vendors should I evaluate in 2026?",
+        answer:
+          "Raw OCR APIs: Tesseract (free), AWS Textract, Google Document AI, DocsAPI. IDP platforms: Bill.com and AvidXchange for AP, Ocrolus and Plaid CRA for lending, Mindee and Rossum for document AI, Basware and Coupa for enterprise procure-to-pay. Always trial on your real documents before signing — vendor demos use clean files.",
       },
     ],
   },
