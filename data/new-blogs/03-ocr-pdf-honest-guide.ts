@@ -8,7 +8,7 @@ export const blog03: BlogPost = {
   excerpt:
     "Everything I learned running OCR on 4 million PDF pages a month — what breaks, what works, and the engineering corners marketing decks always skip.",
   description:
-    "What 4M PDF pages a month taught us about OCR: rotated pages, broken tables, faded scans, and the engineering corners marketing decks skip. Founder write-up, 2026.",
+    "What 4M PDF pages a month taught us about OCR: rotated pages, broken tables, faded scans, and the corners marketing decks skip. Founder write-up, 2026.",
   metaTag: "OCR a PDF: 4M Pages/Month Production Lessons (2026)",
   content: `
     <p>I run a system that turns about four million PDF pages a month into searchable text. None of it is glamorous. Most of my time goes to fighting rotated pages, broken tables, and faded scans that look fine to a human and look like static to a computer.</p>

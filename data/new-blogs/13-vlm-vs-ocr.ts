@@ -3,7 +3,7 @@ import { nupuraUghade } from "../authors"
 
 export const blog13: BlogPost = {
   id: "new-13",
-  title: "VLM vs OCR: When to Use a Vision-Language Model (And When Not)",
+  title: "VLM vs OCR: When to Use Each in Production (2026)",
   slug: "vlm-vs-ocr",
   excerpt:
     "We tried Claude 4.6 vision on tables. It cost 12x dedicated OCR per page. Here is when that math works, when it doesn't, and the hybrid that wins most.",

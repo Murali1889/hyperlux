@@ -3,7 +3,7 @@ import { nupuraUghade } from "../authors"
 
 export const blog07: BlogPost = {
   id: "new-07",
-  title: "PDF Parser Online: Why Most Tools Mangle Tables (And the Fix)",
+  title: "PDF Parser Online: Why Most Tools Mangle Tables",
   slug: "pdf-parser-online",
   excerpt:
     "Our first PDF parser mangled every single bank statement table. Six months later we shipped one that didn't. Here is what we learned about why most parsers break — and how to pick one that won't.",

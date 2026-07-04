@@ -8,7 +8,7 @@ export const blog30: BlogPost = {
   excerpt:
     "One AP team took invoice processing from $14 per invoice to $2.70 in 90 days by replacing manual entry with layout-aware OCR. The pillar guide — how it works, what breaks, what to buy in 2026.",
   description:
-    "Accounts payable OCR: how one AP team cut invoice cost from $14 to $2.70 in 90 days. Tools, workflows, error rates, and the 6-step pipeline that actually works in 2026.",
+    "Accounts payable OCR: how one AP team cut invoice cost from $14 to $2.70 in 90 days. Tools, workflows, error rates, and the 6-step pipeline that works in 2026.",
   metaTag: "Accounts Payable OCR: $14 → $2.70/Invoice in 90 Days",
   content: `
     <p>The AP team I worked with was processing 4,200 invoices per month at $14 per invoice fully-loaded. Manual data entry, chase emails to vendors for missing POs, disputed amounts caught weeks after the fact. Ninety days after we shipped a layout-aware OCR pipeline plus a validation-first exception queue, the same team was processing 5,800 invoices at $2.70 each. Same team size, more volume, 80% cost reduction. This is the pillar guide for accounts payable OCR — what it is, how it works, and what to actually buy in 2026.</p>

@@ -3,7 +3,7 @@ import { nupuraUghade } from "../authors"
 
 export const blog20: BlogPost = {
   id: "new-20",
-  title: "PaddleOCR vs Tesseract vs DocsAPI: A Builder's Honest Benchmark",
+  title: "PaddleOCR vs Tesseract vs DocsAPI: 2026 Benchmark",
   slug: "paddleocr-vs-tesseract-vs-docsapi",
   excerpt:
     "I ran all three on the same 500-document test set. The winner depends on what 'winner' actually means. Here is the unfiltered breakdown.",

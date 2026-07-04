@@ -3,12 +3,12 @@ import { nupuraUghade } from "../authors"
 
 export const blog31: BlogPost = {
   id: "new-31",
-  title: "Best OCR Software for Accounts Payable: 8 Tools Ranked (2026)",
+  title: "Best OCR Software for Accounts Payable (2026 Buyer Guide)",
   slug: "best-ocr-software-for-accounts-payable",
   excerpt:
     "We trialed 8 AP OCR tools on 200 real invoices across QuickBooks, NetSuite, and SAP stacks. The 2026 buyer's guide — who wins on touchless rate, ERP integration, and total cost.",
   description:
-    "8 AP OCR tools trialed on 200 real invoices. Bill.com, AvidXchange, Tipalti, Basware, Coupa, DocsAPI ranked by touchless rate, ERP fit, and cost. 2026 buyer's guide.",
+    "8 AP OCR tools trialed on 200 real invoices. Bill.com, AvidXchange, Tipalti, Basware, DocsAPI ranked by touchless rate, ERP fit, cost. 2026.",
   metaTag: "Best OCR Software for Accounts Payable: 8 Tools (2026)",
   content: `
     <p>Every AP OCR vendor claims 99% touchless. Two years and 200 real invoices later — trialed across QuickBooks, NetSuite, and SAP customer stacks — I can tell you almost none of them actually hit that number on messy production invoices. Some ship the workflow you need out of the box; some need six months of template tuning; some are overpriced platforms wrapping a $0.03 OCR API. This is the honest 2026 buyer's guide for the best OCR software for accounts payable — 8 tools ranked by touchless rate, ERP fit, and total cost of ownership.</p>

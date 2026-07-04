@@ -8,7 +8,7 @@ export const blog16: BlogPost = {
   excerpt:
     "Our AR aging report blamed customers. The real problem was 12-day document intake. Here's how we found our stuck step and cut intake to 18 hours.",
   description:
-    "Our AR aging report blamed customers. The real problem was 12-day document intake. How to find your own stuck step and cut RCM intake from days to hours in 2026.",
+    "Our AR aging blamed customers. The real problem was 12-day document intake. Find your own stuck step and cut RCM intake from days to hours in 2026.",
   metaTag: "RCM: 12-Day Intake Is Killing Your AR (Fix in 2026)",
   content: `
     <p>Our AR aging report told a story: customers paying slowly, lots of disputed invoices, cash flow lumpy. The fix everyone proposed was "send more reminders" and "tighten credit terms". We did. It barely moved the needle.</p>

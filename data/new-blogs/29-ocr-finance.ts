@@ -8,7 +8,7 @@ export const blog29: BlogPost = {
   excerpt:
     "OCR in finance handles invoices, bank statements, tax forms, loan packets, and IDs at 92-99% accuracy and under $0.05 per page. The pillar guide — what it does, the tools that work, and the cost math from production.",
   description:
-    "OCR in finance: 92-99% accuracy at $0.01-$0.05/page in 2026. Tools, use cases, vendor selection, and the cost-savings math from a 8,000-statement/month production workload.",
+    "OCR in finance: 92-99% accuracy at $0.01-$0.05/page in 2026. Tools, use cases, vendor selection, and cost-savings math from production.",
   metaTag: "OCR in Finance 2026: Tools, Cost, Accuracy",
   content: `
     <p>I have built finance OCR pipelines that processed 4 million pages a month and OCR pipelines that died at 200 pages a week. The difference was never the engine — it was matching the right tool to the document type and writing the validation rules that catch the errors before they reach accounting. This is the pillar guide for OCR in finance: what it does, what it actually costs, and which tools win in 2026 by use case.</p>
