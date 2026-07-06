@@ -245,8 +245,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "id document ocr",
     ],
     datePublished: "2025-05-28T00:00:00.000Z",
-    dateModified: DATE_MODIFIED,
-    last_updated: LAST_UPDATED,
+    dateModified: "2026-07-06T00:00:00.000Z",
+    last_updated: "July 6, 2026",
     tags: ["passport OCR", "KYC", "identity", "MRZ"],
     cluster: "compliance",
     faq: [
@@ -270,8 +270,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "ocr for accountants",
     ],
     datePublished: "2025-06-02T00:00:00.000Z",
-    dateModified: DATE_MODIFIED,
-    last_updated: LAST_UPDATED,
+    dateModified: "2026-07-06T00:00:00.000Z",
+    last_updated: "July 6, 2026",
     tags: ["OCR", "finance", "accounting", "automation"],
     cluster: "ocr",
     faq: [
@@ -296,8 +296,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "document assembly",
     ],
     datePublished: "2025-06-05T00:00:00.000Z",
-    dateModified: DATE_MODIFIED,
-    last_updated: LAST_UPDATED,
+    dateModified: "2026-07-06T00:00:00.000Z",
+    last_updated: "July 6, 2026",
     tags: ["legal", "automation", "law firm", "document assembly"],
     cluster: "industry-trends",
     faq: [
@@ -418,8 +418,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
         "fintech lending",
       ],
       datePublished: "2025-06-27T00:00:00.000Z",
-      dateModified: DATE_MODIFIED,
-      last_updated: LAST_UPDATED,
+      dateModified: "2026-07-06T00:00:00.000Z",
+      last_updated: "July 6, 2026",
       tags: ["SBA loans", "lending", "automation", "small business"],
       cluster: "industry-trends",
       faq: [
