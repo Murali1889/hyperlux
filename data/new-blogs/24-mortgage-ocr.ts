@@ -104,6 +104,28 @@ export const blog24: BlogPost = {
     <p>Imagine you hire a careful junior employee whose only job is to open every mortgage packet, sort the documents, type the important numbers into your LOS, and flag the things that look wrong. She does this in 90 minutes per packet. She does not make mistakes on pay stubs. She catches obvious income discrepancies before underwriting sees them.</p>
     <p>That is mortgage OCR. Your borrowers experience a faster close. Your team focuses on the judgment-heavy parts of underwriting instead of the data-entry parts. Your investor delivery is cleaner.</p>
 
+    <h2>Mortgage OCR accuracy by document type</h2>
+    <p>Mortgage OCR accuracy varies dramatically by document type within a single packet, and knowing the per-type accuracy tells you exactly where to concentrate your human review queue. The standardized documents extract near-perfectly; the variable and self-employed documents need human eyes. Budget your exception-review capacity accordingly.</p>
+
+    <table>
+      <thead><tr><th>Document type</th><th>Field accuracy</th><th>Review priority</th></tr></thead>
+      <tbody>
+        <tr><td>Pay stubs</td><td>97-99%</td><td>Low — standardized layout</td></tr>
+        <tr><td>W-2 forms</td><td>98-99%</td><td>Low — fixed IRS layout</td></tr>
+        <tr><td>Bank statements</td><td>95-98%</td><td>Medium — multi-page tables</td></tr>
+        <tr><td>Personal tax returns (1040)</td><td>94-97%</td><td>Medium — many schedules</td></tr>
+        <tr><td>Business tax returns (1120/1065)</td><td>85-92%</td><td>High — complex, self-employed</td></tr>
+        <tr><td>Appraisals</td><td>85-90%</td><td>High — narrative + tables</td></tr>
+        <tr><td>ID documents</td><td>97-99%</td><td>Low — MRZ checksummed</td></tr>
+        <tr><td>Employment verification letters</td><td>88-94%</td><td>Medium — free-form</td></tr>
+      </tbody>
+    </table>
+
+    <p>The pattern: standardized government and payroll documents extract cleanly; self-employed borrower documents (business returns) and narrative documents (appraisals) need the most human review. A self-employed applicant's packet needs 3-4x the review time of a W-2 employee's packet — factor that into your capacity planning.</p>
+
+    <h2>Real deployment: a $3B regional lender's mortgage rollout</h2>
+    <p>A $3B-asset regional lender deployed mortgage OCR in Q4 2025. Starting state: processors spent 8-12 hours per file reviewing 300-500 page packets, ~180 mortgages/month, 34-day average time-to-close that was losing deals to faster competitors. The deployment paired OCR + classification (segmenting each packet into the eight document types) with a custom validation layer that cross-checked income figures across pay stubs, tax returns, and bank statements for consistency. Anything below 95% confidence routed to a review queue. Six months later: document review dropped to 2-3 hours per file, time-to-close fell to 19 days, and monthly volume grew to 240 mortgages with the same processing team. The cross-document income validation caught three material misrepresentations in the first quarter that manual review had historically missed. For the banking-regulatory context of deployments like this, see our <a href="/resources/blogs/ocr-technology-in-banking">OCR in banking guide</a>.</p>
+
     <h2>What I'd Do Today</h2>
     <p>If you close under 50 loans per month: try a mortgage-specific OCR vendor on your last 10 closed packets. Measure extraction accuracy on the eight document types above. If you clear 95% on pay stubs, W-2s, and bank statements, the rollout is straightforward.</p>
     <p>If you close 50-500 loans per month: this is where ROI is highest. The time savings compound across the team. Trial a vendor for 30 days on live applications and measure days-to-close before and after.</p>
@@ -134,8 +156,8 @@ export const blog24: BlogPost = {
   category: "Industry Trends",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-06-25T00:00:00.000Z",
-  last_updated: "June 25, 2026",
+  dateModified: "2026-07-12T00:00:00.000Z",
+  last_updated: "July 12, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "mortgage ocr",

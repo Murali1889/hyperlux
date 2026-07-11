@@ -347,8 +347,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "finance ocr software",
     ],
     datePublished: "2025-06-12T00:00:00.000Z",
-    dateModified: "2026-06-22T00:00:00.000Z",
-    last_updated: "June 22, 2026",
+    dateModified: "2026-07-12T00:00:00.000Z",
+    last_updated: "July 12, 2026",
     tags: ["bank statement OCR", "fintech", "OCR", "lending", "AP automation"],
     cluster: "ocr",
     faq: [
@@ -392,8 +392,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "cash flow analysis",
     ],
     datePublished: "2025-06-18T00:00:00.000Z",
-    dateModified: DATE_MODIFIED,
-    last_updated: LAST_UPDATED,
+    dateModified: "2026-07-12T00:00:00.000Z",
+    last_updated: "July 12, 2026",
     tags: ["lending", "bank statements", "underwriting", "AI"],
     cluster: "industry-trends",
     faq: [
