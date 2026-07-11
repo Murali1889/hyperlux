@@ -111,6 +111,53 @@ export const blog29: BlogPost = {
     <h3>Mistake 3: No human review queue</h3>
     <p>Even at 98% accuracy, 2% of documents need a human pass. Without a structured review queue with low-confidence fields pre-highlighted, those documents sit in someone's inbox and the project loses trust within a quarter.</p>
 
+    <h2>Finance OCR by industry vertical: what changes</h2>
+
+    <p>Finance OCR isn't one workflow — it's a dozen different workflows that share an OCR layer but diverge completely on document types, validation rules, and regulatory constraints. The vertical you're in determines which documents dominate, which accuracy threshold matters, and which vendors actually fit. Here's how the six biggest finance verticals differ in practice.</p>
+
+    <h3>Banking and lending</h3>
+    <p>Dominant documents: bank statements (multi-page transaction tables), pay stubs, tax returns, loan applications. The critical capability is multi-page table stitching — a 12-page statement must produce one continuous transaction table, not 12 fragments. Accuracy threshold: 97%+ on transaction rows because underwriting decisions ride on cash-flow analysis. Best-fit vendors: Ocrolus, Plaid CRA, DocsAPI. Regulatory layer: fair-lending documentation, ECOA adverse-action records. See our <a href="/resources/blogs/ocr-technology-in-banking">OCR in banking guide</a> for the deeper breakdown.</p>
+
+    <h3>Accounts payable / procurement</h3>
+    <p>Dominant documents: vendor invoices, purchase orders, receipts. The critical capability is PO matching (invoice + PO + receiving = three-way match) and duplicate-invoice detection. Accuracy threshold: 98%+ on vendor/PO/total/due-date because errors create duplicate payments. Best-fit vendors: Bill.com, AvidXchange, Tipalti, or DocsAPI for custom stacks. See our <a href="/resources/blogs/accounts-payable-ocr">accounts payable OCR pillar</a>.</p>
+
+    <h3>Insurance</h3>
+    <p>Dominant documents: claims forms, medical bills, police reports, ACORD forms. The critical capability is handling handwritten claim narratives and mixed structured/unstructured content. Accuracy threshold: varies — structured ACORD fields need 98%, narrative fields tolerate lower. Best-fit vendors: platforms with strong handwriting recognition plus claims-specific templates.</p>
+
+    <h3>Wealth management and audit</h3>
+    <p>Dominant documents: brokerage statements, K-1 partnership allocations, trust documents, historical archives. The critical capability is handling diverse issuer layouts (every brokerage formats statements differently) and long historical backfills. Accuracy threshold: 99%+ because these feed tax and audit workflows. Best-fit vendors: DocsAPI or custom stacks with per-issuer template support.</p>
+
+    <h3>Mortgage</h3>
+    <p>Dominant documents: the full mortgage packet — 300-500 pages spanning pay stubs, tax returns, bank statements, appraisals, title documents. The critical capability is multi-document-type classification within a single packet. Accuracy threshold: 97%+ with heavy validation. Best-fit vendors: mortgage-specific IDP platforms or DocsAPI with classification. See our <a href="/resources/blogs/mortgage-ocr">mortgage OCR field manual</a>.</p>
+
+    <h3>Expense management</h3>
+    <p>Dominant documents: receipts (phone photos, thermal paper, PDFs). The critical capability is mobile-capture quality handling and merchant/category extraction. Accuracy threshold: 92%+ is acceptable because dollar amounts are small and a review layer catches errors cheaply. Best-fit vendors: expense platforms with built-in OCR (most include it now) or lightweight OCR APIs.</p>
+
+    <h2>The finance OCR ROI framework (four-step calculation)</h2>
+
+    <p>Most finance OCR ROI calculations are wrong because they only count the OCR line item and ignore the four cost layers around it. The honest ROI calculation runs in four steps, and doing all four is the difference between a business case that survives CFO scrutiny and one that falls apart in month three.</p>
+
+    <ol>
+      <li><strong>Baseline the manual cost.</strong> Count hours spent on document data entry per month × loaded employee cost ($75-$150/hour). Include the hidden costs: error correction time, late-payment penalties, vendor-dispute resolution, and audit-prep scrambles. Most teams undercount by 30-40% because they only count keying time.</li>
+      <li><strong>Estimate the OCR run cost.</strong> Document volume × per-page or per-document price. For a builder stack, add the cloud infrastructure. This is the only number most vendors quote — and it's usually the smallest of the four.</li>
+      <li><strong>Add the four hidden costs.</strong> Implementation labor (200-400 hours typical), exception queue staffing (~15-20% of the manual FTE cost even at 80% touchless), ERP integration (100-200 engineering hours), and template tuning (~5 hours per new high-volume document source in year one).</li>
+      <li><strong>Compute payback and steady-state savings.</strong> Payback = total setup cost ÷ monthly savings. Steady-state = manual baseline − (OCR run cost + exception staffing). For teams above 2,000 documents/month, payback is typically under one quarter and steady-state savings run 60-80% of the manual baseline.</li>
+    </ol>
+
+    <p>The worked example above (8,000 bank statements, $148K/month savings) is the steady-state number. Add ~$40K one-time setup (implementation + integration), and payback is still under two weeks at that volume. The math only breaks below ~500 documents/month, where setup cost dominates.</p>
+
+    <h2>Finance OCR decision tree: which approach fits you</h2>
+
+    <p>The right finance OCR approach comes down to three variables: monthly document volume, whether your document types match a vendor's pre-built templates, and whether you have engineering capacity. Follow the decision tree.</p>
+
+    <ul>
+      <li><strong>Under 500 documents/month:</strong> Don't buy a paid tool. Use Tesseract + a validation script, or free tier tools. The integration effort exceeds the savings at this volume.</li>
+      <li><strong>500-5,000/month, types match vendor templates, no engineering:</strong> Buy a turn-key finance IDP platform (Bill.com for AP, Ocrolus for lending). Fastest time-to-value.</li>
+      <li><strong>500-5,000/month, unusual document types OR some engineering:</strong> OCR API (Textract, Document AI, DocsAPI) + light custom validation. More flexible, similar cost.</li>
+      <li><strong>5,000-50,000/month:</strong> Hybrid — OCR API for extraction, you own the validation rules and exception queue. Best balance of cost and control.</li>
+      <li><strong>50,000+/month:</strong> Custom stack on a builder OCR API. At this volume, per-document platform fees exceed the cost of owning the pipeline. Unit economics favor DIY.</li>
+    </ul>
+
     <h2>What I'd do today</h2>
 
     <p>For under 500 finance documents per month, build with Tesseract plus custom validation scripts. It will be painful but the math doesn't support paid tools at that volume. For 500-10,000 per month, pick a layout-aware OCR API (Textract, Document AI, or DocsAPI) and trial on 20 of your real documents before signing. For 10,000+ per month, the right answer is a hybrid: vendor handles extraction, you own the validation rules and exception queue. The vendor cost is trivial compared to the time you save; the validation layer is what makes it audit-ready. (<a href="/author/nupura-ughade">More on the build-vs-buy math in my other writing</a>.)</p>
@@ -120,8 +167,8 @@ export const blog29: BlogPost = {
   category: "AI Document Intelligence",
   date: "June 25, 2026",
   datePublished: "2026-06-25T00:00:00.000Z",
-  dateModified: "2026-06-25T00:00:00.000Z",
-  last_updated: "June 25, 2026",
+  dateModified: "2026-07-12T00:00:00.000Z",
+  last_updated: "July 12, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "ocr finance",
