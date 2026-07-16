@@ -11,7 +11,7 @@ export const blog12: BlogPost = {
     "Data normalization is the step that turns extracted document text into usable data. Here is what it covers, why everyone skips it, and how to do it right.",
   metaTag: "Data Normalization for Extracted Documents (2026)",
   content: `
-    <p>After OCR we had "May 12, 2025" and "05/12/2025" and "2025-05-12" all in the same column. The OCR was right — that is what was on the documents. The downstream system was wrong because it expected one format and got three.</p>
+    <p>After OCR we had "May 12, 2025" and "05/12/2025" and "2025-05-12" all in the same column. The OCR was right, that is what was on the documents. The downstream system was wrong because it expected one format and got three.</p>
     <p>The fix was normalization. Boring, unsexy, and the step that separates "we have text" from "we have data". This guide explains what normalization actually covers and how to do it without losing your mind.</p>
 
     <h2>What "Data Normalization" Means in Plain English</h2>
@@ -24,7 +24,7 @@ export const blog12: BlogPost = {
     <p>From production experience, these eight come up in almost every document workflow:</p>
 
     <h3>1. Dates</h3>
-    <p>The hardest of the eight because there are so many formats. American (MM/DD/YYYY) vs European (DD/MM/YYYY) is ambiguous — "05/04/2025" could be May 4 or April 5 depending on origin. The fix: detect locale from the document context (vendor country, language), then parse accordingly. Default to ISO 8601 (YYYY-MM-DD) as the canonical storage format.</p>
+    <p>The hardest of the eight because there are so many formats. American (MM/DD/YYYY) vs European (DD/MM/YYYY) is ambiguous, "05/04/2025" could be May 4 or April 5 depending on origin. The fix: detect locale from the document context (vendor country, language), then parse accordingly. Default to ISO 8601 (YYYY-MM-DD) as the canonical storage format.</p>
 
     <h3>2. Currencies</h3>
     <p>"$1,234.56" vs "1.234,56 €" vs "1234.56 USD". Different decimal markers, different symbols, different positions. Normalize to a decimal number plus a separate currency code. Never store the formatted string.</p>
@@ -39,7 +39,7 @@ export const blog12: BlogPost = {
     <p>"John Smith" vs "Smith, John" vs "Smith John" vs "John A. Smith Jr." Decide a canonical order and store first/middle/last/suffix separately.</p>
 
     <h3>6. Tax IDs and Account Numbers</h3>
-    <p>"123-45-6789" vs "123456789" — same SSN, different format. Normalize by stripping non-digit characters and validating the format matches the expected pattern (length, checksum).</p>
+    <p>"123-45-6789" vs "123456789", same SSN, different format. Normalize by stripping non-digit characters and validating the format matches the expected pattern (length, checksum).</p>
 
     <h3>7. Boolean Indicators</h3>
     <p>"Yes" vs "Y" vs "true" vs "X" (checkbox). All represent the same affirmative. Normalize to a canonical boolean.</p>
@@ -53,10 +53,10 @@ export const blog12: BlogPost = {
     <p>"05/04/2025" is ambiguous without context. You need to know the document's origin country, language, and sometimes the document type to parse correctly. Build a context-aware parser, not a one-size-fits-all regex.</p>
 
     <h3>Pattern 2: OCR Errors Compound Normalization Errors</h3>
-    <p>If OCR reads "5/4/2025" as "5/A/2025", normalization will throw an error or worse — silently produce garbage. Always validate after normalization. If the result doesn't look like a date, flag it for review.</p>
+    <p>If OCR reads "5/4/2025" as "5/A/2025", normalization will throw an error or worse, silently produce garbage. Always validate after normalization. If the result doesn't look like a date, flag it for review.</p>
 
     <h3>Pattern 3: Edge Cases Are Common</h3>
-    <p>"01/01/01" — January 1, 2001 or 1901 or 2101? "$1.00" — one dollar, or one Argentine peso? Build defaults that are conservative and flag anything ambiguous for human review.</p>
+    <p>"01/01/01", January 1, 2001 or 1901 or 2101? "$1.00", one dollar, or one Argentine peso? Build defaults that are conservative and flag anything ambiguous for human review.</p>
 
     <h3>Pattern 4: Normalization Rules Drift</h3>
     <p>USPS abbreviation guidelines change. Currency codes get added. New formats appear. Treat normalization as living code that needs updates, not a one-time write.</p>
@@ -111,7 +111,7 @@ export const blog12: BlogPost = {
     <h2>Frequently Asked Questions</h2>
 
     <h3>What is data normalization for extracted documents?</h3>
-    <p>Data normalization is the step that converts extracted text into a consistent format your systems can use. Dates become ISO 8601, currencies become decimal amounts with currency codes, phone numbers become E.164, and so on. Without it, you have text — not data.</p>
+    <p>Data normalization is the step that converts extracted text into a consistent format your systems can use. Dates become ISO 8601, currencies become decimal amounts with currency codes, phone numbers become E.164, and so on. Without it, you have text, not data.</p>
 
     <h3>Why do OCR pipelines need normalization?</h3>
     <p>Because documents are written in many formats. The same date can appear five different ways across vendors. Downstream systems expect one format. Normalization bridges the two.</p>
@@ -123,7 +123,7 @@ export const blog12: BlogPost = {
     <p>ISO 8601 (YYYY-MM-DD) for dates without time. ISO 8601 with timezone for date-times. It sorts correctly, parses reliably, and is unambiguous across locales.</p>
 
     <h3>How do I handle ambiguous dates?</h3>
-    <p>Use document context — vendor country, language, document type — to pick the most likely parse. Flag anything genuinely ambiguous ("01/02/03") for human review. Do not silently guess.</p>
+    <p>Use document context, vendor country, language, document type, to pick the most likely parse. Flag anything genuinely ambiguous ("01/02/03") for human review. Do not silently guess.</p>
 
     <h3>Where does normalization fit in the OCR pipeline?</h3>
     <p>After OCR extraction, before storage. Extract raw text first. Normalize next. Validate. Then store. Each step has its own concerns; mixing them creates bugs.</p>
@@ -152,7 +152,7 @@ export const blog12: BlogPost = {
     {
       question: "What is data normalization for extracted documents?",
       answer:
-        "Data normalization converts extracted text into a consistent format your systems can use. Dates become ISO 8601, currencies become decimal amounts with codes, phone numbers become E.164, and so on. Without it, you have text — not data.",
+        "Data normalization converts extracted text into a consistent format your systems can use. Dates become ISO 8601, currencies become decimal amounts with codes, phone numbers become E.164, and so on. Without it, you have text, not data.",
     },
     {
       question: "Why do OCR pipelines need normalization?",
@@ -172,7 +172,7 @@ export const blog12: BlogPost = {
     {
       question: "How do I handle ambiguous dates?",
       answer:
-        "Use document context — vendor country, language, document type — to pick the most likely parse. Flag anything genuinely ambiguous ('01/02/03') for human review. Do not silently guess.",
+        "Use document context, vendor country, language, document type, to pick the most likely parse. Flag anything genuinely ambiguous ('01/02/03') for human review. Do not silently guess.",
     },
     {
       question: "Where does normalization fit in the OCR pipeline?",

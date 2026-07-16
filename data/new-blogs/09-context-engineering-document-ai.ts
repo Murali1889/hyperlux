@@ -6,18 +6,18 @@ export const blog09: BlogPost = {
   title: "Context Engineering for Document AI (Beyond RAG, 2026)",
   slug: "context-engineering-document-ai",
   excerpt:
-    "My first RAG demo for invoice Q&A failed in front of the CFO. The fix was not better embeddings — it was better context engineering. Here is what I learned.",
+    "My first RAG demo for invoice Q&A failed in front of the CFO. The fix was not better embeddings, it was better context engineering. Here is what I learned.",
   description:
-    "Context engineering for document AI — why RAG alone falls short, the four-layer context stack that works, and the patterns that scale.",
+    "Context engineering for document AI, why RAG alone falls short, the four-layer context stack that works, and the patterns that scale.",
   metaTag: "Context Engineering for Document AI: Beyond Plain RAG",
   content: `
     <p>My first RAG demo for invoice Q&A failed in front of the CFO. We had embeddings, we had retrieval, we had a great LLM. The CFO asked "what did we spend on AWS in March?" The system returned a paragraph from an unrelated vendor contract. The CFO laughed politely. The deal did not happen.</p>
-    <p>The fix turned out not to be better embeddings or a smarter model. It was better <strong>context engineering</strong>. This guide is what I have learned since — written so a kid could follow along but with enough depth for anyone building document AI in 2026.</p>
+    <p>The fix turned out not to be better embeddings or a smarter model. It was better <strong>context engineering</strong>. This guide is what I have learned since, written so a kid could follow along but with enough depth for anyone building document AI in 2026.</p>
 
     <h2>What "Context Engineering" Actually Means</h2>
     <p>Context engineering is the practice of carefully choosing what information to put in front of an AI model so it can answer correctly. Sounds simple. It is not.</p>
-    <p>When you ask a question to an AI assistant about a document, the model sees a few pages of context — your question, some relevant text chunks, maybe a system prompt. Everything else from the document is invisible. The model only knows what you put in front of it. If you put the wrong context, the model gives the wrong answer. If you put no context, the model hallucinates.</p>
-    <p>RAG (Retrieval-Augmented Generation) is one approach. The idea: take a question, search a database of document chunks for relevant ones, paste them in front of the model, and let the model answer using those chunks. RAG is great for "what does the FAQ say about returns?" It is bad for "what did we spend on AWS in March?" — because the answer requires understanding multiple line items across multiple invoices, not retrieving one paragraph.</p>
+    <p>When you ask a question to an AI assistant about a document, the model sees a few pages of context, your question, some relevant text chunks, maybe a system prompt. Everything else from the document is invisible. The model only knows what you put in front of it. If you put the wrong context, the model gives the wrong answer. If you put no context, the model hallucinates.</p>
+    <p>RAG (Retrieval-Augmented Generation) is one approach. The idea: take a question, search a database of document chunks for relevant ones, paste them in front of the model, and let the model answer using those chunks. RAG is great for "what does the FAQ say about returns?" It is bad for "what did we spend on AWS in March?", because the answer requires understanding multiple line items across multiple invoices, not retrieving one paragraph.</p>
     <p>Context engineering is the broader discipline that includes RAG plus everything else you put in front of the model.</p>
     <p>If you are brand new to OCR and document AI, our <a href="/resources/blogs/optical-character-reader-2026">optical character reader 2026 piece</a> is the simpler starting point.</p>
 
@@ -40,7 +40,7 @@ export const blog09: BlogPost = {
     <p>"How has our AWS spending changed since January?" Requires structured data over time, not chunks of text. RAG fails because chunks have no inherent time structure.</p>
 
     <h3>4. Schema-Sensitive Questions</h3>
-    <p>"What is the late fee on this contract?" There may be a section labeled "Late Fee" or buried in a Payment Terms paragraph. RAG retrieves the most semantically similar chunk — which may or may not be the right one.</p>
+    <p>"What is the late fee on this contract?" There may be a section labeled "Late Fee" or buried in a Payment Terms paragraph. RAG retrieves the most semantically similar chunk, which may or may not be the right one.</p>
 
     <p>The shared problem: RAG assumes the answer is a paragraph. Real document AI questions usually require structure, not paragraphs.</p>
 
@@ -48,12 +48,12 @@ export const blog09: BlogPost = {
     <p>After rebuilding our invoice Q&A three times, here is the stack we ship today. Use it as a template.</p>
 
     <h3>Layer 1: Extracted Structured Data</h3>
-    <p>For every document in your system, you extract structured data at ingestion time — vendor, amounts, dates, line items, as JSON. This is the unsexy work that nobody wants to do, and it is what makes everything else possible. (See our <a href="/resources/blogs/data-normalization-extracted-documents">data normalization piece</a>.)</p>
+    <p>For every document in your system, you extract structured data at ingestion time, vendor, amounts, dates, line items, as JSON. This is the unsexy work that nobody wants to do, and it is what makes everything else possible. (See our <a href="/resources/blogs/data-normalization-extracted-documents">data normalization piece</a>.)</p>
     <p>When a question comes in, you query the structured data first. "AWS spending in March" → SQL-like query against your vendor and date columns. Returns an exact number. No hallucination possible.</p>
 
     <h3>Layer 2: Document Metadata</h3>
     <p>Title, date, vendor, document type, page count, classification. All extracted at ingestion. The model can use metadata to filter relevant documents before retrieval.</p>
-    <p>"What did we agree to with Acme in 2025?" — filter to documents tagged vendor=Acme, year=2025, type=contract. Then retrieve within that subset. Massive reduction in noise.</p>
+    <p>"What did we agree to with Acme in 2025?", filter to documents tagged vendor=Acme, year=2025, type=contract. Then retrieve within that subset. Massive reduction in noise.</p>
 
     <h3>Layer 3: Document Chunks With Position</h3>
     <p>Classic RAG, but with position info preserved. Not just "this chunk is similar to the query" but "this chunk is from page 7, section 3.2, of the Acme contract". Position lets the model cite sources accurately and lets you verify.</p>
@@ -78,7 +78,7 @@ export const blog09: BlogPost = {
     <p>Teams often skip the structured-extraction step because "RAG will figure it out". RAG will not figure it out for structured questions. Pay the upfront cost to extract structured data; you will recover it many times over in answer accuracy.</p>
 
     <h3>Mistake 3: One Context Stack for Everything</h3>
-    <p>Different questions need different context. Route by question type. The classifier can be small — a 1B-parameter model or even a simple rule-based router. The accuracy lift is enormous.</p>
+    <p>Different questions need different context. Route by question type. The classifier can be small, a 1B-parameter model or even a simple rule-based router. The accuracy lift is enormous.</p>
 
     <h2>The "Context of Context" Problem</h2>
     <p>This is the meta-problem nobody warns you about. As your document set grows, the context you can fit in front of the model stays roughly constant (current LLMs handle 200K-2M tokens, but practical context is much smaller). The ratio of available context to total knowledge keeps shrinking. The model sees less and less of the picture.</p>
@@ -119,7 +119,7 @@ export const blog09: BlogPost = {
     <p>Usually no. Large context windows help with single-document analysis. They do not solve cross-document or structured-data questions, which are the harder failure modes. Smarter context engineering beats more context.</p>
 
     <h3>What does "context of context" mean?</h3>
-    <p>As your document set grows, the model sees a shrinking percentage of available knowledge. The "context of context" problem is recognizing that what the model sees has its own context — and you need to manage that meta-context with metadata, summaries, and hierarchical retrieval.</p>
+    <p>As your document set grows, the model sees a shrinking percentage of available knowledge. The "context of context" problem is recognizing that what the model sees has its own context, and you need to manage that meta-context with metadata, summaries, and hierarchical retrieval.</p>
   `,
   image: "/images/intelligent-document-processing.png",
   featuredImage: "/images/intelligent-document-processing.png",
@@ -171,7 +171,7 @@ export const blog09: BlogPost = {
     {
       question: "What does 'context of context' mean?",
       answer:
-        "As your document set grows, the model sees a shrinking percentage of available knowledge. The 'context of context' problem is recognizing that what the model sees has its own context — manage it with metadata, summaries, and hierarchical retrieval.",
+        "As your document set grows, the model sees a shrinking percentage of available knowledge. The 'context of context' problem is recognizing that what the model sees has its own context, manage it with metadata, summaries, and hierarchical retrieval.",
     },
   ],
 }

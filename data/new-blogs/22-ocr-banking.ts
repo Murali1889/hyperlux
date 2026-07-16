@@ -3,19 +3,19 @@ import { nupuraUghade } from "../authors"
 
 export const blog22: BlogPost = {
   id: "new-22",
-  title: "OCR Technology in Banking — What Actually Works (2026)",
+  title: "OCR Technology in Banking, What Actually Works (2026)",
   slug: "ocr-technology-in-banking",
   excerpt:
     "I have spent the last 18 months helping mid-market banks pick OCR vendors. Most marketing claims do not survive a real document set. Here is the unfiltered truth.",
   description:
-    "OCR technology in banking — what actually works in production, where vendor demos lie, and the patterns that pass regulator audits.",
-  metaTag: "OCR Banking — What Actually Works in 2026",
+    "OCR technology in banking, what actually works in production, where vendor demos lie, and the patterns that pass regulator audits.",
+  metaTag: "OCR Banking, What Actually Works in 2026",
   content: `
     <p>The most expensive sentence I have heard in banking technology was a community bank CFO telling me, "Our OCR vendor said 99% accuracy and we believed them." Three months later they had a $1.4M reconciliation backlog and a regulatory finding that started, "Failure to verify automated extraction outputs..." This guide is what I have learned helping mid-market banks pick OCR vendors over the last 18 months. The version where vendor demos do not survive contact with real documents.</p>
-    <p>If you are evaluating OCR for a bank — community, regional, or BaaS sponsor — read this before you sign anything.</p>
+    <p>If you are evaluating OCR for a bank, community, regional, or BaaS sponsor, read this before you sign anything.</p>
 
     <h2>What "OCR Technology in Banking" Actually Means</h2>
-    <p>OCR (Optical Character Recognition) in banking is the use of software to read pictures of documents — bank statements, deposit slips, loan applications, KYC IDs, wire instructions, mortgage packets — and turn them into structured data your core banking or BSA system can use. The friendly description: a tireless junior employee who types extracted data into your systems at a penny per page and never gets bored.</p>
+    <p>OCR (Optical Character Recognition) in banking is the use of software to read pictures of documents, bank statements, deposit slips, loan applications, KYC IDs, wire instructions, mortgage packets, and turn them into structured data your core banking or BSA system can use. The friendly description: a tireless junior employee who types extracted data into your systems at a penny per page and never gets bored.</p>
     <p>The unfriendly reality: banking is a regulated industry with audit trails, customer privacy obligations, and consequences for errors that other industries do not face. OCR that works for a marketing agency may not survive an OCC examination. This is the gap most vendor pitches paper over.</p>
     <p>For a foundational explanation of OCR itself, our <a href="/resources/blogs/optical-character-reader-2026">optical character reader 2026 piece</a> is the simpler starting point. Come back here when you need the banking-specific lens.</p>
 
@@ -26,7 +26,7 @@ export const blog22: BlogPost = {
     <p>Our <a href="/resources/blogs/revolutionizing-finance-how-automated-bank-statement-analysis-transforms-lending-decisions">automated bank statement analysis</a> guide goes deep on this.</p>
 
     <h3>2. KYC and Onboarding</h3>
-    <p>Customer onboarding requires identity verification documents — driver's licenses, passports, utility bills. OCR plus liveness detection drops onboarding time from days to seconds. Regulators expect documented audit trails, which good OCR APIs provide by default.</p>
+    <p>Customer onboarding requires identity verification documents, driver's licenses, passports, utility bills. OCR plus liveness detection drops onboarding time from days to seconds. Regulators expect documented audit trails, which good OCR APIs provide by default.</p>
     <p>The <a href="/resources/blogs/kyc-document-verification">KYC document verification piece</a> covers what auditors actually look for.</p>
 
     <h3>3. Check Processing</h3>
@@ -36,7 +36,7 @@ export const blog22: BlogPost = {
     <p>SWIFT messages, ACH instructions, and wire transfer forms all contain structured fields. OCR extracts sender, recipient, amount, currency, and purpose. Combined with sanctions screening and OFAC checks, this becomes an automated payment review pipeline. Our <a href="/resources/blogs/aml-document-checks">AML document checks piece</a> covers the seven-field minimum.</p>
 
     <h3>5. Mortgage Origination Document Review</h3>
-    <p>Mortgage packets are 300-500 pages of mixed documents — pay stubs, tax returns, bank statements, property appraisals, insurance binders, employment verification letters. Without OCR, a mortgage processor spends 8-12 hours on document review per file. With OCR and intelligent classification, that drops to 2-3 hours.</p>
+    <p>Mortgage packets are 300-500 pages of mixed documents, pay stubs, tax returns, bank statements, property appraisals, insurance binders, employment verification letters. Without OCR, a mortgage processor spends 8-12 hours on document review per file. With OCR and intelligent classification, that drops to 2-3 hours.</p>
 
     <h2>The Vendor Demo Tells</h2>
     <p>Every vendor demo I have sat through follows the same structure. Slide 1: a beautiful invoice. Slide 2: a 98% accuracy claim. Slide 3: a multi-million dollar customer case study. Your real documents look nothing like slide 1. Here is what to test instead.</p>
@@ -77,18 +77,18 @@ export const blog22: BlogPost = {
     <h2>The Pipeline That Passes OCC Examinations</h2>
     <p>Across the bank OCR rollouts I have observed pass clean OCC and FDIC reviews, the pipeline shape is consistent:</p>
     <ol>
-      <li><strong>Capture</strong> — document arrives via email, portal, or API</li>
-      <li><strong>Validate file integrity</strong> — magic-byte check, virus scan, size limits</li>
-      <li><strong>Classify</strong> — what type of document is this?</li>
-      <li><strong>Pre-process</strong> — deskew, rotation correction, page boundary detection (see our <a href="/resources/blogs/document-detection-before-ocr">document detection guide</a>)</li>
-      <li><strong>OCR</strong> — layout-aware extraction</li>
-      <li><strong>Field extraction</strong> — pull the fields specific to that document type</li>
-      <li><strong>Normalize</strong> — date formats, currency, account number patterns</li>
-      <li><strong>Validate</strong> — checksums, format rules, cross-field consistency</li>
-      <li><strong>Screen</strong> — sanctions lists, PEP lists, internal fraud flags</li>
-      <li><strong>Log everything</strong> — immutable audit trail with timestamps and operator IDs</li>
-      <li><strong>Route exceptions</strong> — low-confidence extractions go to a human queue with the suspect fields highlighted</li>
-      <li><strong>Push to downstream</strong> — core banking, loan origination, BSA monitoring</li>
+      <li><strong>Capture</strong>, document arrives via email, portal, or API</li>
+      <li><strong>Validate file integrity</strong>, magic-byte check, virus scan, size limits</li>
+      <li><strong>Classify</strong>, what type of document is this?</li>
+      <li><strong>Pre-process</strong>, deskew, rotation correction, page boundary detection (see our <a href="/resources/blogs/document-detection-before-ocr">document detection guide</a>)</li>
+      <li><strong>OCR</strong>, layout-aware extraction</li>
+      <li><strong>Field extraction</strong>, pull the fields specific to that document type</li>
+      <li><strong>Normalize</strong>, date formats, currency, account number patterns</li>
+      <li><strong>Validate</strong>, checksums, format rules, cross-field consistency</li>
+      <li><strong>Screen</strong>, sanctions lists, PEP lists, internal fraud flags</li>
+      <li><strong>Log everything</strong>, immutable audit trail with timestamps and operator IDs</li>
+      <li><strong>Route exceptions</strong>, low-confidence extractions go to a human queue with the suspect fields highlighted</li>
+      <li><strong>Push to downstream</strong>, core banking, loan origination, BSA monitoring</li>
     </ol>
     <p>Each step is small. Together they survive audits.</p>
 
@@ -118,13 +118,13 @@ export const blog22: BlogPost = {
       </tbody>
     </table>
 
-    <p>The cost-per-document at the community-bank tier ($0.50-$2.00 fully loaded including compliance overhead) is much higher than the large-bank tier ($0.05-$0.15) precisely because compliance and integration costs don't shrink with volume. This is why community banks should never build — the fixed compliance-validation cost alone (SOC 2 review, examiner documentation, audit-trail tooling) exceeds a year of vendor fees.</p>
+    <p>The cost-per-document at the community-bank tier ($0.50-$2.00 fully loaded including compliance overhead) is much higher than the large-bank tier ($0.05-$0.15) precisely because compliance and integration costs don't shrink with volume. This is why community banks should never build, the fixed compliance-validation cost alone (SOC 2 review, examiner documentation, audit-trail tooling) exceeds a year of vendor fees.</p>
 
     <h2>The banking regulatory landscape for OCR in 2026</h2>
     <p>Banking OCR sits inside a regulatory framework that other industries don't face, and the specific regulators and rules determine what your OCR pipeline must document. Understanding this landscape before vendor selection prevents the "we bought OCR and then failed the exam" outcome that opened this article.</p>
 
     <h3>The regulators and what each cares about</h3>
-    <p>The <strong>OCC</strong> (national banks) and <strong>FDIC</strong> (state non-member banks) examine model risk management — for OCR, that means documented validation that extraction outputs are verified, not blindly trusted. The <strong>Federal Reserve</strong> layers on SR 11-7 model risk guidance, which increasingly gets applied to ML-based extraction. <strong>FinCEN</strong> governs the BSA/AML side — any OCR feeding transaction monitoring or KYC must produce audit trails that support SAR filings. The <strong>CFPB</strong> cares about fair-lending implications when OCR feeds credit decisions (ECOA adverse-action documentation). State regulators add their own requirements, especially for money transmitters and BaaS sponsors.</p>
+    <p>The <strong>OCC</strong> (national banks) and <strong>FDIC</strong> (state non-member banks) examine model risk management, for OCR, that means documented validation that extraction outputs are verified, not blindly trusted. The <strong>Federal Reserve</strong> layers on SR 11-7 model risk guidance, which increasingly gets applied to ML-based extraction. <strong>FinCEN</strong> governs the BSA/AML side, any OCR feeding transaction monitoring or KYC must produce audit trails that support SAR filings. The <strong>CFPB</strong> cares about fair-lending implications when OCR feeds credit decisions (ECOA adverse-action documentation). State regulators add their own requirements, especially for money transmitters and BaaS sponsors.</p>
 
     <h3>The four documentation artifacts examiners request</h3>
     <p>Across the clean exams I've observed, examiners consistently request four artifacts for OCR-driven workflows: (1) the model validation report showing extraction accuracy was tested on representative documents, (2) the exception-handling procedure showing low-confidence extractions get human review, (3) the audit trail demonstrating per-field traceability from source document to system-of-record, and (4) the vendor due-diligence file including SOC 2 Type II and the no-training-on-customer-data clause. Have all four ready before the exam, not during it.</p>
@@ -132,7 +132,7 @@ export const blog22: BlogPost = {
     <h2>Real deployment: a $3B regional bank's mortgage OCR rollout</h2>
     <p>In Q4 2025 I helped a $3B-asset regional bank deploy OCR for mortgage origination document review. Starting state: mortgage processors spent 8-12 hours per file on document review across 300-500 page packets, processing ~180 mortgages/month, with a 34-day average time-to-close that was losing them deals to faster competitors.</p>
 
-    <p>The deployment: DocsAPI for OCR + classification (segmenting the packet into pay stubs, tax returns, bank statements, appraisals, title docs), a custom validation layer checking income figures across documents for consistency, and an exception queue for anything below 95% confidence. The compliance work — model validation report, examiner documentation, audit-trail tooling — took as long as the engineering (10 weeks each, run in parallel). Post-deployment: document review dropped from 8-12 hours to 2-3 hours per file, time-to-close fell to 19 days, monthly volume grew to 240 mortgages with the same processing team. The bank passed its next OCC exam with no OCR-related findings because the four documentation artifacts were ready. For the mortgage-specific depth, see our <a href="/resources/blogs/mortgage-ocr">mortgage OCR field manual</a>.</p>
+    <p>The deployment: DocsAPI for OCR + classification (segmenting the packet into pay stubs, tax returns, bank statements, appraisals, title docs), a custom validation layer checking income figures across documents for consistency, and an exception queue for anything below 95% confidence. The compliance work, model validation report, examiner documentation, audit-trail tooling, took as long as the engineering (10 weeks each, run in parallel). Post-deployment: document review dropped from 8-12 hours to 2-3 hours per file, time-to-close fell to 19 days, monthly volume grew to 240 mortgages with the same processing team. The bank passed its next OCC exam with no OCR-related findings because the four documentation artifacts were ready. For the mortgage-specific depth, see our <a href="/resources/blogs/mortgage-ocr">mortgage OCR field manual</a>.</p>
 
     <h2>The Way I Explain Banking OCR to a Branch Manager</h2>
     <p>Imagine you hire a careful, patient employee whose only job is to read paperwork and type the important parts into your systems. She does not make mistakes on dollar amounts. She does not get tired in the afternoon. She works for less than a penny per page. The only thing she cannot do is decide whether to approve a loan or flag a transaction as suspicious. That is your job.</p>
@@ -146,7 +146,7 @@ export const blog22: BlogPost = {
     <h2>Frequently Asked Questions</h2>
 
     <h3>What is OCR in banking?</h3>
-    <p>OCR in banking is software that reads pictures of banking documents — statements, applications, IDs, wire instructions — and turns them into structured data for core banking, loan origination, and BSA systems.</p>
+    <p>OCR in banking is software that reads pictures of banking documents, statements, applications, IDs, wire instructions, and turns them into structured data for core banking, loan origination, and BSA systems.</p>
 
     <h3>How accurate does OCR need to be for banking?</h3>
     <p>For automated decisions, regulators generally expect 99%+ accuracy on critical fields with documented validation. Below 99%, the workflow needs a human review queue for low-confidence extractions. The exact thresholds vary by regulator and product.</p>
@@ -188,7 +188,7 @@ export const blog22: BlogPost = {
     {
       question: "What is OCR in banking?",
       answer:
-        "OCR in banking is software that reads pictures of banking documents — statements, applications, IDs, wire instructions — and turns them into structured data for core banking, loan origination, and BSA systems.",
+        "OCR in banking is software that reads pictures of banking documents, statements, applications, IDs, wire instructions, and turns them into structured data for core banking, loan origination, and BSA systems.",
     },
     {
       question: "How accurate does OCR need to be for banking?",

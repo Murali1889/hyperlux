@@ -12,18 +12,18 @@ export const blog10: BlogPost = {
   metaTag: "Document Detection: The Step Everyone Skips Before OCR",
   content: `
     <p>Our OCR accuracy jumped four percentage points the day we stopped feeding rotated junk into the engine. Not by switching engines. Not by tuning models. We added a single pre-processing step. It took an afternoon to implement and recovered more accuracy than the previous quarter of model tuning.</p>
-    <p>This guide is about that step — document detection — and why almost every team skips it until it costs them too much to ignore.</p>
+    <p>This guide is about that step, document detection, and why almost every team skips it until it costs them too much to ignore.</p>
 
     <h2>What "Document Detection" Means in Plain English</h2>
     <p>Document detection is the work of looking at a page and figuring out what kind of object it is and how it is oriented before you try to read it.</p>
     <p>A page might be:</p>
     <ul>
-      <li>A flat scanned page (good — OCR can read it directly)</li>
-      <li>A photo of a document on a desk (bad — there is desk around the edges, the document is slightly tilted, and shadows make some text harder to see)</li>
-      <li>A photo of a passport (different — needs different OCR than a contract)</li>
-      <li>An invoice (vs a bank statement — different downstream rules)</li>
-      <li>A page rotated 90 degrees (broken — OCR will read it as gibberish without rotation first)</li>
-      <li>A multi-page document split incorrectly (broken — table on page 7 may continue on page 8)</li>
+      <li>A flat scanned page (good, OCR can read it directly)</li>
+      <li>A photo of a document on a desk (bad, there is desk around the edges, the document is slightly tilted, and shadows make some text harder to see)</li>
+      <li>A photo of a passport (different, needs different OCR than a contract)</li>
+      <li>An invoice (vs a bank statement, different downstream rules)</li>
+      <li>A page rotated 90 degrees (broken, OCR will read it as gibberish without rotation first)</li>
+      <li>A multi-page document split incorrectly (broken, table on page 7 may continue on page 8)</li>
     </ul>
     <p>Document detection answers these questions before OCR runs. The OCR engine then gets a clean, properly oriented page with metadata about what type of document it is. Accuracy goes up. Downstream rules get applied correctly. Bugs disappear.</p>
     <p>If you are brand new to OCR, our <a href="/resources/blogs/optical-character-reader-2026">optical character reader 2026 guide</a> is the easier starting point. This article assumes you have run OCR and want to know why your accuracy is lower than the marketing claims.</p>
@@ -90,7 +90,7 @@ export const blog10: BlogPost = {
     <pre><code>brew install ocrmypdf
 ocrmypdf --deskew --rotate-pages --remove-background input.pdf output.pdf</code></pre>
     <p>Those three flags handle deskew, rotation, and background removal. Page boundary detection requires a few extra lines of OpenCV. Document classification requires a small model or a heuristic ruleset.</p>
-    <p>If you are on a cloud OCR API, check whether detection is included. Most modern APIs (DocsAPI, AWS Textract, Google Document AI) handle the basic detection steps automatically. If yours doesn't, file a feature request — it is a baseline expectation in 2026.</p>
+    <p>If you are on a cloud OCR API, check whether detection is included. Most modern APIs (DocsAPI, AWS Textract, Google Document AI) handle the basic detection steps automatically. If yours doesn't, file a feature request, it is a baseline expectation in 2026.</p>
 
     <h2>The Way I Explain This to Non-Tech Folks</h2>
     <p>Imagine you ask a friend to read every label on a shelf in your basement. If you hand her a clean shelf with labels facing forward and lights on, she reads them all correctly. If you hand her a dusty shelf with some labels upside-down, some sideways, some in the shadows, she will misread some.</p>
@@ -100,7 +100,7 @@ ocrmypdf --deskew --rotate-pages --remove-background input.pdf output.pdf</code>
     <h2>What I'd Do Today</h2>
     <p>If you have a working OCR pipeline that disappoints: add deskew and rotation correction first. Two flags in ocrmypdf or a few lines of code in your own pipeline. The accuracy lift is typically 4-8 points.</p>
     <p>If you are starting a new pipeline: do not write the OCR step until you have written the pre-processing. The pre-processing is what makes the OCR work.</p>
-    <p>If you are evaluating a vendor: ask what document detection they do. The answer should be specific — boundary detection, rotation, deskew, classification. Not just "yes". (<a href="/author/nupura-ughade">I write about this gap a lot</a>.)</p>
+    <p>If you are evaluating a vendor: ask what document detection they do. The answer should be specific, boundary detection, rotation, deskew, classification. Not just "yes". (<a href="/author/nupura-ughade">I write about this gap a lot</a>.)</p>
 
     <h2>Frequently Asked Questions</h2>
 
@@ -120,7 +120,7 @@ ocrmypdf --deskew --rotate-pages --remove-background input.pdf output.pdf</code>
     <p>Rotation correction handles 90-degree turns (sideways or upside-down pages). Deskew handles small tilts (a 3-degree angle off horizontal). Both are needed. Rotation correction is binary (4 possible orientations). Deskew is continuous (any small angle).</p>
 
     <h3>Does document detection help with handwritten content?</h3>
-    <p>It helps with everything — typed, handwritten, mixed. Handwriting benefits especially from page boundary detection (photos of handwritten notes often include desk edges) and deskew (handwritten pages are rarely perfectly aligned).</p>
+    <p>It helps with everything, typed, handwritten, mixed. Handwriting benefits especially from page boundary detection (photos of handwritten notes often include desk edges) and deskew (handwritten pages are rarely perfectly aligned).</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",
@@ -172,7 +172,7 @@ ocrmypdf --deskew --rotate-pages --remove-background input.pdf output.pdf</code>
     {
       question: "Does document detection help with handwritten content?",
       answer:
-        "It helps with everything — typed, handwritten, mixed. Handwriting benefits especially from page boundary detection (photos often include desk edges) and deskew (handwritten pages are rarely perfectly aligned).",
+        "It helps with everything, typed, handwritten, mixed. Handwriting benefits especially from page boundary detection (photos often include desk edges) and deskew (handwritten pages are rarely perfectly aligned).",
     },
   ],
 }

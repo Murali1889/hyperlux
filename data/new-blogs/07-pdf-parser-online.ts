@@ -6,22 +6,22 @@ export const blog07: BlogPost = {
   title: "PDF Parser Online: Why Most Tools Mangle Tables",
   slug: "pdf-parser-online",
   excerpt:
-    "Our first PDF parser mangled every single bank statement table. Six months later we shipped one that didn't. Here is what we learned about why most parsers break — and how to pick one that won't.",
+    "Our first PDF parser mangled every single bank statement table. Six months later we shipped one that didn't. Here is what we learned about why most parsers break, and how to pick one that won't.",
   description:
     "Why most PDF parsers break on tables, the engineering behind a parser that doesn't, and how to pick the right tool for table-heavy documents.",
   metaTag: "PDF Parser Online: Why Most Tools Mangle Tables",
   content: `
     <p>The first version of our PDF parser worked beautifully on regular text and mangled every single bank statement we threw at it. Six months later, after rewriting the table extraction three times, we shipped one that did not mangle them. This guide is what we learned along the way.</p>
-    <p>If you are picking a PDF parser for any document with tables — invoices, bank statements, forms, financial reports, lab results — read this before you commit. Most tools fail on the exact thing you need them for.</p>
+    <p>If you are picking a PDF parser for any document with tables, invoices, bank statements, forms, financial reports, lab results, read this before you commit. Most tools fail on the exact thing you need them for.</p>
 
     <h2>What "Parse a PDF" Actually Means</h2>
-    <p>A PDF parser takes a PDF and pulls out the content as structured data. Not just text — structured. The difference matters.</p>
+    <p>A PDF parser takes a PDF and pulls out the content as structured data. Not just text, structured. The difference matters.</p>
     <p>If you have a bank statement, you do not just want a wall of text. You want a table with date, description, debit, credit, and balance as columns. You want to drop that table into a spreadsheet or pipe it into your accounting system. A parser that gives you a wall of text has technically extracted content, but it has not parsed.</p>
     <p>So a real PDF parser does three jobs:</p>
     <ol>
       <li>Reads all the text on the page (this is OCR for image PDFs, or direct extraction for readable PDFs).</li>
-      <li>Understands the layout — where the columns are, what is a table, what is a paragraph, what is a header.</li>
-      <li>Outputs structured data that downstream systems can use — JSON, CSV, XML, whatever fits.</li>
+      <li>Understands the layout, where the columns are, what is a table, what is a paragraph, what is a header.</li>
+      <li>Outputs structured data that downstream systems can use, JSON, CSV, XML, whatever fits.</li>
     </ol>
     <p>The first job is mostly solved. Tesseract has been doing it for 20 years. The second job is where everything falls apart. And that is what this article is about.</p>
 
@@ -68,7 +68,7 @@ export const blog07: BlogPost = {
     <h2>How to Test a PDF Parser Before You Commit</h2>
     <p>Do not trust the marketing demos. Run this test instead:</p>
     <ol>
-      <li>Pick 10 of <em>your</em> real documents. Not the parser vendor's demo files — yours.</li>
+      <li>Pick 10 of <em>your</em> real documents. Not the parser vendor's demo files, yours.</li>
       <li>Include at least one document with each of the four table patterns above.</li>
       <li>Run each document through the parser.</li>
       <li>Count: how many rows came out correctly? How many tables are usable as-is? How many require manual cleanup?</li>
@@ -77,7 +77,7 @@ export const blog07: BlogPost = {
 
     <h2>The Cost of Bad Table Parsing</h2>
     <p>This is where most teams underestimate the impact. A parser that scrambles 10% of tables sounds tolerable. It is not.</p>
-    <p>Imagine you process 10,000 bank statements a month. 10% bad table parsing means 1,000 statements need manual cleanup. Each takes an analyst 10 minutes. That is 167 hours per month — about one full-time analyst doing nothing but fixing parser output. At $30/hour, that is $5,000 a month in hidden cost.</p>
+    <p>Imagine you process 10,000 bank statements a month. 10% bad table parsing means 1,000 statements need manual cleanup. Each takes an analyst 10 minutes. That is 167 hours per month, about one full-time analyst doing nothing but fixing parser output. At $30/hour, that is $5,000 a month in hidden cost.</p>
     <p>A good parser at $0.05 per page would cost $500 for 10,000 pages. The "expensive" good parser is ten times cheaper than the "free" bad one once you account for the cleanup cost. (<a href="/resources/blogs/data-normalization-extracted-documents">More on this in our normalization piece</a>.)</p>
 
     <h2>The Three Things to Look For in a Good Parser</h2>
@@ -96,13 +96,13 @@ export const blog07: BlogPost = {
 
     <h2>What I'd Do Today</h2>
     <p>If you are parsing simple, paragraph-heavy documents: any free tool will do. SmallPDF, ILovePDF, Adobe Online. Pick one and move on.</p>
-    <p>If you are parsing tables, forms, or anything structured: do not waste time on free parsers. Pay for a layout-aware engine — AWS Textract, Google Document AI, or DocsAPI. The cost is trivial compared to the cleanup time you save.</p>
+    <p>If you are parsing tables, forms, or anything structured: do not waste time on free parsers. Pay for a layout-aware engine, AWS Textract, Google Document AI, or DocsAPI. The cost is trivial compared to the cleanup time you save.</p>
     <p>If you are building something production: test 10 real documents with each candidate before paying. The marketing demos are always optimistic. Your documents are always messier. (<a href="/author/nupura-ughade">I have written about this realistic testing approach many times</a>.)</p>
 
     <h2>Frequently Asked Questions</h2>
 
     <h3>Why does my PDF parser scramble table data?</h3>
-    <p>Most parsers read top-to-bottom, left-to-right. For a multi-column table, that scrambles the row structure. The fix is layout-aware parsing — engines that detect table boundaries before reading text. AWS Textract, Google Document AI, and DocsAPI all do this.</p>
+    <p>Most parsers read top-to-bottom, left-to-right. For a multi-column table, that scrambles the row structure. The fix is layout-aware parsing, engines that detect table boundaries before reading text. AWS Textract, Google Document AI, and DocsAPI all do this.</p>
 
     <h3>What is the best free PDF parser online?</h3>
     <p>For paragraphs: Google Drive's OCR trick works fine. For tables: there is no good free option. The free tools all scramble columns to some degree. If tables matter, paid parsers ($0.02-$0.05 per page) save you far more than they cost.</p>
@@ -144,12 +144,12 @@ export const blog07: BlogPost = {
     {
       question: "Why does my PDF parser scramble table data?",
       answer:
-        "Most parsers read top-to-bottom, left-to-right. For a multi-column table, that scrambles row structure. Fix: layout-aware parsing — engines that detect table boundaries before reading. AWS Textract, Google Document AI, and DocsAPI do this.",
+        "Most parsers read top-to-bottom, left-to-right. For a multi-column table, that scrambles row structure. Fix: layout-aware parsing, engines that detect table boundaries before reading. AWS Textract, Google Document AI, and DocsAPI do this.",
     },
     {
       question: "What is the best free PDF parser online?",
       answer:
-        "For paragraphs: Google Drive's OCR trick. For tables: no good free option — free tools all scramble columns to some degree. If tables matter, paid parsers ($0.02-$0.05/page) save more than they cost.",
+        "For paragraphs: Google Drive's OCR trick. For tables: no good free option, free tools all scramble columns to some degree. If tables matter, paid parsers ($0.02-$0.05/page) save more than they cost.",
     },
     {
       question: "Can a PDF parser handle multi-page tables?",

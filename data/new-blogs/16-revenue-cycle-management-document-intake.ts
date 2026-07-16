@@ -15,9 +15,9 @@ export const blog16: BlogPost = {
     <p>The real problem was 12-day document intake. Between a customer sending us the documents needed to process their claim and us actually having those documents in our system as structured data, twelve days passed on average. Most of our AR drag was upstream of payment. This is the story of how we found it and fixed it.</p>
 
     <h2>What "Revenue Cycle Management" Actually Means</h2>
-    <p>Revenue Cycle Management (RCM) is the end-to-end process of getting paid for work you do. It starts when a customer engages and ends when cash is in your bank account. In between are documents — proposals, contracts, work orders, claims, invoices, payments, disputes, adjustments — and the data inside those documents drives every step.</p>
+    <p>Revenue Cycle Management (RCM) is the end-to-end process of getting paid for work you do. It starts when a customer engages and ends when cash is in your bank account. In between are documents, proposals, contracts, work orders, claims, invoices, payments, disputes, adjustments, and the data inside those documents drives every step.</p>
     <p>RCM is most often discussed in healthcare (where claims processing is the whole game) but the same concept applies in legal, professional services, construction, government contracting, and any B2B business with complex billing.</p>
-    <p>The traditional view of RCM focuses on the back end — billing, collections, AR aging. The modern view focuses on the front end — how fast you can ingest customer documents, extract the right data, and start the billing process. Front-end speed dominates everything else.</p>
+    <p>The traditional view of RCM focuses on the back end, billing, collections, AR aging. The modern view focuses on the front end, how fast you can ingest customer documents, extract the right data, and start the billing process. Front-end speed dominates everything else.</p>
 
     <h2>Why Document Intake Is Where AR Gets Stuck</h2>
     <p>Here is the math nobody talks about. In a typical professional services firm:</p>
@@ -67,7 +67,7 @@ export const blog16: BlogPost = {
       <li>When did the invoice go out?</li>
       <li>When did payment arrive?</li>
     </ol>
-    <p>The gap between #1 and #2 is your document intake time. If it's more than 1-2 days on average, you have a document intake problem. If you can't reconstruct the timeline at all, you have an even bigger problem — no visibility into your own RCM.</p>
+    <p>The gap between #1 and #2 is your document intake time. If it's more than 1-2 days on average, you have a document intake problem. If you can't reconstruct the timeline at all, you have an even bigger problem, no visibility into your own RCM.</p>
 
     <h2>The Three-Tier Intake Pipeline That Works</h2>
     <p>The pattern I've seen cut intake time from 12 days to under 1 day:</p>
@@ -108,7 +108,7 @@ export const blog16: BlogPost = {
     <h2>Frequently Asked Questions</h2>
 
     <h3>What is revenue cycle management?</h3>
-    <p>The end-to-end process of getting paid for work — from customer engagement through cash collection. Spans contracts, billing, document exchange, invoicing, collections, and dispute resolution.</p>
+    <p>The end-to-end process of getting paid for work, from customer engagement through cash collection. Spans contracts, billing, document exchange, invoicing, collections, and dispute resolution.</p>
 
     <h3>Why is document intake the bottleneck in RCM?</h3>
     <p>Because every step downstream depends on data from documents customers send. Slow document intake delays billing, which delays invoicing, which delays payment. Speed at the front end propagates through the whole cycle.</p>
@@ -120,7 +120,7 @@ export const blog16: BlogPost = {
     <p>OCR is the necessary first step but not the whole solution. You also need classification, field extraction, validation, and routing to downstream systems. OCR plus a workflow layer.</p>
 
     <h3>What is the difference between RCM and AR?</h3>
-    <p>RCM is the whole revenue cycle from engagement to cash. AR (Accounts Receivable) is the tail end — what's owed but not yet paid. RCM includes AR plus everything that happens before it.</p>
+    <p>RCM is the whole revenue cycle from engagement to cash. AR (Accounts Receivable) is the tail end, what's owed but not yet paid. RCM includes AR plus everything that happens before it.</p>
 
     <h3>How does RCM differ in healthcare vs other industries?</h3>
     <p>Healthcare RCM is dominated by claims processing (insurance billing, denials, appeals). Other industries see less complexity per transaction but more variety across customers. The intake automation patterns are similar; the downstream rules differ.</p>
@@ -150,7 +150,7 @@ export const blog16: BlogPost = {
     {
       question: "What is revenue cycle management?",
       answer:
-        "The end-to-end process of getting paid for work — from customer engagement through cash collection. Spans contracts, billing, document exchange, invoicing, collections, and dispute resolution.",
+        "The end-to-end process of getting paid for work, from customer engagement through cash collection. Spans contracts, billing, document exchange, invoicing, collections, and dispute resolution.",
     },
     {
       question: "Why is document intake the bottleneck in RCM?",
@@ -170,7 +170,7 @@ export const blog16: BlogPost = {
     {
       question: "What is the difference between RCM and AR?",
       answer:
-        "RCM is the whole revenue cycle from engagement to cash. AR (Accounts Receivable) is the tail end — what's owed but not yet paid. RCM includes AR plus everything before it.",
+        "RCM is the whole revenue cycle from engagement to cash. AR (Accounts Receivable) is the tail end, what's owed but not yet paid. RCM includes AR plus everything before it.",
     },
     {
       question: "How does RCM differ in healthcare vs other industries?",

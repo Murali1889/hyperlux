@@ -3,21 +3,21 @@ import { nupuraUghade } from "../authors"
 
 export const blog25: BlogPost = {
   id: "new-25",
-  title: "Credit Card Statement OCR — Honest Setup Guide",
+  title: "Credit Card Statement OCR, Honest Setup Guide",
   slug: "credit-card-statement-ocr",
   excerpt:
     "I once had to reconcile 400 expense reports against credit card statements by hand. Two weeks I will never get back. Here is how to never let that happen to anyone again.",
   description:
-    "Credit card statement OCR — how to extract transactions, categorize spending, and feed expense workflows. Practical setup, real numbers, no fluff.",
-  metaTag: "Credit Card Statement OCR — Setup Done Right",
+    "Credit card statement OCR, how to extract transactions, categorize spending, and feed expense workflows. Practical setup, real numbers, no fluff.",
+  metaTag: "Credit Card Statement OCR, Setup Done Right",
   content: `
     <p>Two weeks of my life are gone forever. They went into reconciling 400 quarterly expense reports against credit card statements at a previous company. The process: print the statement, highlight the transactions, find the matching expense report, compare line by line, write a memo. Forty seconds per transaction, multiplied by 400 reports of 20 transactions each. Two weeks. This guide is how to make sure no one ever has to do that again.</p>
-    <p>If you process credit card statements at any meaningful volume — for AP reconciliation, T&E expense management, fraud detection, or lending — this is the field manual.</p>
+    <p>If you process credit card statements at any meaningful volume, for AP reconciliation, T&E expense management, fraud detection, or lending, this is the field manual.</p>
 
     <h2>What "Credit Card Statement OCR" Actually Means</h2>
     <p>Credit card statement OCR is software that takes a credit card statement (PDF or scan) and extracts the structured data: cardholder name, account number, statement period, transactions, totals, fees, and interest. The output is JSON or CSV ready for your accounting system, expense tool, or underwriting model.</p>
     <p>The friendly description: a careful clerk who types every transaction from every statement into your system, in under 30 seconds per statement, at less than a penny per page. The clerk catches duplicates. The clerk flags suspicious patterns. The clerk works at 3 AM if you need it.</p>
-    <p>This sits next to bank statement OCR — different layouts, similar patterns. Our <a href="/resources/blogs/data-normalization-extracted-documents">data normalization piece</a> covers the post-extraction cleanup both share.</p>
+    <p>This sits next to bank statement OCR, different layouts, similar patterns. Our <a href="/resources/blogs/data-normalization-extracted-documents">data normalization piece</a> covers the post-extraction cleanup both share.</p>
 
     <h2>The Four Workflows Where Credit Card OCR Pays For Itself</h2>
 
@@ -36,11 +36,11 @@ export const blog25: BlogPost = {
     <h2>The Five Fields That Matter</h2>
     <p>Every credit card statement has dozens of fields. For most workflows, these five carry 90% of the value.</p>
     <ol>
-      <li><strong>Statement period</strong> — start and end dates. Critical for matching transactions to time windows.</li>
-      <li><strong>Cardholder name and account number</strong> — for matching to the right person and detecting duplicate statement uploads.</li>
-      <li><strong>Transaction list</strong> — date, merchant, amount, category. The bulk of the value.</li>
-      <li><strong>Statement totals</strong> — previous balance, payments, charges, fees, interest, new balance. Used for cross-validation against the transaction list.</li>
-      <li><strong>Minimum payment and due date</strong> — relevant for collections, account management, and lending decisions.</li>
+      <li><strong>Statement period</strong>, start and end dates. Critical for matching transactions to time windows.</li>
+      <li><strong>Cardholder name and account number</strong>, for matching to the right person and detecting duplicate statement uploads.</li>
+      <li><strong>Transaction list</strong>, date, merchant, amount, category. The bulk of the value.</li>
+      <li><strong>Statement totals</strong>, previous balance, payments, charges, fees, interest, new balance. Used for cross-validation against the transaction list.</li>
+      <li><strong>Minimum payment and due date</strong>, relevant for collections, account management, and lending decisions.</li>
     </ol>
 
     <h2>The Honest Difficulty Curve</h2>
@@ -53,23 +53,23 @@ export const blog25: BlogPost = {
     <p>Different layouts per issuer. Some compress transaction tables into tiny font. Modern OCR clears 95-97% with proper pre-processing.</p>
 
     <h3>Hard: Scanned Statements</h3>
-    <p>Customer photographs the statement on their phone. Angled, dim, sometimes one page at a time. Pre-processing (deskew, rotation correction, page boundary detection — see our <a href="/resources/blogs/document-detection-before-ocr">document detection guide</a>) is critical.</p>
+    <p>Customer photographs the statement on their phone. Angled, dim, sometimes one page at a time. Pre-processing (deskew, rotation correction, page boundary detection, see our <a href="/resources/blogs/document-detection-before-ocr">document detection guide</a>) is critical.</p>
 
     <h3>Brutal: Multi-Page Statements With Continuation Tables</h3>
     <p>Annual summary statements where transactions span 20+ pages. Naive OCR treats each page as a separate table. Layout-aware OCR stitches the rows correctly. Pick the latter.</p>
 
     <h2>The Pipeline I Recommend</h2>
     <ol>
-      <li><strong>Capture</strong> — upload, email, or API</li>
-      <li><strong>Pre-process</strong> — deskew, rotate, handle multi-page boundaries</li>
-      <li><strong>Identify issuer</strong> — Chase, Amex, etc. Routes to issuer-specific templates when available.</li>
+      <li><strong>Capture</strong>, upload, email, or API</li>
+      <li><strong>Pre-process</strong>, deskew, rotate, handle multi-page boundaries</li>
+      <li><strong>Identify issuer</strong>, Chase, Amex, etc. Routes to issuer-specific templates when available.</li>
       <li><strong>Run layout-aware OCR</strong></li>
-      <li><strong>Extract structured fields</strong> — the five fields above plus any issuer-specific ones</li>
-      <li><strong>Normalize</strong> — dates to ISO, currency to decimal, merchant names to a master list</li>
-      <li><strong>Validate</strong> — transaction totals add up to statement totals, dates within statement period</li>
-      <li><strong>Categorize</strong> — apply category rules (merchant category codes when available)</li>
-      <li><strong>Route exceptions</strong> — anything flagged goes to a human queue</li>
-      <li><strong>Push to downstream</strong> — accounting, expense, lending</li>
+      <li><strong>Extract structured fields</strong>, the five fields above plus any issuer-specific ones</li>
+      <li><strong>Normalize</strong>, dates to ISO, currency to decimal, merchant names to a master list</li>
+      <li><strong>Validate</strong>, transaction totals add up to statement totals, dates within statement period</li>
+      <li><strong>Categorize</strong>, apply category rules (merchant category codes when available)</li>
+      <li><strong>Route exceptions</strong>, anything flagged goes to a human queue</li>
+      <li><strong>Push to downstream</strong>, accounting, expense, lending</li>
     </ol>
 
     <h2>The Three Patterns That Break Credit Card OCR Projects</h2>
@@ -90,12 +90,12 @@ export const blog25: BlogPost = {
     <h2>What I'd Do Today</h2>
     <p>If you process under 100 statements per month: build it yourself with Tesseract or use a generic OCR API. Volume does not justify a specialty vendor.</p>
     <p>If you process 100-10,000 per month: pick a vendor with proven statement OCR. The five-field extraction plus validation plus categorization saves a junior employee's worth of time within the first quarter.</p>
-    <p>If you process 10,000+ per month: build a hybrid — vendor for the major issuers (templates ready), in-house pipeline for the long tail. Most lenders I have advised end up here. (<a href="/author/nupura-ughade">I write about the build-buy decisions often.</a>)</p>
+    <p>If you process 10,000+ per month: build a hybrid, vendor for the major issuers (templates ready), in-house pipeline for the long tail. Most lenders I have advised end up here. (<a href="/author/nupura-ughade">I write about the build-buy decisions often.</a>)</p>
 
     <h2>Frequently Asked Questions</h2>
 
     <h3>What is credit card statement OCR?</h3>
-    <p>Credit card statement OCR is software that extracts structured data from credit card statements — cardholder info, transactions, totals, fees — and pushes it into accounting, expense, lending, or analytics systems automatically.</p>
+    <p>Credit card statement OCR is software that extracts structured data from credit card statements, cardholder info, transactions, totals, fees, and pushes it into accounting, expense, lending, or analytics systems automatically.</p>
 
     <h3>How accurate is credit card OCR?</h3>
     <p>On standard PDF statements from major issuers: 98-99% on the five critical fields. On scanned or photographed statements: 92-97%. On multi-page summary statements: depends entirely on layout-aware extraction quality.</p>
@@ -110,7 +110,7 @@ export const blog25: BlogPost = {
     <p>Plaid and Yodlee pull transaction data from the issuer via API. OCR extracts from the statement PDF. The API path is faster and more reliable when available. OCR is the fallback when the customer does not authorize API access or when the data needs come from historical statements.</p>
 
     <h3>What does credit card statement OCR cost?</h3>
-    <p>Per-statement pricing typically runs $0.05-$0.30 depending on length and complexity. Volume discounts apply above 10K statements/month. Compare against the manual cost — usually $5-15 per statement reconciled.</p>
+    <p>Per-statement pricing typically runs $0.05-$0.30 depending on length and complexity. Volume discounts apply above 10K statements/month. Compare against the manual cost, usually $5-15 per statement reconciled.</p>
   `,
   image: "/images/highlighted-bank-statement.png",
   featuredImage: "/images/highlighted-bank-statement.png",
@@ -135,7 +135,7 @@ export const blog25: BlogPost = {
     {
       question: "What is credit card statement OCR?",
       answer:
-        "Credit card statement OCR is software that extracts structured data from credit card statements — cardholder info, transactions, totals, fees — and pushes it into accounting, expense, lending, or analytics systems automatically.",
+        "Credit card statement OCR is software that extracts structured data from credit card statements, cardholder info, transactions, totals, fees, and pushes it into accounting, expense, lending, or analytics systems automatically.",
     },
     {
       question: "How accurate is credit card OCR?",
@@ -160,7 +160,7 @@ export const blog25: BlogPost = {
     {
       question: "What does credit card statement OCR cost?",
       answer:
-        "Per-statement pricing typically runs $0.05-$0.30 depending on length and complexity. Volume discounts apply above 10K statements/month. Compare against manual cost — usually $5-15 per statement reconciled.",
+        "Per-statement pricing typically runs $0.05-$0.30 depending on length and complexity. Volume discounts apply above 10K statements/month. Compare against manual cost, usually $5-15 per statement reconciled.",
     },
   ],
 }

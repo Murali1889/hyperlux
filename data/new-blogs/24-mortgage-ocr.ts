@@ -12,7 +12,7 @@ export const blog24: BlogPost = {
   metaTag: "Mortgage OCR in 2026: 412 Pages → 90 Minutes",
   content: `
     <p>The longest mortgage close I have personally witnessed took 73 days. The borrower was perfectly qualified. The lender was diligent. The bottleneck was a 412-page packet that took the processing team three weeks of back-and-forth to verify. The same packet, processed through a modern mortgage OCR pipeline, would have taken 90 minutes end-to-end. This guide is everything I have learned about closing that gap.</p>
-    <p>If you work in mortgage lending — community bank, credit union, non-bank lender, or fintech — and time-to-close matters to your business, this is the field manual.</p>
+    <p>If you work in mortgage lending, community bank, credit union, non-bank lender, or fintech, and time-to-close matters to your business, this is the field manual.</p>
 
     <h2>What "Mortgage OCR" Actually Means</h2>
     <p>Mortgage OCR is the use of optical character recognition (and a few more advanced techniques) to extract data from the dozens of documents in a typical mortgage application packet. Pay stubs. Tax returns. Bank statements. Property appraisals. Insurance binders. Employment verification letters. ID documents. Each is a different document type. Each needs its own extraction template. Each is critical to the underwriting decision.</p>
@@ -40,10 +40,10 @@ export const blog24: BlogPost = {
     <p>Two months of statements from each account. Multi-page transaction tables. The same layout-aware OCR challenge covered in our <a href="/resources/blogs/data-normalization-extracted-documents">data normalization piece</a>.</p>
 
     <h3>7. Property Appraisal</h3>
-    <p>Form 1004 (most common). Standardized but extremely complex — multiple comparables, condition adjustments, market data. OCR handles the structured fields well; the narrative sections require additional NLP.</p>
+    <p>Form 1004 (most common). Standardized but extremely complex, multiple comparables, condition adjustments, market data. OCR handles the structured fields well; the narrative sections require additional NLP.</p>
 
     <h3>8. Identity Documents</h3>
-    <p>Driver's license, passport, or state ID for each borrower. Solved problem — OCR + MRZ checks (see our <a href="/resources/blogs/kyc-document-verification">KYC document verification guide</a>).</p>
+    <p>Driver's license, passport, or state ID for each borrower. Solved problem, OCR + MRZ checks (see our <a href="/resources/blogs/kyc-document-verification">KYC document verification guide</a>).</p>
 
     <h2>The Honest Time Math</h2>
     <p>A typical mortgage packet takes 8-15 hours of manual processing per file: 2-4 hours sorting intake, 4-8 hours on data entry across the eight document types, 1-2 hours of cross-document validation, and an hour of loan-origination-system entry. With layout-aware mortgage OCR plus a human exception queue, the same packet drops to roughly 90 minutes end-to-end. The savings compound across the team because processors stop being the bottleneck for underwriting.</p>
@@ -62,7 +62,7 @@ export const blog24: BlogPost = {
     <p>These are 2025-2026 benchmarks from mortgage-focused OCR vendors and observed customer rollouts.</p>
 
     <h2>What Cuts Time-to-Close From 45 Days to 5</h2>
-    <p>OCR alone does not get you to a 5-day close. The bottleneck is rarely just data entry — it is the back-and-forth between underwriting, processing, and the borrower. OCR enables a different workflow:</p>
+    <p>OCR alone does not get you to a 5-day close. The bottleneck is rarely just data entry, it is the back-and-forth between underwriting, processing, and the borrower. OCR enables a different workflow:</p>
 
     <h3>1. Same-Day Initial Underwriting</h3>
     <p>When document extraction takes 90 minutes instead of 8 hours, the underwriter sees a complete packet within hours of intake. Conditional approval becomes possible on day one.</p>
@@ -79,7 +79,7 @@ export const blog24: BlogPost = {
     <h2>The Patterns That Break Mortgage OCR Rollouts</h2>
 
     <h3>1. Choosing a General-Purpose OCR Vendor</h3>
-    <p>Generic OCR APIs handle the easy 70% of mortgage documents. The remaining 30% — business tax returns, complex appraisals, packets without page boundaries — requires mortgage-specific templates and validation rules. Pick a vendor with proven mortgage customers.</p>
+    <p>Generic OCR APIs handle the easy 70% of mortgage documents. The remaining 30%, business tax returns, complex appraisals, packets without page boundaries, requires mortgage-specific templates and validation rules. Pick a vendor with proven mortgage customers.</p>
 
     <h3>2. Skipping Human Review on Business Tax Returns</h3>
     <p>Even mortgage-specific OCR has 85-92% accuracy on Form 1120/1120-S/1065. Routing 100% of these to automated underwriting causes downstream issues. Always queue these for a human pass.</p>
@@ -89,7 +89,7 @@ export const blog24: BlogPost = {
 
     <h2>The Pipeline I Recommend</h2>
     <ol>
-      <li><strong>Receive packet</strong> — email, portal upload, or LOS integration</li>
+      <li><strong>Receive packet</strong>, email, portal upload, or LOS integration</li>
       <li><strong>Segment</strong> into individual documents</li>
       <li><strong>Classify</strong> each document type (pay stub, tax return, etc.)</li>
       <li><strong>Run document-type-specific OCR</strong></li>
@@ -97,7 +97,7 @@ export const blog24: BlogPost = {
       <li><strong>Validate cross-document consistency</strong> (income on application matches W-2s, etc.)</li>
       <li><strong>Route exceptions</strong> to a human review queue</li>
       <li><strong>Push approved data</strong> to your LOS</li>
-      <li><strong>Log everything</strong> — immutable audit trail for QC and investor delivery</li>
+      <li><strong>Log everything</strong>, immutable audit trail for QC and investor delivery</li>
     </ol>
 
     <h2>The Way I Explain Mortgage OCR to a Loan Officer</h2>
@@ -110,18 +110,18 @@ export const blog24: BlogPost = {
     <table>
       <thead><tr><th>Document type</th><th>Field accuracy</th><th>Review priority</th></tr></thead>
       <tbody>
-        <tr><td>Pay stubs</td><td>97-99%</td><td>Low — standardized layout</td></tr>
-        <tr><td>W-2 forms</td><td>98-99%</td><td>Low — fixed IRS layout</td></tr>
-        <tr><td>Bank statements</td><td>95-98%</td><td>Medium — multi-page tables</td></tr>
-        <tr><td>Personal tax returns (1040)</td><td>94-97%</td><td>Medium — many schedules</td></tr>
-        <tr><td>Business tax returns (1120/1065)</td><td>85-92%</td><td>High — complex, self-employed</td></tr>
-        <tr><td>Appraisals</td><td>85-90%</td><td>High — narrative + tables</td></tr>
-        <tr><td>ID documents</td><td>97-99%</td><td>Low — MRZ checksummed</td></tr>
-        <tr><td>Employment verification letters</td><td>88-94%</td><td>Medium — free-form</td></tr>
+        <tr><td>Pay stubs</td><td>97-99%</td><td>Low, standardized layout</td></tr>
+        <tr><td>W-2 forms</td><td>98-99%</td><td>Low, fixed IRS layout</td></tr>
+        <tr><td>Bank statements</td><td>95-98%</td><td>Medium, multi-page tables</td></tr>
+        <tr><td>Personal tax returns (1040)</td><td>94-97%</td><td>Medium, many schedules</td></tr>
+        <tr><td>Business tax returns (1120/1065)</td><td>85-92%</td><td>High, complex, self-employed</td></tr>
+        <tr><td>Appraisals</td><td>85-90%</td><td>High, narrative + tables</td></tr>
+        <tr><td>ID documents</td><td>97-99%</td><td>Low, MRZ checksummed</td></tr>
+        <tr><td>Employment verification letters</td><td>88-94%</td><td>Medium, free-form</td></tr>
       </tbody>
     </table>
 
-    <p>The pattern: standardized government and payroll documents extract cleanly; self-employed borrower documents (business returns) and narrative documents (appraisals) need the most human review. A self-employed applicant's packet needs 3-4x the review time of a W-2 employee's packet — factor that into your capacity planning.</p>
+    <p>The pattern: standardized government and payroll documents extract cleanly; self-employed borrower documents (business returns) and narrative documents (appraisals) need the most human review. A self-employed applicant's packet needs 3-4x the review time of a W-2 employee's packet, factor that into your capacity planning.</p>
 
     <h2>Real deployment: a $3B regional lender's mortgage rollout</h2>
     <p>A $3B-asset regional lender deployed mortgage OCR in Q4 2025. Starting state: processors spent 8-12 hours per file reviewing 300-500 page packets, ~180 mortgages/month, 34-day average time-to-close that was losing deals to faster competitors. The deployment paired OCR + classification (segmenting each packet into the eight document types) with a custom validation layer that cross-checked income figures across pay stubs, tax returns, and bank statements for consistency. Anything below 95% confidence routed to a review queue. Six months later: document review dropped to 2-3 hours per file, time-to-close fell to 19 days, and monthly volume grew to 240 mortgages with the same processing team. The cross-document income validation caught three material misrepresentations in the first quarter that manual review had historically missed. For the banking-regulatory context of deployments like this, see our <a href="/resources/blogs/ocr-technology-in-banking">OCR in banking guide</a>.</p>
@@ -134,13 +134,13 @@ export const blog24: BlogPost = {
     <h2>Frequently Asked Questions</h2>
 
     <h3>What is mortgage OCR?</h3>
-    <p>Mortgage OCR is the use of optical character recognition to extract data from mortgage application documents — pay stubs, tax returns, bank statements, appraisals, ID documents — and push that data into a loan origination system without manual entry.</p>
+    <p>Mortgage OCR is the use of optical character recognition to extract data from mortgage application documents, pay stubs, tax returns, bank statements, appraisals, ID documents, and push that data into a loan origination system without manual entry.</p>
 
     <h3>How accurate is mortgage OCR?</h3>
     <p>On pay stubs, W-2s, and standardized bank statements: 95-99% accuracy on critical fields. On business tax returns and complex appraisals: 85-92%. The remaining gap requires human review queues.</p>
 
     <h3>Can mortgage OCR replace processors?</h3>
-    <p>No. It eliminates the data-entry portion of a processor's job, which is typically 60-70% of their time. The remaining 30-40% — underwriting collaboration, borrower communication, conditions clearing, QC — still requires experienced people.</p>
+    <p>No. It eliminates the data-entry portion of a processor's job, which is typically 60-70% of their time. The remaining 30-40%, underwriting collaboration, borrower communication, conditions clearing, QC, still requires experienced people.</p>
 
     <h3>How does mortgage OCR cut days-to-close?</h3>
     <p>By making same-day initial underwriting possible. When document extraction takes 90 minutes instead of 8 hours, the conditional approval clock starts on day one instead of day five.</p>
@@ -149,7 +149,7 @@ export const blog24: BlogPost = {
     <p>Partially. Personal tax returns extract well. Business tax returns (Forms 1120, 1120-S, 1065) are harder; expect 85-92% accuracy and plan for human review of these specifically.</p>
 
     <h3>What does mortgage OCR cost per loan?</h3>
-    <p>Per-loan OCR costs typically run $5-25 depending on packet size and document mix. Compare against the loaded cost of manual processing — usually $300-600 per loan. Payback is fast.</p>
+    <p>Per-loan OCR costs typically run $5-25 depending on packet size and document mix. Compare against the loaded cost of manual processing, usually $300-600 per loan. Payback is fast.</p>
   `,
   image: "/images/transforming-financial-services.png",
   featuredImage: "/images/transforming-financial-services.png",
@@ -175,7 +175,7 @@ export const blog24: BlogPost = {
     {
       question: "What is mortgage OCR?",
       answer:
-        "Mortgage OCR is the use of optical character recognition to extract data from mortgage application documents — pay stubs, tax returns, bank statements, appraisals, ID documents — and push that data into a loan origination system without manual entry.",
+        "Mortgage OCR is the use of optical character recognition to extract data from mortgage application documents, pay stubs, tax returns, bank statements, appraisals, ID documents, and push that data into a loan origination system without manual entry.",
     },
     {
       question: "How accurate is mortgage OCR?",
@@ -200,7 +200,7 @@ export const blog24: BlogPost = {
     {
       question: "What does mortgage OCR cost per loan?",
       answer:
-        "Per-loan OCR costs typically run $5-25 depending on packet size and document mix. Compare against the loaded cost of manual processing — usually $300-600 per loan. Payback is fast.",
+        "Per-loan OCR costs typically run $5-25 depending on packet size and document mix. Compare against the loaded cost of manual processing, usually $300-600 per loan. Payback is fast.",
     },
   ],
 }

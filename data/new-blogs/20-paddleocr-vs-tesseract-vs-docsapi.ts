@@ -8,7 +8,7 @@ export const blog20: BlogPost = {
   excerpt:
     "I ran all three on the same 500-document test set. The winner depends on what 'winner' actually means. Here is the unfiltered breakdown.",
   description:
-    "PaddleOCR vs Tesseract vs DocsAPI — honest benchmark on 500 real documents covering accuracy, speed, languages, and cost.",
+    "PaddleOCR vs Tesseract vs DocsAPI, honest benchmark on 500 real documents covering accuracy, speed, languages, and cost.",
   metaTag: "PaddleOCR vs Tesseract vs DocsAPI: Builder's Benchmark",
   content: `
     <p>I ran all three on the same 500-document test set last quarter. Tesseract and PaddleOCR are the two big open-source OCR engines. DocsAPI is the one we built. The winner depends entirely on what "winner" means for your specific workload. This is the unfiltered breakdown.</p>
@@ -38,19 +38,19 @@ export const blog20: BlogPost = {
 
     <h2>The Results, By Category</h2>
 
-    <h3>Typed English Text — Effectively Tied</h3>
+    <h3>Typed English Text, Effectively Tied</h3>
     <p>All three hit 97-99% character accuracy on clean printed English. The differences are within margin of error. For this category, any of the three works.</p>
 
-    <h3>Scanned Bank Statements — DocsAPI Wins</h3>
+    <h3>Scanned Bank Statements, DocsAPI Wins</h3>
     <p>DocsAPI: 91% row-level accuracy on multi-page tables. PaddleOCR: 79%. Tesseract: 64%. Tables are where Tesseract falls apart and PaddleOCR's layout-aware features help. DocsAPI's multi-page stitching is the differentiator.</p>
 
-    <h3>Phone-Photographed Receipts — PaddleOCR Wins</h3>
+    <h3>Phone-Photographed Receipts, PaddleOCR Wins</h3>
     <p>PaddleOCR: 82% on low-quality consumer scans. DocsAPI: 76%. Tesseract: 58%. PaddleOCR's training data includes substantial mobile-quality content. Tesseract was built before phone scans were common and shows it.</p>
 
-    <h3>Multilingual Documents — PaddleOCR Wins (Significantly)</h3>
+    <h3>Multilingual Documents, PaddleOCR Wins (Significantly)</h3>
     <p>PaddleOCR: 89% on mixed-language content. DocsAPI: 81%. Tesseract: 71% with explicit language packs, lower with auto-detection. PaddleOCR's Chinese support is its strongest pitch and shows in the numbers.</p>
 
-    <h3>Handwritten Forms — DocsAPI Wins (Narrowly)</h3>
+    <h3>Handwritten Forms, DocsAPI Wins (Narrowly)</h3>
     <p>DocsAPI: 78%. PaddleOCR: 73%. Tesseract: 61%. Modern handwriting recognition is hard for everyone; DocsAPI's pipeline includes a VLM fallback for low-confidence handwritten regions. (See <a href="/resources/blogs/vlm-vs-ocr">VLM vs OCR</a>.)</p>
 
     <h2>Speed Results</h2>
@@ -86,7 +86,7 @@ export const blog20: BlogPost = {
         <tr><td>DocsAPI (cloud)</td><td>$1,500</td><td>$0</td><td>$1,500</td></tr>
       </tbody>
     </table>
-    <p>Open-source wins on raw cost. The math flips when you add the cost of an engineer maintaining the pipeline. If maintenance is even 4 hours/month at $100/hour, that's $400/month — closing the gap significantly.</p>
+    <p>Open-source wins on raw cost. The math flips when you add the cost of an engineer maintaining the pipeline. If maintenance is even 4 hours/month at $100/hour, that's $400/month, closing the gap significantly.</p>
 
     <h2>The Honest Recommendation Matrix</h2>
     <table>
@@ -134,7 +134,7 @@ export const blog20: BlogPost = {
     <h2>Frequently Asked Questions</h2>
 
     <h3>Is PaddleOCR better than Tesseract?</h3>
-    <p>For multi-language content and modern document types, yes. For clean printed English at low volume, no — Tesseract is simpler. The right answer depends on your document mix.</p>
+    <p>For multi-language content and modern document types, yes. For clean printed English at low volume, no, Tesseract is simpler. The right answer depends on your document mix.</p>
 
     <h3>Is PaddleOCR free?</h3>
     <p>Yes, fully open-source under the Apache 2.0 license. You pay only for the compute to run it. Faster than Tesseract on GPU; comparable on CPU.</p>
@@ -146,7 +146,7 @@ export const blog20: BlogPost = {
     <p>Multi-language support (especially Chinese) and modern architecture. The Baidu-trained models include substantial Chinese content that other engines lack. Layout-aware features also outperform basic Tesseract.</p>
 
     <h3>Is Tesseract still relevant in 2026?</h3>
-    <p>Yes. For clean printed English, simple one-off tasks, and air-gapped environments, Tesseract is still the right tool. Its limitations show up at scale and on complex documents — see our <a href="/resources/blogs/pdf-text-recognition">when Tesseract fails piece</a>.</p>
+    <p>Yes. For clean printed English, simple one-off tasks, and air-gapped environments, Tesseract is still the right tool. Its limitations show up at scale and on complex documents, see our <a href="/resources/blogs/pdf-text-recognition">when Tesseract fails piece</a>.</p>
 
     <h3>Which is fastest?</h3>
     <p>PaddleOCR with GPU is the fastest. Without GPU, all three are roughly comparable (1-2 seconds per page). Cloud APIs add network round-trip time but the compute itself is fast.</p>
@@ -175,7 +175,7 @@ export const blog20: BlogPost = {
     {
       question: "Is PaddleOCR better than Tesseract?",
       answer:
-        "For multi-language content and modern document types, yes. For clean printed English at low volume, no — Tesseract is simpler. The right answer depends on your document mix.",
+        "For multi-language content and modern document types, yes. For clean printed English at low volume, no, Tesseract is simpler. The right answer depends on your document mix.",
     },
     {
       question: "Is PaddleOCR free?",
