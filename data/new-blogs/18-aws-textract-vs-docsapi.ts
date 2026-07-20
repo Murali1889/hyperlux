@@ -8,7 +8,7 @@ export const blog18: BlogPost = {
   excerpt:
     "I built on AWS Textract for two years. Here is an honest breakdown of where Textract is the right pick and where I eventually moved off.",
   description:
-    "AWS Textract vs DocsAPI — honest comparison from shipping on Textract for two years. Where Textract wins, falls short, and the migration path.",
+    "AWS Textract vs DocsAPI, honest comparison from shipping on Textract for two years. Where Textract wins, falls short, and the migration path.",
   metaTag: "AWS Textract vs DocsAPI: An Honest Comparison",
   content: `
     <p>I built on AWS Textract for two years. It was the right call when we started. By month 20 the gaps were big enough that we moved to a different stack. This is the honest breakdown of where Textract still wins, where it doesn't, and what to consider if you are picking between Textract and DocsAPI today.</p>
@@ -17,7 +17,7 @@ export const blog18: BlogPost = {
     <h2>What These Two Tools Actually Do</h2>
 
     <h3>AWS Textract</h3>
-    <p>AWS Textract is Amazon's managed document understanding service. It does OCR, table extraction, form parsing, and ID document reading. Tightly integrated with the rest of AWS — S3 for storage, Lambda for processing, IAM for access. Pay-per-page.</p>
+    <p>AWS Textract is Amazon's managed document understanding service. It does OCR, table extraction, form parsing, and ID document reading. Tightly integrated with the rest of AWS, S3 for storage, Lambda for processing, IAM for access. Pay-per-page.</p>
 
     <h3>DocsAPI</h3>
     <p>What we built. End-to-end document intelligence API with OCR, classification, field extraction, validation, and structured output. Designed for production document workflows in financial services, lending, and compliance. Pay-per-page or per-document.</p>
@@ -27,17 +27,17 @@ export const blog18: BlogPost = {
     <h2>Where AWS Textract Wins</h2>
 
     <h3>1. AWS-Native Stacks</h3>
-    <p>If your infrastructure is already in AWS — S3 for documents, Lambda for processing, SNS for notifications — Textract slots in without friction. IAM handles auth. CloudWatch handles monitoring. The integration is genuinely seamless.</p>
+    <p>If your infrastructure is already in AWS, S3 for documents, Lambda for processing, SNS for notifications, Textract slots in without friction. IAM handles auth. CloudWatch handles monitoring. The integration is genuinely seamless.</p>
     <p>For a team that lives in AWS, the switching cost away from Textract is real. If your tech debt budget is small, stay on Textract until you need to move.</p>
 
     <h3>2. Forms With Visible Field Boundaries</h3>
-    <p>Textract's form extraction is excellent on documents where fields have clear visual boundaries — boxes, lines, labels. Government forms, tax forms (W-2, 1099), structured applications all extract well.</p>
+    <p>Textract's form extraction is excellent on documents where fields have clear visual boundaries, boxes, lines, labels. Government forms, tax forms (W-2, 1099), structured applications all extract well.</p>
 
     <h3>3. ID Documents (Driver's License, Passport)</h3>
     <p>Textract's AnalyzeID API is solid for US driver's licenses and passports. It returns structured fields directly. For ID-heavy workflows (KYC) that don't need additional intelligence, AnalyzeID is a good fit.</p>
 
     <h3>4. Predictable Pricing for Predictable Workloads</h3>
-    <p>Textract pricing is straightforward — per page for OCR, per page for tables, per page for forms. If your volume is consistent and you can predict the page mix, you can model your costs precisely.</p>
+    <p>Textract pricing is straightforward, per page for OCR, per page for tables, per page for forms. If your volume is consistent and you can predict the page mix, you can model your costs precisely.</p>
 
     <h3>5. Compliance Bundle</h3>
     <p>AWS HIPAA-eligible, SOC 2, PCI compliance all extend to Textract. For regulated industries that already trust AWS for compliance, Textract inherits that trust.</p>
@@ -48,7 +48,7 @@ export const blog18: BlogPost = {
     <p>The thing that pushed us off Textract. Bank statements with transaction tables spanning 5-15 pages. Textract treats each page as a separate table, which breaks row continuity. The fix required manual stitching code that was fragile to maintain. (Our <a href="/resources/blogs/pdf-parser-online">PDF parser piece</a> covers this exact failure mode.)</p>
 
     <h3>2. Non-AWS Stacks</h3>
-    <p>If your infrastructure is on GCP, Azure, or self-hosted, Textract adds friction. You have to authenticate, set up S3 buckets, and route through AWS — all for what is fundamentally a stateless API call. The "AWS-native" advantage becomes a "AWS-required" tax.</p>
+    <p>If your infrastructure is on GCP, Azure, or self-hosted, Textract adds friction. You have to authenticate, set up S3 buckets, and route through AWS, all for what is fundamentally a stateless API call. The "AWS-native" advantage becomes a "AWS-required" tax.</p>
 
     <h3>3. Customization Is Limited</h3>
     <p>Textract handles common document types well but customizing for industry-specific documents is expensive. You either accept the generic output or build a translation layer on top.</p>
@@ -57,7 +57,7 @@ export const blog18: BlogPost = {
     <p>AnalyzeDocument with forms or tables enabled is significantly more expensive than basic OCR ($15 per 1,000 pages vs $1.50). At meaningful volume, the math gets expensive.</p>
 
     <h3>5. Slow Async Pipeline for Large Files</h3>
-    <p>Documents over a few pages require Textract's async API — submit job, poll for completion. The pattern is fine but adds 5-30 seconds per document. Real-time workflows feel sluggish.</p>
+    <p>Documents over a few pages require Textract's async API, submit job, poll for completion. The pattern is fine but adds 5-30 seconds per document. Real-time workflows feel sluggish.</p>
 
     <h2>Where DocsAPI Wins</h2>
 

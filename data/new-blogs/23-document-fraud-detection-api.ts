@@ -3,16 +3,16 @@ import { nupuraUghade } from "../authors"
 
 export const blog23: BlogPost = {
   id: "new-23",
-  title: "Document Fraud Detection API — Honest Builder Guide",
+  title: "Document Fraud Detection API, Honest Builder Guide",
   slug: "document-fraud-detection-api",
   excerpt:
     "I have shipped three document fraud detection systems. The first cost us $200K to learn that 'AI fraud detection' is mostly five boring checks. Here are the five checks, in order.",
   description:
-    "Document fraud detection API — the five checks that catch 95% of fraud, the vendors worth using, and what to build versus buy in 2026.",
-  metaTag: "Document Fraud Detection API — Builder's Guide",
+    "Document fraud detection API, the five checks that catch 95% of fraud, the vendors worth using, and what to build versus buy in 2026.",
+  metaTag: "Document Fraud Detection API, Builder's Guide",
   content: `
     <p>The first document fraud detection system I shipped cost us $200K and three months of engineering before I realized "AI fraud detection" is mostly five boring checks running in order. Vendors charge a premium for the AI label, but the underlying work is mostly deterministic. This guide is the version I wish I had when I started.</p>
-    <p>If you are building a workflow that needs to verify a document is real before trusting it — KYC, AML, lending, insurance, payments — read this before paying anyone six figures.</p>
+    <p>If you are building a workflow that needs to verify a document is real before trusting it, KYC, AML, lending, insurance, payments, read this before paying anyone six figures.</p>
 
     <h2>What "Document Fraud Detection API" Actually Means</h2>
     <p>A document fraud detection API takes a document image (driver's license, passport, utility bill, pay stub, bank statement) and returns a verdict: is this document authentic, or has it been altered or fabricated? Modern APIs combine OCR, computer vision, and a panel of fraud checks to produce a confidence score and field-level flags.</p>
@@ -23,7 +23,7 @@ export const blog23: BlogPost = {
     <p>Modern fraud is creative but predictable. Across the document streams I have audited, these five checks catch 95% of attempts. Run them in order.</p>
 
     <h3>1. Template Mismatch</h3>
-    <p>Every issued document — passport, driver's license, national ID — has a standardized template per jurisdiction. Real documents match the template within tolerance. Fakes often use templates from the wrong year, wrong state, or wrong country. A template-matching pass catches obviously synthetic documents in milliseconds.</p>
+    <p>Every issued document, passport, driver's license, national ID, has a standardized template per jurisdiction. Real documents match the template within tolerance. Fakes often use templates from the wrong year, wrong state, or wrong country. A template-matching pass catches obviously synthetic documents in milliseconds.</p>
 
     <h3>2. MRZ Checksum Validation</h3>
     <p>The Machine-Readable Zone on a passport (or the encoded data on a US driver's license PDF417 barcode) contains checksums. Each character position is mathematically tied to its neighbors. Bad fakes do not bother matching the checksums; good fakes get it wrong because the math is non-trivial. A failed checksum is a flag.</p>
@@ -40,7 +40,7 @@ export const blog23: BlogPost = {
     <p>The <a href="/resources/blogs/kyc-document-verification">KYC document verification guide</a> covers what auditors look for after these checks pass.</p>
 
     <h2>What the Five Checks Miss (And Why That's OK)</h2>
-    <p>The remaining 5% of fraud requires deeper analysis: synthetic identities, deepfake selfies, social engineering, document substitution mid-transaction. These need different tooling — fraud database cross-reference, velocity analysis, behavioral signals, and human review. Do not let your vendor sell you "100% fraud catch rate" because no such product exists.</p>
+    <p>The remaining 5% of fraud requires deeper analysis: synthetic identities, deepfake selfies, social engineering, document substitution mid-transaction. These need different tooling, fraud database cross-reference, velocity analysis, behavioral signals, and human review. Do not let your vendor sell you "100% fraud catch rate" because no such product exists.</p>
 
     <h2>What an Honest Vendor Demo Should Include</h2>
     <p>If you are evaluating a document fraud API, ask the vendor to run these tests live on your screen:</p>
@@ -63,14 +63,14 @@ export const blog23: BlogPost = {
     <h2>The Pipeline That Survives Audits</h2>
     <p>For regulated industries, the fraud check pipeline must produce an audit trail. Here is the shape:</p>
     <ol>
-      <li><strong>Receive document</strong> — image or PDF</li>
-      <li><strong>Pre-process</strong> — deskew, rotate, crop (our <a href="/resources/blogs/document-detection-before-ocr">document detection piece</a>)</li>
-      <li><strong>Classify</strong> — what type of document is this?</li>
-      <li><strong>Extract fields</strong> — name, DOB, document number, expiry, etc.</li>
-      <li><strong>Run the five checks</strong> — template, MRZ checksum, tampering, cross-field, external</li>
-      <li><strong>Score</strong> — combine check results into a fraud risk score (0-100)</li>
-      <li><strong>Decide</strong> — approve, deny, route to human review</li>
-      <li><strong>Log everything</strong> — every check input, output, score, and decision with timestamps</li>
+      <li><strong>Receive document</strong>, image or PDF</li>
+      <li><strong>Pre-process</strong>, deskew, rotate, crop (our <a href="/resources/blogs/document-detection-before-ocr">document detection piece</a>)</li>
+      <li><strong>Classify</strong>, what type of document is this?</li>
+      <li><strong>Extract fields</strong>, name, DOB, document number, expiry, etc.</li>
+      <li><strong>Run the five checks</strong>, template, MRZ checksum, tampering, cross-field, external</li>
+      <li><strong>Score</strong>, combine check results into a fraud risk score (0-100)</li>
+      <li><strong>Decide</strong>, approve, deny, route to human review</li>
+      <li><strong>Log everything</strong>, every check input, output, score, and decision with timestamps</li>
     </ol>
     <p>Step 8 is the one most projects skip. Regulators ask for it within the first week of an examination. Build it from day one.</p>
 
@@ -79,7 +79,7 @@ export const blog23: BlogPost = {
     <p>Use VLMs for the trickiest 5% of cases that pass the five-check pipeline but still feel off. Use dedicated APIs for the routine 95%. Our <a href="/resources/blogs/vlm-vs-ocr">VLM vs OCR piece</a> covers the cost math in detail.</p>
 
     <h2>The Way I Explain Document Fraud Detection to Non-Engineers</h2>
-    <p>Imagine the security guard at a bank entrance. He looks at every ID. He knows what real IDs from your state look like. He notices if the photo seems off, if the date of birth does not make sense for the person standing in front of him, if the card feels wrong. He cannot catch everything — a perfect fake gets through occasionally — but he stops 95% of obvious fraud at the door.</p>
+    <p>Imagine the security guard at a bank entrance. He looks at every ID. He knows what real IDs from your state look like. He notices if the photo seems off, if the date of birth does not make sense for the person standing in front of him, if the card feels wrong. He cannot catch everything, a perfect fake gets through occasionally, but he stops 95% of obvious fraud at the door.</p>
     <p>Document fraud detection API is that security guard, applied to every document your company receives, running in 2 seconds, at a few cents per check. The bank is still the bank. The decisions are still yours. The obvious fraud just stops being your problem.</p>
 
     <h2>What I'd Do Today</h2>
@@ -93,7 +93,7 @@ export const blog23: BlogPost = {
     <p>A document fraud detection API takes a document image and returns a verdict on whether the document is authentic. Modern APIs combine OCR, computer vision, MRZ checksum validation, tampering detection, and cross-field consistency checks to produce a fraud risk score.</p>
 
     <h3>How accurate is document fraud detection in 2026?</h3>
-    <p>Top APIs catch 95-98% of obvious fraud attempts (template mismatches, simple tampering, mismatched fields). The remaining 2-5% requires additional signals — velocity analysis, fraud database cross-reference, behavioral signals, human review.</p>
+    <p>Top APIs catch 95-98% of obvious fraud attempts (template mismatches, simple tampering, mismatched fields). The remaining 2-5% requires additional signals, velocity analysis, fraud database cross-reference, behavioral signals, human review.</p>
 
     <h3>Can fraud detection be done in real-time?</h3>
     <p>Yes. Dedicated APIs run the five-check pipeline in under 2 seconds per document. Combined with parallel sanctions screening, full KYC verification can complete in under 5 seconds end-to-end.</p>
@@ -137,7 +137,7 @@ export const blog23: BlogPost = {
     {
       question: "How accurate is document fraud detection in 2026?",
       answer:
-        "Top APIs catch 95-98% of obvious fraud attempts. The remaining 2-5% requires additional signals — velocity analysis, fraud database cross-reference, behavioral signals, human review.",
+        "Top APIs catch 95-98% of obvious fraud attempts. The remaining 2-5% requires additional signals, velocity analysis, fraud database cross-reference, behavioral signals, human review.",
     },
     {
       question: "Can fraud detection be done in real-time?",

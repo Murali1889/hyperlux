@@ -8,11 +8,11 @@ export const blog26: BlogPost = {
   excerpt:
     "The single step that improved our OCR pipeline accuracy by 8 percentage points was not better OCR. It was classification. Here is what classification software actually does and how to pick one.",
   description:
-    "Document classification software identifies invoices, statements, IDs before extraction — lifting downstream OCR accuracy 8 points. Tools + cost (2026).",
+    "Document classification software identifies invoices, statements, IDs before extraction, lifting downstream OCR accuracy 8 points. Tools + cost (2026).",
   metaTag: "Document Classification Software (Tools + Cost, 2026)",
   content: `
     <p>The single step that improved our OCR pipeline accuracy by 8 percentage points was not switching OCR engines. It was adding a document classification step before OCR. The model says "this is a bank statement" or "this is an invoice", we route to the right extraction template, and accuracy on per-field extraction jumps. Classification is the most underrated step in document AI. This guide is what it actually does and how to pick a vendor.</p>
-    <p>If you are building any pipeline that processes more than one document type — and almost all real pipelines do — read this.</p>
+    <p>If you are building any pipeline that processes more than one document type, and almost all real pipelines do, read this.</p>
 
     <h2>What "Document Classification" Actually Means</h2>
     <p>Document classification is the step that identifies what type of document you are looking at before you try to extract anything from it. Invoice. Bank statement. Driver's license. Pay stub. W-2. Contract. Each type has different fields, different layouts, different validation rules. Classifying first lets you route to type-specific extraction templates and dramatically improves accuracy.</p>
@@ -69,9 +69,9 @@ export const blog26: BlogPost = {
     <h2>The Pipeline I Recommend</h2>
     <ol>
       <li><strong>Receive document</strong></li>
-      <li><strong>Pre-process</strong> — deskew, rotate, page-boundary detection (see our <a href="/resources/blogs/document-detection-before-ocr">document detection guide</a>)</li>
-      <li><strong>Classify</strong> — type, subtype, source. Get confidence scores.</li>
-      <li><strong>Route to template-specific extraction</strong> — invoice template for invoices, statement template for statements, etc.</li>
+      <li><strong>Pre-process</strong>, deskew, rotate, page-boundary detection (see our <a href="/resources/blogs/document-detection-before-ocr">document detection guide</a>)</li>
+      <li><strong>Classify</strong>, type, subtype, source. Get confidence scores.</li>
+      <li><strong>Route to template-specific extraction</strong>, invoice template for invoices, statement template for statements, etc.</li>
       <li><strong>Run OCR with the right template</strong></li>
       <li><strong>Normalize and validate</strong></li>
       <li><strong>Low-confidence classifications → human review queue</strong></li>
@@ -114,7 +114,7 @@ export const blog26: BlogPost = {
     <h2>Frequently Asked Questions</h2>
 
     <h3>What is document classification software?</h3>
-    <p>Document classification software identifies the type of document — invoice, bank statement, contract, tax form — before extraction runs. It uses computer vision and text models to assign a class and confidence score, enabling type-specific extraction templates downstream.</p>
+    <p>Document classification software identifies the type of document, invoice, bank statement, contract, tax form, before extraction runs. It uses computer vision and text models to assign a class and confidence score, enabling type-specific extraction templates downstream.</p>
 
     <h3>How accurate is document classification in 2026?</h3>
     <p>On common document types (invoices, statements, IDs): 97-99%. On industry-specific types: depends on whether the vendor has pre-trained classes for them. Custom training gets to 95%+ with 50-200 examples per class.</p>
@@ -129,7 +129,7 @@ export const blog26: BlogPost = {
     <p>OCR extracts text from images. Classification identifies what kind of document you are looking at. The two work together: classify first, then OCR with the right template.</p>
 
     <h3>What does document classification software cost?</h3>
-    <p>Per-document classification typically runs $0.005-$0.02 — a fraction of OCR cost. The accuracy improvement on downstream extraction usually pays for it many times over.</p>
+    <p>Per-document classification typically runs $0.005-$0.02, a fraction of OCR cost. The accuracy improvement on downstream extraction usually pays for it many times over.</p>
   `,
   image: "/images/intelligent-document-processing.png",
   featuredImage: "/images/intelligent-document-processing.png",
@@ -155,7 +155,7 @@ export const blog26: BlogPost = {
     {
       question: "What is document classification software?",
       answer:
-        "Document classification software identifies the type of document — invoice, bank statement, contract, tax form — before extraction runs. It uses computer vision and text models to assign a class and confidence score, enabling type-specific extraction templates downstream.",
+        "Document classification software identifies the type of document, invoice, bank statement, contract, tax form, before extraction runs. It uses computer vision and text models to assign a class and confidence score, enabling type-specific extraction templates downstream.",
     },
     {
       question: "How accurate is document classification in 2026?",
@@ -180,7 +180,7 @@ export const blog26: BlogPost = {
     {
       question: "What does document classification software cost?",
       answer:
-        "Per-document classification typically runs $0.005-$0.02 — a fraction of OCR cost. The accuracy improvement on downstream extraction usually pays for it many times over.",
+        "Per-document classification typically runs $0.005-$0.02, a fraction of OCR cost. The accuracy improvement on downstream extraction usually pays for it many times over.",
     },
   ],
 }

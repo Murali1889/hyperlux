@@ -8,7 +8,7 @@ export const blog02: BlogPost = {
   excerpt:
     "Your PDF looks normal but Ctrl+F finds nothing. That means it is an image PDF, not a readable one. Here is the 2-second test and the simple fix.",
   description:
-    "Readable PDF vs image PDF — a 2-second test to tell them apart, why it matters more than you think, and how to convert one into the other.",
+    "Readable PDF vs image PDF, a 2-second test to tell them apart, why it matters more than you think, and how to convert one into the other.",
   metaTag: "Readable PDF vs Image PDF: The 2-Second Test (2026)",
   content: `
     <p>A client emailed me a "searchable PDF" on a Tuesday at 6 PM. I pressed Ctrl+F. Nothing. We went back and forth for twenty minutes before we figured out what was wrong. The PDF looked perfect. It just wasn't actually searchable.</p>
@@ -16,8 +16,8 @@ export const blog02: BlogPost = {
 
     <h2>The Two Kinds of PDFs (Explained Like You Are 10)</h2>
     <p>A PDF is a container. Anyone can put almost anything inside. There are two main things people put in:</p>
-    <p><strong>Kind 1 — Readable PDFs.</strong> These have real text inside. Think of a Word document saved as PDF. The letters are stored as actual letters. Your computer knows that "Hello" is H-E-L-L-O. You can search for words. You can copy and paste. Screen readers can read it out loud.</p>
-    <p><strong>Kind 2 — Image PDFs.</strong> These are stacks of pictures. Think of taking a photo of a page and saving the photo as a PDF. Your computer sees colorful shapes. It does not know those shapes are letters. Ctrl+F finds nothing because there is no text to find.</p>
+    <p><strong>Kind 1, Readable PDFs.</strong> These have real text inside. Think of a Word document saved as PDF. The letters are stored as actual letters. Your computer knows that "Hello" is H-E-L-L-O. You can search for words. You can copy and paste. Screen readers can read it out loud.</p>
+    <p><strong>Kind 2, Image PDFs.</strong> These are stacks of pictures. Think of taking a photo of a page and saving the photo as a PDF. Your computer sees colorful shapes. It does not know those shapes are letters. Ctrl+F finds nothing because there is no text to find.</p>
     <p>The problem is that both look exactly the same when you open them. You cannot tell which kind you have just by looking. Your eyes work fine on both. Your computer only works on Kind 1.</p>
     <p>The easiest analogy: a readable PDF is like a printed page. An image PDF is like a photograph of that printed page. Both show the same words. Only the printed page lets you point to a specific letter and say "this is an L."</p>
 
@@ -41,7 +41,7 @@ export const blog02: BlogPost = {
       <li><strong>Screen readers.</strong> Tools that read pages aloud to blind users will not work. In some countries (US, EU, Canada) this can be a real legal problem.</li>
       <li><strong>Form fields.</strong> If the PDF has boxes you should be able to type into, they will not work.</li>
       <li><strong>Auto-fill.</strong> Browser auto-fill will not recognize anything.</li>
-      <li><strong>AI tools.</strong> ChatGPT, Claude, contract review tools — anything that needs text will either fail or hallucinate when given an image PDF.</li>
+      <li><strong>AI tools.</strong> ChatGPT, Claude, contract review tools, anything that needs text will either fail or hallucinate when given an image PDF.</li>
     </ul>
     <p>I watched a finance team waste two weeks reconciling invoices because their AP automation tool was silently receiving image PDFs from one vendor. The tool tried to extract text. Got nothing. Matched against an empty string. The numbers were off by $400,000 before someone noticed. The fix took ten minutes. Catching the problem at intake would have cost zero.</p>
 
@@ -58,16 +58,16 @@ export const blog02: BlogPost = {
     <p>Open a JPG photo. Click File → Print → Save as PDF. You just made an image PDF. The PDF looks legit but contains zero text. This is the single most common way people accidentally create image PDFs.</p>
 
     <h3>Fax Machines and Fax-to-Email</h3>
-    <p>Faxes are pictures by definition. Anything coming out of a fax-to-email service is an image PDF. (Yes, fax is still a thing in healthcare, law, and government — it is not going away soon.)</p>
+    <p>Faxes are pictures by definition. Anything coming out of a fax-to-email service is an image PDF. (Yes, fax is still a thing in healthcare, law, and government, it is not going away soon.)</p>
 
     <h3>Cheap Online "PDF Compressors"</h3>
     <p>Some compression tools convert your readable PDF into an image PDF as a way to shrink the file size. The PDF gets smaller. It also gets unsearchable. Beware free compression sites.</p>
 
     <h2>The Hybrid Case: A Half-Readable PDF</h2>
-    <p>This is the trickiest case. A PDF can be <em>partly</em> readable and <em>partly</em> image — and that is more confusing than a fully image PDF.</p>
+    <p>This is the trickiest case. A PDF can be <em>partly</em> readable and <em>partly</em> image, and that is more confusing than a fully image PDF.</p>
     <p>Common example: a contract template typed in Word, exported to PDF, then the signature page was printed, signed, scanned, and inserted back in. Pages 1-9 are readable. Page 10 is an image. Ctrl+F finds your terms in pages 1-9 but never on page 10.</p>
     <p>Another example: an old document where some pages were OCR'd years ago and others were not. Search "feels" broken because it works sometimes and not others.</p>
-    <p>If you suspect this, do the 2-second test on a few different pages. If results are inconsistent across the document, you have a hybrid. The fix is the same — run OCR on the whole thing. <a href="/resources/blogs/document-detection-before-ocr">Document detection</a> in a good OCR pipeline catches and corrects this automatically.</p>
+    <p>If you suspect this, do the 2-second test on a few different pages. If results are inconsistent across the document, you have a hybrid. The fix is the same, run OCR on the whole thing. <a href="/resources/blogs/document-detection-before-ocr">Document detection</a> in a good OCR pipeline catches and corrects this automatically.</p>
 
     <h2>The Sneaky Case: A "Searchable" PDF With Broken Text</h2>
     <p>This one is the most annoying. Sometimes OCR ran on a PDF but did a terrible job. The text layer exists but it is gibberish. Ctrl+F returns results, but the matches are nonsense.</p>
@@ -99,7 +99,7 @@ export const blog02: BlogPost = {
 
     <h2>The Way I Explain It to Non-Tech People</h2>
     <p>I keep two analogies in my back pocket for explaining this to my mom or to a salesperson.</p>
-    <p>Analogy 1: <strong>The recipe card</strong>. A readable PDF is like a recipe written in pen on a card — you can read it, the computer can read it. An image PDF is like a photo of that card. You can still read it because your eyes are amazing. The computer can't, because the computer only sees colors.</p>
+    <p>Analogy 1: <strong>The recipe card</strong>. A readable PDF is like a recipe written in pen on a card, you can read it, the computer can read it. An image PDF is like a photo of that card. You can still read it because your eyes are amazing. The computer can't, because the computer only sees colors.</p>
     <p>Analogy 2: <strong>The library book</strong>. A readable PDF is a library book where every word is printed. An image PDF is a stack of photocopies of every page. Both let you read the book. Only the printed version lets the librarian's computer find every chapter on World War II in one search.</p>
     <p>Pick whichever one lands better with whoever you are talking to. Both work.</p>
 
@@ -117,7 +117,7 @@ export const blog02: BlogPost = {
     <p>Almost every scanner produces image PDFs by default because OCR was historically a paid feature and adds a few seconds per page. Most scanners have a "searchable PDF" or "OCR" setting buried in the menu. Phone apps usually require an in-app purchase to enable it.</p>
 
     <h3>Can a PDF be partly readable and partly image?</h3>
-    <p>Yes — and it is a common gotcha. Documents combining native text with embedded scans (a contract with a scanned signature page, for example) have searchable text on some pages and image-only content on others. Ctrl+F finds half your terms and misses the rest.</p>
+    <p>Yes, and it is a common gotcha. Documents combining native text with embedded scans (a contract with a scanned signature page, for example) have searchable text on some pages and image-only content on others. Ctrl+F finds half your terms and misses the rest.</p>
 
     <h3>Will Ctrl+F always tell me if my PDF is readable?</h3>
     <p>Usually, but not always. If the document has a broken or garbled text layer, Ctrl+F may return results that look correct but actually point to nonsense characters. To double-check, copy out a sentence and paste it into a notepad. If the paste is garbled, the text layer is broken even if Ctrl+F seems to work.</p>
@@ -168,7 +168,7 @@ export const blog02: BlogPost = {
     {
       question: "Will Ctrl+F always tell me if my PDF is readable?",
       answer:
-        "Usually, but not always. If the document has a broken text layer, Ctrl+F may return results that look correct but point to nonsense characters. Double-check by copying a sentence into a notepad — if the paste is garbled, the text layer is broken.",
+        "Usually, but not always. If the document has a broken text layer, Ctrl+F may return results that look correct but point to nonsense characters. Double-check by copying a sentence into a notepad, if the paste is garbled, the text layer is broken.",
     },
     {
       question: "Can image PDFs be smaller in file size?",

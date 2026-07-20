@@ -27,12 +27,12 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       {
         question: "What is OCR document management?",
         answer:
-          "OCR document management uses optical character recognition to convert scanned documents and images into searchable, editable digital text — then organizes that data into systems like ERPs or CRMs. Modern AI-powered OCR also classifies documents and extracts specific fields without templates.",
+          "OCR document management uses optical character recognition to convert scanned documents and images into searchable, editable digital text, then organizes that data into systems like ERPs or CRMs. Modern AI-powered OCR also classifies documents and extracts specific fields without templates.",
       },
       {
         question: "How accurate is modern OCR?",
         answer:
-          "Top OCR engines hit 95-99% accuracy on clean printed documents and 85-95% on handwritten or low-quality scans. Accuracy drops on rotated, faded, or table-heavy documents — pre-processing and AI post-correction recover most of that gap.",
+          "Top OCR engines hit 95-99% accuracy on clean printed documents and 85-95% on handwritten or low-quality scans. Accuracy drops on rotated, faded, or table-heavy documents. Pre-processing and AI post-correction recover most of that gap.",
       },
       {
         question: "Is OCR worth it for a small finance team?",
@@ -65,17 +65,17 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       {
         question: "What is OCR invoice processing?",
         answer:
-          "OCR invoice processing is software that reads incoming invoices (PDF, scan, or image) and converts them into structured data — vendor, invoice number, PO, line items, total, due date — that flows into your AP system. Unlike generic OCR, invoice OCR validates totals, matches to purchase orders, and routes low-confidence extractions to a human review queue.",
+          "OCR invoice processing is software that reads incoming invoices (PDF, scan, or image) and converts them into structured data (vendor, invoice number, PO, line items, total, due date) that flows into your AP system. Unlike generic OCR, invoice OCR validates totals, matches to purchase orders, and routes low-confidence extractions to a human review queue.",
       },
       {
         question: "How much does OCR reduce invoice processing cost?",
         answer:
-          "Real customer data: from roughly $14 per invoice (manual) to $2.70 per invoice with OCR — 80% cost reduction. Most teams see 70-85% reduction within six months. Payback below one quarter for teams processing 2,000+ invoices per month.",
+          "Real customer data: from roughly $14 per invoice (manual) to $2.70 per invoice with OCR, 80% cost reduction. Most teams see 70-85% reduction within six months. Payback below one quarter for teams processing 2,000+ invoices per month.",
       },
       {
         question: "What's the touchless processing rate on invoice OCR in 2026?",
         answer:
-          "60-80% for repeat-vendor invoices with modern layout-aware OCR. 30-50% for first-time vendors. Near-zero for handwritten invoices. Touchless rate is the number that actually matters for AP economics — it directly drives per-invoice cost.",
+          "60-80% for repeat-vendor invoices with modern layout-aware OCR. 30-50% for first-time vendors. Near-zero for handwritten invoices. Touchless rate is the number that actually matters for AP economics because it directly drives per-invoice cost.",
       },
       {
         question: "What's the error rate on OCR invoice extraction?",
@@ -90,7 +90,7 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       {
         question: "Can OCR handle invoices from new vendors?",
         answer:
-          "AI-powered OCR doesn't need per-vendor templates anymore. It identifies invoice fields by context — vendor name, total, due date, line items — even on layouts it has never seen. First-time-vendor touchless rate typically 30-50%; repeat vendors climb to 60-80% within 3 months.",
+          "AI-powered OCR doesn't need per-vendor templates anymore. It identifies invoice fields by context (vendor name, total, due date, line items) even on layouts it has never seen. First-time-vendor touchless rate typically 30-50%; repeat vendors climb to 60-80% within 3 months.",
       },
     ],
   },
@@ -115,7 +115,7 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       {
         question: "What is an OCR API?",
         answer:
-          "An OCR API is an HTTP endpoint you call with an image or PDF, and it returns structured text — usually as JSON. It hides the OCR engine, pre-processing, and post-correction behind a single request so your app doesn't need to manage models.",
+          "An OCR API is an HTTP endpoint you call with an image or PDF, and it returns structured text, usually as JSON. It hides the OCR engine, pre-processing, and post-correction behind a single request so your app doesn't need to manage models.",
       },
       {
         question: "How much does an OCR API cost?",
@@ -127,7 +127,7 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
 
   "idp-vs-ocr-understanding-the-key-differences-for-automation-success": {
     description:
-      "OCR reads pixels. IDP runs a workflow. The 2026 comparison — accuracy, cost, output type, plus when each wins and named vendors in every category.",
+      "OCR reads pixels. IDP runs a workflow. The 2026 comparison of accuracy, cost, and output type, plus when each wins and named vendors in every category.",
     primary_keyword: "idp vs ocr",
     secondary_keywords: [
       "ocr vs idp",
@@ -148,7 +148,7 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       {
         question: "What's the difference between OCR and IDP?",
         answer:
-          "OCR converts pixels into text — nothing more. IDP bundles OCR with classification (what type of document?), extraction (which values?), validation (do totals reconcile?), and routing (where does structured output go?). Every IDP platform contains OCR; no OCR API contains IDP.",
+          "OCR converts pixels into text and nothing more. IDP bundles OCR with classification (what type of document?), extraction (which values?), validation (do totals reconcile?), and routing (where does structured output go?). Every IDP platform contains OCR; no OCR API contains IDP.",
       },
       {
         question: "Is IDP just a rebrand of OCR?",
@@ -158,12 +158,12 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       {
         question: "When should I pick OCR over IDP?",
         answer:
-          "Pick pure OCR when documents are highly uniform (single template), downstream systems need only raw searchable text (archival, discovery), or you have engineering capacity to build the classification + validation + routing layers yourself and want to control every step. Pick OCR at 10K+ docs/month if unit economics matter — DIY often beats IDP at scale.",
+          "Pick pure OCR when documents are highly uniform (single template), downstream systems need only raw searchable text (archival, discovery), or you have engineering capacity to build the classification + validation + routing layers yourself and want to control every step. Pick OCR at 10K+ docs/month if unit economics matter, DIY often beats IDP at scale.",
       },
       {
         question: "When should I pick IDP over OCR?",
         answer:
-          "Pick IDP when document layouts vary, when you need structured field extraction into an ERP or workflow tool, or when you don't have engineering capacity to build the classification + validation + routing layers yourself. IDP is the right pick under 500 docs/month with multiple types — the engineering time to build the layers dwarfs the vendor fee.",
+          "Pick IDP when document layouts vary, when you need structured field extraction into an ERP or workflow tool, or when you don't have engineering capacity to build the classification + validation + routing layers yourself. IDP is the right pick under 500 docs/month with multiple types, the engineering time to build the layers dwarfs the vendor fee.",
       },
       {
         question: "What's the accuracy difference between OCR and IDP?",
@@ -173,7 +173,7 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       {
         question: "Which OCR and IDP vendors should I evaluate in 2026?",
         answer:
-          "Raw OCR APIs: Tesseract (free), AWS Textract, Google Document AI, DocsAPI. IDP platforms: Bill.com and AvidXchange for AP, Ocrolus and Plaid CRA for lending, Mindee and Rossum for document AI, Basware and Coupa for enterprise procure-to-pay. Always trial on your real documents before signing — vendor demos use clean files.",
+          "Raw OCR APIs: Tesseract (free), AWS Textract, Google Document AI, DocsAPI. IDP platforms: Bill.com and AvidXchange for AP, Ocrolus and Plaid CRA for lending, Mindee and Rossum for document AI, Basware and Coupa for enterprise procure-to-pay. Always trial on your real documents before signing, vendor demos use clean files.",
       },
     ],
   },
@@ -198,7 +198,7 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       {
         question: "Is 99% OCR accuracy good enough?",
         answer:
-          "Depends on the document. 99% on a 1,000-character invoice means 10 wrong characters — possibly one wrong dollar amount. For financial or legal documents, target 99.5%+ on critical fields with human review for the remainder.",
+          "Depends on the document. 99% on a 1,000-character invoice means 10 wrong characters, possibly one wrong dollar amount. For financial or legal documents, target 99.5%+ on critical fields with human review for the remainder.",
       },
       {
         question: "What's the difference between CER and WER?",
@@ -210,7 +210,7 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
 
   "intelligent-document-processing-the-future-of-automated-data-extraction": {
     description:
-      "A practical look at intelligent document processing — what it is, where it beats OCR, and how to deploy it without overengineering.",
+      "A practical look at intelligent document processing, what it is, where it beats OCR, and how to deploy it without overengineering.",
     primary_keyword: "intelligent document processing",
     secondary_keywords: [
       "idp",
@@ -228,14 +228,14 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       {
         question: "What is intelligent document processing?",
         answer:
-          "Intelligent document processing (IDP) is the combination of OCR, computer vision, NLP, and machine learning that ingests a document, identifies what it is, extracts the data that matters, validates it against business rules, and pushes it into downstream systems — usually with no human in the loop for standard cases.",
+          "Intelligent document processing (IDP) is the combination of OCR, computer vision, NLP, and machine learning that ingests a document, identifies what it is, extracts the data that matters, validates it against business rules, and pushes it into downstream systems, usually with no human in the loop for standard cases.",
       },
     ],
   },
 
   "passport-ocr-revolutionizing-identity-verification-with-automated-data-extraction": {
     description:
-      "How passport OCR cuts identity verification from 90 seconds to under 5 — and where it still gets things wrong.",
+      "How passport OCR cuts identity verification from 90 seconds to under 5, and where it still gets things wrong.",
     primary_keyword: "passport ocr",
     secondary_keywords: [
       "passport scanner",
@@ -253,7 +253,7 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       {
         question: "What is MRZ on a passport?",
         answer:
-          "The Machine Readable Zone is the two lines of OCR-friendly text at the bottom of the passport bio page. It contains the holder's name, document number, nationality, date of birth, and a checksum — designed specifically for fast, accurate machine reading.",
+          "The Machine Readable Zone is the two lines of OCR-friendly text at the bottom of the passport bio page. It contains the holder's name, document number, nationality, date of birth, and a checksum, designed specifically for fast, accurate machine reading.",
       },
     ],
   },
@@ -304,14 +304,14 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       {
         question: "What is legal document automation?",
         answer:
-          "Software that generates legal documents from templates and structured client data — contracts, pleadings, wills, intake forms — without manual copy-paste. Cuts drafting time 70-85% on standardized documents.",
+          "Software that generates legal documents from templates and structured client data, contracts, pleadings, wills, intake forms, without manual copy-paste. Cuts drafting time 70-85% on standardized documents.",
       },
     ],
   },
 
   "transforming-financial-services-the-complete-guide-to-document-automation": {
     description:
-      "Document automation in financial services — the real benchmarks, the regulated edge cases, and how to start without breaking compliance.",
+      "Document automation in financial services, the real benchmarks, the regulated edge cases, and how to start without breaking compliance.",
     primary_keyword: "document automation financial services",
     secondary_keywords: [
       "financial document automation",
@@ -329,14 +329,14 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       {
         question: "Is document automation compliant with KYC/AML rules?",
         answer:
-          "Yes — when implemented with audit trails, encrypted storage, role-based access, and verifiable extraction logs. The compliance burden actually shrinks because every decision is logged.",
+          "Yes, when implemented with audit trails, encrypted storage, role-based access, and verifiable extraction logs. The compliance burden actually shrinks because every decision is logged.",
       },
     ],
   },
 
   "ocr-bank-statement-technology-revolutionizing-financial-data-processing": {
     description:
-      "Bank statement OCR — what it is, how the eight-step pipeline works, why generic OCR fails on multi-page transaction tables, and how to pick a vendor in 2026.",
+      "Bank statement OCR, what it is, how the eight-step pipeline works, why generic OCR fails on multi-page transaction tables, and how to pick a vendor in 2026.",
     primary_keyword: "bank statement ocr",
     secondary_keywords: [
       "ocr bank statement",
@@ -355,7 +355,7 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       {
         question: "What is bank statement OCR?",
         answer:
-          "Bank statement OCR is software that converts bank statements — PDFs, scans, or phone photos — into structured transaction data. Unlike generic OCR, it understands the financial layout: account header, statement period, balances, and multi-column transaction tables with date, description, debit, credit, and balance columns.",
+          "Bank statement OCR is software that converts bank statements, PDFs, scans, or phone photos, into structured transaction data. Unlike generic OCR, it understands the financial layout: account header, statement period, balances, and multi-column transaction tables with date, description, debit, credit, and balance columns.",
       },
       {
         question: "Why does generic OCR fail on bank statements?",
@@ -370,19 +370,19 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       {
         question: "What's the hardest part of bank statement OCR?",
         answer:
-          "Multi-page transaction tables. A 12-page statement with one continuous transaction table confuses naive parsers — they treat each page as a separate table and break row continuity. Engines that stitch rows back together produce a single logical table; engines that don't lose 3-5 percentage points of accuracy.",
+          "Multi-page transaction tables. A 12-page statement with one continuous transaction table confuses naive parsers, they treat each page as a separate table and break row continuity. Engines that stitch rows back together produce a single logical table; engines that don't lose 3-5 percentage points of accuracy.",
       },
       {
         question: "Should I build bank statement OCR in-house or buy?",
         answer:
-          "Under 100 statements per month: build with Tesseract plus a validation script. 100-2,000 per month: pick a layout-aware vendor and trial on your real statements. 2,000+ per month: hybrid — vendor handles extraction, you own validation rules and the exception queue.",
+          "Under 100 statements per month: build with Tesseract plus a validation script. 100-2,000 per month: pick a layout-aware vendor and trial on your real statements. 2,000+ per month: hybrid, vendor handles extraction, you own validation rules and the exception queue.",
       },
     ],
   },
 
   "revolutionizing-finance-how-automated-bank-statement-analysis-transforms-lending-decisions": {
     description:
-      "Automated bank statement analysis is changing underwriting — here's what lenders actually extract, validate, and decide on.",
+      "Automated bank statement analysis is changing underwriting, here's what lenders actually extract, validate, and decide on.",
     primary_keyword: "automated bank statement analysis",
     secondary_keywords: [
       "bank statement analysis",
@@ -400,7 +400,7 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       {
         question: "Can automated bank statement analysis replace human underwriters?",
         answer:
-          "For straight-through approvals on standard products — yes, for the data extraction and rule-based checks. Human underwriters still review exceptions and judgment calls. Automation handles 60-80% of files end-to-end at most lenders running it well.",
+          "For straight-through approvals on standard products, yes, for the data extraction and rule-based checks. Human underwriters still review exceptions and judgment calls. Automation handles 60-80% of files end-to-end at most lenders running it well.",
       },
     ],
   },
@@ -408,7 +408,7 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
   "the-ultimate-guide-to-small-business-lending-automation-revolutionizing-sba-loans-and-financing":
     {
       description:
-        "How small business lending automation is shrinking SBA loan timelines from 45 days to under a week — without sacrificing compliance.",
+        "How small business lending automation is shrinking SBA loan timelines from 45 days to under a week, without sacrificing compliance.",
       primary_keyword: "small business lending automation",
       secondary_keywords: [
         "sba loan automation",

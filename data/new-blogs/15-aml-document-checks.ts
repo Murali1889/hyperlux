@@ -15,7 +15,7 @@ export const blog15: BlogPost = {
     <p>This guide is the seven-field minimum that has survived review, the patterns that fail, and how to operationalize AML document workflows without overengineering.</p>
 
     <h2>What "AML Document Checks" Actually Cover</h2>
-    <p>AML (Anti-Money Laundering) regulations require financial institutions to detect and report suspicious activity. Document checks are the part of AML where you extract structured data from documents — transaction records, wire transfer instructions, source-of-funds attestations, beneficial ownership documents — and use that data for monitoring, reporting, and audit.</p>
+    <p>AML (Anti-Money Laundering) regulations require financial institutions to detect and report suspicious activity. Document checks are the part of AML where you extract structured data from documents, transaction records, wire transfer instructions, source-of-funds attestations, beneficial ownership documents, and use that data for monitoring, reporting, and audit.</p>
     <p>The work splits in two:</p>
     <ul>
       <li><strong>At onboarding:</strong> Verify identity (KYC) and gather source-of-funds documentation.</li>
@@ -67,7 +67,7 @@ export const blog15: BlogPost = {
     <h2>The Document Categories That Need Special Attention</h2>
 
     <h3>Wire Transfer Instructions</h3>
-    <p>SWIFT messages, ACH instructions, internal transfer documents. Extract sender, receiver, amount, currency, purpose, and any intermediaries. Watch for stripped or obscured information — that itself is a flag.</p>
+    <p>SWIFT messages, ACH instructions, internal transfer documents. Extract sender, receiver, amount, currency, purpose, and any intermediaries. Watch for stripped or obscured information, that itself is a flag.</p>
 
     <h3>Beneficial Ownership Forms</h3>
     <p>FinCEN's CDD rule requires beneficial owner documentation. Capture the BO's name, DOB, address, ownership percentage. Verify against the source documents (driver's license, passport).</p>
@@ -79,7 +79,7 @@ export const blog15: BlogPost = {
     <p>Tax forms (W-8BEN, W-9), correspondent bank documentation, FATCA/CRS attestations. Each has specific required fields. Extraction must respect the form's structure.</p>
 
     <h3>Sanctions and PEP Screening Records</h3>
-    <p>Document each screening run — who was screened, against what list, at what date, with what result. Audits routinely sample screening records.</p>
+    <p>Document each screening run, who was screened, against what list, at what date, with what result. Audits routinely sample screening records.</p>
 
     <h2>The Pipeline That Passes Audits</h2>
     <p>The AML document pipeline I have seen pass audits:</p>
@@ -105,7 +105,7 @@ export const blog15: BlogPost = {
     <h2>The Way I Explain AML Document Work to Non-Tech People</h2>
     <p>Imagine you run a small bank. Every time a customer moves a lot of money, you have to write down where it came from and where it is going. If the same customer moves a lot of money repeatedly to the same place, you have to write down that pattern too. If the pattern looks suspicious, you have to call the police.</p>
     <p>To do all of that you need records. Lots of records. Every transaction, every reason, every check, every decision. AML document checks are how you build those records from the paperwork customers and counterparties give you.</p>
-    <p>If the records are good, the bank passes inspection. If the records are bad — missing fields, inconsistent dates, unclear amounts — the inspector finds gaps. Bad records cause fines. Good records are boring and quiet.</p>
+    <p>If the records are good, the bank passes inspection. If the records are bad, missing fields, inconsistent dates, unclear amounts, the inspector finds gaps. Bad records cause fines. Good records are boring and quiet.</p>
 
     <h2>What I'd Do Today</h2>
     <p>If you are building an AML system from scratch: nail the seven-field extraction first. Everything else (monitoring rules, SAR workflows, dashboards) builds on top of clean extracted data. Garbage in, garbage out.</p>

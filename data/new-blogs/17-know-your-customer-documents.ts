@@ -6,9 +6,9 @@ export const blog17: BlogPost = {
   title: "Know Your Customer Documents: The Practical 2026 Playbook",
   slug: "know-your-customer-documents",
   excerpt:
-    "KYC documents in 2026 are not what they were in 2020. Selfie liveness, digital ID wallets, eIDAS 2.0 — here is what's actually accepted and how to handle it.",
+    "KYC documents in 2026 are not what they were in 2020. Selfie liveness, digital ID wallets, eIDAS 2.0, here is what's actually accepted and how to handle it.",
   description:
-    "The 2026 playbook for Know Your Customer documents — what's accepted, how to handle digital ID, eIDAS 2.0, selfie liveness, and emerging market documents.",
+    "The 2026 playbook for Know Your Customer documents, what's accepted, how to handle digital ID, eIDAS 2.0, selfie liveness, and emerging market documents.",
   metaTag: "Know Your Customer Documents: 2026 Playbook",
   content: `
     <p>KYC documents in 2026 look different than they did in 2020. Selfie liveness checks are standard. eIDAS 2.0 changed the landscape in Europe. Digital ID wallets are real. Emerging market documents are formalizing faster than most playbooks update.</p>
@@ -47,14 +47,14 @@ export const blog17: BlogPost = {
     <h2>What Is New in 2026</h2>
 
     <h3>Digital ID Wallets</h3>
-    <p>Apple Wallet, Google Wallet, and EUDI Wallet support storing government-issued IDs. The verification flow is different from a photo of a physical document — the wallet shares cryptographically signed claims that you can verify against the issuing authority.</p>
+    <p>Apple Wallet, Google Wallet, and EUDI Wallet support storing government-issued IDs. The verification flow is different from a photo of a physical document, the wallet shares cryptographically signed claims that you can verify against the issuing authority.</p>
     <p>For implementers: support OpenID for Verifiable Credentials (OID4VC) and ISO 18013-7 (remote presentment). The protocols are stable; the user experience is still settling.</p>
 
     <h3>eIDAS 2.0 in Europe</h3>
     <p>EU regulation that mandates member states issue digital identity wallets to citizens. As of 2025-2026, the EUDI Wallet is rolling out across member states. Financial institutions operating in Europe must accept EUDI Wallet credentials for KYC. Plan for it.</p>
 
     <h3>Selfie Liveness Becomes Standard</h3>
-    <p>Static selfies are dead for KYC. Customers must show liveness — usually a short video, a 3D depth scan via phone TrueDepth camera, or a series of prompted actions (turn head, blink). Without liveness, photo-of-a-photo attacks are trivial.</p>
+    <p>Static selfies are dead for KYC. Customers must show liveness, usually a short video, a 3D depth scan via phone TrueDepth camera, or a series of prompted actions (turn head, blink). Without liveness, photo-of-a-photo attacks are trivial.</p>
 
     <h3>Mobile Driver's Licenses</h3>
     <p>The US-specific evolution. About 15 states issued mDLs as of 2025. Federal acceptance (TSA, etc.) has been live since 2023. For KYC, treat mDL as equivalent to physical DL but use the ISO 18013-5 verification flow.</p>
@@ -119,16 +119,16 @@ export const blog17: BlogPost = {
     <p>A digital version of a state-issued driver's license, stored on a phone and verified cryptographically. Standardized by ISO 18013-5. Accepted federally in the US since 2023 and by financial institutions for KYC in 2026.</p>
 
     <h3>Do I need to support digital ID wallets?</h3>
-    <p>In Europe, yes — EUDI Wallet is mandated under eIDAS 2.0. In the US, support is voluntary but customer experience matters. Most large institutions will support digital ID by 2027.</p>
+    <p>In Europe, yes, EUDI Wallet is mandated under eIDAS 2.0. In the US, support is voluntary but customer experience matters. Most large institutions will support digital ID by 2027.</p>
 
     <h3>What is selfie liveness?</h3>
-    <p>A check that confirms the selfie is from a real, present person — not a photo of a photo or a recorded video. Done via 3D depth scan, prompted actions, or short video. Standard for KYC in 2026.</p>
+    <p>A check that confirms the selfie is from a real, present person, not a photo of a photo or a recorded video. Done via 3D depth scan, prompted actions, or short video. Standard for KYC in 2026.</p>
 
     <h3>How does KYC differ across countries?</h3>
     <p>Acceptable documents, retention periods, and re-verification triggers vary. Required source-of-funds documentation varies. Always research the specific KYC rules for each market you operate in. Don't assume one playbook works everywhere.</p>
 
     <h3>What is the most common KYC document fraud in 2026?</h3>
-    <p>Synthetic identity — real-looking documents created from real data scraped from public sources. The documents pass extraction and authenticity checks. Detection requires cross-referencing against fraud databases and analyzing velocity patterns, not just document checks alone.</p>
+    <p>Synthetic identity, real-looking documents created from real data scraped from public sources. The documents pass extraction and authenticity checks. Detection requires cross-referencing against fraud databases and analyzing velocity patterns, not just document checks alone.</p>
   `,
   image: "/images/passport-mrz-highlight.png",
   featuredImage: "/images/passport-mrz-highlight.png",
@@ -165,12 +165,12 @@ export const blog17: BlogPost = {
     {
       question: "Do I need to support digital ID wallets?",
       answer:
-        "In Europe, yes — EUDI Wallet is mandated under eIDAS 2.0. In the US, voluntary but customer experience matters. Most large institutions will support digital ID by 2027.",
+        "In Europe, yes, EUDI Wallet is mandated under eIDAS 2.0. In the US, voluntary but customer experience matters. Most large institutions will support digital ID by 2027.",
     },
     {
       question: "What is selfie liveness?",
       answer:
-        "A check that confirms the selfie is from a real, present person — not a photo of a photo or recorded video. Done via 3D depth scan, prompted actions, or short video. Standard for KYC in 2026.",
+        "A check that confirms the selfie is from a real, present person, not a photo of a photo or recorded video. Done via 3D depth scan, prompted actions, or short video. Standard for KYC in 2026.",
     },
     {
       question: "How does KYC differ across countries?",
@@ -180,7 +180,7 @@ export const blog17: BlogPost = {
     {
       question: "What is the most common KYC document fraud in 2026?",
       answer:
-        "Synthetic identity — real-looking documents created from real data scraped from public sources. Documents pass extraction and authenticity checks. Detection requires cross-referencing fraud databases and analyzing velocity patterns.",
+        "Synthetic identity, real-looking documents created from real data scraped from public sources. Documents pass extraction and authenticity checks. Detection requires cross-referencing fraud databases and analyzing velocity patterns.",
     },
   ],
 }

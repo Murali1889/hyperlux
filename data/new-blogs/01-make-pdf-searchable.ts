@@ -8,7 +8,7 @@ export const blog01: BlogPost = {
   excerpt:
     "Your PDF won't let you search inside it? Here is the 30-second fix, the four traps that silently break it, and a simple kid-friendly explanation of what's actually happening.",
   description:
-    "How to make a PDF searchable in 30 seconds without Acrobat — explained simply, with three free methods, four common traps, and what to do today.",
+    "How to make a PDF searchable in 30 seconds without Acrobat, explained simply, with three free methods, four common traps, and what to do today.",
   metaTag: "Make a PDF Searchable in 30 Seconds (No Acrobat Needed)",
   content: `
     <p>Last Thursday at 5:47 PM, I needed to find one tiny dollar number inside a 600-page PDF. I pressed Ctrl+F. Nothing happened. The search bar just blinked at me like it didn't know what I wanted.</p>
@@ -17,8 +17,8 @@ export const blog01: BlogPost = {
 
     <h2>The Quick Answer: What "Make a PDF Searchable" Really Means</h2>
     <p>Here is the simple version. A PDF can hold two kinds of stuff: <strong>real text</strong> and <strong>pictures of text</strong>. If your PDF was made on a computer (Word, Google Docs, anything typed), it usually has real text. You can search it. You can copy it. Easy.</p>
-    <p>But if your PDF came from a scanner, a phone camera, or a fax machine, the pages are just <strong>pictures</strong> — like screenshots stacked together. Your computer sees pretty shapes but doesn't know they are letters. That's why Ctrl+F finds nothing.</p>
-    <p>"Making a PDF searchable" means teaching the computer that those pretty shapes are real letters. The tool that does this is called <strong>OCR</strong> — Optical Character Recognition. Think of OCR as a friend who looks at a picture of a road sign and reads it out loud to you.</p>
+    <p>But if your PDF came from a scanner, a phone camera, or a fax machine, the pages are just <strong>pictures</strong>, like screenshots stacked together. Your computer sees pretty shapes but doesn't know they are letters. That's why Ctrl+F finds nothing.</p>
+    <p>"Making a PDF searchable" means teaching the computer that those pretty shapes are real letters. The tool that does this is called <strong>OCR</strong>, Optical Character Recognition. Think of OCR as a friend who looks at a picture of a road sign and reads it out loud to you.</p>
     <p>Once OCR runs, the PDF still looks exactly the same on the outside. But underneath, hidden behind every page, there is now a layer of real letters. Ctrl+F can read that hidden layer. So can copy-paste, screen readers, and any app that needs to understand the text.</p>
     <p>The whole job takes about <strong>30 seconds</strong> for a 50-page document. No Adobe Acrobat needed. No expensive software. We have three free or cheap ways to do it below.</p>
 
@@ -39,7 +39,7 @@ export const blog01: BlogPost = {
     <p>Why this is my first pick:</p>
     <ul>
       <li>No software to install. Works on any computer, even a school Chromebook.</li>
-      <li>The PDF still looks exactly the same as before — pictures, signatures, stamps, all in the same spot.</li>
+      <li>The PDF still looks exactly the same as before, pictures, signatures, stamps, all in the same spot.</li>
       <li>Handles up to 1,000 pages in one go.</li>
       <li>Cost is about a penny per page, which is less than the coffee you drink while you wait.</li>
     </ul>
@@ -76,14 +76,14 @@ ocrmypdf scanned.pdf searchable.pdf</code></pre>
     <p>Tesseract is fantastic for:</p>
     <ul>
       <li>Documents you cannot upload (private medical records, legal stuff, internal company files).</li>
-      <li>Offline work — airplane mode, no Wi-Fi, no problem.</li>
+      <li>Offline work, airplane mode, no Wi-Fi, no problem.</li>
       <li>One-off jobs where you only need to do this once or twice a month.</li>
     </ul>
     <p>It is less great for:</p>
     <ul>
-      <li>Very long documents — a 600-page PDF can take 20 minutes.</li>
-      <li>Handwriting — Tesseract struggles with anything that is not typed.</li>
-      <li>Tables — Tesseract reads top-to-bottom and can scramble multi-column layouts.</li>
+      <li>Very long documents, a 600-page PDF can take 20 minutes.</li>
+      <li>Handwriting, Tesseract struggles with anything that is not typed.</li>
+      <li>Tables, Tesseract reads top-to-bottom and can scramble multi-column layouts.</li>
     </ul>
     <p>If you are running this often, our <a href="/resources/blogs/pdf-text-recognition">guide on when Tesseract fails (and what to use instead)</a> covers the exact failure modes and the cheaper paths around them.</p>
 
@@ -95,11 +95,11 @@ ocrmypdf scanned.pdf searchable.pdf</code></pre>
     <p>The fix: rotate the page back to normal before OCR. Most quality OCR tools do this automatically. Most free tools do not. (Our deeper post on <a href="/resources/blogs/document-detection-before-ocr">document detection</a> explains why rotation correction is the single biggest accuracy win in OCR.)</p>
 
     <h3>Trap 2: The Document Has Two Columns</h3>
-    <p>Legal papers, school textbooks, newspapers, and academic articles often have two columns. Naive OCR reads top-to-bottom, left-to-right. So it reads line 1 of column 1, then line 1 of column 2, then line 2 of column 1 — and the meaning is destroyed.</p>
+    <p>Legal papers, school textbooks, newspapers, and academic articles often have two columns. Naive OCR reads top-to-bottom, left-to-right. So it reads line 1 of column 1, then line 1 of column 2, then line 2 of column 1, and the meaning is destroyed.</p>
     <p>The fix: use an OCR engine that understands layout. AWS Textract, Google Document AI, and our own DocsAPI all read columns correctly. Free Tesseract needs extra flags.</p>
 
     <h3>Trap 3: The Scan Is Tilted</h3>
-    <p>A document scanned at a 3-degree tilt can drop OCR accuracy by 5-10 percentage points. That sounds tiny. It is not. On a 200-line bank statement, 10% of lines wrong means 20 wrong numbers — possibly 20 wrong dollar amounts.</p>
+    <p>A document scanned at a 3-degree tilt can drop OCR accuracy by 5-10 percentage points. That sounds tiny. It is not. On a 200-line bank statement, 10% of lines wrong means 20 wrong numbers, possibly 20 wrong dollar amounts.</p>
     <p>The fix: deskew the page before OCR. <code>ocrmypdf --deskew</code> does this automatically. Most APIs do it for free.</p>
 
     <h3>Trap 4: The PDF Already Has a Bad Text Layer</h3>
@@ -117,7 +117,7 @@ ocrmypdf scanned.pdf searchable.pdf</code></pre>
         <tr><td>A 100-page document, time pressure</td><td>DocsAPI</td><td>30 seconds, layout stays perfect</td></tr>
         <tr><td>Sensitive content (private info)</td><td>Tesseract on your laptop</td><td>Nothing leaves your computer</td></tr>
         <tr><td>50-500 PDFs every month</td><td>DocsAPI batch endpoint</td><td>Cheaper than your engineer's time</td></tr>
-        <tr><td>10,000+ PDFs per day</td><td>API with retries and queue</td><td>Tesseract alone usually breaks at this scale — see our <a href="/resources/blogs/ocr-pdf-honest-guide">honest guide from 4M pages a month</a></td></tr>
+        <tr><td>10,000+ PDFs per day</td><td>API with retries and queue</td><td>Tesseract alone usually breaks at this scale, see our <a href="/resources/blogs/ocr-pdf-honest-guide">honest guide from 4M pages a month</a></td></tr>
         <tr><td>Tables and forms</td><td>Layout-aware OCR (DocsAPI, Textract)</td><td>Read more in our <a href="/resources/blogs/aws-textract-vs-docsapi">Textract comparison</a></td></tr>
       </tbody>
     </table>
@@ -148,7 +148,7 @@ ocrmypdf scanned.pdf searchable.pdf</code></pre>
     <p>On an API: about 30 seconds for 50 pages, around 5 minutes for 1,000 pages. On Tesseract on a laptop: 2-3 minutes for 50 pages, up to 30 minutes for 1,000. The longer the document, the bigger the gap between API and laptop.</p>
 
     <h3>Is online OCR safe for private documents?</h3>
-    <p>It depends on the provider. Reputable APIs (DocsAPI, AWS, Google) encrypt your data in transit and delete it after processing. Random "free OCR" websites often save copies or train AI models on your file. For private content, prefer a reputable API with a clear privacy policy — or run Tesseract locally so nothing leaves your computer.</p>
+    <p>It depends on the provider. Reputable APIs (DocsAPI, AWS, Google) encrypt your data in transit and delete it after processing. Random "free OCR" websites often save copies or train AI models on your file. For private content, prefer a reputable API with a clear privacy policy, or run Tesseract locally so nothing leaves your computer.</p>
 
     <h3>Can I OCR a handwritten PDF?</h3>
     <p>You can try, but accuracy is much lower than on typed text. Neat printed handwriting reaches about 85-90% on the best engines. Doctors' notes and signed forms drop much further. For high-value handwritten content (checks, application forms), pair OCR with a human review step.</p>
@@ -184,7 +184,7 @@ ocrmypdf scanned.pdf searchable.pdf</code></pre>
     {
       question: "Why is my searchable PDF still not searchable?",
       answer:
-        "The text layer is probably broken or invisible. Re-run OCR with the --force-ocr flag to strip and replace existing text. If pages are rotated, fix rotation first — most 'still not working' issues trace to skipped pre-processing.",
+        "The text layer is probably broken or invisible. Re-run OCR with the --force-ocr flag to strip and replace existing text. If pages are rotated, fix rotation first, most 'still not working' issues trace to skipped pre-processing.",
     },
     {
       question: "Does making a PDF searchable change how it looks?",

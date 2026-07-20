@@ -8,11 +8,11 @@ export const blog13: BlogPost = {
   excerpt:
     "We tried Claude 4.6 vision on tables. It cost 12x dedicated OCR per page. Here is when that math works, when it doesn't, and the hybrid that wins most.",
   description:
-    "VLM vs OCR — when to use a vision-language model for documents, when dedicated OCR wins on cost and speed, and the hybrid pattern that handles most workloads.",
+    "VLM vs OCR, when to use a vision-language model for documents, when dedicated OCR wins on cost and speed, and the hybrid pattern that handles most workloads.",
   metaTag: "VLM vs OCR: When to Use Vision-Language Models",
   content: `
     <p>We tried Claude 4.6 vision on a batch of complex tables in March. The accuracy was beautiful. The bill was twelve times what dedicated OCR would have cost. We learned a lot about when that math works and when it doesn't.</p>
-    <p>This guide is the honest answer on VLM vs OCR — when to use a vision-language model, when to stick with dedicated OCR, and the hybrid pattern that handles most real workloads cheaply and well.</p>
+    <p>This guide is the honest answer on VLM vs OCR, when to use a vision-language model, when to stick with dedicated OCR, and the hybrid pattern that handles most real workloads cheaply and well.</p>
 
     <h2>What "VLM" and "OCR" Mean in Plain English</h2>
     <p>OCR (Optical Character Recognition) is a specialized tool that does one job: turn pictures of text into real text. It is fast. It is cheap. It knows nothing about meaning.</p>
@@ -42,7 +42,7 @@ export const blog13: BlogPost = {
     <p>From production experience, VLMs are the right pick when:</p>
 
     <h3>1. Layouts Are Unique and Vary Significantly</h3>
-    <p>If every document looks different and you don't have time to build templates, a VLM can adapt. It does not need to be trained on each new layout — it just looks and figures it out.</p>
+    <p>If every document looks different and you don't have time to build templates, a VLM can adapt. It does not need to be trained on each new layout, it just looks and figures it out.</p>
 
     <h3>2. You Need Semantic Understanding</h3>
     <p>"Is this contract more favorable to us or to the vendor?" is not an OCR question. VLMs can read a contract and reason about it. Dedicated OCR cannot.</p>
@@ -54,7 +54,7 @@ export const blog13: BlogPost = {
     <p>Below a few thousand documents per month, the cost difference is small. Use the more powerful tool.</p>
 
     <h3>5. The Tricky 5%</h3>
-    <p>The hardest 5% of documents — weird layouts, mixed languages, complex tables, low-quality scans — often benefit from a VLM. Route just those to the VLM and use OCR for the easy 95%.</p>
+    <p>The hardest 5% of documents, weird layouts, mixed languages, complex tables, low-quality scans, often benefit from a VLM. Route just those to the VLM and use OCR for the easy 95%.</p>
 
     <h2>When Dedicated OCR Wins</h2>
 
@@ -65,7 +65,7 @@ export const blog13: BlogPost = {
     <p>Customer onboarding that needs to OCR an ID in under a second. VLMs cannot meet this. Dedicated OCR can.</p>
 
     <h3>3. Uniform Documents</h3>
-    <p>If your documents are mostly the same shape — same invoice template, same form layout — dedicated OCR with a small extraction pipeline beats VLMs on cost and speed.</p>
+    <p>If your documents are mostly the same shape, same invoice template, same form layout, dedicated OCR with a small extraction pipeline beats VLMs on cost and speed.</p>
 
     <h3>4. Strict Audit Requirements</h3>
     <p>Regulated industries that need deterministic, repeatable extraction. VLMs can produce slightly different output on the same input across runs. Dedicated OCR is more predictable.</p>
@@ -78,7 +78,7 @@ export const blog13: BlogPost = {
       <li>If confidence is low (low OCR scores, missing fields, validation fails): route to the VLM. About 5-10% of documents.</li>
       <li>The VLM handles the tricky cases at higher cost. OCR handles the bulk cheaply.</li>
     </ol>
-    <p>Average cost per page lands around $0.03 — close to dedicated OCR cost, but with the accuracy of a VLM on the hard cases. (More on this in our <a href="/resources/blogs/ocr-pdf-honest-guide">honest guide from 4M pages a month</a>.)</p>
+    <p>Average cost per page lands around $0.03, close to dedicated OCR cost, but with the accuracy of a VLM on the hard cases. (More on this in our <a href="/resources/blogs/ocr-pdf-honest-guide">honest guide from 4M pages a month</a>.)</p>
 
     <h2>The Quick Decision Table</h2>
     <table>
@@ -101,13 +101,13 @@ export const blog13: BlogPost = {
       <li><strong>VLM only:</strong> 50K × $0.15 = $7,500/month. 95% accurate. The 2,500 bad documents need review at $5 each = $12,500/month. Total: $20,000.</li>
       <li><strong>Hybrid (OCR + VLM on low-confidence 10%):</strong> 45K × $0.02 + 5K × $0.15 = $1,650/month. 96% accurate. The 2,000 bad documents need review at $5 each = $10,000. Total: $11,650.</li>
     </ul>
-    <p>Hybrid wins by a lot. It almost always does at meaningful scale. The setup is a confidence threshold on the OCR step — under a few hundred lines of code.</p>
+    <p>Hybrid wins by a lot. It almost always does at meaningful scale. The setup is a confidence threshold on the OCR step, under a few hundred lines of code.</p>
 
     <h2>The Way I Explain VLMs vs OCR to Non-Engineers</h2>
     <p>Imagine you need to extract data from a stack of forms. You have two options:</p>
     <ul>
       <li>A super-fast data entry temp. Costs $5/hour. Types accurately on standard forms. Gets confused by weird handwriting and unusual layouts.</li>
-      <li>An experienced analyst. Costs $50/hour. Can read anything — weird handwriting, unusual layouts, foreign languages. Also slower at routine forms because she's reading them carefully.</li>
+      <li>An experienced analyst. Costs $50/hour. Can read anything, weird handwriting, unusual layouts, foreign languages. Also slower at routine forms because she's reading them carefully.</li>
     </ul>
     <p>For a thousand standard forms, hire the temp. For a hundred weird forms, hire the analyst. For a mixed stack, hire the temp for the easy ones and the analyst for the hard ones. That mixed model is the hybrid pattern.</p>
     <p>OCR is the temp. VLMs are the analyst. Hybrid is using both wisely.</p>
@@ -120,7 +120,7 @@ export const blog13: BlogPost = {
     <h2>Frequently Asked Questions</h2>
 
     <h3>Can a VLM replace OCR entirely?</h3>
-    <p>For low-volume workloads, yes. For high-volume production, the cost and speed disadvantages make it impractical. The 2026 standard is hybrid — OCR for bulk, VLM for the trickiest documents.</p>
+    <p>For low-volume workloads, yes. For high-volume production, the cost and speed disadvantages make it impractical. The 2026 standard is hybrid, OCR for bulk, VLM for the trickiest documents.</p>
 
     <h3>Which VLM is best for document extraction in 2026?</h3>
     <p>Claude 4.6 leads on table extraction in our testing. GPT-5 vision is strong on layout understanding. Gemini Ultra is competitive across the board. Differences are small; pick based on the rest of your stack.</p>
@@ -161,7 +161,7 @@ export const blog13: BlogPost = {
     {
       question: "Can a VLM replace OCR entirely?",
       answer:
-        "For low-volume workloads, yes. For high-volume production, cost and speed make it impractical. The 2026 standard is hybrid — OCR for bulk, VLM for the trickiest documents.",
+        "For low-volume workloads, yes. For high-volume production, cost and speed make it impractical. The 2026 standard is hybrid, OCR for bulk, VLM for the trickiest documents.",
     },
     {
       question: "Which VLM is best for document extraction in 2026?",

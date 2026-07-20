@@ -12,20 +12,20 @@ export const blog28: BlogPost = {
   metaTag: "Real-Time Document Validation API: 1.8s p50 (2026)",
   content: `
     <p>Our first attempt at a real-time document validation API took 47 seconds per document. The customer onboarding team called it "real-time only by lawyer standards." Six months and three architecture rewrites later, we shipped a 1.8-second median latency. This guide is what changed.</p>
-    <p>If you are building or buying a real-time document validation pipeline — for KYC, customer onboarding, payment processing, or payroll — and the word "real-time" actually matters to your users, read this.</p>
+    <p>If you are building or buying a real-time document validation pipeline, for KYC, customer onboarding, payment processing, or payroll, and the word "real-time" actually matters to your users, read this.</p>
 
     <h2>What "Real-Time Document Validation API" Actually Means</h2>
-    <p>Real-time document validation is the practice of checking that a document is what it claims to be, contains the data it should contain, and matches business rules — all within the window of a user-facing workflow. For most product teams, that means under 5 seconds. For payment workflows, under 2 seconds. For customer onboarding, the window can stretch to 10 seconds before users abandon.</p>
+    <p>Real-time document validation is the practice of checking that a document is what it claims to be, contains the data it should contain, and matches business rules, all within the window of a user-facing workflow. For most product teams, that means under 5 seconds. For payment workflows, under 2 seconds. For customer onboarding, the window can stretch to 10 seconds before users abandon.</p>
     <p>The friendly description: a security guard who checks every document the moment it arrives, decides "this is real and complete," "this is suspicious," or "this is missing fields," and responds before the user has time to wonder what is happening.</p>
     <p>Our <a href="/resources/blogs/document-fraud-detection-api">document fraud detection piece</a> covers the security checks. This guide focuses on the API and pipeline architecture that makes the whole thing fast.</p>
 
     <h2>What "Real-Time" Means in Practice</h2>
-    <p>In document validation, "real-time" means the full verification verdict — file integrity, OCR extraction, fraud checks, and sanctions screening — completes within the user-facing workflow window. For login or in-line fraud checks, that means under 1 second. For payment workflows and onboarding, under 5 seconds. Anything past 10 seconds is a background job dressed up as real-time, and users will start to wonder if the system is broken.</p>
+    <p>In document validation, "real-time" means the full verification verdict, file integrity, OCR extraction, fraud checks, and sanctions screening, completes within the user-facing workflow window. For login or in-line fraud checks, that means under 1 second. For payment workflows and onboarding, under 5 seconds. Anything past 10 seconds is a background job dressed up as real-time, and users will start to wonder if the system is broken.</p>
 
     <table>
       <thead><tr><th>Latency</th><th>User experience</th><th>Use cases</th></tr></thead>
       <tbody>
-        <tr><td>Under 1 second</td><td>Instant — user does not notice the wait</td><td>Login, IDV step in a wizard, real-time fraud check</td></tr>
+        <tr><td>Under 1 second</td><td>Instant, user does not notice the wait</td><td>Login, IDV step in a wizard, real-time fraud check</td></tr>
         <tr><td>1-3 seconds</td><td>Feels fast</td><td>Customer onboarding, payment verification, point-of-sale</td></tr>
         <tr><td>3-10 seconds</td><td>Noticeable but acceptable with a progress indicator</td><td>Mortgage qualification, complex multi-document KYC</td></tr>
         <tr><td>10-30 seconds</td><td>User starts to wonder if it is broken</td><td>Background jobs masquerading as real-time</td></tr>
@@ -96,7 +96,7 @@ export const blog28: BlogPost = {
 2. file_integrity() [50ms]
 3. preprocess() [200ms]
 4. classify() [150ms]
-5. // Parallel block — fan out
+5. // Parallel block, fan out
    - ocr_and_extract() [800ms]
    - tampering_detection() [400ms]
 6. // After OCR returns
@@ -107,7 +107,7 @@ export const blog28: BlogPost = {
 8. Total P50: 1.5-2 seconds</code></pre>
 
     <h2>The Way I Explain Real-Time Document Validation to Non-Engineers</h2>
-    <p>Imagine a security guard at a venue. He looks at every ticket, checks it is real, scans the barcode, checks the name against the guest list, decides if the person can come in. All of this happens in under 5 seconds while you are still standing at the door. The guard is fast because he is doing several checks at once — looking at the ticket, scanning the barcode, glancing at the photo — not one after the other.</p>
+    <p>Imagine a security guard at a venue. He looks at every ticket, checks it is real, scans the barcode, checks the name against the guest list, decides if the person can come in. All of this happens in under 5 seconds while you are still standing at the door. The guard is fast because he is doing several checks at once, looking at the ticket, scanning the barcode, glancing at the photo, not one after the other.</p>
     <p>That is real-time document validation. The user uploads a document. The pipeline does five different checks in parallel. The result comes back in 2 seconds. The user feels like the system "just works" instead of waiting.</p>
 
     <h2>What I'd Do Today</h2>
@@ -118,7 +118,7 @@ export const blog28: BlogPost = {
     <h2>Frequently Asked Questions</h2>
 
     <h3>What is a real-time document validation API?</h3>
-    <p>A real-time document validation API takes a document upload and returns a complete verification verdict — authenticity, field extraction, fraud checks, sanctions screening — within a user-facing latency budget, usually under 5 seconds and ideally under 2.</p>
+    <p>A real-time document validation API takes a document upload and returns a complete verification verdict, authenticity, field extraction, fraud checks, sanctions screening, within a user-facing latency budget, usually under 5 seconds and ideally under 2.</p>
 
     <h3>How fast does "real-time" need to be?</h3>
     <p>Depends on the workflow. Customer onboarding tolerates 5-10 seconds with a progress indicator. Payment verification needs under 2 seconds. Real-time fraud checks need under 1 second. Match latency to the use case.</p>
@@ -159,7 +159,7 @@ export const blog28: BlogPost = {
     {
       question: "What is a real-time document validation API?",
       answer:
-        "A real-time document validation API takes a document upload and returns a complete verification verdict — authenticity, field extraction, fraud checks, sanctions screening — within a user-facing latency budget, usually under 5 seconds and ideally under 2.",
+        "A real-time document validation API takes a document upload and returns a complete verification verdict, authenticity, field extraction, fraud checks, sanctions screening, within a user-facing latency budget, usually under 5 seconds and ideally under 2.",
     },
     {
       question: "How fast does real-time need to be?",

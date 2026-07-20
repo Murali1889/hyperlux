@@ -24,11 +24,11 @@ export const blog14: BlogPost = {
       <li>You verify the documents match the customer (name, date of birth, address all consistent).</li>
       <li>You store the verification record for the regulator to audit later.</li>
     </ol>
-    <p>If you build software that handles money — banks, fintechs, lenders, crypto, payments — you have a KYC requirement. The exact rules vary by country and product, but the document verification step is universal.</p>
+    <p>If you build software that handles money, banks, fintechs, lenders, crypto, payments, you have a KYC requirement. The exact rules vary by country and product, but the document verification step is universal.</p>
     <p>If you are brand new to identity documents, our companion piece on <a href="/resources/blogs/know-your-customer-documents">know your customer documents (2026 playbook)</a> covers what documents to accept.</p>
 
     <h2>The KYC regulatory landscape in 2026 (US, EU, UK, India, Singapore)</h2>
-    <p>KYC obligations in 2026 are not one regulation — they are a stack that varies by jurisdiction, product, and customer risk tier. In the US, FinCEN's Customer Identification Program (CIP) rules under the Bank Secrecy Act govern banks; state licensing authorities layer additional requirements on money transmitters. In the EU, AMLD6 (Anti-Money Laundering Directive 6) sets the floor and each member state adds specifics — Germany's BaFin is famously strict on documented reconciliation, while Ireland's Central Bank prioritizes ongoing monitoring. The UK's FCA operates its own framework post-Brexit. India's DPDP Act 2023 added data-portability and localization requirements that affect where KYC documents can be stored. Singapore's MAS is often the strictest on ongoing customer due diligence for high-risk categories.</p>
+    <p>KYC obligations in 2026 are not one regulation, they are a stack that varies by jurisdiction, product, and customer risk tier. In the US, FinCEN's Customer Identification Program (CIP) rules under the Bank Secrecy Act govern banks; state licensing authorities layer additional requirements on money transmitters. In the EU, AMLD6 (Anti-Money Laundering Directive 6) sets the floor and each member state adds specifics, Germany's BaFin is famously strict on documented reconciliation, while Ireland's Central Bank prioritizes ongoing monitoring. The UK's FCA operates its own framework post-Brexit. India's DPDP Act 2023 added data-portability and localization requirements that affect where KYC documents can be stored. Singapore's MAS is often the strictest on ongoing customer due diligence for high-risk categories.</p>
     <p>For most fintech and lending platforms operating across these markets, the practical answer is: build to the strictest jurisdiction you serve, then unlock lower requirements per-region as an override. Attempting to design separate KYC flows per jurisdiction usually creates audit gaps at the boundaries. The strictest common denominator in 2026: DPDP + BaFin + MAS combined imply document collection with authenticity check + reconciled application data + timestamped audit trail + defined re-verification cadence + regional data residency for documents.</p>
 
     <h2>What Auditors Actually Look For</h2>
@@ -58,7 +58,7 @@ export const blog14: BlogPost = {
 
     <h3>1. "Verified" That Was Never Actually Verified</h3>
     <p>The customer file shows "verified = true" but no record of how. Maybe the operator clicked a checkbox. Maybe the system marked it as verified after document upload regardless of result. Auditor flags every time.</p>
-    <p>Fix: store the actual verification results — MRZ values, similarity scores, validation responses — alongside the boolean.</p>
+    <p>Fix: store the actual verification results, MRZ values, similarity scores, validation responses, alongside the boolean.</p>
 
     <h3>2. Stale Documents</h3>
     <p>Customer onboarded in 2019. Document expired in 2021. No re-verification on file. The customer is still active. Auditor flags.</p>
@@ -69,7 +69,7 @@ export const blog14: BlogPost = {
     <p>Fix: explicit reconciliation step when address mismatches occur. Document the decision.</p>
 
     <h3>4. Synthetic Identity Slips Through</h3>
-    <p>The documents look real. The MRZ checks pass. The customer is a synthetic identity — real-looking documents created from real data scraped from public sources. The audit finds the bust later. Auditor wants to know what additional checks you had.</p>
+    <p>The documents look real. The MRZ checks pass. The customer is a synthetic identity, real-looking documents created from real data scraped from public sources. The audit finds the bust later. Auditor wants to know what additional checks you had.</p>
     <p>Fix: liveness checks for selfies, cross-reference against fraud databases, look at velocity patterns.</p>
 
     <h3>5. Manual Review Without Documentation</h3>
@@ -103,14 +103,14 @@ export const blog14: BlogPost = {
         <tr><td>&lt;500</td><td>$4-$8</td><td>Full-service platform (Jumio, Onfido, Persona)</td></tr>
         <tr><td>500-5,000</td><td>$2-$4</td><td>Platform with volume discounts + owned exception queue</td></tr>
         <tr><td>5,000-50,000</td><td>$1-$2.50</td><td>Vendor for OCR + auth; owned orchestration, exception queue, watchlist</td></tr>
-        <tr><td>50,000+</td><td>$0.50-$1.50</td><td>Direct integrations with document validation, biometric, and screening APIs — full custom orchestration</td></tr>
+        <tr><td>50,000+</td><td>$0.50-$1.50</td><td>Direct integrations with document validation, biometric, and screening APIs, full custom orchestration</td></tr>
       </tbody>
     </table>
 
     <p>Prices vary by jurisdiction (EU + UK check costs run 20-40% higher than US-only), risk tier (enhanced due diligence for high-risk customers can 3-5x base cost), and whether ongoing monitoring is included in the per-verification price or billed separately.</p>
 
     <h2>Build vs buy: KYC verification in 2026</h2>
-    <p>Build vs buy for KYC in 2026 comes down to volume, jurisdictional complexity, and existing engineering capacity. Under 500 verifications per month across a single jurisdiction: buy a full-service platform (Jumio, Onfido, Persona). The math on DIY doesn't work below that volume — regulatory expectations are specific enough that missing one requirement is a bigger cost than the vendor fee. 500-5,000 per month with 1-2 jurisdictions: still buy the platform but negotiate volume discounts and own the exception queue and manual review workflow to avoid platform lock-in. Above 5,000 per month or across 3+ jurisdictions: the hybrid path — best-of-breed APIs (DocsAPI for OCR, iProov or Incode for liveness, Refinitiv or ComplyAdvantage for screening) integrated into a KYC orchestration layer you own — usually wins on unit economics and jurisdictional flexibility.</p>
+    <p>Build vs buy for KYC in 2026 comes down to volume, jurisdictional complexity, and existing engineering capacity. Under 500 verifications per month across a single jurisdiction: buy a full-service platform (Jumio, Onfido, Persona). The math on DIY doesn't work below that volume, regulatory expectations are specific enough that missing one requirement is a bigger cost than the vendor fee. 500-5,000 per month with 1-2 jurisdictions: still buy the platform but negotiate volume discounts and own the exception queue and manual review workflow to avoid platform lock-in. Above 5,000 per month or across 3+ jurisdictions: the hybrid path, best-of-breed APIs (DocsAPI for OCR, iProov or Incode for liveness, Refinitiv or ComplyAdvantage for screening) integrated into a KYC orchestration layer you own, usually wins on unit economics and jurisdictional flexibility.</p>
     <p>The trap teams fall into at the 5K+ volume tier: buying a "flexible" KYC platform that promises cross-jurisdictional handling but delivers a rigid workflow with per-country add-on fees that compound. If you're at that scale, prototype the orchestration layer with 2-3 vendor APIs before signing a multi-year platform contract. Two engineering weeks of prototyping typically reveals whether the platform lock-in is worth the ergonomic gain.</p>
 
     <h2>The Way I Explain KYC to Non-Tech People</h2>

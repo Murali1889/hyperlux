@@ -6,9 +6,9 @@ export const blog05: BlogPost = {
   title: "How to Make a Scanned PDF Searchable on Mac, Windows, Linux",
   slug: "scanned-pdf-searchable",
   excerpt:
-    "Three machines, three operating systems, a court doc due Monday — here are the exact steps to make a scanned PDF searchable on Mac, Windows, and Linux.",
+    "Three machines, three operating systems, a court doc due Monday, here are the exact steps to make a scanned PDF searchable on Mac, Windows, and Linux.",
   description:
-    "Step-by-step guide to making a scanned PDF searchable on Mac, Windows, and Linux — free options, paid options, and what to do when nothing works.",
+    "Step-by-step guide to making a scanned PDF searchable on Mac, Windows, and Linux, free options, paid options, and what to do when nothing works.",
   metaTag: "Make Scanned PDF Searchable: Mac, Windows, Linux Guide",
   content: `
     <p>It was a Saturday in February. I had three machines, three operating systems, and a 200-page court document I needed searchable by Monday morning. The lawyer needed to find every mention of one shell company across what looked like a phone book of evidence. My Mac was at home. My work Windows laptop was in the office. My personal Linux server was running in the basement.</p>
@@ -17,7 +17,7 @@ export const blog05: BlogPost = {
     <h2>What "Make a Scanned PDF Searchable" Actually Means</h2>
     <p>When you scan a paper document, the scanner saves it as a picture. The picture looks like a page of text, but to your computer it is just colored shapes. Ctrl+F finds nothing because there is no text to search.</p>
     <p>"Making it searchable" means running the picture through an <strong>OCR engine</strong>. OCR (Optical Character Recognition) reads the picture and writes down all the words it sees. The words get tucked into an invisible layer behind the original picture. The PDF still looks the same. But now Ctrl+F works, you can copy text out, and screen readers can read the page aloud.</p>
-    <p>The exact steps for OCR depend on what operating system you are on. If you want the simple cross-platform answer, our <a href="/resources/blogs/make-pdf-searchable">make a PDF searchable guide</a> covers the universal 30-second method. This article goes deeper on Mac, Windows, and Linux specifically — for folks who want native tools, free options, and offline-capable workflows.</p>
+    <p>The exact steps for OCR depend on what operating system you are on. If you want the simple cross-platform answer, our <a href="/resources/blogs/make-pdf-searchable">make a PDF searchable guide</a> covers the universal 30-second method. This article goes deeper on Mac, Windows, and Linux specifically, for folks who want native tools, free options, and offline-capable workflows.</p>
 
     <h2>On a Mac: Three Ways That Work</h2>
 
@@ -39,7 +39,7 @@ ocrmypdf scanned.pdf searchable.pdf</code></pre>
     <p>Add <code>--deskew</code> and <code>--rotate-pages</code> flags if your scan has tilted or sideways pages. Both are cheap and recover real accuracy. (<a href="/resources/blogs/document-detection-before-ocr">More on this in our document detection piece</a>.)</p>
 
     <h3>Mac Way 3: DocsAPI Dashboard (Fastest, Cloud-Based)</h3>
-    <p>If your document is not sensitive and you want speed, drag-and-drop into the <a href="/products">DocsAPI dashboard</a>. Upload, wait 30 seconds, download. Works in any browser. No install. The layout stays perfect — signatures, stamps, tables, all in the same spots.</p>
+    <p>If your document is not sensitive and you want speed, drag-and-drop into the <a href="/products">DocsAPI dashboard</a>. Upload, wait 30 seconds, download. Works in any browser. No install. The layout stays perfect, signatures, stamps, tables, all in the same spots.</p>
     <p>This is what I use for client work where I need it done before my coffee gets cold.</p>
 
     <h2>On Windows: Three Ways That Work</h2>
@@ -90,7 +90,7 @@ done</code></pre>
         <tr><td>Easiest setup</td><td>Mac</td><td>One brew command, plus built-in Preview OCR</td></tr>
         <tr><td>Batch processing on a server</td><td>Linux</td><td>Cron jobs, shell loops, native packages</td></tr>
         <tr><td>Office use, IT controls everything</td><td>Windows</td><td>Most workplaces lock down the alternatives</td></tr>
-        <tr><td>No setup, just upload</td><td>Any</td><td>Use a cloud API — OS doesn't matter</td></tr>
+        <tr><td>No setup, just upload</td><td>Any</td><td>Use a cloud API, OS doesn't matter</td></tr>
       </tbody>
     </table>
 
@@ -114,7 +114,7 @@ done</code></pre>
     </ol>
 
     <h2>The Way to Explain This to a Kid</h2>
-    <p>Imagine your computer wears glasses. Different operating systems are different brands of glasses — same purpose, different shape.</p>
+    <p>Imagine your computer wears glasses. Different operating systems are different brands of glasses, same purpose, different shape.</p>
     <p>A scanned PDF is a stack of photos. Your computer needs glasses to read what's in the photos. Mac, Windows, and Linux all come with a pair of glasses. They each call them by a different name. The glasses brand does not matter much; what matters is that you remember to put them on before trying to read.</p>
     <p>OCR is the act of putting the glasses on. After OCR, your computer can read every word on every page, no matter which operating system it is wearing.</p>
 

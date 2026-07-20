@@ -15,7 +15,7 @@ export const blog06: BlogPost = {
     <p>This is the unvarnished writeup. Names, scores, gotchas, and the three that earned a spot on my own bookmarks bar.</p>
 
     <h2>How I Tested Each Tool</h2>
-    <p>I used the same document for every test: a 12-page scanned mortgage application with realistic problems — tilted scans on three pages, a handwritten signature, a table on page 7, and one page in Spanish. Then I scored each tool on five things:</p>
+    <p>I used the same document for every test: a 12-page scanned mortgage application with realistic problems, tilted scans on three pages, a handwritten signature, a table on page 7, and one page in Spanish. Then I scored each tool on five things:</p>
     <ol>
       <li><strong>Accuracy.</strong> Did the OCR get the words right?</li>
       <li><strong>Layout preservation.</strong> Did the output PDF look like the original?</li>
@@ -28,31 +28,31 @@ export const blog06: BlogPost = {
 
     <h2>The Three Worth Using</h2>
 
-    <h3>1. Google Drive's Hidden OCR — Score: 41/50</h3>
+    <h3>1. Google Drive's Hidden OCR, Score: 41/50</h3>
     <p>I have written about this before in our <a href="/resources/blogs/make-pdf-searchable">make a PDF searchable guide</a>. The trick: upload PDF to Drive, right-click, "Open with Google Docs". Drive runs OCR and opens the document as editable text.</p>
     <p>What I liked: free, no signups beyond Gmail, no file size limit until about 50 pages, accurate on typed text.</p>
     <p>What broke: layout. The output Google Doc reflowed the document. Tables scrambled. Headers and footers disappeared. The mortgage application's signature page came through as gibberish.</p>
     <p>Best for: short, simple documents. Not for anything where layout matters.</p>
 
-    <h3>2. DocsAPI Free Tier — Score: 44/50</h3>
+    <h3>2. DocsAPI Free Tier, Score: 44/50</h3>
     <p>Honest disclosure: my product. I tested it like a stranger would. Drag-and-drop on the dashboard at <a href="/products">/products</a>, signup with email only, get a free tier of 100 pages per month.</p>
     <p>What I liked: layout stayed perfect, including the table on page 7. Accurate on typed text and the Spanish page (auto-language detection). Output PDF looked identical to the input.</p>
     <p>What broke: the handwritten signature came through with one word misread. The free tier caps at 100 pages per month, which is enough for personal use but not for a small business.</p>
     <p>Best for: documents where layout matters. Recurring small workflows.</p>
 
-    <h3>3. ocrmypdf via Web UI (Self-Hosted) — Score: 40/50</h3>
+    <h3>3. ocrmypdf via Web UI (Self-Hosted), Score: 40/50</h3>
     <p>Technically this is a self-hosted tool, but there is a free hosted version at a few different community-run sites. It uses the open-source ocrmypdf engine I have praised in our <a href="/resources/blogs/pdf-text-recognition">PDF text recognition piece</a>.</p>
     <p>What I liked: free, no signups, fully open source, preserves layout perfectly.</p>
-    <p>What broke: the community-hosted instances are often slow or temporarily down. For reliable use, you need to host your own — which means a developer in the loop.</p>
+    <p>What broke: the community-hosted instances are often slow or temporarily down. For reliable use, you need to host your own, which means a developer in the loop.</p>
     <p>Best for: developers who want to host their own, and have-some-spare-server-time folks.</p>
 
     <h2>The Two That Are Okay (Use With Caution)</h2>
 
-    <h3>4. SmallPDF — Score: 32/50</h3>
-    <p>SmallPDF's free tier processes two documents per day. The OCR quality is decent — about 92% on typed text. The site is fast. Their free tier is genuinely usable for occasional needs.</p>
+    <h3>4. SmallPDF, Score: 32/50</h3>
+    <p>SmallPDF's free tier processes two documents per day. The OCR quality is decent, about 92% on typed text. The site is fast. Their free tier is genuinely usable for occasional needs.</p>
     <p>The catch: after two docs per day, you have to buy a plan or wait until tomorrow. The site nags constantly about upgrading. Layout occasionally reflows in ways I did not expect.</p>
 
-    <h3>5. ILovePDF — Score: 30/50</h3>
+    <h3>5. ILovePDF, Score: 30/50</h3>
     <p>Similar to SmallPDF. The OCR works. The free tier limits you to two operations per hour. Layout was inconsistent across pages. Multiple ad redirects between steps.</p>
 
     <h2>The Six to Skip</h2>
@@ -66,7 +66,7 @@ export const blog06: BlogPost = {
     <p>Upload your PDF. The site asks for your email to "send you the result". You give it. The email never arrives, or arrives weeks later in your spam folder. Meanwhile your PDF has been added to their training set. Two of the 11 tools were doing this.</p>
 
     <h3>The Slow-Lane Trap</h3>
-    <p>Upload your PDF. Watch a progress bar at 5% for 20 minutes. The site offers you a "premium queue" for $4. You either pay or wait. The math says the site can process your file in seconds — they are just rate-limiting free users to drive conversions.</p>
+    <p>Upload your PDF. Watch a progress bar at 5% for 20 minutes. The site offers you a "premium queue" for $4. You either pay or wait. The math says the site can process your file in seconds, they are just rate-limiting free users to drive conversions.</p>
 
     <h3>The Privacy Disaster</h3>
     <p>Two tools had terms of service explicitly granting them rights to "use uploaded content for training AI models" and "share uploaded content with partners". I am not joking. For sensitive documents, this is a non-starter. Read the terms of service before uploading anything important.</p>
@@ -80,7 +80,7 @@ export const blog06: BlogPost = {
         <tr><td>ocrmypdf web UI</td><td>40/50</td><td>Worth using (with caveats)</td></tr>
         <tr><td>SmallPDF</td><td>32/50</td><td>Okay if you do not need it often</td></tr>
         <tr><td>ILovePDF</td><td>30/50</td><td>Okay, with ads</td></tr>
-        <tr><td>Tools 6-11 (unnamed)</td><td>under 25/50</td><td>Skip — watermarks, paywalls, or privacy issues</td></tr>
+        <tr><td>Tools 6-11 (unnamed)</td><td>under 25/50</td><td>Skip, watermarks, paywalls, or privacy issues</td></tr>
       </tbody>
     </table>
 
@@ -102,7 +102,7 @@ export const blog06: BlogPost = {
       <li><strong>Tables and forms:</strong> Free tools mostly scramble these. Pay for layout-aware OCR. (See our <a href="/resources/blogs/aws-textract-vs-docsapi">Textract vs DocsAPI comparison</a>.)</li>
       <li><strong>Anything for work that someone else will rely on:</strong> "Free" + "watermark + free" = "no usable output". Just pay.</li>
     </ul>
-    <p>Paid OCR APIs typically run $0.01-$0.05 per page. For a small business processing a few hundred pages a month, that is $5-$25 — cheaper than the bandwidth wasted on watermark traps.</p>
+    <p>Paid OCR APIs typically run $0.01-$0.05 per page. For a small business processing a few hundred pages a month, that is $5-$25, cheaper than the bandwidth wasted on watermark traps.</p>
 
     <h2>The Simple Way to Pick a Tool</h2>
     <p>Use this flowchart in your head:</p>
@@ -114,14 +114,14 @@ export const blog06: BlogPost = {
     </ul>
 
     <h2>The Way I Explain Free OCR to Friends</h2>
-    <p>Imagine "free OCR online" tools are like food samples at a grocery store. Some are genuinely free — the store hopes you will buy the brand. Others look free but actually charge at checkout. A few will give you food poisoning.</p>
+    <p>Imagine "free OCR online" tools are like food samples at a grocery store. Some are genuinely free, the store hopes you will buy the brand. Others look free but actually charge at checkout. A few will give you food poisoning.</p>
     <p>Three or four samples in the store are good. The rest are dressed-up sales pitches. Most people end up just paying for the actual food because it is simpler.</p>
     <p>OCR is the same. There are three or four genuinely good free options. The rest waste your time. If you OCR more than a handful of documents per month, just pay for the food.</p>
 
     <h2>What I'd Do Today</h2>
     <p>If you are testing OCR for the first time: try Google Drive's trick on a one-page document. Free, low-stakes, takes 30 seconds.</p>
     <p>If you want a real free tier with no traps: use the DocsAPI free tier. 100 pages per month, layout preserved, no watermarks.</p>
-    <p>If you do this often: pay for a small plan or self-host ocrmypdf. The hidden cost of free tools — your time, watermark removal, privacy risk — almost always exceeds the cost of a small paid plan. (<a href="/author/nupura-ughade">I write about cost math like this often</a>.)</p>
+    <p>If you do this often: pay for a small plan or self-host ocrmypdf. The hidden cost of free tools, your time, watermark removal, privacy risk, almost always exceeds the cost of a small paid plan. (<a href="/author/nupura-ughade">I write about cost math like this often</a>.)</p>
 
     <h2>Frequently Asked Questions</h2>
 
@@ -132,13 +132,13 @@ export const blog06: BlogPost = {
     <p>For typed English on clean scans, Google Drive's OCR and DocsAPI's free tier are essentially tied at 97-99% character accuracy. For layout-sensitive content, DocsAPI preserves structure better. For privacy-sensitive content, local ocrmypdf wins because nothing leaves your machine.</p>
 
     <h3>Can I use free OCR for business documents?</h3>
-    <p>For occasional use, yes. For volume or recurring workflows, free tiers usually cut you off or watermark output. Paid plans typically run $5-25 per month for small business volumes — cheaper than the time spent fighting free-tier limits.</p>
+    <p>For occasional use, yes. For volume or recurring workflows, free tiers usually cut you off or watermark output. Paid plans typically run $5-25 per month for small business volumes, cheaper than the time spent fighting free-tier limits.</p>
 
     <h3>Why do some free OCR tools add watermarks?</h3>
     <p>To convert you into a paying customer. The "free" tier OCRs your document but adds a watermark to the download. You either pay to remove it or you waste your time and try a different tool. This is the single most common trap.</p>
 
     <h3>What is the best free OCR for tables?</h3>
-    <p>None of the free online tools handle tables well. For table-heavy content, you need layout-aware OCR — AWS Textract, Google Document AI, or DocsAPI. The paid plans are inexpensive (under $5 for small batches) and the layout preservation is dramatically better.</p>
+    <p>None of the free online tools handle tables well. For table-heavy content, you need layout-aware OCR, AWS Textract, Google Document AI, or DocsAPI. The paid plans are inexpensive (under $5 for small batches) and the layout preservation is dramatically better.</p>
 
     <h3>Is there a truly unlimited free OCR tool?</h3>
     <p>Self-hosted ocrmypdf. It is open source, runs locally, and processes unlimited pages. The only cost is your own compute and the time to set it up. For anything else, "unlimited free" usually means "watermarked" or "rate-limited into uselessness".</p>
@@ -178,7 +178,7 @@ export const blog06: BlogPost = {
     {
       question: "Can I use free OCR for business documents?",
       answer:
-        "For occasional use, yes. For volume or recurring workflows, free tiers usually cut you off or watermark output. Paid plans run $5-25/month for small business volumes — cheaper than the time spent fighting free-tier limits.",
+        "For occasional use, yes. For volume or recurring workflows, free tiers usually cut you off or watermark output. Paid plans run $5-25/month for small business volumes, cheaper than the time spent fighting free-tier limits.",
     },
     {
       question: "Why do some free OCR tools add watermarks?",
@@ -188,7 +188,7 @@ export const blog06: BlogPost = {
     {
       question: "What is the best free OCR for tables?",
       answer:
-        "None of the free online tools handle tables well. For table-heavy content, you need layout-aware OCR — AWS Textract, Google Document AI, or DocsAPI. Paid plans are inexpensive and the layout preservation is dramatically better.",
+        "None of the free online tools handle tables well. For table-heavy content, you need layout-aware OCR, AWS Textract, Google Document AI, or DocsAPI. Paid plans are inexpensive and the layout preservation is dramatically better.",
     },
     {
       question: "Is there a truly unlimited free OCR tool?",

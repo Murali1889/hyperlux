@@ -8,14 +8,14 @@ export const blog08: BlogPost = {
   excerpt:
     "Someone asked me at lunch yesterday what an OCR is. I gave the 2026 answer, not the 2015 one. Here is everything that has changed and what it means for you.",
   description:
-    "Optical character reader in 2026 — what it actually means today, how it differs from old OCR, and what builders need to know to ship.",
+    "Optical character reader in 2026, what it actually means today, how it differs from old OCR, and what builders need to know to ship.",
   metaTag: "Optical Character Reader 2026: For Builders",
   content: `
     <p>At lunch yesterday someone asked me what an OCR is. I gave the 2026 answer instead of the 2015 one. It made a difference. The person on the other side of the table is building an app and walked away with a much clearer picture of what to actually use.</p>
     <p>This guide is the same 2026 answer, written out. If you have read about OCR online and most of it felt outdated, this is for you.</p>
 
     <h2>What "Optical Character Reader" Actually Means</h2>
-    <p>An optical character reader is a tool that looks at a picture of text and turns it into real text a computer can use. The phrase used to refer to physical machines from the 1960s — desk-sized boxes that read mail. The modern usage refers to software that does the same job on PDFs, photos, and screenshots.</p>
+    <p>An optical character reader is a tool that looks at a picture of text and turns it into real text a computer can use. The phrase used to refer to physical machines from the 1960s, desk-sized boxes that read mail. The modern usage refers to software that does the same job on PDFs, photos, and screenshots.</p>
     <p>The simple version: you give it a picture of words, it gives you back the words as data. The slightly less simple version: it figures out what language the text is in, separates paragraphs from tables, understands handwriting (sometimes), respects layout, and outputs structured data your code can act on.</p>
     <p>Most people use "OCR" and "optical character reader" interchangeably. They mean the same thing. The first is what engineers say; the second is what marketing brochures say.</p>
     <p>If you are brand new to all this, our <a href="/resources/blogs/make-pdf-searchable">make a PDF searchable guide</a> is the simplest possible introduction.</p>
@@ -24,19 +24,19 @@ export const blog08: BlogPost = {
     <p>OCR in 2015 was good at clean printed English on flat scans and bad at almost everything else. OCR in 2026 is dramatically better in five specific ways:</p>
 
     <h3>1. Layout Understanding Got Real</h3>
-    <p>Old OCR read top-to-bottom across columns and scrambled tables. New OCR understands page structure — columns, tables, headers, footnotes — before it reads words. This is the single biggest practical improvement. Documents that used to be unusable are now structured data.</p>
+    <p>Old OCR read top-to-bottom across columns and scrambled tables. New OCR understands page structure, columns, tables, headers, footnotes, before it reads words. This is the single biggest practical improvement. Documents that used to be unusable are now structured data.</p>
 
     <h3>2. Multi-Language Detection Is Automatic</h3>
     <p>Old OCR required you to specify the language. Pass the wrong language pack and you got hash. New OCR detects language per region and switches models on the fly. A document with English headers, Spanish item descriptions, and Chinese stamps works without configuration.</p>
 
     <h3>3. Handwriting Improved a Lot</h3>
-    <p>Old OCR was about 60% accurate on neat handwriting and terrible on messy. New OCR — especially the engines built on top of vision-language models — clears 90% on neat handwriting and 70-80% on rushed. Doctor's notes are still hard, but everything else moved.</p>
+    <p>Old OCR was about 60% accurate on neat handwriting and terrible on messy. New OCR, especially the engines built on top of vision-language models, clears 90% on neat handwriting and 70-80% on rushed. Doctor's notes are still hard, but everything else moved.</p>
 
     <h3>4. Pre-Processing Got Cheap</h3>
     <p>Old OCR pipelines required you to deskew, rotate, denoise, and threshold manually. New OCR APIs do all of that automatically. The accuracy lift you used to engineer for yourself now comes built in.</p>
 
     <h3>5. Vision-Language Models Joined the Field</h3>
-    <p>Claude 4.6, GPT-5 vision, Gemini Ultra can do OCR-like extraction for short documents and read complex layouts surprisingly well. They are not pure OCR — they understand context, can answer questions about the document, can reformat output. They are slower and more expensive than dedicated OCR, but for the trickiest documents they are unmatched. (We dig into the tradeoffs in <a href="/resources/blogs/vlm-vs-ocr">VLM vs OCR</a>.)</p>
+    <p>Claude 4.6, GPT-5 vision, Gemini Ultra can do OCR-like extraction for short documents and read complex layouts surprisingly well. They are not pure OCR, they understand context, can answer questions about the document, can reformat output. They are slower and more expensive than dedicated OCR, but for the trickiest documents they are unmatched. (We dig into the tradeoffs in <a href="/resources/blogs/vlm-vs-ocr">VLM vs OCR</a>.)</p>
 
     <h2>The Four Kinds of OCR Available to Builders in 2026</h2>
 
@@ -50,7 +50,7 @@ export const blog08: BlogPost = {
     <p>Claude, GPT, Gemini with vision. Read complex layouts, answer questions about documents, output any format you ask for. Best for: tricky one-off documents, semantic understanding beyond text extraction. Cost: 5-15x dedicated OCR per document.</p>
 
     <h3>Kind 4: Document Intelligence Platforms (Per-Document or Subscription)</h3>
-    <p>Full platforms — DocsAPI, ABBYY, Hyperscience, IBM Datacap. Include OCR plus classification, validation, workflow routing, and human review. Best for: regulated industries, complex multi-step workflows, teams that want a turnkey solution. Higher cost; lower engineering burden.</p>
+    <p>Full platforms, DocsAPI, ABBYY, Hyperscience, IBM Datacap. Include OCR plus classification, validation, workflow routing, and human review. Best for: regulated industries, complex multi-step workflows, teams that want a turnkey solution. Higher cost; lower engineering burden.</p>
 
     <h2>How to Pick the Right Kind for Your Project</h2>
     <p>Use this decision tree. It is the same one I use when advising other founders:</p>
@@ -98,7 +98,7 @@ export const blog08: BlogPost = {
     <p>Yes. AI vision models can do OCR-like work but are 5-15x more expensive per page and noticeably slower. For high-volume production, dedicated OCR is still the right answer. Vision models excel at the trickiest documents where semantic understanding matters.</p>
 
     <h3>What is the most accurate OCR engine?</h3>
-    <p>It depends on the document. AWS Textract leads on forms and tables. Google Document AI leads on identity documents. DocsAPI leads on multi-page financial documents in our internal benchmarks. Vision-language models lead on the hardest 5% of documents. There is no single "best" — match the engine to the document type.</p>
+    <p>It depends on the document. AWS Textract leads on forms and tables. Google Document AI leads on identity documents. DocsAPI leads on multi-page financial documents in our internal benchmarks. Vision-language models lead on the hardest 5% of documents. There is no single "best", match the engine to the document type.</p>
 
     <h3>How much does OCR cost in 2026?</h3>
     <p>Free for local engines (Tesseract, PaddleOCR). $0.01-$0.05 per page for cloud OCR APIs. $0.05-$0.20 per page for vision-language models. Full document intelligence platforms typically run on monthly subscriptions or per-document pricing of $0.05-$0.30 depending on complexity.</p>
