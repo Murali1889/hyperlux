@@ -9,9 +9,9 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/use-cases"
-const TITLE = "Use Cases — KYC, AML, Invoice & Lending Automation"
+const TITLE = "Use Cases: KYC, AML, Invoice & Lending Automation"
 const DESCRIPTION =
-  "Production use cases for DocsAPI — KYC document verification, AML checks, invoice processing, loan automation, and revenue cycle management."
+  "Production use cases for DocsAPI, KYC document verification, AML checks, invoice processing, loan automation, and revenue cycle management."
 
 export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 

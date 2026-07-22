@@ -12,7 +12,7 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/documents/shipping-docs"
-const TITLE = "Shipping Document OCR — BOL, PODs, Packing Lists"
+const TITLE = "Shipping Document OCR: BOL, PODs, Packing Lists"
 const DESCRIPTION =
   "Extract data from bills of lading, proofs of delivery, packing lists, and manifests. 97% accuracy, real-time shipment visibility."
 

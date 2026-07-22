@@ -7,7 +7,7 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/resources/articles"
-const TITLE = "Articles — Industry Classification & Commercial Lending"
+const TITLE = "Articles: Industry Classification & Commercial Lending"
 const DESCRIPTION =
   "Articles on SIC and NAICS codes, regulatory compliance, AI in commercial lending, and industry concentration risk for fintech operations."
 

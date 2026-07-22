@@ -12,7 +12,7 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/documents/financial-docs/purchase-orders"
-const TITLE = "Purchase Order OCR — Automated PO Processing"
+const TITLE = "Purchase Order OCR: Automated PO Processing"
 const DESCRIPTION =
   "Extract PO numbers, vendor codes, SKUs, line items, and quantities with 98% accuracy. Powers true three-way match against invoices."
 

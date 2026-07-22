@@ -12,7 +12,7 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/documents/financial-docs/invoices"
-const TITLE = "Invoice OCR — Vendor, Total, Line Items as JSON"
+const TITLE = "Invoice OCR: Vendor, Total, Line Items as JSON"
 const DESCRIPTION =
   "Extract invoice numbers, vendor, dates, VAT, line items, and totals automatically. 99% field accuracy, sub-30-second SLA, AP-ready output."
 

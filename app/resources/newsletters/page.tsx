@@ -6,7 +6,7 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/resources/newsletters"
-const TITLE = "DocsAPI Newsletter — Document AI Updates"
+const TITLE = "DocsAPI Newsletter: Document AI Updates"
 const DESCRIPTION =
   "Monthly newsletter on OCR, document AI, and compliance trends for fintech and lending teams. Practical updates, no fluff."
 

@@ -12,7 +12,7 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/documents/identity-docs/driver-licences"
-const TITLE = "Driver's License OCR — 50 US States + International"
+const TITLE = "Driver's License OCR: 50 US States + International"
 const DESCRIPTION =
   "Extract license number, name, DOB, class, expiry, and PDF417 barcode data from driver's licenses. 98% accuracy in under 10 seconds."
 

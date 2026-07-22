@@ -12,7 +12,7 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/documents/identity-docs/passports"
-const TITLE = "Passport OCR — MRZ + Face Extraction in 8 Seconds"
+const TITLE = "Passport OCR: MRZ + Face Extraction in 8 Seconds"
 const DESCRIPTION =
   "Extract MRZ, name, DOB, and expiry from passports. 99.9% accuracy on global ICAO formats, sub-5-second per document, KYC-ready output."
 

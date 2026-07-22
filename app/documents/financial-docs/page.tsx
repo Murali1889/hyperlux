@@ -12,7 +12,7 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/documents/financial-docs"
-const TITLE = "Financial Document OCR — Statements, Invoices, POs"
+const TITLE = "Financial Document OCR: Statements, Invoices, POs"
 const DESCRIPTION =
   "Extract data from bank statements, invoices, purchase orders, and financial reports. 99% header + line-item accuracy. Structured JSON output."
 

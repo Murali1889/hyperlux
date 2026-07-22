@@ -3,7 +3,7 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/industries"
-const TITLE = "OCR for Banking, Fintech, Lending — DocsAPI Industries"
+const TITLE = "OCR for Banking, Fintech, Lending: DocsAPI Industries"
 const DESCRIPTION =
   "Document AI for banking, fintech, credit unions, lending, and insurance. SOC 2 and HIPAA-eligible. Automate KYC, AML, and underwriting workflows."
 

@@ -9,9 +9,9 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/products"
-const TITLE = "OCR & Document AI API for Builders — DocsAPI"
+const TITLE = "OCR & Document AI API for Builders: DocsAPI"
 const DESCRIPTION =
-  "Production-ready OCR and document intelligence API — classify, extract, validate, and ship in days. Free tier, transparent pricing, honest support."
+  "Production-ready OCR and document intelligence API, classify, extract, validate, and ship in days. Free tier, transparent pricing, honest support."
 
 export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 

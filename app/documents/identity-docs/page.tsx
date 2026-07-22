@@ -11,7 +11,7 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/documents/identity-docs"
-const TITLE = "Identity Document OCR — Passport, License, ID Cards"
+const TITLE = "Identity Document OCR: Passport, License, ID Cards"
 const DESCRIPTION =
   "Extract MRZ, barcodes, and face data from passports, national IDs, and driver licenses. 99.8% accuracy in under 12 seconds. KYC-ready."
 

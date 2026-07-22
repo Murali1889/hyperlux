@@ -13,7 +13,7 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/documents/financial-docs/bank-statements"
-const TITLE = "Bank Statement OCR — Multi-Page Transaction Extraction"
+const TITLE = "Bank Statement OCR: Multi-Page Transaction Extraction"
 const DESCRIPTION =
   "Convert PDF bank statements into structured transaction data. 99% line accuracy, multi-page table stitching, AML-ready CSV and JSON output."
 
