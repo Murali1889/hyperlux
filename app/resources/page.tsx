@@ -9,7 +9,7 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/resources"
-const TITLE = "Resources — Guides, Blogs, Newsletters for Document AI"
+const TITLE = "Resources: Guides, Blogs & News for Document AI"
 const DESCRIPTION =
   "DocsAPI guides, blogs, articles, and newsletters on OCR, document AI, KYC, AML, and lending automation. Practical, honest, and free."
 

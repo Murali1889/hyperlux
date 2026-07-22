@@ -12,7 +12,7 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/documents/legal-docs"
-const TITLE = "Legal Document OCR — Contracts, NDAs, Litigation"
+const TITLE = "Legal Document OCR: Contracts, NDAs, Litigation"
 const DESCRIPTION =
   "Extract clauses, dates, parties, and obligations from contracts, NDAs, and legal bundles. 95%+ accuracy on multi-column layouts."
 

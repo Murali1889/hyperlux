@@ -4,7 +4,7 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/solutions/operations-efficiency"
-const TITLE = "Operations Efficiency OCR — Supply Chain Automation"
+const TITLE = "Operations Efficiency OCR: Supply Chain Automation"
 const DESCRIPTION =
   "Bill of lading, POD, packing slip, and shipment-log OCR. Real-time visibility, 80% fewer document delays, faster ops cycles."
 

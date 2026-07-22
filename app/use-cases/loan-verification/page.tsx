@@ -11,7 +11,7 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/use-cases/loan-verification"
-const TITLE = "Loan Verification OCR — From 45 Days to 5 Days"
+const TITLE = "Loan Verification OCR: From 45 Days to 5 Days"
 const DESCRIPTION =
   "Accelerate loan verification with automated bank statement OCR, ID checks, and compliance audits. 98% accuracy on financial documents."
 

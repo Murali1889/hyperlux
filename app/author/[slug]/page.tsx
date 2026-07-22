@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const author = authorBySlug(slug)
   if (!author) return { title: "Author Not Found" }
 
-  const title = `${author.name} — ${author.title}`
+  const title = `${author.name}, ${author.title}`
   const description = author.bio
   const url = authorUrl(author.slug)
   const image = absoluteUrl(author.avatar)

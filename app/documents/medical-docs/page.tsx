@@ -12,7 +12,7 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/documents/medical-docs"
-const TITLE = "Medical Document OCR — Prescriptions, Lab Reports"
+const TITLE = "Medical Document OCR: Prescriptions, Lab Reports"
 const DESCRIPTION =
   "Digitize medical prescriptions, lab results, and insurance forms with 98% field accuracy. HIPAA-eligible with BAA. Reduce manual errors."
 

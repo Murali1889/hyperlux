@@ -12,7 +12,7 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/solutions/finance-automation"
-const TITLE = "Finance Automation OCR — Invoice & Reconciliation"
+const TITLE = "Finance Automation OCR: Invoice & Reconciliation"
 const DESCRIPTION =
   "Automate invoices, three-way match, and bank statement parsing. 65% faster AP close, 99% accuracy on financial documents."
 

@@ -16,9 +16,9 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/"
-const TITLE = "DocsAPI — Document AI & OCR API for SMB Lending"
+const TITLE = "DocsAPI: Document AI & OCR API for SMB Lending"
 const DESCRIPTION =
-  "DocsAPI is the document intelligence API for SMB lending and fintech — OCR, classification, KYC, and AML document checks in one honest API."
+  "DocsAPI is the document intelligence API for SMB lending and fintech, OCR, classification, KYC, and AML document checks in one honest API."
 
 export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
