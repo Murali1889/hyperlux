@@ -97,6 +97,23 @@ ocrmypdf --deskew --rotate-pages --remove-background input.pdf output.pdf</code>
     <p>Document detection is the work you do before handing her the shelf. Brush off the dust. Turn the labels right-side up. Turn the lights on. The shelf is now an easy read. Your friend reads everything correctly.</p>
     <p>The shelf is your PDF. The friend is the OCR engine. The dusting and turning is document detection. People skip it because it sounds boring. The accuracy gain from doing it is the biggest single improvement available.</p>
 
+    <h2>The document detection techniques compared</h2>
+    <p>Document detection is not one technique but a small set of pre-processing steps, each solving a different problem before OCR runs. Understanding which technique fixes which problem tells you what to prioritize for your document mix. The table below maps the four core detection tasks to the problem they solve and the accuracy they protect.</p>
+
+    <table>
+      <thead><tr><th>Technique</th><th>Problem it solves</th><th>Impact if skipped</th></tr></thead>
+      <tbody>
+        <tr><td>Page boundary detection</td><td>Photos include desk edges, backgrounds</td><td>OCR reads the background as text</td></tr>
+        <tr><td>Deskew and rotation</td><td>Documents captured at an angle</td><td>Character accuracy drops sharply past a few degrees</td></tr>
+        <tr><td>Document segmentation</td><td>Multi-document packets in one file</td><td>A 40-page packet is treated as one document</td></tr>
+        <tr><td>Document classification</td><td>Unknown document type</td><td>Wrong extraction template, low field accuracy</td></tr>
+      </tbody>
+    </table>
+
+    <h2>How document detection lifts downstream accuracy</h2>
+    <p>The reason document detection matters is that OCR accuracy is capped by input quality, and detection is what fixes input quality before the expensive step runs. A page captured at a 15-degree angle can lose 10 or more points of character accuracy that no amount of OCR engine quality recovers, because the engine is reading distorted text. Deskewing that page first restores the accuracy at almost no cost. The same logic applies to page boundaries: an engine that reads the desk behind a phone-photographed receipt wastes effort and introduces garbage the downstream pipeline has to filter.</p>
+    <p>The compounding effect is what teams miss. Detection improvements multiply through every downstream step: cleaner input means higher OCR accuracy, which means higher extraction accuracy, which means fewer exceptions in the human review queue. A few hundred lines of detection code at the front of the pipeline often does more for end-to-end accuracy than switching to a more expensive OCR engine, which is exactly why skipping it is the most common and most costly mistake in document pipelines.</p>
+
     <h2>What I'd Do Today</h2>
     <p>If you have a working OCR pipeline that disappoints: add deskew and rotation correction first. Two flags in ocrmypdf or a few lines of code in your own pipeline. The accuracy lift is typically 4-8 points.</p>
     <p>If you are starting a new pipeline: do not write the OCR step until you have written the pre-processing. The pre-processing is what makes the OCR work.</p>
@@ -127,8 +144,8 @@ ocrmypdf --deskew --rotate-pages --remove-background input.pdf output.pdf</code>
   category: "AI Document Intelligence",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-06-22T00:00:00.000Z",
-  last_updated: "June 22, 2026",
+  dateModified: "2026-07-30T00:00:00.000Z",
+  last_updated: "July 30, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "document detection",

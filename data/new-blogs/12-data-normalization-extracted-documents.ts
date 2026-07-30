@@ -103,6 +103,24 @@ export const blog12: BlogPost = {
     <p>Normalization is the work of writing down everyone's name the same way before filing it. "Smith, John" goes in the J-S-M card whether the visitor wrote it as "John Smith" or "JOHN SMITH" or "J. Smith". Now the system works.</p>
     <p>The library is your database. The visitors' signatures are your OCR output. The work of standardizing the writing is normalization. Boring. Critical. Almost always skipped until it costs too much to ignore.</p>
 
+    <h2>Data normalization examples by field type</h2>
+    <p>Normalization turns the many raw ways a value can appear into one canonical form your systems can rely on. The clearest way to understand it is by example, because every field type has its own messy inputs and its own clean target. The table below shows the common cases that break downstream systems when left un-normalized.</p>
+
+    <table>
+      <thead><tr><th>Field type</th><th>Raw extracted values</th><th>Normalized form</th></tr></thead>
+      <tbody>
+        <tr><td>Date</td><td>"01/02/2026", "Jan 2, 2026", "2026-01-02"</td><td>2026-01-02 (ISO 8601)</td></tr>
+        <tr><td>Currency</td><td>"$1,234.50", "1234.5 USD", "USD 1,234.50"</td><td>1234.50 with currency code USD</td></tr>
+        <tr><td>Vendor name</td><td>"AMZN MKTP", "Amazon.com", "AMAZON"</td><td>Amazon (master-list entity)</td></tr>
+        <tr><td>Phone</td><td>"(555) 123-4567", "555.123.4567"</td><td>+15551234567 (E.164)</td></tr>
+        <tr><td>Account number</td><td>"1234-5678", "1234 5678"</td><td>12345678 (digits only)</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Why normalization decides whether extraction is usable</h2>
+    <p>Extraction gets the headlines, but normalization is what makes extracted data usable, and skipping it is why many document pipelines produce data nobody can query. Raw extracted values carry all the inconsistency of the source documents: three date formats, currency with and without symbols, the same vendor under five different strings. A downstream system that expects one canonical form cannot match, sum, or filter that data reliably, so the extraction that looked successful produces reports that are subtly wrong.</p>
+    <p>The failure is quiet, which is what makes it dangerous. Un-normalized dates sort incorrectly, un-normalized currency sums to the wrong total, and un-normalized vendor names scatter one supplier across several rows so spend analysis understates concentration. None of these throw an error; they just produce wrong answers that surface during an audit or a board meeting. Building normalization as a deliberate step between extraction and storage, rather than hoping the extracted values are clean, is what separates a pipeline that produces data from one that produces trustworthy data.</p>
+
     <h2>What I'd Do Today</h2>
     <p>If your OCR output is fed into downstream systems: build the normalization layer first, before you scale OCR. Cleaning up later is harder than doing it right the first time.</p>
     <p>If you have existing OCR data that is messy: pick the field that causes the most downstream bugs (usually dates or addresses) and normalize that first. Each field cleaned up removes a category of downstream errors.</p>
@@ -133,8 +151,8 @@ export const blog12: BlogPost = {
   category: "AI Document Intelligence",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-06-17T00:00:00.000Z",
-  last_updated: "June 17, 2026",
+  dateModified: "2026-07-30T00:00:00.000Z",
+  last_updated: "July 30, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "data normalization",

@@ -14,6 +14,22 @@ export const blog13: BlogPost = {
     <p>We tried Claude 4.6 vision on a batch of complex tables in March. The accuracy was beautiful. The bill was twelve times what dedicated OCR would have cost. We learned a lot about when that math works and when it doesn't.</p>
     <p>This guide is the honest answer on VLM vs OCR, when to use a vision-language model, when to stick with dedicated OCR, and the hybrid pattern that handles most real workloads cheaply and well.</p>
 
+    <h2>VLM vs OCR at a glance</h2>
+    <p>The short answer: dedicated OCR is faster, cheaper, and deterministic, so it wins for high-volume and real-time work, while a vision-language model understands meaning and adapts to any layout, so it wins for varied, low-volume, or semantic tasks. Most production teams run a hybrid, cheap OCR for the bulk and a VLM for the tricky few percent. The table below shows the tradeoff across the dimensions that decide the choice.</p>
+
+    <table>
+      <thead><tr><th>Dimension</th><th>Dedicated OCR</th><th>VLM (vision-language model)</th></tr></thead>
+      <tbody>
+        <tr><td>Cost per page</td><td>$0.01-$0.05</td><td>$0.05-$0.20+</td></tr>
+        <tr><td>Speed per page</td><td>Under 1 second</td><td>3-15 seconds</td></tr>
+        <tr><td>Understanding</td><td>Text only</td><td>Meaning, context, Q&A</td></tr>
+        <tr><td>Varied layouts</td><td>Needs templates</td><td>Adapts automatically</td></tr>
+        <tr><td>Determinism</td><td>Repeatable</td><td>Can vary run to run</td></tr>
+        <tr><td>Best for</td><td>High volume, real-time, audit</td><td>Varied, low volume, semantic</td></tr>
+        <tr><td>Examples</td><td>Tesseract, Textract, DocsAPI</td><td>Claude vision, GPT vision, Gemini</td></tr>
+      </tbody>
+    </table>
+
     <h2>What "VLM" and "OCR" Mean in Plain English</h2>
     <p>OCR (Optical Character Recognition) is a specialized tool that does one job: turn pictures of text into real text. It is fast. It is cheap. It knows nothing about meaning.</p>
     <p>A VLM (Vision-Language Model) is a general AI model that can look at pictures and answer questions about them in natural language. It is slower. It is more expensive. It understands meaning, context, layout, and even questions you ask in plain English.</p>
@@ -103,6 +119,14 @@ export const blog13: BlogPost = {
     </ul>
     <p>Hybrid wins by a lot. It almost always does at meaningful scale. The setup is a confidence threshold on the OCR step, under a few hundred lines of code.</p>
 
+    <h2>VLM vs OCR accuracy: what the numbers actually show</h2>
+    <p>Accuracy is where the VLM-vs-OCR debate gets oversimplified, because the winner depends entirely on document type. On clean printed text, dedicated OCR and VLMs are effectively tied at 97-99%, and the VLM's extra cost buys you nothing. On clean structured tables, layout-aware OCR is competitive and much cheaper. The gap opens on the hard cases: unusual layouts, mixed content, hand-drawn elements, and messy handwriting, where a strong VLM can be 10 to 20 points more accurate than dedicated OCR because it reasons about the document rather than pattern-matching it.</p>
+    <p>The practical takeaway is that "which is more accurate" is the wrong question. The right question is "which is more accurate on my hardest 5 to 10 percent of documents, and is that worth 5 to 15 times the cost on those documents." For most teams the answer is to route only the hard documents to the VLM, which is exactly what the hybrid pattern does. Buying VLM accuracy on the easy 90 percent is pure waste.</p>
+
+    <h2>Using a VLM for document extraction: the practical setup</h2>
+    <p>Using a vision-language model for document extraction is simpler than teams expect: you pass the document image to the model and prompt it for the fields you want in the format you want, for example "extract this invoice as JSON with vendor, total, date, and line items." The model returns structured output directly, which is why VLMs feel magical for one-off or highly varied documents where building an OCR extraction pipeline would be overkill. No templates, no training, just a prompt.</p>
+    <p>The catches that matter in production are cost, latency, and determinism. Every page is a model call that consumes tokens, so cost scales with volume and document length in a way dedicated OCR does not. Latency of several seconds per page rules VLMs out of real-time flows. And because the model can return slightly different output on the same input across runs, workflows with strict audit requirements need either a deterministic OCR path or careful validation on top of the VLM output. Design for these three realities and VLM extraction works well; ignore them and the bill or the audit will surprise you.</p>
+
     <h2>The Way I Explain VLMs vs OCR to Non-Engineers</h2>
     <p>Imagine you need to extract data from a stack of forms. You have two options:</p>
     <ul>
@@ -136,14 +160,23 @@ export const blog13: BlogPost = {
 
     <h3>Do VLMs need fine-tuning for documents?</h3>
     <p>Usually not. The base models are already capable on most document types. Fine-tuning helps for very domain-specific content (medical, legal jargon) but adds engineering cost. Most teams skip fine-tuning and rely on prompting.</p>
+
+    <h3>Is a VLM more accurate than OCR?</h3>
+    <p>It depends on the document. On clean printed text they are effectively tied at 97-99%, so the VLM's extra cost buys nothing. On hard cases like unusual layouts, mixed content, or messy handwriting, a strong VLM can be 10 to 20 points more accurate because it reasons about the document instead of pattern-matching. The efficient approach is to send only the hard documents to the VLM.</p>
+
+    <h3>When should I use a VLM instead of OCR?</h3>
+    <p>Use a VLM when layouts vary widely and you cannot build templates, when you need semantic understanding or question answering over the document, when the document type is new or one-off, or when volume is low enough that cost does not matter. Use dedicated OCR for high volume, real-time flows, uniform documents, and audit-critical workflows that need deterministic output.</p>
+
+    <h3>How do I extract structured data with a vision-language model?</h3>
+    <p>Pass the document image to the model and prompt for the fields you want in the format you want, such as "extract this invoice as JSON with vendor, total, date, and line items." The model returns structured output directly, with no templates or training. Plan for the three production realities: per-page token cost, multi-second latency, and non-deterministic output that audit-heavy workflows must validate.</p>
   `,
   image: "/images/idp-vs-ocr.png",
   featuredImage: "/images/idp-vs-ocr.png",
   category: "AI Document Intelligence",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-06-17T00:00:00.000Z",
-  last_updated: "June 17, 2026",
+  dateModified: "2026-07-30T00:00:00.000Z",
+  last_updated: "July 30, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "vlm",
@@ -187,6 +220,21 @@ export const blog13: BlogPost = {
       question: "Do VLMs need fine-tuning for documents?",
       answer:
         "Usually not. Base models are already capable on most document types. Fine-tuning helps for very domain-specific content (medical, legal jargon) but adds engineering cost. Most teams skip it and rely on prompting.",
+    },
+    {
+      question: "Is a VLM more accurate than OCR?",
+      answer:
+        "It depends on the document. On clean printed text they are effectively tied at 97-99%, so the VLM's extra cost buys nothing. On hard cases like unusual layouts, mixed content, or messy handwriting, a strong VLM can be 10 to 20 points more accurate because it reasons about the document instead of pattern-matching. Send only the hard documents to the VLM.",
+    },
+    {
+      question: "When should I use a VLM instead of OCR?",
+      answer:
+        "Use a VLM when layouts vary widely and you cannot build templates, when you need semantic understanding or Q&A over the document, when the document type is new or one-off, or when volume is low enough that cost does not matter. Use dedicated OCR for high volume, real-time flows, uniform documents, and audit-critical workflows needing deterministic output.",
+    },
+    {
+      question: "How do I extract structured data with a vision-language model?",
+      answer:
+        "Pass the document image to the model and prompt for the fields you want in the format you want, such as extract this invoice as JSON with vendor, total, date, and line items. The model returns structured output directly, with no templates or training. Plan for per-page token cost, multi-second latency, and non-deterministic output that audit-heavy workflows must validate.",
     },
   ],
 }
