@@ -14,6 +14,24 @@ export const blog11: BlogPost = {
     <p>We benchmarked Docling, LlamaParse, and DocsAPI on 1,200 real documents over a weekend in May. The results surprised me. Each tool wins on a specific axis. None of them is the universal answer, and most blog posts comparing them are wrong about which is best at what.</p>
     <p>I am the founder of DocsAPI. I tried to be honest about where it lost. This guide is the writeup.</p>
 
+    <h2>Docling vs LlamaParse vs DocsAPI at a glance</h2>
+    <p>The short answer: Docling is the free self-hosted parser for academic and scientific PDFs, LlamaParse is the RAG-native hosted API tuned for Markdown output and messy consumer scans, and DocsAPI is the hosted API built for structured extraction from financial and business documents. None is the universal winner. The table below shows how they compare on the dimensions that decide the choice.</p>
+
+    <table>
+      <thead><tr><th>Dimension</th><th>Docling</th><th>LlamaParse</th><th>DocsAPI</th></tr></thead>
+      <tbody>
+        <tr><td>Type</td><td>Open-source library</td><td>Hosted API</td><td>Hosted API</td></tr>
+        <tr><td>License / cost</td><td>MIT, free (self-host)</td><td>Free tier, then pay-per-page</td><td>Free tier, then pay-per-page</td></tr>
+        <tr><td>Academic papers</td><td>94%</td><td>89%</td><td>87%</td></tr>
+        <tr><td>Bank statements (tables)</td><td>76%</td><td>71%</td><td>91%</td></tr>
+        <tr><td>Invoices</td><td>81%</td><td>87%</td><td>93%</td></tr>
+        <tr><td>Consumer scans / receipts</td><td>58%</td><td>78%</td><td>74%</td></tr>
+        <tr><td>Default output</td><td>Structured JSON</td><td>Markdown (RAG-ready)</td><td>Structured JSON (typed fields)</td></tr>
+        <tr><td>Setup</td><td>30 minutes</td><td>5 minutes</td><td>5 minutes</td></tr>
+        <tr><td>Best for</td><td>Scientific PDFs, self-host</td><td>RAG pipelines, consumer scans</td><td>Financial and business docs</td></tr>
+      </tbody>
+    </table>
+
     <h2>What These Three Tools Actually Are</h2>
     <p>Docling is IBM's open-source Python parser for academic and scientific PDFs. LlamaParse is LlamaIndex's hosted API for turning documents into RAG-ready Markdown. DocsAPI is a hosted document-intelligence API built for production financial-services workflows, OCR, classification, extraction, validation. All three solve overlapping problems differently: open-source vs hosted, RAG-shaped output vs structured fields, generalist vs vertical. Pick by document type and engineering bandwidth.</p>
 
@@ -112,6 +130,18 @@ export const blog11: BlogPost = {
     <p>Take 50 of your real documents. Run them through all three tools' free tiers. Compare output side-by-side against a hand-labeled ground truth. Whoever wins on your specific document mix is the right pick.</p>
     <p>Do not trust general benchmarks (including this one). Your document mix is different from mine. The tool that wins on my bank statements may not win on yours. The 50-document test takes a few hours and saves you months of regret. (<a href="/resources/blogs/ocr-pdf-honest-guide">Our honest guide</a> goes deeper on real testing.)</p>
 
+    <h2>Which is best for RAG pipelines?</h2>
+    <p>For retrieval-augmented generation pipelines, LlamaParse has the tightest fit because it is part of the LlamaIndex ecosystem and outputs clean Markdown by default, which is the format most RAG chunkers expect. If you are already building on LlamaIndex, LlamaParse removes integration friction that the other two would add. That said, RAG quality depends more on chunking strategy and retrieval than on the parser, so a strong Markdown output from any of the three can feed a good pipeline.</p>
+    <p>Where the choice actually matters for RAG is document type. If your knowledge base is scientific papers, Docling's structure-preserving output produces better chunks because it keeps equations, citations, and section hierarchy intact. If your knowledge base is financial documents with tables, DocsAPI's typed field extraction gives you structured data you can query directly rather than embedding a mangled table. Match the parser to the documents in the knowledge base, then wire it into the RAG framework of your choice.</p>
+
+    <h2>Output format compared: Markdown vs structured JSON</h2>
+    <p>The output format is the most practical difference between the three and the one teams underweight. LlamaParse defaults to Markdown, which is ideal for feeding an LLM or a RAG chunker but weaker when you need specific fields in a database. Docling and DocsAPI default to structured JSON, which is what you want when the next step is populating an accounting system, a loan-origination system, or any workflow that needs the total, the vendor, and the date as separate fields rather than as prose.</p>
+    <p>The rule of thumb: if the document is going to an LLM for reasoning or search, Markdown output (LlamaParse) is the natural fit. If the document is going to a business system that needs specific values, typed JSON output (DocsAPI, or Docling with your own field mapping) saves you a parsing step. Choosing the wrong output format means writing a conversion layer you did not need.</p>
+
+    <h2>Self-hosted vs hosted: the deployment tradeoff</h2>
+    <p>Docling is the only one of the three you can self-host, which is decisive if your documents cannot leave your infrastructure for regulatory or data-residency reasons. Self-hosting gives you full control and no per-page fee, at the cost of owning deployment, scaling, and the compute bill. LlamaParse and DocsAPI are hosted APIs, so they remove the operational burden but require sending documents to a third party, which some regulated workflows cannot do.</p>
+    <p>At low volume, the hosted APIs are usually cheaper once you count engineering time, because running Docling well takes real work. At high volume with available engineering capacity, self-hosted Docling can win on unit cost. And for anything with a hard data-residency requirement, self-hosted Docling is often the only option on this list, which is why it shows up in regulated environments even when its accuracy on the specific document type is not the highest.</p>
+
     <h2>The Way I Explain This to Non-Engineers</h2>
     <p>Imagine you need to hire a typist for the next year. You have three candidates. Each is a great typist but they specialize in different things.</p>
     <ul>
@@ -146,14 +176,23 @@ export const blog11: BlogPost = {
 
     <h3>Which is best for production at scale?</h3>
     <p>It depends on volume and document mix. For most teams above 100K pages/month, the right answer is a cloud API (LlamaParse or DocsAPI) because the engineering overhead of running Docling at scale is significant. Below 100K pages/month, all three options are viable.</p>
+
+    <h3>Is Docling better than LlamaParse?</h3>
+    <p>For academic and scientific PDFs, yes: Docling led our benchmark at 94% versus LlamaParse's 89%, and it preserves equations and citations better. For consumer-quality scans and RAG-shaped Markdown output, LlamaParse is better, scoring 78% on receipts versus Docling's 58%. Neither is universally better; Docling wins on structured technical content, LlamaParse wins on messy input and RAG integration.</p>
+
+    <h3>Which document parser is best for bank statements?</h3>
+    <p>DocsAPI led on bank statements at 91% row-level table accuracy, versus Docling's 76% and LlamaParse's 71%, because it stitches multi-page transaction tables into one logical table while the others treat each page separately. For financial documents where table accuracy drives downstream accounting, that gap is the whole decision.</p>
+
+    <h3>Does Docling do OCR on scanned documents?</h3>
+    <p>Docling can process scanned documents but it was built for clean, digital-native PDFs like academic papers, and its accuracy on low-quality consumer scans is the weakest of the three (58% on our receipt set). For scanned or photographed documents, LlamaParse or DocsAPI produce noticeably better results because their OCR backends are tuned for messy real-world input.</p>
   `,
   image: "/images/idp-vs-ocr.png",
   featuredImage: "/images/idp-vs-ocr.png",
   category: "AI Document Intelligence",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-06-29T00:00:00.000Z",
-  last_updated: "June 29, 2026",
+  dateModified: "2026-07-30T00:00:00.000Z",
+  last_updated: "July 30, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "docling",
@@ -197,6 +236,21 @@ export const blog11: BlogPost = {
       question: "Which is best for production at scale?",
       answer:
         "For most teams above 100K pages/month, a cloud API (LlamaParse or DocsAPI) because the overhead of running Docling at scale is significant. Below 100K pages/month, all three are viable.",
+    },
+    {
+      question: "Is Docling better than LlamaParse?",
+      answer:
+        "For academic and scientific PDFs, yes: Docling led at 94% versus LlamaParse's 89% and preserves equations and citations better. For consumer scans and RAG-shaped Markdown, LlamaParse is better (78% on receipts versus Docling's 58%). Docling wins on structured technical content; LlamaParse wins on messy input and RAG integration.",
+    },
+    {
+      question: "Which document parser is best for bank statements?",
+      answer:
+        "DocsAPI led on bank statements at 91% row-level table accuracy versus Docling's 76% and LlamaParse's 71%, because it stitches multi-page transaction tables into one logical table while the others treat each page separately. For financial documents where table accuracy drives downstream accounting, that gap is the whole decision.",
+    },
+    {
+      question: "Does Docling do OCR on scanned documents?",
+      answer:
+        "Docling can process scanned documents but it was built for clean, digital-native PDFs, and its accuracy on low-quality consumer scans is the weakest of the three (58% on our receipt set). For scanned or photographed documents, LlamaParse or DocsAPI produce noticeably better results because their OCR backends are tuned for messy real-world input.",
     },
   ],
 }
