@@ -83,6 +83,29 @@ export const blog25: BlogPost = {
     <h3>Pattern 3: Treating Merchant Names as Strings</h3>
     <p>"AMZN MKTP US" and "AMAZON.COM" and "AMZN PRIME" are all Amazon. Without merchant normalization, your categorization is garbage. Use a merchant master list or a normalization service.</p>
 
+    <h2>Credit card statement OCR vs bank statement OCR</h2>
+    <p>Credit card statement OCR and bank statement OCR are close cousins, but the differences matter for accuracy and vendor choice. Both extract transaction tables from financial documents, but credit card statements add merchant category codes, interest and fee breakdowns, minimum-payment and due-date fields, and a rewards or points section that bank statements do not have. Credit card statements are also more standardized across major issuers than bank statements are across banks, which makes issuer-specific templates more effective.</p>
+    <p>The practical implication: a general bank statement OCR tool will read a credit card statement, but it will miss the credit-specific fields (interest rate, minimum payment, merchant category) unless it has been tuned for them. If your workflow depends on those fields, for lending decisions or fraud detection, pick a tool that handles credit card statements specifically rather than a generic bank statement parser. For the bank statement side, see our <a href="/resources/blogs/ocr-bank-statement-technology-revolutionizing-financial-data-processing">bank statement OCR guide</a>.</p>
+
+    <h2>How transaction categorization works</h2>
+    <p>The highest-value output of credit card statement OCR for most workflows is not the raw transaction list, it is the categorized transaction list. Categorization assigns each transaction to a spending category (travel, meals, software, office supplies) so the data feeds expense management, tax preparation, or spend analysis without manual sorting. Modern categorization combines three signals: the merchant category code (MCC) that the card network assigns, the normalized merchant name, and pattern rules your team defines for the categories that matter to you.</p>
+    <p>The step teams underestimate is merchant normalization, because the same merchant appears under many raw strings. Without normalizing "AMZN MKTP US", "AMAZON.COM", and "AMZN PRIME" to a single Amazon entity, categorization scatters one vendor across several buckets and the spend analysis is wrong. A merchant master list or a normalization service is what turns messy transaction strings into clean, categorizable data, and it is worth building or buying before you rely on the categorized output.</p>
+
+    <h2>Credit card statement OCR cost and ROI</h2>
+    <p>Credit card statement OCR pays for itself fastest in reconciliation-heavy and lending workflows, where the manual alternative is measured in staff-days per cycle. Per-statement OCR cost runs a few cents to a few dollars depending on statement length and whether categorization is included, while the manual cost of reconciling or underwriting a statement runs $5 to $30 in loaded staff time. The break-even is low: most teams processing more than a few hundred statements a month clear it within the first cycle.</p>
+
+    <table>
+      <thead><tr><th>Statements/month</th><th>Manual cost</th><th>OCR cost</th><th>Monthly savings</th></tr></thead>
+      <tbody>
+        <tr><td>200</td><td>$2,000</td><td>$600</td><td>$1,400</td></tr>
+        <tr><td>1,000</td><td>$10,000</td><td>$2,000</td><td>$8,000</td></tr>
+        <tr><td>5,000</td><td>$50,000</td><td>$7,000</td><td>$43,000</td></tr>
+        <tr><td>20,000+</td><td>$200,000+</td><td>$20,000</td><td>$180,000+</td></tr>
+      </tbody>
+    </table>
+
+    <p>Manual cost assumes roughly 10 minutes of reconciliation or review per statement at a loaded rate. OCR cost includes extraction, categorization, and a human pass on the exceptions. The savings hold as long as your exception rate stays low, which is why validation and issuer templates matter.</p>
+
     <h2>The Way I Explain Credit Card Statement OCR to a Finance Lead</h2>
     <p>Imagine you hire a meticulous junior employee whose only job is to read every credit card statement, type every transaction into your accounting system, match payments to expense reports, and flag anything that does not add up. She processes a hundred statements per hour. She does not get tired. She does not lose her place in a 20-page annual summary.</p>
     <p>That is credit card statement OCR. Your team stops the line-by-line reconciliation and starts the analysis you were actually hired to do.</p>
@@ -117,8 +140,8 @@ export const blog25: BlogPost = {
   category: "Industry Trends",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-06-18T00:00:00.000Z",
-  last_updated: "June 18, 2026",
+  dateModified: "2026-07-30T00:00:00.000Z",
+  last_updated: "July 30, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "credit card statement ocr",
