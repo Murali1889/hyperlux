@@ -38,6 +38,7 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Metadata
   { path: "/resources/blogs", priority: 0.8, changeFrequency: "weekly" },
   { path: "/resources/articles", priority: 0.6, changeFrequency: "weekly" },
   { path: "/resources/newsletters", priority: 0.5, changeFrequency: "monthly" },
+  { path: "/tools/which-ocr", priority: 0.8, changeFrequency: "monthly" },
   { path: "/book-demo", priority: 0.7, changeFrequency: "yearly" },
 ]
 
