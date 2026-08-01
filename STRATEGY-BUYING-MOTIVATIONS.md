@@ -140,6 +140,41 @@ Before building anything, name which motivation it serves and for whom. If it se
 
 ---
 
+## Test 1 results (GSC intent classification, run 2026-08-01)
+
+Classified all 503 ranking queries from the 3-month GSC export into the three motivations and aggregated impressions and clicks. The result reshapes the priority.
+
+| Bucket | Impressions | Share | Clicks | CTR | Queries |
+|---|---|---|---|---|---|
+| Solutions | 4,703 | 77.4% | 0 | 0.00% | 289 |
+| Convenience | 893 | 14.7% | 1 | 0.11% | 131 |
+| Feelings | 83 | 1.4% | 4 | 4.82% | 23 |
+| Generic | 400 | 6.6% | 0 | 0.00% | 60 |
+
+### What the data actually says
+
+1. **Solutions is the biggest prize but blocked by authority, not content.** 77% of all demand is pain-driven finance and lending queries (accounts payable ocr, ocr finance, legal document automation, bank statement ocr). But it produced zero clicks because those pages rank at position 84 to 90, page 8 to 9. Google shows us for the pain queries and buries us. Content cannot fix this; the pages are already deep. Only off-page authority (the backlink plan) moves them. This is simultaneously the biggest opportunity and the current wall.
+
+2. **Convenience is where we actually rank today.** The comparison and alternative queries rank far better than Solutions: paddleocr vs tesseract at pos 17, tesseract vs paddleocr at pos 10.7, idp vs ocr at pos 66, abbyy alternative at pos 61. And the only non-brand click in the entire dataset came from Convenience (paddleocr vs tesseract). Convenience content ranks; Solutions content does not, yet. This is the fastest near-term path to clicks.
+
+3. **Feelings converts at 34x everything else, but has almost no volume.** The brand query "docsapi" at position 3 produced 4 of the 5 total clicks. Feelings CTR was 4.82% versus roughly 0.1% for the other buckets. When someone already knows and trusts us (a brand search is a Feelings and relationship signal), they click at dramatically higher rates. But brand demand is tiny because the site is new. Building brand and trust is what turns impressions into clicks.
+
+### Revised priority based on the data
+
+The pre-test priority ranked Solutions first for revenue. The test refines this into a sequenced plan rather than a single ranking:
+
+1. **Near-term clicks: double down on Convenience.** The comparison cluster already ranks (pos 10 to 27) and is the only thing producing non-brand clicks. Pushing those pages onto page 1 is the fastest revenue path available right now, and it is what recent work has been doing.
+
+2. **Unlock the big prize: backlinks for Solutions.** 77% of demand sits in Solutions at pos 84 to 90. Content has taken it as far as it goes. Only authority moves it onto page 1, where the pain-driven finance and lending buyers convert. The backlink plan targets exactly this, and it is the single highest-value initiative because it unblocks three quarters of the demand.
+
+3. **Compound everything: build brand and trust (Feelings).** The 4.82% brand CTR proves that when people know us, they click at 34x the rate. Every brand mention from the backlink, PR, and community work raises the Feelings bucket, which is the highest-converting of the three. Feelings is not a separate campaign; it is what makes the other two convert.
+
+### The one-line takeaway
+
+Convenience is winning the clicks we can get today, Solutions is the buried prize that only backlinks unlock, and Feelings (brand trust) converts at 34x but needs the brand-building work to have volume. Do all three, in that sequence of urgency, and the backlink plan is the linchpin because it serves Solutions (authority) and Feelings (brand mentions) at the same time.
+
+---
+
 ## Note on the deep research
 
 The most rigorous version of this is empirical: the landing-page test and the ten customer interviews are the real research, because they measure what actual buyers do and say rather than what we assume. The GSC intent classification is the free first pass we can run immediately. If you want external market grounding as well (how fintech and AP buyers evaluate document-AI vendors, what language competitors use for each motivation), I can run the deep-research harness on that specific question. But the highest-value research is Test 2 and Test 4, on our own buyers, because Starbucks did not learn the feelings motivation from a report, they learned it from what people actually paid for.
