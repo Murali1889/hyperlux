@@ -156,6 +156,7 @@ export const blog11: BlogPost = {
     <p>If your documents are financial or business: try DocsAPI's free tier first. The multi-page table handling is what most teams need and can't get elsewhere.</p>
     <p>If your documents are mostly consumer-quality scans: try LlamaParse's free tier. The OCR backend handles dirty input better than the alternatives.</p>
     <p>If you do not know yet: try all three on 50 of your real documents over a weekend. The right answer is whichever wins on your mix. (<a href="/author/nupura-ughade">I have written more about this evaluation approach</a>.)</p>
+    <p>Want a quick steer before that weekend test? The free <a href="/tools/which-ocr">OCR selector tool</a> asks six questions and recommends Docling, LlamaParse, DocsAPI, or an open-source engine based on whether your documents are academic, financial, or consumer-quality scans.</p>
 
     <h2>Frequently Asked Questions</h2>
 
@@ -191,7 +192,7 @@ export const blog11: BlogPost = {
   category: "AI Document Intelligence",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-07-30T00:00:00.000Z",
+  dateModified: "2026-08-01T00:00:00.000Z",
   last_updated: "July 30, 2026",
   readTime: "10 min read",
   author: nupuraUghade,

@@ -156,6 +156,7 @@ export const blog19: BlogPost = {
     <p>If you have ABBYY working and your renewal is small (under $20K/year): probably keep it. Migration isn't free.</p>
     <p>If you have ABBYY working but renewal is significant ($50K+/year): seriously evaluate modern alternatives. The migration cost is much less than a year of license renewal.</p>
     <p>If you are starting fresh: don't buy ABBYY. Use a modern API. The cost, setup time, and ongoing maintenance are all dramatically lower. (<a href="/author/nupura-ughade">I write about these migration decisions in more detail</a>.)</p>
+    <p>Not sure which modern engine replaces FineReader for your workflow? The free <a href="/tools/which-ocr">Which OCR should I use tool</a> asks six questions and recommends a fit, from open-source Tesseract or PaddleOCR to a hosted document API, based on your document mix and volume.</p>
 
     <h2>Frequently Asked Questions</h2>
 
@@ -191,7 +192,7 @@ export const blog19: BlogPost = {
   category: "Vendor Comparisons",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-07-30T00:00:00.000Z",
+  dateModified: "2026-08-01T00:00:00.000Z",
   last_updated: "July 30, 2026",
   readTime: "10 min read",
   author: nupuraUghade,

@@ -150,6 +150,7 @@ export const blog18: BlogPost = {
     <p>If you are AWS-native and your documents are mostly forms and IDs: stay with Textract. The integration advantage is real.</p>
     <p>If your documents involve multi-page tables (bank statements, financial reports): try DocsAPI. The table-stitching saves you from building manual fixes that break on every new document type.</p>
     <p>If you are starting fresh and don't have AWS lock-in: try both on a representative sample of your real documents. The winner depends on your specific mix. (<a href="/author/nupura-ughade">I write more about real-world evaluation here</a>.)</p>
+    <p>If you would rather narrow the field first, our free <a href="/tools/which-ocr">OCR picker</a> asks six questions and tells you whether Textract, a purpose-built document API, or an open-source engine fits your documents best, using the per-category benchmark results.</p>
 
     <h2>Frequently Asked Questions</h2>
 
@@ -185,7 +186,7 @@ export const blog18: BlogPost = {
   category: "Vendor Comparisons",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-07-30T00:00:00.000Z",
+  dateModified: "2026-08-01T00:00:00.000Z",
   last_updated: "July 30, 2026",
   readTime: "11 min read",
   author: nupuraUghade,

@@ -110,6 +110,8 @@ export const blog34: BlogPost = {
 
     <p>The single most important benchmarking rule: test on your real documents, not ours. Your document mix is different from this one, and the tool that wins on our bank statements may not win on yours. Take 50 of your actual production documents, including the messy long tail, run them through the free tiers of the top two or three candidates, and score the output against hand-labeled ground truth. The test takes a few hours and is more predictive than any published benchmark, including this one. For the deeper testing methodology, see our <a href="/resources/blogs/ocr-pdf-honest-guide">honest guide from 4M pages a month</a>.</p>
 
+    <p>Not sure which two or three candidates to shortlist for that test? Answer six questions in our free <a href="/tools/which-ocr">Which OCR should I use selector</a> and it maps your document mix to the engines that won those categories in this benchmark, then validate the shortlist on your own documents.</p>
+
     <h2>Cite this benchmark</h2>
 
     <p>This benchmark is free to cite. If you reference these numbers in an article, comparison, or research, please link back to this page as the source. Suggested citation:</p>
@@ -143,7 +145,7 @@ export const blog34: BlogPost = {
   category: "AI Document Intelligence",
   date: "July 31, 2026",
   datePublished: "2026-07-31T00:00:00.000Z",
-  dateModified: "2026-07-31T00:00:00.000Z",
+  dateModified: "2026-08-01T00:00:00.000Z",
   last_updated: "July 31, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
