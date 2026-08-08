@@ -160,6 +160,7 @@ export const blog20: BlogPost = {
     <p>If you're starting an OCR project from scratch: start with Tesseract via ocrmypdf. If it works, you're done. If you hit a category where it fails (tables, multilingual, handwriting), graduate to PaddleOCR or a cloud API.</p>
     <p>If you're already in production with Tesseract and accuracy is dragging: evaluate PaddleOCR for free or DocsAPI's free tier. Whichever wins on your real documents is the right pick.</p>
     <p>If you're picking between PaddleOCR and a cloud API: PaddleOCR if you have engineering bandwidth and want full control. Cloud API if you'd rather pay than maintain. (<a href="/author/nupura-ughade">I write about this build-vs-buy decision regularly</a>.)</p>
+    <p>If you want a starting point before you test, our free <a href="/tools/which-ocr">Which OCR should I use tool</a> takes six questions and points you at Tesseract, PaddleOCR, or a hosted API based on your document mix. It is honest about when the open-source engines are the right call.</p>
 
     <h2>Frequently Asked Questions</h2>
 
@@ -195,7 +196,7 @@ export const blog20: BlogPost = {
   category: "Vendor Comparisons",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-07-30T00:00:00.000Z",
+  dateModified: "2026-08-01T00:00:00.000Z",
   last_updated: "July 30, 2026",
   readTime: "10 min read",
   author: nupuraUghade,

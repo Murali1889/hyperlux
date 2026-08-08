@@ -33,6 +33,8 @@ const SEGMENT_NAMES: Record<string, string> = {
   newsletters: "Newsletters",
   "book-demo": "Book a Demo",
   author: "Authors",
+  tools: "Tools",
+  "which-ocr": "Which OCR Should I Use?",
 }
 
 export function buildBreadcrumbs(path: string): { name: string; url: string }[] {

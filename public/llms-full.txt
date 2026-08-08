@@ -1,6 +1,6 @@
 # DocsAPI — Full Manifest for AI Search
 
-> DocsAPI is the document intelligence API for SMB lending and fintech — OCR, classification, KYC document verification, and AML document checks in one honest API. Production scale: ~4M pages per month. Last updated: 2026-06-17.
+> DocsAPI is the document intelligence API for SMB lending and fintech — OCR, classification, KYC document verification, and AML document checks in one honest API. Production scale: ~4M pages per month. Last updated: 2026-08-08.
 
 ## Company facts
 
@@ -80,6 +80,33 @@ DocsAPI provides production document intelligence as an HTTP API. Core capabilit
 - [ABBYY FineReader alternative](https://docsapi.co/resources/blogs/abbyy-finereader-alternative) — Why and when to migrate
 - [PaddleOCR vs Tesseract vs DocsAPI](https://docsapi.co/resources/blogs/paddleocr-vs-tesseract-vs-docsapi) — Open-source benchmark
 
+### Invoice / AP Automation OCR (Cluster E, 21 posts)
+
+- [3-way match invoice automation](https://docsapi.co/resources/blogs/3-way-match-invoice-automation) — PO, receipt, and invoice reconciliation mechanics
+- [Duplicate invoice detection](https://docsapi.co/resources/blogs/duplicate-invoice-detection) — Why exact-match dedup misses most real duplicates
+- [Invoice fraud detection](https://docsapi.co/resources/blogs/invoice-fraud-detection) — Vendor impersonation and bank-detail-swap patterns
+- [Rules-based vs AI invoice extraction](https://docsapi.co/resources/blogs/rules-based-vs-ai-invoice-extraction) — When each architecture actually wins
+- [Build vs buy invoice OCR](https://docsapi.co/resources/blogs/build-vs-buy-invoice-ocr) — The real engineering cost of building in-house
+- [Invoice OCR pricing models](https://docsapi.co/resources/blogs/invoice-ocr-pricing-models) — Per-page, per-document, and subscription mechanics compared
+
+### Bank Statement / Lending OCR (Cluster F, 21 posts)
+
+- [Pay stub income verification OCR](https://docsapi.co/resources/blogs/pay-stub-income-verification-ocr) — Cross-verification against bank deposits
+- [W-2/1099 tax form OCR for underwriting](https://docsapi.co/resources/blogs/w2-1099-tax-form-ocr-underwriting) — Income qualification math lenders actually run
+- [DTI calculation OCR](https://docsapi.co/resources/blogs/dti-calculation-ocr) — What counts as debt and what doesn't
+- [Bank statement fraud detection](https://docsapi.co/resources/blogs/bank-statement-fraud-detection) — PDF structure forensics beyond visual review
+- [ECOA compliance document OCR](https://docsapi.co/resources/blogs/ecoa-compliance-document-ocr) — Adverse action notice and reg B requirements
+- [State mortgage document requirements](https://docsapi.co/resources/blogs/state-mortgage-document-requirements) — Escrow interest and preemption variance by state
+
+### KYC / AML / Compliance OCR (Cluster G, 21 posts)
+
+- [MRZ passport verification](https://docsapi.co/resources/blogs/mrz-passport-verification) — The actual ICAO 9303 checksum algorithm, worked
+- [Sanctions screening OCR](https://docsapi.co/resources/blogs/sanctions-screening-ocr) — Why one fuzzy-match threshold is always wrong
+- [Perpetual KYC monitoring](https://docsapi.co/resources/blogs/perpetual-kyc-monitoring) — Weighted, decaying risk-score triggers, not periodic review
+- [Synthetic identity fraud detection](https://docsapi.co/resources/blogs/synthetic-identity-fraud-detection) — Why SSN validity checks broke in 2011
+- [Real-time sanctions screening](https://docsapi.co/resources/blogs/real-time-sanctions-screening) — Transaction latency vs list-freshness, two different claims
+- [Biometric face match KYC](https://docsapi.co/resources/blogs/biometric-face-match-kyc) — FMR vs FNMR, and why one accuracy number is meaningless
+
 ## Frequently asked questions
 
 ### What is OCR?
@@ -101,7 +128,7 @@ Yes, with a Business Associate Agreement available on request. SOC 2 Type II cer
 No. Customer content is deleted after processing per data handling policy. No training on customer data.
 
 ### What document types does DocsAPI support?
-Invoices, bank statements, ID documents (passport, driver's license, national ID, mDL), utility bills, contracts, tax forms (W-2, 1099, W-8BEN, W-9), wire instructions, beneficial ownership forms, and most general business PDFs.
+Invoices and purchase orders, bank statements and pay stubs, ID documents (passport, driver's license, national ID, mDL), utility bills and proof-of-address documents, contracts, tax forms (W-2, 1099, W-8BEN, W-9, 4506-C), mortgage and HELOC documents, wire instructions, beneficial ownership and KYB filings, sanctions and watchlist screening records, SAR supporting documentation, and most general business PDFs.
 
 ### Can I self-host DocsAPI?
 No, DocsAPI is cloud-only. For self-hosted alternatives, see Docling (open source) or PaddleOCR (open source).

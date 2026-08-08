@@ -140,6 +140,7 @@ export const blog13: BlogPost = {
     <p>If you have a high-volume workload with uniform documents: dedicated OCR, with a small VLM fallback for the trickiest 5%. The cost is dominated by OCR; the accuracy is lifted by the VLM.</p>
     <p>If you have a low-volume workload with varied documents: VLM directly. The cost difference is small at low volume, and the layout flexibility saves engineering time.</p>
     <p>If you do not know your volume yet: prototype with VLMs because they are easier to set up. Migrate to OCR for the bulk when volume grows. The transition is a confidence threshold and a routing rule, not a rebuild. (<a href="/author/nupura-ughade">I have written about this transition in more detail</a>.)</p>
+    <p>Once you decide OCR is the right layer for the bulk, our free <a href="/tools/which-ocr">OCR selector tool</a> helps you pick the engine: six questions on your document type, quality, and volume, mapped to the tools that won those categories in our benchmark.</p>
 
     <h2>Frequently Asked Questions</h2>
 
@@ -175,7 +176,7 @@ export const blog13: BlogPost = {
   category: "AI Document Intelligence",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-07-30T00:00:00.000Z",
+  dateModified: "2026-08-01T00:00:00.000Z",
   last_updated: "July 30, 2026",
   readTime: "10 min read",
   author: nupuraUghade,

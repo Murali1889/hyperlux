@@ -3,11 +3,13 @@ import { blogs } from "@/data/blogs"
 import { authors } from "@/data/authors"
 import { SITE_URL } from "@/lib/seo"
 
-const TODAY = "2026-07-16"
+const TODAY = "2026-07-31"
 
 // All real, indexable static routes (excludes /pricing which 404s,
 // and dynamic [slug] routes which are expanded separately).
-const STATIC_ROUTES: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
+// lastModified defaults to TODAY unless overridden below — only override
+// for routes whose actual content changed, to avoid fake freshness signals.
+const STATIC_ROUTES: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]; lastModified?: string }[] = [
   { path: "", priority: 1.0, changeFrequency: "weekly" },
   { path: "/products", priority: 0.9, changeFrequency: "monthly" },
   { path: "/use-cases", priority: 0.9, changeFrequency: "monthly" },
@@ -34,17 +36,21 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Metadata
   { path: "/documents/legal-docs", priority: 0.7, changeFrequency: "monthly" },
   { path: "/documents/medical-docs", priority: 0.7, changeFrequency: "monthly" },
   { path: "/documents/shipping-docs", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/resources", priority: 0.7, changeFrequency: "weekly" },
-  { path: "/resources/blogs", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/resources", priority: 0.7, changeFrequency: "weekly", lastModified: "2026-08-08" },
+  { path: "/resources/blogs", priority: 0.8, changeFrequency: "weekly", lastModified: "2026-08-08" },
   { path: "/resources/articles", priority: 0.6, changeFrequency: "weekly" },
   { path: "/resources/newsletters", priority: 0.5, changeFrequency: "monthly" },
+  { path: "/tools/which-ocr", priority: 0.8, changeFrequency: "monthly" },
   { path: "/book-demo", priority: 0.7, changeFrequency: "yearly" },
+  { path: "/llms.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-08-08" },
+  { path: "/llms-full.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-08-08" },
+  { path: "/ai.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-08-08" },
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = STATIC_ROUTES.map((r) => ({
     url: `${SITE_URL}${r.path}`,
-    lastModified: TODAY,
+    lastModified: r.lastModified ?? TODAY,
     changeFrequency: r.changeFrequency,
     priority: r.priority,
   }))
