@@ -47,6 +47,7 @@ import { blogAp08 } from "./new-blogs/invoice-ap-ocr/08-early-payment-discount-c
 import { blogAp09 } from "./new-blogs/invoice-ap-ocr/09-non-po-invoice-exception-routing"
 import { blogAp10 } from "./new-blogs/invoice-ap-ocr/10-invoice-fraud-detection"
 import { blogAp11 } from "./new-blogs/invoice-ap-ocr/11-month-end-ap-close"
+import { blogAp12 } from "./new-blogs/invoice-ap-ocr/12-multi-currency-invoice-ocr"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -94,4 +95,5 @@ export const newBlogs: BlogPost[] = [
   blogAp09,
   blogAp10,
   blogAp11,
+  blogAp12,
 ]
