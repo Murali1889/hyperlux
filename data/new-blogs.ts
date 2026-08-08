@@ -39,6 +39,7 @@ import { blog34 } from "./new-blogs/34-ocr-accuracy-benchmark-2026"
 import { blogAp01 } from "./new-blogs/invoice-ap-ocr/01-invoice-ocr-quickbooks"
 import { blogAp02 } from "./new-blogs/invoice-ap-ocr/02-invoice-ocr-netsuite"
 import { blogAp03 } from "./new-blogs/invoice-ap-ocr/03-invoice-ocr-sap"
+import { blogAp04 } from "./new-blogs/invoice-ap-ocr/04-invoice-ocr-xero"
 import { blogAp05 } from "./new-blogs/invoice-ap-ocr/05-3-way-match-invoice-automation"
 
 export const newBlogs: BlogPost[] = [
@@ -79,5 +80,6 @@ export const newBlogs: BlogPost[] = [
   blogAp01,
   blogAp02,
   blogAp03,
+  blogAp04,
   blogAp05,
 ]
