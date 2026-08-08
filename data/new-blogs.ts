@@ -82,6 +82,10 @@ import { blogBl19 } from "./new-blogs/bank-statement-lending-ocr/19-ecoa-complia
 import { blogBl20 } from "./new-blogs/bank-statement-lending-ocr/20-state-mortgage-document-requirements"
 import { blogBl21 } from "./new-blogs/bank-statement-lending-ocr/21-bank-statement-ocr-pricing"
 
+// KYC/AML/Compliance OCR cluster (topic 3 of 3, 21 posts) — see
+// docs/superpowers/specs/2026-08-08-kyc-aml-compliance-ocr-cluster-design.md
+import { blogKa01 } from "./new-blogs/kyc-aml-compliance-ocr/01-mrz-passport-verification"
+
 export const newBlogs: BlogPost[] = [
   blog01,
   blog02,
@@ -159,4 +163,5 @@ export const newBlogs: BlogPost[] = [
   blogBl19,
   blogBl20,
   blogBl21,
+  blogKa01,
 ]
