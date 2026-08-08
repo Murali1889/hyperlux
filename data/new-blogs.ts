@@ -102,6 +102,7 @@ import { blogKa15 } from "./new-blogs/kyc-aml-compliance-ocr/15-perpetual-kyc-mo
 import { blogKa16 } from "./new-blogs/kyc-aml-compliance-ocr/16-kyc-document-expiry-automation"
 import { blogKa17 } from "./new-blogs/kyc-aml-compliance-ocr/17-synthetic-identity-fraud-detection"
 import { blogKa18 } from "./new-blogs/kyc-aml-compliance-ocr/18-cross-border-kyc-compliance"
+import { blogKa19 } from "./new-blogs/kyc-aml-compliance-ocr/19-kyc-record-retention-requirements"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -198,4 +199,5 @@ export const newBlogs: BlogPost[] = [
   blogKa16,
   blogKa17,
   blogKa18,
+  blogKa19,
 ]
