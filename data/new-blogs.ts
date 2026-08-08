@@ -50,6 +50,7 @@ import { blogAp11 } from "./new-blogs/invoice-ap-ocr/11-month-end-ap-close"
 import { blogAp12 } from "./new-blogs/invoice-ap-ocr/12-multi-currency-invoice-ocr"
 import { blogAp13 } from "./new-blogs/invoice-ap-ocr/13-email-invoice-parsing"
 import { blogAp14 } from "./new-blogs/invoice-ap-ocr/14-handwritten-faxed-invoice-ocr"
+import { blogAp15 } from "./new-blogs/invoice-ap-ocr/15-partial-shipment-invoice-matching"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -100,4 +101,5 @@ export const newBlogs: BlogPost[] = [
   blogAp12,
   blogAp13,
   blogAp14,
+  blogAp15,
 ]
