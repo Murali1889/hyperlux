@@ -71,6 +71,7 @@ import { blogBl08 } from "./new-blogs/bank-statement-lending-ocr/08-business-lin
 import { blogBl09 } from "./new-blogs/bank-statement-lending-ocr/09-student-loan-refinance-ocr"
 import { blogBl10 } from "./new-blogs/bank-statement-lending-ocr/10-credit-union-lending-ocr"
 import { blogBl11 } from "./new-blogs/bank-statement-lending-ocr/11-hard-money-lender-document-ocr"
+import { blogBl12 } from "./new-blogs/bank-statement-lending-ocr/12-fintech-lending-api-ocr"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -139,4 +140,5 @@ export const newBlogs: BlogPost[] = [
   blogBl09,
   blogBl10,
   blogBl11,
+  blogBl12,
 ]
