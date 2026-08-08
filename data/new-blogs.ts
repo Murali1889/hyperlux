@@ -94,6 +94,7 @@ import { blogKa07 } from "./new-blogs/kyc-aml-compliance-ocr/07-adverse-media-sc
 import { blogKa08 } from "./new-blogs/kyc-aml-compliance-ocr/08-customer-due-diligence-process"
 import { blogKa09 } from "./new-blogs/kyc-aml-compliance-ocr/09-suspicious-activity-report-filing"
 import { blogKa10 } from "./new-blogs/kyc-aml-compliance-ocr/10-travel-rule-compliance-crypto"
+import { blogKa11 } from "./new-blogs/kyc-aml-compliance-ocr/11-liveness-detection-kyc"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -182,4 +183,5 @@ export const newBlogs: BlogPost[] = [
   blogKa08,
   blogKa09,
   blogKa10,
+  blogKa11,
 ]
