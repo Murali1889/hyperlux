@@ -61,6 +61,7 @@ import { blogAp21 } from "./new-blogs/invoice-ap-ocr/21-invoice-ocr-parallel-run
 // Bank Statement/Lending OCR cluster (topic 2 of 3, 21 posts) — see
 // docs/superpowers/specs/2026-08-08-bank-statement-lending-ocr-cluster-design.md
 import { blogBl01 } from "./new-blogs/bank-statement-lending-ocr/01-pay-stub-income-verification-ocr"
+import { blogBl02 } from "./new-blogs/bank-statement-lending-ocr/02-w2-1099-tax-form-ocr-underwriting"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -119,4 +120,5 @@ export const newBlogs: BlogPost[] = [
   blogAp20,
   blogAp21,
   blogBl01,
+  blogBl02,
 ]
