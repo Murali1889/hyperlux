@@ -66,6 +66,7 @@ import { blogBl03 } from "./new-blogs/bank-statement-lending-ocr/03-4506-c-tax-t
 import { blogBl04 } from "./new-blogs/bank-statement-lending-ocr/04-verification-of-assets-ocr"
 import { blogBl05 } from "./new-blogs/bank-statement-lending-ocr/05-auto-loan-document-ocr"
 import { blogBl06 } from "./new-blogs/bank-statement-lending-ocr/06-personal-loan-document-ocr"
+import { blogBl07 } from "./new-blogs/bank-statement-lending-ocr/07-heloc-document-ocr"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -129,4 +130,5 @@ export const newBlogs: BlogPost[] = [
   blogBl04,
   blogBl05,
   blogBl06,
+  blogBl07,
 ]
