@@ -70,6 +70,7 @@ import { blogBl07 } from "./new-blogs/bank-statement-lending-ocr/07-heloc-docume
 import { blogBl08 } from "./new-blogs/bank-statement-lending-ocr/08-business-line-of-credit-ocr"
 import { blogBl09 } from "./new-blogs/bank-statement-lending-ocr/09-student-loan-refinance-ocr"
 import { blogBl10 } from "./new-blogs/bank-statement-lending-ocr/10-credit-union-lending-ocr"
+import { blogBl11 } from "./new-blogs/bank-statement-lending-ocr/11-hard-money-lender-document-ocr"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -137,4 +138,5 @@ export const newBlogs: BlogPost[] = [
   blogBl08,
   blogBl09,
   blogBl10,
+  blogBl11,
 ]
