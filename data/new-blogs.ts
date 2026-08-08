@@ -68,6 +68,7 @@ import { blogBl05 } from "./new-blogs/bank-statement-lending-ocr/05-auto-loan-do
 import { blogBl06 } from "./new-blogs/bank-statement-lending-ocr/06-personal-loan-document-ocr"
 import { blogBl07 } from "./new-blogs/bank-statement-lending-ocr/07-heloc-document-ocr"
 import { blogBl08 } from "./new-blogs/bank-statement-lending-ocr/08-business-line-of-credit-ocr"
+import { blogBl09 } from "./new-blogs/bank-statement-lending-ocr/09-student-loan-refinance-ocr"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -133,4 +134,5 @@ export const newBlogs: BlogPost[] = [
   blogBl06,
   blogBl07,
   blogBl08,
+  blogBl09,
 ]
