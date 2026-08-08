@@ -99,6 +99,7 @@ import { blogKa12 } from "./new-blogs/kyc-aml-compliance-ocr/12-proof-of-address
 import { blogKa13 } from "./new-blogs/kyc-aml-compliance-ocr/13-national-id-verification-ocr"
 import { blogKa14 } from "./new-blogs/kyc-aml-compliance-ocr/14-ein-verification-kyc"
 import { blogKa15 } from "./new-blogs/kyc-aml-compliance-ocr/15-perpetual-kyc-monitoring"
+import { blogKa16 } from "./new-blogs/kyc-aml-compliance-ocr/16-kyc-document-expiry-automation"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -192,4 +193,5 @@ export const newBlogs: BlogPost[] = [
   blogKa13,
   blogKa14,
   blogKa15,
+  blogKa16,
 ]
