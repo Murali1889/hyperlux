@@ -52,6 +52,7 @@ import { blogAp13 } from "./new-blogs/invoice-ap-ocr/13-email-invoice-parsing"
 import { blogAp14 } from "./new-blogs/invoice-ap-ocr/14-handwritten-faxed-invoice-ocr"
 import { blogAp15 } from "./new-blogs/invoice-ap-ocr/15-partial-shipment-invoice-matching"
 import { blogAp16 } from "./new-blogs/invoice-ap-ocr/16-ap-clerk-day-before-after-ocr"
+import { blogAp17 } from "./new-blogs/invoice-ap-ocr/17-invoice-ocr-cfo-business-case"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -104,4 +105,5 @@ export const newBlogs: BlogPost[] = [
   blogAp14,
   blogAp15,
   blogAp16,
+  blogAp17,
 ]
