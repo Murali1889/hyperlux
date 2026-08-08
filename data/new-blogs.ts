@@ -38,6 +38,7 @@ import { blog34 } from "./new-blogs/34-ocr-accuracy-benchmark-2026"
 // docs/superpowers/specs/2026-08-07-invoice-ap-ocr-cluster-design.md
 import { blogAp01 } from "./new-blogs/invoice-ap-ocr/01-invoice-ocr-quickbooks"
 import { blogAp02 } from "./new-blogs/invoice-ap-ocr/02-invoice-ocr-netsuite"
+import { blogAp03 } from "./new-blogs/invoice-ap-ocr/03-invoice-ocr-sap"
 import { blogAp05 } from "./new-blogs/invoice-ap-ocr/05-3-way-match-invoice-automation"
 
 export const newBlogs: BlogPost[] = [
@@ -77,5 +78,6 @@ export const newBlogs: BlogPost[] = [
   blog34,
   blogAp01,
   blogAp02,
+  blogAp03,
   blogAp05,
 ]
