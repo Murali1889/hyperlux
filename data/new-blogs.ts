@@ -103,6 +103,7 @@ import { blogKa16 } from "./new-blogs/kyc-aml-compliance-ocr/16-kyc-document-exp
 import { blogKa17 } from "./new-blogs/kyc-aml-compliance-ocr/17-synthetic-identity-fraud-detection"
 import { blogKa18 } from "./new-blogs/kyc-aml-compliance-ocr/18-cross-border-kyc-compliance"
 import { blogKa19 } from "./new-blogs/kyc-aml-compliance-ocr/19-kyc-record-retention-requirements"
+import { blogKa20 } from "./new-blogs/kyc-aml-compliance-ocr/20-real-time-sanctions-screening"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -200,4 +201,5 @@ export const newBlogs: BlogPost[] = [
   blogKa17,
   blogKa18,
   blogKa19,
+  blogKa20,
 ]
