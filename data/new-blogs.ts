@@ -78,6 +78,7 @@ import { blogBl15 } from "./new-blogs/bank-statement-lending-ocr/15-nsf-overdraf
 import { blogBl16 } from "./new-blogs/bank-statement-lending-ocr/16-multi-account-bank-statement-ocr"
 import { blogBl17 } from "./new-blogs/bank-statement-lending-ocr/17-bank-statement-fraud-detection"
 import { blogBl18 } from "./new-blogs/bank-statement-lending-ocr/18-real-time-bank-statement-processing"
+import { blogBl19 } from "./new-blogs/bank-statement-lending-ocr/19-ecoa-compliance-document-ocr"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -153,4 +154,5 @@ export const newBlogs: BlogPost[] = [
   blogBl16,
   blogBl17,
   blogBl18,
+  blogBl19,
 ]
