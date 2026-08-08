@@ -55,6 +55,7 @@ import { blogAp16 } from "./new-blogs/invoice-ap-ocr/16-ap-clerk-day-before-afte
 import { blogAp17 } from "./new-blogs/invoice-ap-ocr/17-invoice-ocr-cfo-business-case"
 import { blogAp18 } from "./new-blogs/invoice-ap-ocr/18-build-vs-buy-invoice-ocr"
 import { blogAp19 } from "./new-blogs/invoice-ap-ocr/19-invoice-ocr-pricing-models"
+import { blogAp20 } from "./new-blogs/invoice-ap-ocr/20-rules-based-vs-ai-invoice-extraction"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -110,4 +111,5 @@ export const newBlogs: BlogPost[] = [
   blogAp17,
   blogAp18,
   blogAp19,
+  blogAp20,
 ]
