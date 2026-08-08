@@ -62,6 +62,7 @@ import { blogAp21 } from "./new-blogs/invoice-ap-ocr/21-invoice-ocr-parallel-run
 // docs/superpowers/specs/2026-08-08-bank-statement-lending-ocr-cluster-design.md
 import { blogBl01 } from "./new-blogs/bank-statement-lending-ocr/01-pay-stub-income-verification-ocr"
 import { blogBl02 } from "./new-blogs/bank-statement-lending-ocr/02-w2-1099-tax-form-ocr-underwriting"
+import { blogBl03 } from "./new-blogs/bank-statement-lending-ocr/03-4506-c-tax-transcript-ocr"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -121,4 +122,5 @@ export const newBlogs: BlogPost[] = [
   blogAp21,
   blogBl01,
   blogBl02,
+  blogBl03,
 ]
