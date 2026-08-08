@@ -77,6 +77,7 @@ import { blogBl14 } from "./new-blogs/bank-statement-lending-ocr/14-cash-flow-un
 import { blogBl15 } from "./new-blogs/bank-statement-lending-ocr/15-nsf-overdraft-detection-ocr"
 import { blogBl16 } from "./new-blogs/bank-statement-lending-ocr/16-multi-account-bank-statement-ocr"
 import { blogBl17 } from "./new-blogs/bank-statement-lending-ocr/17-bank-statement-fraud-detection"
+import { blogBl18 } from "./new-blogs/bank-statement-lending-ocr/18-real-time-bank-statement-processing"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -151,4 +152,5 @@ export const newBlogs: BlogPost[] = [
   blogBl15,
   blogBl16,
   blogBl17,
+  blogBl18,
 ]
