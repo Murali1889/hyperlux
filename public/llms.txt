@@ -19,6 +19,10 @@ DocsAPI processes around 4 million PDF pages per month for lenders, fintechs, an
 - [Document detection: the step everyone skips before OCR](https://docsapi.co/resources/blogs/document-detection-before-ocr)
 - [KYC document verification: what auditors look for](https://docsapi.co/resources/blogs/kyc-document-verification)
 - [AWS Textract vs DocsAPI: honest comparison](https://docsapi.co/resources/blogs/aws-textract-vs-docsapi)
+- [3-way match invoice automation](https://docsapi.co/resources/blogs/3-way-match-invoice-automation)
+- [Pay stub income verification OCR for lenders](https://docsapi.co/resources/blogs/pay-stub-income-verification-ocr)
+- [MRZ passport verification: the actual checksum algorithm](https://docsapi.co/resources/blogs/mrz-passport-verification)
+- [Synthetic identity fraud detection](https://docsapi.co/resources/blogs/synthetic-identity-fraud-detection)
 
 ## Author
 
