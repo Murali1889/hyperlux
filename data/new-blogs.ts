@@ -76,6 +76,7 @@ import { blogBl13 } from "./new-blogs/bank-statement-lending-ocr/13-dti-calculat
 import { blogBl14 } from "./new-blogs/bank-statement-lending-ocr/14-cash-flow-underwriting-ocr"
 import { blogBl15 } from "./new-blogs/bank-statement-lending-ocr/15-nsf-overdraft-detection-ocr"
 import { blogBl16 } from "./new-blogs/bank-statement-lending-ocr/16-multi-account-bank-statement-ocr"
+import { blogBl17 } from "./new-blogs/bank-statement-lending-ocr/17-bank-statement-fraud-detection"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -149,4 +150,5 @@ export const newBlogs: BlogPost[] = [
   blogBl14,
   blogBl15,
   blogBl16,
+  blogBl17,
 ]
