@@ -41,4 +41,8 @@ Pillar link: `/use-cases/loan-verification` (confirmed live route). Sibling link
 
 ## Deviation log (concepts swapped mid-build, if any)
 
-None yet — will update inline if a concept turns out to overlap existing content once audited, same process as topic 1's 3 swaps.
+None. All 21 concepts as originally planned went to publication without needing a swap; each post's overlap check (against existing site content and the other 20 posts in this cluster) passed cleanly on the first pass. Zero within-cluster keyword/slug collisions, zero new site-wide collisions introduced (8 pre-existing legacy collisions unrelated to this cluster remain, unchanged from before this cluster started).
+
+## Completion status
+
+**Complete: 21/21 posts published, verified, and committed (2026-08-08).** Word counts ranged 2000-2176 (avg 2030), zero em/en dashes across the full cluster, 126 FAQ entries (21 x 6), all posts carry the mandatory 6 JSON-LD schema blocks confirmed in static build output, and every post underwent the full 5-step competitive audit before drafting. Notable concrete assets sourced directly from primary authorities during this cluster: Fannie Mae Selling Guide (B3-4.2-02 large deposit rule, B3-6-05 DTI debt obligations, B2-1.2-03 HCLTV), IRS.gov transcript-type documentation, NCUA 12 CFR Part 723 (MBL cap), California Civil Code 2954.8 and the Cantero v. Bank of America / OCC preemption history (escrow interest), CFPB 2026 guidance on AI adverse action notices, and PDF xref-table forensics (htpbe.tech).
