@@ -79,6 +79,7 @@ import { blogBl16 } from "./new-blogs/bank-statement-lending-ocr/16-multi-accoun
 import { blogBl17 } from "./new-blogs/bank-statement-lending-ocr/17-bank-statement-fraud-detection"
 import { blogBl18 } from "./new-blogs/bank-statement-lending-ocr/18-real-time-bank-statement-processing"
 import { blogBl19 } from "./new-blogs/bank-statement-lending-ocr/19-ecoa-compliance-document-ocr"
+import { blogBl20 } from "./new-blogs/bank-statement-lending-ocr/20-state-mortgage-document-requirements"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -155,4 +156,5 @@ export const newBlogs: BlogPost[] = [
   blogBl17,
   blogBl18,
   blogBl19,
+  blogBl20,
 ]
