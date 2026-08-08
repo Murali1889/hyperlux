@@ -64,6 +64,7 @@ import { blogBl01 } from "./new-blogs/bank-statement-lending-ocr/01-pay-stub-inc
 import { blogBl02 } from "./new-blogs/bank-statement-lending-ocr/02-w2-1099-tax-form-ocr-underwriting"
 import { blogBl03 } from "./new-blogs/bank-statement-lending-ocr/03-4506-c-tax-transcript-ocr"
 import { blogBl04 } from "./new-blogs/bank-statement-lending-ocr/04-verification-of-assets-ocr"
+import { blogBl05 } from "./new-blogs/bank-statement-lending-ocr/05-auto-loan-document-ocr"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -125,4 +126,5 @@ export const newBlogs: BlogPost[] = [
   blogBl02,
   blogBl03,
   blogBl04,
+  blogBl05,
 ]
