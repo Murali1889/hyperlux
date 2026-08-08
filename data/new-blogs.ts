@@ -44,6 +44,7 @@ import { blogAp05 } from "./new-blogs/invoice-ap-ocr/05-3-way-match-invoice-auto
 import { blogAp06 } from "./new-blogs/invoice-ap-ocr/06-duplicate-invoice-detection"
 import { blogAp07 } from "./new-blogs/invoice-ap-ocr/07-invoice-line-item-ocr"
 import { blogAp08 } from "./new-blogs/invoice-ap-ocr/08-early-payment-discount-capture"
+import { blogAp09 } from "./new-blogs/invoice-ap-ocr/09-non-po-invoice-exception-routing"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -88,4 +89,5 @@ export const newBlogs: BlogPost[] = [
   blogAp06,
   blogAp07,
   blogAp08,
+  blogAp09,
 ]
