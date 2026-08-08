@@ -85,6 +85,7 @@ import { blogBl21 } from "./new-blogs/bank-statement-lending-ocr/21-bank-stateme
 // KYC/AML/Compliance OCR cluster (topic 3 of 3, 21 posts) — see
 // docs/superpowers/specs/2026-08-08-kyc-aml-compliance-ocr-cluster-design.md
 import { blogKa01 } from "./new-blogs/kyc-aml-compliance-ocr/01-mrz-passport-verification"
+import { blogKa02 } from "./new-blogs/kyc-aml-compliance-ocr/02-beneficial-ownership-verification"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -164,4 +165,5 @@ export const newBlogs: BlogPost[] = [
   blogBl20,
   blogBl21,
   blogKa01,
+  blogKa02,
 ]
