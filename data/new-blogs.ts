@@ -74,6 +74,7 @@ import { blogBl11 } from "./new-blogs/bank-statement-lending-ocr/11-hard-money-l
 import { blogBl12 } from "./new-blogs/bank-statement-lending-ocr/12-fintech-lending-api-ocr"
 import { blogBl13 } from "./new-blogs/bank-statement-lending-ocr/13-dti-calculation-ocr"
 import { blogBl14 } from "./new-blogs/bank-statement-lending-ocr/14-cash-flow-underwriting-ocr"
+import { blogBl15 } from "./new-blogs/bank-statement-lending-ocr/15-nsf-overdraft-detection-ocr"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -145,4 +146,5 @@ export const newBlogs: BlogPost[] = [
   blogBl12,
   blogBl13,
   blogBl14,
+  blogBl15,
 ]
