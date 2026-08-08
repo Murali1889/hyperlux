@@ -58,6 +58,10 @@ import { blogAp19 } from "./new-blogs/invoice-ap-ocr/19-invoice-ocr-pricing-mode
 import { blogAp20 } from "./new-blogs/invoice-ap-ocr/20-rules-based-vs-ai-invoice-extraction"
 import { blogAp21 } from "./new-blogs/invoice-ap-ocr/21-invoice-ocr-parallel-run-sample-size"
 
+// Bank Statement/Lending OCR cluster (topic 2 of 3, 21 posts) — see
+// docs/superpowers/specs/2026-08-08-bank-statement-lending-ocr-cluster-design.md
+import { blogBl01 } from "./new-blogs/bank-statement-lending-ocr/01-pay-stub-income-verification-ocr"
+
 export const newBlogs: BlogPost[] = [
   blog01,
   blog02,
@@ -114,4 +118,5 @@ export const newBlogs: BlogPost[] = [
   blogAp19,
   blogAp20,
   blogAp21,
+  blogBl01,
 ]
