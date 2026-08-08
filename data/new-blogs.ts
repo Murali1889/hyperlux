@@ -56,6 +56,7 @@ import { blogAp17 } from "./new-blogs/invoice-ap-ocr/17-invoice-ocr-cfo-business
 import { blogAp18 } from "./new-blogs/invoice-ap-ocr/18-build-vs-buy-invoice-ocr"
 import { blogAp19 } from "./new-blogs/invoice-ap-ocr/19-invoice-ocr-pricing-models"
 import { blogAp20 } from "./new-blogs/invoice-ap-ocr/20-rules-based-vs-ai-invoice-extraction"
+import { blogAp21 } from "./new-blogs/invoice-ap-ocr/21-invoice-ocr-parallel-run-sample-size"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -112,4 +113,5 @@ export const newBlogs: BlogPost[] = [
   blogAp18,
   blogAp19,
   blogAp20,
+  blogAp21,
 ]
