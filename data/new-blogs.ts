@@ -37,6 +37,7 @@ import { blog34 } from "./new-blogs/34-ocr-accuracy-benchmark-2026"
 // Invoice/AP-OCR cluster (topic 1 of 3, 21 posts) — see
 // docs/superpowers/specs/2026-08-07-invoice-ap-ocr-cluster-design.md
 import { blogAp01 } from "./new-blogs/invoice-ap-ocr/01-invoice-ocr-quickbooks"
+import { blogAp02 } from "./new-blogs/invoice-ap-ocr/02-invoice-ocr-netsuite"
 import { blogAp05 } from "./new-blogs/invoice-ap-ocr/05-3-way-match-invoice-automation"
 
 export const newBlogs: BlogPost[] = [
@@ -75,5 +76,6 @@ export const newBlogs: BlogPost[] = [
   blog33,
   blog34,
   blogAp01,
+  blogAp02,
   blogAp05,
 ]
