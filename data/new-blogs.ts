@@ -97,6 +97,7 @@ import { blogKa10 } from "./new-blogs/kyc-aml-compliance-ocr/10-travel-rule-comp
 import { blogKa11 } from "./new-blogs/kyc-aml-compliance-ocr/11-liveness-detection-kyc"
 import { blogKa12 } from "./new-blogs/kyc-aml-compliance-ocr/12-proof-of-address-verification"
 import { blogKa13 } from "./new-blogs/kyc-aml-compliance-ocr/13-national-id-verification-ocr"
+import { blogKa14 } from "./new-blogs/kyc-aml-compliance-ocr/14-ein-verification-kyc"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -188,4 +189,5 @@ export const newBlogs: BlogPost[] = [
   blogKa11,
   blogKa12,
   blogKa13,
+  blogKa14,
 ]
