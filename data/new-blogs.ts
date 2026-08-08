@@ -86,6 +86,7 @@ import { blogBl21 } from "./new-blogs/bank-statement-lending-ocr/21-bank-stateme
 // docs/superpowers/specs/2026-08-08-kyc-aml-compliance-ocr-cluster-design.md
 import { blogKa01 } from "./new-blogs/kyc-aml-compliance-ocr/01-mrz-passport-verification"
 import { blogKa02 } from "./new-blogs/kyc-aml-compliance-ocr/02-beneficial-ownership-verification"
+import { blogKa03 } from "./new-blogs/kyc-aml-compliance-ocr/03-kyb-verification"
 
 export const newBlogs: BlogPost[] = [
   blog01,
@@ -166,4 +167,5 @@ export const newBlogs: BlogPost[] = [
   blogBl21,
   blogKa01,
   blogKa02,
+  blogKa03,
 ]
