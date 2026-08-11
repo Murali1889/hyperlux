@@ -108,6 +108,7 @@ export const blogBl06: BlogPost = {
   ],
   tags: ["lending", "underwriting", "fraud detection", "personal loans", "bank statement OCR"],
   cluster: "industry-trends",
+  noindex: true,
   faq: [
     {
       question: "What is loan stacking in unsecured personal lending?",

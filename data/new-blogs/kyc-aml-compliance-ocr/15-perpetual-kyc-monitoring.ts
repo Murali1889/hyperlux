@@ -122,6 +122,7 @@ export const blogKa15: BlogPost = {
   ],
   tags: ["compliance", "KYC", "perpetual KYC", "ongoing monitoring", "risk scoring"],
   cluster: "compliance",
+  noindex: true,
   faq: [
     {
       question: "What is the core difference between perpetual KYC and periodic review?",

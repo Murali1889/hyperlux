@@ -103,6 +103,7 @@ export const blogBl05: BlogPost = {
   ],
   tags: ["lending", "auto loans", "title OCR", "underwriting", "compliance"],
   cluster: "industry-trends",
+  noindex: true,
   faq: [
     {
       question: "What does it mean for an auto lien to be perfected?",

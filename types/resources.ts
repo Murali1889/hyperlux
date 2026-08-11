@@ -41,6 +41,7 @@ export interface BlogPost {
   tags?: string[]
   faq?: FAQ[]
   cluster?: BlogCluster
+  noindex?: boolean
 }
 
 export interface Article {

@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       images: [image],
     },
     robots: {
-      index: true,
+      index: !blog.noindex,
       follow: true,
       "max-image-preview": "large",
       "max-snippet": -1,

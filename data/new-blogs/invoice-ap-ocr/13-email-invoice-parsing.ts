@@ -115,6 +115,7 @@ export const blogAp13: BlogPost = {
   ],
   tags: ["accounts payable", "invoice OCR", "email parsing", "AP automation", "fraud prevention"],
   cluster: "industry-trends",
+  noindex: true,
   faq: [
     {
       question: "Why does forwarded-email invoice parsing produce wrong data?",

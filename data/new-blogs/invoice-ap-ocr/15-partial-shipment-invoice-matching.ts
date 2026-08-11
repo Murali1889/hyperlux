@@ -112,6 +112,7 @@ export const blogAp15: BlogPost = {
   ],
   tags: ["accounts payable", "invoice OCR", "3-way match", "AP automation", "PO matching"],
   cluster: "industry-trends",
+  noindex: true,
   faq: [
     {
       question: "What is partial shipment invoice matching?",

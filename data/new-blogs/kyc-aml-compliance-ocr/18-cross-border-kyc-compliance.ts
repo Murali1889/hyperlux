@@ -105,6 +105,7 @@ export const blogKa18: BlogPost = {
   ],
   tags: ["compliance", "KYC", "cross-border", "FATF", "AML"],
   cluster: "compliance",
+  noindex: true,
   faq: [
     {
       question: "What is the difference between relying on a third party's CDD and outsourcing KYC to a vendor?",

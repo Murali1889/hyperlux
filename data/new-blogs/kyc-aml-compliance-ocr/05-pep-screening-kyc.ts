@@ -114,6 +114,7 @@ export const blogKa05: BlogPost = {
   ],
   tags: ["compliance", "AML", "KYC", "PEP screening", "sanctions screening"],
   cluster: "compliance",
+  noindex: true,
   faq: [
     {
       question: "What are the main categories of politically exposed persons?",

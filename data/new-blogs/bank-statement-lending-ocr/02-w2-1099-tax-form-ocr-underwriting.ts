@@ -95,6 +95,7 @@ export const blogBl02: BlogPost = {
   ],
   tags: ["lending", "underwriting", "tax form OCR", "mortgage documents", "self-employment income"],
   cluster: "industry-trends",
+  noindex: true,
   faq: [
     {
       question: "Why does a W-2 and a 1099 with the same gross amount qualify for different loan amounts?",

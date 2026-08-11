@@ -105,6 +105,7 @@ export const blogBl17: BlogPost = {
   ],
   tags: ["lending", "fraud detection", "bank statement OCR", "underwriting", "document forensics"],
   cluster: "industry-trends",
+  noindex: true,
   faq: [
     {
       question: "Why is PDF metadata alone a weak fraud detection signal?",

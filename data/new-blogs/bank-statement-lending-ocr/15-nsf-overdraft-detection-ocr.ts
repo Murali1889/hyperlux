@@ -104,6 +104,7 @@ export const blogBl15: BlogPost = {
   ],
   tags: ["lending", "underwriting", "bank statement OCR", "fraud detection", "cash flow analysis"],
   cluster: "industry-trends",
+  noindex: true,
   faq: [
     {
       question: "What is the difference between an NSF fee and an overdraft fee?",
