@@ -114,6 +114,7 @@ export const blogAp12: BlogPost = {
   ],
   tags: ["accounts payable", "invoice OCR", "multi-currency", "international AP", "FX accounting"],
   cluster: "industry-trends",
+  noindex: true,
   faq: [
     {
       question: "How do you tell which currency a dollar sign refers to on an international invoice?",

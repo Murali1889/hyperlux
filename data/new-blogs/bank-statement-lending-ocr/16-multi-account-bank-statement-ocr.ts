@@ -105,6 +105,7 @@ export const blogBl16: BlogPost = {
   ],
   tags: ["lending", "underwriting", "bank statement OCR", "cash flow analysis", "data reconciliation"],
   cluster: "industry-trends",
+  noindex: true,
   faq: [
     {
       question: "What is the difference between a true duplicate and an internal transfer in bank statement aggregation?",

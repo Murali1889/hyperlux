@@ -111,6 +111,7 @@ export const blogKa02: BlogPost = {
   ],
   tags: ["compliance", "KYC", "AML", "KYB", "beneficial ownership"],
   cluster: "compliance",
+  noindex: true,
   faq: [
     {
       question: "What are the two prongs of the FinCEN beneficial ownership test?",

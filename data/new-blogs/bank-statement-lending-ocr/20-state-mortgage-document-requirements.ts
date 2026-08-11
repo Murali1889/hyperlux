@@ -104,6 +104,7 @@ export const blogBl20: BlogPost = {
   ],
   tags: ["lending", "mortgage documents", "compliance", "servicing", "underwriting"],
   cluster: "compliance",
+  noindex: true,
   faq: [
     {
       question: "Do all states require mortgage servicers to pay interest on escrow accounts?",

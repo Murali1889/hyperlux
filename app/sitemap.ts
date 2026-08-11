@@ -55,16 +55,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: r.priority,
   }))
 
-  const blogPages: MetadataRoute.Sitemap = blogs.map((b) => ({
-    url: `${SITE_URL}/resources/blogs/${b.slug}`,
-    lastModified: b.dateModified
-      ? b.dateModified.split("T")[0]
-      : b.datePublished
-        ? b.datePublished.split("T")[0]
-        : TODAY,
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }))
+  const blogPages: MetadataRoute.Sitemap = blogs
+    .filter((b) => !b.noindex)
+    .map((b) => ({
+      url: `${SITE_URL}/resources/blogs/${b.slug}`,
+      lastModified: b.dateModified
+        ? b.dateModified.split("T")[0]
+        : b.datePublished
+          ? b.datePublished.split("T")[0]
+          : TODAY,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    }))
 
   const authorPages: MetadataRoute.Sitemap = authors.map((a) => ({
     url: `${SITE_URL}/author/${a.slug}`,

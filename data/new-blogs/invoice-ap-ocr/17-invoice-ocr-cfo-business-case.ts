@@ -118,6 +118,7 @@ export const blogAp17: BlogPost = {
   ],
   tags: ["accounts payable", "invoice OCR", "ROI", "AP automation", "CFO"],
   cluster: "industry-trends",
+  noindex: true,
   faq: [
     {
       question: "How do you calculate the risk-adjusted value of invoice fraud prevention for a business case?",

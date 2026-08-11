@@ -106,6 +106,7 @@ export const blogBl07: BlogPost = {
   ],
   tags: ["lending", "underwriting", "HELOC", "mortgage documents", "compliance"],
   cluster: "industry-trends",
+  noindex: true,
   faq: [
     {
       question: "Why does HCLTV use a HELOC's full credit limit instead of the current balance?",

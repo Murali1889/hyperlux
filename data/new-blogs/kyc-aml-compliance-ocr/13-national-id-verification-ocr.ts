@@ -107,6 +107,7 @@ export const blogKa13: BlogPost = {
   ],
   tags: ["compliance", "KYC", "national ID verification", "AAMVA", "identity verification"],
   cluster: "compliance",
+  noindex: true,
   faq: [
     {
       question: "Why doesn't every national ID format need its own visual template?",

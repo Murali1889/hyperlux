@@ -107,6 +107,7 @@ export const blogBl11: BlogPost = {
   ],
   tags: ["lending", "hard money", "construction lending", "compliance", "underwriting"],
   cluster: "industry-trends",
+  noindex: true,
   faq: [
     {
       question: "What are the four types of construction lien waivers?",

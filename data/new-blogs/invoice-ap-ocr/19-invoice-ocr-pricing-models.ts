@@ -120,6 +120,7 @@ export const blogAp19: BlogPost = {
   ],
   tags: ["accounts payable", "invoice OCR", "pricing", "API", "AWS Textract"],
   cluster: "comparison",
+  noindex: true,
   faq: [
     {
       question: "Why does the same OCR vendor charge such different rates for seemingly similar work?",

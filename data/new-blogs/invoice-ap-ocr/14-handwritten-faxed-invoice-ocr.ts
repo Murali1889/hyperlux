@@ -116,6 +116,7 @@ export const blogAp14: BlogPost = {
   ],
   tags: ["accounts payable", "invoice OCR", "OCR accuracy", "benchmark", "small vendors"],
   cluster: "industry-trends",
+  noindex: true,
   faq: [
     {
       question: "How accurate is OCR on handwritten invoices?",

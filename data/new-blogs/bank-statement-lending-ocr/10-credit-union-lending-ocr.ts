@@ -107,6 +107,7 @@ export const blogBl10: BlogPost = {
   ],
   tags: ["lending", "credit unions", "compliance", "underwriting", "commercial lending"],
   cluster: "compliance",
+  noindex: true,
   faq: [
     {
       question: "What is a member business loan (MBL) under NCUA rules?",

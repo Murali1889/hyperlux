@@ -114,6 +114,7 @@ export const blogAp11: BlogPost = {
   ],
   tags: ["accounts payable", "invoice OCR", "month-end close", "AP automation", "accrual accounting"],
   cluster: "industry-trends",
+  noindex: true,
   faq: [
     {
       question: "Why does accounts payable usually take the longest to close each month?",

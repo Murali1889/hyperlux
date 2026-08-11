@@ -113,6 +113,7 @@ export const blogAp10: BlogPost = {
   ],
   tags: ["accounts payable", "invoice OCR", "fraud detection", "AP automation", "document forensics"],
   cluster: "compliance",
+  noindex: true,
   faq: [
     {
       question: "What is the difference between invoice fraud and duplicate invoice fraud?",

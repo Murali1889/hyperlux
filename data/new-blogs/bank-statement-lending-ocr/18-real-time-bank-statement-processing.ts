@@ -103,6 +103,7 @@ export const blogBl18: BlogPost = {
   ],
   tags: ["lending", "underwriting", "bank statement OCR", "machine learning", "data architecture"],
   cluster: "industry-trends",
+  noindex: true,
   faq: [
     {
       question: "What is point-in-time correctness in underwriting model training?",

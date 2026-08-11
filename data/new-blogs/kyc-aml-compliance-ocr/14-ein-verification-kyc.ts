@@ -110,6 +110,7 @@ export const blogKa14: BlogPost = {
   ],
   tags: ["compliance", "KYB", "EIN verification", "TIN matching", "KYC"],
   cluster: "compliance",
+  noindex: true,
   faq: [
     {
       question: "What does the IRS TIN Matching program actually compare?",

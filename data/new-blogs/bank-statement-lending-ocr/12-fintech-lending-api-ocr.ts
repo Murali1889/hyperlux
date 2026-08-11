@@ -104,6 +104,7 @@ export const blogBl12: BlogPost = {
   ],
   tags: ["lending", "fintech", "compliance", "embedded finance", "underwriting"],
   cluster: "compliance",
+  noindex: true,
   faq: [
     {
       question: "What is the true lender doctrine?",

@@ -112,6 +112,7 @@ export const blogBl01: BlogPost = {
   ],
   tags: ["lending", "bank statement OCR", "income verification", "underwriting", "fraud detection"],
   cluster: "industry-trends",
+  noindex: true,
   faq: [
     {
       question: "How do you verify a pay stub is genuine using bank statement data?",
