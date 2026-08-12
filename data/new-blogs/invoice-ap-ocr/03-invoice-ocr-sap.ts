@@ -68,27 +68,6 @@ export const blogAp03: BlogPost = {
     <h2>What I would check before scaling SAP invoice automation</h2>
 
     <p>Pull a sample of last month's invoices and split them into PO-referenced and non-PO-referenced before building anything. If your pipeline only handles one path, you already know which half of your invoice volume it covers. Then check your OMR6 tolerance configuration against current vendor pricing reality, since a stale tolerance band produces false rejections that get misdiagnosed as extraction failures. Finally, confirm which posting mechanism, BAPI or IDoc, your actual vendor mix requires, since a vendor already set up for EDI e-invoicing is likely arriving as an IDoc regardless of what your pipeline was originally designed to handle. For the pipeline-agnostic version of this evaluation process, see our <a href="/resources/blogs/accounts-payable-ocr">accounts payable OCR guide</a>, and for the specific failure pattern of matching logic flagging correct invoices, see our <a href="/resources/blogs/3-way-match-invoice-automation">3-way matching breakdown</a>.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is the difference between an MM invoice and an FI invoice in SAP?</strong><br />
-    An MM invoice references a purchase order and goes through Logistics Invoice Verification (MIRO), matched against the PO and goods receipt. An FI invoice has no PO reference and posts directly to Financial Accounting against a G/L account and cost object instead. Recurring operating costs like subscriptions and utilities are typically FI invoices; purchased goods and services with a PO are MM invoices.</p>
-
-    <p><strong>What BAPI is used to post an incoming invoice in SAP?</strong><br />
-    BAPI_INCOMINGINVOICE_CREATE is the standard function module for posting PO-referenced (MM) invoices programmatically, using the same underlying logic as the MIRO transaction. Header data (document type, dates, company code, amounts) goes in the HEADERDATA structure; PO and goods-receipt references go in ITEMDATA.</p>
-
-    <p><strong>Why does a correct invoice fail to post in SAP invoice verification?</strong><br />
-    The most common causes are a tolerance rule (configured in OMR6) rejecting a price or quantity variance that has drifted beyond an outdated threshold, a missing or incorrect goods receipt reference, or a wrong posting date falling outside an open fiscal period. These are configuration and data issues, not usually OCR accuracy issues, even though they present the same way in an exception queue.</p>
-
-    <p><strong>Does SAP have native OCR for invoices?</strong><br />
-    SAP offers native and adjacent options including SAP Document and Reporting Compliance and SAP Invoice Management by OpenText, but most SAP shops layer third-party OCR on top via BAPI, IDoc, RFC, or OData integration rather than relying solely on native capture, particularly for line-item-level extraction accuracy on varied vendor invoice formats.</p>
-
-    <p><strong>Can invoice OCR determine automatically whether an invoice is MM or FI?</strong><br />
-    Extraction can detect whether a PO number appears on the invoice, which is the practical signal for routing, but the underlying business decision, whether that spend should have required a PO in the first place, is a procurement policy question the OCR layer cannot answer on its own.</p>
-
-    <p><strong>What is the difference between posting an invoice via BAPI versus IDoc in SAP?</strong><br />
-    BAPI_INCOMINGINVOICE_CREATE is a synchronous call that returns an immediate document number or error, suited to a pipeline that extracts and posts in one flow. The INVOIC IDoc is processed asynchronously through SAP's inbound queue, often on a batch schedule, with failures visible in transactions like WE02 or BD87 rather than as an immediate response. A pipeline built for one does not automatically handle the other's error-reporting model.</p>
-
     <p>Sources: BAPI_INCOMINGINVOICE_CREATE field structure verified against SAP technical community references and function module documentation. Extraction accuracy figures from our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/invoice-processing.png",

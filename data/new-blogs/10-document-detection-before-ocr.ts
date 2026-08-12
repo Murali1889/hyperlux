@@ -118,26 +118,6 @@ ocrmypdf --deskew --rotate-pages --remove-background input.pdf output.pdf</code>
     <p>If you have a working OCR pipeline that disappoints: add deskew and rotation correction first. Two flags in ocrmypdf or a few lines of code in your own pipeline. The accuracy lift is typically 4-8 points.</p>
     <p>If you are starting a new pipeline: do not write the OCR step until you have written the pre-processing. The pre-processing is what makes the OCR work.</p>
     <p>If you are evaluating a vendor: ask what document detection they do. The answer should be specific, boundary detection, rotation, deskew, classification. Not just "yes". (<a href="/author/nupura-ughade">I write about this gap a lot</a>.)</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>What is document detection in OCR?</h3>
-    <p>Document detection is the pre-processing step that identifies and prepares pages before OCR runs. It includes page boundary detection, rotation correction, deskew, and document classification. Skipping it costs accuracy on real-world (non-clean) documents.</p>
-
-    <h3>Is document detection included in modern OCR APIs?</h3>
-    <p>Mostly yes. AWS Textract, Google Document AI, Azure Form Recognizer, and DocsAPI all include basic detection. Tesseract requires you to add it via flags or external tools. Always check the docs for which specific detection steps are included.</p>
-
-    <h3>How much does document detection improve OCR accuracy?</h3>
-    <p>Typical accuracy gain: 4-8 percentage points on real-world (non-clean) documents. The gain is larger on photos taken with a phone, scanned at angles, or faded. Clean scans benefit less because they were already easy.</p>
-
-    <h3>Can I add document detection without an engineer?</h3>
-    <p>Partially. Tools like ocrmypdf include detection flags you can run from the command line. For full pipeline integration (page boundaries, classification), an engineer is helpful. Many cloud OCR APIs handle detection automatically.</p>
-
-    <h3>What is the difference between rotation correction and deskew?</h3>
-    <p>Rotation correction handles 90-degree turns (sideways or upside-down pages). Deskew handles small tilts (a 3-degree angle off horizontal). Both are needed. Rotation correction is binary (4 possible orientations). Deskew is continuous (any small angle).</p>
-
-    <h3>Does document detection help with handwritten content?</h3>
-    <p>It helps with everything, typed, handwritten, mixed. Handwriting benefits especially from page boundary detection (photos of handwritten notes often include desk edges) and deskew (handwritten pages are rarely perfectly aligned).</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",

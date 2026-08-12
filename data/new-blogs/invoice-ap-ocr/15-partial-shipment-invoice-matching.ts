@@ -67,27 +67,6 @@ export const blogAp15: BlogPost = {
     <p>Confirm explicitly whether your matching logic checks each invoice against the original PO total or against the PO total minus everything already invoiced. If you cannot get a clear answer, test it directly: submit two invoices against the same PO line where neither individually exceeds the PO amount but the combined total does, and see whether the second one gets flagged. Then check whether your extraction confidence scoring treats the first invoice in a split-delivery series with any additional scrutiny, since an error there has outsized downstream consequences compared to an error on a standalone invoice.</p>
 
     <p>Finally, run the stale-PO report described above at least quarterly, POs with partial invoicing history and no activity for 60 to 90 days, and decide explicitly for each one whether it should close, stay open awaiting more shipments, or get escalated as a real fulfillment problem. This is a small, mechanical review that most AP teams never run at all simply because nobody owns it, not because it is difficult.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is partial shipment invoice matching?</strong><br />
-    Matching logic that handles a purchase order fulfilled and invoiced across multiple separate shipments and invoices rather than in one transaction, tracking cumulative quantity and amount invoiced against the PO line rather than evaluating each invoice in isolation.</p>
-
-    <p><strong>Why does per-invoice matching fail on split deliveries?</strong><br />
-    Because each individual partial invoice can look acceptable when checked against the full original PO amount, even when the combined total across all partial invoices exceeds tolerance. Only cumulative tracking against the running total catches this.</p>
-
-    <p><strong>How does OCR extraction error affect partial shipment matching specifically?</strong><br />
-    An extraction error on an early invoice in a split-delivery series corrupts the cumulative baseline that all subsequent invoices against that same PO get checked against, meaning the error's impact is not contained to a single document but propagates forward through the rest of the series.</p>
-
-    <p><strong>Should the first invoice in a split delivery get extra scrutiny?</strong><br />
-    Yes, since an extraction error there compounds forward through every subsequent invoice matched against the same running total, unlike an error on a standalone invoice, which stays contained to that one document.</p>
-
-    <p><strong>What tolerance should apply to cumulative price-total matching?</strong><br />
-    This is a policy decision specific to your organization and vendor category, commonly expressed as a percentage, a fixed not-to-exceed amount, or both together, evaluated against the cumulative invoiced total rather than any single invoice's amount.</p>
-
-    <p><strong>How do you know when a purchase order line with partial invoices is finally closed?</strong><br />
-    Three common signals: cumulative invoiced quantity reaches the original PO quantity, the vendor explicitly marks a final invoice as the last shipment even if short of full quantity, or a time-based policy closes lines with no activity for a defined period, commonly 60 to 90 days. This needs an explicit policy, not a default assumption.</p>
-
     <p>None of this is exotic. It is standard matching logic applied consistently to a series of documents instead of one at a time, which is exactly the piece most generic invoice-matching content skips.</p>
 
     <p>Sources: worked example and matching mechanics referenced from <a href="https://learn.microsoft.com/en-us/dynamics365/finance/accounts-payable/accounts-payable-invoice-matching" target="_blank" rel="noopener">Microsoft Dynamics 365's accounts payable invoice matching documentation</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>

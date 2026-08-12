@@ -62,27 +62,6 @@ export const blogKa09: BlogPost = {
     <h2>What I would check in your current SAR filing pipeline</h2>
 
     <p>Ask whether your system tracks the date of initial detection as its own distinct, timestamped event, separate from the underlying transaction date, since the 30-day clock runs from detection, not the transaction itself, and conflating the two risks miscalculating the actual deadline. Then confirm your process correctly distinguishes the standard 30-day deadline from the narrow, suspect-identification-specific extension capped at 60 days total, rather than treating one figure as a universal default for every case. Confirm your access controls actually reflect the ongoing, indefinite confidentiality obligation around the fact of a filing itself, not just the standard access restrictions already applied to the underlying customer and transaction data. Finally, if your program still runs a dedicated, standalone post-SAR continuing-activity review specifically because of the pre-October-2025 industry practice, confirm whether that separate process remains genuinely necessary under the updated guidance or whether it can now be consolidated into your existing risk-based ongoing monitoring instead, the same kind of stale rule worth periodically re-auditing against current regulatory guidance covered from the escrow-interest angle in our <a href="/resources/blogs/state-mortgage-document-requirements">state mortgage document requirements piece</a>.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What dollar threshold triggers a SAR filing obligation for a bank?</strong><br />
-    Transactions involving or aggregating at least $5,000, combined with knowledge, suspicion, or reason to suspect certain violations. Below that floor, a SAR generally is not required regardless of suspicion level.</p>
-
-    <p><strong>How many days does a bank have to file a SAR?</strong><br />
-    30 calendar days from the date of initial detection of facts that may constitute a basis for filing. If no suspect was identified at detection, up to 30 additional days are allowed specifically to identify one, capped at 60 days total.</p>
-
-    <p><strong>What date does the SAR filing deadline actually run from?</strong><br />
-    The date facts are detected that may warrant filing, not the date of the underlying suspicious transaction itself. These can differ if activity goes unreviewed for a period before detection.</p>
-
-    <p><strong>What changed with FinCEN's October 2025 SAR guidance?</strong><br />
-    FinCEN clarified that banks are not required to conduct a separate, dedicated account review following a SAR filing to check for continuing activity. Existing risk-based ongoing monitoring can identify and report it instead.</p>
-
-    <p><strong>Does the October 2025 clarification eliminate continuing SAR filings entirely?</strong><br />
-    No. The continuing-SAR filing cadence, commonly every 90 to 120 days once continuing activity is identified, still applies. What changed is how that activity gets surfaced, standard monitoring rather than a mandated separate review.</p>
-
-    <p><strong>Why does the detection-date distinction matter for a compliance pipeline?</strong><br />
-    Because the 30-day clock legally runs from detection, not the transaction date. A pipeline inferring the deadline from the transaction date alone risks calculating an incorrect filing deadline, sometimes by weeks, depending on how long the underlying activity actually sat unreviewed before someone noticed it.</p>
-
     <p>The safe harbor protection and the tipping-off prohibition are not footnotes to the filing deadline mechanics above, they are the two structural features that make the whole system function the way it is actually designed to. The safe harbor is what lets an institution file promptly on genuine suspicion without waiting for certainty, since certainty is rarely available within a 30-day window and the entire framework depends on filing before certainty exists, not after. The confidentiality requirement is what keeps a filed SAR from tipping off exactly the person it was filed about, undermining any investigation the filing might otherwise support. Neither one is optional or a matter of institutional preference; both are structural requirements a document and workflow pipeline needs to actively support, not simply avoid violating by accident.</p>
 
     <p>The 30-day SAR deadline gets mentioned constantly and precisely explained rarely, the specific $5,000 floor underneath the suspicion standard, the narrow 60-day-maximum extension, and the exact date the clock actually starts from. The October 2025 clarification on continuing-activity review is exactly the kind of recent, real regulatory update that a pipeline built on older assumptions can keep running past without anyone noticing the extra work it no longer needs to do. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>

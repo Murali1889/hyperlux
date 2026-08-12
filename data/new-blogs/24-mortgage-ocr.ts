@@ -130,26 +130,6 @@ export const blog24: BlogPost = {
     <p>If you close under 50 loans per month: try a mortgage-specific OCR vendor on your last 10 closed packets. Measure extraction accuracy on the eight document types above. If you clear 95% on pay stubs, W-2s, and bank statements, the rollout is straightforward.</p>
     <p>If you close 50-500 loans per month: this is where ROI is highest. The time savings compound across the team. Trial a vendor for 30 days on live applications and measure days-to-close before and after.</p>
     <p>If you close 500+ loans per month: you probably already have something. Ask the vendor for current accuracy data on business tax returns and complex appraisals. If they cannot answer with field-level accuracy numbers, switch. (<a href="/author/nupura-ughade">I write about mortgage tech rollouts often.</a>)</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>What is mortgage OCR?</h3>
-    <p>Mortgage OCR is the use of optical character recognition to extract data from mortgage application documents, pay stubs, tax returns, bank statements, appraisals, ID documents, and push that data into a loan origination system without manual entry.</p>
-
-    <h3>How accurate is mortgage OCR?</h3>
-    <p>On pay stubs, W-2s, and standardized bank statements: 95-99% accuracy on critical fields. On business tax returns and complex appraisals: 85-92%. The remaining gap requires human review queues.</p>
-
-    <h3>Can mortgage OCR replace processors?</h3>
-    <p>No. It eliminates the data-entry portion of a processor's job, which is typically 60-70% of their time. The remaining 30-40%, underwriting collaboration, borrower communication, conditions clearing, QC, still requires experienced people.</p>
-
-    <h3>How does mortgage OCR cut days-to-close?</h3>
-    <p>By making same-day initial underwriting possible. When document extraction takes 90 minutes instead of 8 hours, the conditional approval clock starts on day one instead of day five.</p>
-
-    <h3>Does mortgage OCR work for self-employed borrowers?</h3>
-    <p>Partially. Personal tax returns extract well. Business tax returns (Forms 1120, 1120-S, 1065) are harder; expect 85-92% accuracy and plan for human review of these specifically.</p>
-
-    <h3>What does mortgage OCR cost per loan?</h3>
-    <p>Per-loan OCR costs typically run $5-25 depending on packet size and document mix. Compare against the loaded cost of manual processing, usually $300-600 per loan. Payback is fast.</p>
   `,
   image: "/images/transforming-financial-services.png",
   featuredImage: "/images/transforming-financial-services.png",

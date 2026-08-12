@@ -101,26 +101,6 @@ export const blog27: BlogPost = {
     <p>If you are evaluating whether OCR makes sense for your finance team: count the hours your team spends on document data entry this month. Multiply by the loaded cost of a finance employee ($75-150/hour). If the number is more than $2,000/month, the OCR investment pays for itself within a quarter.</p>
     <p>If you are evaluating vendors: do not let them demo on their clean documents. Bring 20 of your messiest invoices and run those through. The vendor that handles your real documents is the right pick. (Our <a href="/resources/blogs/ocr-pdf-honest-guide">honest guide from 4M pages a month</a> covers production tradeoffs.)</p>
     <p>If you are explaining OCR to your board: skip the technical pitch. Lead with the cost comparison and the strategic redeployment of your team. That is what executives care about. (<a href="/author/nupura-ughade">I write about translating finance tech for executives often.</a>)</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>What does OCR stand for?</h3>
-    <p>OCR stands for Optical Character Recognition. It is software that converts pictures of text (scans, photos, PDFs) into actual text characters a computer can read and use.</p>
-
-    <h3>What is OCR in finance?</h3>
-    <p>OCR in finance is the use of optical character recognition software to extract data from finance documents, invoices, receipts, bank statements, tax forms, loan applications, and push that data into accounting, ERP, or lending systems automatically.</p>
-
-    <h3>Is OCR new?</h3>
-    <p>No. OCR has existed in some form since the 1960s. What is new is the accuracy of modern engines (95-99%), the affordability (less than a penny per page), and the integration with downstream finance systems.</p>
-
-    <h3>Can OCR read handwriting?</h3>
-    <p>Modern OCR reads neat printed handwriting at 85-92% accuracy. Cursive and rushed handwriting drop to 70-80%. Doctor's notes and signed receipts remain hard for everyone.</p>
-
-    <h3>Does OCR work on phone photos?</h3>
-    <p>Yes, with good pre-processing (deskew, rotation correction, page boundary detection). Modern OCR APIs handle phone photos at near-PDF accuracy when the pre-processing is solid.</p>
-
-    <h3>How is OCR different from AI document processing?</h3>
-    <p>OCR is one step within document AI. Document AI also includes classification, field extraction, validation, and routing. OCR alone produces text. Document AI produces actionable structured data.</p>
   `,
   image: "/images/ocr-in-finance.png",
   featuredImage: "/images/ocr-in-finance.png",

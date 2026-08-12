@@ -65,27 +65,6 @@ export const blogBl06: BlogPost = {
     <h2>What I would check in your current personal loan pipeline</h2>
 
     <p>Ask whether your fraud detection, however good it is at catching altered documents, includes any deposit-pattern scan for recent loan proceeds landing in the applicant's account, or whether fraud detection stops at the document-tampering layer entirely. Then ask what happens to your DTI calculation when a flagged deposit cluster turns out to represent a genuine, recently originated obligation, whether that recalculation is a defined, automatic step or something that depends on a reviewer remembering to redo the math manually. Finally, confirm your review process actually checks for the outbound payoff-transaction pattern before treating a flagged deposit as additive stacking rather than legitimate consolidation, the same distinction that matters for the <a href="/resources/blogs/verification-of-assets-ocr">large-deposit sourcing rules</a> covered in our verification of assets guide, applied here to a lending-specific deposit pattern rather than a general asset check. Loan stacking does not require a single altered document to succeed, which is exactly why detecting it needs a check that lives outside document authenticity entirely.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is loan stacking in unsecured personal lending?</strong><br />
-    An applicant taking out multiple unsecured personal loans across different lenders within a short window, often days apart, faster than any single lender's credit pull can see the others, exploiting the lag between loan origination and credit bureau reporting.</p>
-
-    <p><strong>Why can a credit pull miss a loan that was originated just days ago?</strong><br />
-    Lenders typically report new accounts to credit bureaus on their own cycle, commonly every 30 to 45 days, and full tradeline reflection can take up to 90 days. A credit pull run before the originating lender's next reporting date will not show that obligation at all.</p>
-
-    <p><strong>What deposit pattern in a bank statement suggests recent loan stacking?</strong><br />
-    Multiple round or near-round dollar deposits, with descriptions indicating a lending or loan-servicing origin rather than payroll, clustered within roughly one to two weeks. Any single characteristic alone is usually meaningless; all three together in a short window is a pattern worth reviewing.</p>
-
-    <p><strong>Should a flagged deposit cluster result in automatic loan denial?</strong><br />
-    No. It should trigger manual review and a direct conversation with the applicant, since legitimate explanations exist. It should reliably trigger a debt-to-income recalculation including any genuine obligation the deposit represents.</p>
-
-    <p><strong>Can loan stacking happen without any document fraud at all?</strong><br />
-    Yes. The applicant's identity and documents can be entirely genuine. Stacking exploits the timing gap in credit bureau reporting, not document authenticity, which is why document-tampering detection alone does not catch it.</p>
-
-    <p><strong>Why should stacking detection run on the bank statement instead of waiting for the credit bureau to catch up?</strong><br />
-    Because the entire value of catching stacking is preventing an inaccurate DTI calculation before the loan funds. Waiting for bureau data to catch up means discovering the obligation only after this loan has already been approved and disbursed.</p>
-
     <p>Document tampering detection and stacking detection are two different problems that happen to both live inside the same personal loan document pipeline. Sophisticated fraud detection on document authenticity says nothing about whether the applicant already has three other loans the credit bureau has not caught up to yet, and that gap is exactly where a well-built deposit-pattern scan on the bank statement earns its place. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/ocr-accuracy.png",

@@ -65,27 +65,6 @@ export const blogBl19: BlogPost = {
     <h2>What I would check in your current ECOA compliance pipeline</h2>
 
     <p>Ask directly whether your adverse action reason codes are generated from the same model instance that made the actual credit decision, or from a separate, simplified surrogate model built specifically for explainability. If it is the second, ask how often, and by how much, the surrogate's stated reasons have actually been validated against the production model's real feature importance for individual denied applications, not just in aggregate. Then confirm your reason code language is specific enough to reflect genuinely technical, bank-statement-derived factors, deposit volatility, cash-flow DTI, covered-overdraft frequency, rather than defaulting to generic legacy categories that predate cash-flow underwriting entirely and were never built to describe what these newer models actually weigh. And confirm the monitoring described above actually runs on an ongoing schedule rather than as a one-time check performed only at initial model deployment, since production model behavior can drift meaningfully on new applicant populations over time, a related discipline covered from the training-data angle in our <a href="/resources/blogs/real-time-bank-statement-processing">point-in-time correctness piece</a>, where an unmonitored gap between what a model was built on and what it actually encounters in production similarly stayed invisible until someone went looking for it directly.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What does "specific and accurate" mean for an ECOA adverse action reason?</strong><br />
-    The reason given must be the actual, real principal reason for the decision, not the closest-sounding option from a standardized checklist. A creditor cannot substitute a plausible reason for the true one.</p>
-
-    <p><strong>What is the surrogate-model mismatch in adverse action explanations?</strong><br />
-    Using a separate, simpler model, often chosen for interpretability, to generate consumer-facing reasons instead of explaining the actual production model that made the decision. The two models can weight factors differently for a given application.</p>
-
-    <p><strong>Why is this mismatch a real compliance failure and not just a technical detail?</strong><br />
-    Regulatory guidance is explicit that the model producing the decision should be the model producing the reasons. An explanation from a different model can describe a different, incorrect reason for the denial.</p>
-
-    <p><strong>Why do bank-statement-derived features raise particular ECOA concern?</strong><br />
-    They are exactly the kind of data the CFPB flags: information gathered outside the application itself, like deposit volatility or covered-overdraft frequency, that a consumer would not anticipate becoming a principal reason for denial.</p>
-
-    <p><strong>Can a surrogate model that matches well on average still produce a wrong individual explanation?</strong><br />
-    Yes. Average-case fidelity across a population does not guarantee accuracy for any specific application, which is exactly the population where an individually wrong explanation actually matters.</p>
-
-    <p><strong>What is the correct way to generate ECOA-compliant reasons for a machine learning model?</strong><br />
-    Generate explanations directly from the actual production model's outputs for each specific decision, and if a surrogate or simplified layer is used, measure and monitor its fidelity to the production model's real per-decision reasoning rather than assuming it.</p>
-
     <p>The legal requirement, give applicants the real reason, is not new or complicated to state. What is genuinely easy to get wrong, quietly and at scale, is building a compliance pipeline that generates a plausible-sounding, well-formatted explanation from a model that was never actually the one making the decision, one that clears every internal review precisely because nobody thought to check it against the model that actually decided the case. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/legal-document-automation.png",

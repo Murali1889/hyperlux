@@ -63,27 +63,6 @@ export const blogKa07: BlogPost = {
     <h2>What I would check in your current adverse media screening pipeline</h2>
 
     <p>Ask whether your system's role classification actually implements semantic role labeling, distinguishing agent from patient relative to the negative event described, or whether it relies on sentiment analysis alone, which cannot make that distinction by design. Then ask whether coreference resolution runs across the full article before role labeling, or only against the single sentence containing the literal name, since the worked example above shows a genuinely adverse role attaching only to a pronoun reference two sentences after the name itself. Confirm the system's confidence in genuinely ambiguous or complex-grammar cases actually routes to human review rather than forcing a low-confidence automated classification either way, since the honest answer to "was this person the subject or just mentioned" is sometimes genuinely unclear from the text alone and deserves to be treated that way rather than forced into a binary output. Finally, confirm confirmed hits get tiered by content severity, financial crime versus regulatory action versus civil dispute, rather than routing every confirmed match through identical escalation regardless of category, the same tiering discipline applied to office seniority in our <a href="/resources/blogs/pep-screening-kyc">PEP screening piece</a>.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>Why do adverse media screening false-positive rates run so high?</strong><br />
-    Overall AML screening false-positive rates run 90-95%, and adverse media generates some of the highest volumes of any category, since it searches the unbounded universe of news coverage rather than a curated, bounded list like sanctions or PEP data.</p>
-
-    <p><strong>Why can't sentiment analysis alone distinguish a subject from an incidental mention?</strong><br />
-    Sentiment analysis measures whether language skews negative or positive, not who specifically the negative content is about. A quote describing fraud in harsh terms is linguistically negative even when the speaker is catching the fraud, not committing it.</p>
-
-    <p><strong>What is semantic role labeling and why does it matter for adverse media screening?</strong><br />
-    A technique identifying whether a named entity is the agent performing an action or the patient receiving one. It distinguishes "arrested for embezzlement" (patient, genuine match) from "investigator who uncovered embezzlement" (agent, incidental mention).</p>
-
-    <p><strong>Why does adverse media screening still generally require human review?</strong><br />
-    Real news writing uses complex grammar, passive voice, and embedded clauses that complicate automated role classification. Automation reduces review volume significantly but does not eliminate ambiguous cases needing human confirmation.</p>
-
-    <p><strong>Should every confirmed adverse media hit get the same level of scrutiny?</strong><br />
-    No. Financial crime content generally warrants the highest severity tier, regulatory enforcement a moderate tier, and civil litigation or reputational disputes a lower tier, rather than applying identical escalation to every category.</p>
-
-    <p><strong>What are the three compounding problems that make adverse media screening especially hard?</strong><br />
-    Name collision against common names, transliteration ambiguity for non-Latin names, and role ambiguity, whether the named individual is genuinely the subject of the negative content or only incidentally mentioned.</p>
-
     <p>A fraud-prevention expert wrongly flagged for fraud is a good, memorable illustration of the false-positive problem. It is not, on its own, an explanation of how a screening system actually tells that expert apart from an actual fraudster sharing the same name, and that gap, the real mechanics of semantic role labeling and coreference resolution working together rather than sentiment analysis alone, is exactly where a screening program's real precision gets decided.</p>
 
     <p>None of this is a reason to avoid automating adverse media screening in the first place, since the alternative, reviewing every raw name hit manually with no role classification at all, is not actually more accurate, just slower and considerably more expensive to run at any real volume. It is a reason to understand specifically what the automation in front of a review queue is and is not actually capable of resolving on its own, before assuming a low hit rate reflects genuine precision rather than a system quietly missing adverse roles buried a sentence or two past where the name itself first appears. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>

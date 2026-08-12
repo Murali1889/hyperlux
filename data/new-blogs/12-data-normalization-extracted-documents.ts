@@ -125,26 +125,6 @@ export const blog12: BlogPost = {
     <p>If your OCR output is fed into downstream systems: build the normalization layer first, before you scale OCR. Cleaning up later is harder than doing it right the first time.</p>
     <p>If you have existing OCR data that is messy: pick the field that causes the most downstream bugs (usually dates or addresses) and normalize that first. Each field cleaned up removes a category of downstream errors.</p>
     <p>If you are evaluating a document AI vendor: ask what normalization they do. The good ones offer field-level normalization with locale awareness. The bad ones just give you raw OCR output. (<a href="/author/nupura-ughade">I write about this gap a lot</a>.)</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>What is data normalization for extracted documents?</h3>
-    <p>Data normalization is the step that converts extracted text into a consistent format your systems can use. Dates become ISO 8601, currencies become decimal amounts with currency codes, phone numbers become E.164, and so on. Without it, you have text, not data.</p>
-
-    <h3>Why do OCR pipelines need normalization?</h3>
-    <p>Because documents are written in many formats. The same date can appear five different ways across vendors. Downstream systems expect one format. Normalization bridges the two.</p>
-
-    <h3>Should I write my own normalization code or use libraries?</h3>
-    <p>Use libraries for dates, phones, and addresses. They handle edge cases you do not know about. Write your own only for domain-specific fields (account numbers, custom IDs) where libraries do not exist.</p>
-
-    <h3>What is the right canonical date format?</h3>
-    <p>ISO 8601 (YYYY-MM-DD) for dates without time. ISO 8601 with timezone for date-times. It sorts correctly, parses reliably, and is unambiguous across locales.</p>
-
-    <h3>How do I handle ambiguous dates?</h3>
-    <p>Use document context, vendor country, language, document type, to pick the most likely parse. Flag anything genuinely ambiguous ("01/02/03") for human review. Do not silently guess.</p>
-
-    <h3>Where does normalization fit in the OCR pipeline?</h3>
-    <p>After OCR extraction, before storage. Extract raw text first. Normalize next. Validate. Then store. Each step has its own concerns; mixing them creates bugs.</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",

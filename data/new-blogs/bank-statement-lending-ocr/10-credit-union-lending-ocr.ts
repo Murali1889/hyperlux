@@ -64,27 +64,6 @@ export const blogBl10: BlogPost = {
     <h2>What I would check in your current credit union lending pipeline</h2>
 
     <p>Ask whether your document pipeline explicitly classifies each business-purpose loan against all three full-exclusion categories, the $50,000 threshold, the primary-residence-secured exclusion, and personal-use vehicle loans, before any loan gets counted toward the aggregate MBL balance at all. Then ask whether the partial primary-residence reduction is applied separately for loans that clear the full-exclusion test but are still partly secured by a member's primary residence, since that is the distinction easiest to miss precisely because it looks similar to the full exclusion on the surface. Confirm this classification happens per loan, automatically, rather than depending on a loan officer remembering to flag the collateral structure manually on every commercial file, the same routing discipline covered in our <a href="/resources/blogs/heloc-document-ocr">HELOC document OCR piece</a> for a different lien-position classification problem entirely. Finally, confirm the aggregate cap check runs before disbursement rather than in a periodic after-the-fact report, and that human review of any automatically underwritten member business loan happens before funds move, not exclusively after.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is a member business loan (MBL) under NCUA rules?</strong><br />
-    A business-purpose loan made by a federally insured credit union that counts toward the institution's aggregate regulatory lending cap, generally the lesser of 1.75 times net worth or 12.25% of total assets, unless it falls under a specific exclusion category.</p>
-
-    <p><strong>What loans are excluded from the MBL definition entirely?</strong><br />
-    Loans under $50,000 regardless of purpose, loans secured by a 1-to-4 family residential property that is the member's primary residence, and vehicle loans made for personal, household use.</p>
-
-    <p><strong>What is the difference between the full MBL exclusion and the partial reduction?</strong><br />
-    The full exclusion removes a loan from the MBL definition entirely, so it never counts toward the cap. The partial reduction applies when a loan still qualifies as an MBL overall but is partly secured by a primary-residence lien; only that specific portion is reduced from the net balance counted toward the cap.</p>
-
-    <p><strong>Why does a document pipeline need to track collateral type for credit union lending specifically?</strong><br />
-    Because the MBL classification depends directly on collateral type, lien position, and whether the secured property is the member's primary residence, fields a document pipeline needs to extract and classify correctly for every business-purpose loan before the aggregate cap calculation can be accurate.</p>
-
-    <p><strong>What happens if MBL classification is systematically wrong across a portfolio?</strong><br />
-    A credit union can end up either unknowingly over its regulatory aggregate cap, a safety-and-soundness examination finding, or unnecessarily declining qualified loans because an inflated internal MBL balance understates the institution's actual remaining lending room.</p>
-
-    <p><strong>Does the $50,000 exclusion threshold apply to the loan's original amount or its current balance?</strong><br />
-    It applies to the loan's original principal amount at origination, which is why this classification needs to happen once, correctly, at the time the loan is booked, rather than being recalculated against a fluctuating current balance later.</p>
-
     <p>Extraction accuracy and audit-trail traceability are genuinely well solved by credit union lending automation vendors. Whether the resulting loan record is correctly classified against a regulatory definition with three separate carve-outs and one further partial reduction is a different, quieter problem, and it is exactly the layer that determines whether an institution's aggregate cap number can actually be trusted at all, rather than merely looking precise because it was computed cleanly from inputs nobody separately checked. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/the-ultimate-guide-to-small-business.png",

@@ -60,27 +60,6 @@ export const blogKa21: BlogPost = {
     <h2>What I would check in your current face match pipeline</h2>
 
     <p>Ask your vendor to report FNMR at a specific, stated FMR rather than accepting a single blended accuracy percentage, since the worked tradeoff above shows that number alone cannot be interpreted without knowing which error rate was held fixed while measuring it. Then ask whether your matching threshold accounts for document photo age and capture quality, or applies one fixed value regardless of whether the document photo is a fresh, high-resolution scan or a decade-old, laminated, twice-photographed image, since that asymmetry produces avoidable false non-matches unrelated to actual identity mismatch. Confirm your vendor can share demographic performance breakdowns from independent testing, specifying which error rate, FMR or FNMR, shifts for which population, rather than a general fairness claim with no directional specificity behind it. Finally, treat a demographic differential as a model and training-data question to raise with your vendor directly, not a threshold-tuning problem your own team can solve downstream, since the underlying NIST findings show the gap is closed by algorithm choice, not by adjusting where the accept line sits after the fact.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What does a face match system actually compare, if not the photos directly?</strong><br />
-    A neural network converts each face into a numerical embedding vector, typically 128 to 512 dimensions, and the system compares those vectors using cosine similarity, not the raw pixels of either photo.</p>
-
-    <p><strong>Why can't a single accuracy percentage describe face match performance meaningfully?</strong><br />
-    Because the underlying similarity threshold controls two opposite error rates, false match rate and false non-match rate, and shifting the threshold changes the accuracy figure without changing the underlying model, so an accuracy claim is meaningless without stating which error rate it held fixed.</p>
-
-    <p><strong>What is the FNMR@FMR metric used in biometric evaluation?</strong><br />
-    False Non-Match Rate measured at a fixed False Match Rate, the standard way biometric performance is reported, since it specifies exactly which security-relevant error rate was held constant while measuring the friction-relevant one.</p>
-
-    <p><strong>Why does document photo quality create a false non-match risk?</strong><br />
-    Document photos can be years old, printed, laminated, and rescanned, degrading the embedding quality on that side of the comparison. A threshold calibrated for two high-quality images can wrongly reject a genuine match when one photo is significantly degraded.</p>
-
-    <p><strong>What did NIST's testing find about demographic bias in face matching?</strong><br />
-    Darker-skinned subjects tend to experience a higher false match rate, a security-relevant error, while lighter-skinned subjects tend to experience a higher false non-match rate, a friction-relevant error, two different failure directions rather than one uniform accuracy gap.</p>
-
-    <p><strong>Can demographic bias in face matching be fixed by adjusting the threshold?</strong><br />
-    Not reliably. NIST found the most accurate algorithms show very low demographic differentials, meaning the gap is closed through model and training-data choices, not by tuning a single global threshold after deployment.</p>
-
     <p>A single accuracy percentage is a genuinely simple number to put on a pricing page, and it is also close to meaningless on its own, since the same underlying system can report a dramatically different figure purely by shifting its threshold, with no change to the actual matching model behind it. The FNMR-at-fixed-FMR framing, the document photo quality asymmetry, and the directional demographic findings above are exactly the details a single blended accuracy claim is specifically designed to smooth over.</p>
 
     <p>None of this argues against automating identity verification through face matching. Manual visual comparison of a document photo against a live person standing in front of a reviewer is not more accurate, and it carries no defensible, measurable error rate at all, just an unverifiable human judgment call repeated at scale. It is a reason to demand the specific underlying numbers, FNMR at a clearly stated FMR, demographic breakdowns by error direction, and document-photo-quality handling, rather than simply accepting one confident percentage as evidence that these tradeoffs have actually been addressed. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>

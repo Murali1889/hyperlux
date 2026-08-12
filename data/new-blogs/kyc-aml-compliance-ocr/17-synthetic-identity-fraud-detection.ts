@@ -65,27 +65,6 @@ export const blogKa17: BlogPost = {
     <h2>What I would check in your current synthetic identity detection pipeline</h2>
 
     <p>Ask whether your onboarding checks still rely on SSN structural validity as a meaningful signal, since that check has not reliably worked since the SSA's 2011 randomization eliminated the geographic and sequential pattern it depended on, and any fraud model still weighting it meaningfully is scoring against a signal that stopped correlating with legitimacy over a decade ago. Then ask whether your authorized-user tradeline review checks for a plausible relationship between the authorized user and the primary cardholder, surname match or a discoverable household connection, rather than treating every authorized-user addition as equally benign, since the worked example above shows that relationship check is exactly what separates ordinary family credit-building from synthetic-identity harvesting. Confirm your fraud model correlates activity across accounts and institutions, shared devices, IPs, or contact details, rather than relying on single-account velocity alone, since a deliberately slow-built synthetic identity is specifically constructed to look unremarkable under a velocity-only lens. Finally, confirm review capacity is weighted toward thin files with disproportionately strong authorized-user-driven credit profiles, the specific structural fingerprint a from-scratch identity leaves behind regardless of how convincing its supporting documents otherwise look.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>Why did SSN validity checking stop being an effective fraud detection tool?</strong><br />
-    Before June 2011, SSNs were assigned by a documented formula tying the first digits to geography and issuance order, making fabricated numbers checkable. The SSA's 2011 shift to fully random assignment removed that structure entirely.</p>
-
-    <p><strong>Did SSN randomization reduce synthetic identity fraud?</strong><br />
-    No. Fraudsters adapted by using the SSA's own randomization algorithm to generate plausible numbers, then validating which ones were genuinely unissued, continuing to build synthetic identities without the geographic pattern check that previously caught fabricated numbers.</p>
-
-    <p><strong>What is authorized-user piggybacking in synthetic identity fraud?</strong><br />
-    Adding a synthetic identity as an authorized user on an established credit account, inheriting that account's full age and payment history immediately, without ever having applied for or being liable for the underlying account.</p>
-
-    <p><strong>Why does application velocity detection often miss synthetic identity fraud?</strong><br />
-    Synthetic identities are typically built slowly over months specifically to avoid triggering velocity thresholds, so any single account's activity looks unremarkable when reviewed in isolation over a short window.</p>
-
-    <p><strong>What actually catches a slow-built synthetic identity?</strong><br />
-    Cross-account and cross-institution correlation, shared devices, IP addresses, or contact details appearing across a cluster of accounts that otherwise present as unrelated individuals, since fraud rings tend to reuse infrastructure across multiple synthetic identities.</p>
-
-    <p><strong>What distinguishes a legitimate authorized-user relationship from a synthetic-identity one?</strong><br />
-    A legitimate relationship typically shows a shared surname or discoverable household connection alongside other independent tradelines. A synthetic pattern shows no plausible relationship to the primary cardholder combined with an otherwise thin or empty file.</p>
-
     <p>Thin files and application velocity are genuinely useful signals, and every source covering synthetic identity fraud correctly names them. What most leave out is that these signals exist as a direct replacement for a mechanism that used to work, checking SSN validity structurally, and that replacement only makes sense once the actual reason the old check broke, and the specific mechanism fraudsters use to compress the credit-building timeline that thin-file detection is watching for, are both understood together rather than as separate, disconnected facts.</p>
 
     <p>None of this argues against automating synthetic identity detection. Manually reviewing every thin file and authorized-user addition does not scale and does not catch cross-institution correlation any more reliably than an automated system, arguably less so. It is a reason to confirm your pipeline has actually replaced SSN structural checking with the behavioral and relational signals that took over after 2011, rather than still weighting a check that quietly stopped meaning anything well over a decade ago. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>

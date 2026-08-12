@@ -60,27 +60,6 @@ export const blogKa18: BlogPost = {
     <h2>What I would check in your current cross-border KYC arrangements</h2>
 
     <p>Ask whether any arrangement your organization currently describes internally as "relying on" a foreign partner's KYC actually satisfies FATF Recommendation 17's conditions, the partner itself being regulated and supervised for AML compliance, or whether it is functionally outsourcing dressed in reliance language, since the worked example above shows those two arrangements produce identical day-to-day operations but entirely different liability outcomes if a regulator later examines the file. Then ask specifically whether your organization can produce the underlying identity documents and verification records for a cross-border customer on request, immediately, rather than only a summary result or a pass flag from the partner, since that immediate-availability requirement is what an examiner actually tests. Confirm your legal and compliance teams, not just your product or engineering teams, have reviewed whether each cross-border partner genuinely qualifies as a reliance-eligible third party under the applicable framework, since this is fundamentally a regulatory-status question about the partner, not a technical question about how good their verification technology is. Finally, if you operate within the EU, confirm your onboarding flow is prepared for EUDI Wallet acceptance ahead of the 2027 requirement rather than treating it as a distant deadline still comfortably far enough away to defer.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is the difference between relying on a third party's CDD and outsourcing KYC to a vendor?</strong><br />
-    Formal reliance under FATF Recommendation 17 requires the third party to itself be a regulated, AML-supervised institution, with underlying records immediately available on request. Outsourcing to a technology vendor, generally not itself AML-supervised, does not meet these conditions regardless of verification quality.</p>
-
-    <p><strong>Who bears liability under a valid third-party reliance arrangement?</strong><br />
-    The relying institution retains ultimate responsibility for the CDD outcome even under a fully valid reliance arrangement. Reliance changes who performs the verification work, not who answers for it if that verification later proves inadequate.</p>
-
-    <p><strong>Why isn't a pass or fail verification result enough to satisfy reliance requirements?</strong><br />
-    FATF Recommendation 17 requires the relying institution to be able to obtain the underlying identification data and documentation from the third party immediately on request, not just a summary conclusion, since a regulator examines whether the underlying records exist and are retrievable.</p>
-
-    <p><strong>Does using a KYC technology vendor qualify as third-party reliance?</strong><br />
-    Generally no. A KYC vendor is typically not itself a regulated, AML-supervised financial institution, so using one is outsourcing a function while the outsourcing institution retains full, undiminished CDD responsibility.</p>
-
-    <p><strong>What changed with the EU's new AML Regulation compared to previous AML Directives?</strong><br />
-    The AMLR is the first EU AML instrument structured as a directly applicable Regulation rather than a Directive, eliminating fragmentation from twenty-seven separate national implementations and creating a more predictable basis for cross-border reliance arrangements.</p>
-
-    <p><strong>What EU digital identity requirement takes effect in 2027?</strong><br />
-    Financial institutions must accept the EU Digital Identity Wallet, EUDI Wallet, for customer due diligence purposes, part of a broader move toward a common cross-border verification standard.</p>
-
     <p>Naming the real, practical cross-border friction points, data localization rules, inconsistent digital identity standards, varying PEP lists across jurisdictions, is a genuinely useful starting point. It is not, on its own, a substitute for understanding that the shortcut most organizations reach for to manage that friction, relying on a foreign partner's verification, only works as a genuine liability shield if that partner is itself a regulated entity and the underlying records remain immediately retrievable, conditions a plain technology vendor relationship does not automatically satisfy just because someone internally chose to describe it as reliance.</p>
 
     <p>None of this argues against cross-border partnerships or automated verification. Reviewing every foreign customer's documents from scratch with no partner arrangement at all does not scale and does not solve the jurisdictional friction these content pieces correctly identify. It is a reason to confirm which of your cross-border arrangements are genuine, regulator-defensible reliance and which are outsourcing that still leaves your organization fully and quietly exposed, before an examiner draws that same distinction for you during a review whose timing you never actually got to choose. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>

@@ -111,26 +111,6 @@ export const blog15: BlogPost = {
     <p>If you are building an AML system from scratch: nail the seven-field extraction first. Everything else (monitoring rules, SAR workflows, dashboards) builds on top of clean extracted data. Garbage in, garbage out.</p>
     <p>If you have an existing AML system that "works": pick 100 documents at random and check whether all seven fields were captured cleanly. Most teams find gaps in field 4 (counterparty) or field 6 (source-of-funds). Fix those first.</p>
     <p>If you are preparing for an exam: do a mock audit on a sample of files. Reconstruct every check from the audit trail. Gaps you find are gaps the examiner will find. (<a href="/author/nupura-ughade">I write about audit-readiness more here</a>.)</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>What is AML document verification?</h3>
-    <p>The process of extracting structured data from AML-relevant documents (transactions, wire instructions, source-of-funds attestations, beneficial ownership forms) and using that data for monitoring, reporting, and audit.</p>
-
-    <h3>How does AML differ from KYC?</h3>
-    <p>KYC is one-time-plus-periodic identity verification. AML is continuous transaction monitoring. KYC documents are mostly IDs; AML documents include transaction records, attestations, and ownership forms. AML feeds on KYC data plus ongoing activity.</p>
-
-    <h3>What documents are most commonly checked in AML?</h3>
-    <p>Wire transfer instructions, source-of-funds statements, beneficial ownership forms, cross-border tax documentation (W-8BEN, W-9, FATCA), and sanctions/PEP screening records.</p>
-
-    <h3>How often should AML documents be reviewed?</h3>
-    <p>Triggered by transaction patterns (large amounts, unusual frequencies, high-risk jurisdictions) and by periodic schedules for high-risk customers. The exact triggers depend on your AML program design.</p>
-
-    <h3>Can I automate AML document extraction with OCR?</h3>
-    <p>Yes, for the extraction step. The decision-making (does this trigger a SAR?) still requires human judgment plus documented rules. OCR plus rules engines handle 80-90% of the work; humans handle the rest.</p>
-
-    <h3>What happens if AML documents are missing fields?</h3>
-    <p>For automated processing: route to manual review. For audit: it depends on which field. Missing date or amount fields are findings. Missing risk-indicator flags are findings. Examiners want every documented decision to be supported by the file.</p>
   `,
   image: "/images/passport-ocr.png",
   featuredImage: "/images/passport-ocr.png",

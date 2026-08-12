@@ -63,27 +63,6 @@ export const blogBl09: BlogPost = {
     <h2>What I would check in your current student loan refinance pipeline</h2>
 
     <p>Ask whether your pipeline extracts and tracks the good-through date on every payoff statement individually, per loan, or treats the payoff amount as a static figure with no expiration logic attached. Then ask what happens when disbursement timing is projected to run past a specific loan's good-through date, whether the pipeline automatically recalculates using an extracted per diem rate, or whether that risk is left for someone to notice manually, loan by loan, across what might be six or eight separate payoff statements in a single application. Confirm federal loan identifiers are actually flagged and routed to a distinct disclosure step, separate from the payoff-timing handling that applies uniformly regardless of loan type. And check whether disbursement logic includes any default buffer at all, or whether every payoff goes out at the exact original stated figure with no cushion for the ordinary processing delay that separates application approval from actual funds movement, the same reconciliation discipline covered from the bank-deposit-matching angle in our <a href="/resources/blogs/pay-stub-income-verification-ocr">pay stub verification piece</a>, applied here to a payoff figure with its own expiration rather than an income figure with its own cross-check.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is a good-through date on a student loan payoff statement?</strong><br />
-    The last date for which the quoted payoff amount is accurate. After that date, additional daily interest accrues, and the true balance owed becomes higher than the stated figure.</p>
-
-    <p><strong>Why does a single student loan refinance involve multiple payoff statements?</strong><br />
-    Because loans are typically disbursed separately per semester or academic year. A borrower who financed several years of education commonly holds six to eight individual loan disbursements, each with its own payoff statement and good-through date.</p>
-
-    <p><strong>What happens if a payoff is disbursed after the good-through date?</strong><br />
-    The amount sent, based on the original statement, falls short of the true current balance by the interest accrued in the gap. The old loan is not fully satisfied, and the borrower is left owing a small residual balance they may not discover for months.</p>
-
-    <p><strong>What is per diem interest on a payoff statement, and why does it matter?</strong><br />
-    It is the daily interest accrual rate, sometimes printed directly on the statement, that lets a lender recalculate an accurate payoff figure if disbursement happens after the good-through date, by adding the per diem rate multiplied by the number of days late.</p>
-
-    <p><strong>Why does it matter whether a loan being refinanced is federal or private?</strong><br />
-    Refinancing a federal loan into a private loan permanently converts it, forfeiting federal-specific protections like income-driven repayment and Public Service Loan Forgiveness eligibility. Applications involving federal loans should trigger a distinct disclosure and consent step.</p>
-
-    <p><strong>Should a residual balance from a stale payoff be treated as a processing error?</strong><br />
-    It reflects a real gap between the extracted payoff figure and the true balance at actual disbursement time, correctable with the loan's per diem rate. Treating the good-through date and per diem figure as tracked fields from the start prevents the shortfall rather than requiring cleanup after it surfaces.</p>
-
     <p>A payoff statement looks like a simple number to extract and send. It is actually a number with an expiration date attached, and a refinance spanning several loans means tracking several expiration dates at once, each ticking independently while the rest of the application moves through underwriting and funding. None of this requires better character recognition on the statement itself. It requires treating the good-through date as data with a consequence attached, not as a line of fine print underneath the number that actually got extracted. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/ocr-api.png",

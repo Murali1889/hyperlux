@@ -69,27 +69,6 @@ export const blogBl01: BlogPost = {
     <p>Ask specifically which of the three matching checks (amount, frequency, pattern consistency across multiple cycles) your current process actually runs, versus which ones are implied by "we cross-check against bank statements" without being explicitly implemented. A process running only amount matching on a single most-recent deposit is missing the two checks that catch the harder, more deliberate forgery cases. Then confirm your OCR extraction on bank statement transaction descriptions specifically, not just amounts and dates, since the matching logic above cannot function if the description field that identifies a deposit as payroll is unreliable.</p>
 
     <p>Finally, confirm whether your process has an explicit, separate pathway for self-employed and gig applicants, or whether every applicant runs through the same traditional-payroll assumptions regardless of income type. A single unified check applied to a genuinely heterogeneous applicant population is a common, quiet source of unfair rejections that nobody notices until someone audits the denial reasons by applicant income type specifically.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>How do you verify a pay stub is genuine using bank statement data?</strong><br />
-    Three checks together: does the deposit amount match stated net pay within a small tolerance, does the deposit frequency match the stub's stated pay period, and does this pattern hold consistently across at least 2 to 3 consecutive pay cycles rather than a single matching deposit.</p>
-
-    <p><strong>What does the YTD math check catch on a pay stub?</strong><br />
-    A common forgery pattern where someone alters the per-period gross or net figure without correspondingly updating year-to-date totals. Dividing YTD gross by completed pay periods should approximately match the stated per-period gross; a mismatch suggests a single-field edit rather than a genuine document.</p>
-
-    <p><strong>Why does bank statement description-field accuracy matter for income verification?</strong><br />
-    Because identifying which recurring deposits are actually payroll, versus other recurring transactions, depends on reading the transaction description text correctly. Misreading or truncating this field breaks the entire amount and frequency matching chain before it can even run.</p>
-
-    <p><strong>Should a pay stub and bank statement mismatch result in automatic denial?</strong><br />
-    No. A mismatch should route to human review, since legitimate explanations exist, a recent job change, a mid-year raise, or an account not used for direct deposit. The check exists to flag ambiguous cases for a human question, not to replace judgment with automatic rejection.</p>
-
-    <p><strong>How many pay cycles of bank statement data are needed to confirm income?</strong><br />
-    At least 2 to 3 consecutive cycles showing consistent amount and frequency. A single matching deposit could be coincidental or a one-time payment; a sustained pattern across multiple cycles is meaningfully stronger evidence of genuine, ongoing income.</p>
-
-    <p><strong>Does pay stub cross-verification work the same way for self-employed or gig applicants?</strong><br />
-    No. Self-employed and gig-economy applicants often have no traditional pay stub and irregular deposit timing by the nature of the work. Applying period-over-period frequency matching to this group produces false rejections; a longer-window aggregate income trend, typically 12 months of deposits, is the appropriate methodology instead.</p>
-
     <p>None of these three checks are individually complicated. Running all three together, consistently, and routing the results by confidence rather than a flat pass/fail is the part that actually makes the difference between a real verification process and a box someone checks once and quietly forgets about. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/ocr-bank-statement-technology.png",

@@ -67,30 +67,6 @@ export const blogAp10: BlogPost = {
     <p>Ask directly whether your current AP fraud controls operate at the document level or only at the data level, comparing extracted fields against a master vendor file after the fact. If it is data-level only, a sufficiently careful fraudster who steals or reconstructs a real invoice template and changes only the bank details will pass every check you have. Building a reference set of genuine invoices per repeat vendor, even a simple stored copy of the last few verified invoices, is the prerequisite for running any of the comparative checks above, and it costs almost nothing to start collecting even before the comparison logic is built.</p>
 
     <p>Start with your highest-dollar-volume repeat vendors, since a successful fraud attempt against one of those has the highest payout for an attacker and therefore the highest expected effort behind it, and expand the reference-set coverage outward from there rather than trying to cover every vendor on day one.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is the difference between invoice fraud and duplicate invoice fraud?</strong><br />
-    Invoice fraud typically involves a fabricated or tampered document, a fake vendor or altered bank details on an otherwise genuine-looking invoice. Duplicate invoice fraud involves resubmitting a genuine, previously paid invoice a second time, often with minor formatting changes to evade exact-match detection. The documents themselves differ in nature even though both aim at the same outcome, an unauthorized payment.</p>
-
-    <p><strong>Can OCR detect a tampered or fabricated invoice?</strong><br />
-    Not through text extraction alone. Document-level forensic checks, font consistency analysis, PDF metadata inspection, and visual comparison against a vendor's known-genuine invoices, are a separate layer on top of basic OCR extraction, and most invoice OCR tools do not run them by default.</p>
-
-    <p><strong>Why do vendor master file checks miss sophisticated invoice fraud?</strong><br />
-    Because they verify that a vendor exists and has a purchase history, which a stolen or reconstructed genuine invoice template with only the bank details changed will pass, since the vendor identity itself is real. Document-level forensics catch the tampering that vendor validation alone cannot see.</p>
-
-    <p><strong>What should trigger a manual hold on a suspicious invoice?</strong><br />
-    Convergence of multiple weak signals rather than any single flag. A bank-detail change alone is common and often legitimate; a bank-detail change combined with font inconsistency on that specific field, or a new vendor with a logo that does not match their own website, is a stronger combined signal worth holding for review.</p>
-
-    <p><strong>Do document-forensics fraud checks work on a vendor's first invoice?</strong><br />
-    Weakly. Most of these checks are comparative against a vendor's prior genuine invoices, which do not exist yet for a brand-new vendor. First-time vendor invoices should get inherently higher scrutiny through other means (callback verification, onboarding documentation) since document forensics has nothing to compare against yet.</p>
-
-    <p><strong>Why does PDF metadata reveal invoice tampering?</strong><br />
-    Because most people editing a document to commit fraud do not scrub the file's embedded metadata, which records the actual creation and modification software along with timestamps. A document claiming to be an original vendor scan with metadata showing recent edits in image-editing software is a meaningful signal, though sophisticated fraud can strip this metadata deliberately.</p>
-
-    <p><strong>How should AP teams operationalize document-forensics fraud checks without slowing down processing?</strong><br />
-    Run the comparisons automatically as part of extraction, silent on clean documents, and surface only invoices that trip a threshold rather than showing a score on every document. A reviewer who sees one flag out of hundreds will investigate it; a reviewer shown a running commentary on every invoice will start ignoring the signal within weeks.</p>
-
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/invoice-processing.png",

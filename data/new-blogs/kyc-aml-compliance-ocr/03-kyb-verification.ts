@@ -65,27 +65,6 @@ export const blogKa03: BlogPost = {
     <p>Ask whether your pipeline treats a certificate of good standing as confirming administrative compliance specifically, or whether it gets used more broadly, quietly, as a general legitimacy signal it was genuinely never designed to be in the first place. Then ask whether business name matching normalizes suffix variants and handles DBA-to-legal-name lookups as a distinct step, rather than relying on direct string matching that will miss genuinely matching entities written in different formats. Finally, confirm shared-address flags require at least one corroborating signal, overlapping formation dates, a repeated officer name, before triggering review, rather than firing on address overlap alone, which will bury a review queue in false positives from entirely ordinary formation-service usage, the same signal-combination discipline covered from the deposit-pattern angle in our <a href="/resources/blogs/personal-loan-document-ocr">loan stacking detection piece</a>, where a single characteristic alone was similarly insufficient to justify a flag.</p>
 
     <p>None of this requires exotic tooling, mostly just a genuine, consistent willingness to be precise about what a given document actually says versus what a reviewer assumes it silently implies.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What does a certificate of good standing actually confirm?</strong><br />
-    That an entity is currently compliant with its state's own administrative filing requirements, annual reports filed and taxes paid. It does not confirm beneficial ownership accuracy, actual operations, or that the entity is not being used as a shell.</p>
-
-    <p><strong>Why is business name matching harder than personal name matching?</strong><br />
-    Legal entity suffixes vary in format ("LLC" vs "L.L.C." vs the full spelled-out form) across otherwise-identical names, and a business's registered legal name can differ substantially from its DBA or trade name shown on other documents.</p>
-
-    <p><strong>Is a shared registered agent address a reliable shell company red flag on its own?</strong><br />
-    No. Using a formation-service or registered-agent address is normal for many legitimate entities, holding companies, SPVs, offshore funds. The signal only becomes meaningful combined with other factors like clustered formation dates or repeated officer names.</p>
-
-    <p><strong>What combination of factors actually indicates a shell company network?</strong><br />
-    A shared address alongside clustered or overlapping formation dates, the same named officer appearing across multiple otherwise-unrelated entities, and a stated business purpose that doesn't obviously explain the use of a formation-service address.</p>
-
-    <p><strong>Can a shell company hold a valid certificate of good standing?</strong><br />
-    Yes. Good standing measures administrative compliance with state filing and tax requirements, not legitimacy of business purpose, so an entity can be both administratively compliant and structured for illegitimate purposes simultaneously.</p>
-
-    <p><strong>Why does treating good standing as a general legitimacy signal create risk?</strong><br />
-    Because it substitutes a narrow, specific confirmation for a broader claim it was never designed to support, creating false confidence in a review process that assumes more was verified than actually was.</p>
-
     <p>Every document in a KYB file answers a specific, narrow question, and the real verification failure mode is not missing a document, it is asking that document a question it was never built to answer. A certificate of good standing and a shared registered address are both genuinely useful signals, and both are also frequently over-trusted or over-flagged by pipelines that skip the distinction between what a document proves and what it merely accompanies. Getting that distinction right is less about collecting more documents and more about being precise regarding what each one actually establishes on its own. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/intelligent-document-processing.png",

@@ -88,26 +88,6 @@ export const blog08: BlogPost = {
     <p>If you are building a new project: skip Tesseract unless your documents are uniform and privacy is critical. Start with a cloud OCR API. The setup is minutes; the engineering you avoid is days.</p>
     <p>If you have an existing Tesseract pipeline that mostly works: measure your error rate honestly. If you are below 95% on the fields you care about, the marginal cost of a paid API is almost always lower than the cost of fixing OCR errors downstream.</p>
     <p>If you are evaluating vendors: do not trust the demos. Run your real documents through their free tier. Compare output side-by-side. The winner is rarely the one with the prettiest marketing. (<a href="/author/nupura-ughade">I write a lot about the gap between vendor demos and reality</a>.)</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>What is the difference between OCR and optical character reader?</h3>
-    <p>None. "OCR" is the acronym; "optical character reader" is what it stands for. Engineers usually say OCR. Marketing materials and older textbooks tend to spell it out.</p>
-
-    <h3>Is OCR still relevant in 2026 with AI vision models?</h3>
-    <p>Yes. AI vision models can do OCR-like work but are 5-15x more expensive per page and noticeably slower. For high-volume production, dedicated OCR is still the right answer. Vision models excel at the trickiest documents where semantic understanding matters.</p>
-
-    <h3>What is the most accurate OCR engine?</h3>
-    <p>It depends on the document. AWS Textract leads on forms and tables. Google Document AI leads on identity documents. DocsAPI leads on multi-page financial documents in our internal benchmarks. Vision-language models lead on the hardest 5% of documents. There is no single "best", match the engine to the document type.</p>
-
-    <h3>How much does OCR cost in 2026?</h3>
-    <p>Free for local engines (Tesseract, PaddleOCR). $0.01-$0.05 per page for cloud OCR APIs. $0.05-$0.20 per page for vision-language models. Full document intelligence platforms typically run on monthly subscriptions or per-document pricing of $0.05-$0.30 depending on complexity.</p>
-
-    <h3>Can OCR read handwriting now?</h3>
-    <p>Better than ever. Neat printed handwriting reaches 90% accuracy on the best engines. Cursive and rushed handwriting drop to 70-80%. Doctor's notes remain hard for everyone. Critical handwritten fields still benefit from a human review step.</p>
-
-    <h3>Should I build my own OCR engine?</h3>
-    <p>Almost certainly not. The engines available today are the result of decades of work and billions of training documents. You are unlikely to match them with a small team. Build the layers around OCR (classification, validation, workflow) where the differentiation actually is.</p>
   `,
   image: "/images/ocr-api.png",
   featuredImage: "/images/ocr-api.png",

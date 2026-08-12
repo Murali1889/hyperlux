@@ -63,27 +63,6 @@ export const blogBl13: BlogPost = {
     <h2>What I would check in your current DTI calculation pipeline</h2>
 
     <p>Ask whether your pipeline checks for actual income-driven repayment documentation before defaulting every deferred student loan to the 1%-of-balance figure, since that default alone can overstate DTI by a meaningful margin for a large share of applicants. Then ask whether co-signed and jointly held debts are automatically flagged for the other-party documentation exclusion, or whether that exclusion only happens if an applicant or loan officer thinks to request it manually. Confirm the 10-payments-remaining rule is applied as the conditional, significance-based test it actually is, not as an automatic exclusion regardless of payment size. And check whether alimony and child support obligations are being extracted from the actual legal document, rather than assumed absent simply because they do not appear on the applicant's credit report the way most other debts do, the same off-credit-report documentation discipline covered from a different angle in our <a href="/resources/blogs/4506-c-tax-transcript-ocr">4506-C tax transcript piece</a>, where the relevant figure similarly did not live in the credit pull at all.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is the difference between front-end and back-end DTI?</strong><br />
-    Front-end DTI measures housing costs alone against gross monthly income. Back-end DTI measures every recurring monthly debt obligation, including housing, against the same income figure.</p>
-
-    <p><strong>How is a deferred student loan payment calculated for DTI if no payment is reported?</strong><br />
-    Standard guidance allows either 1% of the outstanding balance or the actual, fully amortizing payment from documented income-driven repayment plan terms. The documented figure is often materially lower than the 1% default.</p>
-
-    <p><strong>How can a co-signed debt be excluded from an applicant's DTI?</strong><br />
-    By documenting that another party obligated on the debt has actually been making the payments, verified through the most recent 12 months of that other party's own canceled checks or bank statements showing no delinquencies.</p>
-
-    <p><strong>Are debts with 10 or fewer remaining payments automatically excluded from DTI?</strong><br />
-    No. They are excluded only if the payment amount does not significantly affect the borrower's ability to meet other credit obligations during the remaining months. A large payment still counts even with few payments left.</p>
-
-    <p><strong>Why does DTI accuracy depend more on documentation than on the calculation formula?</strong><br />
-    Because the formula itself is simple division. The real determination is which debts belong in the numerator and at what amount, which depends on repayment plan documentation, another party's bank statements, and judgment calls the formula alone cannot make.</p>
-
-    <p><strong>What happens if a pipeline defaults to the simplest version of every DTI rule?</strong><br />
-    It generally overstates DTI, using the higher 1% student loan default instead of documented actual payments, and either missing available debt exclusions or over-excluding short-term debts that should still count based on payment significance.</p>
-
     <p>The DTI formula has not changed in decades and is not the part worth spending engineering effort on. The debt classification feeding into it, what counts, what can be documented away, and what depends on a judgment call rather than a fixed threshold, is where the real accuracy work lives, and it is exactly the layer most DTI-focused content skips on the way to explaining the division. A precise answer to the wrong question is still the wrong answer, however cleanly it was computed. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/ocr-accuracy.png",

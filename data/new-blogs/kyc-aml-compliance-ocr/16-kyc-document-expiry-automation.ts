@@ -65,27 +65,6 @@ export const blogKa16: BlogPost = {
     <h2>What I would check in your current document expiry pipeline</h2>
 
     <p>Ask whether your pipeline reads expiry dates from a machine-readable field, MRZ or a standardized barcode, whenever one is present on the document, rather than defaulting to visual OCR extraction of the printed date even when a more reliable source is available. Then ask whether printed-date extraction, for the documents that carry no machine-readable alternative, applies a deterministic, maintained mapping of date convention by document type and issuing country, rather than a heuristic guess applied uniformly to every document regardless of origin. Confirm your forward buffer window before treating a document as functionally expired is grounded in your actual process timeline, not an arbitrary default, and that it accounts for the realistic gap between submission and the point the underlying relationship concludes. Finally, confirm your pipeline tracks risk-tiered periodic update requirements as a separate trigger from individual document expiry, the same layered compliance logic covered in our <a href="/resources/blogs/perpetual-kyc-monitoring">perpetual KYC monitoring piece</a>, since a customer's documents remaining technically valid does not exempt them from a separate periodic refresh obligation.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>Why do KYC systems treat a document expiring soon as already expired?</strong><br />
-    Because the surrounding process, underwriting, funding, or account activation, often takes weeks, and a document barely valid at submission may expire before the relationship it supports actually concludes, so a forward buffer avoids approving on a document that will lapse mid-process.</p>
-
-    <p><strong>Why is date-format ambiguity a serious problem for expiry extraction?</strong><br />
-    Printed dates use different country-specific orderings, day-month-year or month-day-year among them, with no explicit label. Applying the wrong convention produces a confidently wrong but syntactically valid date, silently passing an expired document or rejecting a valid one.</p>
-
-    <p><strong>How does a machine-readable field like the MRZ avoid the date-format problem?</strong><br />
-    The MRZ encodes dates in a fixed YYMMDD numeric format with no separators and no locale-dependent convention, eliminating the ambiguity that affects a printed date field entirely.</p>
-
-    <p><strong>What is RBI's risk-based periodic KYC update requirement?</strong><br />
-    At least once every two years for high-risk customers, every eight years for medium-risk customers, and every ten years for low-risk customers, measured independently of any individual document's expiry date.</p>
-
-    <p><strong>What happens when a customer misses a required periodic KYC update under RBI's framework?</strong><br />
-    The bank cannot close the account immediately. It must follow a structured process, typically a formal notice period of around three months, followed by partial restrictions rather than full closure.</p>
-
-    <p><strong>What is the correct mitigation when a document has no machine-readable expiry field?</strong><br />
-    An explicit, maintained mapping from document type and issuing country to the correct date convention, applied deterministically before parsing, rather than a heuristic guess based on the digits alone.</p>
-
     <p>"Expiring next month counts as expired today" is a genuinely correct operational rule, grounded in how long a real verification process actually takes. It is not, on its own, useful if the date it is measured against was extracted under the wrong convention in the first place, since a confidently wrong date defeats a well-designed buffer just as thoroughly as having no buffer at all.</p>
 
     <p>None of this argues against automating expiry tracking. Manually checking every document's date by hand does not solve the format-ambiguity problem either, it just moves the same risk of misreading a date onto a human reviewer instead of a parser. It is a reason to confirm your pipeline prioritizes machine-readable expiry fields where they exist, applies a deterministic date-convention mapping where they do not, and tracks risk-tiered periodic obligations as a distinct trigger from document-level expiry, rather than assuming a buffer window alone is sufficient protection against a date that was never read correctly to begin with. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>

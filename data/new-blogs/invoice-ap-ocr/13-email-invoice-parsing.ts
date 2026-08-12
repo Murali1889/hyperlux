@@ -72,27 +72,6 @@ export const blogAp13: BlogPost = {
     <p>Pull a sample of your last 50 processed invoices specifically from your AP intake inbox and check how many arrived as a forward rather than a direct vendor email. If it is a meaningful share, manually verify that extraction correctly identified the actual invoice content rather than pulling data from quoted reply text or signature blocks in any of them. Then check whether your pipeline verifies sending domain against a known vendor list at all, since this is the cheapest and most commonly skipped fraud check specific to email-based intake, distinct from the document-level checks that apply regardless of intake channel.</p>
 
     <p>Finally, ask where the original emails live six months after processing, not where the extracted data lives. If the honest answer involves someone's personal inbox and whatever auto-archive policy their mail client happens to apply, that is a real audit-trail gap worth fixing before an auditor finds it first.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>Why does forwarded-email invoice parsing produce wrong data?</strong><br />
-    Because naive parsing treats the entire email body, including quoted reply text, multiple signature blocks, and disclaimer boilerplate accumulated across forwards, as candidate invoice content. This produces plausible-looking but incorrect extraction unless the pipeline specifically strips quoted-reply markers and isolates the most relevant content first.</p>
-
-    <p><strong>How do you know if an email itself is the invoice versus a notification with an invoice attached?</strong><br />
-    Check the sending domain (transactional billing subdomains of known SaaS vendors), whether structured line-item content appears directly in the HTML body, and whether any PDF or image attachment exists at all. An email with an attachment should generally be treated as the notification, with the attachment as the authoritative document.</p>
-
-    <p><strong>Should email-based invoice intake include fraud verification?</strong><br />
-    Yes. Business email compromise, a compromised or spoofed vendor email sending a fraudulent invoice or bank-detail change, is delivered almost entirely through email, making sending-domain verification and reply-to mismatch detection a natural and inexpensive check to build directly into the intake pipeline rather than treating email purely as a data source.</p>
-
-    <p><strong>Can one email contain multiple separate invoices?</strong><br />
-    Yes, vendors commonly batch multiple invoices into a single email as separate attachments. Extraction needs to classify and process each attachment independently rather than assuming only the first PDF found is relevant.</p>
-
-    <p><strong>What is a look-alike domain in email invoice fraud?</strong><br />
-    A sending domain designed to visually resemble a legitimate vendor's real domain, using a single substituted character, an added letter, or a different top-level domain, close enough to pass a quick glance but distinct from the vendor's actual, previously-verified sending domain.</p>
-
-    <p><strong>Why does the original invoice email need to be archived separately after extraction?</strong><br />
-    An auditor verifying an invoice needs the full email, including sending address and headers, not just the extracted data or attached PDF. Relying on a personal mailbox's own retention settings for the source record risks losing the evidence trail whenever that mailbox gets cleaned up on its own schedule.</p>
-
     <p>None of these gaps require exotic technology to close. They require treating the inbox as a real system with real edge cases, not just a mail folder that happens to contain PDFs. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/invoice-processing.png",

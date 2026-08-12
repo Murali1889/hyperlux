@@ -73,27 +73,6 @@ export const blogAp17: BlogPost = {
     <p>One slide, explicitly labeled, showing the expected-value risk-reduction calculation with your stated assumptions visible, not buried in an appendix. One slide showing the conservative-case model clearing approval thresholds, not just the best case. One paragraph, direct and specific, answering the opportunity-cost question rather than assuming the CFO will infer your relative priority on their own. These three additions are not complicated to build, and they are the specific things missing from almost every AP automation business case template circulating publicly right now, which is exactly why including them differentiates a pitch that gets a close look from one that gets a polite pass.</p>
 
     <p>None of this replaces the cost-per-invoice math you already have. It sits alongside it, and it is the part a genuinely skeptical CFO will actually remember after the meeting ends.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>How do you calculate the risk-adjusted value of invoice fraud prevention for a business case?</strong><br />
-    Expected annual value equals the baseline fraud incident probability times average loss per incident, minus the same calculation using the reduced probability after implementing detection controls. Use your own historical data or a documented industry benchmark for both figures, never an invented estimate.</p>
-
-    <p><strong>Why does cost-per-invoice ROI alone no longer persuade CFOs?</strong><br />
-    Because it is commodity information nearly every AP automation vendor and internal proposal presents identically, which a CFO has learned to apply routine skepticism to. Risk-adjusted value, quantified explicitly rather than asserted vaguely, is a dimension few business cases actually calculate, which makes it disproportionately persuasive when done well.</p>
-
-    <p><strong>Should a business case use optimistic or conservative ROI assumptions?</strong><br />
-    Conservative, explicitly. A CFO trusts a modest projection with clearly stated assumptions more than an impressive one without them, and showing that the model still justifies approval under conservative assumptions builds more credibility than presenting only the best case.</p>
-
-    <p><strong>What is the opportunity-cost question a CFO business case needs to answer?</strong><br />
-    Why this specific investment produces more value than the next-best alternative use of the same budget, since a CFO evaluates every request against competing capital and headcount priorities in the same cycle, not in isolation.</p>
-
-    <p><strong>What questions do CFOs typically ask about AP automation proposals?</strong><br />
-    What happens to headcount, what the realistic (not vendor-provided) timeline to value looks like, and what the plan is if actual results underperform the projection. Each deserves a specific, prepared answer rather than a reactive one in the room.</p>
-
-    <p><strong>Should a business case include risk categories that cannot be precisely quantified?</strong><br />
-    Yes, but labeled honestly as qualitative factors rather than forced into a formula without reliable inputs. Key-person risk and audit-finding risk are worth naming explicitly even without a precise number, since a fabricated-looking calculation undermines the credibility of the real quantified figures next to it.</p>
-
     <p>None of this is complicated math. It is simply math most business cases never actually do, choosing instead to gesture at risk reduction without ever putting a real number behind it.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>

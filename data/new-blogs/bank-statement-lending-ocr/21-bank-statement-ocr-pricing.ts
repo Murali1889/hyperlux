@@ -67,27 +67,6 @@ export const blogBl21: BlogPost = {
     <h2>What I would check before signing a bank statement OCR contract at scale</h2>
 
     <p>Ask the vendor directly whether their headline accuracy number is character-level, field-level, or document-level, and if it is not document-level, ask them to compute or estimate the document-level implication against your own typical statement's field count, using the same math above. Then ask specifically how confidence-based routing to human review is priced, since low-confidence pages requiring manual review carry a real cost that a flat per-page rate can obscure until volume reveals how often it actually triggers. Confirm your own review-queue staffing plan reflects the real document-level clean rate rather than the field-level headline, and that someone has actually run the vendor's number against your own document's field count rather than trusting the marketed percentage at face value, the same discipline covered from the running-balance angle in our <a href="/resources/blogs/nsf-overdraft-detection-ocr">NSF and overdraft detection piece</a>, where a plausible-looking summary number similarly needed a closer, more granular look before it could be trusted for a real decision. Finally, if your volume is meaningfully cyclical, negotiate contract flexibility around volume-tier commitments rather than locking into a rate structure built for steady-state volume a lending business rarely actually has.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is the difference between field-level and document-level OCR accuracy?</strong><br />
-    Field-level accuracy measures the share of individual extracted fields correct on their own. Document-level accuracy measures the share of entire documents with zero errors anywhere on the page, a much stricter, lower number once fields compound.</p>
-
-    <p><strong>Why does a 99% field accuracy claim not mean 99% of documents are error-free?</strong><br />
-    Because document-level accuracy compounds field-level accuracy across every field on the page. At roughly 150 fields per statement, 99% field accuracy produces only about 22% of documents fully error-free.</p>
-
-    <p><strong>Why does the gap between field and document accuracy matter more for bank statements?</strong><br />
-    Bank statements, especially multi-page ones with dense transaction tables, contain meaningfully more individual fields than most other document types, which makes the same field-level accuracy percentage compound to a lower document-level clean rate.</p>
-
-    <p><strong>How much does going from 99% to 99.9% field accuracy actually matter?</strong><br />
-    At 150 fields, it is the difference between roughly 22% and 86% of documents being fully clean, a dramatically different operational reality despite sounding like a marginal percentage-point improvement.</p>
-
-    <p><strong>What should a lender actually ask a vendor about their accuracy claim?</strong><br />
-    Whether the number is character-level, field-level, or document-level, and if not document-level, what the document-level implication is against the lender's own typical statement field count.</p>
-
-    <p><strong>Why is volume-tiered pricing risky specifically for lending?</strong><br />
-    Lending volume, particularly mortgage and refinance volume, is genuinely cyclical and can swing sharply with interest rates, creating a real risk of being locked into pricing calculated against a volume commitment current activity no longer supports.</p>
-
     <p>A 99% accuracy number is a real, legitimate figure, and it is also answering a narrower question than the confident, round percentage suggests. Knowing which question it actually answers, and doing the compounding math against a real document's field count, is the difference between an informed vendor comparison and one built on a number that sounds far more reassuring than it turns out to be in practice once real volume starts moving through the pipeline every single day. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/ocr-accuracy.png",

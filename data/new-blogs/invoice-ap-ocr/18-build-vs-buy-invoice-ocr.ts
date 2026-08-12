@@ -71,27 +71,6 @@ export const blogAp18: BlogPost = {
     <p>Do not stop the comparison at GPU pricing versus per-page API cost. Add a realistic first-year engineering cost (1 to 2 engineers for several months, fully loaded, not just salary), then add an ongoing maintenance estimate (at minimum a quarter of one engineer's time indefinitely, more if your vendor base grows quickly), then compare that total against a managed API's per-page pricing at your actual volume, not a vendor's best-case demo volume. For most teams under the 50,000-page-a-month range, this total, honestly calculated, favors buying by a wider margin than the infrastructure-only comparison suggests.</p>
 
     <p>Run this calculation with your own actual numbers, not the illustrative ranges here, since fully-loaded engineering cost varies significantly by market and team seniority, and your specific vendor mix determines how often new formats actually appear. The exercise of running the real numbers, even roughly, is worth more than any generic threshold a blog post can offer, because it forces the maintenance-cost question into the open before a build decision gets made rather than being discovered by accident eight months into production.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>How much does it cost to build an in-house invoice OCR pipeline?</strong><br />
-    Infrastructure alone runs $50-200/month for CPU-based OCR or $730-2,190/month for GPU-based vision-language models. The dominant cost is engineering time: typically 1-2 engineers for 2-4 months to reach production reliability, plus ongoing maintenance indefinitely, often totaling six figures in the first year before infrastructure costs.</p>
-
-    <p><strong>Why is invoice OCR maintenance different from other document processing?</strong><br />
-    Invoice formats are controlled by your vendors, not you, and every new vendor is a potential unfamiliar layout. Extraction accuracy degrades gradually as your vendor base shifts, creating an ongoing monitoring and retraining burden that is specific to invoices rather than fixed internal document types you control.</p>
-
-    <p><strong>At what volume does building in-house become cost-effective versus a managed API?</strong><br />
-    Managed APIs generally remain cost-favorable up to roughly 50,000 pages a month when engineering costs are included honestly. Above that volume, or with specific data residency requirements, the economics can shift toward building, though this depends heavily on actual engineering efficiency and maintenance discipline.</p>
-
-    <p><strong>Is there a middle ground between building and buying invoice OCR?</strong><br />
-    Yes, a common hybrid: use a managed API for the extraction layer itself, where the ongoing model-maintenance burden lives, and build the validation, workflow, and ERP-integration logic in-house, where business-specific requirements benefit most from custom ownership.</p>
-
-    <p><strong>What situations actually justify building an in-house invoice OCR pipeline?</strong><br />
-    Data residency or air-gapped processing requirements no managed API can satisfy, extreme volume well above typical API cost-favorability thresholds, and genuinely unusual document types or workflows no vendor supports well. These apply to a minority of teams evaluating the decision.</p>
-
-    <p><strong>Is it easier to switch from a managed API to in-house later than the reverse?</strong><br />
-    Generally yes. A hybrid architecture that keeps extraction behind your own validation and workflow layer makes swapping the extraction provider a contained change. Unwinding a year of investment in a fully in-house extraction stack, once built, is a much harder decision to make objectively due to sunk cost.</p>
-
     <p>None of this argues that building is always the wrong answer for every team. It argues that the decision deserves the same rigor applied to any other real engineering investment decision, not a comparison that stops at the cheapest visible line item on the page.</p>
 
     <p>The teams that get this decision right are the ones who ran the full calculation honestly before committing, not the ones who guessed correctly after the fact.</p>

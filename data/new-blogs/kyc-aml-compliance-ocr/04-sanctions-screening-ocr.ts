@@ -64,27 +64,6 @@ export const blogKa04: BlogPost = {
     <h2>What I would check in your current sanctions screening pipeline</h2>
 
     <p>Ask whether your matching logic screens against every listed alias for a designated individual, not just the primary name, since the alias field exists specifically to cover the transliteration gap a primary-name-only check misses. Then ask whether your similarity threshold is a single fixed number applied universally, or whether it accounts for known differences in baseline name similarity across different naming-convention populations, since a uniform threshold produces measurably uneven false-positive rates by population even when the matching algorithm itself is working exactly as designed. Confirm your fuzzy-matching approach combines edit-distance with a phonetic or transliteration-aware method, rather than relying on Levenshtein distance alone, since edit-distance's uniform substitution weighting specifically mishandles the cross-script transliteration variants that account for a meaningful share of genuine near-misses. And check how frequently your underlying sanctions list data actually refreshes, since even ideal matching logic run against stale list data produces the same practical failure as a genuine matching miss, the same document-freshness discipline covered from a different mechanism in our <a href="/resources/blogs/kyb-verification">KYB verification piece</a>, where a similarly stale reference source undermined an otherwise well-designed check.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>Why does a legitimate name fail to exact-match a sanctions list entry?</strong><br />
-    Most commonly because the name was originally written in a non-Latin script and has multiple, equally valid Latin transliterations, not because of a typo. The specific variant on the sanctions list may differ from the variant on a customer's documents.</p>
-
-    <p><strong>Why can a single Arabic name have thousands of valid transliterations?</strong><br />
-    Because romanization conventions vary in how they render vowel sounds, the definite article, and consonants with no direct Latin equivalent, producing a combinatorial explosion of individually defensible spellings for the same underlying name.</p>
-
-    <p><strong>Why does Levenshtein distance handle transliteration variants poorly?</strong><br />
-    It weights every character substitution equally, treating a phonetically plausible transliteration substitution the same as an unrelated typo, since it was designed for general string similarity rather than cross-script phonetic similarity.</p>
-
-    <p><strong>Why do sanctions list entries include multiple aliases per person?</strong><br />
-    Because list maintainers recognize a single transliteration is not sufficient to reliably match every real-world spelling variant. A system that only checks the primary listed name discards this built-in coverage.</p>
-
-    <p><strong>Why is a single universal similarity threshold mathematically wrong?</strong><br />
-    Because different naming-convention populations have different baseline similarity between unrelated names. The same threshold produces a meaningfully different false-positive rate depending on the underlying population's name diversity.</p>
-
-    <p><strong>Does raising the threshold for high-similarity populations solve the problem?</strong><br />
-    Not cleanly. A higher threshold reduces false positives but increases the risk of missing genuine matches. A better approach combines phonetic matching with population-aware calibration rather than a single blunt threshold adjustment.</p>
-
     <p>A configurable similarity threshold and an illustrative example score are useful for explaining that fuzzy matching exists. They say nothing about why exact matching fails in the first place, or why the exact same threshold number means something different depending on which population it is being applied to, and that gap is exactly where a screening program's real false-positive and false-negative rates actually get decided. The "MOHAMMED" versus "MUHAMMAD" example above is not a contrived edge case built for this piece; it is close to the median case for a large share of the world's population, which is precisely why it deserves more attention than a single illustrative percentage on a vendor's pricing page ever gives it. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/idp-vs-ocr.png",

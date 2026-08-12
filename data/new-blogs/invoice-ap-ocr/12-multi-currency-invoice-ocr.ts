@@ -74,24 +74,6 @@ export const blogAp12: BlogPost = {
     <p>Ask specifically what exchange rate your system uses when booking a foreign invoice, and whether that matches the invoice date or defaults to processing date. If it defaults to processing date, and your invoice-to-processing lag is more than a day or two, you have a real, quantifiable misstatement accumulating that nobody is currently measuring. Then check your currency disambiguation logic specifically for vendors using the dollar sign without an ISO code, since that is the single highest-risk case for a silent USD-default error on a genuinely non-USD invoice.</p>
 
     <p>Finally, sample a handful of your VAT-bearing international invoices and confirm the VAT amount is stored as its own field rather than folded silently into the total, since that single modeling decision determines whether input-VAT recovery is even possible later without going back to the original documents one by one.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>How do you tell which currency a "$" symbol refers to on an international invoice?</strong><br />
-    In priority order: check for an ISO 4217 three-letter code (USD, CAD, AUD) on the document first, then the vendor's registered country or billing address, then bank account details, then invoice language and locale conventions, then that specific vendor's prior invoice history if available.</p>
-
-    <p><strong>What exchange rate should be used to book a foreign-currency invoice?</strong><br />
-    The spot exchange rate on the invoice's transaction date (typically the invoice date), per standard foreign-currency accounting treatment under both US GAAP and IFRS. The rate on the actual payment date is used separately to calculate the realized FX gain or loss at settlement, not for the original booking.</p>
-
-    <p><strong>What is a foreign-exchange gain or loss on an invoice?</strong><br />
-    The difference between the amount booked at the invoice-date exchange rate and the amount actually paid at the payment-date exchange rate. If the foreign currency strengthened against your reporting currency between those dates, you pay more than booked (a loss); if it weakened, you pay less (a gain).</p>
-
-    <p><strong>Is it acceptable to use a monthly average exchange rate instead of the daily spot rate?</strong><br />
-    As a documented, consistently applied policy for high-volume, individually immaterial transactions, this is a common and generally acceptable simplification. It is an approximation rather than the technically precise treatment, and should not be applied inconsistently or to individually material invoices.</p>
-
-    <p><strong>Why does invoice date matter for multi-currency extraction, not just the amount and currency?</strong><br />
-    Because the invoice date determines which day's spot exchange rate applies to the original booking. Extraction that captures amount and currency accurately but treats the date as secondary is missing the field that actually determines correct accounting treatment.</p>
-
     <p>None of this is exotic accounting theory, it is the standard treatment every controller already knows for foreign-currency transactions generally. The gap is that most invoice OCR discussions never connect extraction quality to it. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/invoice-processing.png",

@@ -72,27 +72,6 @@ export const blogAp20: BlogPost = {
     <p>Ask whether your pipeline runs any deterministic validation at all beyond the model's own confidence scores, specifically arithmetic reconciliation and checksum checks on the fields where these apply. If the answer is no, you are relying entirely on a model's self-reported confidence for problems that have a definite, verifiable right answer, which is strictly weaker than actually checking. Then ask whether your highest-volume repeat vendors get any positional-rule fast path at all, or whether every single invoice, including the ten-thousandth invoice from a vendor whose layout has not changed in two years, runs through the full general-purpose model regardless.</p>
 
     <p>If you are evaluating vendors, ask them directly whether their pipeline includes deterministic post-extraction validation or relies purely on model confidence scores. Many vendor sales conversations frame "AI-powered" as an unqualified positive without ever mentioning whether any certainty-based checks exist underneath the model, and the answer to that specific question tells you more about the pipeline's actual reliability than any accuracy percentage on a marketing page.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>When does a rule-based approach outperform AI for invoice extraction?</strong><br />
-    On fields with a definite, computable answer rather than a pattern to infer: arithmetic validation (do line items sum to the total), checksum and format validation (tax IDs, IBANs), and fixed-position extraction for known, stable repeat vendors where the layout genuinely does not vary.</p>
-
-    <p><strong>Why do rule-based invoice extraction systems fail on new vendors?</strong><br />
-    Because a rule or template is built for a specific known layout. A brand-new vendor's invoice format has no corresponding rule yet, and the system has no mechanism to generalize to an unfamiliar layout the way a trained model can.</p>
-
-    <p><strong>How should rules and AI models work together in an invoice extraction pipeline?</strong><br />
-    Run AI extraction first for general-case handling, then apply deterministic rules as a validation layer on fields where certainty is achievable (arithmetic, checksums, cross-field consistency), dropping confidence and triggering review when a rule check fails even if the model's own confidence looked fine.</p>
-
-    <p><strong>What is the difference between model confidence and rule confidence in an extraction pipeline?</strong><br />
-    Model confidence reflects how certain the AI model is about an extracted value. Rule confidence reflects whether that value passes deterministic verification against other extracted values. A field can score high on one and fail the other, and that combination is a stronger review signal than either alone.</p>
-
-    <p><strong>Can positional rules speed up extraction for repeat vendors?</strong><br />
-    Yes, for vendors with a confirmed stable layout across many prior invoices, a lightweight positional rule can process new invoices faster and more cheaply than running the full general-purpose model, falling back to the model only if the rule's confidence drops, indicating the vendor's layout may have changed.</p>
-
-    <p><strong>Does a hybrid rules-plus-AI architecture cost more to build than either approach alone?</strong><br />
-    Marginally more upfront, since it requires building both an extraction layer and a validation layer rather than one or the other. In practice the deterministic validation layer is comparatively cheap to build (arithmetic and format checks are simple logic, not machine learning), and it materially reduces downstream review cost and per-document compute for repeat vendors, generally paying for itself quickly at real volume.</p>
-
     <p>The right architecture is not a debate between rules and AI, framed as a single winner-take-all choice. It is knowing which specific problem each one actually solves, and refusing to force the wrong tool onto the wrong field just because one approach happened to win the marketing narrative this year. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/ocr-process.png",

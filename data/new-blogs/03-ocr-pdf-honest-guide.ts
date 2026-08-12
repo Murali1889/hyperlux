@@ -100,26 +100,6 @@ export const blog03: BlogPost = {
     <p>Imagine you have a giant pile of mail and you want to find every letter that mentions "electric bill". You could read each letter one by one. That would take all day.</p>
     <p>Or you could hire a fast typist. You hand her the pile. She types out every letter into a computer. Then you search the computer for "electric bill" and it pops right up.</p>
     <p>That typist is OCR. The pile of mail is your stack of PDFs. The computer search is Ctrl+F. The fast typist works for less than a penny per letter, makes some mistakes here and there, and works through 4 million letters a month without complaining. That is OCR at production scale.</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>How long does it take to OCR a PDF?</h3>
-    <p>A 50-page PDF on a modern OCR API takes about 20-30 seconds end-to-end. Locally on Tesseract on a laptop, the same document takes 2-3 minutes. A 1,000-page document on an API takes 3-7 minutes depending on the engine.</p>
-
-    <h3>How accurate is OCR on PDFs?</h3>
-    <p>On clean, printed English: 97-99%. On scanned, rotated, or table-heavy documents: 80-95% without pre-processing, 92-98% with proper pre-processing. Handwritten content stays the hardest, top engines hit 80-90% on neat handwriting and much lower on doctors' notes.</p>
-
-    <h3>Is it better to OCR locally or via an API?</h3>
-    <p>Local for one-offs, sensitive content, or air-gapped environments. API for anything recurring above 50 documents per day. The math typically flips around 200 documents per day, because at that point an engineer is spending half a day a week keeping the local pipeline alive.</p>
-
-    <h3>What is the cheapest reliable OCR option?</h3>
-    <p>For clean documents under a hundred a month: Tesseract via ocrmypdf, free. For mixed-quality documents at meaningful volume: a pay-per-page API at around $0.01-$0.05 per page. The cost difference between Tesseract and a good API is almost always less than the cost of one engineer-day per month of maintenance.</p>
-
-    <h3>Can OCR handle handwriting?</h3>
-    <p>Partially. Tesseract is bad at handwriting (under 70% accuracy on real-world samples). Modern alternatives, Google Document AI, Azure Form Recognizer, vision-language models, reach 85-90% on neat handwriting. Doctors' notes and rushed signatures stay hard for everyone.</p>
-
-    <h3>Why are some pages OCR'd correctly and others wrong?</h3>
-    <p>Usually pre-processing was inconsistent. A page that was scanned upside-down, faded, or skewed will OCR badly even if the rest of the document was perfect. Run deskew, rotation correction, and adaptive thresholding on every page. The variance disappears.</p>
   `,
   image: "/images/ocr-api.png",
   featuredImage: "/images/ocr-api.png",

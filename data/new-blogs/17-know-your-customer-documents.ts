@@ -109,26 +109,6 @@ export const blog17: BlogPost = {
     <p>If you are building KYC from scratch in 2026: support digital ID wallets and mobile driver's licenses from day one. Build them as first-class flows, not afterthoughts. The customer experience advantage matters.</p>
     <p>If you have a working KYC built on 2020 patterns: add selfie liveness if you don't already have it. That single addition closes the biggest fraud vector. Digital ID wallet support can wait until your market demands it.</p>
     <p>If you operate in Europe: budget engineering time for EUDI Wallet integration. The regulation is real, the implementations are stabilizing, and the deadline is now. (<a href="/author/nupura-ughade">I write about regulatory document trends regularly</a>.)</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>What documents are accepted for KYC in 2026?</h3>
-    <p>Photo ID (passport, national ID, driver's license, mDL, digital ID wallet credential) plus proof of address (utility bill, bank statement, government letter) plus a selfie with liveness check. Specific acceptable documents vary by country and regulator.</p>
-
-    <h3>What is a mobile driver's license (mDL)?</h3>
-    <p>A digital version of a state-issued driver's license, stored on a phone and verified cryptographically. Standardized by ISO 18013-5. Accepted federally in the US since 2023 and by financial institutions for KYC in 2026.</p>
-
-    <h3>Do I need to support digital ID wallets?</h3>
-    <p>In Europe, yes, EUDI Wallet is mandated under eIDAS 2.0. In the US, support is voluntary but customer experience matters. Most large institutions will support digital ID by 2027.</p>
-
-    <h3>What is selfie liveness?</h3>
-    <p>A check that confirms the selfie is from a real, present person, not a photo of a photo or a recorded video. Done via 3D depth scan, prompted actions, or short video. Standard for KYC in 2026.</p>
-
-    <h3>How does KYC differ across countries?</h3>
-    <p>Acceptable documents, retention periods, and re-verification triggers vary. Required source-of-funds documentation varies. Always research the specific KYC rules for each market you operate in. Don't assume one playbook works everywhere.</p>
-
-    <h3>What is the most common KYC document fraud in 2026?</h3>
-    <p>Synthetic identity, real-looking documents created from real data scraped from public sources. The documents pass extraction and authenticity checks. Detection requires cross-referencing against fraud databases and analyzing velocity patterns, not just document checks alone.</p>
   `,
   image: "/images/passport-mrz-highlight.png",
   featuredImage: "/images/passport-mrz-highlight.png",

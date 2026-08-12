@@ -71,27 +71,6 @@ export const blogAp14: BlogPost = {
     <p>Ask for the actual accuracy number on handwriting specifically, not a qualitative claim like "reasonable" or "good," and ask whether that number is character-level or field-level, the same distinction that matters for <a href="/resources/blogs/invoice-line-item-ocr">line-item extraction generally</a>. Then pull 15 real handwritten and faxed invoices from your own worst vendors and test directly, since this is exactly the category where a vendor's clean-demo number and your real-world number are most likely to diverge sharply.</p>
 
     <p>Count how many of your total invoices this category actually represents before investing heavily in solving it. A team with 2% handwritten-and-faxed volume should spend proportionally less engineering effort here than a team with 20%, even though the accuracy numbers and failure modes are identical either way; the right level of investment scales with volume, not with how interesting the technical problem is to solve.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>How accurate is OCR on handwritten invoices?</strong><br />
-    In our own benchmark testing across engines, accuracy on handwritten forms ranged from 61% (Tesseract) to 78% (DocsAPI), a meaningfully wider spread than on typed documents, where most modern engines clear 97% or better.</p>
-
-    <p><strong>Why is faxed invoice accuracy different from handwritten invoice accuracy?</strong><br />
-    They degrade for different reasons. Fax transmission at low resolution (commonly 150-200 DPI) introduces line-based scanning artifacts and compression damage, while handwriting is hard because of shape variance between writers, not image quality. A faxed handwritten invoice compounds both problems simultaneously and is typically the hardest single document type to extract accurately.</p>
-
-    <p><strong>Does image preprocessing improve handwritten invoice OCR accuracy?</strong><br />
-    It helps more for faxed and low-resolution documents (deskewing, contrast enhancement, resolution upscaling) than for handwriting specifically, since handwriting's core difficulty is shape ambiguity rather than image quality, though preprocessing still helps at the margin on documents combining both issues.</p>
-
-    <p><strong>How should AP teams set review expectations for handwritten vendor invoices?</strong><br />
-    If handwritten and faxed documents make up a meaningful share of total volume, budget for a distinctly higher manual-review rate on that subset than your blended average accuracy suggests, since a single confidence threshold calibrated against the easier majority of documents will under-flag this harder subset for review.</p>
-
-    <p><strong>What accuracy number should I ask an OCR vendor for on handwritten documents?</strong><br />
-    A specific, quantified number (not "reasonable" or "good"), broken out separately from typed-document accuracy, and clarified as character-level or field-level. Then test it directly on 15 real handwritten invoices from your own vendors before trusting the vendor's own number.</p>
-
-    <p><strong>Is it worth asking small vendors to switch away from handwritten invoices?</strong><br />
-    For your highest-volume handwritten-invoice vendors, yes, often more effective than better extraction engineering. Many small vendors are receptive to a free digital invoicing tool since it is genuinely easier for them too, and it removes the accuracy problem at the source rather than working around it downstream.</p>
-
     <p>None of this means handwriting is unsolvable, and it does not mean the category should be ignored either. It means the honest number is worse than the marketing language suggests, and planning around the real number beats discovering the gap after go-live.</p>
 
     <p>Sources: accuracy figures from our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>

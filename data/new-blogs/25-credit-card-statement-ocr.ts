@@ -114,26 +114,6 @@ export const blog25: BlogPost = {
     <p>If you process under 100 statements per month: build it yourself with Tesseract or use a generic OCR API. Volume does not justify a specialty vendor.</p>
     <p>If you process 100-10,000 per month: pick a vendor with proven statement OCR. The five-field extraction plus validation plus categorization saves a junior employee's worth of time within the first quarter.</p>
     <p>If you process 10,000+ per month: build a hybrid, vendor for the major issuers (templates ready), in-house pipeline for the long tail. Most lenders I have advised end up here. (<a href="/author/nupura-ughade">I write about the build-buy decisions often.</a>)</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>What is credit card statement OCR?</h3>
-    <p>Credit card statement OCR is software that extracts structured data from credit card statements, cardholder info, transactions, totals, fees, and pushes it into accounting, expense, lending, or analytics systems automatically.</p>
-
-    <h3>How accurate is credit card OCR?</h3>
-    <p>On standard PDF statements from major issuers: 98-99% on the five critical fields. On scanned or photographed statements: 92-97%. On multi-page summary statements: depends entirely on layout-aware extraction quality.</p>
-
-    <h3>Can credit card OCR categorize transactions?</h3>
-    <p>OCR extracts the merchant name and amount. Categorization is a separate step that applies merchant category codes (MCCs) or a custom rules engine. Most vendors offer both extraction and categorization as bundled features.</p>
-
-    <h3>Does it work for personal credit cards?</h3>
-    <p>Yes. Personal and corporate cards use similar statement layouts. The use case differs (personal finance apps vs. expense reconciliation) but the OCR pipeline is the same.</p>
-
-    <h3>How does this compare to Plaid or Yodlee?</h3>
-    <p>Plaid and Yodlee pull transaction data from the issuer via API. OCR extracts from the statement PDF. The API path is faster and more reliable when available. OCR is the fallback when the customer does not authorize API access or when the data needs come from historical statements.</p>
-
-    <h3>What does credit card statement OCR cost?</h3>
-    <p>Per-statement pricing typically runs $0.05-$0.30 depending on length and complexity. Volume discounts apply above 10K statements/month. Compare against the manual cost, usually $5-15 per statement reconciled.</p>
   `,
   image: "/images/highlighted-bank-statement.png",
   featuredImage: "/images/highlighted-bank-statement.png",

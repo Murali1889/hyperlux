@@ -119,26 +119,6 @@ export const blog34: BlogPost = {
     <p><em>DocsAPI, "OCR Accuracy Benchmark 2026: 8 Engines on Real Documents," docsapi.co/resources/blogs/ocr-accuracy-benchmark-2026 (2026).</em></p>
 
     <p>The full per-category head-to-head write-ups, with the failure modes behind each number, are in the linked comparison guides above. If you want the methodology detail or the document-category breakdown for a specific engine, the individual comparison posts cover it.</p>
-
-    <h2>Frequently asked questions</h2>
-
-    <h3>What is the most accurate OCR engine in 2026?</h3>
-    <p>There is no single most accurate engine, because accuracy depends on document type. On clean printed English, Tesseract, PaddleOCR, and commercial APIs all clear 97-99%. On multi-page bank statement tables, DocsAPI led at 91%. On multilingual and mobile-quality documents, PaddleOCR led. On academic papers, Docling led. Match the engine to your document mix.</p>
-
-    <h3>Is PaddleOCR more accurate than Tesseract?</h3>
-    <p>On clean printed English they tie at 97-99%. On harder documents PaddleOCR wins clearly: 15 points better on multi-page tables, 24 points better on phone-photographed receipts, and a wide margin on multilingual content. For anything beyond clean English, PaddleOCR is the stronger open-source engine.</p>
-
-    <h3>What is the best OCR for bank statements?</h3>
-    <p>In this benchmark, DocsAPI led on multi-page bank statement tables at 91% row-level accuracy, versus 76-79% for the next-best engines, because it stitches transaction tables across pages while most engines treat each page separately. Multi-page table handling is the single biggest differentiator for financial documents.</p>
-
-    <h3>How accurate is OCR on scanned or photographed documents?</h3>
-    <p>Lower than on clean PDFs, and it varies widely by engine. On phone-photographed receipts, accuracy ranged from 58% (Tesseract) to 82% (PaddleOCR) in this benchmark. Pre-processing (deskew, rotation correction, page boundary detection) is what closes most of that gap, so the engine's handling of messy input matters more than its clean-document accuracy.</p>
-
-    <h3>Can I cite these OCR accuracy numbers?</h3>
-    <p>Yes. This benchmark is free to cite with a link back to this page as the source. The numbers come from testing eight engines on 1,900 real, anonymized production documents against hand-labeled ground truth, with the methodology described above.</p>
-
-    <h3>Why do vendor OCR accuracy claims differ from real-world results?</h3>
-    <p>Vendors typically measure accuracy on clean, well-formatted demo documents, which every modern engine handles at 97-99%. Real production documents include angled phone photos, faded scans, multi-page tables, and unusual layouts where accuracy drops sharply. The realistic gap between a vendor's headline number and production performance is often 15 to 30 points on hard document types, which is why testing on your own documents matters.</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",

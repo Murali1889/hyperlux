@@ -71,27 +71,6 @@ export const blogBl04: BlogPost = {
     <h2>What I would check in your current VOA pipeline</h2>
 
     <p>Ask whether your large-deposit threshold is calculated as a percentage of each applicant's actual qualifying income, or hardcoded as a flat dollar figure applied to everyone regardless of income level. Then ask whether a deposit with a legible, self-explanatory description on the statement, payroll, SSA, tax refund, verified transfer, actually clears automatically in your pipeline, or whether every large deposit generates the same manual documentation request regardless of what the statement itself already shows. Confirm your process reduces usable funds by the unsourced amount when documentation cannot be produced, rather than treating an unsourced deposit as grounds for automatic denial, since that overcorrection creates real, unnecessary borrower friction on files that would otherwise close. And ask specifically whether large-deposit detection runs against each account independently or against the applicant's aggregated asset picture across every account submitted, since the second is what actually catches the split-deposit pattern the first was never built to see, a scoping problem that shows up in credit card and multi-statement analysis too, covered in our <a href="/resources/blogs/credit-card-statement-ocr">credit card statement OCR guide</a>.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is the actual definition of a large deposit for mortgage underwriting?</strong><br />
-    A single deposit that exceeds 50% of the applicant's total monthly qualifying income, evaluated against the most recent two months of bank statements under standard agency guidance. The threshold scales with each applicant's income rather than using a flat dollar figure.</p>
-
-    <p><strong>Which deposit sources are considered self-explanatory and require no further documentation?</strong><br />
-    Deposits with a source printed directly on the bank statement: employer payroll direct deposits, Social Security Administration payments, IRS or state tax refunds, and transfers between accounts already verified as the applicant's own.</p>
-
-    <p><strong>What happens if a large deposit's source cannot be documented?</strong><br />
-    The verified usable funds figure is reduced by the unsourced amount, and the loan file documents the rationale. It is not an automatic denial. Whether the loan proceeds depends on whether the remaining verified funds are sufficient for the transaction.</p>
-
-    <p><strong>Why does bank statement description-field accuracy matter for verification of assets?</strong><br />
-    Because the self-explanatory source exception depends entirely on correctly reading the transaction description. A misread or truncated description field can push a legitimate, already-explained deposit into an unnecessary manual documentation request.</p>
-
-    <p><strong>Why do accounts opened within the last 90 days get extra scrutiny?</strong><br />
-    A newly opened account has no established deposit history to evaluate whether a given deposit is consistent with the applicant's normal pattern or represents a one-time injection timed for the loan, which is a distinct signal worth flagging separately from the deposit amount itself.</p>
-
-    <p><strong>Is verification of assets the same as verification of income?</strong><br />
-    No. Verification of assets confirms account existence, balance accuracy, and deposit sourcing for funds needed at closing and in reserve. Verification of income, covered in our <a href="/resources/blogs/pay-stub-income-verification-ocr">pay stub income verification piece</a>, confirms ongoing earnings used to qualify for the loan payment itself.</p>
-
     <p>Automated account connections solved the existence and balance half of verification of assets convincingly. The sourcing half, what actually determines whether a large deposit clears cleanly or turns into a documentation request, still runs on a specific, published threshold and a specific, narrow exception list that most automated pipelines never encode explicitly. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/idp-vs-ocr.png",

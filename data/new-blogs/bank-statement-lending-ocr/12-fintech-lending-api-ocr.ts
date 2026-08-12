@@ -61,27 +61,6 @@ export const blogBl12: BlogPost = {
     <h2>What I would check in your current fintech lending pipeline</h2>
 
     <p>Ask whether your loan management system captures funding and sale timestamps with enough precision to demonstrate sequence, not just same-day proximity, since same-day timing with no finer resolution is functionally indistinguishable from simultaneous in a later review. Then ask whether underwriting decisions are recorded with an explicit approving party distinct from any fintech-supplied score or recommendation, rather than a system that only logs the final outcome without attributing the actual decision authority. Check whether your reporting can actually surface the bank's rate of divergence from fintech recommendations across the portfolio, since a system that only stores final outcomes per loan has no way to answer this question in aggregate even if the underlying decisions were genuinely independent. Finally, confirm retained risk is tracked as an ongoing, reconciled figure against real portfolio performance, not a number set once at the loan sale and never revisited, the same ongoing-reconciliation discipline covered from a different angle in our <a href="/resources/blogs/business-line-of-credit-ocr">borrowing base dilution tracking piece</a>, where a single snapshot was similarly insufficient to answer the real question.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is the true lender doctrine?</strong><br />
-    A legal principle courts use to look past the nominal structure of a bank-fintech lending arrangement and determine, based on economic reality, which party is actually functioning as the lender, which can affect whether the arrangement can rely on the bank's interest-rate-exportation authority.</p>
-
-    <p><strong>What are the three factors in the current true lender test?</strong><br />
-    Funding (the bank originates using its own capital), underwriting control (the bank holds final approval authority), and economic risk at origination (the bank bears full loss exposure at origination and retains a meaningful ongoing interest after any sale).</p>
-
-    <p><strong>Why does loan sale timing matter for the true lender analysis?</strong><br />
-    Because a receivables sale to the fintech must occur strictly after origination, not simultaneously with or before it. Same-day timing without precise, sub-day timestamps can be indistinguishable from disguised origination funding when reviewed later.</p>
-
-    <p><strong>Is a retained risk percentage recorded once at loan sale sufficient?</strong><br />
-    No. The retained interest needs to actually behave like ongoing economic exposure, tracked and reconciled against real portfolio performance over the loan's life, not just documented as a static figure at the moment of sale.</p>
-
-    <p><strong>Can a legally sound program structure still fail a true lender challenge?</strong><br />
-    Yes, if the underlying operational records do not actually evidence what the program agreement claims. A regulator examines actual funding accounts, timestamps, and decision records for specific loans, not the agreement's recitals.</p>
-
-    <p><strong>Is this a document extraction accuracy problem?</strong><br />
-    Not primarily. It is an architectural decision about what data gets captured and preserved, precise timestamps, explicit decision-authority attribution, and ongoing risk reconciliation, rather than a question of reading existing documents more accurately.</p>
-
     <p>Fintech lending APIs have made integration fast. Whether the resulting loan program can actually withstand a true lender challenge depends on a data architecture question sitting well upstream of any API's speed or ease of integration, and it is exactly the layer that most embedded finance content, focused on onboarding velocity, never actually reaches. A program can be structured correctly by capable counsel and still have nothing to show for it in a review, simply because nobody asked the operational systems to capture the specific facts that structure depends on. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/intelligent-document-processing.png",

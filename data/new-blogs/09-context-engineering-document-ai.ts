@@ -100,26 +100,6 @@ export const blog09: BlogPost = {
     <p>If you are starting a document AI project: do structured extraction first. Build the JSON index of your documents before you build the chat interface. The chat interface is glamorous; the JSON index is what actually answers questions correctly.</p>
     <p>If you already have a RAG system that disappoints: add a question router. Classify questions by type, route to different context stacks. The accuracy lift is dramatic and the engineering is small.</p>
     <p>If you are evaluating vendors: ask them what their context stack looks like for cross-document questions. If the answer is "we use RAG", expect failures on anything beyond definitional questions. The good vendors have hybrid stacks. (<a href="/author/nupura-ughade">I write about these patterns a lot</a>.)</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>What is context engineering in AI?</h3>
-    <p>Context engineering is the practice of carefully choosing what information to put in front of an AI model so it can answer correctly. It includes RAG (Retrieval-Augmented Generation) but extends to structured data, metadata, system prompts, and routing logic.</p>
-
-    <h3>Why does RAG fail for some document questions?</h3>
-    <p>RAG works when the answer fits in one paragraph that is semantically similar to the question. It fails for cross-document questions, structured questions (lists, tables), temporal questions, and schema-sensitive questions. The fix is hybrid context stacks that route different question types through different retrieval strategies.</p>
-
-    <h3>What is the difference between RAG and context engineering?</h3>
-    <p>RAG is one technique within context engineering. Context engineering is the broader discipline that includes RAG, structured extraction, metadata filtering, question routing, and system context design. Most production document AI uses many context techniques, not just RAG.</p>
-
-    <h3>How do I improve a RAG system that gives wrong answers?</h3>
-    <p>Three steps. First, add structured extraction so numeric and list questions can query a database instead of chunks. Second, add a question router that classifies questions and uses different context stacks per type. Third, improve metadata so retrieval can filter relevant documents before similarity search.</p>
-
-    <h3>Do I need an LLM with a million-token context window?</h3>
-    <p>Usually no. Large context windows help with single-document analysis. They do not solve cross-document or structured-data questions, which are the harder failure modes. Smarter context engineering beats more context.</p>
-
-    <h3>What does "context of context" mean?</h3>
-    <p>As your document set grows, the model sees a shrinking percentage of available knowledge. The "context of context" problem is recognizing that what the model sees has its own context, and you need to manage that meta-context with metadata, summaries, and hierarchical retrieval.</p>
   `,
   image: "/images/intelligent-document-processing.png",
   featuredImage: "/images/intelligent-document-processing.png",

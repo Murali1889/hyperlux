@@ -62,27 +62,6 @@ export const blogBl16: BlogPost = {
     <p>Ask whether your deduplication logic operates on balance continuity within each individual account, or purely on cross-transaction pattern matching that cannot distinguish an overlapping-period duplicate from a genuine transfer pair. Then ask specifically what happens to a same-date, same-amount pair spanning two different accounts, whether it gets netted out of the aggregate total while both entries remain intact in their own account records, or whether it risks being deleted as a false duplicate, which would silently break that account's own balance reconciliation. Check whether transfer timing relative to a statement's closing date gets surfaced as its own signal, separate from the netted amount, since a correctly netted transfer can still represent a deliberately timed balance-inflation attempt that pure netting alone will never flag. This distinction matters most for exactly the applicants most likely to submit multiple accounts in the first place, the same population whose aggregated asset picture matters for the threshold-dodging pattern covered in our <a href="/resources/blogs/verification-of-assets-ocr">verification of assets guide</a>, where getting the aggregation itself wrong undermines every downstream check built on top of it.</p>
 
     <p>Finally, if any of the accounts being aggregated sit at different institutions, confirm the pipeline actually normalizes date formats, amount precision, and description conventions into a common structure before attempting any cross-account matching at all, rather than assuming the same matching logic that works cleanly within one bank's own consistent formatting will transfer directly to a mixed-institution submission without adjustment.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is the difference between a true duplicate and an internal transfer in bank statement aggregation?</strong><br />
-    A true duplicate is the same real transaction ingested twice, usually from overlapping statement date ranges on the same account. An internal transfer is two different, real transactions, a debit in one account and a credit in another, that share a date and amount because they represent the same money movement viewed from two accounts.</p>
-
-    <p><strong>How does balance continuity catch a true duplicate?</strong><br />
-    The closing balance on one statement should equal the opening balance on the next chronological statement for the same account. Overlapping date ranges break this equality in a specific, recognizable way, revealing the duplicated period.</p>
-
-    <p><strong>Why is it wrong to delete one side of an internal transfer as a duplicate?</strong><br />
-    Both sides are real, distinct entries needed to keep each account's own balance accurate. Deleting either one breaks that specific account's own transaction history against its own stated balance.</p>
-
-    <p><strong>What signal actually distinguishes a duplicate from a transfer pair?</strong><br />
-    Which account each matching entry belongs to. A same-account match within an overlapping period is a duplication candidate. A cross-account match is a transfer-pair candidate, requiring netting rather than deletion.</p>
-
-    <p><strong>What happens if an internal transfer isn't netted out of an aggregate cash flow calculation?</strong><br />
-    The applicant's total aggregate inflow gets inflated by the transfer amount, since money that simply moved between the applicant's own accounts gets counted as new income arriving from outside.</p>
-
-    <p><strong>Is date-and-amount matching alone sufficient for multi-account deduplication?</strong><br />
-    No. It cannot distinguish a same-account duplicate from a cross-account transfer pair, since both produce an identical date-and-amount match. Which account each side belongs to is the information that actually resolves the ambiguity.</p>
-
     <p>A single merged report with every transaction counted exactly once sounds like one problem with one solution. It is actually two different mechanics, balance-continuity reconciliation for genuine duplicates and cross-account netting for genuine transfers, and conflating them produces a report that looks clean while quietly getting a meaningful share of applicants' aggregate numbers wrong in one direction or the other, in a way that a quick glance at the finished output will never reveal on its own. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/ocr-bank-statement-technology.png",

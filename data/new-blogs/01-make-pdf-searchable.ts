@@ -132,26 +132,6 @@ ocrmypdf scanned.pdf searchable.pdf</code></pre>
     <p>If you have a regular workflow (more than a few PDFs a week), set up the API endpoint behind a small queue. That is about five lines of code. Your team stops emailing PDFs back and forth, and search just works everywhere.</p>
     <p>If your situation is sensitive or you cannot upload anything, install Tesseract on your laptop. Two terminal commands and you have a private OCR pipeline.</p>
     <p>The most expensive mistake I see: smart teams use Tesseract because it is free, accept 85% accuracy, and then build complicated review workflows to fix the 15% errors. That review workflow ends up costing more than a paid API would have. Run the numbers honestly. The free option is only free if your time is free. (<a href="/author/nupura-ughade">I write about these tradeoffs a lot</a>.)</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>Can I make a PDF searchable without Adobe Acrobat?</h3>
-    <p>Yes, easily. Google Drive's hidden OCR trick, Tesseract on your laptop, and OCR APIs like DocsAPI all make searchable PDFs without Acrobat. Acrobat Pro is actually the slowest of the four if you do not already own a license.</p>
-
-    <h3>Why is my searchable PDF still not searchable?</h3>
-    <p>The text layer is probably broken or invisible to your PDF reader. Try re-running OCR with the <code>--force-ocr</code> flag, which strips and replaces the existing text. If pages look rotated, fix the rotation first. Most "still not working" issues trace back to a skipped pre-processing step.</p>
-
-    <h3>Does making a PDF searchable change how it looks?</h3>
-    <p>No, if you use a good tool. The new text sits invisibly behind the original pixels. The PDF looks exactly the same on screen and on paper. The only difference is that Ctrl+F now works.</p>
-
-    <h3>How long does OCR take for a long PDF?</h3>
-    <p>On an API: about 30 seconds for 50 pages, around 5 minutes for 1,000 pages. On Tesseract on a laptop: 2-3 minutes for 50 pages, up to 30 minutes for 1,000. The longer the document, the bigger the gap between API and laptop.</p>
-
-    <h3>Is online OCR safe for private documents?</h3>
-    <p>It depends on the provider. Reputable APIs (DocsAPI, AWS, Google) encrypt your data in transit and delete it after processing. Random "free OCR" websites often save copies or train AI models on your file. For private content, prefer a reputable API with a clear privacy policy, or run Tesseract locally so nothing leaves your computer.</p>
-
-    <h3>Can I OCR a handwritten PDF?</h3>
-    <p>You can try, but accuracy is much lower than on typed text. Neat printed handwriting reaches about 85-90% on the best engines. Doctors' notes and signed forms drop much further. For high-value handwritten content (checks, application forms), pair OCR with a human review step.</p>
   `,
   image: "/images/ocr-process.png",
   featuredImage: "/images/ocr-process.png",

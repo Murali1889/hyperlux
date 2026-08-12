@@ -71,27 +71,6 @@ export const blogAp11: BlogPost = {
     <p>Ask whoever owns the AP accrual line item to explain, specifically, how this period's number was derived. If the honest answer is "similar to last month" without a documented method behind it, you have no real estimation process, just an informal habit that happens to produce a plausible-looking number. Build the three-method structure above even in a spreadsheet before investing in tooling to automate it, since the methodology matters more than the automation and a good spreadsheet process beats a fast, undocumented guess.</p>
 
     <p>Also check how the accrual reversal is handled the following month. A common, quiet error: the prior month's accrual gets reversed on schedule, but the real invoice that eventually arrives gets coded to the current period as a fresh expense rather than matched against the reversal, effectively double-counting the cost across two periods. This is easy to catch with a simple reconciliation step (does every reversed accrual have a corresponding real invoice within the following month or two) and easy to miss without one, since neither number looks obviously wrong in isolation, only the trend across several months reveals the pattern.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>Why does accounts payable usually take the longest to close each month?</strong><br />
-    Because AP close depends on data outside your own company's control, when vendors actually send invoices for services already rendered. Other close workstreams (payroll, bank reconciliation) run on data you already have; AP is gated by other companies' invoicing habits.</p>
-
-    <p><strong>How do you calculate an accrual for invoices not yet received at month-end?</strong><br />
-    Three methods depending on visibility: direct received-not-invoiced tracking for PO-backed spend with goods receipts, prior-period carryforward for recurring non-PO vendors, and statistical lag estimation (average daily spend times average invoice lag days) for high-volume spend not worth tracking individually.</p>
-
-    <p><strong>Is it safer to over-accrue than under-accrue at month-end?</strong><br />
-    No. Both directions distort financials, and a consistently biased method in either direction creates an artificial expense pattern that makes period-over-period trend analysis unreliable, even if the bias feels conservative. An unbiased estimation method is preferable even with more period-to-period variance.</p>
-
-    <p><strong>Does faster invoice processing eliminate the need for month-end accruals?</strong><br />
-    No. Faster processing shrinks the population of invoices sitting unprocessed in your queue at close time, reducing the estimation burden, but it does not affect invoices vendors have not sent yet at all, which remains a gap regardless of your own processing speed.</p>
-
-    <p><strong>What is received-not-invoiced (RNI) accrual?</strong><br />
-    Accruing the exact dollar amount from a goods receipt document for a PO where the invoice has not yet arrived, using the actual received quantity and price rather than an estimate, since the receiving record already contains the real numbers.</p>
-
-    <p><strong>How often should invoice lag estimates be updated for accrual calculations?</strong><br />
-    Every month, using a rolling average of actual lag (service period end date to invoice receipt date) per vendor category. A static lag assumption set once and never revisited will drift out of accuracy as vendor billing practices change, producing a systematically wrong accrual until someone notices the drift.</p>
-
     <p>None of this requires new software to start. Write the methodology down, apply it consistently, and refine the lag figures every month. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/invoice-processing.png",

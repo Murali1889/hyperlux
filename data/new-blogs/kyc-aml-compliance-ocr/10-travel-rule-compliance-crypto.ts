@@ -65,27 +65,6 @@ export const blogKa10: BlogPost = {
     <h2>What I would check in your current Travel Rule compliance pipeline</h2>
 
     <p>Ask whether your threshold logic actually varies by the specific jurisdictions governing each side of a transfer, correctly applying the EU's zero threshold, the US's $3,000 floor, or FATF's default depending on which actually applies, rather than a single hardcoded number used universally. Then ask what your pipeline actually does when destination-address discovery comes back inconclusive or confirms an unhosted wallet, whether it falls back to a defined ownership-verification method, signature testing, a test transaction, documented attestation, or simply proceeds without any verification at all because the VASP-to-VASP information-sharing path does not apply. Check separately whether a correctly identified VASP counterparty running an incompatible protocol produces a defined fallback procedure, rather than a transfer silently failing to transmit required data because no one noticed the two institutions' systems could never actually talk to each other in the first place. Finally, confirm your policy for inbound transfers from jurisdictions still affected by the sunrise problem reflects an actual, documented risk-based assessment rather than an undocumented default in either direction, the same jurisdiction-aware routing discipline covered from a different regulatory angle in our <a href="/resources/blogs/kyb-verification">KYB verification piece</a>.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What does the crypto Travel Rule actually require?</strong><br />
-    A sending VASP must collect and share originator and beneficiary information with the counterparty VASP receiving a qualifying transfer, mirroring the same requirement long applied to traditional wire transfers.</p>
-
-    <p><strong>Do all jurisdictions use the same Travel Rule dollar threshold?</strong><br />
-    No. FATF's default is 1,000 USD/EUR, US FinCEN sets 3,000 USD, and the EU's Transfer of Funds Regulation applies no minimum threshold at all, covering every qualifying transfer regardless of amount.</p>
-
-    <p><strong>What is the VASP discovery problem?</strong><br />
-    Determining whether a destination wallet address belongs to a regulated VASP or a private, self-custodied wallet, since blockchain addresses carry no inherent signal indicating which category they fall into.</p>
-
-    <p><strong>Why can't the Travel Rule's information-sharing model apply to unhosted wallet transfers?</strong><br />
-    Because there is no receiving VASP to transmit originator data to at all when the destination is a genuinely self-custodied wallet, a structural gap rather than a missing identification step.</p>
-
-    <p><strong>How do VASPs verify ownership of an unhosted destination wallet?</strong><br />
-    Common methods include cryptographic signature testing to prove private key control, small test transactions confirmed before the full transfer, and direct customer attestation that the wallet belongs to them.</p>
-
-    <p><strong>What is the sunrise problem in Travel Rule compliance?</strong><br />
-    Uneven global adoption timelines mean a VASP in a compliant jurisdiction regularly receives transfers from counterparties where the rule is not yet in force, requiring a risk-based decision on how to handle those inbound transfers.</p>
-
     <p>Explaining what information the Travel Rule requires is the easier half of this compliance problem. Determining whether there is even a counterparty VASP to share that information with in the first place, and what to do when the honest answer is "we cannot confirm," is the harder, more consequential half, and it is exactly the layer most Travel Rule content moves past quickly on the way to describing the information-sharing requirement itself.</p>
 
     <p>None of this means the Travel Rule is unworkable in practice, plenty of transfers resolve cleanly through a known, well-integrated VASP counterparty on a shared protocol, with a threshold that applies exactly as expected. It means the genuinely hard cases, an unfamiliar counterparty, an ambiguous address, a jurisdiction still mid-sunrise, deserve a defined, documented procedure rather than an improvised decision made transaction by transaction under time pressure, since those are precisely the cases most likely to attract regulatory scrutiny if handled inconsistently. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>

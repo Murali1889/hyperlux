@@ -77,27 +77,6 @@ export const blogAp08: BlogPost = {
     <p>Pull your last quarter of vendor invoices and check what share carried an early payment discount term, then check what share of those you actually captured versus let lapse. If your capture rate is low, diagnose whether it is a timing problem (invoices are not cleared for payment before the window closes) or a visibility problem (discount terms are not being tracked as structured data at all). The fix is different for each: timing problems need faster intake-to-approval processing, visibility problems need the discount terms extracted and surfaced explicitly rather than buried in invoice text nobody reads closely.</p>
 
     <p>Also check whether your top vendors by spend actually offer discount terms at all. If they do not, and your spend is concentrated with vendors on straight net-30 or net-60 terms, discount capture will never move the needle much regardless of how fast your AP process becomes, and the higher-leverage conversation is asking your largest vendors to add an early payment option in the first place, something many will agree to since it improves their own cash flow too, particularly smaller vendors who value getting paid sooner more than the discount costs them.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What does 2/10 net 30 mean on an invoice?</strong><br />
-    It means the buyer can deduct 2% from the invoice total if payment is made within 10 days of the invoice date, instead of paying the full amount under standard 30-day terms.</p>
-
-    <p><strong>How do you calculate the annualized return on an early payment discount?</strong><br />
-    Annualized rate = [Discount % / (100% minus Discount %)] × [365 / (Full payment days minus Discount days)]. For 2/10 net 30, that is (2/98) × (365/20), which equals approximately 37.2%.</p>
-
-    <p><strong>Is a 1% early payment discount worth taking?</strong><br />
-    It depends entirely on the days gained, not the discount percentage alone. A 1/10 net 30 term annualizes to about 18.4%, generally worth taking against typical borrowing costs, while a 1/15 net 60 term annualizes to only about 8.2%, a much closer call depending on your actual cost of capital.</p>
-
-    <p><strong>Why do companies miss early payment discounts even when the math favors taking them?</strong><br />
-    Most commonly because manual invoice processing takes longer than the discount window itself. If receipt-to-approval takes 8 to 14 days and the discount window is 10 days, there is little to no time left to also schedule and execute payment before the deadline, so the discount lapses regardless of whether anyone would have chosen to take it.</p>
-
-    <p><strong>How should AP teams prioritize which invoices to process first for discount capture?</strong><br />
-    By annualized return on the active discount, not by arrival order or discount percentage alone. This requires capturing discount terms as structured data at invoice intake so the highest-value discounts can be routed for faster approval ahead of lower-priority invoices.</p>
-
-    <p><strong>What is dynamic discounting and how is it different from a standard early payment discount?</strong><br />
-    A standard discount like 2/10 net 30 is a fixed threshold: pay within 10 days, get exactly 2%. Dynamic discounting offers a sliding rate that scales continuously with how early payment happens across the full payment window, often as a daily rate. The same annualized-return math still applies at any point on that sliding scale.</p>
-
     <p>The math above holds regardless of company size. Run it on your own vendor terms before the next payment run. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/invoice-processing.png",

@@ -62,27 +62,6 @@ export const blogKa20: BlogPost = {
     <h2>What I would check in your current sanctions screening pipeline</h2>
 
     <p>Ask your vendor to separately quantify two distinct numbers, not one blended "real-time" claim: the typical latency of a single transaction query against the currently loaded list, and the typical lag between a source authority publishing a designation and that designation actually appearing in the queryable list index. A vendor able to answer only the first question has told you nothing about the second, and the worked example above shows the second number is where actual sanctions exposure accumulates. Then ask whether polling cadence is configured per source based on that source's genuine update frequency, OFAC and EU sources polled tightly, UN sources reasonably less so, rather than one uniform interval applied everywhere regardless of how often each specific source actually changes. Finally, confirm your own institution's internal escalation process, freezing an account, holding a transaction, actually triggers the moment a new designation reaches your system, rather than only during a scheduled internal review cycle that could itself quietly reintroduce the exact same batch-timing gap the underlying list-refresh work was originally meant to solve in the first place.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What are the two separate claims bundled inside "real-time sanctions screening"?</strong><br />
-    Transaction-time synchronicity, whether each transaction is checked instantly versus in a batch, and list freshness, how current the underlying sanctions list data is. A system can have one without the other.</p>
-
-    <p><strong>Can a system screen transactions instantly but still miss a new sanctions designation?</strong><br />
-    Yes. Sub-second query performance describes how fast a lookup runs against the currently loaded list, not how recently that list was updated relative to the issuing authority's most recent designation.</p>
-
-    <p><strong>What actually happened in the April 2026 OFAC Russian metals network designation?</strong><br />
-    OFAC designated fourteen entities, but several screening tools running daily batch refreshes did not reflect the update for 19 hours, a gap spanning three shipping waves, while institutions with faster list ingestion froze relevant accounts within the hour.</p>
-
-    <p><strong>When does a sanctions designation become legally effective?</strong><br />
-    At the moment the issuing authority publishes it, not when a screening system's list data actually catches up. Transactions processed after publication involving the newly designated party constitute violations regardless of a system's refresh timing.</p>
-
-    <p><strong>Should every sanctions list source be polled at the same interval?</strong><br />
-    No. Sources like OFAC and EU consolidated lists that change frequently and unpredictably warrant tighter polling, often in the range of five minutes, while less frequently updated sources like UN lists can reasonably use a longer interval without materially increasing exposure.</p>
-
-    <p><strong>What should a buyer ask a vendor claiming "real-time" sanctions screening?</strong><br />
-    Two separate numbers: typical transaction query latency against the currently loaded list, and typical lag between a source publishing a designation and that designation appearing in the queryable index, since a vendor answering only the first has not addressed where exposure actually accumulates.</p>
-
     <p>"Real-time" is a genuinely accurate description of what a fast transaction query looks like, and it is also, separately, a genuinely accurate description of tight list-polling cadence. The problem is not that either claim is false when made on its own, it is that vendors and content routinely blend both into one phrase, leaving a buyer unable to tell which property, or whether both, is actually being promised, and the April 2026 worked example above shows exactly how much exposure sits inside that ambiguity.</p>
 
     <p>None of this argues against automated sanctions screening generally. A manual process cannot poll OFAC every five minutes any more reliably than a poorly architected automated one can, and both fail the same way under a genuinely fast-moving designation. It is a reason to demand the two numbers separately from any vendor or internal system claiming real-time capability, transaction latency and list-ingestion lag, rather than accepting one blended marketing term as evidence that both genuinely distinct problems have actually, independently, been solved. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>

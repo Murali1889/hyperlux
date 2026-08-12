@@ -62,27 +62,6 @@ export const blogBl17: BlogPost = {
     <h2>What I would check in your current bank statement fraud detection pipeline</h2>
 
     <p>Ask whether your fraud detection reads PDF metadata fields alone, Creator, Producer, timestamps, or also inspects the file's cross-reference table structure to count actual save generations, since the second catches exactly the tampering a forger who thought to scrub metadata fields would otherwise evade cleanly. Then ask whether your process maintains any reference set of expected Producer or Creator signatures for the specific institutions whose statements you process regularly, since a mismatch against a known-good signature is a stronger signal than checking for generic suspicious tool names alone. Check whether digital signature validation runs automatically wherever a statement carries one, since that layer, when present, outranks every heuristic check described above in reliability. Finally, be honest internally about what structural analysis cannot catch, a fully flattened, re-exported file or a forgery built from an edited source document before PDF creation, and pair it with the reconciliation-based checks, sum-of-transactions against stated balance, that catch a different class of fraud entirely, the same layered-detection principle covered from a duplication-versus-transfer angle in our <a href="/resources/blogs/multi-account-bank-statement-ocr">multi-account aggregation piece</a>, where two structurally different problems similarly needed two different, non-interchangeable fixes.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>Why is PDF metadata alone a weak fraud detection signal?</strong><br />
-    Because metadata fields like Creator and Producer are simple text values anyone can overwrite before submitting a document. They catch fraud from people who don't think to check for it, not sophisticated attempts.</p>
-
-    <p><strong>What is a PDF incremental update, and why does it matter for fraud detection?</strong><br />
-    The PDF specification requires edits to append changes after the existing file content rather than rewriting it, creating a chain of cross-reference tables, one per save operation. Counting these tables reveals how many times a file was edited after its original creation.</p>
-
-    <p><strong>How many cross-reference tables does a genuine, unedited bank statement have?</strong><br />
-    One. A file with two or more cross-reference tables and multiple end-of-file markers has been opened and saved again after its original creation, a structural sign of post-creation editing.</p>
-
-    <p><strong>Can a sophisticated forger avoid leaving an incremental-update trail?</strong><br />
-    Yes, by flattening a file through a conversion tool that produces a genuinely fresh, single-generation PDF, or by editing the original source document before exporting a clean PDF. Both are real evasion paths.</p>
-
-    <p><strong>What can structural PDF analysis catch that metadata scrubbing can't defeat?</strong><br />
-    Structural analysis reveals the actual edit-generation count embedded in the file's required byte structure, which cannot be removed by simply overwriting a field value the way metadata can.</p>
-
-    <p><strong>Should structural PDF analysis replace reconciliation-based fraud checks?</strong><br />
-    No. It catches a different category of tampering than checking whether transactions sum to the stated balance. Both layers, plus metadata inspection, catch different evasion attempts and work best combined rather than as substitutes for each other.</p>
-
     <p>Metadata inspection catches the fraud that never bothered to hide. Reconciliation catches the fraud that got the math wrong. Structural PDF analysis catches something else entirely, the edit history embedded in the file format itself, and it is exactly the layer most bank statement fraud detection content never reaches on the way to describing the two easier checks. None of these three layers is sufficient alone, and none of them is redundant with the others, which is the actual argument for running all three rather than treating whichever one is easiest to implement as good enough on its own. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/revolutionizing-finance.png",

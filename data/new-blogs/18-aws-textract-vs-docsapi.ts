@@ -151,35 +151,6 @@ export const blog18: BlogPost = {
     <p>If your documents involve multi-page tables (bank statements, financial reports): try DocsAPI. The table-stitching saves you from building manual fixes that break on every new document type.</p>
     <p>If you are starting fresh and don't have AWS lock-in: try both on a representative sample of your real documents. The winner depends on your specific mix. (<a href="/author/nupura-ughade">I write more about real-world evaluation here</a>.)</p>
     <p>If you would rather narrow the field first, our free <a href="/tools/which-ocr">OCR picker</a> asks six questions and tells you whether Textract, a purpose-built document API, or an open-source engine fits your documents best, using the per-category benchmark results.</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>Is AWS Textract better than DocsAPI overall?</h3>
-    <p>Neither is universally better. Textract wins for AWS-native stacks, forms, and ID documents. DocsAPI wins for multi-page tables, classification + extraction in one call, and financial services workloads.</p>
-
-    <h3>How much does AWS Textract cost?</h3>
-    <p>$0.0015 per page for basic OCR. $0.015 per page with tables. Additional cost for forms analysis. Volume discounts available above 1M pages/month.</p>
-
-    <h3>Can DocsAPI handle the documents Textract handles?</h3>
-    <p>Yes, for the common document types (invoices, IDs, forms, bank statements). DocsAPI also handles document classification and multi-page tables more cleanly. For research papers or scientific PDFs, alternatives like Docling are stronger.</p>
-
-    <h3>Is migration from Textract to DocsAPI hard?</h3>
-    <p>A few weeks of engineering for a typical workload. The API surface is similar but response formats differ. A small translation layer handles most of the mapping.</p>
-
-    <h3>Which is faster?</h3>
-    <p>DocsAPI's sync endpoint is faster for documents under 100 pages because there's no polling. Textract's sync endpoint handles fewer pages before requiring async. For very large documents, both run async and have similar wall-clock times.</p>
-
-    <h3>Are both HIPAA-eligible?</h3>
-    <p>AWS Textract is HIPAA-eligible under AWS's BAA. DocsAPI is HIPAA-eligible with a separate BAA available on request. Both can be used in healthcare workflows.</p>
-
-    <h3>What is the best AWS Textract alternative in 2026?</h3>
-    <p>It depends on why you are leaving Textract. If cost on tables and forms is the problem, a bundled-pricing API like DocsAPI removes the specialty-endpoint upcharge. If multi-page table stitching is the problem, DocsAPI or a purpose-built financial-document API handles it. If you are staying on a hyperscaler, Google Document AI (GCP) and Azure AI Document Intelligence (Microsoft) are the closest equivalents. Run your real documents through the top two candidates and pick on results.</p>
-
-    <h3>Why does Textract struggle with bank statements?</h3>
-    <p>Textract processes each page independently, so a bank statement with a transaction table spanning 5 to 15 pages comes back as 5 to 15 separate tables with broken row continuity. Reassembling them requires custom stitching code that is fragile to maintain across different bank formats. Engines built for financial documents, like DocsAPI, stitch the pages into one logical table automatically, which is the single biggest reason teams move off Textract for statement-heavy workflows.</p>
-
-    <h3>Is AWS Textract good for invoices?</h3>
-    <p>Textract handles single-page invoices with clear field boundaries reasonably well through its form and expense analysis. It struggles with multi-page invoices, unusual layouts, and line-item tables that need reassembly. For accounts payable at volume, a specialized invoice or AP OCR pipeline usually delivers a higher touchless rate because it validates totals against line items and matches to purchase orders, which Textract leaves to you.</p>
   `,
   image: "/images/ocr-api.png",
   featuredImage: "/images/ocr-api.png",

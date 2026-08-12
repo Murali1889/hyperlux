@@ -68,27 +68,6 @@ export const blogKa02: BlogPost = {
     <p>Beneficial owner identity itself still needs the same document-level verification rigor as any individual KYC applicant, the <a href="/resources/blogs/mrz-passport-verification">passport MRZ checksum discipline</a> covered elsewhere in this series applies just as directly to a beneficial owner's own ID document as to a direct retail customer's.</p>
 
     <p>Ask whether your pipeline still triggers a full beneficial ownership re-verification at every new account a legal entity customer opens, since that is no longer required under the February 2026 relief and represents avoidable friction if your process has not been updated. Then ask specifically how your system detects the reliability-concerns trigger, whether anything is actively monitoring for facts like officer changes or adverse media hits between scheduled reviews, or whether ownership data simply sits static until the next scheduled check. Finally, confirm your indirect-ownership calculation actually multiplies percentages correctly through multi-tier holding structures, rather than checking only the immediate layer, since a shallow check can miss an indirect owner who genuinely crosses 25% through a chain the pipeline never traced all the way through.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What are the two prongs of the FinCEN beneficial ownership test?</strong><br />
-    The ownership prong identifies individuals owning 25% or more of the entity, directly or indirectly. The control prong identifies exactly one individual with significant responsibility to control, manage, or direct the entity, regardless of ownership.</p>
-
-    <p><strong>Why can the ownership prong never identify more than four beneficial owners?</strong><br />
-    Because total ownership sums to at most 100%, and four individuals at exactly 25% each account for the full 100%. A fifth person crossing 25% would require ownership to exceed 100%, which is mathematically impossible.</p>
-
-    <p><strong>How is indirect beneficial ownership through a holding company calculated?</strong><br />
-    By multiplying ownership percentages at each layer of the chain. An individual owning 40% of a holding company that owns 70% of the target entity holds an effective 28% indirect stake, crossing the 25% threshold.</p>
-
-    <p><strong>What changed with FinCEN's February 2026 Order FIN-2026-R001?</strong><br />
-    Covered financial institutions no longer need to re-verify beneficial ownership at every new account opening. Verification now happens at initial opening, plus only when reliability concerns arise or the institution's risk-based CDD schedule calls for it.</p>
-
-    <p><strong>What triggers re-verification under the new risk-based approach?</strong><br />
-    Three scenarios: initial account opening, facts that reasonably call previously obtained ownership information's reliability into question, or the institution's own risk-based ongoing due diligence schedule.</p>
-
-    <p><strong>Does every legal entity customer have a beneficial owner even if no one owns 25%?</strong><br />
-    Yes. The control prong always identifies exactly one individual regardless of ownership concentration, ensuring every entity yields at least one beneficial owner even when ownership is too fragmented for anyone to cross 25%.</p>
-
     <p>The 25% rule is simple to state and, once you actually work through the arithmetic and the multi-tier ownership math, more precise and more bounded than most compliance content lets on. The February 2026 shift away from automatic re-verification at every account opening is exactly the kind of regulatory update that makes a pipeline built on the old assumption quietly do more work than the rule now actually requires. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/legal-document-automation.png",

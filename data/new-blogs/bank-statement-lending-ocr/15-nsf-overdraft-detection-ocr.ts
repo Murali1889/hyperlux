@@ -61,27 +61,6 @@ export const blogBl15: BlogPost = {
     <h2>What I would check in your current NSF detection pipeline</h2>
 
     <p>Ask whether your pipeline counts only explicit NSF and overdraft fee line items, or also reconstructs running balance to detect same-day protective transfers that cover a shortfall without generating a visible fee. Then ask whether your 90-day frequency threshold is being applied to the fee count alone or to the combined shortfall count including covered events, since the two can diverge meaningfully for applicants using overdraft protection. Confirm this detection runs against actual account-level running balance, not a simple description-field keyword match, since a keyword search has no way to distinguish a protective transfer from any other ordinary transfer between an applicant's own accounts. And check whether your output surfaces the timing distribution of events across the window, not just a single combined total, since a cluster of events in one resolved month reads very differently than the same count spread evenly across the full period, the same trend-versus-level distinction covered from a different angle in our <a href="/resources/blogs/cash-flow-underwriting-ocr">cash flow underwriting piece</a>, where an average alone similarly hid the more important pattern underneath it.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is the difference between an NSF fee and an overdraft fee?</strong><br />
-    An NSF fee is charged when the bank declines and returns a transaction the account cannot cover. An overdraft fee is charged when the bank pays the transaction anyway, letting the account go negative. Both are distinct, fee-visible events by design.</p>
-
-    <p><strong>How does overdraft protection hide a shortfall from fee-based detection?</strong><br />
-    A linked account, savings, credit card, or line of credit, automatically transfers funds to cover the shortfall, letting the transaction clear without generating an NSF or overdraft fee, often replaced by a smaller transfer fee or no fee at all.</p>
-
-    <p><strong>What transaction pattern reveals a covered overdraft that generated no fee?</strong><br />
-    A transfer-in from a linked account landing the same day or next business day as a debit that would have exceeded the checking account's available balance without it, distinguishable from an ordinary transfer by its timing relative to that specific debit.</p>
-
-    <p><strong>Can two applicants have identical NSF fee counts but very different actual shortfall frequency?</strong><br />
-    Yes. A worked comparison shows two applicants both with two visible fee events, while one also had five additional covered shortfalls revealed only through same-day protective transfers, a materially different underlying pattern.</p>
-
-    <p><strong>Why does undercounting shortfalls matter more for a frequency threshold than a single event?</strong><br />
-    Because the standard decline signal is based on repeated frequency, not a single event. Undercounting can push an applicant below that threshold artificially, based on which protection product their specific bank happens to offer rather than their actual financial stability.</p>
-
-    <p><strong>Is detecting covered overdrafts a simple keyword search problem?</strong><br />
-    No. It requires reconstructing running balance transaction by transaction and cross-referencing transfer timing against specific debits, since a keyword search cannot distinguish a protective transfer from an ordinary transfer between an applicant's own accounts.</p>
-
     <p>Counting fee line items is the easy, visible half of NSF and overdraft detection. The harder, more accurate half requires reconstructing what the account balance actually was at each transaction moment and recognizing the transfers that quietly kept it from going negative, and it is exactly the layer that determines whether a frequency threshold is measuring real financial behavior or just which applicants happen to have overdraft protection enabled on their specific account. Two applicants who behave identically in every way that matters to a lender can end up on opposite sides of a decline threshold purely because one bank's product happened to intervene before a fee ever printed on the statement, which is not a distinction any underwriting policy actually intends to make. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/ocr-bank-statement-technology.png",
