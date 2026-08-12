@@ -11,11 +11,11 @@ export default function ArticlesHero() {
       <div className="container relative z-10 px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="mb-6 text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
-            Articles & Research on OCR Software
+            Research on Lending Risk and Compliance
           </h1>
           <p className="mb-8 text-xl text-indigo-100 md:text-2xl">
-            In-depth analysis, research papers, and thought leadership on OCR software, document automation technology,
-            and AI-powered lending solutions for financial institutions.
+            Deeper research on industry classification, regulatory exposure, and concentration risk for commercial
+            lending and fintech teams, not just how-to guides.
           </p>
           <div className="mx-auto flex max-w-md flex-col items-center space-y-4 sm:flex-row sm:space-x-3 sm:space-y-0">
             <div className="relative w-full">

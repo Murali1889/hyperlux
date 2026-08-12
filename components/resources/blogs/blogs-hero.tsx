@@ -11,11 +11,11 @@ export default function BlogsHero() {
       <div className="container relative z-10 px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="mb-6 text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
-            OCR Software Blog
+            The OCR Guides Vendors Won't Write
           </h1>
           <p className="mb-8 text-xl text-indigo-100 md:text-2xl">
-            Insights, updates, and expert perspectives on AI-powered OCR software for document automation, fraud
-            detection, and lending workflow optimization.
+            Real production numbers, real failure modes, and the technical detail competitor content leaves out,
+            from a team running OCR on millions of pages a month.
           </p>
           <div className="mx-auto flex max-w-md flex-col items-center space-y-4 sm:flex-row sm:space-x-3 sm:space-y-0">
             <div className="relative w-full">
