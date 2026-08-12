@@ -16,10 +16,10 @@ export default function IndustriesPage() {
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-indigo-600 to-indigo-800 py-20 px-4 sm:px-6 lg:px-8 text-white">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">AI OCR Software for Financial Industries</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Cut Loan Document Processing Time by 80%</h1>
           <p className="text-xl md:text-2xl max-w-3xl mb-8">
-            Transform document processing across banking, fintech, credit unions, and microfinance with intelligent
-            automation solutions.
+            Banks, fintechs, credit unions, and microfinance institutions use DocsAPI to automate KYC, income
+            verification, and fraud checks, at 99.9% extraction accuracy.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a

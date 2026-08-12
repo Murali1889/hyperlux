@@ -10,11 +10,11 @@ export default function NewslettersHero() {
       <div className="container relative z-10 px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="mb-6 text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
-            OCR Software Newsletters
+            One Email, No Fluff, Actually Useful
           </h1>
           <p className="mb-8 text-xl text-indigo-100 md:text-2xl">
-            Stay updated with the latest OCR software news, document automation trends, and insights on AI-powered
-            lending solutions delivered directly to your inbox.
+            Monthly updates on OCR, compliance, and lending automation that actually affect your workflow, not
+            vendor press releases.
           </p>
         </div>
       </div>
