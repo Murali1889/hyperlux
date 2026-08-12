@@ -122,26 +122,6 @@ export const blog06: BlogPost = {
     <p>If you are testing OCR for the first time: try Google Drive's trick on a one-page document. Free, low-stakes, takes 30 seconds.</p>
     <p>If you want a real free tier with no traps: use the DocsAPI free tier. 100 pages per month, layout preserved, no watermarks.</p>
     <p>If you do this often: pay for a small plan or self-host ocrmypdf. The hidden cost of free tools, your time, watermark removal, privacy risk, almost always exceeds the cost of a small paid plan. (<a href="/author/nupura-ughade">I write about cost math like this often</a>.)</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>Are free online OCR tools safe to use for sensitive documents?</h3>
-    <p>Most are not. Many free tools have terms of service granting them rights to use your content for AI training or sharing with partners. For sensitive documents, use local tools (ocrmypdf) or a paid API with clear privacy guarantees.</p>
-
-    <h3>What is the most accurate free OCR tool?</h3>
-    <p>For typed English on clean scans, Google Drive's OCR and DocsAPI's free tier are essentially tied at 97-99% character accuracy. For layout-sensitive content, DocsAPI preserves structure better. For privacy-sensitive content, local ocrmypdf wins because nothing leaves your machine.</p>
-
-    <h3>Can I use free OCR for business documents?</h3>
-    <p>For occasional use, yes. For volume or recurring workflows, free tiers usually cut you off or watermark output. Paid plans typically run $5-25 per month for small business volumes, cheaper than the time spent fighting free-tier limits.</p>
-
-    <h3>Why do some free OCR tools add watermarks?</h3>
-    <p>To convert you into a paying customer. The "free" tier OCRs your document but adds a watermark to the download. You either pay to remove it or you waste your time and try a different tool. This is the single most common trap.</p>
-
-    <h3>What is the best free OCR for tables?</h3>
-    <p>None of the free online tools handle tables well. For table-heavy content, you need layout-aware OCR, AWS Textract, Google Document AI, or DocsAPI. The paid plans are inexpensive (under $5 for small batches) and the layout preservation is dramatically better.</p>
-
-    <h3>Is there a truly unlimited free OCR tool?</h3>
-    <p>Self-hosted ocrmypdf. It is open source, runs locally, and processes unlimited pages. The only cost is your own compute and the time to set it up. For anything else, "unlimited free" usually means "watermarked" or "rate-limited into uselessness".</p>
   `,
   image: "/images/intelligent-document-processing.png",
   featuredImage: "/images/intelligent-document-processing.png",

@@ -66,27 +66,6 @@ export const blogBl14: BlogPost = {
     <p>Ask which specific metrics your pipeline actually calculates, average deposit amount alone, or a fuller set including coefficient of variation, cash-flow DTI, and runway, since average alone hides exactly the volatility difference the worked example above shows. Then ask how confident your transaction categorization actually is, specifically what happens to an ambiguous transaction, a large one-time transfer, an irregular recurring payment, since a categorization error upstream corrupts every metric calculated from it downstream, however correct the formulas themselves are. Confirm cash-flow DTI is actually being calculated as a broader obligation picture including rent and other off-credit-report recurring costs, not simply relabeling the same credit-report-based DTI figure under a new name. And check whether trend direction is tracked as its own metric distinct from volatility, since the worked example above shows two directly opposite income trajectories that a volatility-only view cannot tell apart, along with whatever analysis window your pipeline defaults to and whether that choice was a deliberate tradeoff or simply whatever the data-access API happened to return by default.</p>
 
     <p>None of this is a character-recognition problem in the way earlier posts in this series describe for structured forms like a W-2 or a 1099. It is a methodology problem sitting on top of already-extracted transaction data, the same layer covered from a fraud-detection angle in our <a href="/resources/blogs/personal-loan-document-ocr">loan stacking detection piece</a>, where the raw deposit data was correct and the pattern-recognition logic built on top of it was the part that actually mattered.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is the coefficient of variation in cash flow underwriting?</strong><br />
-    A measure of deposit volatility, calculated as the standard deviation of periodic deposits divided by their mean, expressed as a percentage. It reveals income stability that an average deposit figure alone cannot show, since two applicants can share an identical average with very different volatility.</p>
-
-    <p><strong>Why can two applicants have the same average income but very different risk profiles?</strong><br />
-    Because the average hides how consistently that income actually arrives. A worked comparison shows one applicant with roughly 1.1% coefficient of variation and another with roughly 47.4%, despite nearly identical average monthly deposits.</p>
-
-    <p><strong>How is cash-flow DTI different from a traditional credit-report-based DTI?</strong><br />
-    Cash-flow DTI divides total recurring monthly outflows, including rent and other obligations that never appear on a credit report, by total monthly inflows, producing a broader, more complete picture than a DTI built only from credit-report debts.</p>
-
-    <p><strong>What does the runway or cash buffer days metric measure?</strong><br />
-    Average account balance divided by average daily net outflow, expressed in days, showing how long an applicant's current balance could sustain their spending pattern with no further income arriving.</p>
-
-    <p><strong>Why does transaction categorization matter more than the underwriting formulas themselves?</strong><br />
-    Because every metric depends on transactions being correctly classified as income, transfer, debt payment, or discretionary spending first. A single misclassified transaction distorts every metric calculated from it, regardless of how precisely the formulas themselves are computed.</p>
-
-    <p><strong>Is average deposit amount alone a sufficient cash flow underwriting metric?</strong><br />
-    No. It hides volatility entirely. Two applicants with identical averages can represent very different risk levels, which is exactly what the coefficient of variation is designed to surface and an average alone cannot.</p>
-
     <p>Cash flow underwriting is a genuinely better signal than a lagging credit report in many cases, but only when the metrics behind that claim are actually defined, calculated, and built on correctly categorized transaction data. A general description of "using bank data" without naming the formulas is not a methodology, it is a category, and the difference between the two is exactly what determines whether the resulting decision is trustworthy or simply looks sophisticated because it draws on a richer data source than a credit report while quietly making the same kind of averaging mistake a simpler model would have made anyway. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/ocr-process.png",

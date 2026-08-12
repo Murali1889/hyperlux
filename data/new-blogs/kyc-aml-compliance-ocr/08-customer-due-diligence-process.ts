@@ -66,27 +66,6 @@ export const blogKa08: BlogPost = {
     <h2>What I would check in your current CDD/EDD risk-tiering pipeline</h2>
 
     <p>Ask directly whether PEP status, sanctions-adjacent connections, and high-risk jurisdiction designation function as override triggers that bypass the weighted average entirely, or whether they are simply weighted inputs like every other factor, since the worked example above shows exactly how the second approach can produce a dangerously low composite score for a customer who unconditionally requires enhanced due diligence. Then ask whether anyone has actually run this kind of stress test against your own model's specific weights, computing what composite score a maximum-severity PEP factor produces when every other factor scores low, rather than assuming the weighting scheme handles this correctly without ever checking the arithmetic directly. Finally, confirm your tier boundaries themselves were validated against your institution's actual risk-factor weights and realistic customer score distributions, not simply inherited from a template vendor demo, the same document-level scrutiny covered from a compounding-probability angle in our <a href="/resources/blogs/bank-statement-ocr-pricing">bank statement OCR pricing piece</a>, where an unexamined default number similarly looked far more reassuring than it actually was once someone ran the real math against it.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is the difference between CDD and EDD?</strong><br />
-    Standard customer due diligence applies to the ordinary customer population. Enhanced due diligence applies to customers a risk assessment identifies as higher risk, requiring deeper investigation, more frequent monitoring, and often senior management approval.</p>
-
-    <p><strong>How can a weighted average risk score miss a genuinely high-risk customer?</strong><br />
-    If a severe risk factor like PEP status carries only a modest weight, it can be mathematically diluted by several low-risk factors, producing a composite score that lands in a low or medium tier despite one factor independently requiring enhanced due diligence.</p>
-
-    <p><strong>Why should PEP status function as an override rather than a weighted input?</strong><br />
-    Because FATF Recommendation 12 requires enhanced due diligence for PEP relationships unconditionally, regardless of any other factor. Averaging it with other scores defeats that unconditional requirement.</p>
-
-    <p><strong>What other risk factors typically function as overrides in a well-built model?</strong><br />
-    Sanctions-adjacent connections and operation in a FATF-identified high-risk jurisdiction, both severe enough on their own that diluting them into a weighted average undermines the reason they were flagged as risk factors at all.</p>
-
-    <p><strong>Why is a diluted risk score a regulatory concern, not just a technical flaw?</strong><br />
-    Because it is the specific pattern examiners look for when assessing whether a scoring methodology was built to genuinely assess risk or to minimize how many customers trigger expensive enhanced due diligence, intentionally or not.</p>
-
-    <p><strong>How should a correctly structured risk model be architected?</strong><br />
-    Override checks run first as a distinct step; any true override routes directly to enhanced due diligence. Only customers clearing every override then proceed through the weighted average model for the remaining risk differentiation.</p>
-
     <p>A weighted average is a genuinely useful tool for differentiating risk across a large, otherwise-similar customer population. It is the wrong tool entirely for a small number of factors specifically defined as severe enough to require enhanced treatment on their own, and the worked math above is the clearest way to see exactly why averaging the two together produces a number that looks precise while quietly getting the actual routing decision wrong, a number that would pass a casual review and only reveal the problem once someone actually sits down and recomputes it by hand against a real customer profile. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/ocr-bank-statement-technology.png",

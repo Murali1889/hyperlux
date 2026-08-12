@@ -74,27 +74,6 @@ export const blogAp09: BlogPost = {
     <p>Pull a sample of invoices your system classified as non-PO and manually check whether any of them actually reference a PO number somewhere in the document that extraction missed. If you find even a handful, your false-negative rate on PO detection is higher than your team probably assumes, and those invoices are running through weaker controls than they should. Then check whether your GL coding for repeat non-PO vendors is actually using vendor-specific historical mapping or defaulting to a generic catch-all account, since the second pattern quietly accumulates miscoded spend that surfaces as a mess at month-end close.</p>
 
     <p>Finally, run the vendor-concentration check: which non-PO vendors, ranked by annual dollar volume, are large enough to be worth converting into a real contracted, PO-backed relationship. This is usually a short list, and it is the highest-leverage output of doing this analysis at all, since it turns a processing efficiency exercise into an actual procurement decision with real savings behind it.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is a non-PO invoice?</strong><br />
-    An invoice for spend that never went through a purchase order process, typically recurring operational costs like utilities, subscriptions, and professional services where cutting a formal PO for each transaction is impractical.</p>
-
-    <p><strong>How do you know if an invoice genuinely has no PO versus one that extraction missed?</strong><br />
-    Combine vendor history (does this vendor typically send PO-backed invoices) with extraction confidence in the region where a PO number would normally appear. A vendor with a strong PO-backed history producing a low-confidence "not found" result deserves a second look before being classified as genuinely non-PO.</p>
-
-    <p><strong>How should non-PO invoices be coded without a purchase order to inherit GL data from?</strong><br />
-    Through vendor-specific historical coding patterns, defaulting to how a given vendor's invoices have been coded previously, with departures from that pattern flagged for human confirmation rather than requiring fresh manual coding on every invoice.</p>
-
-    <p><strong>Why should non-PO exception queues be split into different categories instead of one list?</strong><br />
-    Because missing documentation, vendor validation failures, coding uncertainty, and PO-detection ambiguity each need a different person and a different resolution path. Treating them identically trains AP teams to process the queue mechanically rather than applying the right response to each type of hold.</p>
-
-    <p><strong>What is the difference between structural non-PO spend and maverick spend?</strong><br />
-    Structural non-PO spend comes from categories where a PO genuinely does not make sense (utilities, subscriptions, recurring services). Maverick or policy-bypass spend is a purchase that should have gone through procurement and gotten a PO but did not, often showing up as one-off, higher-variance amounts from unfamiliar vendors. Both land in the same exception queue but carry different risk levels.</p>
-
-    <p><strong>What percentage of invoices are typically non-PO?</strong><br />
-    The Institute of Finance and Management's benchmarking data puts non-PO invoices at roughly 30 to 50% of total invoice volume for many organizations, though this varies significantly by industry and how aggressively a company enforces PO-first purchasing policy.</p>
-
     <p>The detection logic above is not complicated once written down, but almost nothing published about non-PO invoice processing writes it down at all, treating extraction as a black box that either finds a PO or does not.</p>
 
     <p>Sources: non-PO invoice volume benchmark from the <a href="https://www.iofm.com/ask-the-expert/benchmarking-data-for-po-vs-non-po-invoices" target="_blank" rel="noopener">Institute of Finance and Management</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>

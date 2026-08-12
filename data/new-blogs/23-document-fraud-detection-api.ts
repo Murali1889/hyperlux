@@ -86,26 +86,6 @@ export const blog23: BlogPost = {
     <p>If you are starting a KYC workflow from scratch: pick a vendor with the five checks and proven banking customers. Do not build your own.</p>
     <p>If you have an existing KYC system with weak fraud detection: add a fraud check API in front of your existing workflow. The five checks alone will catch most of what you are missing.</p>
     <p>If you are at a fintech with growing fraud loss: stop guessing which checks matter. Pull last quarter's actual fraud losses, categorize them by failure mode, and pick a vendor whose checks address your top three categories. (<a href="/author/nupura-ughade">I write about fraud architecture decisions often.</a>)</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>What is a document fraud detection API?</h3>
-    <p>A document fraud detection API takes a document image and returns a verdict on whether the document is authentic. Modern APIs combine OCR, computer vision, MRZ checksum validation, tampering detection, and cross-field consistency checks to produce a fraud risk score.</p>
-
-    <h3>How accurate is document fraud detection in 2026?</h3>
-    <p>Top APIs catch 95-98% of obvious fraud attempts (template mismatches, simple tampering, mismatched fields). The remaining 2-5% requires additional signals, velocity analysis, fraud database cross-reference, behavioral signals, human review.</p>
-
-    <h3>Can fraud detection be done in real-time?</h3>
-    <p>Yes. Dedicated APIs run the five-check pipeline in under 2 seconds per document. Combined with parallel sanctions screening, full KYC verification can complete in under 5 seconds end-to-end.</p>
-
-    <h3>What document types does fraud detection cover?</h3>
-    <p>Driver's licenses (all US states + many countries), passports (ICAO standard, 195+ countries), national IDs, utility bills, bank statements, pay stubs, employment letters, and tax forms. Coverage varies by vendor.</p>
-
-    <h3>How much does a document fraud detection API cost?</h3>
-    <p>Per-document pricing typically runs $0.05-$0.50 depending on checks enabled. Volume discounts apply above 100K documents/month. Compare against the cost of fraud losses you are currently absorbing.</p>
-
-    <h3>Is document fraud detection enough for full KYC?</h3>
-    <p>No. KYC requires document fraud detection plus identity verification (face match, liveness), sanctions and PEP screening, address verification, and an audit trail. Fraud detection is one component, not the whole solution.</p>
   `,
   image: "/images/passport-mrz-highlight.png",
   featuredImage: "/images/passport-mrz-highlight.png",

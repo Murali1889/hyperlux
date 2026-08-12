@@ -120,26 +120,6 @@ export const blog21: BlogPost = {
     <p>If you process under 100 invoices/month: do not buy OCR yet. The ROI math does not work. Try Google Drive OCR or QuickBooks Receipt Capture for occasional documents.</p>
     <p>If you process 100-1,000 invoices/month: trial an OCR API on the 50 most recent invoices from your top three vendors. Measure accuracy on vendor name, total, date, and line items. If you clear 95% on those fields, the rest of the project is repeatable.</p>
     <p>If you process 1,000+ invoices/month: do not waste time evaluating. The payback is fast enough that even an imperfect first pick is cheaper than not starting. Pick an API with classification + extraction + validation in one product. Start with invoices, expand to receipts and bank statements within 90 days. (<a href="/author/nupura-ughade">I write about these rollout patterns often.</a>)</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>What is OCR in accounting?</h3>
-    <p>OCR in accounting is the use of optical character recognition software to extract data from accounting documents, invoices, receipts, bank statements, purchase orders, tax forms, and push that data into bookkeeping systems automatically, without manual data entry.</p>
-
-    <h3>How accurate is OCR for invoices?</h3>
-    <p>On clean PDF invoices: 95-99% accuracy on the seven critical fields (vendor, invoice number, date, due date, total, tax, line items). On scanned or photographed invoices: 90-95%. The remaining errors are caught by validation rules and exception queues.</p>
-
-    <h3>Can OCR replace bookkeepers?</h3>
-    <p>No. OCR handles the routine data entry that bookkeepers find tedious. Real judgment work, vendor disputes, reconciliation discrepancies, audit prep, close cycles, still needs experienced people. Most teams that adopt OCR keep the same headcount and redeploy them to higher-value work.</p>
-
-    <h3>How long does an OCR accounting rollout take?</h3>
-    <p>For a single document type (usually invoices): 2-4 weeks from API signup to production-ready. For a full multi-document rollout (invoices + receipts + bank statements + POs): 8-12 weeks. The slow part is not the OCR, it's the validation rules and exception handling.</p>
-
-    <h3>Which accounting software integrates with OCR APIs?</h3>
-    <p>QuickBooks, Xero, NetSuite, Sage Intacct, Microsoft Dynamics, FreshBooks, and Zoho Books all accept API-extracted data. Integration depth varies; the cleanest fits are usually QuickBooks Online, Xero, and NetSuite.</p>
-
-    <h3>Is OCR accounting safe for sensitive financial data?</h3>
-    <p>Reputable OCR APIs encrypt in transit, isolate customer data, delete documents after processing per a published retention policy, and provide SOC 2 Type II reports. For specifically regulated workflows (healthcare AR, regulated industries), require a Business Associate Agreement or equivalent. Avoid free online OCR sites for any accounting document, most have weak privacy terms.</p>
   `,
   image: "/images/ocr-in-finance.png",
   featuredImage: "/images/ocr-in-finance.png",

@@ -77,27 +77,6 @@ export const blogAp07: BlogPost = {
     <p>Ask specifically what document set an accuracy claim was measured against, single-page or multi-page, clean or real-world messy, and whether the number is character-level (does the text match) or field-level (is the row structure correct). These are different measurements that produce very different-looking numbers from the same underlying engine, and a vendor citing the more favorable one without specifying which is not necessarily lying, but is not giving you the number you actually need to make a decision.</p>
 
     <p>The confidence-score question belongs in the same conversation. Ask whether confidence is reported per line item or only per document, since a single document-level score tells your review queue nothing about which specific row needs a second look on an invoice with 20 lines and one genuine error buried in the middle.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>Why do invoice OCR accuracy claims vary so much between vendors?</strong><br />
-    Because "accuracy" measures different things: character-level accuracy on clean single-page invoices is easy to make look high, while field-level accuracy on multi-page tables with wrapped line items is a much harder and more relevant measure for real AP volume. Vendors rarely specify which one their headline number represents.</p>
-
-    <p><strong>What is the most common cause of bad invoice line-item extraction?</strong><br />
-    Multi-page tables, specifically rows near a page break (missed entirely), wrapped descriptions (split into a false extra row), and rows sitting close together with no clear separator (merged into one row). All four failure modes concentrate on tables spanning more than one page.</p>
-
-    <p><strong>How can I check if invoice line-item extraction is correct without manually reviewing every row?</strong><br />
-    Sum the extracted line-item totals and compare against the invoice's stated grand total. A mismatch is strong evidence of a structural extraction error, missing row, merged row, or misassigned column, even before you identify which specific row is wrong.</p>
-
-    <p><strong>Does invoice line-item extraction accuracy differ for scanned versus digital PDF invoices?</strong><br />
-    Yes, scanned and photographed invoices introduce additional failure sources (skew, low contrast, faded text) on top of the structural table challenges, generally lowering accuracy further than a clean digital PDF with the same table complexity.</p>
-
-    <p><strong>Why does a line-item extraction engine need per-field confidence scores, not just an overall document score?</strong><br />
-    A document-level score tells you the invoice as a whole was extracted with reasonable confidence, but not which specific row to check. On a 20-line invoice with one genuine extraction error, per-field confidence lets a reviewer jump directly to the uncertain row instead of re-verifying all 20 lines, which is the difference between a review queue that scales and one that does not.</p>
-
-    <p><strong>What should I ask a vendor before trusting their line-item extraction accuracy claim?</strong><br />
-    Ask what document set the number was measured against (single-page or multi-page, clean or real-world), and whether it is character-level or field-level (row structure) accuracy. Then test on 20 of your own real invoices, weighted toward multi-page tables, before trusting the vendor's number for your volume.</p>
-
     <p>The honest summary: no engine gets every row right on every real invoice, ours included, and any post claiming otherwise is not being straight with you. What separates a usable system is not perfection, it is a measured, disclosed accuracy number on the hard case, multi-page tables, plus confidence scores good enough to route the genuinely uncertain rows to a human before they cause a downstream problem.</p>
 
     <p>Sources: extraction accuracy figures from our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>, methodology described in that post. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>

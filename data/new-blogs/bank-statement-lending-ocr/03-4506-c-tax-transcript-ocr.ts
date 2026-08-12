@@ -67,27 +67,6 @@ export const blogBl03: BlogPost = {
     <p>Self-employed applicants are exactly the population where this reconciliation step earns its keep most often, since their qualifying income already depends on a separate net-profit calculation covered in our <a href="/resources/blogs/mortgage-ocr">mortgage document OCR guide</a>, and a transcript mismatch on that same income is a materially bigger red flag for this group than for a stable W-2 earner with a single, simple income source.</p>
 
     <p>Ask which transcript type your process actually requests by default, and whether that choice matches the question you are trying to answer. A Return Transcript alone cannot tell you about post-filing amendments; only an Account Transcript or Record of Account can. Then ask whether your pipeline logs and checks the document count on every Wage and Income Transcript pulled, since a transcript sitting at or near the 85-document ceiling needs a supplemental step most pipelines silently skip. Finally, confirm your process has explicit handling for requests made in January and early February, before current-year wage and income data exists, so a genuinely empty transcript during that window gets treated as a timing artifact rather than a fraud flag on an applicant who has done nothing wrong.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is the difference between a Tax Return Transcript and a Tax Account Transcript?</strong><br />
-    A Return Transcript shows the original return as filed and never updates. An Account Transcript shows basic account data plus any changes made after filing, amendments, IRS adjustments, and penalties. Only the Account Transcript reflects post-filing corrections.</p>
-
-    <p><strong>Why does the Wage and Income Transcript have a document limit?</strong><br />
-    It is capped at roughly 85 income documents per request. Applicants with many income sources, gig workers, investors with multiple 1099s, can have their transcript truncated below their actual reported income for reasons unrelated to fraud, which is why checking the document count matters before treating the total as complete.</p>
-
-    <p><strong>When does the current year's Wage and Income Transcript become available?</strong><br />
-    Generally the first week of February, once the bulk of employer and payer filings for the prior year reach the IRS. Requests made in January will return incomplete or empty current-year data as a timing artifact, not a red flag.</p>
-
-    <p><strong>What does reconciling a 4506-C transcript against a submitted tax return actually catch?</strong><br />
-    Discrepancies between what an applicant told the lender and what they told the IRS on adjusted gross income, total income, or self-employment net profit. Since the transcript is an independent IRS-held record the applicant cannot alter, a mismatch is a strong, direct fraud signal.</p>
-
-    <p><strong>Is a Verification of Non-filing Letter proof that no return was required?</strong><br />
-    No. It only confirms the IRS has no record of a processed return for that year. It says nothing about whether the applicant was actually required to file, which is a separate determination.</p>
-
-    <p><strong>Why is extracting data from a tax transcript different from extracting a W-2 or 1099?</strong><br />
-    Transcripts are dense, text-formatted documents with labeled line items rather than the boxed, fielded layout of a W-2 or 1099. Correctly pairing a line label like adjusted gross income with its dollar figure is a different, harder extraction problem than reading a numbered box.</p>
-
     <p>Automating the request side of a 4506-C is table stakes. What actually protects a lender from a fabricated income document is what happens after the transcript comes back, matching the right transcript type to the right question, catching a truncated document before trusting its total, and reconciling it line by line against what the applicant submitted. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/transforming-financial-services.png",

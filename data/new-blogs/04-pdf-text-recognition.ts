@@ -94,26 +94,6 @@ export const blog04: BlogPost = {
     <h2>What I'd Do Today</h2>
     <p>Run Tesseract on a representative sample of your real documents, not the clean demo PDFs, the messy ones from your inbox. Measure accuracy honestly. If you clear 95% on the field-level data you care about, keep Tesseract and move on. If you are below 90%, the cost of fixing OCR errors downstream almost always exceeds the marginal cost of a paid API.</p>
     <p>The single most common mistake: teams use Tesseract because it is free, accept 85% accuracy, and then build elaborate manual review workflows to catch the 15% errors. That review workflow costs more than the API would have. Run the math before you commit. (<a href="/author/nupura-ughade">I write about these tradeoffs a lot</a>.)</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>Is Tesseract still the best free OCR engine in 2026?</h3>
-    <p>For most use cases, yes. PaddleOCR is a strong alternative for multi-language and table-heavy work. EasyOCR is friendlier to install but less battle-tested. Tesseract has the deepest community, the broadest language support, and the longest track record.</p>
-
-    <h3>Can I make Tesseract handle tables?</h3>
-    <p>Partially. Pass <code>--psm 6</code> (single block of text) or pre-process with OpenCV to detect table boundaries and OCR each cell separately. It is a real engineering project. If tables are central to your workflow, a layout-aware engine pays for itself fast.</p>
-
-    <h3>When does Tesseract become more expensive than a paid API?</h3>
-    <p>Roughly when you are spending more than a half-day per month on OCR bugs and rework. For most teams that is around 5,000 documents per month with mixed quality. Below that, Tesseract is fine. Above that, engineering cost dominates.</p>
-
-    <h3>What is the easiest Tesseract setup for a beginner?</h3>
-    <p>Install <code>ocrmypdf</code> via Homebrew on Mac, apt-get on Linux, or chocolatey on Windows. The package wraps Tesseract with sensible defaults and handles the messy bits. Two commands and you have a working OCR pipeline.</p>
-
-    <h3>Can vision-language models replace OCR entirely?</h3>
-    <p>For small batches and complex layouts, yes. For high-volume production, the cost and speed disadvantages make pure VLM impractical today. Hybrid pipelines, fast OCR for the bulk, VLM for the trickiest 5-10%, are the realistic 2026 pattern.</p>
-
-    <h3>Why is my Tesseract output garbled on rotated pages?</h3>
-    <p>You skipped rotation correction. Tesseract reads as if every page is upright. A sideways page produces sideways gibberish. Add <code>--rotate-pages</code> or pre-rotate with another tool before OCR.</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",

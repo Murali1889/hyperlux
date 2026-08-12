@@ -62,27 +62,6 @@ export const blogKa13: BlogPost = {
     <h2>What I would check in your current national ID verification pipeline</h2>
 
     <p>Ask whether your pipeline reads the AAMVA PDF417 barcode as the primary data source for US state-issued IDs, or whether it relies on visual template matching even for a document category that already carries a standardized machine-readable payload on the back of the card. Then ask specifically whether barcode data and printed front-of-card text are compared as an independent cross-check, since the worked example above shows that comparison catching a fraud case a single-source extraction would miss entirely. Confirm what happens when a document fails to confidently match any stored template, whether it silently forces the closest available match or routes to human review, since the honest failure mode matters considerably more than the headline count of templates available to match against in the first place. Finally, confirm your template library update cadence for the international formats that do genuinely require it, the same currency discipline that matters for the fraud-detection signatures covered in our <a href="/resources/blogs/bank-statement-fraud-detection">bank statement fraud detection piece</a>, since a stale template library degrades quietly rather than failing loudly.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>Why doesn't every national ID format need its own visual template?</strong><br />
-    US and Canadian driver's licenses and ID cards follow the AAMVA DL/ID Card Design Standard, which mandates a PDF417 barcode encoding core fields in a fixed format regardless of the card's visual design, making barcode extraction more reliable than visual template matching for this category.</p>
-
-    <p><strong>What is the AAMVA standard and what does it encode?</strong><br />
-    The American Association of Motor Vehicle Administrators' DL/ID Card Design Standard, whose Annex D defines a mandatory PDF417 barcode using standardized element codes, DAC for first name, DCS for family name, DBB for date of birth, DAQ for ID number, applied uniformly across all US states and Canadian jurisdictions.</p>
-
-    <p><strong>Does barcode extraction alone fully verify a driver's license or ID card?</strong><br />
-    No. Comparing the barcode data against the printed front-of-card text is an important independent cross-check, since a mismatch between the two, such as a differently spelled name or altered date of birth, is a specific, checkable fraud signal that barcode reading alone would not surface.</p>
-
-    <p><strong>Why can a state ID redesign break a template-matching pipeline without affecting barcode extraction?</strong><br />
-    A redesign changes visual elements like background color and photo placement, which can cause a template-matching pipeline without an updated template to misclassify the document, while the underlying AAMVA barcode payload remains unchanged and unaffected by the visual redesign.</p>
-
-    <p><strong>Do international national ID cards use the same barcode standard as US driver's licenses?</strong><br />
-    No. Most international national ID formats lack an equivalent standardized machine-readable payload, so they still require template-based visual classification, which is what large template libraries from vendors like Regula and ABBYY genuinely exist to cover.</p>
-
-    <p><strong>What matters more than a vendor's headline template count?</strong><br />
-    What the pipeline does when a document does not confidently match any stored template. Forcing a low-confidence match to the closest available template produces wrong extractions with no visible warning, while routing low-confidence cases to human review is the safer design.</p>
-
     <p>A template count in the thousands is a genuine, real answer to the genuine, real diversity of national ID formats worldwide. It is not, on its own, the right architecture for every ID category within that diversity, since the largest single category by volume in the US market already carries a uniform, standardized machine-readable payload that makes fifty separate visual templates unnecessary for the core extraction task, and considerably weaker than a barcode-versus-print cross-check at actually catching the fraud case that matters most.</p>
 
     <p>None of this argues against maintaining a large template library. International coverage genuinely requires one, and the alternative, rejecting every ID format without a recognized machine-readable standard, is not a real option for a global verification product. It is a reason to confirm your pipeline checks for a standardized payload first before falling back to visual classification, and to ask what actually happens on a low-confidence match, rather than assuming a large template count alone is evidence of a well-built verification pipeline. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>

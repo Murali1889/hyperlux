@@ -71,27 +71,6 @@ export const blogAp04: BlogPost = {
     <p>First, confirm what Status your current integration defaults to and whether that matches your actual risk tolerance, not just what was easiest to build. Second, if you manage more than one Xero organization, test explicitly that a batch run cannot cross-post between tenants under load, not just in a single-client demo. Third, pull 15 real invoices and check whether vendor matching resolves to ContactID correctly rather than creating near-duplicate contacts, the same failure pattern that shows up across every accounting platform we have covered in this <a href="/resources/blogs/accounts-payable-ocr">accounts payable OCR series</a>.</p>
 
     <p>For a bookkeeping or accounting firm specifically, add a fourth check: confirm that whatever review queue your team uses actually separates by client organization, rather than presenting one undifferentiated list of pending bills across every client. A shared queue with no client-level filtering is how the tenant-mismatch failure mode above compounds into a real incident, someone approves a bill quickly without checking which client's name is attached, because the interface never made that distinction obvious in the first place.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is the difference between ACCPAY and ACCREC in the Xero API?</strong><br />
-    ACCPAY is a bill, an invoice you owe a supplier, relevant to accounts payable and invoice OCR. ACCREC is a sales invoice issued to a customer. The Type field must be set explicitly and should never be inferred from document content, since getting it wrong corrupts both payables and receivables.</p>
-
-    <p><strong>What does the Status field control on a Xero invoice created via API?</strong><br />
-    Status determines whether the bill is DRAFT (visible but not posted to the ledger), SUBMITTED (pending approval), or AUTHORISED (a posted liability). Most OCR integrations hard-code one status by default; a confidence-based approach that routes low-confidence extractions to DRAFT for review is safer for most AP workflows.</p>
-
-    <p><strong>Why did my invoice OCR post a bill to the wrong Xero organization?</strong><br />
-    This typically happens when a multi-client integration does not explicitly re-validate the tenant ID on every API call. Xero's API is organization-scoped, and without a per-request check, a batch process managing multiple client books risks cross-posting invoices between organizations.</p>
-
-    <p><strong>Can Xero invoice OCR assign GL account codes automatically?</strong><br />
-    Not from optical extraction alone. AccountCode is required per line item, and OCR has no inherent knowledge of a specific organization's chart of accounts. This requires a separate rules engine or historical vendor-to-account mapping layered on top of the extracted data.</p>
-
-    <p><strong>Does Xero block duplicate invoices automatically?</strong><br />
-    Not by default across all contacts. Duplicate detection needs to check ContactID combined with InvoiceNumber, since Xero does not prevent the same invoice number from being used across different suppliers.</p>
-
-    <p><strong>Can invoice OCR assign Xero tracking categories automatically?</strong><br />
-    Only through an explicit vendor-to-category mapping rule, not from extraction alone. Tracking categories like project or cost center have no natural signal on most invoices, so line items without a matching rule should route to human assignment rather than post uncategorized.</p>
-
     <p>Sources: field structure verified against the Xero Accounting API Invoices endpoint documentation and independent technical references. Extraction accuracy figures from our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/invoice-processing.png",

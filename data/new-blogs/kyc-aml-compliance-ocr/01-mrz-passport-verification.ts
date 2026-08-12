@@ -72,27 +72,6 @@ export const blogKa01: BlogPost = {
     <h2>What I would check in your current MRZ verification pipeline</h2>
 
     <p>Ask whether your pipeline actually recomputes every field checksum, including the composite, or only extracts the MRZ text and trusts it without validation, since extraction accuracy and checksum validity are two different claims and only the second one actually catches tampering or misreads. Then ask whether a checksum failure routes differently depending on likely cause, a probable OCR misread on an otherwise-consistent document versus a genuine tampering signal, or whether every failure gets treated identically regardless of context. Confirm document-type classification, TD1, TD2, or TD3, runs before checksum logic, using the correct field-position rules for that specific format rather than a single hardcoded layout. And check specifically how filler characters are handled during extraction, since a misread filler boundary corrupts the checksum before the algorithm itself ever gets a chance to run correctly.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is the ICAO 9303 MRZ checksum algorithm?</strong><br />
-    Convert each character to a number (digits as themselves, A-Z as 10-35, filler as 0), multiply by a repeating 7-3-1 weight pattern left to right, sum the products, and take the remainder after dividing by 10. That remainder is the check digit.</p>
-
-    <p><strong>What does the composite check digit on a passport MRZ actually validate?</strong><br />
-    It runs the same algorithm over a concatenation of the document number, date of birth, and expiry date fields along with their individual check digits, confirming every field is internally consistent with every other one, not just individually correct.</p>
-
-    <p><strong>Does a failed MRZ checksum always mean the document is fraudulent?</strong><br />
-    No. A checksum failure can also indicate an OCR misread during extraction rather than actual tampering. Both produce the identical signature, a mismatch between the printed check digit and the recalculated one, and need different handling.</p>
-
-    <p><strong>Why is the MRZ more reliable to extract than the rest of a passport's data page?</strong><br />
-    It is printed in OCR-B, a typeface specifically designed for reliable machine reading, unlike the fonts used for the document's other printed fields.</p>
-
-    <p><strong>Why does document type need to be classified before checksum validation runs?</strong><br />
-    ICAO 9303 defines different formats, TD1, TD2, TD3, with different field layouts and lengths. Applying the wrong format's field-position rules produces checksum failures on genuinely valid documents.</p>
-
-    <p><strong>What happens to a checksum if a forger changes a digit but doesn't update the check digit?</strong><br />
-    The recalculated check digit no longer matches the printed one. A worked example altering a date of birth by one digit shows the check digit shifting from 0 to 7, an immediate, detectable mismatch.</p>
-
     <p>Explaining that MRZ checksums catch tampering is true and, on its own, not particularly useful to anyone building or evaluating a verification pipeline. The actual algorithm is simple enough to compute by hand, as the worked example above shows, arithmetic a person could genuinely check with pencil and paper in a couple of minutes, and understanding it is the difference between trusting a vendor's claim and actually knowing what your own pipeline is, or is not, checking. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/passport-ocr.png",

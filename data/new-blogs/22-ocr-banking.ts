@@ -142,26 +142,6 @@ export const blog22: BlogPost = {
     <p>If you are at a community bank under $1B in assets: do not build your own OCR. Pick a vendor with proven banking customers, real SOC 2, and clear US data residency. Use the five tests above.</p>
     <p>If you are at a regional bank ($1-50B): you need a multi-vendor strategy. Use your core's built-in OCR for routine documents. Layer a specialty vendor for mortgage, KYC, or commercial lending packets where the core's OCR falls short.</p>
     <p>If you are at a BaaS sponsor: your liability profile is higher than your customers expect. Require your fintech partners to use OCR vendors you have approved. Audit their extraction logs quarterly. (<a href="/author/nupura-ughade">I write about these regulated-industry tradeoffs often.</a>)</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>What is OCR in banking?</h3>
-    <p>OCR in banking is software that reads pictures of banking documents, statements, applications, IDs, wire instructions, and turns them into structured data for core banking, loan origination, and BSA systems.</p>
-
-    <h3>How accurate does OCR need to be for banking?</h3>
-    <p>For automated decisions, regulators generally expect 99%+ accuracy on critical fields with documented validation. Below 99%, the workflow needs a human review queue for low-confidence extractions. The exact thresholds vary by regulator and product.</p>
-
-    <h3>Can OCR alone meet BSA/AML requirements?</h3>
-    <p>No. OCR extracts data; meeting BSA/AML requires the extracted data to flow into a monitoring system with SAR-generation capability, sanctions screening, and immutable audit trails. OCR is one component, not the whole compliance stack.</p>
-
-    <h3>What banking documents are hardest for OCR?</h3>
-    <p>Handwritten check stubs, faded multi-generation photocopies, packets without page boundaries, and any document with stamps or signatures over critical text fields. Modern engines handle 90-95% of these correctly with proper pre-processing.</p>
-
-    <h3>Should banks build or buy OCR?</h3>
-    <p>For meaningful volume above 10,000 documents per month, build-versus-buy depends on engineering capacity. Most community and regional banks should buy. Most large banks have already built. The middle ground (regional banks) is where the hardest decision lives.</p>
-
-    <h3>How much does OCR cost in banking?</h3>
-    <p>Per-page pricing typically runs $0.02-$0.10 depending on document complexity and features (classification, validation, screening). At meaningful volume, expect 60-80% cost reduction compared to manual processing within 6-12 months.</p>
   `,
   image: "/images/ocr-bank-statement-technology.png",
   featuredImage: "/images/ocr-bank-statement-technology.png",

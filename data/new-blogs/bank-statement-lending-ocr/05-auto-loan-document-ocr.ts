@@ -60,27 +60,6 @@ export const blogBl05: BlogPost = {
     <p>Ask whether your pipeline distinguishes ELT-state transactions, where lien confirmation should come from a database query, from paper-title transactions, where it genuinely depends on document extraction, or whether every transaction routes through the same paper-title assumption regardless of state. Then ask whether an extracted title brand actually triggers a policy lookup, LTV adjustment, review routing, or decline, or whether it is captured and stored without any connected downstream action. Finally, and this is the one most likely to be quietly wrong, check what age threshold your odometer disclosure logic is actually running on. If it still says a flat 10 years, it has been out of date since January 2021, and it is worth confirming directly rather than assuming a rule set once at implementation is still the current federal requirement.</p>
 
     <p>The document-intake side of this problem, classifying which of the dozen or so documents in an auto loan file is actually the title versus the application versus a proof-of-insurance page, is a separate but related check worth running alongside the policy questions above. Misclassifying a title as a generic supporting document, rather than routing it through title-specific extraction and the brand and lien logic above, quietly defeats every check described in this piece before any of them get a chance to run, the same intake-classification risk our <a href="/resources/blogs/mortgage-ocr">mortgage document OCR guide</a> covers for the mortgage-file equivalent of this problem.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What does it mean for an auto lien to be perfected?</strong><br />
-    Perfection means the lender's security interest has been properly recorded with the state, typically through the DMV or title agency, giving it legal priority over other creditors' claims if the borrower defaults or files bankruptcy. It is a state action, not a property of the extracted document text.</p>
-
-    <p><strong>What is Electronic Lien and Title (ELT) and why does it matter for OCR?</strong><br />
-    ELT is a state program where a lien is recorded directly in the state's electronic database and no physical title is printed while the lien exists. Under ELT, lien confirmation should come from a database query, not document extraction, which most title OCR pipelines built around paper documents are not set up to handle.</p>
-
-    <p><strong>How does a salvage or rebuilt title affect auto loan approval?</strong><br />
-    It commonly triggers one of three lender responses: a reduced maximum loan-to-value ratio, a manual underwriting review, or in some cases outright decline for specific brand categories. Which applies depends on the individual lender's credit policy and the specific brand.</p>
-
-    <p><strong>What is the current federal odometer disclosure age rule?</strong><br />
-    Since January 1, 2021, disclosure is required for 20 years from a vehicle's model year for model year 2011 and later, rolling forward one year at a time. Model year 2010 and earlier vehicles remain under the prior flat 10-year exemption.</p>
-
-    <p><strong>Why would a pipeline built before 2021 get odometer disclosure wrong today?</strong><br />
-    If it was configured with the old flat 10-year exemption rule and never updated, it will incorrectly treat vehicles from model year 2011 onward as exempt years before their actual 20-year exemption date arrives, missing a legally required disclosure field.</p>
-
-    <p><strong>Does extracting a title brand field automatically protect a lender from bad collateral risk?</strong><br />
-    No. Extraction only captures the text. The protection comes from a downstream policy lookup that connects the extracted brand to an actual LTV adjustment, review routing, or decline decision, a step that is easy to skip if the pipeline treats extraction accuracy as the finish line.</p>
-
     <p>Reading a title document accurately is the well-solved part of auto loan processing. Whether that reading translates into a correctly perfected lien, a properly risk-adjusted loan, and a legally compliant disclosure depends on routing logic sitting one layer downstream of extraction, and that layer is where most of the real risk in this document type actually lives. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/ocr-process.png",

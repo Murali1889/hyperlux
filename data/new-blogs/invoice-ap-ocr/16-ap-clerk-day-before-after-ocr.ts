@@ -82,24 +82,6 @@ export const blogAp16: BlogPost = {
     <p>Do not just ask how much average processing time drops. Ask what happens to the specific person doing this work, hour by hour, on both a clean-invoice day and a hard-invoice day, and whether the freed-up time gets redirected toward genuinely more valuable work or just absorbed into a smaller headcount with the same workload. The aggregate statistic and the lived daily experience can both be true at once, and only one of them tells you whether the change actually worked for the team living it.</p>
 
     <p>Ask the AP team itself, not just the numbers, what changed. Marcus's own answer, three months in, was not about the time saved in the abstract, it was that he stopped dreading the last hour of a Friday afternoon spent re-keying the same fields into the same system for the two-hundredth time that week. That answer does not show up in a cost-per-invoice spreadsheet, and it is arguably the more honest measure of whether the rollout actually improved the job, not just the metric.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>How much time does invoice OCR actually save an AP clerk per day?</strong><br />
-    Widely cited benchmarks put manual touch time at roughly 12 minutes per invoice versus 1 to 3 minutes with AI-assisted extraction, but the savings concentrate heavily on clean, routine invoices. Genuinely complex or exception-flagged invoices see much smaller time reductions.</p>
-
-    <p><strong>Does invoice OCR make exception handling faster?</strong><br />
-    Not meaningfully. A genuine discrepancy still requires the same investigation and judgment it always did. What typically improves is the volume of false exceptions, invoices wrongly flagged due to extraction ambiguity rather than real problems, which reduces overall exception queue volume without making each real exception faster to resolve.</p>
-
-    <p><strong>What tasks in manual AP processing take the most time?</strong><br />
-    Beyond data entry itself, sorting and triaging incoming documents, manual PO cross-referencing across disconnected systems, and task-switching costs from interruptions are significant time sinks that rarely appear in simple per-invoice touch-time statistics.</p>
-
-    <p><strong>How should a team measure OCR ROI beyond the average time-savings statistic?</strong><br />
-    Track the distribution of time savings across easy versus hard invoices, not just the average, and track what the freed-up time actually gets redirected toward, whether it is genuinely higher-value work or simply absorbed into a reduced headcount with unchanged workload.</p>
-
-    <p><strong>Does manual invoice data entry get less accurate later in the day?</strong><br />
-    Yes, sustained repetitive data entry has a real fatigue cost, and end-of-day error rates on structurally similar work tend to exceed morning error rates. This decay is invisible in a single averaged touch-time statistic but has real implications for staffing high manual-entry volume.</p>
-
     <p>Names in this piece are changed at the team's request; the numbers and the day itself are real. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/invoice-processing.png",

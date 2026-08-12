@@ -60,27 +60,6 @@ export const blogBl18: BlogPost = {
     <h2>What I would check in your current real-time processing pipeline</h2>
 
     <p>Start with the training pipeline itself, since that is where this specific problem actually originates, well before it ever shows up as a mysterious performance gap in production. Ask whether your training data pipeline computes historical features using a point-in-time join against ingestion timestamps, or by filtering current, fully-settled data against a historical date window, since the second approach leaks future information into every historical training example without necessarily producing any obviously wrong output. Then ask whether anyone has actually compared backtested model performance against real, live production performance on a comparable population, since a meaningful, unexplained gap between the two is one of the clearest available signals that point-in-time leakage is happening somewhere in the training pipeline. Confirm your system tracks transaction ingestion timestamps as a distinct field from transaction date, since without that distinction, a point-in-time-correct join is not actually possible to build at all, no matter how fast the live-decision infrastructure itself has become. And specifically ask whether your training pipeline queries live, continuously updated views for historical backtesting, or immutable, timestamped historical snapshots, since the same-day-different-account distinction covered in our <a href="/resources/blogs/multi-account-bank-statement-ocr">multi-account aggregation piece</a> illustrates a related principle here: two data points that look identical on the surface can require completely different handling depending on a distinction the surface fields alone never reveal.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is point-in-time correctness in underwriting model training?</strong><br />
-    Ensuring every historical training example's features are computed using only data that had actually arrived by that specific historical decision date, not data that arrived later but happens to fall within the same date-based lookback window.</p>
-
-    <p><strong>How can a training pipeline leak future data without an obvious error?</strong><br />
-    By filtering a current, fully-settled database on transaction date alone rather than on ingestion timestamp relative to the decision moment. The resulting feature values look normal and plausible, not obviously wrong.</p>
-
-    <p><strong>Why does this leakage make backtested model performance misleading?</strong><br />
-    The model is trained and evaluated on the same leaked, more-complete-than-reality data, so it scores well in backtesting. The gap only appears in live production, where features correctly reflect only what has actually posted by decision time.</p>
-
-    <p><strong>Why is bank-statement data particularly vulnerable to this problem?</strong><br />
-    Bank-connection providers have real, acknowledged posting lag between when a transaction happens and when it becomes visible through their API, which is exactly the gap a naive date-filtered training pipeline fails to account for.</p>
-
-    <p><strong>What is a point-in-time join and how does it fix this?</strong><br />
-    A feature computation that filters on when each transaction was actually ingested relative to the decision timestamp, excluding anything that arrived after that moment regardless of its transaction date, rather than filtering by date range alone.</p>
-
-    <p><strong>Is fast live-decision infrastructure enough to guarantee a reliable underwriting model?</strong><br />
-    No. Sub-second decision latency and point-in-time-correct training data are two separate problems. A pipeline can be extremely fast at live decisions while still being trained on data that leaked future information, undermining the model's real-world accuracy.</p>
-
     <p>Real-time architecture has made the live decision fast. Whether the model making that fast decision was actually trained on data it would have genuinely had access to at each historical decision moment is a separate, quieter question, and it is exactly the one that determines whether the speed is delivering an accurate answer or just a quick one. A model can clear every latency benchmark a real-time architecture review would check and still be quietly wrong in a way none of those benchmarks were ever designed to catch. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/ocr-in-finance.png",

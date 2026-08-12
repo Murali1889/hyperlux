@@ -63,27 +63,6 @@ export const blogBl07: BlogPost = {
     <h2>What I would check in your current HELOC pipeline</h2>
 
     <p>Ask specifically which field your extraction pipeline treats as the HCLTV input for a HELOC, the approved credit limit or the current outstanding balance. If it is the balance, confirm how many files in your current pipeline involve a partially drawn line, since that is the exact population where the error above produces a materially wrong HCLTV without ever looking wrong on its face. Then confirm your process for capturing subordinate financing that has not yet appeared on a credit report, since an unreported second lien is functionally invisible to any pipeline that treats the credit pull as the sole source of existing-debt data for the CLTV or HCLTV calculation. Finally, check whether draw-period versus repayment-period status is tracked at all, or whether every HELOC payment figure gets used for DTI qualification identically regardless of which phase the loan is actually in, the same kind of field-level asset-verification discipline covered more broadly in our <a href="/resources/blogs/verification-of-assets-ocr">verification of assets guide</a>.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>Why does HCLTV use a HELOC's full credit limit instead of the current balance?</strong><br />
-    Because a HELOC is revolving credit, the borrower can draw the full approved limit at any point after closing without further lender approval. Using only today's drawn balance would understate the lender's real future exposure once more is drawn.</p>
-
-    <p><strong>What is the difference between CLTV and HCLTV?</strong><br />
-    CLTV, used for closed-end second mortgages, uses the actual unpaid principal balance. HCLTV, used when a HELOC is part of the file, uses the full approved credit limit regardless of how much has actually been drawn.</p>
-
-    <p><strong>Why would an OCR pipeline extract the wrong figure from a HELOC document?</strong><br />
-    Pipelines built primarily for closed-end mortgage documents default to pulling the current balance, the figure analogous to a mortgage's unpaid principal balance. That default produces a wrong HCLTV input for any HELOC that is not fully drawn.</p>
-
-    <p><strong>How much can the HCLTV error actually change the calculated ratio?</strong><br />
-    It scales with how much of the line is undrawn. A HELOC drawn to only a quarter of its approved limit can produce an HCLTV gap of several percentage points between the correct and incorrect calculation, potentially crossing an eligibility threshold either way.</p>
-
-    <p><strong>What happens if a second-lien HELOC does not appear on the applicant's credit report?</strong><br />
-    It still needs to be captured through direct documentation from the borrower or the creditor and included in the HCLTV calculation. A credit pull with no record of it is not evidence the lien does not exist, only that it has not yet been reported.</p>
-
-    <p><strong>Where should the approved credit limit versus current balance distinction live in the pipeline?</strong><br />
-    As separate extraction fields from the start, with the credit limit routed to HCLTV calculation and the current balance routed to payment-related calculations only, rather than one shared "loan amount" field used generically across closed-end and revolving document types.</p>
-
     <p>Instant HELOC approval is a genuinely solved workflow problem. Whether that approval is calculated on the correct exposure figure depends on a field-mapping distinction most generic lending OCR pipelines were never built with in mind, and it is exactly the kind of error that looks like a correct number right up until someone actually checks which field it came from and why. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/legal-document-automation.png",

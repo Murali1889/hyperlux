@@ -52,27 +52,6 @@ export const blogBl02: BlogPost = {
     <h2>What I would check in your current tax form OCR pipeline</h2>
 
     <p>Ask specifically whether your extraction pipeline pulls Box 5 alongside Box 1 on every W-2, and whether anything downstream actually uses Box 5 when the two diverge meaningfully, or whether Box 1 is quietly the only figure that ever reaches the qualification calculation. Then ask whether 1099 and self-employment income run through a genuinely separate qualification path, net of expenses with defined add-back categories and two-year trend logic, or whether the pipeline extracts a headline number from the tax form and hands it to underwriting labeled the same way a W-2 wage figure would be. If the second is true for either question, the gap is not in your OCR accuracy. It is in the qualification logic sitting immediately downstream of it, and it is worth fixing before the accuracy of the extraction layer gets blamed for a wrong income figure that was never an extraction problem in the first place. Our <a href="/resources/blogs/mortgage-ocr">mortgage document OCR guide</a> covers where this fits in the broader income-document checklist a full mortgage file requires.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>Why does a W-2 and a 1099 with the same gross amount qualify for different loan amounts?</strong><br />
-    Because they are qualified through different mechanics. W-2 wages, especially stable base pay, are usable close to face value. 1099 and self-employment income are qualified on net profit after business expense deductions, using a two-year history, which is typically lower than the gross figure printed on the 1099 form itself.</p>
-
-    <p><strong>What is the OMB control number and why does it matter for tax form OCR?</strong><br />
-    It is the Office of Management and Budget's identifier for an approved IRS information collection, printed in the top right corner of the form: 1545-0008 for Form W-2, 1545-0116 for Form 1099-NEC. Classifying by this number first is more resilient on degraded scans than layout matching alone, since the number often stays legible even when the rest of the page is compromised.</p>
-
-    <p><strong>Should qualifying income use W-2 Box 1 or Box 5?</strong><br />
-    Box 1 reports federal taxable wages after pre-tax deductions like 401(k) contributions. Box 5 reports Medicare wages, which has fewer exclusions and can be a more accurate gross figure for applicants with meaningful pre-tax contributions. Extracting both and routing to Box 5 when the two diverge significantly avoids understating income for disciplined savers.</p>
-
-    <p><strong>How is self-employment income calculated for loan qualification?</strong><br />
-    Starting from net profit on Schedule C, K-1, or 1120-S, not gross receipts or gross 1099 income, then adding back specific non-cash expense categories such as depreciation, depletion, and casualty losses, using a two-year history and generally using the lower or more conservative figure when income is trending down.</p>
-
-    <p><strong>What counts as a declining income trend for a self-employed applicant?</strong><br />
-    There is no universal cutoff, but treating any year-over-year decline, including normal 3-5% business variance, identically to a 25-40% structural decline produces review-queue noise that undermines the check. A defined threshold that separates ordinary variance from a genuine downward trend keeps the flag meaningful.</p>
-
-    <p><strong>Where should the W-2 versus 1099 income-type flag be set in an OCR pipeline?</strong><br />
-    At classification time, immediately after the pipeline identifies which form it is looking at, before any qualification math runs. Setting it as a downstream reporting label instead of an intake-time routing decision is where qualification errors between income types typically originate.</p>
-
     <p>Extraction accuracy gets most of the attention because it is the part that is easy to benchmark. Qualification logic is where a wrong number actually reaches a lending decision, and it deserves the same scrutiny extraction accuracy already gets. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/ocr-in-finance.png",

@@ -114,26 +114,6 @@ export const blog28: BlogPost = {
     <p>If you are building this from scratch: use an off-the-shelf vendor for the eight-step pipeline. Build is too expensive and too slow to optimize for sub-2-second latency without ML infrastructure expertise.</p>
     <p>If you have an existing pipeline that "feels slow": add per-step latency monitoring first. You will find that one or two steps are the problem. Fix those before redesigning the architecture.</p>
     <p>If you are evaluating vendors for real-time validation: ask for their P50/P95 latency numbers on a representative document. If they cannot answer in seconds (not minutes), the vendor is not actually optimized for real-time. (<a href="/author/nupura-ughade">I write about API architecture decisions often.</a>)</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>What is a real-time document validation API?</h3>
-    <p>A real-time document validation API takes a document upload and returns a complete verification verdict, authenticity, field extraction, fraud checks, sanctions screening, within a user-facing latency budget, usually under 5 seconds and ideally under 2.</p>
-
-    <h3>How fast does "real-time" need to be?</h3>
-    <p>Depends on the workflow. Customer onboarding tolerates 5-10 seconds with a progress indicator. Payment verification needs under 2 seconds. Real-time fraud checks need under 1 second. Match latency to the use case.</p>
-
-    <h3>Can a real-time API replace human review?</h3>
-    <p>Partially. The API handles the routine 90-95% of documents that pass all checks. The remaining 5-10% (low confidence, ambiguous, flagged for fraud) still need human review. The API's job is to make routing decisions, not eliminate humans entirely.</p>
-
-    <h3>What is the latency impact of fraud detection?</h3>
-    <p>Modern fraud detection adds 200-400 milliseconds when run in parallel with OCR. When run sequentially, it can double the total pipeline time. Always run fraud checks in parallel with extraction.</p>
-
-    <h3>Should I build or buy a real-time validation pipeline?</h3>
-    <p>For most teams: buy. The infrastructure to deliver sub-2-second latency across an 8-step pipeline requires significant engineering investment. Vendors specialize in this and their per-document cost is lower than your engineering payroll.</p>
-
-    <h3>How does this compare to a payroll-specific validation API?</h3>
-    <p>Payroll validation focuses on pay stubs, tax withholding forms, and direct deposit instructions. The architecture patterns are the same; the field extraction templates are payroll-specific. Vendors that handle KYC and payroll usually share infrastructure.</p>
   `,
   image: "/images/ocr-api.png",
   featuredImage: "/images/ocr-api.png",

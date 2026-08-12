@@ -104,26 +104,6 @@ export const blog16: BlogPost = {
     <p>If you suspect AR is stuck on intake: do the 20-transaction timeline reconstruction. Numbers will tell you whether intake is the bottleneck.</p>
     <p>If intake is the bottleneck: automate OCR and field extraction at the entry point. Even a basic Tier 1/2 pipeline cuts intake time dramatically.</p>
     <p>If your team is already doing OCR but it's slow or inaccurate: audit which Tier 2/3 categories you're seeing most. Each category has a specific fix. (<a href="/author/nupura-ughade">I write about specific operational fixes for these</a>.)</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>What is revenue cycle management?</h3>
-    <p>The end-to-end process of getting paid for work, from customer engagement through cash collection. Spans contracts, billing, document exchange, invoicing, collections, and dispute resolution.</p>
-
-    <h3>Why is document intake the bottleneck in RCM?</h3>
-    <p>Because every step downstream depends on data from documents customers send. Slow document intake delays billing, which delays invoicing, which delays payment. Speed at the front end propagates through the whole cycle.</p>
-
-    <h3>How long should document intake take?</h3>
-    <p>Under 1 day for routine documents. Same-day for high-priority. Multi-day intake suggests manual processing bottlenecks that automation can fix.</p>
-
-    <h3>Can OCR alone solve RCM intake delays?</h3>
-    <p>OCR is the necessary first step but not the whole solution. You also need classification, field extraction, validation, and routing to downstream systems. OCR plus a workflow layer.</p>
-
-    <h3>What is the difference between RCM and AR?</h3>
-    <p>RCM is the whole revenue cycle from engagement to cash. AR (Accounts Receivable) is the tail end, what's owed but not yet paid. RCM includes AR plus everything that happens before it.</p>
-
-    <h3>How does RCM differ in healthcare vs other industries?</h3>
-    <p>Healthcare RCM is dominated by claims processing (insurance billing, denials, appeals). Other industries see less complexity per transaction but more variety across customers. The intake automation patterns are similar; the downstream rules differ.</p>
   `,
   image: "/images/ocr-in-finance.png",
   featuredImage: "/images/ocr-in-finance.png",

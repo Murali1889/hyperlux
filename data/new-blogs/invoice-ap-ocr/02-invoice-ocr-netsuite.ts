@@ -76,27 +76,6 @@ export const blogAp02: BlogPost = {
     <h2>What I would check before extending NetSuite's native OCR</h2>
 
     <p>Confirm whether your current Bill Capture setup is posting to item.items or expense.items by default, because that single default decides whether PO matching is even structurally possible for those bills. Then pull 15 real multi-subsidiary invoices from vendors that bill more than one of your entities and check whether the subsidiary assignment is right, not just present. Both checks take under an hour and catch the two failure modes that cost the most to unwind after the fact, a bill posted against the wrong intercompany entity or a PO-eligible invoice that can never be matched because it landed as an expense line. Neither failure throws an error at post time, which is exactly why they survive undetected for months.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>Does NetSuite have built-in OCR for invoices?</strong><br />
-    Yes, through the Bill Capture module, a native add-on rather than a third-party integration. It extracts header-level fields (vendor, invoice number, date, amount, due date) from incoming vendor bills but does not reliably extract line-item detail or apply GL coding on its own.</p>
-
-    <p><strong>What is the difference between item sublist and expense sublist on a NetSuite vendor bill?</strong><br />
-    The item sublist is used for inventory or non-stock item-based bills and supports PO-based matching. The expense sublist posts GL-coded distributions with no PO linkage. A vendor bill record uses one or the other, never both, and the choice determines whether that bill can ever go through 2-way or 3-way matching.</p>
-
-    <p><strong>Why does my invoice OCR keep assigning the wrong subsidiary in NetSuite OneWorld?</strong><br />
-    Usually because the extraction defaults to the vendor's most recently used subsidiary rather than reading subsidiary-identifying detail from the actual invoice content. Vendors that bill multiple subsidiaries need an explicit resolution rule, not a default guess, or wrong-entity postings will corrupt intercompany eliminations at close.</p>
-
-    <p><strong>Can NetSuite Bill Capture read line items on an invoice?</strong><br />
-    Not reliably. Native Bill Capture is built for header-level extraction. Line-item detail (description, quantity, unit price) generally requires a third-party OCR layer with stronger table-structure recognition, particularly on multi-page invoices where line items wrap across pages.</p>
-
-    <p><strong>How do I prevent duplicate vendor bills when retrying a failed NetSuite API call?</strong><br />
-    Set the externalId field to a stable value tied to the source document before the first POST attempt. NetSuite treats externalId as an idempotency key, so a retried request with the same value will not create a second bill record.</p>
-
-    <p><strong>Does NetSuite Bill Capture require a separate subscription?</strong><br />
-    Yes. Bill Capture is an add-on module to NetSuite, not a feature included by default in every account, and it requires an active subscription plus setup of a dedicated capture email address, which can be configured per subsidiary for OneWorld accounts.</p>
-
     <p>Sources: field structure verified against NetSuite's SuiteTalk REST vendor bill payload documentation and independent technical references. Extraction accuracy figures from our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/invoice-processing.png",

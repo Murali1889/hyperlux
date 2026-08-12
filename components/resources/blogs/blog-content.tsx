@@ -96,6 +96,46 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
       );
     });
 
+    doc.querySelectorAll("table").forEach((table) => {
+      table.classList.add("w-full", "border-collapse", "text-sm");
+      const wrapper = doc.createElement("div");
+      wrapper.className = "overflow-x-auto my-6 rounded-lg border border-slate-200";
+      table.parentNode?.insertBefore(wrapper, table);
+      wrapper.appendChild(table);
+    });
+
+    doc.querySelectorAll("thead").forEach((thead) => {
+      thead.classList.add("bg-slate-50");
+    });
+
+    doc.querySelectorAll("th").forEach((th) => {
+      th.classList.add(
+        "px-4",
+        "py-3",
+        "text-left",
+        "font-semibold",
+        "text-slate-900",
+        "border-b",
+        "border-slate-200",
+        "whitespace-nowrap",
+      );
+    });
+
+    doc.querySelectorAll("td").forEach((td) => {
+      td.classList.add(
+        "px-4",
+        "py-3",
+        "text-slate-700",
+        "border-b",
+        "border-slate-100",
+        "align-top",
+      );
+    });
+
+    doc.querySelectorAll("tbody tr:last-child td").forEach((td) => {
+      td.classList.remove("border-b", "border-slate-100");
+    });
+
     return doc.body.innerHTML;
   };
 

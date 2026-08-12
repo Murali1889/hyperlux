@@ -77,27 +77,6 @@ export const blogKa15: BlogPost = {
     <h2>What I would check in your current perpetual KYC pipeline</h2>
 
     <p>Ask whether your materiality logic is a genuine weighted-scoring mechanism with defined signal weights, an absolute-delta trigger, and a tier-boundary trigger, or whether it is a short, hardcoded list of named event types treated as the only things that ever matter, missing the accumulation case entirely. Then ask specifically whether your scoring mechanism decays a signal's contribution over time absent reinforcement, since a purely additive score with no decay eventually drifts every long-tenured customer toward a higher tier regardless of their actual current risk. Confirm your thresholds are calibrated per customer segment rather than applied as one uniform standard across the entire base, the same segment-sensitivity that matters for the jurisdiction-specific thresholds covered in our <a href="/resources/blogs/travel-rule-compliance-crypto">Travel Rule piece</a>. Finally, confirm your system evaluates accumulated score against tier boundaries, not just the delta of the single most recent event in isolation, since the worked example above shows a genuinely material pattern that no single event in the sequence would trigger on its own.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is the core difference between perpetual KYC and periodic review?</strong><br />
-    Perpetual KYC reviews a customer when a triggering event occurs, while periodic review re-examines every customer on a fixed calendar interval regardless of whether anything about them actually changed.</p>
-
-    <p><strong>How does a perpetual KYC system decide which changes are material?</strong><br />
-    A weighted scoring mechanism assigns each signal type a numeric weight, then triggers review when a single event exceeds an absolute-delta threshold or when the recomputed score crosses from one risk tier into a higher one.</p>
-
-    <p><strong>Why isn't evaluating each event's delta in isolation enough?</strong><br />
-    Multiple low-severity signals can accumulate into a genuinely material score change even when no single event alone exceeds the delta threshold, so the mechanism has to track the running cumulative score, not just the most recent event.</p>
-
-    <p><strong>Why does a materiality scoring mechanism need decay?</strong><br />
-    Without decay, a purely additive score only ever increases, eventually pushing long-tenured customers into higher risk tiers based on old, unreinforced, minor signals that no longer reflect their actual current risk.</p>
-
-    <p><strong>Should the same risk-score thresholds apply to every customer segment?</strong><br />
-    No. Segments with different normal signal patterns, such as cash-intensive businesses versus standard retail customers, need thresholds calibrated to that segment rather than one uniform bank-wide standard.</p>
-
-    <p><strong>What kind of event carries no weight in a perpetual KYC scoring mechanism?</strong><br />
-    A change with no underlying risk content, such as an address reformatted within the same country, should carry no weight and simply be logged without triggering a review.</p>
-
     <p>"Ownership change matters, address reformat doesn't" is a correct intuition and a genuinely useful example. It is not, on its own, a mechanism a real customer base can run on, since it says nothing about the harder, more common case: several individually modest signals accumulating into something genuinely material, or a stale signal from years ago that should have faded out of the score long before now.</p>
 
     <p>None of this argues against event-driven monitoring as the right architecture. Reviewing every customer on a fixed calendar regardless of actual change is not more thorough, just slower to catch what actually matters and more wasteful of review capacity on customers whose files genuinely have not changed. It is a reason to confirm your pipeline's materiality logic is a real weighted, decaying, segment-calibrated mechanism, rather than a short list of two or three named event types standing in for one. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>

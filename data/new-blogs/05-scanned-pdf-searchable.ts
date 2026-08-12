@@ -122,26 +122,6 @@ done</code></pre>
     <p>If you only need to do this once or twice: drag-and-drop the DocsAPI dashboard. No install. Done before your coffee cools.</p>
     <p>If you do this regularly: install <code>ocrmypdf</code> on whatever OS you're stuck with. Pipe directories through it. Five lines of script and you have a one-click pipeline.</p>
     <p>If you do this at production scale: use an API. The math comparing API costs vs engineer hours always favors the API. (<a href="/author/nupura-ughade">I have made this case in numbers many times</a>.)</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>Can I make a scanned PDF searchable for free on any OS?</h3>
-    <p>Yes. Use <code>ocrmypdf</code> on Mac (via Homebrew), Windows (via Chocolatey or WSL), or Linux (via apt/dnf/pacman). It is free, runs offline, and wraps the Tesseract OCR engine with sensible defaults.</p>
-
-    <h3>Does macOS have built-in OCR for PDFs?</h3>
-    <p>Sequoia and later: yes. Open the PDF in Preview, choose File → Export, check "Add searchable text". Earlier macOS versions: no, you need a third-party tool.</p>
-
-    <h3>Does Windows have built-in OCR for PDFs?</h3>
-    <p>Not natively for PDFs. Windows has OCR in PowerToys Text Extractor (for screenshots) and as a Windows API, but no built-in "make this PDF searchable" feature. Use ocrmypdf via WSL for the simplest experience.</p>
-
-    <h3>What is the best OCR for Linux?</h3>
-    <p><code>ocrmypdf</code> (wrapping Tesseract) for general use. PaddleOCR if you need stronger multi-language or table support. Both are free, both are well-maintained.</p>
-
-    <h3>Will the searchable PDF look identical to the original?</h3>
-    <p>Yes, with ocrmypdf or any modern API. The OCR text sits invisibly behind the original pixels. Layout, signatures, stamps, and images stay in the same spots.</p>
-
-    <h3>Can I batch-process many scanned PDFs at once?</h3>
-    <p>Yes. On Linux and macOS, use a shell for-loop. On Windows, use a PowerShell loop or WSL with the same shell loop. For cloud-scale batching, most OCR APIs (including DocsAPI) have batch endpoints that accept many files in one call.</p>
   `,
   image: "/images/ocr-process.png",
   featuredImage: "/images/ocr-process.png",

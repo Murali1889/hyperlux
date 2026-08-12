@@ -73,27 +73,6 @@ export const blogBl08: BlogPost = {
     <h2>What I would check in your current borrowing base pipeline</h2>
 
     <p>Ask whether your extraction actually pulls a full aging schedule with per-customer, per-invoice detail, or just a summary AR total that has nowhere to apply eligibility rules against. Then ask whether the 90-day aging exclusion, the concentration cap, and the affiliate exclusion are actually encoded as calculation steps applied to that detail, or whether the advance rate gets applied directly to a raw, unscreened figure. Confirm what happens automatically when a recalculated base falls below the outstanding balance, since an overadvance is a defined credit-agreement event that deserves an explicit, immediate workflow trigger, not something a reviewer needs to notice by comparing two numbers manually every reporting period. And ask whether certificate data actually gets stored and compared period over period to surface dilution trends, or whether each submission is validated and then effectively discarded, the same forward-looking discipline covered from the deposit-pattern angle in our <a href="/resources/blogs/personal-loan-document-ocr">loan stacking detection piece</a>, applied here to a business collateral trend instead of a consumer deposit pattern.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is a borrowing base certificate?</strong><br />
-    A recurring report, typically submitted monthly or quarterly, that recalculates how much of an asset-based line of credit is actually available to draw, based on the business's current eligible accounts receivable and inventory, not the original fixed credit limit approved at closing.</p>
-
-    <p><strong>What makes a receivable ineligible for the borrowing base?</strong><br />
-    Commonly four categories: receivables aged past a defined threshold, typically 90 days from invoice date; the portion of any single customer's receivables above a concentration cap, typically 20-25%; affiliate or related-party receivables; and contra amounts owed back to a customer who is also a vendor.</p>
-
-    <p><strong>What are typical advance rates for accounts receivable and inventory?</strong><br />
-    Accounts receivable advance rates commonly land around 70-80% of eligible receivables. Finished-goods inventory advance rates commonly land around 50%, reflecting that inventory is slower and less certain to convert to cash than an already-invoiced receivable.</p>
-
-    <p><strong>What happens when the borrowing base falls below the outstanding balance?</strong><br />
-    This is an overadvance, a defined trigger under most credit agreements typically requiring an immediate paydown or additional qualifying collateral to restore the balance within the recalculated base. It is a compliance event, not a routine fluctuation.</p>
-
-    <p><strong>Why isn't a summary accounts receivable total enough to calculate a borrowing base?</strong><br />
-    Because the aging exclusion and concentration cap both require line-item or per-customer detail to apply. A single AR total has nowhere to apply either rule against, which leads to the advance rate being applied to a raw, unscreened figure that overstates real availability.</p>
-
-    <p><strong>Does the borrowing base calculation apply to a HELOC-style consumer line the same way?</strong><br />
-    No. A consumer HELOC uses a fixed approved credit limit for HCLTV purposes regardless of draw status. A business asset-based line recalculates its actual available base every reporting period against fluctuating collateral, a materially different, ongoing calculation rather than a static one set at origination.</p>
-
     <p>A borrowing base certificate looks, at a glance, like a simple report to extract: some totals, an advance rate, a resulting number. The eligibility screening underneath those totals is where the real calculation lives, and it is exactly the layer most lending OCR content, focused on getting the raw numbers off the page accurately, never actually reaches. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/invoice-processing.png",

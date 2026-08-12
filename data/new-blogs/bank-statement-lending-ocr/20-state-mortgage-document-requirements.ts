@@ -61,27 +61,6 @@ export const blogBl20: BlogPost = {
     <h2>What I would check in your current state mortgage document pipeline</h2>
 
     <p>Ask whether your servicing system routes escrow interest calculation by the property's actual state, using each state's specific requirement and rate where one exists, or whether it applies a single default treatment, likely no interest, uniformly regardless of where the collateral actually sits. Then ask whether your pipeline distinguishes routine tax-and-insurance impound balances from insurance claim proceeds temporarily held in escrow, since the interest obligation does not necessarily apply the same way to both categories even within states that do require it. Confirm this calculation runs as a recurring, annual process tied to each loan's actual anniversary or account-termination date, not a one-time setup flag that never gets revisited for the life of the loan. And check whether your rate table itself gets revisited when a state's applicable standard changes, the way New York's did in 2018, rather than being treated as a fixed constant set once at implementation and never audited against current law again, the same drift risk covered from the model-training angle in our <a href="/resources/blogs/real-time-bank-statement-processing">point-in-time correctness piece</a>, where a rule correct at one point in time quietly became wrong later without anyone noticing.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>Do all states require mortgage servicers to pay interest on escrow accounts?</strong><br />
-    No. A meaningful number of states legally require it, while most states impose no such requirement at all. The obligation is property-state-specific, not a national default.</p>
-
-    <p><strong>What is California's escrow interest requirement?</strong><br />
-    State law requires interest on escrowed funds for one-to-four-family residential loans at a minimum of 2% simple interest per year, credited to the borrower annually or upon the account's termination, whichever comes first.</p>
-
-    <p><strong>Does the escrow interest requirement apply to insurance claim proceeds the same way it applies to tax and insurance impounds?</strong><br />
-    Not necessarily. California appellate authority has held the interest obligation does not automatically extend to insurance claim proceeds held in escrow after a casualty loss the way it does to routine impound balances.</p>
-
-    <p><strong>Can a federally chartered bank claim exemption from state escrow interest laws?</strong><br />
-    It depends on the state, and it is actively contested. California's requirement has been upheld against national banks in the Ninth Circuit, with the Supreme Court declining review. New York's law remains legally unsettled after a 2024 Supreme Court remand, and the OCC has since taken its own preemption position on New York and similar state laws.</p>
-
-    <p><strong>Why does escrow interest routing need to be an ongoing process rather than a one-time check?</strong><br />
-    Because the obligation to calculate and credit interest recurs every year an escrow account remains active, not just at loan origination or closing.</p>
-
-    <p><strong>What happens if a servicer fails to pay required escrow interest across its portfolio?</strong><br />
-    Real regulatory consequences, including enforcement actions and required restitution, have resulted from systematic failures to pay owed escrow interest, in at least one documented case totaling millions of dollars.</p>
-
     <p>Attorney-versus-title-state classification gets real attention in mortgage document content because it shapes the closing package itself. Escrow interest gets far less attention despite being a real, recurring, state-specific financial obligation that follows a loan for years after closing, and it is exactly the kind of requirement that looks like a servicing detail right up until a regulator asks why a portfolio of California loans never credited a single dollar of interest their borrowers were legally owed. The legal landscape underneath it keeps moving too, which means the correct answer for a given charter type and state is worth confirming against current guidance rather than treating as permanently settled by whatever the rule happened to be when the pipeline was first built. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/transforming-financial-services.png",

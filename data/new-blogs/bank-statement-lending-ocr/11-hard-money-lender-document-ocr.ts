@@ -64,27 +64,6 @@ export const blogBl11: BlogPost = {
     <p>Ask whether your pipeline actually classifies incoming lien waivers by type, conditional versus unconditional, progress versus final, or treats every waiver as an interchangeable checkbox satisfying a generic "lien waiver on file" requirement. Then ask specifically whether an unconditional waiver can be accepted before a payment's clearing status is confirmed, since that is the exact sequencing error that leaves a subcontractor unprotected if a disbursement subsequently fails. Confirm retainage is tracked as its own running, project-level figure rather than folded silently into net draw amounts, since that is what makes an accurate final-draw reconciliation possible at all. And check whether the retainage percentage itself is extracted per draw rather than assumed constant, in case the project operates under a reduction provision that lowers the holdback partway through construction.</p>
 
     <p>None of these checks require better character recognition on the underlying documents. A waiver's text can extract with perfect accuracy and still be the wrong document type for its position in the payment sequence, the same distinction that matters for the credit-limit-versus-balance field-mapping problem covered in our <a href="/resources/blogs/heloc-document-ocr">HELOC document OCR piece</a>: a correct-looking figure pulled from the wrong field, or in this case, the wrong document type accepted at the wrong moment, produces an error extraction accuracy alone was never going to catch.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What are the four types of construction lien waivers?</strong><br />
-    Conditional progress, unconditional progress, conditional final, and unconditional final. Conditional waivers only take effect once the referenced payment clears; unconditional waivers take effect immediately upon signing regardless of whether payment ever arrives.</p>
-
-    <p><strong>Why should an unconditional lien waiver never be collected before payment?</strong><br />
-    Because it takes effect the moment it is signed, permanently waiving lien rights, regardless of whether the underlying payment actually clears. If that payment later bounces or is reversed, the signer has no lien recourse for work they were never actually paid for.</p>
-
-    <p><strong>What is the correct sequencing for lien waivers in a draw?</strong><br />
-    A conditional waiver is appropriate to collect before disbursement, since it only takes effect once payment clears. An unconditional waiver should only be collected and signed after payment has actually settled and been confirmed.</p>
-
-    <p><strong>What is retainage in a construction draw schedule?</strong><br />
-    A percentage, typically 5 to 10%, withheld from every progress draw across the project and released at substantial or final completion, once defined milestones like a certificate of occupancy and punch-list resolution are met.</p>
-
-    <p><strong>Why does retainage need its own tracked field separate from draw amounts?</strong><br />
-    Because the final draw's correct payout depends on the sum of every prior draw's withheld retainage, a running figure that a pipeline tracking only net disbursed amounts per draw has no way to reconcile accurately at project completion.</p>
-
-    <p><strong>Is lien waiver sequencing an OCR accuracy problem?</strong><br />
-    Not directly. It is a document classification and payment-status gating problem sitting one layer above extraction accuracy. A pipeline can read a waiver's text perfectly and still accept the wrong waiver type at the wrong point in the payment sequence.</p>
-
     <p>Tracking that a lien waiver exists is the easy half of this problem. Whether it is the right type, collected at the right point relative to actual payment clearing, is the half that determines whether the document does what it is actually supposed to do, and it is exactly the distinction most draw automation content skips past on the way to describing how fast documents get processed. Speed is not the same protection as sequencing, and a fast pipeline that gets the sequencing wrong has simply arrived at the wrong outcome more quickly than a slow one would have. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/ocr-in-finance.png",

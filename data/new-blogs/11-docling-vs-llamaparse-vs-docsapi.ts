@@ -157,35 +157,6 @@ export const blog11: BlogPost = {
     <p>If your documents are mostly consumer-quality scans: try LlamaParse's free tier. The OCR backend handles dirty input better than the alternatives.</p>
     <p>If you do not know yet: try all three on 50 of your real documents over a weekend. The right answer is whichever wins on your mix. (<a href="/author/nupura-ughade">I have written more about this evaluation approach</a>.)</p>
     <p>Want a quick steer before that weekend test? The free <a href="/tools/which-ocr">OCR selector tool</a> asks six questions and recommends Docling, LlamaParse, DocsAPI, or an open-source engine based on whether your documents are academic, financial, or consumer-quality scans.</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>Is Docling free?</h3>
-    <p>Yes. Docling is open source under the MIT license. You pay for the compute to run it, but the software itself is free. Self-hosting is the main cost.</p>
-
-    <h3>Is LlamaParse free?</h3>
-    <p>It has a free tier (a few thousand pages per month). Beyond that, pay-per-page. Pricing competitive with other cloud OCR APIs.</p>
-
-    <h3>Which is the best for RAG pipelines?</h3>
-    <p>LlamaParse, narrowly, because of the integration with LlamaIndex. Docling and DocsAPI both work with RAG too, you just have to wire them up yourself.</p>
-
-    <h3>Can I switch from one to another easily?</h3>
-    <p>Yes, in most cases. The input is the same (PDF, image, document). The output formats differ but converting between them is straightforward. Plan a half-day of migration if you switch.</p>
-
-    <h3>Which has the best accuracy overall?</h3>
-    <p>None, accuracy depends on document type. Docling wins on academic, DocsAPI wins on financial, LlamaParse wins on consumer scans. There is no universal winner.</p>
-
-    <h3>Which is best for production at scale?</h3>
-    <p>It depends on volume and document mix. For most teams above 100K pages/month, the right answer is a cloud API (LlamaParse or DocsAPI) because the engineering overhead of running Docling at scale is significant. Below 100K pages/month, all three options are viable.</p>
-
-    <h3>Is Docling better than LlamaParse?</h3>
-    <p>For academic and scientific PDFs, yes: Docling led our benchmark at 94% versus LlamaParse's 89%, and it preserves equations and citations better. For consumer-quality scans and RAG-shaped Markdown output, LlamaParse is better, scoring 78% on receipts versus Docling's 58%. Neither is universally better; Docling wins on structured technical content, LlamaParse wins on messy input and RAG integration.</p>
-
-    <h3>Which document parser is best for bank statements?</h3>
-    <p>DocsAPI led on bank statements at 91% row-level table accuracy, versus Docling's 76% and LlamaParse's 71%, because it stitches multi-page transaction tables into one logical table while the others treat each page separately. For financial documents where table accuracy drives downstream accounting, that gap is the whole decision.</p>
-
-    <h3>Does Docling do OCR on scanned documents?</h3>
-    <p>Docling can process scanned documents but it was built for clean, digital-native PDFs like academic papers, and its accuracy on low-quality consumer scans is the weakest of the three (58% on our receipt set). For scanned or photographed documents, LlamaParse or DocsAPI produce noticeably better results because their OCR backends are tuned for messy real-world input.</p>
   `,
   image: "/images/idp-vs-ocr.png",
   featuredImage: "/images/idp-vs-ocr.png",

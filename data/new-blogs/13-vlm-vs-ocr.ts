@@ -141,35 +141,6 @@ export const blog13: BlogPost = {
     <p>If you have a low-volume workload with varied documents: VLM directly. The cost difference is small at low volume, and the layout flexibility saves engineering time.</p>
     <p>If you do not know your volume yet: prototype with VLMs because they are easier to set up. Migrate to OCR for the bulk when volume grows. The transition is a confidence threshold and a routing rule, not a rebuild. (<a href="/author/nupura-ughade">I have written about this transition in more detail</a>.)</p>
     <p>Once you decide OCR is the right layer for the bulk, our free <a href="/tools/which-ocr">OCR selector tool</a> helps you pick the engine: six questions on your document type, quality, and volume, mapped to the tools that won those categories in our benchmark.</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>Can a VLM replace OCR entirely?</h3>
-    <p>For low-volume workloads, yes. For high-volume production, the cost and speed disadvantages make it impractical. The 2026 standard is hybrid, OCR for bulk, VLM for the trickiest documents.</p>
-
-    <h3>Which VLM is best for document extraction in 2026?</h3>
-    <p>Claude 4.6 leads on table extraction in our testing. GPT-5 vision is strong on layout understanding. Gemini Ultra is competitive across the board. Differences are small; pick based on the rest of your stack.</p>
-
-    <h3>How much more expensive are VLMs than OCR?</h3>
-    <p>Typically 5-15x per page. The exact multiplier depends on the model, document length, and how many tokens the model consumes. At high volume the difference is significant.</p>
-
-    <h3>Can VLMs handle handwriting better than OCR?</h3>
-    <p>Yes, generally. Neat handwriting accuracy on top VLMs is 90%+, versus 70-80% on dedicated handwriting OCR. Doctor's notes remain hard for everyone.</p>
-
-    <h3>Is using a VLM the same as prompting GPT to read a PDF?</h3>
-    <p>Roughly, yes. "VLM" is the general term; "GPT vision" or "Claude vision" are specific instances. The technique is the same: pass the document image to the model and prompt for extraction.</p>
-
-    <h3>Do VLMs need fine-tuning for documents?</h3>
-    <p>Usually not. The base models are already capable on most document types. Fine-tuning helps for very domain-specific content (medical, legal jargon) but adds engineering cost. Most teams skip fine-tuning and rely on prompting.</p>
-
-    <h3>Is a VLM more accurate than OCR?</h3>
-    <p>It depends on the document. On clean printed text they are effectively tied at 97-99%, so the VLM's extra cost buys nothing. On hard cases like unusual layouts, mixed content, or messy handwriting, a strong VLM can be 10 to 20 points more accurate because it reasons about the document instead of pattern-matching. The efficient approach is to send only the hard documents to the VLM.</p>
-
-    <h3>When should I use a VLM instead of OCR?</h3>
-    <p>Use a VLM when layouts vary widely and you cannot build templates, when you need semantic understanding or question answering over the document, when the document type is new or one-off, or when volume is low enough that cost does not matter. Use dedicated OCR for high volume, real-time flows, uniform documents, and audit-critical workflows that need deterministic output.</p>
-
-    <h3>How do I extract structured data with a vision-language model?</h3>
-    <p>Pass the document image to the model and prompt for the fields you want in the format you want, such as "extract this invoice as JSON with vendor, total, date, and line items." The model returns structured output directly, with no templates or training. Plan for the three production realities: per-page token cost, multi-second latency, and non-deterministic output that audit-heavy workflows must validate.</p>
   `,
   image: "/images/idp-vs-ocr.png",
   featuredImage: "/images/idp-vs-ocr.png",

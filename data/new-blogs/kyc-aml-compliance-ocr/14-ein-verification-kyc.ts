@@ -65,27 +65,6 @@ export const blogKa14: BlogPost = {
     <h2>What I would check in your current EIN verification pipeline</h2>
 
     <p>Ask whether your pipeline derives a name control using the IRS's own documented rules, stripping punctuation, disregarding common leading words, preserving only the ampersand and hyphen, before submitting a TIN Matching request, or whether it submits the raw legal business name and treats any mismatch as a fraud signal without accounting for how the IRS itself actually performs the comparison. Then ask whether your review queue distinguishes IRS response codes individually, routing a code 1 unissued-TIN finding with different urgency than a code 3 incomplete-records result, rather than collapsing every non-zero code into one undifferentiated no-match flag. Confirm whether any part of your fraud scoring still treats EIN prefix as a location indicator, an assumption that stopped being accurate after the IRS's 2001 centralization and now penalizes legitimate businesses that applied for their EIN online. Finally, confirm a name-control mismatch on an otherwise-issued TIN routes to a review step that re-derives the control correctly before escalating, rather than rejecting outright on the first no-match response, since that single extra recomputation step is often the difference between an accurate fraud flag and an entirely unnecessary rejection.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What does the IRS TIN Matching program actually compare?</strong><br />
-    It compares a submitted name against a name control, a four-character code derived from the business's legal name using specific IRS rules, not the full legal name as a raw string.</p>
-
-    <p><strong>How is an IRS name control derived from a business name?</strong><br />
-    Generally the first four characters of the legal name after stripping punctuation and spaces, preserving only ampersands and hyphens as special characters, and often disregarding common leading words like "The."</p>
-
-    <p><strong>What is the difference between an IRS code 1 and code 2 TIN Matching result?</strong><br />
-    Code 1 means the TIN was never issued at all, a serious finding. Code 2 means the TIN was issued but the submitted name control does not correspond to it, which can reflect a computation error rather than fraud.</p>
-
-    <p><strong>Does an EIN's first two digits still indicate where a business is located?</strong><br />
-    No. Before 2001, EIN prefixes reflected the issuing IRS service center's geographic region. Since the IRS centralized EIN assignment in 2001, the prefix indicates only which processing campus handled the assignment, not the business's location.</p>
-
-    <p><strong>Why can a legitimate business fail EIN verification?</strong><br />
-    Often because the verifying system computed the name control incorrectly, submitting the raw legal name or handling punctuation and leading words differently than the IRS's own derivation rules, producing a false no-match on a genuinely valid EIN.</p>
-
-    <p><strong>Should every non-zero IRS TIN Matching response code be treated the same way?</strong><br />
-    No. Codes 1 through 8 cover materially different conditions, from an unissued TIN to incomplete IRS records, and collapsing them into a single no-match flag wastes review capacity on low-severity cases while under-prioritizing genuinely serious ones.</p>
-
     <p>"Match or no match" is an accurate one-line summary of what EIN verification returns. It is not, on its own, an explanation of what is actually being compared, a derived four-character name control rather than a full legal name, or of what the response code genuinely distinguishes, an unissued number from a computation mismatch from incomplete records. That gap is exactly where a KYB pipeline's false-positive rate against entirely legitimate businesses gets decided.</p>
 
     <p>None of this argues against automating EIN verification. Manually walking IRS records for every onboarding business is not more accurate, just slower and considerably more expensive at real volume. It is a reason to confirm your pipeline derives name controls using the IRS's own rules rather than raw string comparison, and to reject the assumption that an EIN prefix still reveals a business's location, before a no-match response gets treated as fraud when it may simply be your own system computing the comparison incorrectly. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>

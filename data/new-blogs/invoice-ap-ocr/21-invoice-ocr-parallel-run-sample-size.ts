@@ -75,27 +75,6 @@ export const blogAp21: BlogPost = {
     <h2>What I would check before setting your own cutover criteria</h2>
 
     <p>Calculate your actual monthly invoice volume, then work out how many calendar weeks it takes to accumulate a sample size appropriate to your risk tolerance (400+ for most practical go-live decisions, more if the cost of a wrong decision is high). Set your parallel-run length around that number, not a generic 30-day default borrowed from a different team's volume and risk profile. If your volume is low enough that reaching a meaningful sample would take months, accept a shorter screening-only period and lean more heavily on the production-monitoring phase to catch what the shorter test could not.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>How many invoices does a parallel run need to be statistically meaningful?</strong><br />
-    Roughly 400 or more for a reasonably tight confidence interval on accuracy suitable for most go-live decisions, and 900 or more if you need to confidently distinguish accuracy that is close to your target threshold. A 20 to 100-invoice pilot is useful for catching gross failures but not for confirming a precise accuracy figure.</p>
-
-    <p><strong>Why does a 20-invoice pilot give a wide confidence interval even at 92% observed accuracy?</strong><br />
-    Because the margin of error on a proportion estimate shrinks with the square root of sample size, not linearly. At 20 invoices, the 95% confidence interval spans roughly 80% to 100%, wide enough that the true accuracy could plausibly be meaningfully lower than the observed number suggests.</p>
-
-    <p><strong>Should a parallel run be measured in calendar days or number of invoices?</strong><br />
-    Number of invoices. A fixed calendar period like 30 days produces wildly different sample sizes depending on invoice volume, so two teams following the same "30 days" rule can end up with statistically meaningless and statistically robust results respectively, purely based on volume differences.</p>
-
-    <p><strong>Is continuous production monitoring more valuable than a longer pre-launch parallel run?</strong><br />
-    Often yes, since it reaches statistically meaningful sample sizes without delaying go-live for weeks or months, provided it tracks accuracy by vendor and document category continuously rather than as a one-time snapshot, catching layout drift no pre-launch test can anticipate.</p>
-
-    <p><strong>What is the difference between a screening test and a statistically meaningful parallel run?</strong><br />
-    A screening test (15-30 invoices) answers whether a tool obviously fails on your documents. A statistically meaningful parallel run (400+ invoices) answers whether a specific measured accuracy figure is precise enough to trust for a go-live decision. Both are legitimate but serve different purposes.</p>
-
-    <p><strong>Should every extracted field get the same sample-size confidence standard?</strong><br />
-    No. High-consequence fields like total amount and payment routing details deserve a tighter confidence requirement than low-stakes fields like a free-text description. Track accuracy separately by field rather than relying on a single blended document-level number.</p>
-
     <p>The underlying lesson is the same one that shows up everywhere in AP automation: real numbers, actually checked against your own data, beat comfortable defaults borrowed from somewhere else. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/ocr-accuracy.png",

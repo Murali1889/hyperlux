@@ -60,27 +60,6 @@ export const blogKa12: BlogPost = {
     <h2>What I would check in your current proof of address pipeline</h2>
 
     <p>Ask whether your address comparison logic standardizes both the customer-entered address and the OCR-extracted address into a canonical form, USPS Publication 28 or the equivalent standard for the relevant country, before comparing them, or whether it scores raw string similarity directly, a distinction the worked comparison table above shows producing opposite verdicts on the same address pairs. Then ask whether your pipeline inspects PDF-level metadata, Creator, Producer, CreationDate, and ModDate, as a distinct authenticity check running alongside address matching, or whether authenticity review stops at the visible content of the document, since the worked example above shows two visually identical documents that only metadata forensics tells apart. Confirm your recency threshold is configured per jurisdiction rather than applied as one fixed global window, the same jurisdiction-sensitivity that matters for the sanctions and PEP thresholds covered in our <a href="/resources/blogs/pep-screening-kyc">PEP screening piece</a>. Finally, confirm a document with missing or entirely absent metadata fields routes to additional review rather than passing by default, since the absence of the fields a genuine institutional document reliably populates is itself a signal worth acting on.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>Why does raw fuzzy string matching fail for address verification?</strong><br />
-    It scores addresses by character-level edit distance, which rejects genuine matches written with different abbreviations, "St" versus "Street," and accepts genuine mismatches that happen to look similar, like house numbers one digit apart on the same street.</p>
-
-    <p><strong>What does address standardization actually do?</strong><br />
-    It rewrites each address into a canonical form following a defined standard, such as USPS Publication 28, correcting abbreviations, directionals, and unit designators, so two addresses can be compared component by component rather than as raw strings.</p>
-
-    <p><strong>What is CASS certification?</strong><br />
-    The USPS Coding Accuracy Support System, a certification confirming that address-matching software correctly standardizes and validates addresses against USPS reference data.</p>
-
-    <p><strong>How does PDF metadata reveal a fabricated utility bill or bank statement?</strong><br />
-    The Creator and Producer fields record which software generated or last processed the file. A genuine institutional document carries a consistent, recognizable signature from the issuer's own system, while an edited or fabricated document carries a generic consumer-software signature instead.</p>
-
-    <p><strong>What does the ModDate field reveal about document tampering?</strong><br />
-    A genuine, untouched document shows a ModDate matching its CreationDate. A document edited after issuance shows a ModDate meaningfully later, and a ModDate falling after the claimed statement period is a direct sign of post-issuance editing.</p>
-
-    <p><strong>Do proof of address recency requirements vary by jurisdiction?</strong><br />
-    Yes. Many frameworks accept documents issued within three to six months, but some jurisdictions apply tighter windows, such as a two-month ceiling, so a single hardcoded threshold does not fit every region correctly.</p>
-
     <p>"OCR extracts the address, fuzzy matching confirms it" is an accurate one-sentence summary of what a proof of address pipeline is supposed to do. It is not, on its own, a description of a system that actually works, since raw fuzzy matching gets both false rejections and false acceptances on ordinary real-world address variation, and address matching of any kind never touches the separate question of whether the document itself is genuine. That second question, the one PDF metadata forensics is specifically built to answer, is where a growing share of address-document fraud is actually happening.</p>
 
     <p>None of this argues against automating proof of address checks. Manual review of every submitted bill is not more accurate at catching a well-made synthetic document, just slower and considerably more expensive to run at real volume. It is a reason to confirm your pipeline is standardizing addresses before comparing them and inspecting document metadata before trusting what renders on the page, rather than assuming a passing address match means the underlying document was ever genuinely issued at all. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>

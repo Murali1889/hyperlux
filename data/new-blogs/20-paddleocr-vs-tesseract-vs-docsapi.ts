@@ -161,35 +161,6 @@ export const blog20: BlogPost = {
     <p>If you're already in production with Tesseract and accuracy is dragging: evaluate PaddleOCR for free or DocsAPI's free tier. Whichever wins on your real documents is the right pick.</p>
     <p>If you're picking between PaddleOCR and a cloud API: PaddleOCR if you have engineering bandwidth and want full control. Cloud API if you'd rather pay than maintain. (<a href="/author/nupura-ughade">I write about this build-vs-buy decision regularly</a>.)</p>
     <p>If you want a starting point before you test, our free <a href="/tools/which-ocr">Which OCR should I use tool</a> takes six questions and points you at Tesseract, PaddleOCR, or a hosted API based on your document mix. It is honest about when the open-source engines are the right call.</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>Is PaddleOCR better than Tesseract?</h3>
-    <p>For multi-language content and modern document types, yes. For clean printed English at low volume, no, Tesseract is simpler. The right answer depends on your document mix.</p>
-
-    <h3>Is PaddleOCR free?</h3>
-    <p>Yes, fully open-source under the Apache 2.0 license. You pay only for the compute to run it. Faster than Tesseract on GPU; comparable on CPU.</p>
-
-    <h3>Can PaddleOCR replace a cloud OCR API?</h3>
-    <p>For low-to-medium volume with available engineering time, yes. For high volume or for teams without infrastructure capacity, cloud APIs are usually cheaper after factoring in maintenance.</p>
-
-    <h3>What is PaddleOCR's main advantage?</h3>
-    <p>Multi-language support (especially Chinese) and modern architecture. The Baidu-trained models include substantial Chinese content that other engines lack. Layout-aware features also outperform basic Tesseract.</p>
-
-    <h3>Is Tesseract still relevant in 2026?</h3>
-    <p>Yes. For clean printed English, simple one-off tasks, and air-gapped environments, Tesseract is still the right tool. Its limitations show up at scale and on complex documents, see our <a href="/resources/blogs/pdf-text-recognition">when Tesseract fails piece</a>.</p>
-
-    <h3>Which is fastest?</h3>
-    <p>PaddleOCR with GPU is the fastest. Without GPU, all three are roughly comparable (1-2 seconds per page). Cloud APIs add network round-trip time but the compute itself is fast.</p>
-
-    <h3>What is the accuracy difference between PaddleOCR and Tesseract?</h3>
-    <p>On clean printed English they are effectively tied at 97-99%. The gap opens on harder documents: PaddleOCR beats Tesseract by roughly 15 points on multi-page tables (79% vs 64%), by 24 points on phone-photographed receipts (82% vs 58%), and by a wide margin on Chinese and other CJK scripts. If your documents are clean English, the difference is negligible; if they are messy or multilingual, PaddleOCR wins clearly.</p>
-
-    <h3>Should I use PaddleOCR or DocsAPI for bank statements?</h3>
-    <p>For multi-page bank statements, DocsAPI led our benchmark at 91% row-level accuracy versus PaddleOCR's 79%, because DocsAPI stitches transaction tables across pages while most engines treat each page separately. If you have engineering capacity and want to stay open-source, PaddleOCR is workable with custom table logic; if you want the multi-page stitching handled for you, DocsAPI is the faster path.</p>
-
-    <h3>Is PaddleOCR hard to set up?</h3>
-    <p>Moderate. Install is a pip command, but configuring dependencies takes 30 to 60 minutes, and enabling GPU acceleration requires a working CUDA setup. It is more involved than Tesseract (which installs in five minutes) and much more involved than a cloud API (sign up and make an HTTP call). Budget a half-day for a first production-grade PaddleOCR deployment.</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",

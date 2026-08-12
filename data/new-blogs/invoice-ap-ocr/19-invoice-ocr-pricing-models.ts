@@ -75,27 +75,6 @@ export const blogAp19: BlogPost = {
     <p>Ask specifically which API endpoint or feature tier the quoted rate applies to, not just the generic question "what's your per-page price." Then calculate your actual expected bill using your own average pages-per-invoice and required field set, not the vendor's example document. Finally, ask what happens above your committed volume, whether overage is billed at the same rate, a penalty rate, or requires a contract renegotiation, since this is where surprise bills most commonly originate after the pricing conversation is long over.</p>
 
     <p>Run this comparison across at least two vendors using identical inputs, your actual sample invoices, not each vendor's own demo document, since a vendor's demo is inevitably chosen to flatter their pricing and accuracy simultaneously. A rate that looks competitive on a vendor's own clean sample invoice can look very different once run against your real, messier document mix, both in accuracy and in which pricing tier your documents actually require to get usable structured output rather than raw, unstructured text you would have to process further yourself.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>Why does the same OCR vendor charge such different rates for seemingly similar work?</strong><br />
-    Because "per-page pricing" applies to specific API features, not a single blanket rate. Basic text detection, invoice-specific extraction, table extraction, and combined forms-and-tables extraction are priced separately even within one vendor, often varying by 10x or more for the same physical pages.</p>
-
-    <p><strong>Is per-page or per-document OCR pricing cheaper?</strong><br />
-    It depends entirely on your average pages per invoice. Per-document pricing favors longer, multi-page invoices; per-page pricing favors shorter ones. Compare using your own actual average page count, not a vendor's example document, before assuming either model is better.</p>
-
-    <p><strong>Do volume discounts change which API feature I should use?</strong><br />
-    No. Volume discounts apply proportionally within whichever feature tier you are already using. A team overpaying by calling a more expensive feature than necessary continues overpaying at roughly the same ratio even after volume discounts apply.</p>
-
-    <p><strong>What should I ask a vendor before signing an OCR pricing contract?</strong><br />
-    Which specific API endpoint or feature tier the quoted rate covers, how overage above committed volume is billed, and whether the rate matches your actual average pages per invoice and required field set, not a generic example document.</p>
-
-    <p><strong>Which AWS Textract API is cheapest for invoice processing specifically?</strong><br />
-    AnalyzeExpense, purpose-built for invoices and receipts, at $0.01 per page for the first 1M pages monthly, significantly cheaper than the general-purpose Forms+Tables+Queries combination at $0.07 per page for output that may not even be better matched to invoice-specific fields.</p>
-
-    <p><strong>What happens if I exceed my committed volume on an OCR pricing plan?</strong><br />
-    This varies by vendor: some bill overage at the committed rate, some at a higher standard rate, and some require throttling or contract renegotiation. Ask explicitly before signing, and model against a realistic growth scenario rather than just current volume.</p>
-
     <p>The math above is genuinely simple once you have the right inputs in hand. Most teams never actually get there, not because the math is hard, but because nobody tells them which specific inputs matter before they sign.</p>
 
     <p>Sources: AWS Textract pricing figures from <a href="https://aws.amazon.com/textract/pricing/" target="_blank" rel="noopener">Amazon Web Services' official Textract pricing page</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>

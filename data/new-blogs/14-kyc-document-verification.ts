@@ -122,26 +122,6 @@ export const blog14: BlogPost = {
     <p>If you are building KYC from scratch: use a specialized vendor (Jumio, Onfido, DocsAPI). The regulatory expectations are specific enough that DIY usually misses something. The cost per verification ($1-3) is trivial compared to the cost of a failed audit.</p>
     <p>If you have an existing KYC process that "works": run a mock audit. Pick 20 customer files at random. Can you reconstruct every verification step? If not, fix the audit trail before the real auditor finds the gaps.</p>
     <p>If you are about to onboard a new market: research that country's specific KYC requirements. Document types, retention periods, and re-verification triggers vary significantly. (<a href="/author/nupura-ughade">I write about regulatory document patterns regularly</a>.)</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>What is KYC document verification?</h3>
-    <p>It is the process of collecting identity documents from a customer, verifying they are authentic, and confirming they match the customer's claimed identity. Required by regulators in most financial services contexts.</p>
-
-    <h3>What documents are accepted for KYC?</h3>
-    <p>Typically: photo ID (passport, national ID, driver's license) plus proof of address (utility bill, bank statement, government letter). Specific acceptable documents vary by country and regulator.</p>
-
-    <h3>How long should KYC records be kept?</h3>
-    <p>Five years is the most common minimum, but varies by jurisdiction. Some regulators require seven years. Keep KYC records for at least the longest applicable retention period plus a buffer.</p>
-
-    <h3>How accurate does KYC document verification need to be?</h3>
-    <p>For automated decisions, regulators generally expect 99%+ accuracy on field extraction and authenticity checks. Manual review is required for low-confidence cases. The exact thresholds vary by regulator.</p>
-
-    <h3>What is the difference between KYC and AML?</h3>
-    <p>KYC verifies who the customer is. AML (Anti-Money Laundering) monitors what they do once they are a customer. KYC is a one-time-plus-periodic check; AML is continuous. KYC feeds into AML.</p>
-
-    <h3>Can I use OCR alone for KYC verification?</h3>
-    <p>No. OCR extracts data but does not verify authenticity. You need OCR plus authenticity checks (security features, MRZ checksums, forgery database lookups) plus identity matching (face similarity if selfies are used). OCR is one step, not the whole process.</p>
   `,
   image: "/images/passport-ocr-revolutionizing.png",
   featuredImage: "/images/passport-ocr-revolutionizing.png",

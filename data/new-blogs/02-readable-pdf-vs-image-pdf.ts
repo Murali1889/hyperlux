@@ -107,26 +107,6 @@ export const blog02: BlogPost = {
     <p>If you are a regular person dealing with one PDF: do the 2-second test. If it is an image, drag-and-drop into the <a href="/products">DocsAPI dashboard</a> for a free trial. Thirty seconds and you have a real searchable PDF.</p>
     <p>If you are an engineer building software that consumes PDFs: stop assuming PDFs are readable. Add a one-line check at intake. Auto-route image PDFs to OCR before downstream processing. Most production bugs that trace back to "the PDF was weird" would have been caught by this check.</p>
     <p>If you work in finance, legal, healthcare, or anywhere documents move through long workflows: audit one week of incoming PDFs. Count how many are image-only. The number is almost always higher than people guess. Fixing the intake step usually removes a whole category of "the data is wrong" tickets. (<a href="/author/nupura-ughade">I write about these patterns a lot</a>.)</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>What does "readable PDF" mean exactly?</h3>
-    <p>A readable PDF (also called a searchable PDF or text-based PDF) has a live text layer. Characters are stored as actual letters, not pixels. You can search, copy, and select individual words. Screen readers can read it aloud.</p>
-
-    <h3>Why is my scanned PDF an image PDF by default?</h3>
-    <p>Almost every scanner produces image PDFs by default because OCR was historically a paid feature and adds a few seconds per page. Most scanners have a "searchable PDF" or "OCR" setting buried in the menu. Phone apps usually require an in-app purchase to enable it.</p>
-
-    <h3>Can a PDF be partly readable and partly image?</h3>
-    <p>Yes, and it is a common gotcha. Documents combining native text with embedded scans (a contract with a scanned signature page, for example) have searchable text on some pages and image-only content on others. Ctrl+F finds half your terms and misses the rest.</p>
-
-    <h3>Will Ctrl+F always tell me if my PDF is readable?</h3>
-    <p>Usually, but not always. If the document has a broken or garbled text layer, Ctrl+F may return results that look correct but actually point to nonsense characters. To double-check, copy out a sentence and paste it into a notepad. If the paste is garbled, the text layer is broken even if Ctrl+F seems to work.</p>
-
-    <h3>Can image PDFs be smaller in file size?</h3>
-    <p>Often yes, especially after compression. That is why some "PDF shrinker" tools secretly convert readable PDFs into image PDFs to make them smaller. The file is smaller, but you lost search and copy. Use a proper compression tool that preserves the text layer.</p>
-
-    <h3>How do I know if my PDF reader is showing the search bar but not finding text?</h3>
-    <p>Your reader is fine. The PDF is the problem. If Ctrl+F opens the search bar but searches return zero results, the PDF has no text layer to search. Run OCR to add one.</p>
   `,
   image: "/images/idp-vs-ocr.png",
   featuredImage: "/images/idp-vs-ocr.png",

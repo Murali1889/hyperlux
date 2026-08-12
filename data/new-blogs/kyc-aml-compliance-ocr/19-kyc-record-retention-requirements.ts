@@ -61,27 +61,6 @@ export const blogKa19: BlogPost = {
     <h2>What I would check in your current record retention pipeline</h2>
 
     <p>Ask whether your retention system computes clocks per record type, transaction date for transaction records, account closure or dormancy for identity records, filing date for SAR documentation, or whether it applies one retention date per customer file regardless of which specific record is in question, since the worked example above shows those three clocks genuinely diverging by years within a single customer relationship. Then ask whether your default response to that complexity has been building the three clocks correctly or simply retaining everything indefinitely to avoid the engineering work, since indefinite retention creates its own exposure under data protection frameworks that require erasure once a legally mandated retention period has genuinely run its course. Confirm your system supports a hold mechanism capable of overriding an otherwise-expired clock for records tied to an active investigation or litigation matter, without requiring that hold logic to be built as a fourth, independently triggered retention period. Finally, confirm whichever team owns this system can produce, for any given record, both what its retention period is and what specific event started that clock, since being unable to answer that second question during an examination is itself a finding, regardless of whether the record happens to still exist.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>Is KYC record retention really just "keep everything for five years"?</strong><br />
-    No. Transaction records, customer identification records, and SAR supporting documentation each run on a five-year clock, but each clock starts from a different event, transaction date, account closure, or SAR filing date respectively, so they rarely expire on the same day even within one customer's file.</p>
-
-    <p><strong>What event starts the retention clock for customer identification records?</strong><br />
-    Account closure, or for credit card accounts specifically, the date the account becomes closed or dormant, not the date any individual transaction occurred within the account's lifetime.</p>
-
-    <p><strong>What event starts the retention clock for SAR supporting documentation?</strong><br />
-    The date the SAR was filed, an independent clock that runs regardless of whether the underlying account remains open or has since closed.</p>
-
-    <p><strong>Why is indefinite record retention not a safe default?</strong><br />
-    Data protection frameworks generally require erasure of personal data once it is no longer needed, with a carve-out for legally mandated retention. That carve-out covers a record through its actual required window, not indefinitely once that window has genuinely expired.</p>
-
-    <p><strong>How should an active investigation or litigation hold affect retention?</strong><br />
-    As a hold that overrides an otherwise-expired clock for the specific records it covers, rather than as a separate, independently triggered retention period requiring its own clock logic.</p>
-
-    <p><strong>Why does a single retention date per customer file cause problems?</strong><br />
-    It cannot represent the reality that transaction records, identity records, and SAR documentation genuinely expire on different dates within the same customer relationship, leading to either premature deletion of records still required or unnecessary over-retention of records no longer required.</p>
-
     <p>"Keep KYC records for five years" is not wrong, it is simply incomplete in a way that matters. Three structurally different record types share that same headline number while starting their clocks from three different events, and a compliance program that has never separated them has likely never actually tested whether its retention logic is correct, only whether it happens to be conservative enough that the gap has not yet been discovered during an examination.</p>
 
     <p>None of this argues against automating record retention. Manually tracking three separate clocks per customer across a real portfolio does not scale any better than a single, wrong, unified clock does, it just fails less visibly. It is a reason to confirm your retention system is built around record-type-specific triggers rather than one customer-level date, and to treat indefinite over-retention as a genuine data protection exposure rather than a conservative, risk-free default, before an examiner or a data protection regulator, not your own compliance team, is the first to notice which specific clock you never actually built. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>

@@ -71,27 +71,6 @@ export const blogKa05: BlogPost = {
     <h2>What I would check in your current PEP screening pipeline</h2>
 
     <p>Ask whether your system tracks PEP status as a single global flag per customer, or as a genuinely jurisdiction-aware classification that can correctly differ depending on which regulatory framework applies to a given relationship, since a single flag cannot represent the real, simultaneous disagreement between frameworks like Canada's and a strict "once a PEP" jurisdiction operating in parallel. Then ask whether declassification decisions actually document the underlying risk factors, time elapsed, continuing influence, country risk, rather than only checking against a jurisdiction's numeric floor and treating that single number alone as sufficient justification for closing the file. Check separately whether enhanced due diligence intensity actually scales with the seniority of the office a given PEP held, rather than applying one flat level of scrutiny across every PEP relationship regardless of how much real influence the underlying office actually carried. Finally, confirm your close-associate identification process relies on genuine relationship research and adverse media, not a static list, since that category resists the kind of fixed definition that works reasonably well for immediate family, the same adverse-media research discipline this series covers in more depth elsewhere.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What are the main categories of politically exposed persons?</strong><br />
-    Domestic PEPs (prominent function in their own country), foreign PEPs (equivalent function for another state), and international organization PEPs, plus immediate family and close associates who inherit a version of the same classification.</p>
-
-    <p><strong>Who counts as a PEP's immediate family for screening purposes?</strong><br />
-    Commonly spouses, parents, siblings, children, and a spouse's parents and siblings, though this definition can vary somewhat by jurisdiction and specific regulatory framework.</p>
-
-    <p><strong>When does someone stop being classified as a PEP?</strong><br />
-    It depends entirely on jurisdiction. The EU sets a 12-month minimum floor, Canada distinguishes foreign PEPs (lifetime status) from domestic PEPs (5-year maximum), and some jurisdictions apply "once a PEP, always a PEP" with no fixed limit at all.</p>
-
-    <p><strong>Can the same person be correctly classified differently under different rules?</strong><br />
-    Yes. A former domestic official could be validly declassified under one framework's timeline while still required to be treated as a PEP under another jurisdiction's stricter or lifetime standard, simultaneously and correctly under each.</p>
-
-    <p><strong>Does clearing a jurisdiction's minimum time period automatically mean declassification is correct?</strong><br />
-    No. A numeric floor like the EU's 12 months marks the earliest point declassification becomes permissible, not an automatic trigger. The actual decision should still weigh continuing influence and country-level risk factors.</p>
-
-    <p><strong>Why can't a single global PEP flag work for a multinational compliance program?</strong><br />
-    Because different jurisdictions can reach genuinely different, simultaneously correct conclusions about the same person's PEP status. A single binary flag cannot represent that legitimate disagreement across frameworks.</p>
-
     <p>"Risk-based, no fixed time limit" is an accurate description of the underlying principle, one that holds up under scrutiny, and it is still an incomplete answer to the actual operational question a screening decision has to resolve on a specific calendar date for a specific customer. The real jurisdictional numbers, a 12-month EU floor, Canada's lifetime-versus-five-year split by PEP type, and outright indefinite classification elsewhere entirely, are exactly the concrete detail most PEP screening content leaves out on the way to stating the general principle correctly and moving on. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/ocr-accuracy.png",

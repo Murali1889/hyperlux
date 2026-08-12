@@ -62,27 +62,6 @@ export const blogKa06: BlogPost = {
     <h2>What I would check in your current watchlist screening pipeline</h2>
 
     <p>Ask directly whether your whitelist or disposition-memory system suppresses future alerts at the customer level or at the specific match level, tied to a particular list entry and version, since the first approach creates exactly the blind spot described above. Then ask whether a whitelist entry gets automatically flagged for re-review when either the customer's own data or the referenced list entry's data changes materially after the original clearance decision, rather than remaining valid indefinitely regardless of what changes underneath it. Confirm your audit trail actually records the specific reasoning behind each disposition decision, not just a binary cleared-or-not flag, since that reasoning is exactly what a regulator will ask for when reviewing how a program handles repeat screening. Check whether your system recognizes the same real individual appearing across multiple separate list sources as one match requiring one disposition, rather than generating and separately clearing redundant alerts for each list source independently. And confirm a periodic re-validation cadence exists as a backstop for whitelist entries generally, catching the material changes your automated detection logic did not cleanly catch the first time, the same layered-defense principle covered from a document-forensics angle in our <a href="/resources/blogs/bank-statement-fraud-detection">bank statement fraud detection piece</a>, where no single check was treated as sufficient on its own.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>Why does rescreening generate the same false positive alert repeatedly?</strong><br />
-    Because watchlists change continuously and customers must be rechecked every cycle, but without memory of prior review decisions, the matching logic has no way to know a specific match was already reviewed and confirmed as a false positive.</p>
-
-    <p><strong>What is wrong with a customer-level whitelist entry?</strong><br />
-    It suppresses all future alerts for that customer, not just the specific false-positive match that was reviewed, which can silently hide a genuinely new, unrelated match against a different designated individual added to the list later.</p>
-
-    <p><strong>What is the correct scope for a disposition or whitelist record?</strong><br />
-    Tied to the specific customer identity, the specific list entry, and the specific version of that entry at the time of review, not a blanket flag suppressing all future screening for the customer entirely.</p>
-
-    <p><strong>Should a whitelist entry remain valid forever once created?</strong><br />
-    No. If either the customer's own identifying data or the referenced list entry changes materially after the original clearance, that whitelist entry should be flagged for re-review rather than remaining valid indefinitely.</p>
-
-    <p><strong>What does a regulator actually want to see in a screening program's audit trail?</strong><br />
-    Not just that a match was cleared, but why, against what specific list entry, with what reasoning, and whether that clearance decision still holds given the current state of both sides of the original comparison.</p>
-
-    <p><strong>Is redundant re-alerting on the same reviewed match better than a naive whitelist?</strong><br />
-    In terms of catching genuinely new matches, yes, since a poorly scoped whitelist can hide real alerts entirely. The correct answer is a properly scoped, match-specific disposition system rather than choosing between the two flawed extremes.</p>
-
     <p>Whitelisting a confirmed false positive so it stops generating redundant alerts is genuinely good practice, and the scope of that whitelist entry is where the real risk actually lives. A customer is never simply "cleared." A specific match, against a specific version of a specific list entry, was cleared, and treating that narrower, more precise fact as the broader one is exactly how a screening program quietly stops catching the new matches it was built to find.</p>
 
     <p>None of the individual pieces here are exotic engineering, storing a reference to the specific list entry and version a decision was made against, detecting when either side of that comparison changes, running a periodic backstop revalidation, and recognizing duplicate list-source entries as one underlying match. What they have in common is that skipping any single one of them produces a system that looks, on the surface, exactly like a well-functioning whitelist right up until a genuinely new match against a different designated individual gets silently absorbed into a suppression rule that was only ever supposed to cover one specific, already-reviewed case. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>

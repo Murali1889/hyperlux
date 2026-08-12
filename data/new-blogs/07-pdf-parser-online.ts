@@ -98,26 +98,6 @@ export const blog07: BlogPost = {
     <p>If you are parsing simple, paragraph-heavy documents: any free tool will do. SmallPDF, ILovePDF, Adobe Online. Pick one and move on.</p>
     <p>If you are parsing tables, forms, or anything structured: do not waste time on free parsers. Pay for a layout-aware engine, AWS Textract, Google Document AI, or DocsAPI. The cost is trivial compared to the cleanup time you save.</p>
     <p>If you are building something production: test 10 real documents with each candidate before paying. The marketing demos are always optimistic. Your documents are always messier. (<a href="/author/nupura-ughade">I have written about this realistic testing approach many times</a>.)</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>Why does my PDF parser scramble table data?</h3>
-    <p>Most parsers read top-to-bottom, left-to-right. For a multi-column table, that scrambles the row structure. The fix is layout-aware parsing, engines that detect table boundaries before reading text. AWS Textract, Google Document AI, and DocsAPI all do this.</p>
-
-    <h3>What is the best free PDF parser online?</h3>
-    <p>For paragraphs: Google Drive's OCR trick works fine. For tables: there is no good free option. The free tools all scramble columns to some degree. If tables matter, paid parsers ($0.02-$0.05 per page) save you far more than they cost.</p>
-
-    <h3>Can a PDF parser handle multi-page tables?</h3>
-    <p>Good ones, yes. They detect that a table on page 7 continues on page 8 and stitch the rows together. Naive parsers treat each page as a separate table, which breaks row continuity on multi-page bank statements and financial reports.</p>
-
-    <h3>What format should a PDF parser output?</h3>
-    <p>JSON or CSV for structured data. Plain text is rarely useful for tables. Look for parsers that output one structured row per table row, with consistent column keys across rows.</p>
-
-    <h3>How do I evaluate a PDF parser before paying?</h3>
-    <p>Run 10 of your real documents through the parser's free tier or trial. Count how many rows come out correctly and how many require cleanup. The marketing demos always look perfect; your documents almost never do.</p>
-
-    <h3>Why are some PDF tables harder to parse than others?</h3>
-    <p>Tables without borders, with merged cells, or spanning multiple pages are dramatically harder to parse correctly. Naive parsers handle bordered, single-page tables fine and fail on the others. Layout-aware parsers handle all four patterns.</p>
   `,
   image: "/images/idp-vs-ocr.png",
   featuredImage: "/images/idp-vs-ocr.png",

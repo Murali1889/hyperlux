@@ -85,27 +85,6 @@ export const blogAp01: BlogPost = {
     <p>Pull 20 real invoices from your worst-formatted repeat vendors, run them through the extraction tool, and check three things before you ever touch the API: does the vendor match against your existing vendor list by ID rather than creating duplicates, does the line-item sum match the stated total exactly, and does the tool tell you which fields it could not confidently extract rather than guessing. If a vendor cannot answer how they handle GL coding without a rules setup step, assume it does not exist yet.</p>
 
     <p>Run a parallel period before you cut over. Post the same batch of invoices through both the old manual process and the new OCR-to-QuickBooks pipeline for two to three weeks, then diff the results field by field, not just total by total. A wrong GL code or a duplicate vendor record can carry a correct total amount, which means checking only the total will miss exactly the errors that matter most for a clean books close. For the broader AP OCR evaluation process beyond QuickBooks specifically, see our <a href="/resources/blogs/accounts-payable-ocr">accounts payable OCR guide</a>.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>Does QuickBooks Online have built-in invoice OCR?</strong><br />
-    No. QuickBooks Online's Receipt Capture reads receipts, a different object type from vendor bills. Invoice OCR requires a third-party tool that extracts data and posts it into QuickBooks through the Bill entity in the Accounting API.</p>
-
-    <p><strong>How does invoice OCR data map into QuickBooks?</strong><br />
-    Extracted fields map to the QuickBooks Bill object: vendor name to VendorRef (by ID), invoice date to TxnDate, due date to DueDate, invoice number to DocNumber, and line items to the Line array with GL coding requiring a separate mapping layer that OCR alone does not provide.</p>
-
-    <p><strong>Why did my invoice fail to sync to QuickBooks even though the OCR extraction looked correct?</strong><br />
-    The most common causes are a TotalAmt mismatch against summed line items (which the API rejects outright), a TxnDate falling inside a closed accounting period, or a missing CurrencyRef on a multi-currency company file. All three fail silently from the user's perspective unless the integration surfaces the API error explicitly.</p>
-
-    <p><strong>Does invoice OCR work the same way for QuickBooks Desktop as QuickBooks Online?</strong><br />
-    No. QuickBooks Online uses a REST API with the Bill entity described above. QuickBooks Desktop typically integrates through IIF file import or the QBXML/Web Connector interface instead, which is a fundamentally different integration path, not a configuration difference.</p>
-
-    <p><strong>Can invoice OCR assign GL codes automatically in QuickBooks?</strong><br />
-    Not from optical extraction alone. GL/account coding requires a separate rules engine or a historical vendor-to-account mapping layer built on top of the extracted data, since OCR can read a line item's amount and description but has no inherent knowledge of your chart of accounts.</p>
-
-    <p><strong>Can I attach the original invoice PDF to a QuickBooks bill automatically?</strong><br />
-    Yes, but it is a separate API call from creating the Bill record itself. An integration that posts the Bill successfully but fails silently on the attachment step leaves you with correct data and no way to pull the source document later, which matters at audit time. Confirm your tool handles attachment upload failures explicitly rather than treating a successful Bill post as a fully successful sync.</p>
-
     <p>Sources: field names verified against the <a href="https://developer.intuit.com/app/developer/qbo/docs/api/accounting/all-entities/bill" target="_blank" rel="noopener">QuickBooks Online Bill entity reference</a> (Intuit developer documentation). Extraction accuracy figures from our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/invoice-processing.png",

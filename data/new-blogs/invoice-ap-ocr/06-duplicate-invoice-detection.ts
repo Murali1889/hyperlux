@@ -67,27 +67,6 @@ export const blogAp06: BlogPost = {
     <p>Pull your last 90 days of flagged duplicates and check what field combination each one matched on. If the overwhelming majority matched on exact invoice number alone, your system is only catching the simplest case and likely missing the reformatted-resubmission and second-channel patterns entirely. Then pull a sample of paid invoices from your highest-volume repeat vendors and manually check for near-duplicates the automated system did not flag, comparing normalized vendor name, amount, and date within a two-week window by hand. If you find real duplicates your system missed, the fix is almost always widening the matching logic beyond exact-field comparison, not buying a different tool with the same underlying single-field check.</p>
 
     <p>Also check the reverse case: pull a sample of flagged-but-rejected alerts, the ones a human looked at and cleared as false positives, and see how many came from the same handful of recurring-billing vendors. If one or two vendors account for a disproportionate share of false-positive alerts, adding them to a vendor-level exception list will do more to restore trust in the system than any threshold tuning, because it directly removes the noise your AP team has already learned to distrust.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>Why do duplicate invoice checks miss so many real duplicates?</strong><br />
-    Most default ERP duplicate checks compare invoice number and vendor ID for exact matches, which only catches identical resubmissions. Real duplicates commonly arrive with reformatted invoice numbers, slightly different vendor name text, or a few days apart, none of which pass an exact-match check.</p>
-
-    <p><strong>What fields should duplicate invoice detection compare?</strong><br />
-    A composite check of normalized vendor identity, normalized invoice number, amount (with tight tolerance), and date (within a short window, commonly 3 to 14 days). Vendor plus amount plus a date within the window is a strong duplicate signal even when the invoice number format differs.</p>
-
-    <p><strong>How do you tell if a duplicate invoice is an error or fraud?</strong><br />
-    Timing and formatting intent are the practical signals. Accidental duplicates usually have identical or near-identical invoice numbers submitted close together. Deliberate fraud more often shows a subtly altered invoice number submitted with deliberate spacing, sometimes timed to high-volume review periods.</p>
-
-    <p><strong>Should duplicate detection run before or after payment?</strong><br />
-    Before, at invoice intake. Catching a duplicate before it enters the approval workflow is a prevented error. Catching it after payment is a recovery process that takes weeks and does not always fully resolve, so intake-time detection has significantly more leverage than periodic payment-history audits.</p>
-
-    <p><strong>Can inconsistent OCR extraction cause missed duplicates?</strong><br />
-    Yes. If the same physical invoice gets read differently across two scans, particularly on the invoice number, the matching logic sees two different values for what should be an identical submission and fails to flag the relationship. Extraction consistency matters as much to duplicate detection as raw field accuracy.</p>
-
-    <p><strong>Why does my duplicate detection system flag legitimate recurring invoices as duplicates?</strong><br />
-    Recurring charges from the same vendor at the same amount (subscriptions, retainers, fixed-rate contracts) naturally look like duplicates to matching logic tuned only on vendor, amount, and timing. The fix is a vendor-level exception list that requires a genuine invoice-number or billing-period collision before alerting on known recurring-billing vendors.</p>
-
     <p>None of this logic requires exotic technology. It requires actually publishing the matching criteria instead of hiding them behind a proprietary product name, which is the gap this piece exists to close.</p>
 
     <p>Sources: extraction accuracy figures from our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>

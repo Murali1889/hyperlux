@@ -61,27 +61,6 @@ export const blogKa11: BlogPost = {
     <h2>What I would check in your current liveness detection pipeline</h2>
 
     <p>Ask whether your liveness provider runs transport and device integrity checks, confirming the camera feed originates from genuine physical hardware, as a distinct step alongside content-based liveness analysis, or whether content analysis is the only line of defense your pipeline actually has. Then ask specifically whether that transport-layer check runs on every verification session or only on sessions already flagged as suspicious by some other signal, since injection attacks are specifically designed to look unremarkable to every check except the one built to catch them. Confirm whether your flow defaults to passive or active liveness, and if it is passive, weigh the onboarding-friction savings against the fact that passive liveness is the mode Group-IB and iProov's data show being defeated at the highest rate. Finally, confirm your vendor's device-integrity signals are being retrained against current virtual camera and emulator tooling on a real cadence, the same detection-freshness discipline that matters for the fraud-pattern layer covered in our <a href="/resources/blogs/bank-statement-fraud-detection">bank statement fraud detection piece</a>, since virtual camera software evolves specifically to evade whatever the current generation of detection checks for.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is the difference between a presentation attack and an injection attack in liveness detection?</strong><br />
-    A presentation attack physically shows a fake, a photo, video, or mask, to a real camera lens. An injection attack bypasses the camera entirely, feeding synthetic video directly into the verification pipeline through virtual camera software or manipulated API calls.</p>
-
-    <p><strong>Why can't content-based liveness detection catch injection attacks?</strong><br />
-    Content-based detection analyzes texture, depth, and motion in captured footage to judge whether it shows a live human face. Injection attacks insert synthetic footage directly into the pipeline, so there is no physical screen, mask, or lighting artifact for content analysis to detect.</p>
-
-    <p><strong>Is active liveness detection immune to injection attacks?</strong><br />
-    No. Active liveness raises the difficulty of a successful injection attack by requiring a real-time response to an unpredictable challenge, but a sophisticated setup can still intercept the challenge and generate a synthetic response, so it reduces but does not eliminate the risk.</p>
-
-    <p><strong>What does transport and device integrity verification actually check?</strong><br />
-    Whether the video feed genuinely originates from the device's physical camera hardware rather than a virtual camera driver, whether the device shows signs of emulation or rooting, and whether the client SDK's API communication shows signs of direct manipulation.</p>
-
-    <p><strong>How fast are injection attacks growing?</strong><br />
-    iProov's 2025 threat intelligence report found injection attacks targeting iOS devices rose 741% year on year. Group-IB documented 8,065 attempts against a single financial institution's liveness checks in an eight-month window in 2025.</p>
-
-    <p><strong>Should KYC flows default to passive or active liveness detection?</strong><br />
-    Passive liveness adds less onboarding friction but is more exposed to injection attacks, since a pre-rendered synthetic clip only needs to mimic a few seconds of a still face. Active liveness's real-time challenge raises attack cost, though transport-layer verification is the layer that actually closes the injection gap.</p>
-
     <p>A printed photo held up to a camera is a good, visual illustration of what liveness detection catches. It is not, on its own, a picture of what liveness detection in 2026 actually has to defend against, since the more consequential attack now never touches a camera at all. That gap, transport and device integrity verification running as a distinct layer alongside content analysis rather than a better version of content analysis alone, is exactly where a liveness program's real resilience against injection gets decided.</p>
 
     <p>None of this is a reason to distrust liveness detection as a category. Content-based checks still reliably catch the presentation attacks that remain common, and dropping liveness entirely in favor of manual review is not more accurate, just slower and more expensive at any real volume. It is a reason to confirm what specific layer of your pipeline is actually doing the injection-detection work, before assuming a low fraud rate reflects genuine resilience rather than an attack type your content analysis was never built to see in the first place. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>

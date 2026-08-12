@@ -91,24 +91,6 @@ export const blogAp05: BlogPost = {
     <h2>What I would check this week if the exception queue is drowning</h2>
 
     <p>Pull last month's quantity and price mismatches, the two categories most likely to hide OCR errors, and hand-check 20 of them against source documents. If more than 1 in 5 turns out to be an extraction error rather than a real discrepancy, the fix is not more approval steps, it is better table extraction on multi-page POs and receipts. If most of them are real, the fix is unit-of-measure and vendor-master cleanup, not a new OCR vendor. Knowing which problem you actually have before you spend money on either is the entire point of this exercise.</p>
-
-    <h3>Frequently asked questions</h3>
-
-    <p><strong>What is 3-way matching in accounts payable?</strong><br />
-    3-way matching compares the purchase order, the goods receipt, and the supplier invoice before approving payment, checking that quantity, price, and total agree across all three documents. It is one of the most common internal controls against overpayment, duplicate payment, and invoice fraud.</p>
-
-    <p><strong>What is the difference between 2-way and 3-way matching?</strong><br />
-    2-way matching compares only the purchase order and the invoice. It is faster but cannot catch cases where the invoice bills for goods that were never actually received, since it skips the receipt check entirely. 3-way matching adds the goods receipt as a third check specifically to close that gap.</p>
-
-    <p><strong>Why does 3-way matching flag invoices that are actually correct?</strong><br />
-    Most false flags trace back to OCR extraction errors on the underlying documents, not real discrepancies. A misread digit, a dropped decimal point, or a table row split across a page break produces a number that looks like a mismatch to the matching engine even though the original documents agree. Checking the source image before escalating catches most of these.</p>
-
-    <p><strong>Can 3-way matching be fully automated?</strong><br />
-    The comparison logic can run automatically once clean data is available, but full automation depends entirely on extraction quality. If the OCR layer misreads quantities or mangles multi-page tables, the matching engine automates the creation of false exceptions just as efficiently as it would automate real ones. Extraction accuracy, not workflow logic, is usually the ceiling on how "automated" 3-way matching can actually get.</p>
-
-    <p><strong>What causes most 3-way match exceptions?</strong><br />
-    In practice, a mix of three things: genuine business discrepancies (partial shipments, price changes), OCR extraction errors on faxed or scanned documents (especially multi-page tables), and unresolved master-data issues (vendor aliases, unit-of-measure conversions). Teams that do not separate these three causes end up treating all of them the same way, which wastes review time on the ones that need no human judgment at all.</p>
-
     <p>Sources: fraud-control context on matching as an internal control draws on the Association of Certified Fraud Examiners' <a href="https://legacy.acfe.com/report-to-the-nations/2024/" target="_blank" rel="noopener">Report to the Nations</a>, which puts the typical organization's fraud loss at roughly 5% of annual revenue. For the extraction-accuracy numbers cited above, see our full <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>. For the broader AP OCR buying process, see our <a href="/resources/blogs/accounts-payable-ocr">accounts payable OCR guide</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/invoice-processing.png",

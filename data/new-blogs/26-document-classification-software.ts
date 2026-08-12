@@ -110,26 +110,6 @@ export const blog26: BlogPost = {
     <p>If you process under 1,000 documents per month: skip classification. The volume does not justify the engineering. Use one extraction template for everything and accept lower accuracy.</p>
     <p>If you process 1K-100K per month with 5+ document types: this is where classification pays off fastest. Pick a vendor with pre-trained classes that cover your top 5 types. The accuracy lift is dramatic and the cost is small.</p>
     <p>If you process 100K+ per month: classification is non-negotiable. Build or buy, but you need it. Without it, your downstream accuracy will plateau no matter how good your OCR engine is. (<a href="/author/nupura-ughade">I write about pipeline architecture decisions often.</a>)</p>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>What is document classification software?</h3>
-    <p>Document classification software identifies the type of document, invoice, bank statement, contract, tax form, before extraction runs. It uses computer vision and text models to assign a class and confidence score, enabling type-specific extraction templates downstream.</p>
-
-    <h3>How accurate is document classification in 2026?</h3>
-    <p>On common document types (invoices, statements, IDs): 97-99%. On industry-specific types: depends on whether the vendor has pre-trained classes for them. Custom training gets to 95%+ with 50-200 examples per class.</p>
-
-    <h3>Can classification work on multi-page documents?</h3>
-    <p>Yes. Classification can run per-page or per-document. For mixed packets (mortgage applications, customer onboarding bundles), per-page classification followed by document segmentation produces the best results.</p>
-
-    <h3>Do I need classification if I only have one document type?</h3>
-    <p>No. Classification's value is in routing among multiple types. For single-type pipelines, skip directly to extraction.</p>
-
-    <h3>How does classification differ from OCR?</h3>
-    <p>OCR extracts text from images. Classification identifies what kind of document you are looking at. The two work together: classify first, then OCR with the right template.</p>
-
-    <h3>What does document classification software cost?</h3>
-    <p>Per-document classification typically runs $0.005-$0.02, a fraction of OCR cost. The accuracy improvement on downstream extraction usually pays for it many times over.</p>
   `,
   image: "/images/intelligent-document-processing.png",
   featuredImage: "/images/intelligent-document-processing.png",
