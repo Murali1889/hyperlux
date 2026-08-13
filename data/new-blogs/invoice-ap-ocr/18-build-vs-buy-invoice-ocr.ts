@@ -97,7 +97,6 @@ export const blogAp18: BlogPost = {
   ],
   tags: ["accounts payable", "invoice OCR", "engineering", "AP automation", "infrastructure"],
   cluster: "industry-trends",
-  noindex: true,
   faq: [
     {
       question: "How much does it cost to build an in-house invoice OCR pipeline?",
