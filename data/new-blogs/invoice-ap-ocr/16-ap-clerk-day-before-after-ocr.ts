@@ -104,7 +104,6 @@ export const blogAp16: BlogPost = {
   ],
   tags: ["accounts payable", "invoice OCR", "AP automation", "workflow", "ROI"],
   cluster: "industry-trends",
-  noindex: true,
   faq: [
     {
       question: "How much time does invoice OCR actually save an AP clerk per day?",
