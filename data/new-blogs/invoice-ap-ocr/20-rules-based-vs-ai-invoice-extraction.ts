@@ -94,7 +94,6 @@ export const blogAp20: BlogPost = {
   ],
   tags: ["accounts payable", "invoice OCR", "machine learning", "AP automation", "extraction architecture"],
   cluster: "ai-doc",
-  noindex: true,
   faq: [
     {
       question: "When does a rule-based approach outperform AI for invoice extraction?",

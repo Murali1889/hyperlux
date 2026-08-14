@@ -97,7 +97,6 @@ export const blogAp21: BlogPost = {
   ],
   tags: ["accounts payable", "invoice OCR", "implementation", "AP automation", "statistics"],
   cluster: "industry-trends",
-  noindex: true,
   faq: [
     {
       question: "How many invoices does a parallel run need to be statistically meaningful?",
