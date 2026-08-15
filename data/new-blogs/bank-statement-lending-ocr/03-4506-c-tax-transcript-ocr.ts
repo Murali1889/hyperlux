@@ -89,7 +89,6 @@ export const blogBl03: BlogPost = {
   ],
   tags: ["lending", "underwriting", "tax transcript OCR", "IVES", "fraud detection"],
   cluster: "industry-trends",
-  noindex: true,
   faq: [
     {
       question: "What is the difference between a Tax Return Transcript and a Tax Account Transcript?",
