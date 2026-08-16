@@ -93,7 +93,6 @@ export const blogBl04: BlogPost = {
   ],
   tags: ["lending", "underwriting", "asset verification", "bank statement OCR", "mortgage documents"],
   cluster: "industry-trends",
-  noindex: true,
   faq: [
     {
       question: "What is the actual definition of a large deposit for mortgage underwriting?",
