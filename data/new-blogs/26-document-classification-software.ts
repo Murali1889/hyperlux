@@ -33,7 +33,7 @@ export const blog26: BlogPost = {
     <p>Within a class, what subtype? Is this a vendor invoice, a customer invoice, or a credit memo? Is this a Form W-2, a 1099-MISC, or a 1099-NEC? Subtypes matter because extraction templates differ even within the same broad category.</p>
 
     <h3>Level 3: Document Source Classification</h3>
-    <p>Which specific issuer? Chase vs. Bank of America vs. Wells Fargo. AT&T vs. Verizon. Each issuer has slightly different layouts. Source classification enables issuer-specific extraction templates with the highest accuracy.</p>
+    <p>Which specific issuer? Chase vs. Bank of America vs. Wells Fargo. AT&T vs. Verizon. Each issuer has slightly different layouts. Source classification enables issuer-specific extraction templates with the highest accuracy. This is the level most teams skip when they first build a pipeline, treating "bank statement" as one class regardless of issuer, and it is also the level where the accuracy gap between a generic template and an issuer-specific one shows up most clearly, since two banks' statements can share almost nothing in common beyond both being tables of transactions.</p>
 
     <p>Most production pipelines need all three levels. The best classification software handles them in one model call.</p>
 
@@ -49,6 +49,13 @@ export const blog26: BlogPost = {
     <h3>3. Hybrid (Visual + Text)</h3>
     <p>Best of both. The model uses visual features and OCR'd text together. Slightly slower than pure visual but dramatically more accurate. This is the 2026 standard.</p>
 
+    <h2>What's actually inside a hybrid classification model</h2>
+    <p>"Hybrid visual and text classification" is not one algorithm, it is a design choice between two real, different architectural families, and the choice matters for accuracy, latency, and cost. The first family, exemplified by Microsoft's LayoutLMv3, runs OCR first and then feeds three things into one transformer at once: the recognized text, the layout, meaning the x-y position of every word on the page, and an image embedding of the visual layout itself. A base LayoutLMv3 model runs 12 transformer layers with 12 attention heads and a 768-dimension hidden size, and on standard document-understanding benchmarks it reaches roughly 90% entity-level F1 on FUNSD, a form-understanding dataset, and 96 to 97% on CORD, a receipt dataset. The model is learning, in effect, that the word "Total" appearing in the bottom-right region of a page in a specific font size is a strong classification signal that has nothing to do with what the word means semantically.</p>
+
+    <p>The second family, exemplified by Naver's Donut, skips OCR entirely. A Swin Transformer image encoder reads the raw document image directly, patch by patch, and a multilingual BART-based decoder generates structured output, the document class, the extracted fields, directly from those image patches, with no separate text-recognition step in the pipeline at all. This is what "OCR-free" document understanding actually means in production systems, not a marketing phrase but a specific architectural choice to skip a stage most systems treat as mandatory.</p>
+
+    <p>Neither approach is universally better. The LayoutLM-style approach benefits from an OCR step that is already fast and accurate, since it gets to reuse recognized text as a strong signal. The Donut-style approach avoids OCR errors propagating into classification entirely, since there is no intermediate text-recognition step to get wrong, but it has to learn visual-to-structure mapping without the shortcut of already-recognized words. Most commercial classification vendors in 2026 use a LayoutLM-family approach specifically because most pipelines already run OCR downstream anyway, so reusing that output for classification costs nothing extra.</p>
+
     <h2>What to Look For in a Classification Vendor</h2>
 
     <h3>1. Supported Document Types</h3>
@@ -61,10 +68,15 @@ export const blog26: BlogPost = {
     <p>The model should return a confidence score per class. Low-confidence predictions get routed to human review. Without scores, you cannot build a reliable exception queue.</p>
 
     <h3>4. Per-Document Latency</h3>
-    <p>For real-time workflows (KYC, customer onboarding), classification must complete in under 500ms. Batch workflows can tolerate seconds. Match the latency to your use case.</p>
+    <p>For real-time workflows (KYC, customer onboarding), classification must complete in under 500ms. Batch workflows can tolerate seconds. Match the latency to your use case. This is also where the LayoutLM-versus-Donut architectural choice covered above actually surfaces in a buying decision, since a Donut-style model doing its own image processing end to end carries a different, often higher, per-document compute cost than a LayoutLM-style model that can reuse OCR output already computed for other purposes downstream.</p>
 
     <h3>5. Accuracy on Your Documents</h3>
     <p>Vendor demos use clean documents. Your documents are messy. Always test on a representative sample of your real production stream before signing anything.</p>
+
+    <h3>6. Confidence Stability After Layout Changes</h3>
+    <p>A classification model's confidence score is not a fixed property of a document type, it is a measure of how closely a given document resembles what the model was actually trained on. Microsoft's own Document Intelligence guidance is explicit about this: low confidence on a document type is indicative of template or structural variations relative to the training set, not necessarily anything wrong with the document itself. This has a direct, practical consequence that vendor demos never surface: when a vendor you buy from redesigns their own invoice layout, a genuinely ordinary business event, your classification confidence on that vendor's documents can degrade until the model gets retrained or fine-tuned on the new layout.</p>
+
+    <p>This is not a hypothetical edge case, it is a routine maintenance event any production classification pipeline eventually hits, and the practical question worth asking a vendor is not "how accurate is your model" but "what happens to my pipeline when one of my top vendors redesigns their invoice next quarter." A vendor with a real answer describes an ongoing confidence-monitoring process, watching for a gradual or sudden drop in average confidence on a specific document source, and a fast path to retrain or fine-tune on new examples. A vendor without a real answer describes accuracy as a static, one-time-measured number, which is exactly the number that degrades quietly the first time a major vendor in your document stream changes their template.</p>
 
     <h2>The Pipeline I Recommend</h2>
     <ol>
@@ -106,6 +118,9 @@ export const blog26: BlogPost = {
     <p>Now imagine the mailroom hires a sorter who reads every envelope and puts it in the right department's basket. HR gets its mail. Accounting gets its mail. Legal gets its mail. Everyone moves faster because the sorting happened up front.</p>
     <p>Document classification software is that sorter, applied to digital documents, working in milliseconds. The downstream OCR and extraction templates know exactly what kind of document they are looking at and do their job better as a result.</p>
 
+    <h2>Why the model choice is not something you can safely ignore</h2>
+    <p>It is tempting to treat classification as a commodity feature and pick whichever vendor quotes the lowest per-document price, but the architectural choice underneath that price genuinely affects what happens at the edges of your document stream. A LayoutLM-family model degrades more gracefully on a document whose text was already recognized reasonably well by OCR but whose layout is unusual, since it still has strong text signal to lean on. A Donut-style model degrades more gracefully on a document with genuinely poor image quality where OCR itself would have struggled, since it never depended on OCR succeeding in the first place. Neither weakness shows up in a vendor's headline accuracy number, both only show up once your real, messy document stream starts hitting the specific edge case each architecture happens to handle worse.</p>
+
     <h2>What I'd Do Today</h2>
     <p>If you process under 1,000 documents per month: skip classification. The volume does not justify the engineering. Use one extraction template for everything and accept lower accuracy.</p>
     <p>If you process 1K-100K per month with 5+ document types: this is where classification pays off fastest. Pick a vendor with pre-trained classes that cover your top 5 types. The accuracy lift is dramatic and the cost is small.</p>
@@ -116,8 +131,8 @@ export const blog26: BlogPost = {
   category: "AI Document Intelligence",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-07-04T00:00:00.000Z",
-  last_updated: "July 4, 2026",
+  dateModified: "2026-08-17T00:00:00.000Z",
+  last_updated: "August 17, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "document classification software",

@@ -36,7 +36,19 @@ export const blog08: BlogPost = {
     <p>Old OCR pipelines required you to deskew, rotate, denoise, and threshold manually. New OCR APIs do all of that automatically. The accuracy lift you used to engineer for yourself now comes built in.</p>
 
     <h3>5. Vision-Language Models Joined the Field</h3>
-    <p>Claude 4.6, GPT-5 vision, Gemini Ultra can do OCR-like extraction for short documents and read complex layouts surprisingly well. They are not pure OCR, they understand context, can answer questions about the document, can reformat output. They are slower and more expensive than dedicated OCR, but for the trickiest documents they are unmatched. (We dig into the tradeoffs in <a href="/resources/blogs/vlm-vs-ocr">VLM vs OCR</a>.)</p>
+    <p>Claude 4.6, GPT-5 vision, Gemini Ultra can do OCR-like extraction for short documents and read complex layouts surprisingly well. They are not pure OCR, they understand context, can answer questions about the document, can reformat output. They are slower and more expensive than dedicated OCR, but for the trickiest documents they are unmatched. Architecturally, these models share the transformer-decoder generation approach TrOCR pioneered for dedicated OCR, just at a much larger scale and trained on a far broader task than character recognition alone, which is part of why they generalize well to messy layouts without task-specific fine-tuning. (We dig into the tradeoffs in <a href="/resources/blogs/vlm-vs-ocr">VLM vs OCR</a>.)</p>
+
+    <h2>The two-stage pipeline every OCR engine actually runs</h2>
+    <p>Almost every OCR engine, from Tesseract to the newest cloud APIs, runs the same conceptual two-stage pipeline underneath whatever marketing language describes it: text detection, finding the bounding boxes where text actually sits on the page, followed by text recognition, reading the specific characters inside each detected box. Understanding this two-stage split explains a lot of OCR's real-world failure modes, since detection and recognition fail in genuinely different ways, and a vendor claiming "99% accuracy" rarely says which stage that number describes.</p>
+
+    <p>A detection failure means the engine never found the region containing the text at all. Faint text, unusual fonts, text at an odd angle, or a stamp overlapping a printed line can all cause detection to miss text that a recognition model would have read correctly if it had ever been asked to. A recognition failure means detection found the right region but read the characters inside it incorrectly, the classic confusable-character problem, 0 versus O, 1 versus l versus I, that trips up even strong recognition models on low-resolution or noisy input. These two failure modes need genuinely different fixes: detection failures usually improve with better image pre-processing and higher-resolution capture, while recognition failures usually improve with a stronger recognition model or, for structured fields, a validation rule that catches an implausible character substitution after the fact.</p>
+
+    <h3>Why the newest engines look architecturally different from Tesseract</h3>
+    <p>Tesseract's modern LSTM-based engine, the version most people mean when they say "Tesseract" today, recognizes text through a specific three-stage pipeline: a convolutional neural network extracts visual features from each detected text region, an LSTM sequence model reads those features left to right, and a CTC, connectionist temporal classification, decoding step converts the LSTM's output into the final character sequence. This architecture has been genuinely effective for two decades, but it processes text strictly sequentially and has no built-in mechanism for using context from elsewhere on the page while recognizing a specific word.</p>
+
+    <p>Microsoft's TrOCR, representative of the newer generation of transformer-based OCR models, replaces all three of those stages with pure attention-based architecture. A Vision Transformer encoder processes the image as a grid of patches rather than running convolutional filters over it, and a transformer-based text decoder, built on the same architectural family as RoBERTa, generates the output text autoregressively, one token at a time, attending back over the full image representation at every step rather than reading strictly left to right through a fixed sequence model. The practical difference: a transformer-based recognizer can, in principle, use information from anywhere in the detected region to inform a single character's recognition, where a CNN-plus-LSTM pipeline processes that same region in a fixed, strictly sequential order.</p>
+
+    <p>For builders, this architectural split matters less than the practical question of picking the right tool, but it does explain something buyers often notice without understanding why: transformer-based engines tend to handle unusual layouts and mixed content within a single region more gracefully than older CNN-plus-LSTM engines, at the cost of higher compute per page and generally higher latency. If your documents are clean and uniform, the architectural difference rarely shows up in your accuracy numbers. If your documents are messy, mixed layouts, unusual fonts, text embedded near images, the newer transformer-based engines are more often where the accuracy gap actually comes from, not just marketing.</p>
 
     <h2>The Four Kinds of OCR Available to Builders in 2026</h2>
 
@@ -51,6 +63,9 @@ export const blog08: BlogPost = {
 
     <h3>Kind 4: Document Intelligence Platforms (Per-Document or Subscription)</h3>
     <p>Full platforms, DocsAPI, ABBYY, Hyperscience, IBM Datacap. Include OCR plus classification, validation, workflow routing, and human review. Best for: regulated industries, complex multi-step workflows, teams that want a turnkey solution. Higher cost; lower engineering burden.</p>
+
+    <h2>What the architecture split means for picking an engine</h2>
+    <p>None of this means a transformer-based engine is automatically the right choice. A CNN-plus-LSTM engine like Tesseract's, running on clean, uniform, printed documents, still delivers strong accuracy at a fraction of the compute cost, and there is no practical reason to pay the latency and cost premium of a transformer-based engine for a document type that a two-decade-old architecture already handles well. The architectural difference genuinely earns its keep specifically on the documents where detection or recognition struggles under the older approach, unusual layouts, mixed content, degraded scans, not as some universal upgrade worth paying for by default regardless of what your actual documents look like.</p>
 
     <h2>How to Pick the Right Kind for Your Project</h2>
     <p>Use this decision tree. It is the same one I use when advising other founders:</p>
@@ -71,7 +86,7 @@ export const blog08: BlogPost = {
     <p>$0.02 per page sounds tiny. At 100,000 pages per month that is $2,000. At 1 million pages it is $20,000. Most APIs offer volume discounts; ask for them.</p>
 
     <h3>3. The OCR Engine Is the Easy Part</h3>
-    <p>Most of the engineering goes into pre-processing, classification, validation, and downstream integration. The vendor sells you OCR; you still have to build the rest unless you pick a full platform.</p>
+    <p>Most of the engineering goes into pre-processing, classification, validation, and downstream integration. The vendor sells you OCR; you still have to build the rest unless you pick a full platform. This is exactly why the detection-versus-recognition split covered earlier matters practically, not just architecturally, since diagnosing whether a production accuracy problem is a detection failure or a recognition failure determines whether the fix belongs in your pre-processing step or in the vendor's model, and vendors rarely volunteer which stage their reported accuracy number actually describes.</p>
 
     <h3>4. Privacy Policies Vary Wildly</h3>
     <p>Some APIs delete your content after processing. Others use it for training. Some claim no-training but quietly do it. Read the terms. For sensitive content, prefer providers with explicit no-training and short retention.</p>
@@ -94,8 +109,8 @@ export const blog08: BlogPost = {
   category: "OCR How-To",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-06-17T00:00:00.000Z",
-  last_updated: "June 17, 2026",
+  dateModified: "2026-08-17T00:00:00.000Z",
+  last_updated: "August 17, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "optical character reader",
