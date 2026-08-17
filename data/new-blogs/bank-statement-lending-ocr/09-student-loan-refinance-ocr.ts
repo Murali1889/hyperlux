@@ -85,7 +85,6 @@ export const blogBl09: BlogPost = {
   ],
   tags: ["lending", "student loans", "underwriting", "payoff verification", "compliance"],
   cluster: "industry-trends",
-  noindex: true,
   faq: [
     {
       question: "What is a good-through date on a student loan payoff statement?",

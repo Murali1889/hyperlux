@@ -95,7 +95,6 @@ export const blogBl08: BlogPost = {
   ],
   tags: ["lending", "underwriting", "small business", "asset-based lending", "bank statement OCR"],
   cluster: "industry-trends",
-  noindex: true,
   faq: [
     {
       question: "What is a borrowing base certificate?",

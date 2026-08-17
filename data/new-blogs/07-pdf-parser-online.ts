@@ -32,6 +32,17 @@ export const blog07: BlogPost = {
     <p>Instead of a clean three-column table. Now your downstream code has to guess which numbers are dates, which are amounts, which are balances. It will guess wrong sometimes. Money will go to the wrong place. (This is the exact failure I described in our <a href="/resources/blogs/ocr-pdf-honest-guide">honest guide from 4M pages a month</a>.)</p>
     <p>The fix is <strong>layout-aware parsing</strong>. The parser first detects table boundaries (column edges, row separators, alignment patterns). Then it extracts text inside each cell separately. Then it assembles the row-column structure. This is a real engineering project, which is why most free parsers do not bother.</p>
 
+    <h2>How a real layout-aware parser actually finds columns</h2>
+    <p>"Layout-aware parsing" sounds like a black box until you look at how an actual open-source tool does it. Camelot's Stream extraction method, built on top of PDFMiner, is a genuinely instructive example because its logic is documented and inspectable, not hidden behind a vendor API. It works in four concrete steps, and understanding them explains both why layout-aware parsing works and why it still fails on the hardest tables.</p>
+
+    <p>Step one: group every word on the page into text rows based on vertical, y-axis, overlap. Words that sit at roughly the same height on the page get bucketed into the same row, regardless of their horizontal position. Step two: compute what Camelot calls text edges, candidate boundaries where a real table region probably starts and ends, based on where rows of text align consistently across multiple lines. Step three: within a detected table region, estimate how many columns actually exist by looking at how consistently word positions cluster into vertical bands across the grouped rows. Step four: refine the actual x-coordinate range of each column boundary by checking which specific words fall inside versus outside each candidate band, then expand the table's boundaries outward using gaps, stretches of the page with no text, as a signal for where the table genuinely ends.</p>
+
+    <p>This four-step process is why layout-aware parsing correctly handles borderless tables, since the whole method is built around inferring structure from word position rather than depending on drawn boundaries at all. It is also exactly why merged cells still cause trouble: a merged header spanning three columns produces a row where the column-count estimate from step three genuinely disagrees with the column count in every row beneath it, and no amount of gap detection resolves that disagreement automatically. It needs an explicit merged-cell handling rule layered on top of the base four-step process.</p>
+
+    <p>A concrete illustration: a three-column bank statement table, date, description, amount, might show word x-coordinates clustering around 72pt, 180pt, and 480pt across dozens of rows, three visually invisible but numerically obvious bands once you look at where text actually sits. A naive parser reading left-to-right, top-to-bottom never computes this clustering at all, it just emits words in the order they appear in the page's underlying content stream, which frequently does not match left-to-right reading order for multi-column layouts to begin with. That mismatch, not the visual absence of table borders, is the more fundamental cause of scrambled output.</p>
+
+    <p>One more distinction worth understanding: this method, like most PDF-native table extractors, operates on text that already has known coordinates because the PDF format stores them directly, which works only for readable, text-layer PDFs. For a scanned or photographed table with no underlying text layer, the same four-step logic still applies, but the input coordinates come from OCR's own text-detection stage instead of the PDF's native text positions, which is why table extraction accuracy on scanned documents depends on OCR bounding-box precision in a way that native-PDF extraction never has to worry about. A slightly misaligned OCR bounding box shifts a word's assumed column just enough to break the column-count estimate in step three, a failure mode with no equivalent in the text-layer case.</p>
+
     <h2>The Four Patterns of Table That Break Different Parsers</h2>
     <p>Tables are not all the same. From our test set, these four patterns each break parsers differently:</p>
 
@@ -60,10 +71,13 @@ export const blog07: BlogPost = {
     <p>Good libraries for developers. Camelot uses computer vision to detect tables; Tabula uses a Java engine. Both work well on bordered tables and struggle on borderless ones. Free, but you need a developer to use them.</p>
 
     <h3>AWS Textract</h3>
-    <p>Strong table parsing. Handles borderless tables well, merged cells okay, multi-page tables reliably. Pay-per-page. Best fit if you live in AWS.</p>
+    <p>Strong table parsing. Handles borderless tables well, merged cells okay, multi-page tables reliably. Pay-per-page. Best fit if you live in AWS. Textract's table detection follows the same conceptual row-and-column clustering logic described above, but runs its own proprietary model rather than the open, inspectable Camelot approach, which is why its merged-cell and multi-page handling is generally stronger out of the box.</p>
 
     <h3>DocsAPI</h3>
     <p>Honest disclosure: my product. Layout-aware parsing built specifically for the failure cases above. Handles all four table patterns, including multi-page bank statements. Outputs JSON ready for downstream systems. Try it on a real document at <a href="/products">/products</a>.</p>
+
+    <h2>Why understanding the mechanism changes how you evaluate a parser</h2>
+    <p>Knowing that layout-aware parsing works through row grouping, edge detection, column-count estimation, and boundary refinement, rather than some undifferentiated "AI magic," changes what questions are actually worth asking a vendor. Instead of asking whether a parser "handles tables," ask specifically whether it handles borderless tables, since that is the case the whole four-step method exists to solve. Instead of asking about accuracy generally, ask about merged-cell handling specifically, since that is the documented edge case where column-count estimation alone is not enough. A vendor who can answer these specific questions understands their own tool's actual mechanism; a vendor who can only repeat a blended accuracy percentage likely does not.</p>
 
     <h2>How to Test a PDF Parser Before You Commit</h2>
     <p>Do not trust the marketing demos. Run this test instead:</p>
@@ -104,8 +118,8 @@ export const blog07: BlogPost = {
   category: "OCR How-To",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-06-17T00:00:00.000Z",
-  last_updated: "June 17, 2026",
+  dateModified: "2026-08-17T00:00:00.000Z",
+  last_updated: "August 17, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "pdf parse online",
