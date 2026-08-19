@@ -88,7 +88,6 @@ export const blogBl14: BlogPost = {
   ],
   tags: ["lending", "underwriting", "cash flow analysis", "bank statement OCR", "alternative credit data"],
   cluster: "industry-trends",
-  noindex: true,
   faq: [
     {
       question: "What is the coefficient of variation in cash flow underwriting?",

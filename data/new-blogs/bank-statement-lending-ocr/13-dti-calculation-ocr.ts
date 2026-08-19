@@ -85,7 +85,6 @@ export const blogBl13: BlogPost = {
   ],
   tags: ["lending", "underwriting", "DTI", "mortgage documents", "bank statement OCR"],
   cluster: "industry-trends",
-  noindex: true,
   faq: [
     {
       question: "What is the difference between front-end and back-end DTI?",
