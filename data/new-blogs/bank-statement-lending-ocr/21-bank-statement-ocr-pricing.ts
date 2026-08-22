@@ -89,7 +89,6 @@ export const blogBl21: BlogPost = {
   ],
   tags: ["lending", "bank statement OCR", "pricing", "vendor evaluation", "accuracy benchmarking"],
   cluster: "comparison",
-  noindex: true,
   faq: [
     {
       question: "What is the difference between field-level and document-level OCR accuracy?",
