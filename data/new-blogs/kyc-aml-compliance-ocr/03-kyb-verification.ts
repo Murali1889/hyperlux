@@ -87,7 +87,6 @@ export const blogKa03: BlogPost = {
   ],
   tags: ["compliance", "KYC", "KYB", "AML", "fraud detection"],
   cluster: "compliance",
-  noindex: true,
   faq: [
     {
       question: "What does a certificate of good standing actually confirm?",
