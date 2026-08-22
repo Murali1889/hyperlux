@@ -87,7 +87,6 @@ export const blogBl19: BlogPost = {
   ],
   tags: ["lending", "compliance", "fair lending", "underwriting", "machine learning"],
   cluster: "compliance",
-  noindex: true,
   faq: [
     {
       question: "What does 'specific and accurate' mean for an ECOA adverse action reason?",

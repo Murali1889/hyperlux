@@ -94,7 +94,6 @@ export const blogKa01: BlogPost = {
   ],
   tags: ["compliance", "KYC", "passport OCR", "identity verification", "fraud detection"],
   cluster: "compliance",
-  noindex: true,
   faq: [
     {
       question: "What is the ICAO 9303 MRZ checksum algorithm?",
