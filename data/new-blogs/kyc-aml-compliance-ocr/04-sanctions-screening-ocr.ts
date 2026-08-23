@@ -86,7 +86,6 @@ export const blogKa04: BlogPost = {
   ],
   tags: ["compliance", "AML", "sanctions screening", "KYC", "fraud detection"],
   cluster: "compliance",
-  noindex: true,
   faq: [
     {
       question: "Why does a legitimate name fail to exact-match a sanctions list entry?",
