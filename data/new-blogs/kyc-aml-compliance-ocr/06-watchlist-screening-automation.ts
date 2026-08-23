@@ -86,7 +86,6 @@ export const blogKa06: BlogPost = {
   ],
   tags: ["compliance", "AML", "watchlist screening", "KYC", "audit trail"],
   cluster: "compliance",
-  noindex: true,
   faq: [
     {
       question: "Why does rescreening generate the same false positive alert repeatedly?",
