@@ -88,7 +88,6 @@ export const blogKa08: BlogPost = {
   ],
   tags: ["compliance", "AML", "KYC", "risk scoring", "enhanced due diligence"],
   cluster: "compliance",
-  noindex: true,
   faq: [
     {
       question: "What is the difference between CDD and EDD?",

@@ -87,7 +87,6 @@ export const blogKa07: BlogPost = {
   ],
   tags: ["compliance", "AML", "adverse media screening", "KYC", "NLP"],
   cluster: "compliance",
-  noindex: true,
   faq: [
     {
       question: "Why do adverse media screening false-positive rates run so high?",
