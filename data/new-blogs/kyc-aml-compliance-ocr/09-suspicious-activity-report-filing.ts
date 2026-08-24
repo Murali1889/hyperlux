@@ -86,7 +86,6 @@ export const blogKa09: BlogPost = {
   ],
   tags: ["compliance", "AML", "SAR filing", "BSA", "FinCEN"],
   cluster: "compliance",
-  noindex: true,
   faq: [
     {
       question: "What dollar threshold triggers a SAR filing obligation for a bank?",
