@@ -85,7 +85,6 @@ export const blogKa11: BlogPost = {
   ],
   tags: ["compliance", "KYC", "liveness detection", "biometric verification", "fraud prevention"],
   cluster: "compliance",
-  noindex: true,
   faq: [
     {
       question: "What is the difference between a presentation attack and an injection attack in liveness detection?",

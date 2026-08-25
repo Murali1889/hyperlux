@@ -89,7 +89,6 @@ export const blogKa10: BlogPost = {
   ],
   tags: ["compliance", "AML", "crypto", "Travel Rule", "KYC"],
   cluster: "compliance",
-  noindex: true,
   faq: [
     {
       question: "What does the crypto Travel Rule actually require?",

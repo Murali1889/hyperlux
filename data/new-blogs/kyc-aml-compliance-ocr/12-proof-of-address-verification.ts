@@ -84,7 +84,6 @@ export const blogKa12: BlogPost = {
   ],
   tags: ["compliance", "KYC", "proof of address", "document fraud", "address verification"],
   cluster: "compliance",
-  noindex: true,
   faq: [
     {
       question: "Why does raw fuzzy string matching fail for address verification?",
