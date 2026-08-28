@@ -84,7 +84,6 @@ export const blogKa21: BlogPost = {
   ],
   tags: ["compliance", "KYC", "biometric verification", "face match", "identity verification"],
   cluster: "compliance",
-  noindex: true,
   faq: [
     {
       question: "What does a face match system actually compare, if not the photos directly?",

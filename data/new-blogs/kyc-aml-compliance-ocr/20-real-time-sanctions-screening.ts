@@ -86,7 +86,6 @@ export const blogKa20: BlogPost = {
   ],
   tags: ["compliance", "AML", "sanctions screening", "real-time", "KYC"],
   cluster: "compliance",
-  noindex: true,
   faq: [
     {
       question: "What are the two separate claims bundled inside \"real-time sanctions screening\"?",

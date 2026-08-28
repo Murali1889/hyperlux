@@ -85,7 +85,6 @@ export const blogKa19: BlogPost = {
   ],
   tags: ["compliance", "KYC", "record retention", "BSA", "data protection"],
   cluster: "compliance",
-  noindex: true,
   faq: [
     {
       question: "Is KYC record retention really just \"keep everything for five years\"?",
