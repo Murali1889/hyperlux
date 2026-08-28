@@ -89,7 +89,6 @@ export const blogKa17: BlogPost = {
   ],
   tags: ["compliance", "fraud detection", "synthetic identity", "KYC", "credit risk"],
   cluster: "compliance",
-  noindex: true,
   faq: [
     {
       question: "Why did SSN validity checking stop being an effective fraud detection tool?",
