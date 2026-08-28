@@ -89,7 +89,6 @@ export const blogKa16: BlogPost = {
   ],
   tags: ["compliance", "KYC", "document expiry", "date parsing", "re-KYC"],
   cluster: "compliance",
-  noindex: true,
   faq: [
     {
       question: "Why do KYC systems treat a document expiring soon as already expired?",
