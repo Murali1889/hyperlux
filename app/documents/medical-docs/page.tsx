@@ -6,6 +6,7 @@ import HowItWorks from "@/components/documents/medical-docs/how-it-works"
 import ClinicalOperationalBenefits from "@/components/documents/medical-docs/clinical-operational-benefits"
 import PrivacySecurity from "@/components/documents/medical-docs/privacy-security"
 import CaseStudyHighlight from "@/components/documents/medical-docs/case-study-highlight"
+import PillarClusterBlogs from "@/components/documents/shared/pillar-cluster-blogs"
 import MedicalDocsFAQ from "@/components/documents/medical-docs/medical-docs-faq"
 import MedicalDocsCta from "@/components/documents/medical-docs/medical-docs-cta"
 import { buildPageMetadata } from "@/lib/page-metadata"
@@ -30,6 +31,11 @@ export default function MedicalDocsPage() {
         <ClinicalOperationalBenefits />
         <PrivacySecurity />
         <CaseStudyHighlight />
+        <PillarClusterBlogs
+          cluster="healthcare"
+          title="Healthcare Document Processing Guides"
+          description="How document intelligence applies to claims, coding, compliance, and revenue cycle workflows."
+        />
         <MedicalDocsFAQ />
         <MedicalDocsCta />
       </main>
