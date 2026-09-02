@@ -90,7 +90,7 @@ export const blogLd07: BlogPost = {
 
     <p>Not every gap is fatal, and conflating "imperfect" with "excluded" leads to either complacency or unnecessary panic, both wrong. Courts generally draw a distinction: minor, explainable gaps or possible mishandling typically go to the weight a jury gives the evidence, not to whether the jury sees it at all, and get tested through cross-examination rather than a pretrial exclusion ruling. A genuinely missing link, no witness, no system record, no hash, covering a period where the evidence could plausibly have been altered, is what gets evidence excluded before the jury ever hears about it. The practical distinction is whether the gap is explainable and bounded or whether it's a total blackout with no account of what happened during it. A log with an odd timestamp format is a weight problem. A log with a two-week hole and no hash on either side of it is an exclusion problem.</p>
 
-    <p>That distinction is exactly why the fields above matter more than the existence of a log itself. A pipeline that logs every action but stores timestamps inconsistently gives opposing counsel something to argue about, which is normal and survivable. A pipeline that has no record at all of what happened to a file between extraction and export gives a judge a genuine reason to keep the evidence out entirely, independent of whether anything actually went wrong. The related mechanics of how firms handle the litigation-hold side of this problem, tracking when a document became subject to a preservation obligation in the first place under FRCP 37(e), sit alongside this same custody discipline and are covered in our broader guide on <a href="/resources/blogs/legal-document-automation-the-complete-guide-for-modern-law-firms">legal document automation</a>. The extraction accuracy question that determines whether custody logging even has clean data to work with is covered separately in our piece on <a href="/resources/blogs/contract-ocr">contract OCR</a>.</p>
+    <p>That distinction is exactly why the fields above matter more than the existence of a log itself. A pipeline that logs every action but stores timestamps inconsistently gives opposing counsel something to argue about, which is normal and survivable. A pipeline that has no record at all of what happened to a file between extraction and export gives a judge a genuine reason to keep the evidence out entirely, independent of whether anything actually went wrong. The related mechanics of how firms handle the litigation-hold side of this problem, tracking when a document became subject to a preservation obligation in the first place under <a href="/resources/blogs/litigation-hold-software">FRCP 37(e)</a>, sit alongside this same custody discipline and are covered in our broader guide on <a href="/resources/blogs/legal-document-automation-the-complete-guide-for-modern-law-firms">legal document automation</a>. The extraction accuracy question that determines whether custody logging even has clean data to work with is covered separately in our piece on <a href="/resources/blogs/contract-ocr">contract OCR</a>.</p>
 
     <h2>What to check in your own document pipeline</h2>
 
@@ -112,7 +112,7 @@ export const blogLd07: BlogPost = {
     "fre 901 authentication",
     "digital evidence chain of custody",
     "evidence authentication standard",
-    "chain of custody log requirements",
+    "spoliation exclusion of evidence",
     "nist sp 800-86 digital forensics",
     "iso 27037 digital evidence",
   ],

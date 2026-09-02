@@ -3,7 +3,7 @@ import { nupuraUghade } from "../../authors"
 
 export const blogLd02: BlogPost = {
   id: "ld-02",
-  title: "TAR 1.0 vs TAR 2.0: What Actually Cuts Review Cost",
+  title: "E-Discovery Document Review: TAR 1.0 vs TAR 2.0 Cost",
   slug: "e-discovery-document-review",
   excerpt:
     "TAR 1.0 trains a model, then reviews. TAR 2.0 reviews while training. That structural gap, not software quality, drives most of the review cost difference.",
@@ -132,7 +132,7 @@ export const blogLd02: BlogPost = {
 
     <p>The choice between TAR 1.0 and TAR 2.0 gets treated in a lot of vendor material as a preference, almost a matter of workflow taste. It is not. It is a structural decision about where SME time gets spent and whether training and review are the same activity or two separate ones, and it has a direct, computable effect on review cost. The EDRM stage vendor content skips most, Processing, has an equally direct effect on whether either protocol can find what it is actually supposed to find. Getting the protocol right and getting the text extraction right are two different problems, and a review plan that only solves one of them is not actually solved.</p>
 
-    <p>Sources: TAR protocol comparisons and cost findings draw on Maura Grossman and Gordon Cormack's published research on simple passive learning, simple active learning, and continuous active learning, including their AutoTAR work on autonomous CAL protocols. The 1985 recall study is Blair and Maron, "An Evaluation of Retrieval Effectiveness for a Full-Text Document-Retrieval System." Case law reference is <em>Da Silva Moore v. Publicis Groupe</em>, 287 F.R.D. 182 (S.D.N.Y. 2012). Rule text is Federal Rule of Civil Procedure 26(b)(1). The nine-stage model is the Electronic Discovery Reference Model (EDRM), first published in 2005. For related extraction-quality context, see our <a href="/resources/blogs/contract-ocr">contract OCR</a> guide. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+    <p>Sources: TAR protocol comparisons and cost findings draw on Maura Grossman and Gordon Cormack's published research on simple passive learning, simple active learning, and continuous active learning, including their AutoTAR work on autonomous CAL protocols. The 1985 recall study is Blair and Maron, "An Evaluation of Retrieval Effectiveness for a Full-Text Document-Retrieval System." Case law reference is <em>Da Silva Moore v. Publicis Groupe</em>, 287 F.R.D. 182 (S.D.N.Y. 2012). Rule text is Federal Rule of Civil Procedure 26(b)(1). The nine-stage model is the Electronic Discovery Reference Model (EDRM), first published in 2005. For a closer look at how keyword-based classifiers and machine-learning models trade off precision and recall on legal documents, see our piece on <a href="/resources/blogs/privilege-log-automation">privilege log automation</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
   `,
   image: "/images/intelligent-document-processing.png",
   featuredImage: "/images/intelligent-document-processing.png",

@@ -107,7 +107,7 @@ export const blogLd17: BlogPost = {
     "board consent extraction",
     "stock purchase agreement OCR",
     "409A cap table accuracy",
-    "corporate minute book automation",
+    "equity issuance reconciliation software",
   ],
   tags: ["legal", "cap table", "corporate law", "document automation"],
   cluster: "legal",
