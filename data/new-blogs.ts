@@ -154,6 +154,30 @@ import { blogSd19 } from "./new-blogs/shipping-document-ocr/19-section-321-de-mi
 import { blogSd20 } from "./new-blogs/shipping-document-ocr/20-demurrage-detention-documentation"
 import { blogSd21 } from "./new-blogs/shipping-document-ocr/21-master-house-bill-of-lading-reconciliation"
 
+// Medical/Healthcare Document OCR cluster (topic 5 of 6, 21 posts) — see
+// docs/superpowers/specs/2026-09-02-medical-document-ocr-cluster-design.md
+import { blogMd01 } from "./new-blogs/medical-document-ocr/01-hl7-fhir-document-processing"
+import { blogMd02 } from "./new-blogs/medical-document-ocr/02-hipaa-deidentification-automation"
+import { blogMd03 } from "./new-blogs/medical-document-ocr/03-medical-coding-automation"
+import { blogMd04 } from "./new-blogs/medical-document-ocr/04-eob-parsing-automation"
+import { blogMd05 } from "./new-blogs/medical-document-ocr/05-cms-1500-form-processing"
+import { blogMd06 } from "./new-blogs/medical-document-ocr/06-npi-verification-api"
+import { blogMd07 } from "./new-blogs/medical-document-ocr/07-prior-authorization-automation"
+import { blogMd08 } from "./new-blogs/medical-document-ocr/08-hcc-risk-adjustment-coding"
+import { blogMd09 } from "./new-blogs/medical-document-ocr/09-ccda-document-processing"
+import { blogMd10 } from "./new-blogs/medical-document-ocr/10-dea-number-verification"
+import { blogMd11 } from "./new-blogs/medical-document-ocr/11-ndc-code-extraction"
+import { blogMd12 } from "./new-blogs/medical-document-ocr/12-medical-necessity-documentation"
+import { blogMd13 } from "./new-blogs/medical-document-ocr/13-hipaa-minimum-necessary-redaction"
+import { blogMd14 } from "./new-blogs/medical-document-ocr/14-835-remittance-advice-processing"
+import { blogMd15 } from "./new-blogs/medical-document-ocr/15-eligibility-verification-automation"
+import { blogMd16 } from "./new-blogs/medical-document-ocr/16-release-of-information-processing"
+import { blogMd17 } from "./new-blogs/medical-document-ocr/17-advance-beneficiary-notice-processing"
+import { blogMd18 } from "./new-blogs/medical-document-ocr/18-loinc-code-extraction"
+import { blogMd19 } from "./new-blogs/medical-document-ocr/19-medical-fax-automation"
+import { blogMd20 } from "./new-blogs/medical-document-ocr/20-insurance-card-ocr"
+import { blogMd21 } from "./new-blogs/medical-document-ocr/21-denial-code-extraction"
+
 export const newBlogs: BlogPost[] = [
   blog01,
   blog02,
@@ -294,4 +318,25 @@ export const newBlogs: BlogPost[] = [
   blogSd19,
   blogSd20,
   blogSd21,
+  blogMd01,
+  blogMd02,
+  blogMd03,
+  blogMd04,
+  blogMd05,
+  blogMd06,
+  blogMd07,
+  blogMd08,
+  blogMd09,
+  blogMd10,
+  blogMd11,
+  blogMd12,
+  blogMd13,
+  blogMd14,
+  blogMd15,
+  blogMd16,
+  blogMd17,
+  blogMd18,
+  blogMd19,
+  blogMd20,
+  blogMd21,
 ]
