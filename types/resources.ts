@@ -17,7 +17,7 @@ export interface Author {
   linkedin?: string
 }
 
-export type BlogCluster = "ocr" | "ai-doc" | "compliance" | "comparison" | "industry-trends"
+export type BlogCluster = "ocr" | "ai-doc" | "compliance" | "comparison" | "industry-trends" | "legal" | "healthcare" | "logistics"
 
 export interface BlogPost {
   id: string

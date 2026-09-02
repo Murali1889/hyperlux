@@ -6,6 +6,7 @@ import HowItWorks from "@/components/documents/shipping-docs/how-it-works"
 import OperationalBenefits from "@/components/documents/shipping-docs/operational-benefits"
 import SecurityCompliance from "@/components/documents/shipping-docs/security-compliance"
 import CaseStudyHighlight from "@/components/documents/shipping-docs/case-study-highlight"
+import PillarClusterBlogs from "@/components/documents/shared/pillar-cluster-blogs"
 import ShippingDocsFaq from "@/components/documents/shipping-docs/shipping-docs-faq"
 import ShippingDocsCta from "@/components/documents/shipping-docs/shipping-docs-cta"
 import { buildPageMetadata } from "@/lib/page-metadata"
@@ -29,6 +30,11 @@ export default function ShippingDocsPage() {
       <OperationalBenefits />
       <SecurityCompliance />
       <CaseStudyHighlight />
+      <PillarClusterBlogs
+        cluster="logistics"
+        title="Shipping & Logistics Document Processing Guides"
+        description="How document intelligence applies to customs, freight, and trade finance workflows."
+      />
       <ShippingDocsFaq />
       <ShippingDocsCta />
     </main>
