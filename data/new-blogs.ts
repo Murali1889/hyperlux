@@ -106,6 +106,30 @@ import { blogKa19 } from "./new-blogs/kyc-aml-compliance-ocr/19-kyc-record-reten
 import { blogKa20 } from "./new-blogs/kyc-aml-compliance-ocr/20-real-time-sanctions-screening"
 import { blogKa21 } from "./new-blogs/kyc-aml-compliance-ocr/21-biometric-face-match-kyc"
 
+// Legal Document OCR cluster (topic 4 of 6, 21 posts) — see
+// docs/superpowers/specs/2026-09-02-legal-document-ocr-cluster-design.md
+import { blogLd01 } from "./new-blogs/legal-document-ocr/01-contract-redlining-software"
+import { blogLd02 } from "./new-blogs/legal-document-ocr/02-e-discovery-document-review"
+import { blogLd03 } from "./new-blogs/legal-document-ocr/03-litigation-hold-software"
+import { blogLd04 } from "./new-blogs/legal-document-ocr/04-legal-citation-checker"
+import { blogLd05 } from "./new-blogs/legal-document-ocr/05-privilege-log-automation"
+import { blogLd06 } from "./new-blogs/legal-document-ocr/06-ledes-billing-format"
+import { blogLd07 } from "./new-blogs/legal-document-ocr/07-chain-of-custody-documentation"
+import { blogLd08 } from "./new-blogs/legal-document-ocr/08-force-majeure-clause-extraction"
+import { blogLd09 } from "./new-blogs/legal-document-ocr/09-governing-law-clause-extraction"
+import { blogLd10 } from "./new-blogs/legal-document-ocr/10-remote-online-notarization-verification"
+import { blogLd11 } from "./new-blogs/legal-document-ocr/11-due-diligence-data-room-software"
+import { blogLd12 } from "./new-blogs/legal-document-ocr/12-deposition-transcript-ocr"
+import { blogLd13 } from "./new-blogs/legal-document-ocr/13-patent-claim-extraction"
+import { blogLd14 } from "./new-blogs/legal-document-ocr/14-nda-clause-extraction"
+import { blogLd15 } from "./new-blogs/legal-document-ocr/15-arbitration-clause-extraction"
+import { blogLd16 } from "./new-blogs/legal-document-ocr/16-court-docket-ocr"
+import { blogLd17 } from "./new-blogs/legal-document-ocr/17-cap-table-document-automation"
+import { blogLd18 } from "./new-blogs/legal-document-ocr/18-legal-hold-custodian-tracking"
+import { blogLd19 } from "./new-blogs/legal-document-ocr/19-title-document-ocr"
+import { blogLd20 } from "./new-blogs/legal-document-ocr/20-legal-document-translation-ocr"
+import { blogLd21 } from "./new-blogs/legal-document-ocr/21-legal-deadline-extraction"
+
 export const newBlogs: BlogPost[] = [
   blog01,
   blog02,
@@ -204,4 +228,25 @@ export const newBlogs: BlogPost[] = [
   blogKa19,
   blogKa20,
   blogKa21,
+  blogLd01,
+  blogLd02,
+  blogLd03,
+  blogLd04,
+  blogLd05,
+  blogLd06,
+  blogLd07,
+  blogLd08,
+  blogLd09,
+  blogLd10,
+  blogLd11,
+  blogLd12,
+  blogLd13,
+  blogLd14,
+  blogLd15,
+  blogLd16,
+  blogLd17,
+  blogLd18,
+  blogLd19,
+  blogLd20,
+  blogLd21,
 ]
