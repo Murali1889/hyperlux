@@ -130,6 +130,30 @@ import { blogLd19 } from "./new-blogs/legal-document-ocr/19-title-document-ocr"
 import { blogLd20 } from "./new-blogs/legal-document-ocr/20-legal-document-translation-ocr"
 import { blogLd21 } from "./new-blogs/legal-document-ocr/21-legal-deadline-extraction"
 
+// Shipping/Logistics Document OCR cluster (topic 6 of 6, 21 posts) — see
+// docs/superpowers/specs/2026-09-02-shipping-document-ocr-cluster-design.md
+import { blogSd01 } from "./new-blogs/shipping-document-ocr/01-bill-of-lading-processing"
+import { blogSd02 } from "./new-blogs/shipping-document-ocr/02-hs-code-classification"
+import { blogSd03 } from "./new-blogs/shipping-document-ocr/03-advance-ship-notice-processing"
+import { blogSd04 } from "./new-blogs/shipping-document-ocr/04-freight-invoice-automation"
+import { blogSd05 } from "./new-blogs/shipping-document-ocr/05-customs-entry-summary-processing"
+import { blogSd06 } from "./new-blogs/shipping-document-ocr/06-certificate-of-origin-verification"
+import { blogSd07 } from "./new-blogs/shipping-document-ocr/07-dangerous-goods-declaration-processing"
+import { blogSd08 } from "./new-blogs/shipping-document-ocr/08-container-number-verification"
+import { blogSd09 } from "./new-blogs/shipping-document-ocr/09-packing-list-reconciliation"
+import { blogSd10 } from "./new-blogs/shipping-document-ocr/10-incoterms-clause-extraction"
+import { blogSd11 } from "./new-blogs/shipping-document-ocr/11-letter-of-credit-document-compliance"
+import { blogSd12 } from "./new-blogs/shipping-document-ocr/12-proof-of-delivery-processing"
+import { blogSd13 } from "./new-blogs/shipping-document-ocr/13-freight-bill-audit-automation"
+import { blogSd14 } from "./new-blogs/shipping-document-ocr/14-shipment-status-edi-processing"
+import { blogSd15 } from "./new-blogs/shipping-document-ocr/15-warehouse-receipt-processing"
+import { blogSd16 } from "./new-blogs/shipping-document-ocr/16-air-waybill-verification"
+import { blogSd17 } from "./new-blogs/shipping-document-ocr/17-vgm-declaration-processing"
+import { blogSd18 } from "./new-blogs/shipping-document-ocr/18-customs-power-of-attorney-processing"
+import { blogSd19 } from "./new-blogs/shipping-document-ocr/19-section-321-de-minimis-processing"
+import { blogSd20 } from "./new-blogs/shipping-document-ocr/20-demurrage-detention-documentation"
+import { blogSd21 } from "./new-blogs/shipping-document-ocr/21-master-house-bill-of-lading-reconciliation"
+
 export const newBlogs: BlogPost[] = [
   blog01,
   blog02,
@@ -249,4 +273,25 @@ export const newBlogs: BlogPost[] = [
   blogLd19,
   blogLd20,
   blogLd21,
+  blogSd01,
+  blogSd02,
+  blogSd03,
+  blogSd04,
+  blogSd05,
+  blogSd06,
+  blogSd07,
+  blogSd08,
+  blogSd09,
+  blogSd10,
+  blogSd11,
+  blogSd12,
+  blogSd13,
+  blogSd14,
+  blogSd15,
+  blogSd16,
+  blogSd17,
+  blogSd18,
+  blogSd19,
+  blogSd20,
+  blogSd21,
 ]
