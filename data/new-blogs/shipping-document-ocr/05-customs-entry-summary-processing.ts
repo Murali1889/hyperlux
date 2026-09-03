@@ -98,7 +98,6 @@ export const blogSd05: BlogPost = {
   datePublished: "2026-09-03T00:00:00.000Z",
   dateModified: "2026-09-03T00:00:00.000Z",
   last_updated: "September 3, 2026",
-  noindex: true,
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "customs entry summary processing",
