@@ -90,7 +90,6 @@ export const blogLd09: BlogPost = {
   datePublished: "2026-09-07T00:00:00.000Z",
   dateModified: "2026-09-07T00:00:00.000Z",
   last_updated: "September 7, 2026",
-  noindex: true,
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "governing law clause extraction",
