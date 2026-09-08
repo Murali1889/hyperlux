@@ -113,7 +113,6 @@ export const blogSd10: BlogPost = {
   datePublished: "2026-09-08T00:00:00.000Z",
   dateModified: "2026-09-08T00:00:00.000Z",
   last_updated: "September 8, 2026",
-  noindex: true,
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "incoterms clause extraction",
