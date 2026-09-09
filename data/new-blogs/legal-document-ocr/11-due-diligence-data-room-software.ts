@@ -90,7 +90,6 @@ export const blogLd11: BlogPost = {
   datePublished: "2026-09-09T00:00:00.000Z",
   dateModified: "2026-09-09T00:00:00.000Z",
   last_updated: "September 9, 2026",
-  noindex: true,
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "due diligence data room software",
