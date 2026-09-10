@@ -86,7 +86,6 @@ export const blogMd12: BlogPost = {
   datePublished: "2026-09-10T00:00:00.000Z",
   dateModified: "2026-09-10T00:00:00.000Z",
   last_updated: "September 10, 2026",
-  noindex: true,
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "medical necessity documentation",
