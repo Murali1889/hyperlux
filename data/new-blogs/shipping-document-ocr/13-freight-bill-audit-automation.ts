@@ -96,7 +96,6 @@ export const blogSd13: BlogPost = {
   datePublished: "2026-09-11T00:00:00.000Z",
   dateModified: "2026-09-11T00:00:00.000Z",
   last_updated: "September 11, 2026",
-  noindex: true,
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "freight bill audit automation",
