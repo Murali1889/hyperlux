@@ -72,7 +72,6 @@ export const blogLd15: BlogPost = {
   datePublished: "2026-09-13T00:00:00.000Z",
   dateModified: "2026-09-13T00:00:00.000Z",
   last_updated: "September 13, 2026",
-  noindex: true,
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "arbitration clause extraction",
