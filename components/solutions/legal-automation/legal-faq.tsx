@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
@@ -7,8 +8,19 @@ export default function LegalFAQ() {
   const faqs = [
     {
       question: "Does your solution support multilingual contracts?",
-      answer:
-        "Yes, our legal automation platform supports document processing in over 25 languages, including English, Spanish, French, German, Chinese, Japanese, and Arabic. The system uses language-specific OCR models trained on legal terminology to ensure high accuracy across different languages. Our clause extraction technology can identify equivalent clauses across languages, making it ideal for international organizations managing contracts in multiple jurisdictions. The platform also supports side-by-side translation views for easier comparison and review.",
+      answer: (
+        <>
+          Yes, our legal automation platform supports document processing in over 25 languages, including English,
+          Spanish, French, German, Chinese, Japanese, and Arabic. See our{" "}
+          <Link href="/resources/blogs/legal-document-translation-ocr" className="underline hover:text-indigo-700">
+            legal document translation OCR guide
+          </Link>{" "}
+          for how this works. The system uses language-specific OCR models trained on legal terminology to ensure
+          high accuracy across different languages. Our clause extraction technology can identify equivalent clauses
+          across languages, making it ideal for international organizations managing contracts in multiple
+          jurisdictions. The platform also supports side-by-side translation views for easier comparison and review.
+        </>
+      ),
     },
     {
       question: "Can the system be deployed on-premises instead of cloud?",
@@ -22,8 +34,21 @@ export default function LegalFAQ() {
     },
     {
       question: "How does the version comparison feature work?",
-      answer:
-        "Our version comparison tool uses advanced differential analysis to identify changes between contract versions with pinpoint accuracy. The system highlights additions, deletions, and modifications at both the text and clause level, making it easy to spot substantive changes versus formatting differences. For legal teams, this eliminates the tedious process of manual redlining. The comparison view presents changes in an intuitive side-by-side format with color-coded highlights, and can generate summary reports of all changes for quick review. The tool works across multiple file formats, including Word, PDF, and scanned documents, and can compare documents with different formatting structures.",
+      answer: (
+        <>
+          Our version comparison tool uses advanced differential analysis to identify changes between contract
+          versions with pinpoint accuracy. The system highlights additions, deletions, and modifications at both the
+          text and clause level, making it easy to spot substantive changes versus formatting differences. See our{" "}
+          <Link href="/resources/blogs/contract-ocr" className="underline hover:text-indigo-700">
+            contract OCR guide
+          </Link>{" "}
+          for how clause-level extraction works. For legal teams, this eliminates the tedious process of manual
+          redlining. The comparison view presents changes in an intuitive side-by-side format with color-coded
+          highlights, and can generate summary reports of all changes for quick review. The tool works across
+          multiple file formats, including Word, PDF, and scanned documents, and can compare documents with
+          different formatting structures.
+        </>
+      ),
     },
   ]
 

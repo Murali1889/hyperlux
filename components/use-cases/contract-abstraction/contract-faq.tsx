@@ -1,18 +1,36 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 const faqs = [
   {
     question: "How accurate is clause extraction?",
-    answer:
-      "Our AI-powered clause extraction achieves 85-95% accuracy depending on document quality and complexity. The system is trained on millions of legal documents and continuously improves through machine learning. For critical contracts, we recommend using our human-in-the-loop validation workflow, which combines AI efficiency with expert review to achieve near-perfect accuracy.",
+    answer: (
+      <>
+        Our AI-powered clause extraction achieves 85-95% accuracy depending on document quality and complexity, see
+        our <Link href="/resources/blogs/contract-ocr" className="underline hover:text-indigo-700">contract OCR guide</Link>{" "}
+        for the details. The system is trained on millions of legal documents and continuously improves through
+        machine learning. For critical contracts, we recommend using our human-in-the-loop validation workflow,
+        which combines AI efficiency with expert review to achieve near-perfect accuracy.
+      </>
+    ),
   },
   {
     question: "Can it handle multi-language contracts?",
-    answer:
-      "Yes, our solution supports contract abstraction in multiple languages including English, Spanish, French, German, Italian, Portuguese, Dutch, and Japanese. The system can identify and extract key clauses regardless of language, though accuracy may vary slightly for less common languages. We're continuously expanding our language capabilities based on customer demand.",
+    answer: (
+      <>
+        Yes, our solution supports contract abstraction in multiple languages including English, Spanish, French,
+        German, Italian, Portuguese, Dutch, and Japanese. See our{" "}
+        <Link href="/resources/blogs/legal-document-translation-ocr" className="underline hover:text-indigo-700">
+          legal document translation guide
+        </Link>{" "}
+        for how this works. The system can identify and extract key clauses regardless of language, though accuracy
+        may vary slightly for less common languages. We're continuously expanding our language capabilities based on
+        customer demand.
+      </>
+    ),
   },
   {
     question: "Is human review supported?",

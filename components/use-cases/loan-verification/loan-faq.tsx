@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { ChevronDown, ChevronUp } from "lucide-react"
 
@@ -10,8 +11,21 @@ export default function LoanFaq() {
   const faqs = [
     {
       question: "What document formats are supported?",
-      answer:
-        "Our system supports a wide range of document formats including PDF, JPEG, PNG, TIFF, and even scanned documents. We can process bank statements from over 10,000 financial institutions, tax documents (W-2, 1099, 1040), pay stubs, and employment verification letters. The system is designed to handle both digital and scanned physical documents, maintaining high accuracy even with lower quality scans.",
+      answer: (
+        <>
+          Our system supports a wide range of document formats including PDF, JPEG, PNG, TIFF, and even scanned
+          documents. We can process bank statements from over 10,000 financial institutions, tax documents (
+          <Link href="/resources/blogs/w2-1099-tax-form-ocr-underwriting" className="underline hover:text-indigo-700">
+            W-2, 1099, 1040
+          </Link>
+          ),{" "}
+          <Link href="/resources/blogs/pay-stub-income-verification-ocr" className="underline hover:text-indigo-700">
+            pay stubs
+          </Link>
+          , and employment verification letters. The system is designed to handle both digital and scanned physical
+          documents, maintaining high accuracy even with lower quality scans.
+        </>
+      ),
     },
     {
       question: "How is data privacy handled?",
@@ -25,8 +39,21 @@ export default function LoanFaq() {
     },
     {
       question: "Can it detect forged documents?",
-      answer:
-        "Our system includes advanced fraud detection capabilities that can identify potentially forged or altered documents. It analyzes documents at the pixel level to detect inconsistencies in fonts, spacing, and formatting that might indicate tampering. The system also performs cross-document validation to identify discrepancies between related documents. Additionally, it checks for mathematical inconsistencies and compares extracted data against known patterns of fraudulent activity. When potential fraud is detected, the system flags the document for human review and provides detailed information about the suspicious elements.",
+      answer: (
+        <>
+          Our system includes advanced fraud detection capabilities that can identify potentially forged or altered
+          documents, see our{" "}
+          <Link href="/resources/blogs/bank-statement-fraud-detection" className="underline hover:text-indigo-700">
+            bank statement fraud detection guide
+          </Link>{" "}
+          for the specifics. It analyzes documents at the pixel level to detect inconsistencies in fonts, spacing,
+          and formatting that might indicate tampering. The system also performs cross-document validation to
+          identify discrepancies between related documents. Additionally, it checks for mathematical inconsistencies
+          and compares extracted data against known patterns of fraudulent activity. When potential fraud is
+          detected, the system flags the document for human review and provides detailed information about the
+          suspicious elements.
+        </>
+      ),
     },
   ]
 

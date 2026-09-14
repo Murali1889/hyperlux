@@ -15,8 +15,13 @@ export default function HeroSection() {
               <span className="text-indigo-700">Intelligent</span> Document Automation for Smarter Lending
             </h1>
             <p className="text-lg text-muted-foreground md:text-xl max-w-[600px]">
-              Transform your lending workflows with AI-powered OCR software that delivers 99.9% accuracy in document
-              classification, data capture, fraud detection, and cash flow analysis - 5x faster than manual processes.
+              Transform your lending workflows with AI-powered OCR software that delivers up to 99.9% accuracy in
+              document classification, data capture, fraud detection, and cash flow analysis - 5x faster than manual
+              processes. See the{" "}
+              <Link href="/resources/blogs/ocr-accuracy-benchmark-2026" className="underline hover:text-indigo-700">
+                real per-document-type numbers
+              </Link>
+              .
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-indigo-600 hover:bg-indigo-700">

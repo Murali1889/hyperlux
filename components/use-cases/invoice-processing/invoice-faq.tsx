@@ -1,18 +1,39 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
 const faqItems = [
   {
     question: "How does the system handle multi-currency invoices?",
-    answer:
-      "Our invoice processing system supports multi-currency invoices out of the box. It automatically detects the currency symbol or code, extracts the correct amounts, and can convert to your base currency using configurable exchange rates or real-time market rates. The system maintains both the original currency amount and the converted value for accurate reporting and reconciliation.",
+    answer: (
+      <>
+        Our invoice processing system supports multi-currency invoices out of the box, see our{" "}
+        <Link href="/resources/blogs/multi-currency-invoice-ocr" className="underline hover:text-indigo-700">
+          multi-currency invoice OCR guide
+        </Link>{" "}
+        for the details. It automatically detects the currency symbol or code, extracts the correct amounts, and can
+        convert to your base currency using configurable exchange rates or real-time market rates. The system
+        maintains both the original currency amount and the converted value for accurate reporting and
+        reconciliation.
+      </>
+    ),
   },
   {
     question: "Can the system process handwritten invoices?",
-    answer:
-      "Yes, our advanced OCR technology can process handwritten invoices with high accuracy. The system uses specialized handwriting recognition algorithms trained on diverse handwriting styles. While machine-printed invoices typically achieve 99% accuracy, handwritten invoices maintain 90-95% accuracy depending on legibility. The system also provides confidence scores and highlights uncertain fields for human verification when needed.",
+    answer: (
+      <>
+        Yes, our advanced OCR technology can process handwritten invoices with high accuracy, see our{" "}
+        <Link href="/resources/blogs/handwritten-faxed-invoice-ocr" className="underline hover:text-indigo-700">
+          handwritten and faxed invoice guide
+        </Link>{" "}
+        for how this works. The system uses specialized handwriting recognition algorithms trained on diverse
+        handwriting styles. While machine-printed invoices typically achieve 99% accuracy, handwritten invoices
+        maintain 90-95% accuracy depending on legibility. The system also provides confidence scores and highlights
+        uncertain fields for human verification when needed.
+      </>
+    ),
   },
   {
     question: "How does the system handle exceptions and discrepancies?",
