@@ -67,7 +67,6 @@ export const blogLd21: BlogPost = {
   datePublished: "2026-09-19T00:00:00.000Z",
   dateModified: "2026-09-19T00:00:00.000Z",
   last_updated: "September 19, 2026",
-  noindex: true,
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "legal deadline extraction",

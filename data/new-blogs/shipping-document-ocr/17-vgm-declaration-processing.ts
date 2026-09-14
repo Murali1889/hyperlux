@@ -103,7 +103,6 @@ export const blogSd17: BlogPost = {
   datePublished: "2026-09-15T00:00:00.000Z",
   dateModified: "2026-09-15T00:00:00.000Z",
   last_updated: "September 15, 2026",
-  noindex: true,
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "vgm declaration processing",

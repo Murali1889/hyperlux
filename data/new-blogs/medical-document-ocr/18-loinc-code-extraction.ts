@@ -85,7 +85,6 @@ export const blogMd18: BlogPost = {
   datePublished: "2026-09-16T00:00:00.000Z",
   dateModified: "2026-09-16T00:00:00.000Z",
   last_updated: "September 16, 2026",
-  noindex: true,
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "loinc code extraction",
