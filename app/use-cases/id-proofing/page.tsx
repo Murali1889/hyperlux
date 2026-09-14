@@ -71,7 +71,7 @@ const CONTENT = {
 export default function IdProofingPage() {
   return (
     <main className="flex flex-col min-h-screen">
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service dateModified="2026-09-14" />
       <IdProofingHero />
       <KeyChallenges />
       <SolutionFeatures />

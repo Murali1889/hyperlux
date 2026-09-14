@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
@@ -7,13 +8,34 @@ export default function ArchivingFaq() {
   const faqs = [
     {
       question: "What file formats are supported for digital archiving?",
-      answer:
-        "Our digital archiving solution supports a wide range of file formats, including PDF, TIFF, JPEG, PNG, Microsoft Office documents (Word, Excel, PowerPoint), email formats (MSG, EML), and plain text files. The OCR engine can process scanned documents in any of these formats, as well as born-digital files that need metadata extraction and indexing.",
+      answer: (
+        <>
+          Our digital archiving solution supports a wide range of file formats, including PDF, TIFF, JPEG, PNG,
+          Microsoft Office documents (Word, Excel, PowerPoint), email formats (MSG, EML), and plain text files. See
+          our{" "}
+          <Link href="/resources/blogs/make-pdf-searchable" className="underline hover:text-indigo-700">
+            making PDFs searchable guide
+          </Link>{" "}
+          for how the OCR layer works. The OCR engine can process scanned documents in any of these formats, as well
+          as born-digital files that need metadata extraction and indexing.
+        </>
+      ),
     },
     {
       question: "Can metadata fields be customized for different document types?",
-      answer:
-        "Yes, the metadata schema is fully customizable based on your organization's needs. You can define different metadata templates for various document types (invoices, contracts, reports, etc.) with specific fields relevant to each. The AI system can be trained to automatically extract and populate these custom fields, and administrators can add new metadata fields at any time without disrupting existing archives.",
+      answer: (
+        <>
+          Yes, the metadata schema is fully customizable based on your organization's needs. You can define
+          different metadata templates for various document types (invoices, contracts, reports, etc.) with specific
+          fields relevant to each, see our{" "}
+          <Link href="/resources/blogs/document-classification-software" className="underline hover:text-indigo-700">
+            document classification guide
+          </Link>{" "}
+          for how automatic categorization works. The AI system can be trained to automatically extract and populate
+          these custom fields, and administrators can add new metadata fields at any time without disrupting
+          existing archives.
+        </>
+      ),
     },
     {
       question: "How secure is the archived data?",

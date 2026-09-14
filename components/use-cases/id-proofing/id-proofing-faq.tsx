@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
@@ -7,13 +8,32 @@ export default function IdProofingFaq() {
   const faqs = [
     {
       question: "What types of IDs are supported?",
-      answer:
-        "Our platform supports a wide range of government-issued identity documents from over 190 countries, including passports, driver licenses, national ID cards, residence permits, and voter IDs. We regularly update our templates to accommodate new document versions and security features as they are released by issuing authorities.",
+      answer: (
+        <>
+          Our platform supports a wide range of government-issued identity documents from over 190 countries,
+          including passports, driver licenses, national ID cards, residence permits, and voter IDs. See our{" "}
+          <Link href="/resources/blogs/national-id-verification-ocr" className="underline hover:text-indigo-700">
+            national ID verification guide
+          </Link>{" "}
+          for the details. We regularly update our templates to accommodate new document versions and security
+          features as they are released by issuing authorities.
+        </>
+      ),
     },
     {
       question: "How is liveness detection performed?",
-      answer:
-        "Our liveness detection uses a combination of passive and active techniques. Passive liveness analyzes micro-movements, texture patterns, and depth information from a single selfie without requiring user actions. For higher security needs, active liveness detection prompts users to perform simple actions like blinking, turning their head, or smiling to verify they are physically present.",
+      answer: (
+        <>
+          Our liveness detection uses a combination of passive and active techniques, see our{" "}
+          <Link href="/resources/blogs/liveness-detection-kyc" className="underline hover:text-indigo-700">
+            liveness detection guide
+          </Link>{" "}
+          for how this works. Passive liveness analyzes micro-movements, texture patterns, and depth information
+          from a single selfie without requiring user actions. For higher security needs, active liveness detection
+          prompts users to perform simple actions like blinking, turning their head, or smiling to verify they are
+          physically present.
+        </>
+      ),
     },
     {
       question: "Is face data stored?",

@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
@@ -7,8 +8,19 @@ export default function ComplianceFAQ() {
   const faqs = [
     {
       question: "How does your solution handle data residency requirements?",
-      answer:
-        "Our platform supports regional data residency with deployment options in multiple geographic regions including US, EU, UK, APAC, and India. All data processing occurs within the selected region, and data never crosses geographic boundaries unless explicitly configured. We maintain separate infrastructure stacks in each region with local encryption keys and access controls to ensure compliance with regional data sovereignty laws.",
+      answer: (
+        <>
+          Our platform supports regional data residency with deployment options in multiple geographic regions
+          including US, EU, UK, APAC, and India. All data processing occurs within the selected region, and data
+          never crosses geographic boundaries unless explicitly configured. We maintain separate infrastructure
+          stacks in each region with local encryption keys and access controls to ensure compliance with regional
+          data sovereignty laws, see our{" "}
+          <Link href="/resources/blogs/cross-border-kyc-compliance" className="underline hover:text-indigo-700">
+            cross-border KYC compliance guide
+          </Link>{" "}
+          for the specifics.
+        </>
+      ),
     },
     {
       question: "What encryption standards are used to protect sensitive data?",
@@ -17,8 +29,19 @@ export default function ComplianceFAQ() {
     },
     {
       question: "What is your data retention policy for compliance documents?",
-      answer:
-        "Our platform allows configurable retention policies based on document type and regulatory requirements. Default retention periods align with common regulatory frameworks (7 years for financial documents, etc.), but can be customized. Automated retention workflows handle secure deletion at the end of the retention period, with cryptographic proof of deletion. For regulated industries, we support legal hold functionality to suspend deletion during investigations or audits.",
+      answer: (
+        <>
+          Our platform allows configurable retention policies based on document type and regulatory requirements.
+          Default retention periods align with common regulatory frameworks (7 years for financial documents, etc.),
+          but can be customized, see our{" "}
+          <Link href="/resources/blogs/kyc-record-retention-requirements" className="underline hover:text-indigo-700">
+            KYC record retention guide
+          </Link>{" "}
+          for the details. Automated retention workflows handle secure deletion at the end of the retention period,
+          with cryptographic proof of deletion. For regulated industries, we support legal hold functionality to
+          suspend deletion during investigations or audits.
+        </>
+      ),
     },
     {
       question: "How do you manage change control for compliance workflows?",

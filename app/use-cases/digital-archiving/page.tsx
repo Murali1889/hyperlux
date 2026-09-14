@@ -71,7 +71,7 @@ const CONTENT = {
 export default function DigitalArchivingPage() {
   return (
     <main className="min-h-screen bg-slate-50">
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service dateModified="2026-09-14" />
       <ArchivingHero />
       <ArchivingChallenges />
       <FeaturesOverview />

@@ -7,15 +7,17 @@ import type { BlogCluster } from "@/types/resources"
 
 export default function PillarClusterBlogs({
   cluster,
+  slugs,
   title = "Related Articles",
   description = "",
 }: {
-  cluster: BlogCluster
+  cluster?: BlogCluster
+  slugs?: string[]
   title?: string
   description?: string
 }) {
   const clusterBlogs = blogs
-    .filter((b) => b.cluster === cluster && !b.noindex)
+    .filter((b) => (slugs ? slugs.includes(b.slug) : b.cluster === cluster) && !b.noindex)
     .sort((a, b) => new Date(b.datePublished ?? b.date).getTime() - new Date(a.datePublished ?? a.date).getTime())
     .slice(0, 6)
 

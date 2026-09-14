@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
@@ -6,8 +7,18 @@ export default function FAQSection() {
   const faqs = [
     {
       question: "Does the system support multi-currency invoices?",
-      answer:
-        "Yes, our finance automation solution fully supports multi-currency invoices. The system automatically detects the currency, applies the correct exchange rates, and handles currency conversions according to your accounting policies. You can process invoices in any currency from vendors worldwide while maintaining accurate financial records in your base currency.",
+      answer: (
+        <>
+          Yes, our finance automation solution fully supports multi-currency invoices. The system automatically
+          detects the currency, applies the correct exchange rates, and handles currency conversions according to
+          your accounting policies. See our{" "}
+          <Link href="/resources/blogs/multi-currency-invoice-ocr" className="underline hover:text-indigo-700">
+            multi-currency invoice OCR guide
+          </Link>{" "}
+          for the details. You can process invoices in any currency from vendors worldwide while maintaining
+          accurate financial records in your base currency.
+        </>
+      ),
     },
     {
       question: "Can it handle GST e-Invoices and compliance?",
@@ -16,8 +27,18 @@ export default function FAQSection() {
     },
     {
       question: "How does the system integrate with SAP and other ERPs?",
-      answer:
-        "Our finance automation solution offers pre-built connectors for major ERP systems including SAP, Oracle, Microsoft Dynamics, and Tally. The integration is bidirectional, allowing for seamless data flow between systems. We support both API-based real-time integration and batch processing through secure file transfers, depending on your requirements and ERP configuration.",
+      answer: (
+        <>
+          Our finance automation solution offers pre-built connectors for major ERP systems including SAP, Oracle,
+          Microsoft Dynamics, and Tally, see our{" "}
+          <Link href="/resources/blogs/invoice-ocr-sap" className="underline hover:text-indigo-700">
+            invoice OCR for SAP guide
+          </Link>{" "}
+          for the integration specifics. The integration is bidirectional, allowing for seamless data flow between
+          systems. We support both API-based real-time integration and batch processing through secure file
+          transfers, depending on your requirements and ERP configuration.
+        </>
+      ),
     },
     {
       question: "What are your data retention and security policies?",

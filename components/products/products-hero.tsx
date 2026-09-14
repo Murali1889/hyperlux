@@ -15,7 +15,11 @@ export default function ProductsHero() {
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl">
               Our suite of AI-powered OCR products streamlines document processing, enhances fraud detection, and
-              accelerates lending decisions with 99.9% accuracy and intelligent automation.
+              accelerates lending decisions with up to 99.9% accuracy and intelligent automation. See the{" "}
+              <Link href="/resources/blogs/ocr-accuracy-benchmark-2026" className="underline hover:text-indigo-700">
+                real benchmark numbers
+              </Link>
+              .
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-indigo-600 hover:bg-indigo-700">

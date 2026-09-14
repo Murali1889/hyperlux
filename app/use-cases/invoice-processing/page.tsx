@@ -71,7 +71,7 @@ const CONTENT = {
 export default function InvoiceProcessingPage() {
   return (
     <>
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service dateModified="2026-09-14" />
     <main className="flex flex-col min-h-screen">
       <InvoiceHero />
       <ManualChallenges />

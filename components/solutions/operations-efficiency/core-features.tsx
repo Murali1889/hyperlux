@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { FileCheck, Package, Database, FileText } from "lucide-react"
 
@@ -36,7 +37,11 @@ export default function CoreFeatures() {
               <h3 className="text-xl font-bold text-indigo-900 mb-3">POD OCR</h3>
               <p className="text-gray-700">
                 Automatically extract delivery confirmation data from proof of delivery documents. Capture signatures,
-                timestamps, recipient details, and delivery notes with 99% accuracy.
+                timestamps, recipient details, and delivery notes with 99% accuracy. See our{" "}
+                <Link href="/resources/blogs/proof-of-delivery-processing" className="underline hover:text-indigo-700">
+                  proof of delivery processing guide
+                </Link>
+                .
               </p>
             </div>
           </motion.div>
@@ -56,7 +61,11 @@ export default function CoreFeatures() {
               <h3 className="text-xl font-bold text-indigo-900 mb-3">Packing-Slip Scan</h3>
               <p className="text-gray-700">
                 Process packing slips to verify contents against orders. Extract item codes, quantities, weights, and
-                special handling instructions to ensure accurate shipment verification.
+                special handling instructions to ensure accurate shipment verification. See our{" "}
+                <Link href="/resources/blogs/packing-list-reconciliation" className="underline hover:text-indigo-700">
+                  packing list reconciliation guide
+                </Link>
+                .
               </p>
             </div>
           </motion.div>
@@ -96,7 +105,11 @@ export default function CoreFeatures() {
               <h3 className="text-xl font-bold text-indigo-900 mb-3">Shipment-Log Parser</h3>
               <p className="text-gray-700">
                 Extract critical data from carrier shipment logs and manifests. Capture tracking numbers, routes,
-                timestamps, and delivery exceptions to provide end-to-end shipment visibility.
+                timestamps, and delivery exceptions to provide end-to-end shipment visibility. See our{" "}
+                <Link href="/resources/blogs/shipment-status-edi-processing" className="underline hover:text-indigo-700">
+                  EDI 214 shipment status guide
+                </Link>
+                .
               </p>
             </div>
           </motion.div>

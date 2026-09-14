@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { FileText, MessageSquare, TicketCheck } from "lucide-react"
 
@@ -8,8 +9,18 @@ export default function FeatureCards() {
     {
       icon: <FileText className="w-10 h-10 text-white" />,
       title: "Onboarding Form OCR",
-      description:
-        "Transform customer onboarding with our advanced customer experience OCR technology that instantly extracts data from IDs, passports, and application forms. Reduce manual entry by 95% while improving accuracy to 99.5%. Our adaptive learning algorithms continuously improve recognition for damaged or low-quality documents, ensuring smooth verification even in challenging conditions.",
+      description: (
+        <>
+          Transform customer onboarding with our advanced customer experience OCR technology that instantly
+          extracts data from IDs, passports, and application forms, see our{" "}
+          <Link href="/resources/blogs/mrz-passport-verification" className="underline hover:text-indigo-700">
+            passport verification guide
+          </Link>{" "}
+          for how MRZ extraction works. Reduce manual entry by 95% while improving accuracy to 99.5%. Our adaptive
+          learning algorithms continuously improve recognition for damaged or low-quality documents, ensuring
+          smooth verification even in challenging conditions.
+        </>
+      ),
     },
     {
       icon: <MessageSquare className="w-10 h-10 text-white" />,
