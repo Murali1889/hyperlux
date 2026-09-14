@@ -36,7 +36,7 @@ export const metadata: Metadata = buildPageMetadata({ title: TITLE, description:
 export default function IdentityDocsPage() {
   return (
     <main className="flex flex-col min-h-screen">
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} dateModified="2026-09-14" />
       <IdentityDocsHero />
       <SupportedFileTypes />
       <FieldCoverageTable />

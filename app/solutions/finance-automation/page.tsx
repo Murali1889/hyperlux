@@ -21,7 +21,7 @@ export const metadata: Metadata = buildPageMetadata({ title: TITLE, description:
 export default function FinanceAutomationPage() {
   return (
     <main className="min-h-screen bg-white">
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service dateModified="2026-09-14" />
       <FinanceHero />
       <PainPointTrio />
       <FeatureGallery />

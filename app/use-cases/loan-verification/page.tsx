@@ -20,7 +20,7 @@ export const metadata: Metadata = buildPageMetadata({ title: TITLE, description:
 export default function LoanVerificationPage() {
   return (
     <main className="flex flex-col min-h-screen">
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service dateModified="2026-09-14" />
       <LoanHero />
       <ManualPainPoints />
       <KeyFeatures />
