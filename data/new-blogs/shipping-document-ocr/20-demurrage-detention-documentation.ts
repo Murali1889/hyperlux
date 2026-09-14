@@ -119,7 +119,6 @@ export const blogSd20: BlogPost = {
   datePublished: "2026-09-18T00:00:00.000Z",
   dateModified: "2026-09-18T00:00:00.000Z",
   last_updated: "September 18, 2026",
-  noindex: true,
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "demurrage detention documentation",

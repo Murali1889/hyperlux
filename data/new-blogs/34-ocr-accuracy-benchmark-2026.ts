@@ -13,7 +13,7 @@ export const blog34: BlogPost = {
   content: `
     <p>Most OCR accuracy numbers you find online come from vendor marketing decks tested on clean documents nobody uses in production. We ran an independent benchmark instead: eight OCR engines and document APIs on 1,900 real documents across the categories that actually matter for finance and document workflows. This page is the full result set, with methodology, per-category winners, and the raw numbers. It is free to cite, and the last section tells you exactly how.</p>
 
-    <p>If you want the deeper head-to-head write-ups, we have separate guides for <a href="/resources/blogs/paddleocr-vs-tesseract-vs-docsapi">PaddleOCR vs Tesseract vs DocsAPI</a>, <a href="/resources/blogs/docling-vs-llamaparse-vs-docsapi">Docling vs LlamaParse vs DocsAPI</a>, and <a href="/resources/blogs/aws-textract-vs-docsapi">AWS Textract vs DocsAPI</a>. This page is the consolidated benchmark that pulls all of it together.</p>
+    <p>If you want the deeper head-to-head write-ups, we have separate guides for <a href="/resources/blogs/paddleocr-vs-tesseract-vs-docsapi">PaddleOCR vs Tesseract vs DocsAPI</a>, <a href="/resources/blogs/docling-vs-llamaparse-vs-docsapi">Docling vs LlamaParse vs DocsAPI</a>, and <a href="/resources/blogs/aws-textract-vs-docsapi">AWS Textract vs DocsAPI</a>. This page is the consolidated benchmark that pulls all of it together. If you want these numbers turned into a buyer's guide by use case instead, see <a href="/resources/blogs/best-ocr-software-2026">best OCR software in 2026</a>.</p>
 
     <h2>What we tested and why</h2>
 

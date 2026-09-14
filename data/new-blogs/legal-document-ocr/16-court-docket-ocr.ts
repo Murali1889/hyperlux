@@ -94,7 +94,6 @@ export const blogLd16: BlogPost = {
   datePublished: "2026-09-14T00:00:00.000Z",
   dateModified: "2026-09-14T00:00:00.000Z",
   last_updated: "September 14, 2026",
-  noindex: true,
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "court docket ocr",

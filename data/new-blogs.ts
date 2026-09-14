@@ -33,6 +33,7 @@ import { blog31 } from "./new-blogs/31-best-ocr-software-accounts-payable"
 import { blog32 } from "./new-blogs/32-enterprise-document-ocr"
 import { blog33 } from "./new-blogs/33-contract-ocr"
 import { blog34 } from "./new-blogs/34-ocr-accuracy-benchmark-2026"
+import { blog35 } from "./new-blogs/35-best-ocr-software-2026"
 
 // Invoice/AP-OCR cluster (topic 1 of 3, 21 posts) — see
 // docs/superpowers/specs/2026-08-07-invoice-ap-ocr-cluster-design.md
@@ -213,6 +214,7 @@ export const newBlogs: BlogPost[] = [
   blog32,
   blog33,
   blog34,
+  blog35,
   blogAp01,
   blogAp02,
   blogAp03,

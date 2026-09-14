@@ -95,7 +95,6 @@ export const blogMd19: BlogPost = {
   datePublished: "2026-09-17T00:00:00.000Z",
   dateModified: "2026-09-17T00:00:00.000Z",
   last_updated: "September 17, 2026",
-  noindex: true,
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "medical fax automation",
