@@ -42,9 +42,9 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Metadata
   { path: "/resources/newsletters", priority: 0.5, changeFrequency: "monthly" },
   { path: "/tools/which-ocr", priority: 0.8, changeFrequency: "monthly" },
   { path: "/book-demo", priority: 0.7, changeFrequency: "yearly" },
-  { path: "/llms.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-08-08" },
-  { path: "/llms-full.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-08-08" },
-  { path: "/ai.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-08-08" },
+  { path: "/llms.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-09-18" },
+  { path: "/llms-full.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-09-18" },
+  { path: "/ai.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-09-18" },
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

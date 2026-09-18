@@ -1,5 +1,5 @@
 # DocsAPI robots.txt
-# Last updated: 2026-06-17
+# Last updated: 2026-09-18
 
 User-agent: *
 Allow: /
@@ -40,6 +40,9 @@ User-agent: CCBot
 Allow: /
 
 User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Bytespider
 Allow: /
 
 Sitemap: https://docsapi.co/sitemap.xml

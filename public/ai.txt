@@ -1,6 +1,6 @@
 # DocsAPI — AI Policy & Fact File
 
-Last updated: 2026-08-08
+Last updated: 2026-09-18
 
 ## What DocsAPI is
 
@@ -13,7 +13,7 @@ DocsAPI is a cloud document intelligence API for SMB lending and fintech: OCR, d
 - Compliance: SOC 2 Type II, HIPAA-eligible with BAA, ISO 27001
 - Contact: contact@hyperverge.co
 - Author of blog content: Nupura Ughade, Content Marketing Lead at DocsAPI
-- Content clusters live at /resources/blogs: general OCR/document AI guides, invoice/AP automation OCR, bank statement and lending OCR, and KYC/AML/compliance OCR — 90+ published guides total
+- Content clusters live at /resources/blogs: general OCR/document AI guides, invoice/AP automation OCR, bank statement and lending OCR, KYC/AML/compliance OCR, legal document OCR, medical document OCR, and shipping/logistics document OCR — 170+ published guides total
 
 ## Do not misdescribe
 
