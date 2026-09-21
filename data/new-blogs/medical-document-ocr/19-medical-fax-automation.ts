@@ -87,14 +87,16 @@ export const blogMd19: BlogPost = {
     <h2>The gap that's closing, and the one that isn't</h2>
 
     <p>The regulatory and adoption trend lines are genuinely moving the right direction: X12 278 electronic adoption climbed from roughly 12 percent to 38 percent of tracked commercial volume across the years the CAQH Index has measured it, and the FHIR mandate under CMS-0057-F will push that further by 2027. What isn't closing at the same pace is the attachment and documentation gap sitting underneath those transaction-level numbers, the part of a referral or a prior authorization that still arrives as an image of a fax rather than as structured data, because no mandate currently reaches that layer. Until it does, or until enough referring and receiving systems interoperate directly that fax stops being the lowest common denominator, the documents will keep arriving at roughly 204 by 98 dots per inch, bitonal, sometimes for the second or third time, and the systems that read them reliably will be the ones built around that specific, well-documented technical reality rather than around a generic claim that AI can handle any messy scan. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
   `,
   image: "/images/idp-vs-ocr.png",
   featuredImage: "/images/idp-vs-ocr.png",
   category: "Healthcare",
   date: "September 17, 2026",
   datePublished: "2026-09-17T00:00:00.000Z",
-  dateModified: "2026-09-17T00:00:00.000Z",
-  last_updated: "September 17, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "medical fax automation",

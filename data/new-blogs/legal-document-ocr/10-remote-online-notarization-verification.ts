@@ -76,14 +76,16 @@ export const blogLd10: BlogPost = {
     <h2>Where this fits in a document intake pipeline</h2>
 
     <p>Verifying these artifacts at scale is fundamentally a document parsing and cross-referencing problem before it is a legal one. A pipeline handling loan files needs to locate the certificate metadata embedded in a submitted PDF, extract the session identifier and notary commission number, and flag documents where any of the four artifacts described above are missing or inconsistent, the same category of structured extraction work covered in more depth in our overview of <a href="/resources/blogs/contract-ocr">contract OCR</a> and in the discussion of how clause-level detail changes risk exposure in our piece on <a href="/resources/blogs/force-majeure-clause-extraction">force majeure and indemnification clause extraction</a>. A power of attorney that clears identity proofing but carries no retrievable audit trail is functionally similar to a contract clause that reads as boilerplate but hides a materially different obligation underneath, the risk is not visible from the document's surface, and finding it requires actually parsing the artifact rather than trusting its presentation. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
   `,
   image: "/images/passport-ocr-revolutionizing.png",
   featuredImage: "/images/passport-ocr-revolutionizing.png",
   category: "Legal",
   date: "September 8, 2026",
   datePublished: "2026-09-08T00:00:00.000Z",
-  dateModified: "2026-09-08T00:00:00.000Z",
-  last_updated: "September 8, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "remote online notarization verification",

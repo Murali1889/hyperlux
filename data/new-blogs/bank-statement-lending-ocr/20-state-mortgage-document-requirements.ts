@@ -62,14 +62,16 @@ export const blogBl20: BlogPost = {
 
     <p>Ask whether your servicing system routes escrow interest calculation by the property's actual state, using each state's specific requirement and rate where one exists, or whether it applies a single default treatment, likely no interest, uniformly regardless of where the collateral actually sits. Then ask whether your pipeline distinguishes routine tax-and-insurance impound balances from insurance claim proceeds temporarily held in escrow, since the interest obligation does not necessarily apply the same way to both categories even within states that do require it. Confirm this calculation runs as a recurring, annual process tied to each loan's actual anniversary or account-termination date, not a one-time setup flag that never gets revisited for the life of the loan. And check whether your rate table itself gets revisited when a state's applicable standard changes, the way New York's did in 2018, rather than being treated as a fixed constant set once at implementation and never audited against current law again, the same drift risk covered from the model-training angle in our <a href="/resources/blogs/real-time-bank-statement-processing">point-in-time correctness piece</a>, where a rule correct at one point in time quietly became wrong later without anyone noticing.</p>
     <p>Attorney-versus-title-state classification gets real attention in mortgage document content because it shapes the closing package itself. Escrow interest gets far less attention despite being a real, recurring, state-specific financial obligation that follows a loan for years after closing, and it is exactly the kind of requirement that looks like a servicing detail right up until a regulator asks why a portfolio of California loans never credited a single dollar of interest their borrowers were legally owed. The legal landscape underneath it keeps moving too, which means the correct answer for a given charter type and state is worth confirming against current guidance rather than treating as permanently settled by whatever the rule happened to be when the pipeline was first built. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a>.</p>
   `,
   image: "/images/transforming-financial-services.png",
   featuredImage: "/images/transforming-financial-services.png",
   category: "Lending",
   date: "August 22, 2026",
   datePublished: "2026-08-22T00:00:00.000Z",
-  dateModified: "2026-08-22T00:00:00.000Z",
-  last_updated: "August 22, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "state mortgage document requirements",

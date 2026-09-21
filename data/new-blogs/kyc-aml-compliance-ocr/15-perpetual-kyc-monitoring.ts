@@ -80,14 +80,16 @@ export const blogKa15: BlogPost = {
     <p>"Ownership change matters, address reformat doesn't" is a correct intuition and a genuinely useful example. It is not, on its own, a mechanism a real customer base can run on, since it says nothing about the harder, more common case: several individually modest signals accumulating into something genuinely material, or a stale signal from years ago that should have faded out of the score long before now.</p>
 
     <p>None of this argues against event-driven monitoring as the right architecture. Reviewing every customer on a fixed calendar regardless of actual change is not more thorough, just slower to catch what actually matters and more wasteful of review capacity on customers whose files genuinely have not changed. It is a reason to confirm your pipeline's materiality logic is a real weighted, decaying, segment-calibrated mechanism, rather than a short list of two or three named event types standing in for one. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a>.</p>
   `,
   image: "/images/transforming-financial-services.png",
   featuredImage: "/images/transforming-financial-services.png",
   category: "Compliance",
   date: "August 27, 2026",
   datePublished: "2026-08-27T00:00:00.000Z",
-  dateModified: "2026-08-27T00:00:00.000Z",
-  last_updated: "August 27, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "perpetual kyc monitoring",

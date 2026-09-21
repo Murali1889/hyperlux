@@ -64,14 +64,16 @@ export const blogBl09: BlogPost = {
 
     <p>Ask whether your pipeline extracts and tracks the good-through date on every payoff statement individually, per loan, or treats the payoff amount as a static figure with no expiration logic attached. Then ask what happens when disbursement timing is projected to run past a specific loan's good-through date, whether the pipeline automatically recalculates using an extracted per diem rate, or whether that risk is left for someone to notice manually, loan by loan, across what might be six or eight separate payoff statements in a single application. Confirm federal loan identifiers are actually flagged and routed to a distinct disclosure step, separate from the payoff-timing handling that applies uniformly regardless of loan type. And check whether disbursement logic includes any default buffer at all, or whether every payoff goes out at the exact original stated figure with no cushion for the ordinary processing delay that separates application approval from actual funds movement, the same reconciliation discipline covered from the bank-deposit-matching angle in our <a href="/resources/blogs/pay-stub-income-verification-ocr">pay stub verification piece</a>, applied here to a payoff figure with its own expiration rather than an income figure with its own cross-check.</p>
     <p>A payoff statement looks like a simple number to extract and send. It is actually a number with an expiration date attached, and a refinance spanning several loans means tracking several expiration dates at once, each ticking independently while the rest of the application moves through underwriting and funding. None of this requires better character recognition on the statement itself. It requires treating the good-through date as data with a consequence attached, not as a line of fine print underneath the number that actually got extracted. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a>.</p>
   `,
   image: "/images/ocr-api.png",
   featuredImage: "/images/ocr-api.png",
   category: "Lending",
   date: "August 18, 2026",
   datePublished: "2026-08-18T00:00:00.000Z",
-  dateModified: "2026-08-18T00:00:00.000Z",
-  last_updated: "August 18, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "student loan refinance ocr",

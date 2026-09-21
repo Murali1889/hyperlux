@@ -78,14 +78,16 @@ export const blogSd02: BlogPost = {
     <p>None of the interpretive work described above, the GRI sequence, the essential character judgment, the human-versus-non-human style arguments, can be automated away by an OCR or document extraction tool, and it would be dishonest to claim otherwise. What extraction can genuinely do is remove a different, more mechanical class of error that sits upstream of the interpretive question: making sure the HS code that a classifier or broker already determined is correct actually gets transcribed accurately and consistently across every document in a shipment, the commercial invoice, the packing list, and the entry summary, instead of drifting through a transposed digit or a stale code copied from a previous shipment's paperwork. A 6-digit subheading with one transposed digit is a different product entirely as far as customs systems are concerned, and that kind of error is common, boring, and completely preventable, which is a different problem than the genuinely hard judgment calls this post has been describing, and one worth solving separately rather than pretending a keyword match on a product description can substitute for GRI analysis.</p>
     <p>The practical takeaway for a trade compliance or lending operations team is to keep those two problems separate. Treat classification itself as a legal judgment that needs a person, or a licensed customs broker, applying the GRI in order, backed by a binding ruling for anything with real duty exposure. Treat the downstream paperwork, making sure that determined code appears correctly and consistently everywhere it needs to, as a data accuracy problem that structured extraction is well suited to catching before it becomes an audit finding.</p>
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-shipping-and-logistics-documents">OCR for shipping and logistics documents</a>.</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",
   category: "Logistics",
   date: "August 31, 2026",
   datePublished: "2026-08-31T00:00:00.000Z",
-  dateModified: "2026-08-31T00:00:00.000Z",
-  last_updated: "August 31, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "hs code classification",

@@ -67,14 +67,16 @@ export const blogKa08: BlogPost = {
 
     <p>Ask directly whether PEP status, sanctions-adjacent connections, and high-risk jurisdiction designation function as override triggers that bypass the weighted average entirely, or whether they are simply weighted inputs like every other factor, since the worked example above shows exactly how the second approach can produce a dangerously low composite score for a customer who unconditionally requires enhanced due diligence. Then ask whether anyone has actually run this kind of stress test against your own model's specific weights, computing what composite score a maximum-severity PEP factor produces when every other factor scores low, rather than assuming the weighting scheme handles this correctly without ever checking the arithmetic directly. Finally, confirm your tier boundaries themselves were validated against your institution's actual risk-factor weights and realistic customer score distributions, not simply inherited from a template vendor demo, the same document-level scrutiny covered from a compounding-probability angle in our <a href="/resources/blogs/bank-statement-ocr-pricing">bank statement OCR pricing piece</a>, where an unexamined default number similarly looked far more reassuring than it actually was once someone ran the real math against it.</p>
     <p>A weighted average is a genuinely useful tool for differentiating risk across a large, otherwise-similar customer population. It is the wrong tool entirely for a small number of factors specifically defined as severe enough to require enhanced treatment on their own, and the worked math above is the clearest way to see exactly why averaging the two together produces a number that looks precise while quietly getting the actual routing decision wrong, a number that would pass a casual review and only reveal the problem once someone actually sits down and recomputes it by hand against a real customer profile. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a>.</p>
   `,
   image: "/images/ocr-bank-statement-technology.png",
   featuredImage: "/images/ocr-bank-statement-technology.png",
   category: "Compliance",
   date: "August 25, 2026",
   datePublished: "2026-08-25T00:00:00.000Z",
-  dateModified: "2026-08-25T00:00:00.000Z",
-  last_updated: "August 25, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "customer due diligence process",

@@ -107,14 +107,16 @@ export const blogMd15: BlogPost = {
     <h2>What to check in your own eligibility workflow</h2>
 
     <p>Ask first whether your 270 requests include service-type-specific EQ segments for the procedures your practice actually bills most, or whether every inquiry defaults to the generic code 30. Ask second whether your eligibility software parses and stores every EB segment in the 271 response, including the service-type-specific ones with copay, coinsurance, and cap detail, or whether it discards everything past the first active flag it finds. Ask third whether that structured detail actually reaches the front desk at check-in and the billing team at claim submission, since data that's technically parsed but never surfaced anywhere a human or a downstream system can act on it produces the exact same denial as data that was never parsed at all. An eligibility check that says active is true. It just isn't the whole answer, and the gap between those two things is where a lot of preventable denials quietly live. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
   `,
   image: "/images/ocr-in-finance.png",
   featuredImage: "/images/ocr-in-finance.png",
   category: "Healthcare",
   date: "September 13, 2026",
   datePublished: "2026-09-13T00:00:00.000Z",
-  dateModified: "2026-09-13T00:00:00.000Z",
-  last_updated: "September 13, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "eligibility verification automation",

@@ -72,14 +72,16 @@ export const blogKa05: BlogPost = {
 
     <p>Ask whether your system tracks PEP status as a single global flag per customer, or as a genuinely jurisdiction-aware classification that can correctly differ depending on which regulatory framework applies to a given relationship, since a single flag cannot represent the real, simultaneous disagreement between frameworks like Canada's and a strict "once a PEP" jurisdiction operating in parallel. Then ask whether declassification decisions actually document the underlying risk factors, time elapsed, continuing influence, country risk, rather than only checking against a jurisdiction's numeric floor and treating that single number alone as sufficient justification for closing the file. Check separately whether enhanced due diligence intensity actually scales with the seniority of the office a given PEP held, rather than applying one flat level of scrutiny across every PEP relationship regardless of how much real influence the underlying office actually carried. Finally, confirm your close-associate identification process relies on genuine relationship research and adverse media, not a static list, since that category resists the kind of fixed definition that works reasonably well for immediate family, the same adverse-media research discipline this series covers in more depth elsewhere.</p>
     <p>"Risk-based, no fixed time limit" is an accurate description of the underlying principle, one that holds up under scrutiny, and it is still an incomplete answer to the actual operational question a screening decision has to resolve on a specific calendar date for a specific customer. The real jurisdictional numbers, a 12-month EU floor, Canada's lifetime-versus-five-year split by PEP type, and outright indefinite classification elsewhere entirely, are exactly the concrete detail most PEP screening content leaves out on the way to stating the general principle correctly and moving on. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a>.</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",
   category: "Compliance",
   date: "August 24, 2026",
   datePublished: "2026-08-24T00:00:00.000Z",
-  dateModified: "2026-08-24T00:00:00.000Z",
-  last_updated: "August 24, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "pep screening kyc",

@@ -1,17 +1,20 @@
 # DocsAPI
 
-> DocsAPI is the document intelligence API for SMB lending and fintech — OCR, classification, KYC document verification, and AML document checks in one honest API.
+> DocsAPI is the document intelligence API for SMB lending and fintech: OCR, classification, KYC document verification, and AML document checks in one honest API.
 
 DocsAPI processes around 4 million PDF pages per month for lenders, fintechs, and operations teams. The API provides searchable PDF generation, structured field extraction, multi-page table stitching, document classification, KYC document verification, and AML checks. Pricing is per-page with no surprise fees.
 
 ## Product
 
-- [Products and features](https://docsapi.co/products) — OCR, classification, extraction, validation endpoints
-- [Use cases](https://docsapi.co/use-cases) — KYC, AML, invoice processing, lending automation, revenue cycle
+- [Products and features](https://docsapi.co/products): OCR, classification, extraction, validation endpoints
+- [Use cases](https://docsapi.co/use-cases): KYC, AML, invoice processing, lending automation, revenue cycle
+- [Free OCR tool (runs in your browser, no signup)](https://docsapi.co/tools/free-ocr)
 - [Book a demo](https://docsapi.co/book-demo)
 
 ## Top guides
 
+- [OCR accuracy benchmark 2026: 8 engines on 1,900 real documents](https://docsapi.co/resources/blogs/ocr-accuracy-benchmark-2026): free to cite
+- [Best OCR software in 2026, by use case](https://docsapi.co/resources/blogs/best-ocr-software-2026)
 - [How to make a PDF searchable in 30 seconds](https://docsapi.co/resources/blogs/make-pdf-searchable)
 - [OCR a PDF: honest guide from 4M pages a month](https://docsapi.co/resources/blogs/ocr-pdf-honest-guide)
 - [Readable PDF vs image PDF](https://docsapi.co/resources/blogs/readable-pdf-vs-image-pdf)
@@ -23,6 +26,9 @@ DocsAPI processes around 4 million PDF pages per month for lenders, fintechs, an
 - [Pay stub income verification OCR for lenders](https://docsapi.co/resources/blogs/pay-stub-income-verification-ocr)
 - [MRZ passport verification: the actual checksum algorithm](https://docsapi.co/resources/blogs/mrz-passport-verification)
 - [Synthetic identity fraud detection](https://docsapi.co/resources/blogs/synthetic-identity-fraud-detection)
+- [Court docket OCR: why entries and filings parse differently](https://docsapi.co/resources/blogs/court-docket-ocr)
+- [Denial code extraction: why CARC and RARC must pair up](https://docsapi.co/resources/blogs/denial-code-extraction)
+- [Container number verification: the ISO 6346 check digit](https://docsapi.co/resources/blogs/container-number-verification)
 
 ## Author
 

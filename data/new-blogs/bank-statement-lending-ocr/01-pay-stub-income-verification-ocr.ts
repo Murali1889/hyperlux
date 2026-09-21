@@ -70,14 +70,16 @@ export const blogBl01: BlogPost = {
 
     <p>Finally, confirm whether your process has an explicit, separate pathway for self-employed and gig applicants, or whether every applicant runs through the same traditional-payroll assumptions regardless of income type. A single unified check applied to a genuinely heterogeneous applicant population is a common, quiet source of unfair rejections that nobody notices until someone audits the denial reasons by applicant income type specifically.</p>
     <p>None of these three checks are individually complicated. Running all three together, consistently, and routing the results by confidence rather than a flat pass/fail is the part that actually makes the difference between a real verification process and a box someone checks once and quietly forgets about. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guides: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a> and <a href="/resources/blogs/ocr-for-tax-documents">OCR for tax documents</a>.</p>
   `,
   image: "/images/ocr-bank-statement-technology.png",
   featuredImage: "/images/ocr-bank-statement-technology.png",
   category: "Lending",
   date: "August 16, 2026",
   datePublished: "2026-08-16T00:00:00.000Z",
-  dateModified: "2026-08-16T00:00:00.000Z",
-  last_updated: "August 16, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "income verification api",

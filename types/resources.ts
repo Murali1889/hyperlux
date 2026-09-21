@@ -25,6 +25,7 @@ export interface BlogPost {
   slug: string
   excerpt: string
   description?: string
+  summary?: string
   content: string
   image: string
   featuredImage: string

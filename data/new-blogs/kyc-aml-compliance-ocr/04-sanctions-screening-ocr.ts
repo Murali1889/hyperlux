@@ -65,14 +65,16 @@ export const blogKa04: BlogPost = {
 
     <p>Ask whether your matching logic screens against every listed alias for a designated individual, not just the primary name, since the alias field exists specifically to cover the transliteration gap a primary-name-only check misses. Then ask whether your similarity threshold is a single fixed number applied universally, or whether it accounts for known differences in baseline name similarity across different naming-convention populations, since a uniform threshold produces measurably uneven false-positive rates by population even when the matching algorithm itself is working exactly as designed. Confirm your fuzzy-matching approach combines edit-distance with a phonetic or transliteration-aware method, rather than relying on Levenshtein distance alone, since edit-distance's uniform substitution weighting specifically mishandles the cross-script transliteration variants that account for a meaningful share of genuine near-misses. And check how frequently your underlying sanctions list data actually refreshes, since even ideal matching logic run against stale list data produces the same practical failure as a genuine matching miss, the same document-freshness discipline covered from a different mechanism in our <a href="/resources/blogs/kyb-verification">KYB verification piece</a>, where a similarly stale reference source undermined an otherwise well-designed check.</p>
     <p>A configurable similarity threshold and an illustrative example score are useful for explaining that fuzzy matching exists. They say nothing about why exact matching fails in the first place, or why the exact same threshold number means something different depending on which population it is being applied to, and that gap is exactly where a screening program's real false-positive and false-negative rates actually get decided. The "MOHAMMED" versus "MUHAMMAD" example above is not a contrived edge case built for this piece; it is close to the median case for a large share of the world's population, which is precisely why it deserves more attention than a single illustrative percentage on a vendor's pricing page ever gives it. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a>.</p>
   `,
   image: "/images/idp-vs-ocr.png",
   featuredImage: "/images/idp-vs-ocr.png",
   category: "Compliance",
   date: "August 24, 2026",
   datePublished: "2026-08-24T00:00:00.000Z",
-  dateModified: "2026-08-24T00:00:00.000Z",
-  last_updated: "August 24, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "sanctions screening ocr",

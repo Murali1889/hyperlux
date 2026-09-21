@@ -65,14 +65,16 @@ export const blogBl10: BlogPost = {
 
     <p>Ask whether your document pipeline explicitly classifies each business-purpose loan against all three full-exclusion categories, the $50,000 threshold, the primary-residence-secured exclusion, and personal-use vehicle loans, before any loan gets counted toward the aggregate MBL balance at all. Then ask whether the partial primary-residence reduction is applied separately for loans that clear the full-exclusion test but are still partly secured by a member's primary residence, since that is the distinction easiest to miss precisely because it looks similar to the full exclusion on the surface. Confirm this classification happens per loan, automatically, rather than depending on a loan officer remembering to flag the collateral structure manually on every commercial file, the same routing discipline covered in our <a href="/resources/blogs/heloc-document-ocr">HELOC document OCR piece</a> for a different lien-position classification problem entirely. Finally, confirm the aggregate cap check runs before disbursement rather than in a periodic after-the-fact report, and that human review of any automatically underwritten member business loan happens before funds move, not exclusively after.</p>
     <p>Extraction accuracy and audit-trail traceability are genuinely well solved by credit union lending automation vendors. Whether the resulting loan record is correctly classified against a regulatory definition with three separate carve-outs and one further partial reduction is a different, quieter problem, and it is exactly the layer that determines whether an institution's aggregate cap number can actually be trusted at all, rather than merely looking precise because it was computed cleanly from inputs nobody separately checked. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a>.</p>
   `,
   image: "/images/the-ultimate-guide-to-small-business.png",
   featuredImage: "/images/the-ultimate-guide-to-small-business.png",
   category: "Lending",
   date: "August 19, 2026",
   datePublished: "2026-08-19T00:00:00.000Z",
-  dateModified: "2026-08-19T00:00:00.000Z",
-  last_updated: "August 19, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "credit union lending ocr",

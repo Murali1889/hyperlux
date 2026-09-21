@@ -77,14 +77,16 @@ export const blogAp09: BlogPost = {
     <p>The detection logic above is not complicated once written down, but almost nothing published about non-PO invoice processing writes it down at all, treating extraction as a black box that either finds a PO or does not.</p>
 
     <p>Sources: non-PO invoice volume benchmark from the <a href="https://www.iofm.com/ask-the-expert/benchmarking-data-for-po-vs-non-po-invoices" target="_blank" rel="noopener">Institute of Finance and Management</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a>.</p>
   `,
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "Accounts Payable",
   date: "August 11, 2026",
   datePublished: "2026-08-11T00:00:00.000Z",
-  dateModified: "2026-08-11T00:00:00.000Z",
-  last_updated: "August 11, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "non po invoice processing",

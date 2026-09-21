@@ -103,14 +103,16 @@ export const blog30: BlogPost = {
     <h2>What I'd do today</h2>
 
     <p>For under 500 invoices/month: Bill.com or Melio, connect to QuickBooks/Xero, done. The math doesn't justify a builder stack at that volume. For 500-5,000/month: AvidXchange or Tipalti, trial on 20 real invoices before signing. For 5,000+/month with existing mid-market or enterprise ERP: hybrid approach, vendor (Basware, Coupa) handles the end-to-end workflow, or DIY on a builder stack (Textract/Document AI/DocsAPI) for the extraction layer while you own the validation rules and exception queue. Above 10,000/month, the builder path usually wins on unit economics. (<a href="/author/nupura-ughade">More on build-vs-buy decisions here</a>.)</p>
+
+    <p>Related guide: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a>.</p>
   `,
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "AI Document Intelligence",
   date: "July 1, 2026",
   datePublished: "2026-07-01T00:00:00.000Z",
-  dateModified: "2026-07-01T00:00:00.000Z",
-  last_updated: "July 1, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "accounts payable ocr",

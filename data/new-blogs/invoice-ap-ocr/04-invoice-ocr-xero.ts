@@ -72,14 +72,16 @@ export const blogAp04: BlogPost = {
 
     <p>For a bookkeeping or accounting firm specifically, add a fourth check: confirm that whatever review queue your team uses actually separates by client organization, rather than presenting one undifferentiated list of pending bills across every client. A shared queue with no client-level filtering is how the tenant-mismatch failure mode above compounds into a real incident, someone approves a bill quickly without checking which client's name is attached, because the interface never made that distinction obvious in the first place.</p>
     <p>Sources: field structure verified against the Xero Accounting API Invoices endpoint documentation and independent technical references. Extraction accuracy figures from our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guides: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a> and <a href="/resources/blogs/ocr-integration-with-accounting-crm-erp">how to connect OCR to accounting, CRM and ERP systems</a>.</p>
   `,
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "Accounts Payable",
   date: "August 10, 2026",
   datePublished: "2026-08-10T00:00:00.000Z",
-  dateModified: "2026-08-10T00:00:00.000Z",
-  last_updated: "August 10, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "invoice ocr xero",

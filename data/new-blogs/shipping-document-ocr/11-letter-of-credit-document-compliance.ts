@@ -104,14 +104,16 @@ export const blogSd11: BlogPost = {
     <p>The soybean example at the top of this post is not a story about careless paperwork. Every individual document in that presentation could have been prepared correctly, checked twice, and still missed the one thing that mattered, a 21-day clock that started ticking the moment the bill of lading was dated, independent of the shipment deadline printed in the credit itself. That is the entire character of strict compliance under UCP 600. It does not ask whether a mistake was reasonable, minor, or irrelevant to the actual trade. It asks whether the documents, on their face, match the credit's terms. When they do not, on the goods description, on a date, on an amount, on an endorsement, the bank's obligation to pay simply does not arise, no matter how correctly the underlying shipment went.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-shipping-and-logistics-documents">OCR for shipping and logistics documents</a>.</p>
   `,
   image: "/images/transforming-financial-services.png",
   featuredImage: "/images/transforming-financial-services.png",
   category: "Logistics",
   date: "September 9, 2026",
   datePublished: "2026-09-09T00:00:00.000Z",
-  dateModified: "2026-09-09T00:00:00.000Z",
-  last_updated: "September 9, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "letter of credit document compliance",

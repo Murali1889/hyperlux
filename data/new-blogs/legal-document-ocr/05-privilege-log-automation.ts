@@ -78,14 +78,16 @@ export const blogLd05: BlogPost = {
     <p>A defensible process, automated or not, tends to share a few characteristics regardless of tooling. It classifies attorney-client privilege and work product as separate questions with separate criteria, rather than one "is this privileged" flag. It treats keyword hits as a triage signal that routes documents to review, not a final determination, especially given how far precision drops as the term list broadens. It handles attachments and parent documents as independent classification events. And it logs the specific basis, not just "privileged," because a challenge to the log tests exactly that specificity under Rule 26(b)(5)(A).</p>
     <p>For lending and fintech document teams building or buying into a privilege review workflow, the practical takeaway from the numbers above is blunt: a keyword list alone will hand you a log that is both too long and too short at once, expensive to defend on the documents it shouldn't have caught, and exposed on the ones it missed. Getting the doctrine right at the classification layer, before the keyword pass even runs, is what actually shrinks that gap.</p>
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",
   category: "Legal",
   date: "September 3, 2026",
   datePublished: "2026-09-03T00:00:00.000Z",
-  dateModified: "2026-09-03T00:00:00.000Z",
-  last_updated: "September 3, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "privilege log automation",

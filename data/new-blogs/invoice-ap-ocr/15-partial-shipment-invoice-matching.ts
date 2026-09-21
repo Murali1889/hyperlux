@@ -70,14 +70,16 @@ export const blogAp15: BlogPost = {
     <p>None of this is exotic. It is standard matching logic applied consistently to a series of documents instead of one at a time, which is exactly the piece most generic invoice-matching content skips.</p>
 
     <p>Sources: worked example and matching mechanics referenced from <a href="https://learn.microsoft.com/en-us/dynamics365/finance/accounts-payable/accounts-payable-invoice-matching" target="_blank" rel="noopener">Microsoft Dynamics 365's accounts payable invoice matching documentation</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a>.</p>
   `,
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "Accounts Payable",
   date: "August 13, 2026",
   datePublished: "2026-08-13T00:00:00.000Z",
-  dateModified: "2026-08-13T00:00:00.000Z",
-  last_updated: "August 13, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "partial shipment invoice matching",

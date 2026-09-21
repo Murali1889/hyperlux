@@ -133,14 +133,16 @@ export const blogLd02: BlogPost = {
     <p>The choice between TAR 1.0 and TAR 2.0 gets treated in a lot of vendor material as a preference, almost a matter of workflow taste. It is not. It is a structural decision about where SME time gets spent and whether training and review are the same activity or two separate ones, and it has a direct, computable effect on review cost. The EDRM stage vendor content skips most, Processing, has an equally direct effect on whether either protocol can find what it is actually supposed to find. Getting the protocol right and getting the text extraction right are two different problems, and a review plan that only solves one of them is not actually solved.</p>
 
     <p>Sources: TAR protocol comparisons and cost findings draw on Maura Grossman and Gordon Cormack's published research on simple passive learning, simple active learning, and continuous active learning, including their AutoTAR work on autonomous CAL protocols. The 1985 recall study is Blair and Maron, "An Evaluation of Retrieval Effectiveness for a Full-Text Document-Retrieval System." Case law reference is <em>Da Silva Moore v. Publicis Groupe</em>, 287 F.R.D. 182 (S.D.N.Y. 2012). Rule text is Federal Rule of Civil Procedure 26(b)(1). The nine-stage model is the Electronic Discovery Reference Model (EDRM), first published in 2005. For a closer look at how keyword-based classifiers and machine-learning models trade off precision and recall on legal documents, see our piece on <a href="/resources/blogs/privilege-log-automation">privilege log automation</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
   `,
   image: "/images/intelligent-document-processing.png",
   featuredImage: "/images/intelligent-document-processing.png",
   category: "Legal",
   date: "August 31, 2026",
   datePublished: "2026-08-31T00:00:00.000Z",
-  dateModified: "2026-08-31T00:00:00.000Z",
-  last_updated: "August 31, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "e-discovery document review",

@@ -69,14 +69,16 @@ export const blogKa02: BlogPost = {
 
     <p>Ask whether your pipeline still triggers a full beneficial ownership re-verification at every new account a legal entity customer opens, since that is no longer required under the February 2026 relief and represents avoidable friction if your process has not been updated. Then ask specifically how your system detects the reliability-concerns trigger, whether anything is actively monitoring for facts like officer changes or adverse media hits between scheduled reviews, or whether ownership data simply sits static until the next scheduled check. Finally, confirm your indirect-ownership calculation actually multiplies percentages correctly through multi-tier holding structures, rather than checking only the immediate layer, since a shallow check can miss an indirect owner who genuinely crosses 25% through a chain the pipeline never traced all the way through.</p>
     <p>The 25% rule is simple to state and, once you actually work through the arithmetic and the multi-tier ownership math, more precise and more bounded than most compliance content lets on. The February 2026 shift away from automatic re-verification at every account opening is exactly the kind of regulatory update that makes a pipeline built on the old assumption quietly do more work than the rule now actually requires. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a>.</p>
   `,
   image: "/images/legal-document-automation.png",
   featuredImage: "/images/legal-document-automation.png",
   category: "Compliance",
   date: "August 23, 2026",
   datePublished: "2026-08-23T00:00:00.000Z",
-  dateModified: "2026-08-23T00:00:00.000Z",
-  last_updated: "August 23, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "beneficial ownership verification",

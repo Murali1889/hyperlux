@@ -114,14 +114,16 @@ export const blogMd21: BlogPost = {
     <h2>What this means for an appeals workflow</h2>
     <p>If you're building or evaluating automated denial and appeals routing, the practical takeaway is to stop treating the RARC as a nice-to-have enrichment on top of the CARC. For a large share of real-world denials, especially the broad catch-all CARCs that make up a disproportionate share of the denial queue, the RARC is where the actionable instruction actually lives, and the CARC's group code is where the financial-responsibility answer lives. Extraction that captures one without reliably joining it to the other produces a system that looks like it's automating appeals while actually automating a coin flip between the wrong action and the right one. Get the pairing right, respect the cases where the standard itself says a remark code is required, and the same denial queue that used to need a person reading each remittance advice line by line can be routed correctly without one.</p>
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
   `,
   image: "/images/transforming-financial-services.png",
   featuredImage: "/images/transforming-financial-services.png",
   category: "Healthcare",
   date: "September 19, 2026",
   datePublished: "2026-09-19T00:00:00.000Z",
-  dateModified: "2026-09-19T00:00:00.000Z",
-  last_updated: "September 19, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "denial code extraction",

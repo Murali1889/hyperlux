@@ -104,14 +104,16 @@ export const blog16: BlogPost = {
     <p>If you suspect AR is stuck on intake: do the 20-transaction timeline reconstruction. Numbers will tell you whether intake is the bottleneck.</p>
     <p>If intake is the bottleneck: automate OCR and field extraction at the entry point. Even a basic Tier 1/2 pipeline cuts intake time dramatically.</p>
     <p>If your team is already doing OCR but it's slow or inaccurate: audit which Tier 2/3 categories you're seeing most. Each category has a specific fix. (<a href="/author/nupura-ughade">I write about specific operational fixes for these</a>.)</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
   `,
   image: "/images/ocr-in-finance.png",
   featuredImage: "/images/ocr-in-finance.png",
   category: "Compliance",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-06-29T00:00:00.000Z",
-  last_updated: "June 29, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "what is revenue cycle management",

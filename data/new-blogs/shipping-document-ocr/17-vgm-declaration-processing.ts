@@ -95,14 +95,16 @@ export const blogSd17: BlogPost = {
     <p>None of these checks are individually hard. A container number check digit is a deterministic calculation. A weight tolerance comparison is arithmetic. A shipper name match is a string comparison against a known entity. What makes VGM reconciliation genuinely difficult in production is that it requires all of them to run consistently, across documents submitted by different parties, through different channels, on a clock that closes well before the vessel actually sails, and the cost of getting it wrong isn't a data quality footnote. It's a rolled container sitting on a dock because a compliant weight never made it onto the record that mattered.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-shipping-and-logistics-documents">OCR for shipping and logistics documents</a>.</p>
   `,
   image: "/images/ocr-api.png",
   featuredImage: "/images/ocr-api.png",
   category: "Logistics",
   date: "September 15, 2026",
   datePublished: "2026-09-15T00:00:00.000Z",
-  dateModified: "2026-09-15T00:00:00.000Z",
-  last_updated: "September 15, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "vgm declaration processing",

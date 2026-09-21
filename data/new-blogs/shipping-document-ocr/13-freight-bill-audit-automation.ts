@@ -88,14 +88,16 @@ export const blogSd13: BlogPost = {
     <p>The common thread is that none of this works as a generic document extraction problem. A freight bill audit engine has to know, before it ever sees an invoice, what an L1 loop is, what an L108 code means, what the contracted rate was on the date of shipment, and how many days remain before 49 U.S.C. § 13710 closes the window on disputing what it finds. Get that domain layer right and the 5 to 10 percent error rate stops being an abstract industry statistic and starts showing up as specific dollars recovered on specific invoices, on a schedule that keeps pace with a legal deadline rather than falling behind it.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-shipping-and-logistics-documents">OCR for shipping and logistics documents</a>.</p>
   `,
   image: "/images/intelligent-document-processing.png",
   featuredImage: "/images/intelligent-document-processing.png",
   category: "Logistics",
   date: "September 11, 2026",
   datePublished: "2026-09-11T00:00:00.000Z",
-  dateModified: "2026-09-11T00:00:00.000Z",
-  last_updated: "September 11, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "freight bill audit automation",

@@ -63,14 +63,16 @@ export const blogKa18: BlogPost = {
     <p>Naming the real, practical cross-border friction points, data localization rules, inconsistent digital identity standards, varying PEP lists across jurisdictions, is a genuinely useful starting point. It is not, on its own, a substitute for understanding that the shortcut most organizations reach for to manage that friction, relying on a foreign partner's verification, only works as a genuine liability shield if that partner is itself a regulated entity and the underlying records remain immediately retrievable, conditions a plain technology vendor relationship does not automatically satisfy just because someone internally chose to describe it as reliance.</p>
 
     <p>None of this argues against cross-border partnerships or automated verification. Reviewing every foreign customer's documents from scratch with no partner arrangement at all does not scale and does not solve the jurisdictional friction these content pieces correctly identify. It is a reason to confirm which of your cross-border arrangements are genuine, regulator-defensible reliance and which are outsourcing that still leaves your organization fully and quietly exposed, before an examiner draws that same distinction for you during a review whose timing you never actually got to choose. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a>.</p>
   `,
   image: "/images/the-ultimate-guide-to-small-business.png",
   featuredImage: "/images/the-ultimate-guide-to-small-business.png",
   category: "Compliance",
   date: "August 28, 2026",
   datePublished: "2026-08-28T00:00:00.000Z",
-  dateModified: "2026-08-28T00:00:00.000Z",
-  last_updated: "August 28, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "cross-border kyc compliance",

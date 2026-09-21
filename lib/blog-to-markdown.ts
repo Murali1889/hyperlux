@@ -21,6 +21,10 @@ export function blogToMarkdown(blog: BlogPost): string {
   lines.push("")
   lines.push(`> ${blog.description ?? blog.excerpt}`)
   lines.push("")
+  if (blog.summary) {
+    lines.push(`**In short:** ${blog.summary}`)
+    lines.push("")
+  }
   lines.push(`**Canonical URL:** ${canonical}`)
   lines.push(`**Author:** ${author.name} — ${author.title}`)
   if (author.linkedin) lines.push(`**Author LinkedIn:** ${author.linkedin}`)

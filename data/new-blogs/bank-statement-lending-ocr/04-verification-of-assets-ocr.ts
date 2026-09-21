@@ -72,14 +72,16 @@ export const blogBl04: BlogPost = {
 
     <p>Ask whether your large-deposit threshold is calculated as a percentage of each applicant's actual qualifying income, or hardcoded as a flat dollar figure applied to everyone regardless of income level. Then ask whether a deposit with a legible, self-explanatory description on the statement, payroll, SSA, tax refund, verified transfer, actually clears automatically in your pipeline, or whether every large deposit generates the same manual documentation request regardless of what the statement itself already shows. Confirm your process reduces usable funds by the unsourced amount when documentation cannot be produced, rather than treating an unsourced deposit as grounds for automatic denial, since that overcorrection creates real, unnecessary borrower friction on files that would otherwise close. And ask specifically whether large-deposit detection runs against each account independently or against the applicant's aggregated asset picture across every account submitted, since the second is what actually catches the split-deposit pattern the first was never built to see, a scoping problem that shows up in credit card and multi-statement analysis too, covered in our <a href="/resources/blogs/credit-card-statement-ocr">credit card statement OCR guide</a>.</p>
     <p>Automated account connections solved the existence and balance half of verification of assets convincingly. The sourcing half, what actually determines whether a large deposit clears cleanly or turns into a documentation request, still runs on a specific, published threshold and a specific, narrow exception list that most automated pipelines never encode explicitly. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guides: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a> and <a href="/resources/blogs/ocr-bank-statement-technology-revolutionizing-financial-data-processing">OCR for bank statements, checks and utility bills</a>.</p>
   `,
   image: "/images/idp-vs-ocr.png",
   featuredImage: "/images/idp-vs-ocr.png",
   category: "Lending",
   date: "August 17, 2026",
   datePublished: "2026-08-17T00:00:00.000Z",
-  dateModified: "2026-08-17T00:00:00.000Z",
-  last_updated: "August 17, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "verification of assets ocr",

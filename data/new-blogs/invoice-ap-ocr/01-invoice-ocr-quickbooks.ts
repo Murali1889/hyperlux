@@ -11,15 +11,15 @@ export const blogAp01: BlogPost = {
     "The real QuickBooks Bill API field mapping for invoice OCR, five places the sync breaks silently, and why QBO differs from Desktop for AP automation teams.",
   metaTag: "Invoice OCR QuickBooks Sync: The Real Field Map (2026)",
   content: `
-    <p>Every vendor selling invoice OCR for QuickBooks shows the same demo: upload a PDF, watch fields populate, click post. What none of them show is what happens six weeks later when a vendor name creates a duplicate record, or a $0.01 rounding difference silently rejects an entire bill through the API instead of just flagging it. I have wired OCR output into QuickBooks Online enough times to know the demo and the production reality are different products.</p>
+    <p>Every vendor selling invoice OCR for QuickBooks shows the same demo: upload a PDF, watch fields populate, click post. What none of them show is what happens six weeks later when a vendor name creates a duplicate record, or a $0.01 rounding difference leaves the total QuickBooks stores different from the total printed on the invoice. I have wired OCR output into QuickBooks Online enough times to know the demo and the production reality are different products.</p>
 
     <p>This is the actual field map, not the marketing version, plus the five places <a href="/solutions/finance-automation">invoice automation</a> breaks once real vendor data hits it.</p>
 
     <h2>What "invoice OCR for QuickBooks" actually means</h2>
 
-    <p>QuickBooks Online has no native invoice OCR. Its Receipt Capture feature reads receipts, not vendor invoices or bills, and the two are handled by different objects internally. Every "scan invoices into QuickBooks" tool on the market is a third-party layer that extracts data from the PDF, then pushes it into QuickBooks through the Bill entity in the QuickBooks Online Accounting API. Nothing native happens without that third layer.</p>
+    <p>QuickBooks Online has some capture features of its own, and what each plan includes changes over time, so check Intuit's current documentation for yours. Whatever does the scanning, the extracted data still has to become a Bill through the Bill entity in the QuickBooks Online Accounting API. That mapping step is where most of the trouble starts.</p>
 
-    <p>That distinction matters because it means the quality of your OCR integration depends entirely on how carefully that third layer maps extracted fields to QuickBooks' actual data model, not on anything QuickBooks does for you automatically.</p>
+    <p>It matters because the quality of your integration depends on how carefully extracted fields are mapped to QuickBooks' actual data model, not on how well the scanner reads the page.</p>
 
     <h2>The real field mapping: OCR output to the QuickBooks Bill object</h2>
 
@@ -33,10 +33,10 @@ export const blogAp01: BlogPost = {
         <tr><td>Vendor name (text)</td><td>VendorRef (must be a Vendor ID, not a name string)</td><td>Matching by raw name string instead of ID creates a duplicate vendor record every time the name is written slightly differently</td></tr>
         <tr><td>Invoice date</td><td>TxnDate</td><td>This is the posting date that hits your financials, not a label. Wrong date, wrong period.</td></tr>
         <tr><td>Due date</td><td>DueDate</td><td>If omitted, QuickBooks falls back to the vendor's default payment term, which can silently override a real OCR-extracted due date</td></tr>
-        <tr><td>Invoice/bill number</td><td>DocNumber</td><td>QuickBooks does not block duplicate bills by default. DocNumber + VendorRef together are your only native duplicate check.</td></tr>
+        <tr><td>Invoice/bill number</td><td>DocNumber</td><td>Intuit says the API throws an error when a duplicate DocNumber is sent, unless the request adds include=allowduplicatedocnum (and it depends on the company's preferences). Do not rely on that alone: look up an existing bill for the same VendorRef and DocNumber before you post.</td></tr>
         <tr><td>Line item description, qty, price</td><td>Line[].Description, Line[].Amount</td><td>Multi-page invoices with wrapped line items produce split or duplicated Line entries if extraction does not track table structure across the wrap</td></tr>
         <tr><td>Line item GL account/category</td><td>Line[].AccountBasedExpenseLineDetail.AccountRef</td><td>OCR alone never fills this. It requires a rules engine or historical vendor-to-account mapping layered on top.</td></tr>
-        <tr><td>Total</td><td>TotalAmt</td><td>QuickBooks validates this against the summed line amounts. A mismatch rejects the entire Bill object through the API, it does not just flag it for review.</td></tr>
+        <tr><td>Total</td><td>TotalAmt</td><td>Intuit lists this as read only: QuickBooks calculates it from the lines and overwrites any value you send. It never compares it with the total printed on the invoice, so do that comparison yourself before posting.</td></tr>
         <tr><td>Currency</td><td>CurrencyRef</td><td>Only relevant if multi-currency is enabled on the company file, but when it is, a missing CurrencyRef fails the post</td></tr>
         <tr><td>AP account</td><td>APAccountRef</td><td>Usually defaults correctly, but a wrong default silently breaks downstream reconciliation</td></tr>
       </tbody>
@@ -51,16 +51,16 @@ export const blogAp01: BlogPost = {
     <ol>
       <li><strong>Vendor matching by name instead of ID.</strong> "Acme Supply Co" and "Acme Supply Co." are different strings. Match on VendorRef ID against a fuzzy-matched vendor master, not on the raw extracted name, or your vendor list grows a near-duplicate every few weeks.</li>
       <li><strong>GL coding is not an OCR problem.</strong> Optical extraction can read that a line item cost $340. It cannot know that line item belongs in "Office Supplies" versus "COGS, Materials" without a separate rules layer trained on your historical coding or an explicit chart-of-accounts mapping.</li>
-      <li><strong>TotalAmt validation is strict, not advisory.</strong> If the extracted line items sum to $4,999.98 and the invoice states $5,000.00, the API rejects the whole bill rather than posting it with a warning. A rounding-tolerant reconciliation step before the API call prevents this from becoming a silent failure.</li>
+      <li><strong>QuickBooks does not check the invoice total for you.</strong> TotalAmt is read only, and QuickBooks overwrites whatever you send with its own sum of the lines. If the extracted lines add up to $4,999.98 and the invoice states $5,000.00, the bill posts at $4,999.98 and nothing warns you. A reconciliation step before the API call, comparing the printed total with the summed lines and allowing a small rounding tolerance, is the only thing that catches it.</li>
       <li><strong>Closed accounting periods reject postings quietly.</strong> If TxnDate falls inside a period the company file has closed, the Bill will not post. Check the close date before attempting the write, not after it fails.</li>
       <li><strong>Multi-currency adds a step single-currency companies never see.</strong> CurrencyRef and exchange rate handling only matter once multi-currency is enabled, but teams that started single-currency and later expanded internationally often miss this when a new vendor invoice arrives in a foreign currency.</li>
     </ol>
 
     <h2>What actually happens when the sync fails</h2>
 
-    <p>The QuickBooks Bill API does not return a soft warning when something is wrong, it returns a hard error and refuses to create the object. That distinction matters more than it sounds. A tool that treats every failure as "review later" will let real errors pile up in a queue, while a tool that surfaces the specific API error (a TotalAmt mismatch versus a closed-period rejection versus an invalid VendorRef) lets your AP team fix the actual cause instead of guessing.</p>
+    <p>When a required field is missing or a reference is invalid, the QuickBooks Bill API returns an error and refuses to create the object. A wrong total is different: it is not an error at all, because QuickBooks recalculates it. That distinction matters more than it sounds. A tool that treats every failure as "review later" will let real errors pile up in a queue, while a tool that surfaces the specific API error (a duplicate DocNumber versus a closed-period rejection versus an invalid VendorRef) lets your AP team fix the actual cause instead of guessing, and your own total check covers the errors QuickBooks will never raise.</p>
 
-    <p>In practice, most failed syncs trace back to one of three root causes: the vendor record does not exist yet and auto-creation is disabled, the extracted total does not reconcile to the penny against summed line items, or a required field (TxnDate, VendorRef, or at least one Line entry) is empty because extraction could not confidently read it. None of these are OCR accuracy problems in the usual sense, character-level accuracy can be 99% and still produce a Bill object QuickBooks rejects if one required field comes back blank or malformed.</p>
+    <p>In practice, most failed syncs trace back to one of three root causes: the vendor record does not exist yet and auto-creation is disabled, the same DocNumber is sent twice, or a required field (TxnDate, VendorRef, or at least one Line entry) is empty because extraction could not confidently read it. None of these are OCR accuracy problems in the usual sense, character-level accuracy can be 99% and still produce a Bill object QuickBooks rejects if one required field comes back blank or malformed.</p>
 
     <h2>Batch posting and rate limits: the part nobody mentions in demos</h2>
 
@@ -78,7 +78,7 @@ export const blogAp01: BlogPost = {
 
     <p>Because the Bill API rejects malformed posts outright rather than accepting partial data, a template-based OCR tool that only handles invoice layouts it has seen before will fail closed the moment a new vendor's invoice format shows up, since a missing required field blocks the entire post. Layout-aware extraction that adapts to unfamiliar invoice structures, rather than matching against a fixed template library, reduces how often that happens. We built this into <a href="/products">DocsAPI</a> specifically because per-vendor templates do not scale past a few dozen vendors, and every QuickBooks-bound AP team eventually gets an invoice from a vendor nobody templated.</p>
 
-    <p>Our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">accuracy benchmark</a> put invoice line-item extraction at 93% for a layout-aware engine versus 81 to 87% for parsers relying more heavily on document structure recognition trained on narrower layout sets. That gap shows up directly as TotalAmt validation failures once you are pushing into QuickBooks at volume.</p>
+    <p>Our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">accuracy benchmark</a> put invoice line-item extraction at 93% for a layout-aware engine versus 81 to 87% for parsers relying more heavily on document structure recognition trained on narrower layout sets. That gap shows up as bills that post with a total that differs from the invoice once you are pushing into QuickBooks at volume, unless you check the sums yourself first.</p>
 
     <h2>What I would check before wiring OCR into QuickBooks</h2>
 
@@ -86,14 +86,16 @@ export const blogAp01: BlogPost = {
 
     <p>Run a parallel period before you cut over. Post the same batch of invoices through both the old manual process and the new OCR-to-QuickBooks pipeline for two to three weeks, then diff the results field by field, not just total by total. A wrong GL code or a duplicate vendor record can carry a correct total amount, which means checking only the total will miss exactly the errors that matter most for a clean books close. For the broader AP OCR evaluation process beyond QuickBooks specifically, see our <a href="/resources/blogs/accounts-payable-ocr">accounts payable OCR guide</a>.</p>
     <p>Sources: field names verified against the <a href="https://developer.intuit.com/app/developer/qbo/docs/api/accounting/all-entities/bill" target="_blank" rel="noopener">QuickBooks Online Bill entity reference</a> (Intuit developer documentation). Extraction accuracy figures from our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guides: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a> and <a href="/resources/blogs/ocr-integration-with-accounting-crm-erp">how to connect OCR to accounting, CRM and ERP systems</a>.</p>
   `,
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "Accounts Payable",
   date: "August 9, 2026",
   datePublished: "2026-08-09T00:00:00.000Z",
-  dateModified: "2026-08-09T00:00:00.000Z",
-  last_updated: "August 9, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "invoice ocr quickbooks integration",
@@ -121,7 +123,7 @@ export const blogAp01: BlogPost = {
     {
       question: "Why did my invoice fail to sync to QuickBooks even though the OCR extraction looked correct?",
       answer:
-        "The most common causes are a TotalAmt mismatch against summed line items (which the API rejects outright), a TxnDate falling inside a closed accounting period, or a missing CurrencyRef on a multi-currency company file.",
+        "Common causes are a VendorRef that is not a valid vendor ID, a duplicate DocNumber, a TxnDate falling inside a closed accounting period, or a missing CurrencyRef on a multi-currency company file. A total that differs from the invoice will not be rejected, because QuickBooks recalculates TotalAmt from the lines, so check it before you post.",
     },
     {
       question: "Does invoice OCR work the same way for QuickBooks Desktop as QuickBooks Online?",

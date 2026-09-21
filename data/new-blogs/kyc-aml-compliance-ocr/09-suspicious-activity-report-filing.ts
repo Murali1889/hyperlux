@@ -65,14 +65,16 @@ export const blogKa09: BlogPost = {
     <p>The safe harbor protection and the tipping-off prohibition are not footnotes to the filing deadline mechanics above, they are the two structural features that make the whole system function the way it is actually designed to. The safe harbor is what lets an institution file promptly on genuine suspicion without waiting for certainty, since certainty is rarely available within a 30-day window and the entire framework depends on filing before certainty exists, not after. The confidentiality requirement is what keeps a filed SAR from tipping off exactly the person it was filed about, undermining any investigation the filing might otherwise support. Neither one is optional or a matter of institutional preference; both are structural requirements a document and workflow pipeline needs to actively support, not simply avoid violating by accident.</p>
 
     <p>The 30-day SAR deadline gets mentioned constantly and precisely explained rarely, the specific $5,000 floor underneath the suspicion standard, the narrow 60-day-maximum extension, and the exact date the clock actually starts from. The October 2025 clarification on continuing-activity review is exactly the kind of recent, real regulatory update that a pipeline built on older assumptions can keep running past without anyone noticing the extra work it no longer needs to do. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a>.</p>
   `,
   image: "/images/ocr-api.png",
   featuredImage: "/images/ocr-api.png",
   category: "Compliance",
   date: "August 25, 2026",
   datePublished: "2026-08-25T00:00:00.000Z",
-  dateModified: "2026-08-25T00:00:00.000Z",
-  last_updated: "August 25, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "suspicious activity report filing",

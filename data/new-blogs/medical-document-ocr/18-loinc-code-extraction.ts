@@ -77,14 +77,16 @@ export const blogMd18: BlogPost = {
     <p>That combination, missing source information, judgment-dependent decisions, and continuous drift, is why LOINC mapping remains a persistent line item in health IT interoperability work rather than a problem that got fully automated away after nearly three decades of the standard existing. Any team building document extraction for lab results, whether for clinical use, claims adjudication, or underwriting documentation in lending workflows that rely on medical records, should expect to budget for an ongoing mapping maintenance process, a documented handling path for local codes that don't yet have a confirmed LOINC match, and a review queue for genuinely ambiguous cases, rather than a lookup table that ships once and stays correct.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
   `,
   image: "/images/passport-ocr.png",
   featuredImage: "/images/passport-ocr.png",
   category: "Healthcare",
   date: "September 16, 2026",
   datePublished: "2026-09-16T00:00:00.000Z",
-  dateModified: "2026-09-16T00:00:00.000Z",
-  last_updated: "September 16, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "loinc code extraction",

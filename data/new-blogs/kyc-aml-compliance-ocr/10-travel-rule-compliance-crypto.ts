@@ -68,14 +68,16 @@ export const blogKa10: BlogPost = {
     <p>Explaining what information the Travel Rule requires is the easier half of this compliance problem. Determining whether there is even a counterparty VASP to share that information with in the first place, and what to do when the honest answer is "we cannot confirm," is the harder, more consequential half, and it is exactly the layer most Travel Rule content moves past quickly on the way to describing the information-sharing requirement itself.</p>
 
     <p>None of this means the Travel Rule is unworkable in practice, plenty of transfers resolve cleanly through a known, well-integrated VASP counterparty on a shared protocol, with a threshold that applies exactly as expected. It means the genuinely hard cases, an unfamiliar counterparty, an ambiguous address, a jurisdiction still mid-sunrise, deserve a defined, documented procedure rather than an improvised decision made transaction by transaction under time pressure, since those are precisely the cases most likely to attract regulatory scrutiny if handled inconsistently. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a>.</p>
   `,
   image: "/images/ocr-in-finance.png",
   featuredImage: "/images/ocr-in-finance.png",
   category: "Compliance",
   date: "August 26, 2026",
   datePublished: "2026-08-26T00:00:00.000Z",
-  dateModified: "2026-08-26T00:00:00.000Z",
-  last_updated: "August 26, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "travel rule compliance crypto",

@@ -73,14 +73,16 @@ export const blogKa01: BlogPost = {
 
     <p>Ask whether your pipeline actually recomputes every field checksum, including the composite, or only extracts the MRZ text and trusts it without validation, since extraction accuracy and checksum validity are two different claims and only the second one actually catches tampering or misreads. Then ask whether a checksum failure routes differently depending on likely cause, a probable OCR misread on an otherwise-consistent document versus a genuine tampering signal, or whether every failure gets treated identically regardless of context. Confirm document-type classification, TD1, TD2, or TD3, runs before checksum logic, using the correct field-position rules for that specific format rather than a single hardcoded layout. And check specifically how filler characters are handled during extraction, since a misread filler boundary corrupts the checksum before the algorithm itself ever gets a chance to run correctly.</p>
     <p>Explaining that MRZ checksums catch tampering is true and, on its own, not particularly useful to anyone building or evaluating a verification pipeline. The actual algorithm is simple enough to compute by hand, as the worked example above shows, arithmetic a person could genuinely check with pencil and paper in a couple of minutes, and understanding it is the difference between trusting a vendor's claim and actually knowing what your own pipeline is, or is not, checking. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guides: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a> and <a href="/resources/blogs/ocr-for-passports-id-cards-and-drivers-licenses">OCR for passports, ID cards and driver's licenses</a>.</p>
   `,
   image: "/images/passport-ocr.png",
   featuredImage: "/images/passport-ocr.png",
   category: "Compliance",
   date: "August 23, 2026",
   datePublished: "2026-08-23T00:00:00.000Z",
-  dateModified: "2026-08-23T00:00:00.000Z",
-  last_updated: "August 23, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "mrz passport verification",

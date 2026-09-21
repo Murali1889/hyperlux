@@ -96,14 +96,16 @@ export const blogMd11: BlogPost = {
     <p>That's a genuinely different engineering task than reading text off a label. It requires the extraction system to know, structurally, what an NDC is, and to hold that knowledge against a reference dataset that itself changes as new labelers register and as the format itself moves toward the 2033 transition. Teams evaluating extraction tools for pharmacy invoices, drug utilization documentation, or claims reconciliation are better served asking a vendor to walk through exactly this segment-detection and validation logic than asking whether the tool "reads NDC codes," since almost any OCR product will answer yes to the second question and very few will have a real answer to the first. For related identifier and code-set extraction problems in the same claims pipeline, our posts on <a href="/resources/blogs/medical-coding-automation">medical coding automation</a> and <a href="/resources/blogs/dea-number-verification">DEA number verification</a> cover the CPT/ICD-10 and prescriber-identifier sides of the same document set.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
   `,
   image: "/images/legal-document-automation.png",
   featuredImage: "/images/legal-document-automation.png",
   category: "Healthcare",
   date: "September 9, 2026",
   datePublished: "2026-09-09T00:00:00.000Z",
-  dateModified: "2026-09-09T00:00:00.000Z",
-  last_updated: "September 9, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "ndc code extraction",

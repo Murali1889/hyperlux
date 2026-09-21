@@ -9,11 +9,11 @@ export default function BlogCTA() {
         <div className="p-8 md:p-12 text-white">
           <div className="text-center space-y-4 mb-8">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-              Ready to Transform Your Lending Process?
+              Want to see it on your own documents?
             </h2>
             <p className="text-lg text-indigo-100 max-w-2xl mx-auto">
-              See how DocsAPI's AI-powered industry classification can help you process loans faster, improve
-              accuracy, and scale your operations.
+              Try our free OCR tool in your browser, or book a demo to see how DocsAPI reads the document
+              types covered in this guide.
             </p>
           </div>
 
@@ -22,7 +22,7 @@ export default function BlogCTA() {
               <Link href="/book-demo">Book a Demo</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="text-black border-white hover:bg-indigo-700/20 hover:text-white">
-              <Link href="/pricing">View Pricing</Link>
+              <Link href="/tools/free-ocr">Try the free OCR tool</Link>
             </Button>
           </div>
         </div>

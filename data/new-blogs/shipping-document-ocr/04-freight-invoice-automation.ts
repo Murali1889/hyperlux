@@ -100,14 +100,16 @@ export const blogSd04: BlogPost = {
     <p>Reading the invoice correctly is table stakes and the easy 80 percent of the problem. The harder, more valuable 20 percent is structural: recognizing that a freight invoice's line items are claims that need a second document to verify, not self contained facts. That means extracting the invoice's own fields alongside the corresponding fields from the bill of lading, matching them against each other systematically (declared weight against invoiced weight, declared class against invoiced class, requested accessorial services against billed accessorial charges, delivery address type against any access or residential surcharge), and flagging every mismatch for review rather than assuming every invoice was billed correctly and sampling a subset to check.</p>
 
     <p>It also means treating a reweigh adjustment differently from an unauthorized accessorial charge, since conflating the two either rejects legitimate weight based rerating as an error or, worse, lets an unauthorized accessorial charge through by treating all discrepancies the same way. The freight invoice and the bill of lading are, functionally, one workflow that happens to arrive as two separate documents from two separate parties. Automation that treats them as two unrelated extraction jobs will read every field accurately and still miss the exact category of error that costs the most money. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-shipping-and-logistics-documents">OCR for shipping and logistics documents</a>.</p>
   `,
   image: "/images/ocr-bank-statement-technology.png",
   featuredImage: "/images/ocr-bank-statement-technology.png",
   category: "Logistics",
   date: "September 2, 2026",
   datePublished: "2026-09-02T00:00:00.000Z",
-  dateModified: "2026-09-02T00:00:00.000Z",
-  last_updated: "September 2, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "freight invoice automation",

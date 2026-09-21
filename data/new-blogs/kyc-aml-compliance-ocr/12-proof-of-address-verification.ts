@@ -63,14 +63,16 @@ export const blogKa12: BlogPost = {
     <p>"OCR extracts the address, fuzzy matching confirms it" is an accurate one-sentence summary of what a proof of address pipeline is supposed to do. It is not, on its own, a description of a system that actually works, since raw fuzzy matching gets both false rejections and false acceptances on ordinary real-world address variation, and address matching of any kind never touches the separate question of whether the document itself is genuine. That second question, the one PDF metadata forensics is specifically built to answer, is where a growing share of address-document fraud is actually happening.</p>
 
     <p>None of this argues against automating proof of address checks. Manual review of every submitted bill is not more accurate at catching a well-made synthetic document, just slower and considerably more expensive to run at real volume. It is a reason to confirm your pipeline is standardizing addresses before comparing them and inspecting document metadata before trusting what renders on the page, rather than assuming a passing address match means the underlying document was ever genuinely issued at all. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guides: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a> and <a href="/resources/blogs/ocr-for-passports-id-cards-and-drivers-licenses">OCR for passports, ID cards and driver's licenses</a>.</p>
   `,
   image: "/images/revolutionizing-finance.png",
   featuredImage: "/images/revolutionizing-finance.png",
   category: "Compliance",
   date: "August 26, 2026",
   datePublished: "2026-08-26T00:00:00.000Z",
-  dateModified: "2026-08-26T00:00:00.000Z",
-  last_updated: "August 26, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "proof of address verification",

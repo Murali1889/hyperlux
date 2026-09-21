@@ -62,14 +62,16 @@ export const blogBl12: BlogPost = {
 
     <p>Ask whether your loan management system captures funding and sale timestamps with enough precision to demonstrate sequence, not just same-day proximity, since same-day timing with no finer resolution is functionally indistinguishable from simultaneous in a later review. Then ask whether underwriting decisions are recorded with an explicit approving party distinct from any fintech-supplied score or recommendation, rather than a system that only logs the final outcome without attributing the actual decision authority. Check whether your reporting can actually surface the bank's rate of divergence from fintech recommendations across the portfolio, since a system that only stores final outcomes per loan has no way to answer this question in aggregate even if the underlying decisions were genuinely independent. Finally, confirm retained risk is tracked as an ongoing, reconciled figure against real portfolio performance, not a number set once at the loan sale and never revisited, the same ongoing-reconciliation discipline covered from a different angle in our <a href="/resources/blogs/business-line-of-credit-ocr">borrowing base dilution tracking piece</a>, where a single snapshot was similarly insufficient to answer the real question.</p>
     <p>Fintech lending APIs have made integration fast. Whether the resulting loan program can actually withstand a true lender challenge depends on a data architecture question sitting well upstream of any API's speed or ease of integration, and it is exactly the layer that most embedded finance content, focused on onboarding velocity, never actually reaches. A program can be structured correctly by capable counsel and still have nothing to show for it in a review, simply because nobody asked the operational systems to capture the specific facts that structure depends on. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a>.</p>
   `,
   image: "/images/intelligent-document-processing.png",
   featuredImage: "/images/intelligent-document-processing.png",
   category: "Lending",
   date: "August 19, 2026",
   datePublished: "2026-08-19T00:00:00.000Z",
-  dateModified: "2026-08-19T00:00:00.000Z",
-  last_updated: "August 19, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "fintech lending api ocr",

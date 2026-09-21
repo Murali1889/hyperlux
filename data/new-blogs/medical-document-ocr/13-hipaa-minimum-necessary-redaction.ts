@@ -108,14 +108,16 @@ export const blogMd13: BlogPost = {
     <p>Ask whether the tool has any concept of disclosure purpose at all, or whether it applies one redaction profile regardless of who's receiving the document and why. Ask how it distinguishes routine and recurring disclosures from non-routine ones, and what happens differently for each under the hood. Ask whether its scoping rules can be tied to the actual terms of a specific business associate agreement or data use agreement, rather than a generic template labeled "billing" or "operations." Ask directly whether the vendor is describing minimum necessary scoping or de-identification, since the two get marketed under the same "HIPAA compliant" umbrella far more often than the regulation treats them as one thing. For the de-identification side of this, our breakdown of the <a href="/resources/blogs/hipaa-deidentification-automation">HIPAA Safe Harbor 18 identifiers</a> covers what full de-identification actually requires and where automated tooling misses category 18 risks. And for the operational workflow where purpose-based disclosure decisions get made in practice, our piece on <a href="/resources/blogs/release-of-information-processing">release of information processing</a> covers how requests actually move through a covered entity's intake and fulfillment process.</p>
 
     <p>The two standards aren't competing versions of the same idea, and a pipeline that only implements one of them, however well, has not implemented HIPAA-compliant disclosure handling. It has implemented half of it, and the half it skipped is the one that requires knowing something about the world outside the document, who's asking, why, and under what agreement, which is exactly the information a document processing tool doesn't have unless someone deliberately built a place for it to live. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
   `,
   image: "/images/ocr-api.png",
   featuredImage: "/images/ocr-api.png",
   category: "Healthcare",
   date: "September 11, 2026",
   datePublished: "2026-09-11T00:00:00.000Z",
-  dateModified: "2026-09-11T00:00:00.000Z",
-  last_updated: "September 11, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "hipaa minimum necessary redaction",

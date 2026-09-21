@@ -120,14 +120,16 @@ export const blog21: BlogPost = {
     <p>If you process under 100 invoices/month: do not buy OCR yet. The ROI math does not work. Try Google Drive OCR or QuickBooks Receipt Capture for occasional documents.</p>
     <p>If you process 100-1,000 invoices/month: trial an OCR API on the 50 most recent invoices from your top three vendors. Measure accuracy on vendor name, total, date, and line items. If you clear 95% on those fields, the rest of the project is repeatable.</p>
     <p>If you process 1,000+ invoices/month: do not waste time evaluating. The payback is fast enough that even an imperfect first pick is cheaper than not starting. Pick an API with classification + extraction + validation in one product. Start with invoices, expand to receipts and bank statements within 90 days. (<a href="/author/nupura-ughade">I write about these rollout patterns often.</a>)</p>
+
+    <p>Related guides: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a> and <a href="/resources/blogs/ocr-integration-with-accounting-crm-erp">how to connect OCR to accounting, CRM and ERP systems</a>.</p>
   `,
   image: "/images/ocr-in-finance.png",
   featuredImage: "/images/ocr-in-finance.png",
   category: "Industry Trends",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-07-04T00:00:00.000Z",
-  last_updated: "July 4, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "ocr accounting",

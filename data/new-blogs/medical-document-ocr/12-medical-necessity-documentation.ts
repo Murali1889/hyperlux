@@ -78,14 +78,16 @@ export const blogMd12: BlogPost = {
     <p>If there's one operational habit this distinction should change, it's how a denial gets triaged the moment it comes in. Before assuming a medical necessity denial reflects a genuine clinical disagreement worth escalating to a peer-to-peer review, the faster and usually more productive first step is pulling the specific LCD or NCD cited in the denial reason, reading its stated criteria line by line, and checking whether the chart contains language that maps directly onto each required element. In the CPAP example above, that check takes minutes and either turns up a clean documentation fix (an addendum naming the specific qualifying symptom) or confirms the case genuinely doesn't meet the policy's criteria, in which case a peer-to-peer conversation or a different clinical justification is the right next move. Skipping that check and going straight to a general appeal is the most common way documentation-gap denials get treated, and resolved, far more slowly than they need to be.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",
   category: "Healthcare",
   date: "September 10, 2026",
   datePublished: "2026-09-10T00:00:00.000Z",
-  dateModified: "2026-09-10T00:00:00.000Z",
-  last_updated: "September 10, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "medical necessity documentation",

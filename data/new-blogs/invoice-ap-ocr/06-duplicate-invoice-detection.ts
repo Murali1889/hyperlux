@@ -70,14 +70,16 @@ export const blogAp06: BlogPost = {
     <p>None of this logic requires exotic technology. It requires actually publishing the matching criteria instead of hiding them behind a proprietary product name, which is the gap this piece exists to close.</p>
 
     <p>Sources: extraction accuracy figures from our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a>.</p>
   `,
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "Accounts Payable",
   date: "August 10, 2026",
   datePublished: "2026-08-10T00:00:00.000Z",
-  dateModified: "2026-08-10T00:00:00.000Z",
-  last_updated: "August 10, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "duplicate invoice detection",

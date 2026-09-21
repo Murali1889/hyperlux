@@ -110,14 +110,16 @@ export const blogMd02: BlogPost = {
     <p>Ask whether the ZIP-code handling references the actual Census population data for three-digit prefixes or applies a flat rule. Ask whether date redaction runs against narrative text and relative date references, not just labeled date fields. Ask whether ages are generalized to "90 or older" automatically, and whether the underlying date fields that would let someone reconstruct that age are also suppressed. Ask what happens to rare diagnoses, unusual occupations, and other category-18 risks: are they flagged for review, or does the pipeline stop at the first 17 categories and call the job done. And if the dataset in question genuinely needs more analytic value preserved than Safe Harbor allows, ask whether anyone has actually evaluated whether Expert Determination, with a documented statistical methodology, would serve the use case better than forcing every field through the same fixed checklist. For related redaction scope questions, see our coverage of the <a href="/resources/blogs/hipaa-minimum-necessary-redaction">HIPAA minimum necessary standard</a>, which governs a related but distinct question, how much PHI to disclose for a given purpose even when full de-identification isn't the goal, and our piece on <a href="/resources/blogs/release-of-information-processing">medical record release of information processing</a>, which covers the operational workflow these redaction rules get applied inside.</p>
 
     <p>The 18-identifier list is not the hard part of Safe Harbor, any compliance checklist can reprint it accurately. The hard part is the gap between identifiers that are shaped like PII and identifiers that only function as PII in context, and that gap is exactly where automated redaction pipelines built around pattern matching quietly fail while still reporting a clean pass. Knowing the actual regulatory text, the ZIP threshold, the age-90 rule, the catch-all category, and the genuine mechanical difference between a fixed checklist and a statistical risk determination is what separates a redaction tool that looks compliant from one that actually is. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
   `,
   image: "/images/ocr-process.png",
   featuredImage: "/images/ocr-process.png",
   category: "Healthcare",
   date: "August 31, 2026",
   datePublished: "2026-08-31T00:00:00.000Z",
-  dateModified: "2026-08-31T00:00:00.000Z",
-  last_updated: "August 31, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "hipaa deidentification automation",

@@ -111,14 +111,16 @@ export const blogMd06: BlogPost = {
     <p>A few patterns show up repeatedly in code review of homegrown NPI validators. The most frequent is applying Luhn directly to the 10-digit NPI without the 80840 prefix, which will reject valid NPIs and, worse, will sometimes accept invalid ones by coincidence, since the math without the prefix is simply a different checksum that happens to overlap with the correct one for some inputs. The second is treating a passing checksum as proof of an active provider, which the sections above should make clear is a category error, structural validity and registration status are answered by different systems entirely. The third is caching NPPES lookups indefinitely, when the underlying registry, PECOS enrollment, and exclusion status all change on independent schedules and a stale cache produces exactly the kind of "valid last month" false positive that leads to a denied claim today.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
   `,
   image: "/images/the-ultimate-guide-to-small-business.png",
   featuredImage: "/images/the-ultimate-guide-to-small-business.png",
   category: "Healthcare",
   date: "September 4, 2026",
   datePublished: "2026-09-04T00:00:00.000Z",
-  dateModified: "2026-09-04T00:00:00.000Z",
-  last_updated: "September 4, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "npi verification api",

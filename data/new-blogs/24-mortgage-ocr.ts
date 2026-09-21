@@ -130,14 +130,16 @@ export const blog24: BlogPost = {
     <p>If you close under 50 loans per month: try a mortgage-specific OCR vendor on your last 10 closed packets. Measure extraction accuracy on the eight document types above. If you clear 95% on pay stubs, W-2s, and bank statements, the rollout is straightforward.</p>
     <p>If you close 50-500 loans per month: this is where ROI is highest. The time savings compound across the team. Trial a vendor for 30 days on live applications and measure days-to-close before and after.</p>
     <p>If you close 500+ loans per month: you probably already have something. Ask the vendor for current accuracy data on business tax returns and complex appraisals. If they cannot answer with field-level accuracy numbers, switch. (<a href="/author/nupura-ughade">I write about mortgage tech rollouts often.</a>)</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a>.</p>
   `,
   image: "/images/transforming-financial-services.png",
   featuredImage: "/images/transforming-financial-services.png",
   category: "Industry Trends",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-07-12T00:00:00.000Z",
-  last_updated: "July 12, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "mortgage ocr",

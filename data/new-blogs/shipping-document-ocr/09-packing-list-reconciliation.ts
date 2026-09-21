@@ -113,14 +113,16 @@ export const blogSd09: BlogPost = {
     <p>This same structural problem, matching identity across documents that describe a shipment from different angles using different vocabularies, shows up throughout shipping document processing, not just between packing list and invoice. It appears when reconciling <a href="/resources/blogs/hs-code-classification">HS code classification</a> against the product descriptions used to justify it, and again when aggregating shipment lines into a <a href="/resources/blogs/customs-entry-summary-processing">customs entry summary</a> that has to tie back to both the invoice and the packing list it was built from. It also surfaces when a <a href="/resources/blogs/bill-of-lading-processing">bill of lading</a> consolidates multiple invoice lines into a single broad cargo description, the same many-to-one relationship, just one document further down the chain. Once you see the pattern once, in a case as clean as an earbud case and a charging cable, it is easier to recognize in messier real shipments with dozens of SKUs and a warehouse team packing under deadline pressure.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-shipping-and-logistics-documents">OCR for shipping and logistics documents</a>.</p>
   `,
   image: "/images/revolutionizing-finance.png",
   featuredImage: "/images/revolutionizing-finance.png",
   category: "Logistics",
   date: "September 7, 2026",
   datePublished: "2026-09-07T00:00:00.000Z",
-  dateModified: "2026-09-07T00:00:00.000Z",
-  last_updated: "September 7, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "packing list reconciliation",

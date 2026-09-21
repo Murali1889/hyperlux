@@ -129,14 +129,16 @@ export const blogMd01: BlogPost = {
     <h2>What this means for evaluating a document AI vendor</h2>
 
     <p>"FHIR compliant" as a bare claim should be treated the way "cloud based" was a decade ago, technically true of nearly everyone and informative about almost nothing on its own. The useful question is never whether output conforms to the FHIR specification, since a DocumentReference wrapping an unread PDF conforms to the spec just as validly as a fully coded Observation resource does. The useful question is which resource types the output actually populates with discrete, coded, computable data, and which parts of the source document remain locked in an attachment regardless of what the resource envelope around it is called. Getting a straight answer to that question, before signing a contract rather than after the first failed integration test, is the entire difference between buying real interoperability and buying a very standards-compliant filing system. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
   `,
   image: "/images/ocr-in-finance.png",
   featuredImage: "/images/ocr-in-finance.png",
   category: "Healthcare",
   date: "August 30, 2026",
   datePublished: "2026-08-30T00:00:00.000Z",
-  dateModified: "2026-08-30T00:00:00.000Z",
-  last_updated: "August 30, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "hl7 fhir document processing",

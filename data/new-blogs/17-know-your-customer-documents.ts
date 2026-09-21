@@ -109,14 +109,16 @@ export const blog17: BlogPost = {
     <p>If you are building KYC from scratch in 2026: support digital ID wallets and mobile driver's licenses from day one. Build them as first-class flows, not afterthoughts. The customer experience advantage matters.</p>
     <p>If you have a working KYC built on 2020 patterns: add selfie liveness if you don't already have it. That single addition closes the biggest fraud vector. Digital ID wallet support can wait until your market demands it.</p>
     <p>If you operate in Europe: budget engineering time for EUDI Wallet integration. The regulation is real, the implementations are stabilizing, and the deadline is now. (<a href="/author/nupura-ughade">I write about regulatory document trends regularly</a>.)</p>
+
+    <p>Related guides: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a> and <a href="/resources/blogs/ocr-for-passports-id-cards-and-drivers-licenses">OCR for passports, ID cards and driver's licenses</a>.</p>
   `,
   image: "/images/passport-mrz-highlight.png",
   featuredImage: "/images/passport-mrz-highlight.png",
   category: "Compliance",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-06-17T00:00:00.000Z",
-  last_updated: "June 17, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "meaning of know your customer",

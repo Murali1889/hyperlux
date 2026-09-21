@@ -111,14 +111,16 @@ export const blog15: BlogPost = {
     <p>If you are building an AML system from scratch: nail the seven-field extraction first. Everything else (monitoring rules, SAR workflows, dashboards) builds on top of clean extracted data. Garbage in, garbage out.</p>
     <p>If you have an existing AML system that "works": pick 100 documents at random and check whether all seven fields were captured cleanly. Most teams find gaps in field 4 (counterparty) or field 6 (source-of-funds). Fix those first.</p>
     <p>If you are preparing for an exam: do a mock audit on a sample of files. Reconstruct every check from the audit trail. Gaps you find are gaps the examiner will find. (<a href="/author/nupura-ughade">I write about audit-readiness more here</a>.)</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a>.</p>
   `,
   image: "/images/passport-ocr.png",
   featuredImage: "/images/passport-ocr.png",
   category: "Compliance",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-06-29T00:00:00.000Z",
-  last_updated: "June 29, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "anti-money laundering",

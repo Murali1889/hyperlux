@@ -68,14 +68,16 @@ export const blogBl21: BlogPost = {
 
     <p>Ask the vendor directly whether their headline accuracy number is character-level, field-level, or document-level, and if it is not document-level, ask them to compute or estimate the document-level implication against your own typical statement's field count, using the same math above. Then ask specifically how confidence-based routing to human review is priced, since low-confidence pages requiring manual review carry a real cost that a flat per-page rate can obscure until volume reveals how often it actually triggers. Confirm your own review-queue staffing plan reflects the real document-level clean rate rather than the field-level headline, and that someone has actually run the vendor's number against your own document's field count rather than trusting the marketed percentage at face value, the same discipline covered from the running-balance angle in our <a href="/resources/blogs/nsf-overdraft-detection-ocr">NSF and overdraft detection piece</a>, where a plausible-looking summary number similarly needed a closer, more granular look before it could be trusted for a real decision. Finally, if your volume is meaningfully cyclical, negotiate contract flexibility around volume-tier commitments rather than locking into a rate structure built for steady-state volume a lending business rarely actually has.</p>
     <p>A 99% accuracy number is a real, legitimate figure, and it is also answering a narrower question than the confident, round percentage suggests. Knowing which question it actually answers, and doing the compounding math against a real document's field count, is the difference between an informed vendor comparison and one built on a number that sounds far more reassuring than it turns out to be in practice once real volume starts moving through the pipeline every single day. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guides: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a> and <a href="/resources/blogs/ocr-bank-statement-technology-revolutionizing-financial-data-processing">OCR for bank statements, checks and utility bills</a>.</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",
   category: "Lending",
   date: "August 22, 2026",
   datePublished: "2026-08-22T00:00:00.000Z",
-  dateModified: "2026-08-22T00:00:00.000Z",
-  last_updated: "August 22, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "bank statement ocr pricing",

@@ -62,14 +62,16 @@ export const blogBl15: BlogPost = {
 
     <p>Ask whether your pipeline counts only explicit NSF and overdraft fee line items, or also reconstructs running balance to detect same-day protective transfers that cover a shortfall without generating a visible fee. Then ask whether your 90-day frequency threshold is being applied to the fee count alone or to the combined shortfall count including covered events, since the two can diverge meaningfully for applicants using overdraft protection. Confirm this detection runs against actual account-level running balance, not a simple description-field keyword match, since a keyword search has no way to distinguish a protective transfer from any other ordinary transfer between an applicant's own accounts. And check whether your output surfaces the timing distribution of events across the window, not just a single combined total, since a cluster of events in one resolved month reads very differently than the same count spread evenly across the full period, the same trend-versus-level distinction covered from a different angle in our <a href="/resources/blogs/cash-flow-underwriting-ocr">cash flow underwriting piece</a>, where an average alone similarly hid the more important pattern underneath it.</p>
     <p>Counting fee line items is the easy, visible half of NSF and overdraft detection. The harder, more accurate half requires reconstructing what the account balance actually was at each transaction moment and recognizing the transfers that quietly kept it from going negative, and it is exactly the layer that determines whether a frequency threshold is measuring real financial behavior or just which applicants happen to have overdraft protection enabled on their specific account. Two applicants who behave identically in every way that matters to a lender can end up on opposite sides of a decline threshold purely because one bank's product happened to intervene before a fee ever printed on the statement, which is not a distinction any underwriting policy actually intends to make. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guides: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a> and <a href="/resources/blogs/ocr-bank-statement-technology-revolutionizing-financial-data-processing">OCR for bank statements, checks and utility bills</a>.</p>
   `,
   image: "/images/ocr-bank-statement-technology.png",
   featuredImage: "/images/ocr-bank-statement-technology.png",
   category: "Lending",
   date: "August 20, 2026",
   datePublished: "2026-08-20T00:00:00.000Z",
-  dateModified: "2026-08-20T00:00:00.000Z",
-  last_updated: "August 20, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "nsf overdraft detection ocr",

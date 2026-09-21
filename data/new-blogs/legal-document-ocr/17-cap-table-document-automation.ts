@@ -90,14 +90,16 @@ export const blogLd17: BlogPost = {
       <li>Treat any schedule amendment made after signature as unresolved until a properly executed amendment or a new instrument exists, even if the number was communicated informally and everyone agrees on what it should be.</li>
     </ul>
     <p>None of this is exotic. It is the same discipline as reconciling a bank statement against a general ledger, applied to equity instead of cash. The difference is that a bank reconciliation happens monthly by default because the bank sends a statement whether anyone asks for it or not. A cap table has no equivalent forcing function, which is exactly why it drifts, and exactly why the reconciliation has to be deliberate rather than assumed. For firms handling diligence-heavy transactional work generally, our guide to <a href="/resources/blogs/due-diligence-data-room-software">due diligence data room software</a> covers the broader document review workflow this fits into, and our <a href="/resources/blogs/contract-ocr">contract OCR guide</a> covers the extraction mechanics behind reading structured terms out of the underlying purchase agreements and instruments themselves. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
   `,
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "Legal",
   date: "September 15, 2026",
   datePublished: "2026-09-15T00:00:00.000Z",
-  dateModified: "2026-09-15T00:00:00.000Z",
-  last_updated: "September 15, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "cap table document automation",

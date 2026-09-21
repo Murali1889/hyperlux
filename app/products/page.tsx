@@ -18,7 +18,7 @@ export const metadata: Metadata = buildPageMetadata({ title: TITLE, description:
 export default function ProductsPage() {
   return (
     <>
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} dateModified="2026-09-14" />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} dateModified="2026-09-21" />
       <ProductsHero />
       <ProductFeatures />
       <ProductComparison />

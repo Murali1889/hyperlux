@@ -64,14 +64,16 @@ export const blogKa11: BlogPost = {
     <p>A printed photo held up to a camera is a good, visual illustration of what liveness detection catches. It is not, on its own, a picture of what liveness detection in 2026 actually has to defend against, since the more consequential attack now never touches a camera at all. That gap, transport and device integrity verification running as a distinct layer alongside content analysis rather than a better version of content analysis alone, is exactly where a liveness program's real resilience against injection gets decided.</p>
 
     <p>None of this is a reason to distrust liveness detection as a category. Content-based checks still reliably catch the presentation attacks that remain common, and dropping liveness entirely in favor of manual review is not more accurate, just slower and more expensive at any real volume. It is a reason to confirm what specific layer of your pipeline is actually doing the injection-detection work, before assuming a low fraud rate reflects genuine resilience rather than an attack type your content analysis was never built to see in the first place. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guides: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a> and <a href="/resources/blogs/ocr-for-passports-id-cards-and-drivers-licenses">OCR for passports, ID cards and driver's licenses</a>.</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",
   category: "Compliance",
   date: "August 26, 2026",
   datePublished: "2026-08-26T00:00:00.000Z",
-  dateModified: "2026-08-26T00:00:00.000Z",
-  last_updated: "August 26, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "liveness detection kyc",

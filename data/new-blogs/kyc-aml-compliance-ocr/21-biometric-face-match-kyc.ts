@@ -63,14 +63,16 @@ export const blogKa21: BlogPost = {
     <p>A single accuracy percentage is a genuinely simple number to put on a pricing page, and it is also close to meaningless on its own, since the same underlying system can report a dramatically different figure purely by shifting its threshold, with no change to the actual matching model behind it. The FNMR-at-fixed-FMR framing, the document photo quality asymmetry, and the directional demographic findings above are exactly the details a single blended accuracy claim is specifically designed to smooth over.</p>
 
     <p>None of this argues against automating identity verification through face matching. Manual visual comparison of a document photo against a live person standing in front of a reviewer is not more accurate, and it carries no defensible, measurable error rate at all, just an unverifiable human judgment call repeated at scale. It is a reason to demand the specific underlying numbers, FNMR at a clearly stated FMR, demographic breakdowns by error direction, and document-photo-quality handling, rather than simply accepting one confident percentage as evidence that these tradeoffs have actually been addressed. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guides: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a> and <a href="/resources/blogs/ocr-for-passports-id-cards-and-drivers-licenses">OCR for passports, ID cards and driver's licenses</a>.</p>
   `,
   image: "/images/passport-ocr.png",
   featuredImage: "/images/passport-ocr.png",
   category: "Compliance",
   date: "August 29, 2026",
   datePublished: "2026-08-29T00:00:00.000Z",
-  dateModified: "2026-08-29T00:00:00.000Z",
-  last_updated: "August 29, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "biometric face match kyc",

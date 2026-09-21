@@ -114,14 +114,16 @@ export const blog25: BlogPost = {
     <p>If you process under 100 statements per month: build it yourself with Tesseract or use a generic OCR API. Volume does not justify a specialty vendor.</p>
     <p>If you process 100-10,000 per month: pick a vendor with proven statement OCR. The five-field extraction plus validation plus categorization saves a junior employee's worth of time within the first quarter.</p>
     <p>If you process 10,000+ per month: build a hybrid, vendor for the major issuers (templates ready), in-house pipeline for the long tail. Most lenders I have advised end up here. (<a href="/author/nupura-ughade">I write about the build-buy decisions often.</a>)</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a>.</p>
   `,
   image: "/images/highlighted-bank-statement.png",
   featuredImage: "/images/highlighted-bank-statement.png",
   category: "Industry Trends",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-07-30T00:00:00.000Z",
-  last_updated: "July 30, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "credit card statement ocr",

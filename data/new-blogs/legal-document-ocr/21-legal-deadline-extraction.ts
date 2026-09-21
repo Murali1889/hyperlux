@@ -59,14 +59,16 @@ export const blogLd21: BlogPost = {
     <h2>What to Ask When Evaluating a Deadline Extraction Tool</h2>
     <p>Most vendor pages for deadline and calendar extraction tools describe the capability as "automatically calculates statute of limitations deadlines" without describing what happens when a tolling fact is present in or around the document set. A few specific questions separate a tool built around the actual structure of tolling doctrine from one that runs a single date-plus-period formula and calls the result a deadline. Does the tool distinguish between tolling doctrines that reset the accrual date and doctrines that stop and resume an already running clock, since applying the wrong operation produces a wrong answer in a different direction than applying no tolling at all? Does it track a statute of repose as a separate, non tollable ceiling when one applies to the claim type, rather than treating every limitations number the same way? Can it represent more than one tolling event on a single claim, with the jurisdiction-specific stacking rule applied correctly, rather than collapsing all tolling into one adjustment field? And critically, does it surface the underlying facts driving a tolling calculation, the discovery date, the military service dates, the incapacity period, rather than just presenting a final date with no visible reasoning, since a reviewer cannot sanity check a number that hides the facts it was built from.</p>
     <p>None of this requires a lending or legal operations team to have the Servicemembers Civil Relief Act, a state's discovery rule case law, or its statute of repose provisions memorized. It requires asking whether the extraction system was built with the understanding that tolling is not one thing, it is a small number of structurally different operations that happen to share a name, and that getting the trigger date right is necessary but not sufficient for getting the deadline right. A four year clock that actually runs 229 days longer because of a federal statute nobody thought to check is not an edge case dreamed up for a blog post, it is the ordinary consequence of how tolling law works, and it is exactly the kind of error that looks like precision right up until the deadline it produced turns out to be wrong. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
   `,
   image: "/images/ocr-bank-statement-technology.png",
   featuredImage: "/images/ocr-bank-statement-technology.png",
   category: "Legal",
   date: "September 19, 2026",
   datePublished: "2026-09-19T00:00:00.000Z",
-  dateModified: "2026-09-19T00:00:00.000Z",
-  last_updated: "September 19, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "legal deadline extraction",

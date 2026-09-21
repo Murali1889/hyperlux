@@ -12,6 +12,7 @@ export const blog06: BlogPost = {
   metaTag: "Free Online OCR Tools: I Tested 11 (Only 3 Worth It)",
   content: `
     <p>On a Tuesday I had four hours, a list of every free online OCR tool I could find, and the same 12-page mortgage application I would feed each one. The goal was simple: figure out which "free OCR" tools actually work and which are dressed-up watermark traps. Eleven tools. Four hours. One coffee shop. No paid plans.</p>
+    <p>If you just want to read a file right now, our <a href="/tools/free-ocr">free OCR tool</a> works in your browser, needs no signup and never uploads your file. Then come back here to see how the other tools compare.</p>
     <p>This is the unvarnished writeup. Names, scores, gotchas, and the three that earned a spot on my own bookmarks bar.</p>
 
     <h2>How I Tested Each Tool</h2>

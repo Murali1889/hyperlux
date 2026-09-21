@@ -8,8 +8,10 @@ export const blog34: BlogPost = {
   excerpt:
     "We tested eight OCR engines and document APIs on 1,900 real documents across invoices, bank statements, receipts, and academic papers. The full accuracy numbers, methodology, and per-category winners, free to cite.",
   description:
-    "Independent 2026 OCR accuracy benchmark: Tesseract, PaddleOCR, AWS Textract, Google Document AI, Docling, LlamaParse, and DocsAPI tested on 1,900 real documents. Full numbers and methodology.",
+    "Independent 2026 OCR benchmark: 8 engines tested on 1,900 real documents. Accuracy by document type, speed and full methodology, free to cite.",
   metaTag: "OCR Accuracy Benchmark 2026 (8 Engines, Real Docs)",
+  summary:
+    "We tested 8 OCR engines on 1,900 real documents. On clean printed text they all score 97-99%. On tables, handwriting and phone photos the gap between best and worst reaches 20 to 30 points, and the winner changes by document type.",
   content: `
     <p>Most OCR accuracy numbers you find online come from vendor marketing decks tested on clean documents nobody uses in production. We ran an independent benchmark instead: eight OCR engines and document APIs on 1,900 real documents across the categories that actually matter for finance and document workflows. This page is the full result set, with methodology, per-category winners, and the raw numbers. It is free to cite, and the last section tells you exactly how.</p>
 
@@ -119,14 +121,16 @@ export const blog34: BlogPost = {
     <p><em>DocsAPI, "OCR Accuracy Benchmark 2026: 8 Engines on Real Documents," docsapi.co/resources/blogs/ocr-accuracy-benchmark-2026 (2026).</em></p>
 
     <p>The full per-category head-to-head write-ups, with the failure modes behind each number, are in the linked comparison guides above. If you want the methodology detail or the document-category breakdown for a specific engine, the individual comparison posts cover it.</p>
+
+    <p>Related guide: <a href="/resources/blogs/how-to-measure-ocr-accuracy">how to measure OCR accuracy</a>.</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",
   category: "AI Document Intelligence",
   date: "July 31, 2026",
   datePublished: "2026-07-31T00:00:00.000Z",
-  dateModified: "2026-09-14T00:00:00.000Z",
-  last_updated: "September 14, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "ocr accuracy benchmark",

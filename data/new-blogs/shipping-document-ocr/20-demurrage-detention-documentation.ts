@@ -111,14 +111,16 @@ export const blogSd20: BlogPost = {
     <p>Section 541.5 of the FMC's rule effectively makes invoice completeness itself an automatable check. An invoice missing a required timing element, a container number, or a tariff reference is not just sloppy, it is legally non-payable, and a system that flags those gaps automatically is doing something a manual accounts payable review would frequently miss under normal invoice volume. Combined with a routine practice of pulling the EIR, the gate log, and the discharge confirmation for any charge that looks contestable, that turns demurrage and detention disputes from a reactive scramble into a comparison two systems can run against each other in seconds.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-shipping-and-logistics-documents">OCR for shipping and logistics documents</a>.</p>
   `,
   image: "/images/ocr-process.png",
   featuredImage: "/images/ocr-process.png",
   category: "Logistics",
   date: "September 18, 2026",
   datePublished: "2026-09-18T00:00:00.000Z",
-  dateModified: "2026-09-18T00:00:00.000Z",
-  last_updated: "September 18, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "demurrage detention documentation",

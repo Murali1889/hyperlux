@@ -83,14 +83,16 @@ export const blogLd04: BlogPost = {
     <p>Ask whether the tool distinguishes between case names inside a citation clause versus case names inside running prose, since Table T6's abbreviation list only applies to the former and a tool applying it universally will flag correct prose citations as errors. Ask whether it tracks document-level state well enough to resolve short-form, "id.," and "supra" references, since a huge share of citations in any real brief after the first reference to a case use one of these shortened forms rather than a full citation every time. Ask what reference data backs its reporter recognition, a small hardcoded list of common federal reporters, or a maintained table covering the full range of state and historical reporters a litigation document might actually cite. And ask specifically whether it enforces the page-range digit-dropping rule, since it is exactly the kind of rule that a system optimized to catch "obviously wrong" citations, missing reporters, malformed years, will quietly miss, because "164-165" reads as perfectly reasonable to anyone who has not memorized Rule 3.2(a).</p>
 
     <p>The rules covered here, italicization, party-name abbreviation, reporter spacing, pincite digit-dropping, are not exotic. They are the default, expected case in any properly formatted legal citation, which is exactly why a checker that gets them wrong is more dangerous than one that visibly fails. A tool that throws an error on a garbled citation is easy to distrust appropriately. A tool that silently accepts "164-165" as fine, or strips italics inconsistently, produces output that looks trustworthy right up until a court clerk or an opposing counsel catches the mismatch. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
   `,
   image: "/images/legal-document-automation.png",
   featuredImage: "/images/legal-document-automation.png",
   category: "Legal",
   date: "September 2, 2026",
   datePublished: "2026-09-02T00:00:00.000Z",
-  dateModified: "2026-09-02T00:00:00.000Z",
-  last_updated: "September 2, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "legal citation checker",

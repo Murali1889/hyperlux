@@ -65,14 +65,16 @@ export const blogKa13: BlogPost = {
     <p>A template count in the thousands is a genuine, real answer to the genuine, real diversity of national ID formats worldwide. It is not, on its own, the right architecture for every ID category within that diversity, since the largest single category by volume in the US market already carries a uniform, standardized machine-readable payload that makes fifty separate visual templates unnecessary for the core extraction task, and considerably weaker than a barcode-versus-print cross-check at actually catching the fraud case that matters most.</p>
 
     <p>None of this argues against maintaining a large template library. International coverage genuinely requires one, and the alternative, rejecting every ID format without a recognized machine-readable standard, is not a real option for a global verification product. It is a reason to confirm your pipeline checks for a standardized payload first before falling back to visual classification, and to ask what actually happens on a low-confidence match, rather than assuming a large template count alone is evidence of a well-built verification pipeline. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guides: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a> and <a href="/resources/blogs/ocr-for-passports-id-cards-and-drivers-licenses">OCR for passports, ID cards and driver's licenses</a>.</p>
   `,
   image: "/images/idp-vs-ocr.png",
   featuredImage: "/images/idp-vs-ocr.png",
   category: "Compliance",
   date: "August 27, 2026",
   datePublished: "2026-08-27T00:00:00.000Z",
-  dateModified: "2026-08-27T00:00:00.000Z",
-  last_updated: "August 27, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "national id verification ocr",

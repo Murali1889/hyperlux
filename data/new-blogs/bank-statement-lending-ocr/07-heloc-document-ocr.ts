@@ -64,14 +64,16 @@ export const blogBl07: BlogPost = {
 
     <p>Ask specifically which field your extraction pipeline treats as the HCLTV input for a HELOC, the approved credit limit or the current outstanding balance. If it is the balance, confirm how many files in your current pipeline involve a partially drawn line, since that is the exact population where the error above produces a materially wrong HCLTV without ever looking wrong on its face. Then confirm your process for capturing subordinate financing that has not yet appeared on a credit report, since an unreported second lien is functionally invisible to any pipeline that treats the credit pull as the sole source of existing-debt data for the CLTV or HCLTV calculation. Finally, check whether draw-period versus repayment-period status is tracked at all, or whether every HELOC payment figure gets used for DTI qualification identically regardless of which phase the loan is actually in, the same kind of field-level asset-verification discipline covered more broadly in our <a href="/resources/blogs/verification-of-assets-ocr">verification of assets guide</a>.</p>
     <p>Instant HELOC approval is a genuinely solved workflow problem. Whether that approval is calculated on the correct exposure figure depends on a field-mapping distinction most generic lending OCR pipelines were never built with in mind, and it is exactly the kind of error that looks like a correct number right up until someone actually checks which field it came from and why. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a>.</p>
   `,
   image: "/images/legal-document-automation.png",
   featuredImage: "/images/legal-document-automation.png",
   category: "Lending",
   date: "August 18, 2026",
   datePublished: "2026-08-18T00:00:00.000Z",
-  dateModified: "2026-08-18T00:00:00.000Z",
-  last_updated: "August 18, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "heloc document ocr",

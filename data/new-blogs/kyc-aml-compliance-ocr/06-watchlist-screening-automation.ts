@@ -65,14 +65,16 @@ export const blogKa06: BlogPost = {
     <p>Whitelisting a confirmed false positive so it stops generating redundant alerts is genuinely good practice, and the scope of that whitelist entry is where the real risk actually lives. A customer is never simply "cleared." A specific match, against a specific version of a specific list entry, was cleared, and treating that narrower, more precise fact as the broader one is exactly how a screening program quietly stops catching the new matches it was built to find.</p>
 
     <p>None of the individual pieces here are exotic engineering, storing a reference to the specific list entry and version a decision was made against, detecting when either side of that comparison changes, running a periodic backstop revalidation, and recognizing duplicate list-source entries as one underlying match. What they have in common is that skipping any single one of them produces a system that looks, on the surface, exactly like a well-functioning whitelist right up until a genuinely new match against a different designated individual gets silently absorbed into a suppression rule that was only ever supposed to cover one specific, already-reviewed case. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a>.</p>
   `,
   image: "/images/ocr-process.png",
   featuredImage: "/images/ocr-process.png",
   category: "Compliance",
   date: "August 24, 2026",
   datePublished: "2026-08-24T00:00:00.000Z",
-  dateModified: "2026-08-24T00:00:00.000Z",
-  last_updated: "August 24, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "watchlist screening automation",

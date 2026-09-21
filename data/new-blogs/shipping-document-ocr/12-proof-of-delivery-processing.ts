@@ -92,14 +92,16 @@ export const blogSd12: BlogPost = {
     <p>The scenario that opened this piece, a clean delivery that still went unpaid for months, is what happens when POD matching fails on an unrelated shipment and the resulting confusion bleeds into the carrier's ability to defend its own freight bill. A broker auditing invoices under a <a href="/resources/blogs/freight-bill-audit-automation">freight bill audit</a> process will routinely request the POD as the first piece of supporting documentation before releasing payment, exactly the same document 49 CFR § 370.7 requires a carrier to produce during a claim investigation. If the carrier's own systems can't retrieve the matched receipt fast enough, the invoice sits in dispute regardless of whether the delivery itself was ever actually a problem. The same matching logic that links a POD to its shipment record is what feeds accurate delivery confirmation into <a href="/resources/blogs/freight-invoice-automation">freight invoice automation</a> downstream, and it depends on the shipment first being correctly and unambiguously identified against the <a href="/resources/blogs/bill-of-lading-processing">bill of lading</a> that governed the move in the first place. A POD is only as useful as the shipment record it can be reliably tied to, and at the volume a real carrier operates at, that tie is never guaranteed by a reference number alone.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-shipping-and-logistics-documents">OCR for shipping and logistics documents</a>.</p>
   `,
   image: "/images/idp-vs-ocr.png",
   featuredImage: "/images/idp-vs-ocr.png",
   category: "Logistics",
   date: "September 10, 2026",
   datePublished: "2026-09-10T00:00:00.000Z",
-  dateModified: "2026-09-10T00:00:00.000Z",
-  last_updated: "September 10, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "proof of delivery processing",
