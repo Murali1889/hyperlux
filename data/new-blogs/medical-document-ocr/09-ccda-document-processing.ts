@@ -156,14 +156,16 @@ export const blogMd09: BlogPost = {
     <h2>The practical takeaway</h2>
 
     <p>A validator telling you a C-CDA file is compliant answers one narrow question: does this XML conform to the required schema and templates. It does not answer the question that actually matters for a document processing pipeline, which is whether the clinically meaningful content in that file is sitting in a structured entry you can read programmatically, or only in a narrative block that looks complete to a person and empty to a parser. Treating those as the same question is exactly how a pipeline ends up silently dropping medications, problems, or allergies that were, technically, right there in the file the whole time. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
   `,
   image: "/images/intelligent-document-processing.png",
   featuredImage: "/images/intelligent-document-processing.png",
   category: "Healthcare",
   date: "September 7, 2026",
   datePublished: "2026-09-07T00:00:00.000Z",
-  dateModified: "2026-09-07T00:00:00.000Z",
-  last_updated: "September 7, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "ccda document processing",

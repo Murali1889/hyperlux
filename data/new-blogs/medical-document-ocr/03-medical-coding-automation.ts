@@ -98,14 +98,16 @@ export const blogMd03: BlogPost = {
     <p>Ask whether the system was evaluated separately on diagnosis coding and procedure coding, since ICD-10-CM and CPT are different structural problems with different failure modes, and a vendor quoting one blended accuracy number across both is obscuring which one is actually strong. Ask how the system handles negation and laterality carried across a document rather than stated once, since both are common sources of misclassification that have nothing to do with extraction quality. Ask whether NCCI Procedure-to-Procedure edits and specificity guidelines are applied as an explicit rules layer on top of the model's predictions, or whether the system relies entirely on a language model's implicit sense of what "sounds right," which is not the same as encoding CMS's actual published edit tables. And ask what the system does with a low-confidence prediction: auto-submits it, or routes it to a human coder with the competing candidates and the specific documentation language that made the decision close, the exact information a human needs to resolve an ambiguity like the debridement example above in minutes rather than researching it from scratch.</p>
 
     <p>ICD-10-CM and CPT will keep showing up together on every claim, every EHR export, and every coding automation pitch, because the regulation that governs healthcare transactions requires it. That pairing has convinced a lot of vendor content to talk about them as one undifferentiated problem, extract the codes, ship the claim. They are built on different logic, maintained by different organizations, and solved by different technical approaches once you get past the marketing framing, and a pipeline that doesn't reflect that difference is going to keep producing exactly the kind of close, expensive, avoidable coding error the debridement example walks through. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
   `,
   image: "/images/passport-ocr-revolutionizing.png",
   featuredImage: "/images/passport-ocr-revolutionizing.png",
   category: "Healthcare",
   date: "September 1, 2026",
   datePublished: "2026-09-01T00:00:00.000Z",
-  dateModified: "2026-09-01T00:00:00.000Z",
-  last_updated: "September 1, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "medical coding automation",

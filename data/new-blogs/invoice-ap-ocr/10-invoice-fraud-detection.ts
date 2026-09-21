@@ -68,14 +68,16 @@ export const blogAp10: BlogPost = {
 
     <p>Start with your highest-dollar-volume repeat vendors, since a successful fraud attempt against one of those has the highest payout for an attacker and therefore the highest expected effort behind it, and expand the reference-set coverage outward from there rather than trying to cover every vendor on day one.</p>
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a>.</p>
   `,
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "Accounts Payable",
   date: "August 12, 2026",
   datePublished: "2026-08-12T00:00:00.000Z",
-  dateModified: "2026-08-12T00:00:00.000Z",
-  last_updated: "August 12, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "invoice fraud detection",

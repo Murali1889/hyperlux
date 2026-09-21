@@ -110,14 +110,16 @@ export const blogMd17: BlogPost = {
     <p>None of these are exotic edge cases. Every one of them is a routine, mechanical thing that happens because a form was filled out quickly, by a person, under normal daily volume, without a second check. That is exactly the profile of a problem that document quality control solves and that training alone does not.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",
   category: "Healthcare",
   date: "September 15, 2026",
   datePublished: "2026-09-15T00:00:00.000Z",
-  dateModified: "2026-09-15T00:00:00.000Z",
-  last_updated: "September 15, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "advance beneficiary notice processing",

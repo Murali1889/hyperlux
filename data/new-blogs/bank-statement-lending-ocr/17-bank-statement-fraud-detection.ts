@@ -63,14 +63,16 @@ export const blogBl17: BlogPost = {
 
     <p>Ask whether your fraud detection reads PDF metadata fields alone, Creator, Producer, timestamps, or also inspects the file's cross-reference table structure to count actual save generations, since the second catches exactly the tampering a forger who thought to scrub metadata fields would otherwise evade cleanly. Then ask whether your process maintains any reference set of expected Producer or Creator signatures for the specific institutions whose statements you process regularly, since a mismatch against a known-good signature is a stronger signal than checking for generic suspicious tool names alone. Check whether digital signature validation runs automatically wherever a statement carries one, since that layer, when present, outranks every heuristic check described above in reliability. Finally, be honest internally about what structural analysis cannot catch, a fully flattened, re-exported file or a forgery built from an edited source document before PDF creation, and pair it with the reconciliation-based checks, sum-of-transactions against stated balance, that catch a different class of fraud entirely, the same layered-detection principle covered from a duplication-versus-transfer angle in our <a href="/resources/blogs/multi-account-bank-statement-ocr">multi-account aggregation piece</a>, where two structurally different problems similarly needed two different, non-interchangeable fixes.</p>
     <p>Metadata inspection catches the fraud that never bothered to hide. Reconciliation catches the fraud that got the math wrong. Structural PDF analysis catches something else entirely, the edit history embedded in the file format itself, and it is exactly the layer most bank statement fraud detection content never reaches on the way to describing the two easier checks. None of these three layers is sufficient alone, and none of them is redundant with the others, which is the actual argument for running all three rather than treating whichever one is easiest to implement as good enough on its own. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guides: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a> and <a href="/resources/blogs/ocr-bank-statement-technology-revolutionizing-financial-data-processing">OCR for bank statements, checks and utility bills</a>.</p>
   `,
   image: "/images/revolutionizing-finance.png",
   featuredImage: "/images/revolutionizing-finance.png",
   category: "Lending",
   date: "August 21, 2026",
   datePublished: "2026-08-21T00:00:00.000Z",
-  dateModified: "2026-08-21T00:00:00.000Z",
-  last_updated: "August 21, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "bank statement fraud detection",

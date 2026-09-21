@@ -83,14 +83,16 @@ export const blogAp16: BlogPost = {
 
     <p>Ask the AP team itself, not just the numbers, what changed. Marcus's own answer, three months in, was not about the time saved in the abstract, it was that he stopped dreading the last hour of a Friday afternoon spent re-keying the same fields into the same system for the two-hundredth time that week. That answer does not show up in a cost-per-invoice spreadsheet, and it is arguably the more honest measure of whether the rollout actually improved the job, not just the metric.</p>
     <p>Names in this piece are changed at the team's request; the numbers and the day itself are real. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a>.</p>
   `,
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "Accounts Payable",
   date: "August 14, 2026",
   datePublished: "2026-08-14T00:00:00.000Z",
-  dateModified: "2026-08-14T00:00:00.000Z",
-  last_updated: "August 14, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "ap clerk workflow automation",

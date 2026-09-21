@@ -100,14 +100,16 @@ export const blog03: BlogPost = {
     <p>Imagine you have a giant pile of mail and you want to find every letter that mentions "electric bill". You could read each letter one by one. That would take all day.</p>
     <p>Or you could hire a fast typist. You hand her the pile. She types out every letter into a computer. Then you search the computer for "electric bill" and it pops right up.</p>
     <p>That typist is OCR. The pile of mail is your stack of PDFs. The computer search is Ctrl+F. The fast typist works for less than a penny per letter, makes some mistakes here and there, and works through 4 million letters a month without complaining. That is OCR at production scale.</p>
+
+    <p>Related guide: <a href="/resources/blogs/how-to-measure-ocr-accuracy">how to measure OCR accuracy</a>.</p>
   `,
   image: "/images/ocr-api.png",
   featuredImage: "/images/ocr-api.png",
   category: "OCR How-To",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-06-29T00:00:00.000Z",
-  last_updated: "June 29, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "ocr pdf",

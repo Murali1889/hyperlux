@@ -14,6 +14,10 @@ export default function HeroSection() {
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
               <span className="text-indigo-700">Intelligent</span> Document Automation for Smarter Lending
             </h1>
+            <p className="text-xl font-semibold text-slate-900 md:text-2xl max-w-[600px]">
+              DocsAPI reads your business and identity documents (bank statements, pay stubs, IDs, invoices, tax forms)
+              and gives you the data as clean, structured fields through one API.
+            </p>
             <p className="text-lg text-muted-foreground md:text-xl max-w-[600px]">
               Transform your lending workflows with AI-powered OCR software that delivers up to 99.9% accuracy in
               document classification, data capture, fraud detection, and cash flow analysis - 5x faster than manual

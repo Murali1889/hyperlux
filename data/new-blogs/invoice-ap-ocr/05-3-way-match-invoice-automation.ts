@@ -92,14 +92,16 @@ export const blogAp05: BlogPost = {
 
     <p>Pull last month's quantity and price mismatches, the two categories most likely to hide OCR errors, and hand-check 20 of them against source documents. If more than 1 in 5 turns out to be an extraction error rather than a real discrepancy, the fix is not more approval steps, it is better table extraction on multi-page POs and receipts. If most of them are real, the fix is unit-of-measure and vendor-master cleanup, not a new OCR vendor. Knowing which problem you actually have before you spend money on either is the entire point of this exercise.</p>
     <p>Sources: fraud-control context on matching as an internal control draws on the Association of Certified Fraud Examiners' <a href="https://legacy.acfe.com/report-to-the-nations/2024/" target="_blank" rel="noopener">Report to the Nations</a>, which puts the typical organization's fraud loss at roughly 5% of annual revenue. For the extraction-accuracy numbers cited above, see our full <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>. For the broader AP OCR buying process, see our <a href="/resources/blogs/accounts-payable-ocr">accounts payable OCR guide</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a>.</p>
   `,
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "Accounts Payable",
   date: "August 10, 2026",
   datePublished: "2026-08-10T00:00:00.000Z",
-  dateModified: "2026-08-10T00:00:00.000Z",
-  last_updated: "August 10, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "3-way match invoice automation",

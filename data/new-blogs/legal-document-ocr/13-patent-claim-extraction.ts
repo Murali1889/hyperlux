@@ -88,14 +88,16 @@ export const blogLd13: BlogPost = {
     <p>Getting claim scope right requires treating claims as a graph, not a list. Every claim needs to be parsed for its reference number if it has one, and dependent claims need their scope computed recursively: fetch the referenced claim's full resolved scope, not just its raw text, and append the current claim's own added limitations on top. Multiple dependent claims need to be expanded into their separate alternative branches rather than merged. The preamble, transitional phrase, and body need to stay tagged as distinct fields, not concatenated into one string, because downstream logic, does this claim's scope include unlisted elements, is this preamble limiting, needs to query them separately. Means-plus-function limitations need to be flagged using something like the same three-prong logic examiners apply, not a simple string match on the word "means," given Williamson's holding that the word alone is neither necessary nor sufficient. And OCR quality on the claims page specifically deserves extra scrutiny on digit tokens, since a single misread claim number silently redirects an entire downstream chain without producing any obviously malformed output a reviewer would catch by eye.</p>
 
     <p>None of this is exotic. It is the direct, mechanical consequence of what 37 CFR 1.75(c) already says a dependent claim legally means, and what MPEP 2111.03 and 2181 already say about transitional phrases and functional claiming. The rules are public and specific. The gap is that most document extraction built for legal or financial workflows is built for contracts, where clause boundaries matter but rarely form multi-level reference chains with this much legal consequence riding on getting the reference resolution right. Patents are unusual in the density of load-bearing cross-references packed into a few hundred words of claims text, closer in structure to the citation networks covered in our piece on <a href="/resources/blogs/legal-citation-checker">legal citation checking</a> than to an ordinary contract clause. The extraction discipline needed to get that right, correctly parsing structured legal text instead of treating it as prose, is the same discipline covered more broadly in our <a href="/resources/blogs/contract-ocr">contract OCR guide</a>, even though the specific reference rules a patent claim follows are its own, separately codified, body of law. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
   `,
   image: "/images/the-ultimate-guide-to-small-business.png",
   featuredImage: "/images/the-ultimate-guide-to-small-business.png",
   category: "Legal",
   date: "September 11, 2026",
   datePublished: "2026-09-11T00:00:00.000Z",
-  dateModified: "2026-09-11T00:00:00.000Z",
-  last_updated: "September 11, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "patent claim extraction",

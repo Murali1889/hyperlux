@@ -86,14 +86,16 @@ export const blogSd01: BlogPost = {
     <p>The common thread across all of it is that a document intelligence pipeline built for lending and trade finance cannot treat "extract the fields" and "understand what the document legally is" as the same step. A bill of lading's fields can be extracted perfectly, every name spelled correctly, every date parsed cleanly, and the classification can still be wrong in the one way that matters most: whether the paper in front of you is a routine delivery instruction or a negotiable instrument that determines who is legally entitled to claim goods anywhere in the world it happens to travel.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-shipping-and-logistics-documents">OCR for shipping and logistics documents</a>.</p>
   `,
   image: "/images/legal-document-automation.png",
   featuredImage: "/images/legal-document-automation.png",
   category: "Logistics",
   date: "August 30, 2026",
   datePublished: "2026-08-30T00:00:00.000Z",
-  dateModified: "2026-08-30T00:00:00.000Z",
-  last_updated: "August 30, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "bill of lading processing",

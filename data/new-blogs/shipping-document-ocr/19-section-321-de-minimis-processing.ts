@@ -74,14 +74,16 @@ export const blogSd19: BlogPost = {
     <p>Pulling this together, a document processing system built to handle high-volume, low-value e-commerce clearance correctly needs to do more than parse a value field. It needs consignee name and address normalization robust enough to resolve minor formatting variance, a same-day aggregation window keyed to the resolved identity rather than the raw text on any single shipment record, a check for shared order or contract references across shipments even when they arrive as separate documents, and awareness that entry type (informal versus formal) is itself part of the eligibility condition, not a downstream detail. None of that is exotic engineering. It is, however, meaningfully more than what a template built around "extract value, compare to $800" delivers, and that gap is exactly where the exemption was being exploited at scale before 2025, and exactly where the residual version of the rule, however it survives past 2027, will still need to be checked correctly.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-shipping-and-logistics-documents">OCR for shipping and logistics documents</a>.</p>
   `,
   image: "/images/ocr-in-finance.png",
   featuredImage: "/images/ocr-in-finance.png",
   category: "Logistics",
   date: "September 17, 2026",
   datePublished: "2026-09-17T00:00:00.000Z",
-  dateModified: "2026-09-17T00:00:00.000Z",
-  last_updated: "September 17, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "section 321 de minimis processing",

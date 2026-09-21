@@ -85,14 +85,16 @@ export const blogLd14: BlogPost = {
     <p>First, it needs to check grammatical binding, whether the operative confidentiality covenant subject is "each party," "both parties," or a single named Receiving Party, cross-referenced against the roles assigned in the recitals, to catch the mutual-titled-but-one-way-bound pattern described above. Second, it needs to check whether a residuals clause and an independent development carve-out apply to overlapping categories of information, both typically covering general approaches, techniques, and concepts rather than fixed documents, and flag that overlap as a combined-risk item rather than reporting each clause separately with no relationship between them. Third, for a residuals clause specifically, it needs to distinguish the narrow version, no intentional memorization, explicit carve-back for tangible confidential information, from the broad version that extends to competitive use without those limits, since those two versions produce meaningfully different legal exposure despite using overlapping vocabulary and often appearing under the identical clause heading.</p>
 
     <p>None of this argues for eliminating residuals clauses or independent development carve-outs from NDA review, both serve legitimate, well established purposes and neither is inherently a red flag on its own. It's a reason to treat "clause present, standard language" as an incomplete answer to the actual question a lending or fintech risk team is asking, which is whether the NDA in front of them will actually protect the specific information they're about to disclose if the counterparty relationship sours. Related coverage of how automated systems classify and extract contract clauses more broadly is available in our piece on <a href="/documents/legal-docs">document intelligence for legal documents</a>, and a deeper look at how automated tools handle another commonly-missed clause category, <a href="/resources/blogs/force-majeure-clause-extraction">force majeure and indemnification language</a>, is worth reading alongside this one, as is our piece on <a href="/resources/blogs/governing-law-clause-extraction">governing law clause extraction</a>, for anyone evaluating NDA extraction tooling against a broader confidentiality and risk-allocation clause set. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
   `,
   image: "/images/transforming-financial-services.png",
   featuredImage: "/images/transforming-financial-services.png",
   category: "Legal",
   date: "September 12, 2026",
   datePublished: "2026-09-12T00:00:00.000Z",
-  dateModified: "2026-09-12T00:00:00.000Z",
-  last_updated: "September 12, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "nda clause extraction",

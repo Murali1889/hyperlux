@@ -66,14 +66,16 @@ export const blogKa03: BlogPost = {
 
     <p>None of this requires exotic tooling, mostly just a genuine, consistent willingness to be precise about what a given document actually says versus what a reviewer assumes it silently implies.</p>
     <p>Every document in a KYB file answers a specific, narrow question, and the real verification failure mode is not missing a document, it is asking that document a question it was never built to answer. A certificate of good standing and a shared registered address are both genuinely useful signals, and both are also frequently over-trusted or over-flagged by pipelines that skip the distinction between what a document proves and what it merely accompanies. Getting that distinction right is less about collecting more documents and more about being precise regarding what each one actually establishes on its own. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a>.</p>
   `,
   image: "/images/intelligent-document-processing.png",
   featuredImage: "/images/intelligent-document-processing.png",
   category: "Compliance",
   date: "August 23, 2026",
   datePublished: "2026-08-23T00:00:00.000Z",
-  dateModified: "2026-08-23T00:00:00.000Z",
-  last_updated: "August 23, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "kyb verification",

@@ -82,14 +82,16 @@ export const blogLd09: BlogPost = {
     <h2>What to check in a governing law extraction pipeline before trusting its output</h2>
 
     <p>Ask first whether the vendor's output separates governing law and forum selection into two distinct fields, or returns one merged jurisdiction value, since a merged value cannot represent the large share of contracts that legitimately name different states for each. Ask second whether the extraction captures exclusivity language, exclusive versus non-exclusive jurisdiction, and forum non conveniens waivers, since these attributes change enforcement mechanics even when the state named is unchanged from one contract to the next. Ask third whether the system was validated against contracts where the two clauses appear in a single unpunctuated sentence, the Illinois example above being a realistic, common pattern, rather than only against contracts with clean separate headings for each provision, since the merged-sentence case is exactly where keyword extraction breaks down. And ask whether the pipeline flags a contract as silent on forum even when governing law is present, rather than assuming forum follows automatically, since under ordinary personal jurisdiction rules an absent forum clause means ordinary venue statutes control rather than the named governing law state automatically becoming the forum too. A pipeline that gets this distinction right on volume gives a lending or fintech legal team something a manual review process struggles to match at scale, structured, independently queryable jurisdiction and venue data across an entire portfolio, the kind of underlying document ingestion that any <a href="/resources/blogs/contract-ocr">contract OCR</a> layer needs to get right before clause classification can even begin. The same enforceability-versus-presence distinction applies to <a href="/resources/blogs/arbitration-clause-extraction">arbitration clause extraction</a>, where a delegation clause can send even a challenge to the contract's validity to an arbitrator rather than a court. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
   `,
   image: "/images/ocr-process.png",
   featuredImage: "/images/ocr-process.png",
   category: "Legal",
   date: "September 7, 2026",
   datePublished: "2026-09-07T00:00:00.000Z",
-  dateModified: "2026-09-07T00:00:00.000Z",
-  last_updated: "September 7, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "governing law clause extraction",

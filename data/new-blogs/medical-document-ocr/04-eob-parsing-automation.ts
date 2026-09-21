@@ -127,14 +127,16 @@ export const blogMd04: BlogPost = {
     <p>If you are reconciling EOBs against a provider's billed charges, whether for a revenue cycle team, a patient financing product, or a medical debt collections workflow, the practical takeaway is to stop treating EOB parsing as a smaller version of 835 parsing. It is a different problem with a different failure mode. The 835 problem is mostly about volume and EDI edge cases against a schema that does not move. The EOB problem is about generalizing across a payer population where the schema is invisible and changes on each payer's own timeline.</p>
     <p>Practically, that means building or buying extraction that is validated field-by-field against the reconciliation math shown above (allowed minus paid should equal patient responsibility, patient responsibility should decompose into its stated components, plan discount should equal billed minus allowed) rather than extraction that simply locates text near a label. It also means keeping the denial or adjustment reason as a first-class field even when it arrives as unstructured payer text, because that field is what routes a document into the right downstream workflow, whether that is an appeal, a write-off, or a straightforward payment posting. Teams handling adjacent healthcare documents in the same reconciliation pipeline, denial letters or coded claim data in particular, often find the same by-meaning extraction approach applies; see our posts on <a href="/resources/blogs/denial-code-extraction">denial code extraction</a> and <a href="/resources/blogs/medical-coding-automation">medical coding automation</a> for the adjacent pieces of that workflow.</p>
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
   `,
   image: "/images/passport-ocr.png",
   featuredImage: "/images/passport-ocr.png",
   category: "Healthcare",
   date: "September 2, 2026",
   datePublished: "2026-09-02T00:00:00.000Z",
-  dateModified: "2026-09-02T00:00:00.000Z",
-  last_updated: "September 2, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "eob parsing automation",

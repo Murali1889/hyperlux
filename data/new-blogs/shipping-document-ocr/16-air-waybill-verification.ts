@@ -94,14 +94,16 @@ export const blogSd16: BlogPost = {
     <p>Put together, these checks solve two distinct problems that look similar on the surface but have different failure modes. The first is transcription accuracy: an AWB number extracted from a scanned document, an EDI cargo message, or a manually keyed booking form either matches its own internal check digit or it does not, and for the overwhelming majority of possible single-digit errors, that mismatch is immediate and unambiguous, catching a bad number before it propagates into a tracking query, a customs entry, or a billing record built on the wrong shipment. The second is structural legitimacy: a check digit that validates tells you the serial number is internally consistent, nothing more, so confirming the prefix belongs to a real carrier, and confirming whether the number in hand is a MAWB or a HAWB before applying MAWB-specific expectations to it, are separate, necessary steps rather than something the modulo 7 math does automatically. Treating AWB verification as three stacked checks rather than one arithmetic test is the difference between a pipeline that catches most of what actually goes wrong with air waybill numbers, and one that catches only the errors the math happens to be good at catching.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-shipping-and-logistics-documents">OCR for shipping and logistics documents</a>.</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",
   category: "Logistics",
   date: "September 14, 2026",
   datePublished: "2026-09-14T00:00:00.000Z",
-  dateModified: "2026-09-14T00:00:00.000Z",
-  last_updated: "September 14, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "air waybill verification",

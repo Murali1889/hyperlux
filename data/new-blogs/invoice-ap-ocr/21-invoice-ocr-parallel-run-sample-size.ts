@@ -76,14 +76,16 @@ export const blogAp21: BlogPost = {
 
     <p>Calculate your actual monthly invoice volume, then work out how many calendar weeks it takes to accumulate a sample size appropriate to your risk tolerance (400+ for most practical go-live decisions, more if the cost of a wrong decision is high). Set your parallel-run length around that number, not a generic 30-day default borrowed from a different team's volume and risk profile. If your volume is low enough that reaching a meaningful sample would take months, accept a shorter screening-only period and lean more heavily on the production-monitoring phase to catch what the shorter test could not.</p>
     <p>The underlying lesson is the same one that shows up everywhere in AP automation: real numbers, actually checked against your own data, beat comfortable defaults borrowed from somewhere else. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a>.</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",
   category: "Accounts Payable",
   date: "August 15, 2026",
   datePublished: "2026-08-15T00:00:00.000Z",
-  dateModified: "2026-08-15T00:00:00.000Z",
-  last_updated: "August 15, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "invoice ocr implementation timeline",

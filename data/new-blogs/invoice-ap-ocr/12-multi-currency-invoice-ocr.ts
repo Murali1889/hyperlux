@@ -75,14 +75,16 @@ export const blogAp12: BlogPost = {
 
     <p>Finally, sample a handful of your VAT-bearing international invoices and confirm the VAT amount is stored as its own field rather than folded silently into the total, since that single modeling decision determines whether input-VAT recovery is even possible later without going back to the original documents one by one.</p>
     <p>None of this is exotic accounting theory, it is the standard treatment every controller already knows for foreign-currency transactions generally. The gap is that most invoice OCR discussions never connect extraction quality to it. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a>.</p>
   `,
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "Accounts Payable",
   date: "August 12, 2026",
   datePublished: "2026-08-12T00:00:00.000Z",
-  dateModified: "2026-08-12T00:00:00.000Z",
-  last_updated: "August 12, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "multi currency invoice ocr",

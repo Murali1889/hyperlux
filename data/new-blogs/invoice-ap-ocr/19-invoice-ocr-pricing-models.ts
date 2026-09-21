@@ -78,14 +78,16 @@ export const blogAp19: BlogPost = {
     <p>The math above is genuinely simple once you have the right inputs in hand. Most teams never actually get there, not because the math is hard, but because nobody tells them which specific inputs matter before they sign.</p>
 
     <p>Sources: AWS Textract pricing figures from <a href="https://aws.amazon.com/textract/pricing/" target="_blank" rel="noopener">Amazon Web Services' official Textract pricing page</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a>.</p>
   `,
   image: "/images/ocr-api.png",
   featuredImage: "/images/ocr-api.png",
   category: "Accounts Payable",
   date: "August 15, 2026",
   datePublished: "2026-08-15T00:00:00.000Z",
-  dateModified: "2026-08-15T00:00:00.000Z",
-  last_updated: "August 15, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "invoice ocr pricing comparison",

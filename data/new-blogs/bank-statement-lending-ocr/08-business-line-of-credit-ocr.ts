@@ -74,14 +74,16 @@ export const blogBl08: BlogPost = {
 
     <p>Ask whether your extraction actually pulls a full aging schedule with per-customer, per-invoice detail, or just a summary AR total that has nowhere to apply eligibility rules against. Then ask whether the 90-day aging exclusion, the concentration cap, and the affiliate exclusion are actually encoded as calculation steps applied to that detail, or whether the advance rate gets applied directly to a raw, unscreened figure. Confirm what happens automatically when a recalculated base falls below the outstanding balance, since an overadvance is a defined credit-agreement event that deserves an explicit, immediate workflow trigger, not something a reviewer needs to notice by comparing two numbers manually every reporting period. And ask whether certificate data actually gets stored and compared period over period to surface dilution trends, or whether each submission is validated and then effectively discarded, the same forward-looking discipline covered from the deposit-pattern angle in our <a href="/resources/blogs/personal-loan-document-ocr">loan stacking detection piece</a>, applied here to a business collateral trend instead of a consumer deposit pattern.</p>
     <p>A borrowing base certificate looks, at a glance, like a simple report to extract: some totals, an advance rate, a resulting number. The eligibility screening underneath those totals is where the real calculation lives, and it is exactly the layer most lending OCR content, focused on getting the raw numbers off the page accurately, never actually reaches. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a>.</p>
   `,
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "Lending",
   date: "August 18, 2026",
   datePublished: "2026-08-18T00:00:00.000Z",
-  dateModified: "2026-08-18T00:00:00.000Z",
-  last_updated: "August 18, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "business line of credit ocr",

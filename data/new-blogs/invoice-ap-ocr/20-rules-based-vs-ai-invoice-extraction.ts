@@ -73,14 +73,16 @@ export const blogAp20: BlogPost = {
 
     <p>If you are evaluating vendors, ask them directly whether their pipeline includes deterministic post-extraction validation or relies purely on model confidence scores. Many vendor sales conversations frame "AI-powered" as an unqualified positive without ever mentioning whether any certainty-based checks exist underneath the model, and the answer to that specific question tells you more about the pipeline's actual reliability than any accuracy percentage on a marketing page.</p>
     <p>The right architecture is not a debate between rules and AI, framed as a single winner-take-all choice. It is knowing which specific problem each one actually solves, and refusing to force the wrong tool onto the wrong field just because one approach happened to win the marketing narrative this year. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a>.</p>
   `,
   image: "/images/ocr-process.png",
   featuredImage: "/images/ocr-process.png",
   category: "Accounts Payable",
   date: "August 15, 2026",
   datePublished: "2026-08-15T00:00:00.000Z",
-  dateModified: "2026-08-15T00:00:00.000Z",
-  last_updated: "August 15, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "rules based vs ai invoice extraction",

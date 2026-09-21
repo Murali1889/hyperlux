@@ -95,14 +95,16 @@ CAS*PR*2*66.00~</code></pre>
     <p>The same discipline that makes 835 posting reliable also makes the resulting denial data usable for analysis that goes well beyond posting a single payment. Because every CAS segment carries a standardized CARC, aggregating 835 data across a provider's full payer mix turns what looks like routine remittance processing into a structured denial-reason dataset: which CARCs recur most, which payers apply PI reductions most often, which service lines get contractually adjusted at the highest rate. That is data an appeals team, a coding review process, or a prior authorization workflow can act on directly, and it exists only because the 835 was parsed against its actual segment structure rather than treated as a payment total to glance at and file away.</p>
     <p>Teams working through the rest of the claims lifecycle usually touch several adjacent pieces of this same data chain. Our posts on <a href="/resources/blogs/denial-code-extraction">denial code extraction</a> and <a href="/resources/blogs/eob-parsing-automation">EOB parsing automation</a> cover the patient-facing and denial-analysis sides of the same underlying claim data, and <a href="/resources/blogs/medical-coding-automation">medical coding automation</a> covers the coding decisions that determine what gets billed in the first place, upstream of everything a CLP or CAS segment later reports back.</p>
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
   `,
   image: "/images/ocr-bank-statement-technology.png",
   featuredImage: "/images/ocr-bank-statement-technology.png",
   category: "Healthcare",
   date: "September 12, 2026",
   datePublished: "2026-09-12T00:00:00.000Z",
-  dateModified: "2026-09-12T00:00:00.000Z",
-  last_updated: "September 12, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "835 remittance advice processing",

@@ -143,14 +143,16 @@ export const blogSd08: BlogPost = {
     <p>What makes this worth automating rather than leaving to a reviewer's eye is exactly what the HLXU example demonstrated: a one digit OCR error does not look wrong to a person skimming a scanned document, and it should not have to. The check digit exists so that a system does not need a human to notice a subtle glyph confusion. It needs ten multiplications, an addition, and a division, run every time, on every extracted container number, before that number gets trusted anywhere downstream.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-shipping-and-logistics-documents">OCR for shipping and logistics documents</a>.</p>
   `,
   image: "/images/passport-ocr.png",
   featuredImage: "/images/passport-ocr.png",
   category: "Logistics",
   date: "September 6, 2026",
   datePublished: "2026-09-06T00:00:00.000Z",
-  dateModified: "2026-09-06T00:00:00.000Z",
-  last_updated: "September 6, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "container number verification",

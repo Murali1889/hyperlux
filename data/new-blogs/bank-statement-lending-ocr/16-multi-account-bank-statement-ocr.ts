@@ -63,14 +63,16 @@ export const blogBl16: BlogPost = {
 
     <p>Finally, if any of the accounts being aggregated sit at different institutions, confirm the pipeline actually normalizes date formats, amount precision, and description conventions into a common structure before attempting any cross-account matching at all, rather than assuming the same matching logic that works cleanly within one bank's own consistent formatting will transfer directly to a mixed-institution submission without adjustment.</p>
     <p>A single merged report with every transaction counted exactly once sounds like one problem with one solution. It is actually two different mechanics, balance-continuity reconciliation for genuine duplicates and cross-account netting for genuine transfers, and conflating them produces a report that looks clean while quietly getting a meaningful share of applicants' aggregate numbers wrong in one direction or the other, in a way that a quick glance at the finished output will never reveal on its own. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guides: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a> and <a href="/resources/blogs/ocr-bank-statement-technology-revolutionizing-financial-data-processing">OCR for bank statements, checks and utility bills</a>.</p>
   `,
   image: "/images/ocr-bank-statement-technology.png",
   featuredImage: "/images/ocr-bank-statement-technology.png",
   category: "Lending",
   date: "August 21, 2026",
   datePublished: "2026-08-21T00:00:00.000Z",
-  dateModified: "2026-08-21T00:00:00.000Z",
-  last_updated: "August 21, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "multi account bank statement ocr",

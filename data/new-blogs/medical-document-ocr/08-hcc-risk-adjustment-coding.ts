@@ -98,14 +98,16 @@ export const blogMd08: BlogPost = {
     <p>Pull a sample of charts for members with progressive chronic conditions, CKD, heart failure, COPD, and check whether the coding output reflects the most recent, most severe staged diagnosis documented that year, or whether it is still coding off an earlier, less specific note that never got updated. Then check whether your extraction or coding tool can tell the difference between a diagnosis that was monitored, evaluated, assessed, or treated at a visit versus one that was simply copied forward on a problem list, since only the former satisfies risk adjustment documentation requirements. Neither check requires deep familiarity with the RAF formula itself. Both require confidence that the specific clinical language in a chart, not just the presence of a diagnosis code, is being read correctly and consistently.</p>
 
     <p>Sources: HCC category numbers, ICD-10-CM mappings, and V28 relative factor coefficients checked against CMS-HCC V28 model documentation and published relative factor tables. RADV rule and litigation details checked against CMS's February 2023 final rule announcement and reporting on Humana Inc. et al. v. Becerra et al. (N.D. Tex., ruling September 25, 2025; CMS appeal filed November 26, 2025). Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
   `,
   image: "/images/idp-vs-ocr.png",
   featuredImage: "/images/idp-vs-ocr.png",
   category: "Healthcare",
   date: "September 6, 2026",
   datePublished: "2026-09-06T00:00:00.000Z",
-  dateModified: "2026-09-06T00:00:00.000Z",
-  last_updated: "September 6, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "hcc risk adjustment coding",

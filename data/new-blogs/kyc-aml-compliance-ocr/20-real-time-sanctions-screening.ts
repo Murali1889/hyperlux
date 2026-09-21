@@ -65,14 +65,16 @@ export const blogKa20: BlogPost = {
     <p>"Real-time" is a genuinely accurate description of what a fast transaction query looks like, and it is also, separately, a genuinely accurate description of tight list-polling cadence. The problem is not that either claim is false when made on its own, it is that vendors and content routinely blend both into one phrase, leaving a buyer unable to tell which property, or whether both, is actually being promised, and the April 2026 worked example above shows exactly how much exposure sits inside that ambiguity.</p>
 
     <p>None of this argues against automated sanctions screening generally. A manual process cannot poll OFAC every five minutes any more reliably than a poorly architected automated one can, and both fail the same way under a genuinely fast-moving designation. It is a reason to demand the two numbers separately from any vendor or internal system claiming real-time capability, transaction latency and list-ingestion lag, rather than accepting one blended marketing term as evidence that both genuinely distinct problems have actually, independently, been solved. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a>.</p>
   `,
   image: "/images/ocr-api.png",
   featuredImage: "/images/ocr-api.png",
   category: "Compliance",
   date: "August 29, 2026",
   datePublished: "2026-08-29T00:00:00.000Z",
-  dateModified: "2026-08-29T00:00:00.000Z",
-  last_updated: "August 29, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "real-time sanctions screening",

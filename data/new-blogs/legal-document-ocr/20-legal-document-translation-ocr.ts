@@ -73,14 +73,16 @@ export const blogLd20: BlogPost = {
     <h2>Questions worth asking before trusting a cross-border extraction pipeline</h2>
 
     <p>Ask first whether the tool identifies and preserves the contract's own governing-language clause as a structured field, rather than silently normalizing everything to English and discarding the information about which version actually controls. Ask second whether translation output includes any per-clause confidence or discrepancy signal, or whether the entire document gets one undifferentiated "translated" label regardless of how faithfully any individual clause survived the process. Ask third whether the vendor uses back-translation or an equivalent independent verification step at all, and if so, whether it operates at the clause level or only spot-checks the document as a whole. Ask fourth whether defined terms are tracked for cross-document and cross-language consistency, since a term translated two different ways in the same contract is a strong leading indicator of exactly the kind of drift that turned a boilerplate forum clause into a jurisdictional fight in the Marine Pro Dock System dispute. A pipeline that gets these questions right on volume gives a lending or trade finance team something a one-off human translation review cannot easily match at scale, a structured, auditable record of where a cross-border contract's translated language can be trusted and where it cannot, built on top of the same accurate document ingestion any <a href="/resources/blogs/contract-ocr">contract OCR</a> layer needs before translation or clause analysis can begin. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
   `,
   image: "/images/ocr-api.png",
   featuredImage: "/images/ocr-api.png",
   category: "Legal",
   date: "September 18, 2026",
   datePublished: "2026-09-18T00:00:00.000Z",
-  dateModified: "2026-09-18T00:00:00.000Z",
-  last_updated: "September 18, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "legal document translation ocr",

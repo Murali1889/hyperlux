@@ -96,14 +96,16 @@ export const blogSd18: BlogPost = {
     <p>The broader lesson holds across every document type in this category: a document that looks complete on its face, correctly signed, correctly formatted, correctly filed, can still be functionally worthless if the condition that makes it valid, an entity-specific duration limit, a resident-agent requirement, a signer's actual corporate authority, was never checked against the rule that governs it. A power of attorney is not proof of authority just because it exists in a file. It is proof of authority only for as long as, and only under the conditions, that 19 CFR 141.31 through 141.37 actually specify, and checking those conditions is the entire point of treating this document as something that needs verification rather than mere storage.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-shipping-and-logistics-documents">OCR for shipping and logistics documents</a>.</p>
   `,
   image: "/images/ocr-bank-statement-technology.png",
   featuredImage: "/images/ocr-bank-statement-technology.png",
   category: "Logistics",
   date: "September 16, 2026",
   datePublished: "2026-09-16T00:00:00.000Z",
-  dateModified: "2026-09-16T00:00:00.000Z",
-  last_updated: "September 16, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "customs power of attorney processing",

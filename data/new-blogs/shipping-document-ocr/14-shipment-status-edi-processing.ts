@@ -161,14 +161,16 @@ export const blogSd14: BlogPost = {
     <p>The common failure across all of these is the same one: treating an EDI transaction as a single answer to a yes-or-no question when it is actually a structured, ordered record of everything that happened. A 214 with ten AT7 events is not noise to be collapsed into one status field, it is the entire audit trail of a shipment's life, and the exceptions that matter most to a lender or logistics operator are almost never the first event or the last one in isolation. They are the pattern in between.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-shipping-and-logistics-documents">OCR for shipping and logistics documents</a>.</p>
   `,
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "Logistics",
   date: "September 12, 2026",
   datePublished: "2026-09-12T00:00:00.000Z",
-  dateModified: "2026-09-12T00:00:00.000Z",
-  last_updated: "September 12, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "shipment status edi processing",

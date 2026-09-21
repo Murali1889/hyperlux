@@ -72,14 +72,16 @@ export const blogAp11: BlogPost = {
 
     <p>Also check how the accrual reversal is handled the following month. A common, quiet error: the prior month's accrual gets reversed on schedule, but the real invoice that eventually arrives gets coded to the current period as a fresh expense rather than matched against the reversal, effectively double-counting the cost across two periods. This is easy to catch with a simple reconciliation step (does every reversed accrual have a corresponding real invoice within the following month or two) and easy to miss without one, since neither number looks obviously wrong in isolation, only the trend across several months reveals the pattern.</p>
     <p>None of this requires new software to start. Write the methodology down, apply it consistently, and refine the lag figures every month. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a>.</p>
   `,
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "Accounts Payable",
   date: "August 12, 2026",
   datePublished: "2026-08-12T00:00:00.000Z",
-  dateModified: "2026-08-12T00:00:00.000Z",
-  last_updated: "August 12, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "month end ap close",

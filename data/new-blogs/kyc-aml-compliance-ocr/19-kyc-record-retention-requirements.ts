@@ -64,14 +64,16 @@ export const blogKa19: BlogPost = {
     <p>"Keep KYC records for five years" is not wrong, it is simply incomplete in a way that matters. Three structurally different record types share that same headline number while starting their clocks from three different events, and a compliance program that has never separated them has likely never actually tested whether its retention logic is correct, only whether it happens to be conservative enough that the gap has not yet been discovered during an examination.</p>
 
     <p>None of this argues against automating record retention. Manually tracking three separate clocks per customer across a real portfolio does not scale any better than a single, wrong, unified clock does, it just fails less visibly. It is a reason to confirm your retention system is built around record-type-specific triggers rather than one customer-level date, and to treat indefinite over-retention as a genuine data protection exposure rather than a conservative, risk-free default, before an examiner or a data protection regulator, not your own compliance team, is the first to notice which specific clock you never actually built. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a>.</p>
   `,
   image: "/images/legal-document-automation.png",
   featuredImage: "/images/legal-document-automation.png",
   category: "Compliance",
   date: "August 29, 2026",
   datePublished: "2026-08-29T00:00:00.000Z",
-  dateModified: "2026-08-29T00:00:00.000Z",
-  last_updated: "August 29, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "kyc record retention requirements",

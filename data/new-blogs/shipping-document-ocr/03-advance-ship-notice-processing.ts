@@ -102,14 +102,16 @@ export const blogSd03: BlogPost = {
     <p>The practical takeaway from both halves of this, the tree structure and the penalty math, is that ASN accuracy work has to happen before transmission, not after a chargeback arrives. That means validating the HL hierarchy against the specific trading partner's BSN05 requirement and implementation guide rather than a generic template, confirming every SN1 quantity at the item level equals what physically shipped rather than what was merely planned, matching every MAN segment's SSCC-18 value against the barcode actually printed on the carton label, and monitoring the EDI 997 and 824 acknowledgments to confirm the transaction was not just sent but accepted before the freight gates in. Given how connected this is to the physical arrival event itself, it is worth reading alongside our <a href="/resources/blogs/warehouse-receipt-processing">warehouse receipt processing guide</a> and our <a href="/resources/blogs/bill-of-lading-processing">bill of lading processing guide</a>, since all three documents describe overlapping pieces of the same shipment and are frequently reconciled against each other during a receiving dispute.</p>
 
     <p>None of this is really about EDI syntax for its own sake. A well-formed 856 is what lets a distribution center trust its own automated receiving process enough to skip a manual count, and a broken one is what forces that count back onto a person standing at a dock with a clipboard, at exactly the moment the vendor was trying to prove the shipment could be trusted without one. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-shipping-and-logistics-documents">OCR for shipping and logistics documents</a>.</p>
   `,
   image: "/images/ocr-api.png",
   featuredImage: "/images/ocr-api.png",
   category: "Logistics",
   date: "September 1, 2026",
   datePublished: "2026-09-01T00:00:00.000Z",
-  dateModified: "2026-09-01T00:00:00.000Z",
-  last_updated: "September 1, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "advance ship notice processing",

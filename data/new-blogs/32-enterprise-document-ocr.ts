@@ -8,7 +8,7 @@ export const blog32: BlogPost = {
   excerpt:
     "Enterprise document OCR is a different problem than SMB OCR. Volume, compliance, integration, and governance change everything. The honest guide to buying or building an enterprise document processor in 2026.",
   description:
-    "Enterprise document OCR in 2026: volume tiers, compliance requirements, integration patterns, build-vs-buy, and the governance layer SMB OCR skips. Buyer + build guide.",
+    "Enterprise document OCR in 2026: volume tiers, compliance needs, integration patterns and build vs buy, plus the governance layer SMB OCR skips.",
   metaTag: "Enterprise Document OCR: 2026 Buyer & Build Guide",
   content: `
     <p>The most expensive OCR mistake I have watched an enterprise make was picking a tool that hit 98% accuracy in the pilot and then discovering, nine months and $2M into deployment, that it had no way to prove to auditors which documents drove which decisions. Accuracy was never the problem. Governance was. Enterprise document OCR is a fundamentally different problem than the SMB version. Volume, compliance, integration surface, and audit governance change the entire evaluation. This is the honest guide to buying or building an enterprise document processor in 2026, from someone who has helped both Fortune 500s and scale-ups get this decision right and wrong.</p>

@@ -68,14 +68,16 @@ export const blogKa16: BlogPost = {
     <p>"Expiring next month counts as expired today" is a genuinely correct operational rule, grounded in how long a real verification process actually takes. It is not, on its own, useful if the date it is measured against was extracted under the wrong convention in the first place, since a confidently wrong date defeats a well-designed buffer just as thoroughly as having no buffer at all.</p>
 
     <p>None of this argues against automating expiry tracking. Manually checking every document's date by hand does not solve the format-ambiguity problem either, it just moves the same risk of misreading a date onto a human reviewer instead of a parser. It is a reason to confirm your pipeline prioritizes machine-readable expiry fields where they exist, applies a deterministic date-convention mapping where they do not, and tracks risk-tiered periodic obligations as a distinct trigger from document-level expiry, rather than assuming a buffer window alone is sufficient protection against a date that was never read correctly to begin with. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a>.</p>
   `,
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "Compliance",
   date: "August 28, 2026",
   datePublished: "2026-08-28T00:00:00.000Z",
-  dateModified: "2026-08-28T00:00:00.000Z",
-  last_updated: "August 28, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "kyc document expiry automation",

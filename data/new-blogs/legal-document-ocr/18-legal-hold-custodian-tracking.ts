@@ -87,14 +87,16 @@ export const blogLd18: BlogPost = {
 
     <h2>Building tracking that survives a motion</h2>
     <p>None of this requires exotic tooling. It requires treating IT-level preservation and custodian-level acknowledgment as two systems of record that get reconciled against each other on a schedule, not two boxes that both get checked once and then forgotten. The organizations that get hurt in spoliation disputes are rarely the ones with no process at all; they are usually the ones who had a real process for one layer and quietly assumed it covered the other. A useful discipline borrowed from the broader discovery world, and covered in more detail in our post on <a href="/resources/blogs/e-discovery-document-review">e-discovery document review</a>, is to treat every preservation claim as something that needs an independently verifiable source, the same standard chain-of-custody practices demand for physical and digital evidence more broadly, which we walk through in our piece on <a href="/resources/blogs/chain-of-custody-documentation">chain of custody documentation</a>. Applied to legal holds, that discipline means the acknowledgment log and the technical hold console should point back to the same custodian record, with the same identifiers, checked against each other on a recurring basis rather than living as separate artifacts that only get compared for the first time when a motion forces the question. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
   `,
   image: "/images/legal-document-automation.png",
   featuredImage: "/images/legal-document-automation.png",
   category: "Legal",
   date: "September 16, 2026",
   datePublished: "2026-09-16T00:00:00.000Z",
-  dateModified: "2026-09-16T00:00:00.000Z",
-  last_updated: "September 16, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "legal hold custodian tracking",

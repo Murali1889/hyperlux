@@ -8,7 +8,7 @@ export const blog23: BlogPost = {
   excerpt:
     "I have shipped three document fraud detection systems. The first cost us $200K to learn that 'AI fraud detection' is mostly five boring checks. Here are the five checks, in order.",
   description:
-    "Document fraud detection API, the five checks that catch 95% of fraud, the vendors worth using, and what to build versus buy in 2026.",
+    "Document fraud detection API, the five checks every fraud pipeline needs, the vendors worth using, and what to build versus buy in 2026.",
   metaTag: "Document Fraud Detection API, Builder's Guide",
   content: `
     <p>The first document fraud detection system I shipped cost us $200K and three months of engineering before I realized "AI fraud detection" is mostly five boring checks running in order. Vendors charge a premium for the AI label, but the underlying work is mostly deterministic. This guide is the version I wish I had when I started.</p>
@@ -19,8 +19,8 @@ export const blog23: BlogPost = {
     <p>The simple way to describe it: a security guard who looks at every document, knows what a real one looks like, and points to anything suspicious. The guard is fast (under 2 seconds), cheap (a few cents per document), and never gets tired.</p>
     <p>For the broader OCR foundation, our <a href="/resources/blogs/optical-character-reader-2026">optical character reader 2026 piece</a> is the easier starting point. Come back here when fraud detection is the specific need.</p>
 
-    <h2>The Five Checks That Catch 95% of Document Fraud</h2>
-    <p>Modern fraud is creative but predictable. Across the document streams I have audited, these five checks catch 95% of attempts. Run them in order.</p>
+    <h2>The Five Checks Every Document Fraud Pipeline Needs</h2>
+    <p>Modern fraud is creative but predictable. These five checks cover the most common tampering and reuse patterns. Run them in order.</p>
 
     <h3>1. Template Mismatch</h3>
     <p>Every issued document, passport, driver's license, national ID, has a standardized template per jurisdiction. Real documents match the template within tolerance. Fakes often use templates from the wrong year, wrong state, or wrong country. A template-matching pass catches obviously synthetic documents in milliseconds.</p>
@@ -76,7 +76,7 @@ export const blog23: BlogPost = {
 
     <h2>Where Vision-Language Models Fit (And Where They Don't)</h2>
     <p>VLMs like Claude 4.6 and GPT-5 vision can do document fraud detection in a pinch. They are surprisingly good at spotting obvious tampering and template mismatches. The catch: they are slow (3-15 seconds per document) and expensive (5-15× the cost of dedicated APIs).</p>
-    <p>Use VLMs for the trickiest 5% of cases that pass the five-check pipeline but still feel off. Use dedicated APIs for the routine 95%. Our <a href="/resources/blogs/vlm-vs-ocr">VLM vs OCR piece</a> covers the cost math in detail.</p>
+    <p>Use VLMs for the trickiest 5% of cases that pass the five-check pipeline but still feel off. Use dedicated APIs for the routine cases. Our <a href="/resources/blogs/vlm-vs-ocr">VLM vs OCR piece</a> covers the cost math in detail.</p>
 
     <h2>The Way I Explain Document Fraud Detection to Non-Engineers</h2>
     <p>Imagine the security guard at a bank entrance. He looks at every ID. He knows what real IDs from your state look like. He notices if the photo seems off, if the date of birth does not make sense for the person standing in front of him, if the card feels wrong. He cannot catch everything, a perfect fake gets through occasionally, but he stops 95% of obvious fraud at the door.</p>
@@ -86,14 +86,16 @@ export const blog23: BlogPost = {
     <p>If you are starting a KYC workflow from scratch: pick a vendor with the five checks and proven banking customers. Do not build your own.</p>
     <p>If you have an existing KYC system with weak fraud detection: add a fraud check API in front of your existing workflow. The five checks alone will catch most of what you are missing.</p>
     <p>If you are at a fintech with growing fraud loss: stop guessing which checks matter. Pull last quarter's actual fraud losses, categorize them by failure mode, and pick a vendor whose checks address your top three categories. (<a href="/author/nupura-ughade">I write about fraud architecture decisions often.</a>)</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a>.</p>
   `,
   image: "/images/passport-mrz-highlight.png",
   featuredImage: "/images/passport-mrz-highlight.png",
   category: "Compliance",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-06-18T00:00:00.000Z",
-  last_updated: "June 18, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "document fraud detection api",

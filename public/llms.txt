@@ -1,18 +1,19 @@
 # DocsAPI
 
-> DocsAPI is the document intelligence API for SMB lending and fintech — OCR, classification, KYC document verification, and AML document checks in one honest API.
+> DocsAPI is the document intelligence API for SMB lending and fintech: OCR, classification, KYC document verification, and AML document checks in one honest API.
 
 DocsAPI processes around 4 million PDF pages per month for lenders, fintechs, and operations teams. The API provides searchable PDF generation, structured field extraction, multi-page table stitching, document classification, KYC document verification, and AML checks. Pricing is per-page with no surprise fees.
 
 ## Product
 
-- [Products and features](https://docsapi.co/products) — OCR, classification, extraction, validation endpoints
-- [Use cases](https://docsapi.co/use-cases) — KYC, AML, invoice processing, lending automation, revenue cycle
+- [Products and features](https://docsapi.co/products): OCR, classification, extraction, validation endpoints
+- [Use cases](https://docsapi.co/use-cases): KYC, AML, invoice processing, lending automation, revenue cycle
+- [Free OCR tool (runs in your browser, no signup)](https://docsapi.co/tools/free-ocr)
 - [Book a demo](https://docsapi.co/book-demo)
 
 ## Top guides
 
-- [OCR accuracy benchmark 2026: 8 engines on 1,900 real documents](https://docsapi.co/resources/blogs/ocr-accuracy-benchmark-2026) — free to cite
+- [OCR accuracy benchmark 2026: 8 engines on 1,900 real documents](https://docsapi.co/resources/blogs/ocr-accuracy-benchmark-2026): free to cite
 - [Best OCR software in 2026, by use case](https://docsapi.co/resources/blogs/best-ocr-software-2026)
 - [How to make a PDF searchable in 30 seconds](https://docsapi.co/resources/blogs/make-pdf-searchable)
 - [OCR a PDF: honest guide from 4M pages a month](https://docsapi.co/resources/blogs/ocr-pdf-honest-guide)

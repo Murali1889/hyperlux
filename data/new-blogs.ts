@@ -33,6 +33,7 @@ import { blog31 } from "./new-blogs/31-best-ocr-software-accounts-payable"
 import { blog32 } from "./new-blogs/32-enterprise-document-ocr"
 import { blog33 } from "./new-blogs/33-contract-ocr"
 import { blog34 } from "./new-blogs/34-ocr-accuracy-benchmark-2026"
+import { keywordPages } from "./new-blogs/keyword-pages"
 import { blog35 } from "./new-blogs/35-best-ocr-software-2026"
 
 // Invoice/AP-OCR cluster (topic 1 of 3, 21 posts) — see
@@ -180,6 +181,7 @@ import { blogMd20 } from "./new-blogs/medical-document-ocr/20-insurance-card-ocr
 import { blogMd21 } from "./new-blogs/medical-document-ocr/21-denial-code-extraction"
 
 export const newBlogs: BlogPost[] = [
+  ...keywordPages,
   blog01,
   blog02,
   blog03,

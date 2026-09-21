@@ -1,0 +1,15 @@
+import type { BlogPost } from "@/types/resources"
+import { post as p0 } from "./how-to-measure-ocr-accuracy"
+import { post as p1 } from "./ocr-bank-statement-technology-revolutionizing-financial-data-processing"
+import { post as p2 } from "./ocr-for-kyc-verification"
+import { post as p3 } from "./ocr-for-legal-documents"
+import { post as p4 } from "./ocr-for-lending-and-underwriting"
+import { post as p5 } from "./ocr-for-medical-documents"
+import { post as p6 } from "./ocr-for-passports-id-cards-and-drivers-licenses"
+import { post as p7 } from "./ocr-for-shipping-and-logistics-documents"
+import { post as p8 } from "./ocr-for-tax-documents"
+import { post as p9 } from "./ocr-integration-with-accounting-crm-erp"
+import { post as p10 } from "./smarter-invoice-processing-the-ocr-advantage-for-finance-departments"
+import { post as p11 } from "./understanding-ocr-accuracy-metrics-challenges-and-improvement-strategies"
+
+export const keywordPages: BlogPost[] = [p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11]

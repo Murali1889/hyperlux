@@ -80,14 +80,16 @@ export const blogAp07: BlogPost = {
     <p>The honest summary: no engine gets every row right on every real invoice, ours included, and any post claiming otherwise is not being straight with you. What separates a usable system is not perfection, it is a measured, disclosed accuracy number on the hard case, multi-page tables, plus confidence scores good enough to route the genuinely uncertain rows to a human before they cause a downstream problem.</p>
 
     <p>Sources: extraction accuracy figures from our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>, methodology described in that post. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guides: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a> and <a href="/resources/blogs/how-to-measure-ocr-accuracy">how to measure OCR accuracy</a>.</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",
   category: "Accounts Payable",
   date: "August 11, 2026",
   datePublished: "2026-08-11T00:00:00.000Z",
-  dateModified: "2026-08-11T00:00:00.000Z",
-  last_updated: "August 11, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "invoice line item ocr",

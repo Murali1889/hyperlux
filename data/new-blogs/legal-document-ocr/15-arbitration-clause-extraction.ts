@@ -64,14 +64,16 @@ export const blogLd15: BlogPost = {
     <h2>What to Ask When Evaluating an Extraction Tool</h2>
     <p>Most vendor pages describing arbitration clause detection stop at "identifies arbitration clauses in your contracts," without saying whether the tool distinguishes binding from non-binding language, captures class waiver scope, or flags delegation clauses at all. A few direct questions separate a tool built on an understanding of the actual doctrine from one wrapping a keyword search around a document viewer. Does the output separate arbitration clause validity from overall contract validity as distinct fields, reflecting that these are legally independent questions under the severability doctrine rather than one composite risk score? Does it capture the specific language distinguishing binding from non-binding arbitration, rather than inferring a binary from the presence of the word "arbitration" alone? Does it detect delegation clauses, typically evidenced by incorporation of AAA, JAMS, or similar institutional rules by reference, since that determines whether a future validity challenge stays in arbitration or moves to court? And does it flag class action waiver scope specifically, individual claims only versus a narrower carve-out, since a narrowly scoped waiver leaves more aggregate litigation exposure on the table than a broad one even though both would show up as "class waiver present: true" in a naive extraction?</p>
     <p>None of this requires a legal ops or credit team to have read Prima Paint, Buckeye Check Cashing, Concepcion, Epic Systems, and Rent-A-Center themselves. It requires asking a vendor whether their extraction schema was built with those cases' distinctions in mind, or whether it treats an arbitration clause the same way it treats a notice provision, present or absent, nothing more. The severability doctrine is not a technicality buried in a law school casebook, it is the reason a contract can be simultaneously headed for arbitration and headed for a fraud claim in the same underlying dispute, and a document intelligence pipeline that cannot represent that in its output is going to be wrong on exactly the contracts where getting it right mattered most. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
   `,
   image: "/images/idp-vs-ocr.png",
   featuredImage: "/images/idp-vs-ocr.png",
   category: "Legal",
   date: "September 13, 2026",
   datePublished: "2026-09-13T00:00:00.000Z",
-  dateModified: "2026-09-13T00:00:00.000Z",
-  last_updated: "September 13, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "arbitration clause extraction",

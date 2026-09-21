@@ -117,14 +117,16 @@ export const blogSd07: BlogPost = {
     <p>Ask specifically whether your current extraction or review process validates the UN number against the authoritative table and cross-checks it against the extracted proper shipping name on the same declaration, or whether it only confirms the UN number field is present and formatted correctly. Those are meaningfully different levels of verification, and only the first catches a transposition that lands on another valid entry. Then confirm whether hazard class and packing group are being validated as a set against what the UN number's table entry actually specifies, rather than accepted independently as long as each individually looks like a plausible value.</p>
 
     <p>None of the four core fields on a dangerous goods declaration are complicated to define. The difficulty is entirely in the fact that a wrong value in any of them tends to look exactly like a right one, and the consequence of missing that is not a reconciliation delay, it is paperwork that no longer describes what is actually in the shipment. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-shipping-and-logistics-documents">OCR for shipping and logistics documents</a>.</p>
   `,
   image: "/images/intelligent-document-processing.png",
   featuredImage: "/images/intelligent-document-processing.png",
   category: "Logistics",
   date: "September 5, 2026",
   datePublished: "2026-09-05T00:00:00.000Z",
-  dateModified: "2026-09-05T00:00:00.000Z",
-  last_updated: "September 5, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "dangerous goods declaration processing",

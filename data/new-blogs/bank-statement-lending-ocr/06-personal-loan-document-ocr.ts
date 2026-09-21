@@ -66,14 +66,16 @@ export const blogBl06: BlogPost = {
 
     <p>Ask whether your fraud detection, however good it is at catching altered documents, includes any deposit-pattern scan for recent loan proceeds landing in the applicant's account, or whether fraud detection stops at the document-tampering layer entirely. Then ask what happens to your DTI calculation when a flagged deposit cluster turns out to represent a genuine, recently originated obligation, whether that recalculation is a defined, automatic step or something that depends on a reviewer remembering to redo the math manually. Finally, confirm your review process actually checks for the outbound payoff-transaction pattern before treating a flagged deposit as additive stacking rather than legitimate consolidation, the same distinction that matters for the <a href="/resources/blogs/verification-of-assets-ocr">large-deposit sourcing rules</a> covered in our verification of assets guide, applied here to a lending-specific deposit pattern rather than a general asset check. Loan stacking does not require a single altered document to succeed, which is exactly why detecting it needs a check that lives outside document authenticity entirely.</p>
     <p>Document tampering detection and stacking detection are two different problems that happen to both live inside the same personal loan document pipeline. Sophisticated fraud detection on document authenticity says nothing about whether the applicant already has three other loans the credit bureau has not caught up to yet, and that gap is exactly where a well-built deposit-pattern scan on the bank statement earns its place. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a>.</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",
   category: "Lending",
   date: "August 17, 2026",
   datePublished: "2026-08-17T00:00:00.000Z",
-  dateModified: "2026-08-17T00:00:00.000Z",
-  last_updated: "August 17, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "personal loan document ocr",

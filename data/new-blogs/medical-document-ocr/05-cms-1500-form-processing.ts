@@ -96,14 +96,16 @@ export const blogMd05: BlogPost = {
     <p>That is a meaningfully different engineering problem than "run OCR and return the text." It is closer to building a domain-specific parser that happens to use OCR as its input layer, and it is why generic form-extraction tools plateau around getting most of the characters right while still producing claims that get denied for reasons that have nothing to do with character accuracy.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
   `,
   image: "/images/revolutionizing-finance.png",
   featuredImage: "/images/revolutionizing-finance.png",
   category: "Healthcare",
   date: "September 3, 2026",
   datePublished: "2026-09-03T00:00:00.000Z",
-  dateModified: "2026-09-03T00:00:00.000Z",
-  last_updated: "September 3, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "cms-1500 form processing",

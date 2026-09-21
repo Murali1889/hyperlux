@@ -54,13 +54,13 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
       heading.classList.add("scroll-mt-24", "font-bold", "text-slate-900");
       switch (heading.tagName) {
         case "H1":
-          heading.classList.add("text-[3rem]", "my-4", "mt-6");
+          heading.classList.add("text-[2rem]", "md:text-[3rem]", "my-4", "mt-6");
           break;
         case "H2":
-          heading.classList.add("text-[2rem]", "mb-2", "mt-4");
+          heading.classList.add("text-[1.5rem]", "md:text-[2rem]", "mb-2", "mt-4");
           break;
         case "H3":
-          heading.classList.add("text-[1.75rem]", "mb-2", "mt-4");
+          heading.classList.add("text-[1.25rem]", "md:text-[1.75rem]", "mb-2", "mt-4");
           break;
         case "H4":
           heading.classList.add("text-[1.5rem]", "mb-2", "mt-4");
@@ -84,6 +84,44 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
 
     doc.querySelectorAll("img").forEach((img) => {
       img.classList.add("rounded-lg", "shadow-md", "my-6", "w-full");
+    });
+
+    // Links must be visible as links (color alone is not enough), or readers never see the internal links
+    doc.querySelectorAll("a").forEach((link) => {
+      link.classList.add(
+        "text-indigo-700",
+        "underline",
+        "decoration-indigo-300",
+        "underline-offset-2",
+        "hover:text-indigo-900",
+        "hover:decoration-indigo-700",
+      );
+      const href = link.getAttribute("href") || "";
+      if (/^https?:\/\//.test(href)) link.setAttribute("rel", "noopener");
+    });
+
+    doc.querySelectorAll("pre").forEach((pre) => {
+      pre.classList.add(
+        "bg-slate-900",
+        "text-slate-100",
+        "rounded-lg",
+        "p-4",
+        "text-sm",
+        "leading-relaxed",
+        "overflow-x-auto",
+        "my-6",
+        "font-mono",
+      );
+    });
+
+    doc.querySelectorAll("pre code").forEach((code) => {
+      code.classList.add("bg-transparent", "text-inherit", "p-0");
+    });
+
+    doc.querySelectorAll("code").forEach((code) => {
+      if (!code.closest("pre")) {
+        code.classList.add("bg-slate-100", "text-slate-800", "rounded", "px-1.5", "py-0.5", "text-[0.9em]", "font-mono");
+      }
     });
 
     doc.querySelectorAll("blockquote").forEach((quote) => {
@@ -227,76 +265,46 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
           </Link>
         </div>
 
-        {/* Featured Image */}
-        <div className="mb-10 rounded-xl overflow-hidden shadow-lg">
-          <div className="relative aspect-[21/9] w-full">
-            <div className="absolute inset-0 p-8 bg-gradient-to-r from-indigo-600 to-indigo-900 flex items-center justify-center">
-              <div className="text-start text-white">
-                <h1 className="text-[3rem] font-bold mb-4">{blog.title}</h1>
-                <p className="text-base opacity-80">{blog.excerpt}</p>
-              </div>
-              <div className="absolute bottom-0 left-0 p-8">
-                <div className="flex items-center justify-center gap-4 text-white">
-                  <div className="flex items-center gap-2">
-                    <img
-                      src={blog.author?.avatar}
-                      alt={blog.author?.name}
-                      className="w-10 h-10 rounded-full"
-                    />
-                    <div className="text-sm">{blog.author?.name}</div>
-                  </div>
-                  <div className="text-sm">|</div>
-                  <div className="text-sm">{blog.date}</div>
-                  <div className="text-sm">|</div>
-                  <div className="text-sm">{blog.readTime}</div>
-                </div>
-              </div>
-              {blog.image ? (
-                <img
-                  src={blog.image}
-                  alt={blog.title}
-                  className="w-2/3 h-2/3 rounded-lg object-cover"
-                />
-              ) : (
-                <div className="relative w-full h-full">
-                  {/* Abstract document classification visualization */}
-                  <div className="absolute top-1/4 left-[15%] w-32 h-40 bg-white/10 rounded-lg transform rotate-6 backdrop-blur-sm border border-white/20"></div>
-                  <div className="absolute top-1/3 right-[14%] w-40 h-32 bg-white/10 rounded-lg transform -rotate-3 backdrop-blur-sm border border-white/20"></div>
-                  <div className="absolute bottom-1/4 left-[20%] w-36 h-28 bg-white/10 rounded-lg transform rotate-12 backdrop-blur-sm border border-white/20"></div>
-
-                  <svg
-                    className="absolute inset-0 w-full h-full"
-                    viewBox="0 0 1000 500"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M300,150 C400,100 600,100 700,150"
-                      stroke="rgba(255,255,255,0.3)"
-                      strokeWidth="2"
-                      fill="none"
-                    />
-                    <path
-                      d="M300,250 C400,200 600,200 700,250"
-                      stroke="rgba(255,255,255,0.3)"
-                      strokeWidth="2"
-                      fill="none"
-                    />
-                    <path
-                      d="M300,350 C400,300 600,300 700,350"
-                      stroke="rgba(255,255,255,0.3)"
-                      strokeWidth="2"
-                      fill="none"
-                    />
-                    <circle cx="300" cy="150" r="8" fill="rgba(255,255,255,0.5)" />
-                    <circle cx="700" cy="150" r="8" fill="rgba(255,255,255,0.5)" />
-                    <circle cx="300" cy="250" r="8" fill="rgba(255,255,255,0.5)" />
-                    <circle cx="700" cy="250" r="8" fill="rgba(255,255,255,0.5)" />
-                    <circle cx="300" cy="350" r="8" fill="rgba(255,255,255,0.5)" />
-                    <circle cx="700" cy="350" r="8" fill="rgba(255,255,255,0.5)" />
-                  </svg>
-                </div>
+        {/* Hero: responsive, title first, meta row, image only on wider screens */}
+        <div className="mb-8 md:mb-10 overflow-hidden rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-900 shadow-lg">
+          <div className="flex flex-col gap-6 p-5 sm:p-8 md:flex-row md:items-center md:p-10">
+            <div className="text-white md:flex-1">
+              <h1 className="mb-4 text-2xl font-bold leading-tight sm:text-3xl lg:text-[2.75rem]">
+                {blog.title}
+              </h1>
+              {!blog.summary && (
+                <p className="mb-6 max-w-2xl text-sm opacity-90 sm:text-base">
+                  {blog.excerpt}
+                </p>
               )}
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+                <div className="flex items-center gap-2">
+                  <img
+                    src={blog.author?.avatar}
+                    alt={blog.author?.name}
+                    className="h-10 w-10 rounded-full"
+                  />
+                  <div>{blog.author?.name}</div>
+                </div>
+                <div className="opacity-60">|</div>
+                <div>{blog.date}</div>
+                {blog.last_updated && blog.last_updated !== blog.date && (
+                  <>
+                    <div className="opacity-60">|</div>
+                    <div>Updated {blog.last_updated}</div>
+                  </>
+                )}
+                <div className="opacity-60">|</div>
+                <div>{blog.readTime}</div>
+              </div>
             </div>
+            {blog.image && (
+              <img
+                src={blog.image}
+                alt={blog.title}
+                className="hidden aspect-[16/10] w-full rounded-lg object-cover md:block md:w-[42%]"
+              />
+            )}
           </div>
         </div>
 
@@ -431,6 +439,16 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
 
           {/* Main Content */}
           <div className="prose prose-lg prose-indigo max-w-none">
+            {blog.summary && (
+              <div className="not-prose mb-8 rounded-xl border border-indigo-200 bg-indigo-50 p-5 sm:p-6">
+                <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-indigo-700">
+                  In short
+                </div>
+                <p className="text-lg font-medium leading-snug text-slate-900">
+                  {blog.summary}
+                </p>
+              </div>
+            )}
             <div
               dangerouslySetInnerHTML={{ __html: processedContent || blog.content }}
             />

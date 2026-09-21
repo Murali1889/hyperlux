@@ -151,14 +151,16 @@ export const blog18: BlogPost = {
     <p>If your documents involve multi-page tables (bank statements, financial reports): try DocsAPI. The table-stitching saves you from building manual fixes that break on every new document type.</p>
     <p>If you are starting fresh and don't have AWS lock-in: try both on a representative sample of your real documents. The winner depends on your specific mix. (<a href="/author/nupura-ughade">I write more about real-world evaluation here</a>.)</p>
     <p>If you would rather narrow the field first, our free <a href="/tools/which-ocr">OCR picker</a> asks six questions and tells you whether Textract, a purpose-built document API, or an open-source engine fits your documents best, using the per-category benchmark results.</p>
+
+    <p>Related guide: <a href="/resources/blogs/how-to-measure-ocr-accuracy">how to measure OCR accuracy</a>.</p>
   `,
   image: "/images/ocr-api.png",
   featuredImage: "/images/ocr-api.png",
   category: "Vendor Comparisons",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-08-01T00:00:00.000Z",
-  last_updated: "July 30, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "aws textract",

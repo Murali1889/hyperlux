@@ -68,14 +68,16 @@ export const blogKa17: BlogPost = {
     <p>Thin files and application velocity are genuinely useful signals, and every source covering synthetic identity fraud correctly names them. What most leave out is that these signals exist as a direct replacement for a mechanism that used to work, checking SSN validity structurally, and that replacement only makes sense once the actual reason the old check broke, and the specific mechanism fraudsters use to compress the credit-building timeline that thin-file detection is watching for, are both understood together rather than as separate, disconnected facts.</p>
 
     <p>None of this argues against automating synthetic identity detection. Manually reviewing every thin file and authorized-user addition does not scale and does not catch cross-institution correlation any more reliably than an automated system, arguably less so. It is a reason to confirm your pipeline has actually replaced SSN structural checking with the behavioral and relational signals that took over after 2011, rather than still weighting a check that quietly stopped meaning anything well over a decade ago. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a>.</p>
   `,
   image: "/images/passport-ocr-revolutionizing.png",
   featuredImage: "/images/passport-ocr-revolutionizing.png",
   category: "Compliance",
   date: "August 28, 2026",
   datePublished: "2026-08-28T00:00:00.000Z",
-  dateModified: "2026-08-28T00:00:00.000Z",
-  last_updated: "August 28, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "synthetic identity fraud detection",

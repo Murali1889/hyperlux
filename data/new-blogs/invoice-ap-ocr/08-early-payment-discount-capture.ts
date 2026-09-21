@@ -78,14 +78,16 @@ export const blogAp08: BlogPost = {
 
     <p>Also check whether your top vendors by spend actually offer discount terms at all. If they do not, and your spend is concentrated with vendors on straight net-30 or net-60 terms, discount capture will never move the needle much regardless of how fast your AP process becomes, and the higher-leverage conversation is asking your largest vendors to add an early payment option in the first place, something many will agree to since it improves their own cash flow too, particularly smaller vendors who value getting paid sooner more than the discount costs them.</p>
     <p>The math above holds regardless of company size. Run it on your own vendor terms before the next payment run. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a>.</p>
   `,
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "Accounts Payable",
   date: "August 11, 2026",
   datePublished: "2026-08-11T00:00:00.000Z",
-  dateModified: "2026-08-11T00:00:00.000Z",
-  last_updated: "August 11, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "early payment discount capture",

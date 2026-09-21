@@ -79,14 +79,16 @@ export const blogLd03: BlogPost = {
     <p>Litigation hold tracking sits next to, and often overlaps with, the broader problem of managing legal documents at volume, contracts, correspondence, discovery productions, and the custodian data sitting behind all of it. Organizations that already have structured pipelines for extracting and organizing legal documents tend to have an easier time scoping custodian lists accurately in the first place, because they already know where relevant data lives instead of guessing at the start of a hold. The connection is not incidental: a preservation program is only as good as the organization's underlying visibility into its own records, and that visibility is a data infrastructure problem before it is a legal process problem.</p>
     <p>This piece focuses on the legal standard: FRCP 37(e)'s two-gate test, and what the acknowledgment record needs to contain to survive a spoliation motion once one is filed. It does not resolve a separate, adjacent question, whether the technical preservation mechanism on a custodian's mailbox or shared drive was actually applied and stayed applied for the life of the hold. A fully acknowledged custodian roster can still sit on top of a live technical gap if nobody reconciles the two records against each other, which is the specific failure mode our companion piece on <a href="/resources/blogs/legal-hold-custodian-tracking">legal hold custodian tracking</a> walks through in detail, along with how e-discovery teams apply the same independently-verifiable-source discipline covered in our <a href="/resources/blogs/e-discovery-document-review">e-discovery document review</a> guide.</p>
     <p>None of this requires exotic technology. It requires treating custodian acknowledgment as a first-class, timestamped, tamper-evident record rather than a checkbox, and building enough visibility into custodian behavior after acknowledgment that a Plantronics-style gap gets caught by a compliance dashboard instead of a forensic examiner two years into litigation. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
   `,
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "Legal",
   date: "September 1, 2026",
   datePublished: "2026-09-01T00:00:00.000Z",
-  dateModified: "2026-09-01T00:00:00.000Z",
-  last_updated: "September 1, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "litigation hold software",

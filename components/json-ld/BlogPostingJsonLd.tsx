@@ -12,6 +12,7 @@ export function BlogPostingJsonLd({ blog }: { blog: BlogPost }) {
         "@id": `${url}#blogposting`,
         headline: blog.title,
         description: blog.description ?? blog.excerpt,
+        ...(blog.summary && { abstract: blog.summary }),
         image: absoluteUrl(blog.featuredImage || blog.image),
         datePublished: blog.datePublished ?? new Date(blog.date).toISOString(),
         dateModified: blog.dateModified ?? blog.datePublished ?? new Date(blog.date).toISOString(),

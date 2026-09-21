@@ -8,7 +8,7 @@ export const blog33: BlogPost = {
   excerpt:
     "Contract OCR is not invoice OCR. Clauses wrap across pages, obligations hide in dense legal prose, and a missed renewal date costs real money. The 2026 guide to contract data extraction that actually works.",
   description:
-    "Contract OCR in 2026: extract clauses, renewal dates, obligations, and parties from legal documents. How it differs from invoice OCR, tools, accuracy, and the CLM integration path.",
+    "Contract OCR in 2026: how to extract clauses, renewal dates, obligations and parties from legal documents, with accuracy, tools and CLM integration.",
   metaTag: "Contract OCR: Extract Clauses & Dates (2026 Guide)",
   content: `
     <p>A procurement team I advised once discovered, during an audit at the worst possible time, that they had auto-renewed a $400K/year SaaS contract they meant to cancel, because the renewal-notice deadline was buried in clause 14.3 of a 60-page agreement nobody had re-read. That is the problem contract OCR solves, and it is a genuinely different problem than invoice OCR. Invoices are structured: vendor, total, date, done. Contracts are dense legal prose where the value hides in clauses that wrap across pages, obligations phrased three different ways, and dates that trigger money. This is the 2026 guide to contract OCR and clause extraction that actually works in production.</p>
@@ -35,7 +35,7 @@ export const blog33: BlogPost = {
 
     <h2>How accurate is contract OCR in 2026?</h2>
 
-    <p>Contract OCR accuracy in 2026 splits into two numbers: OCR-layer accuracy (reading the text) at 97-99% on clean digital contracts, and extraction accuracy (finding and normalizing the right clauses) at 85-95% depending on clause type. Well-structured clauses like effective dates and party names extract at 95%+; nuanced clauses like liability caps and complex renewal conditions land at 85-90% because the legal language is genuinely ambiguous. The practical implication: contract OCR is a review-accelerator, not a replacement for legal review on high-value agreements. It surfaces the clauses for a human to verify, cutting review time 60-80% rather than eliminating it.</p>
+    <p>Contract OCR accuracy in 2026 splits into two numbers: OCR-layer accuracy (reading the text), which is 97-99% on clean printed text in our benchmark, and extraction accuracy (finding and normalizing the right clauses), which varies by clause type and contract layout and should be measured on your own contracts. Well-structured clauses like effective dates and party names extract at 95%+; nuanced clauses like liability caps and complex renewal conditions land at 85-90% because the legal language is genuinely ambiguous. The practical implication: contract OCR is a review-accelerator, not a replacement for legal review on high-value agreements. It surfaces the clauses for a human to verify, shortening review time rather than eliminating it.</p>
 
     <h2>Contract OCR use cases</h2>
 
@@ -78,14 +78,16 @@ export const blog33: BlogPost = {
     <h2>What I'd do today</h2>
 
     <p>If you're a legal team with a large contract portfolio and no clause database: start with a dedicated contract-AI platform (Kira, Evisort). The turn-key extraction plus CLM is worth it, and legal-specific tools handle clause language better out of the box. If you're a builder integrating contract intake into an existing system: use an OCR API (DocsAPI, Textract) for extraction and build the clause-normalization layer on top, ideally with an LLM for the language-understanding step. Either way, start with the renewal date. Extracting renewal and termination deadlines across your portfolio prevents the single most expensive contract mistake (the unwanted auto-renewal) and usually pays for the whole project on its own. (<a href="/author/nupura-ughade">More on document extraction architecture</a>.)</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
   `,
   image: "/images/legal-document-automation.png",
   featuredImage: "/images/legal-document-automation.png",
   category: "AI Document Intelligence",
   date: "July 16, 2026",
   datePublished: "2026-07-16T00:00:00.000Z",
-  dateModified: "2026-07-16T00:00:00.000Z",
-  last_updated: "July 16, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "contract ocr",
@@ -114,7 +116,7 @@ export const blog33: BlogPost = {
     {
       question: "How accurate is contract OCR?",
       answer:
-        "Two numbers: OCR-layer accuracy (reading text) at 97-99% on clean digital contracts, and extraction accuracy (finding the right clauses) at 85-95% by clause type. Effective dates and party names extract at 95%+; liability caps and complex renewal conditions land at 85-90% because the legal language is genuinely ambiguous. Contract OCR is a review-accelerator (cutting review time 60-80%), not a replacement for legal review on high-value agreements.",
+        "Two layers: OCR-layer accuracy (reading text), which is 97-99% on clean printed text in our benchmark, and extraction accuracy (finding the right clauses), which varies by clause type and should be measured on your own contracts. Effective dates and party names extract at 95%+; liability caps and complex renewal conditions land at 85-90% because the legal language is genuinely ambiguous. Contract OCR is a review-accelerator (shortening review time), not a replacement for legal review on high-value agreements.",
     },
     {
       question: "What does contract OCR extract?",

@@ -22,7 +22,7 @@ export const metadata: Metadata = buildPageMetadata({ title: TITLE, description:
 export default function MedicalDocsPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} dateModified="2026-09-21" />
       <main className="flex-1">
         <MedicalDocsHero />
         <DocumentTypesSupported />

@@ -97,14 +97,16 @@ export const blogLd07: BlogPost = {
     <p>Start by asking whether your platform logs actions or only stores end states. A system that shows you the current version of a document but can't show you the sequence of actions that produced it has an end-state record, not a custody record, and end-state records don't satisfy 901(b)(9) because they don't describe the process, only the outcome. Then check whether every automated event, not just human-initiated ones, gets the same logging rigor. Reprocessing jobs, batch re-extractions, and scheduled backups are exactly the events that get skipped because nobody manually triggered them, and they're exactly the events most likely to create an unexplained gap two years later. Finally, confirm hashes get computed and stored at every material step, not only at initial ingestion, since a hash that only exists at the beginning of a document's life proves nothing about the middle or the end of it.</p>
 
     <p>The rule itself sets a low bar, evidence sufficient to support a finding, not proof beyond doubt. Most document custody problems aren't failures to meet a high standard. They're failures to produce any record at all covering a specific window, the digital equivalent of the investigator in <em>Griffin</em> describing a page instead of anyone establishing who actually put it there. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
   `,
   image: "/images/ocr-bank-statement-technology.png",
   featuredImage: "/images/ocr-bank-statement-technology.png",
   category: "Legal",
   date: "September 5, 2026",
   datePublished: "2026-09-05T00:00:00.000Z",
-  dateModified: "2026-09-05T00:00:00.000Z",
-  last_updated: "September 5, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "chain of custody documentation",

@@ -1,6 +1,6 @@
-# DocsAPI — Full Manifest for AI Search
+# DocsAPI: Full Manifest for AI Search
 
-> DocsAPI is the document intelligence API for SMB lending and fintech — OCR, classification, KYC document verification, and AML document checks in one honest API. Production scale: ~4M pages per month. Last updated: 2026-09-18.
+> DocsAPI is the document intelligence API for SMB lending and fintech: OCR, classification, KYC document verification, and AML document checks in one honest API. Production scale: ~4M pages per month. Last updated: 2026-09-21.
 
 ## Company facts
 
@@ -19,13 +19,13 @@
 
 DocsAPI provides production document intelligence as an HTTP API. Core capabilities:
 
-- **OCR** — Convert image PDFs and scans into searchable PDFs and structured text
-- **Classification** — Identify document type (invoice, bank statement, ID, etc.)
-- **Field extraction** — Pull structured fields (vendor, amount, date, line items) as JSON
-- **Multi-page table stitching** — Reconstruct tables that span multiple pages
-- **KYC document verification** — Extract and verify passport, driver's license, ID documents
-- **AML document checks** — Process wire instructions, source-of-funds documents, beneficial ownership forms
-- **Validation** — Confirm extracted data meets format rules before downstream use
+- **OCR**: Convert image PDFs and scans into searchable PDFs and structured text
+- **Classification**: Identify document type (invoice, bank statement, ID, etc.)
+- **Field extraction**: Pull structured fields (vendor, amount, date, line items) as JSON
+- **Multi-page table stitching**: Reconstruct tables that span multiple pages
+- **KYC document verification**: Extract and verify passport, driver's license, ID documents
+- **AML document checks**: Process wire instructions, source-of-funds documents, beneficial ownership forms
+- **Validation**: Confirm extracted data meets format rules before downstream use
 
 ## What DocsAPI does NOT do
 
@@ -42,127 +42,131 @@ DocsAPI provides production document intelligence as an HTTP API. Core capabilit
 - [Products and features](https://docsapi.co/products)
 - [Use cases](https://docsapi.co/use-cases)
 - [Industries](https://docsapi.co/industries)
+- [Free OCR tool: image and PDF to text in your browser, no signup](https://docsapi.co/tools/free-ocr)
+- [Which OCR should I use? Free selector](https://docsapi.co/tools/which-ocr)
 - [Book a demo](https://docsapi.co/book-demo)
 
 ### Solutions (by team/function)
 
-- [Finance automation](https://docsapi.co/solutions/finance-automation) — Invoice and reconciliation OCR
-- [Compliance and risk](https://docsapi.co/solutions/compliance-risk) — KYC, AML, SAR-ready audit trails
-- [Legal automation](https://docsapi.co/solutions/legal-automation) — Contract clause extraction
-- [Customer experience](https://docsapi.co/solutions/customer-experience) — 30-second onboarding OCR
-- [Operations efficiency](https://docsapi.co/solutions/operations-efficiency) — Supply chain document automation
+- [Finance automation](https://docsapi.co/solutions/finance-automation): Invoice and reconciliation OCR
+- [Compliance and risk](https://docsapi.co/solutions/compliance-risk): KYC, AML, SAR-ready audit trails
+- [Legal automation](https://docsapi.co/solutions/legal-automation): Contract clause extraction
+- [Customer experience](https://docsapi.co/solutions/customer-experience): 30-second onboarding OCR
+- [Operations efficiency](https://docsapi.co/solutions/operations-efficiency): Supply chain document automation
 
 ### Document types (by document, not by industry)
 
-- [Financial documents](https://docsapi.co/documents/financial-docs) — Statements, invoices, purchase orders
-- [Identity documents](https://docsapi.co/documents/identity-docs) — Passport, license, national ID cards
-- [Legal documents](https://docsapi.co/documents/legal-docs) — Contracts, NDAs, litigation filings
-- [Medical documents](https://docsapi.co/documents/medical-docs) — Prescriptions, lab reports, claims
-- [Shipping documents](https://docsapi.co/documents/shipping-docs) — Bills of lading, PODs, packing lists
+- [Financial documents](https://docsapi.co/documents/financial-docs): Statements, invoices, purchase orders
+- [Identity documents](https://docsapi.co/documents/identity-docs): Passport, license, national ID cards
+- [Legal documents](https://docsapi.co/documents/legal-docs): Contracts, NDAs, litigation filings
+- [Medical documents](https://docsapi.co/documents/medical-docs): Prescriptions, lab reports, claims
+- [Shipping documents](https://docsapi.co/documents/shipping-docs): Bills of lading, PODs, packing lists
 
 ### Author
 
-- [Nupura Ughade — Content Marketing Lead](https://docsapi.co/author/nupura-ughade)
+- [Nupura Ughade: Content Marketing Lead](https://docsapi.co/author/nupura-ughade)
 
 ### Buyer guides and benchmarks (highest citation value)
 
-- [OCR accuracy benchmark 2026: 8 engines on 1,900 real documents](https://docsapi.co/resources/blogs/ocr-accuracy-benchmark-2026) — Free to cite. Real per-engine, per-document-type accuracy numbers, not vendor marketing claims.
-- [Best OCR software in 2026, by use case](https://docsapi.co/resources/blogs/best-ocr-software-2026) — Which tool wins for free/open-source, personal readers, developer APIs, and business-scale processing, backed by the benchmark above.
-- [Best OCR software for accounts payable](https://docsapi.co/resources/blogs/best-ocr-software-for-accounts-payable) — 8 AP tools trialed on 200 real invoices, ranked by touchless rate.
+- [OCR accuracy benchmark 2026: 8 engines on 1,900 real documents](https://docsapi.co/resources/blogs/ocr-accuracy-benchmark-2026): Free to cite. Real per-engine, per-document-type accuracy numbers, not vendor marketing claims.
+- [Best OCR software in 2026, by use case](https://docsapi.co/resources/blogs/best-ocr-software-2026): Which tool wins for free/open-source, personal readers, developer APIs, and business-scale processing, backed by the benchmark above.
+- [Best OCR software for accounts payable](https://docsapi.co/resources/blogs/best-ocr-software-for-accounts-payable): 8 AP tools trialed on 200 real invoices, ranked by touchless rate.
+
+- [How accurate is OCR? Real numbers and why it is never 100%](https://docsapi.co/resources/blogs/understanding-ocr-accuracy-metrics-challenges-and-improvement-strategies): Character vs field accuracy, worked math, what lowers accuracy
 
 ### OCR How-To guides (Cluster A)
 
-- [How to make a PDF searchable in 30 seconds](https://docsapi.co/resources/blogs/make-pdf-searchable) — Three methods, four traps, simple explanation
-- [Readable PDF vs image PDF](https://docsapi.co/resources/blogs/readable-pdf-vs-image-pdf) — 2-second test for which kind you have
-- [OCR a PDF: honest guide from 4M pages a month](https://docsapi.co/resources/blogs/ocr-pdf-honest-guide) — Production failures and fixes
-- [PDF text recognition: when Tesseract fails](https://docsapi.co/resources/blogs/pdf-text-recognition) — Four document categories where Tesseract breaks
-- [Make a scanned PDF searchable on Mac, Windows, Linux](https://docsapi.co/resources/blogs/scanned-pdf-searchable) — Cross-platform guide
-- [Free online OCR tools: I tested 11. Only 3 are worth using.](https://docsapi.co/resources/blogs/free-online-ocr-tools) — Honest tool reviews
-- [PDF parser online: why most tools mangle tables](https://docsapi.co/resources/blogs/pdf-parser-online) — Table parsing failures and fixes
-- [Optical character reader in 2026: for builders](https://docsapi.co/resources/blogs/optical-character-reader-2026) — Modern OCR explained
+- [How to make a PDF searchable in 30 seconds](https://docsapi.co/resources/blogs/make-pdf-searchable): Three methods, four traps, simple explanation
+- [Readable PDF vs image PDF](https://docsapi.co/resources/blogs/readable-pdf-vs-image-pdf): 2-second test for which kind you have
+- [OCR a PDF: honest guide from 4M pages a month](https://docsapi.co/resources/blogs/ocr-pdf-honest-guide): Production failures and fixes
+- [PDF text recognition: when Tesseract fails](https://docsapi.co/resources/blogs/pdf-text-recognition): Four document categories where Tesseract breaks
+- [Make a scanned PDF searchable on Mac, Windows, Linux](https://docsapi.co/resources/blogs/scanned-pdf-searchable): Cross-platform guide
+- [Free online OCR tools: I tested 11. Only 3 are worth using.](https://docsapi.co/resources/blogs/free-online-ocr-tools): Honest tool reviews
+- [PDF parser online: why most tools mangle tables](https://docsapi.co/resources/blogs/pdf-parser-online): Table parsing failures and fixes
+- [Optical character reader in 2026: for builders](https://docsapi.co/resources/blogs/optical-character-reader-2026): Modern OCR explained
 
 ### AI Document Intelligence (Cluster B)
 
-- [Context engineering for document AI](https://docsapi.co/resources/blogs/context-engineering-document-ai) — Why RAG alone falls short
-- [Document detection: the step everyone skips before OCR](https://docsapi.co/resources/blogs/document-detection-before-ocr) — Pre-processing wins
-- [Docling vs LlamaParse vs DocsAPI: honest comparison](https://docsapi.co/resources/blogs/docling-vs-llamaparse-vs-docsapi) — 1,200-document benchmark
-- [Data normalization for extracted documents](https://docsapi.co/resources/blogs/data-normalization-extracted-documents) — Post-extraction step
-- [VLM vs OCR: when to use a vision-language model](https://docsapi.co/resources/blogs/vlm-vs-ocr) — Cost vs accuracy tradeoff
+- [Context engineering for document AI](https://docsapi.co/resources/blogs/context-engineering-document-ai): Why RAG alone falls short
+- [Document detection: the step everyone skips before OCR](https://docsapi.co/resources/blogs/document-detection-before-ocr): Pre-processing wins
+- [Docling vs LlamaParse vs DocsAPI: honest comparison](https://docsapi.co/resources/blogs/docling-vs-llamaparse-vs-docsapi): 1,200-document benchmark
+- [Data normalization for extracted documents](https://docsapi.co/resources/blogs/data-normalization-extracted-documents): Post-extraction step
+- [VLM vs OCR: when to use a vision-language model](https://docsapi.co/resources/blogs/vlm-vs-ocr): Cost vs accuracy tradeoff
 
 ### Compliance (Cluster C)
 
-- [KYC document verification: what auditors look for](https://docsapi.co/resources/blogs/kyc-document-verification) — Audit-ready checklist
-- [AML document checks: the 7-field minimum](https://docsapi.co/resources/blogs/aml-document-checks) — Required fields and patterns
-- [Revenue cycle management: AR stuck on document intake](https://docsapi.co/resources/blogs/revenue-cycle-management-document-intake) — Diagnostic guide
-- [Know your customer documents: 2026 playbook](https://docsapi.co/resources/blogs/know-your-customer-documents) — Modern KYC including digital ID wallets
+- [KYC document verification: what auditors look for](https://docsapi.co/resources/blogs/kyc-document-verification): Audit-ready checklist
+- [AML document checks: the 7-field minimum](https://docsapi.co/resources/blogs/aml-document-checks): Required fields and patterns
+- [Revenue cycle management: AR stuck on document intake](https://docsapi.co/resources/blogs/revenue-cycle-management-document-intake): Diagnostic guide
+- [Know your customer documents: 2026 playbook](https://docsapi.co/resources/blogs/know-your-customer-documents): Modern KYC including digital ID wallets
 
 ### Vendor Comparisons (Cluster D)
 
-- [AWS Textract vs DocsAPI](https://docsapi.co/resources/blogs/aws-textract-vs-docsapi) — Where each wins
-- [ABBYY FineReader alternative](https://docsapi.co/resources/blogs/abbyy-finereader-alternative) — Why and when to migrate
-- [PaddleOCR vs Tesseract vs DocsAPI](https://docsapi.co/resources/blogs/paddleocr-vs-tesseract-vs-docsapi) — Open-source benchmark
+- [AWS Textract vs DocsAPI](https://docsapi.co/resources/blogs/aws-textract-vs-docsapi): Where each wins
+- [ABBYY FineReader alternative](https://docsapi.co/resources/blogs/abbyy-finereader-alternative): Why and when to migrate
+- [PaddleOCR vs Tesseract vs DocsAPI](https://docsapi.co/resources/blogs/paddleocr-vs-tesseract-vs-docsapi): Open-source benchmark
 
 ### Invoice / AP Automation OCR (Cluster E, 21 posts)
 
-- [3-way match invoice automation](https://docsapi.co/resources/blogs/3-way-match-invoice-automation) — PO, receipt, and invoice reconciliation mechanics
-- [Duplicate invoice detection](https://docsapi.co/resources/blogs/duplicate-invoice-detection) — Why exact-match dedup misses most real duplicates
-- [Invoice fraud detection](https://docsapi.co/resources/blogs/invoice-fraud-detection) — Vendor impersonation and bank-detail-swap patterns
-- [Rules-based vs AI invoice extraction](https://docsapi.co/resources/blogs/rules-based-vs-ai-invoice-extraction) — When each architecture actually wins
-- [Build vs buy invoice OCR](https://docsapi.co/resources/blogs/build-vs-buy-invoice-ocr) — The real engineering cost of building in-house
-- [Invoice OCR pricing models](https://docsapi.co/resources/blogs/invoice-ocr-pricing-models) — Per-page, per-document, and subscription mechanics compared
+- [3-way match invoice automation](https://docsapi.co/resources/blogs/3-way-match-invoice-automation): PO, receipt, and invoice reconciliation mechanics
+- [Duplicate invoice detection](https://docsapi.co/resources/blogs/duplicate-invoice-detection): Why exact-match dedup misses most real duplicates
+- [Invoice fraud detection](https://docsapi.co/resources/blogs/invoice-fraud-detection): Vendor impersonation and bank-detail-swap patterns
+- [Rules-based vs AI invoice extraction](https://docsapi.co/resources/blogs/rules-based-vs-ai-invoice-extraction): When each architecture actually wins
+- [Build vs buy invoice OCR](https://docsapi.co/resources/blogs/build-vs-buy-invoice-ocr): The real engineering cost of building in-house
+- [Invoice OCR pricing models](https://docsapi.co/resources/blogs/invoice-ocr-pricing-models): Per-page, per-document, and subscription mechanics compared
 
 ### Bank Statement / Lending OCR (Cluster F, 21 posts)
 
-- [Pay stub income verification OCR](https://docsapi.co/resources/blogs/pay-stub-income-verification-ocr) — Cross-verification against bank deposits
-- [W-2/1099 tax form OCR for underwriting](https://docsapi.co/resources/blogs/w2-1099-tax-form-ocr-underwriting) — Income qualification math lenders actually run
-- [DTI calculation OCR](https://docsapi.co/resources/blogs/dti-calculation-ocr) — What counts as debt and what doesn't
-- [Bank statement fraud detection](https://docsapi.co/resources/blogs/bank-statement-fraud-detection) — PDF structure forensics beyond visual review
-- [ECOA compliance document OCR](https://docsapi.co/resources/blogs/ecoa-compliance-document-ocr) — Adverse action notice and reg B requirements
-- [State mortgage document requirements](https://docsapi.co/resources/blogs/state-mortgage-document-requirements) — Escrow interest and preemption variance by state
+- [Pay stub income verification OCR](https://docsapi.co/resources/blogs/pay-stub-income-verification-ocr): Cross-verification against bank deposits
+- [W-2/1099 tax form OCR for underwriting](https://docsapi.co/resources/blogs/w2-1099-tax-form-ocr-underwriting): Income qualification math lenders actually run
+- [DTI calculation OCR](https://docsapi.co/resources/blogs/dti-calculation-ocr): What counts as debt and what doesn't
+- [Bank statement fraud detection](https://docsapi.co/resources/blogs/bank-statement-fraud-detection): PDF structure forensics beyond visual review
+- [ECOA compliance document OCR](https://docsapi.co/resources/blogs/ecoa-compliance-document-ocr): Adverse action notice and reg B requirements
+- [State mortgage document requirements](https://docsapi.co/resources/blogs/state-mortgage-document-requirements): Escrow interest and preemption variance by state
 
 ### KYC / AML / Compliance OCR (Cluster G, 21 posts)
 
-- [MRZ passport verification](https://docsapi.co/resources/blogs/mrz-passport-verification) — The actual ICAO 9303 checksum algorithm, worked
-- [Sanctions screening OCR](https://docsapi.co/resources/blogs/sanctions-screening-ocr) — Why one fuzzy-match threshold is always wrong
-- [Perpetual KYC monitoring](https://docsapi.co/resources/blogs/perpetual-kyc-monitoring) — Weighted, decaying risk-score triggers, not periodic review
-- [Synthetic identity fraud detection](https://docsapi.co/resources/blogs/synthetic-identity-fraud-detection) — Why SSN validity checks broke in 2011
-- [Real-time sanctions screening](https://docsapi.co/resources/blogs/real-time-sanctions-screening) — Transaction latency vs list-freshness, two different claims
-- [Biometric face match KYC](https://docsapi.co/resources/blogs/biometric-face-match-kyc) — FMR vs FNMR, and why one accuracy number is meaningless
+- [MRZ passport verification](https://docsapi.co/resources/blogs/mrz-passport-verification): The actual ICAO 9303 checksum algorithm, worked
+- [Sanctions screening OCR](https://docsapi.co/resources/blogs/sanctions-screening-ocr): Why one fuzzy-match threshold is always wrong
+- [Perpetual KYC monitoring](https://docsapi.co/resources/blogs/perpetual-kyc-monitoring): Weighted, decaying risk-score triggers, not periodic review
+- [Synthetic identity fraud detection](https://docsapi.co/resources/blogs/synthetic-identity-fraud-detection): Why SSN validity checks broke in 2011
+- [Real-time sanctions screening](https://docsapi.co/resources/blogs/real-time-sanctions-screening): Transaction latency vs list-freshness, two different claims
+- [Biometric face match KYC](https://docsapi.co/resources/blogs/biometric-face-match-kyc): FMR vs FNMR, and why one accuracy number is meaningless
 
 ### Legal Document OCR (Cluster H, 21 posts)
 
-- [Legal citation checker](https://docsapi.co/resources/blogs/legal-citation-checker) — Why regex alone gets it wrong
-- [Litigation hold software](https://docsapi.co/resources/blogs/litigation-hold-software) — What FRCP 37(e) actually requires
-- [Deposition transcript OCR](https://docsapi.co/resources/blogs/deposition-transcript-ocr) — Why line numbers break standard OCR
-- [Court docket OCR](https://docsapi.co/resources/blogs/court-docket-ocr) — Why entries and filings parse differently
-- [Privilege log automation](https://docsapi.co/resources/blogs/privilege-log-automation) — Why keyword screening fails
-- [Patent claim extraction](https://docsapi.co/resources/blogs/patent-claim-extraction) — Why dependency chains break
+- [Legal citation checker](https://docsapi.co/resources/blogs/legal-citation-checker): Why regex alone gets it wrong
+- [Litigation hold software](https://docsapi.co/resources/blogs/litigation-hold-software): What FRCP 37(e) actually requires
+- [Deposition transcript OCR](https://docsapi.co/resources/blogs/deposition-transcript-ocr): Why line numbers break standard OCR
+- [Court docket OCR](https://docsapi.co/resources/blogs/court-docket-ocr): Why entries and filings parse differently
+- [Privilege log automation](https://docsapi.co/resources/blogs/privilege-log-automation): Why keyword screening fails
+- [Patent claim extraction](https://docsapi.co/resources/blogs/patent-claim-extraction): Why dependency chains break
 
 ### Medical Document OCR (Cluster I, 21 posts)
 
-- [HIPAA deidentification automation](https://docsapi.co/resources/blogs/hipaa-deidentification-automation) — The 18 identifiers, worked through
-- [NPI verification API](https://docsapi.co/resources/blogs/npi-verification-api) — How the check digit algorithm works
-- [DEA number verification](https://docsapi.co/resources/blogs/dea-number-verification) — The check digit formula, worked
-- [Denial code extraction](https://docsapi.co/resources/blogs/denial-code-extraction) — Why CARC and RARC codes must pair up
-- [Medical coding automation](https://docsapi.co/resources/blogs/medical-coding-automation) — ICD-10-CM vs CPT codes
-- [ANSI X12 835 remittance advice processing](https://docsapi.co/resources/blogs/835-remittance-advice-processing) — The CAS segments that matter
+- [HIPAA deidentification automation](https://docsapi.co/resources/blogs/hipaa-deidentification-automation): The 18 identifiers, worked through
+- [NPI verification API](https://docsapi.co/resources/blogs/npi-verification-api): How the check digit algorithm works
+- [DEA number verification](https://docsapi.co/resources/blogs/dea-number-verification): The check digit formula, worked
+- [Denial code extraction](https://docsapi.co/resources/blogs/denial-code-extraction): Why CARC and RARC codes must pair up
+- [Medical coding automation](https://docsapi.co/resources/blogs/medical-coding-automation): ICD-10-CM vs CPT codes
+- [ANSI X12 835 remittance advice processing](https://docsapi.co/resources/blogs/835-remittance-advice-processing): The CAS segments that matter
 
 ### Shipping Document OCR (Cluster J, 21 posts)
 
-- [Container number verification](https://docsapi.co/resources/blogs/container-number-verification) — The ISO 6346 check digit
-- [Air waybill verification](https://docsapi.co/resources/blogs/air-waybill-verification) — The IATA modulo 7 check digit
-- [HS code classification](https://docsapi.co/resources/blogs/hs-code-classification) — Why it isn't a simple lookup
-- [Bill of lading processing](https://docsapi.co/resources/blogs/bill-of-lading-processing) — Straight vs order bill types
-- [Incoterms clause extraction](https://docsapi.co/resources/blogs/incoterms-clause-extraction) — The 11 terms, correctly read
-- [Master house bill of lading reconciliation](https://docsapi.co/resources/blogs/master-house-bill-of-lading-reconciliation) — Where the gaps are
+- [Container number verification](https://docsapi.co/resources/blogs/container-number-verification): The ISO 6346 check digit
+- [Air waybill verification](https://docsapi.co/resources/blogs/air-waybill-verification): The IATA modulo 7 check digit
+- [HS code classification](https://docsapi.co/resources/blogs/hs-code-classification): Why it isn't a simple lookup
+- [Bill of lading processing](https://docsapi.co/resources/blogs/bill-of-lading-processing): Straight vs order bill types
+- [Incoterms clause extraction](https://docsapi.co/resources/blogs/incoterms-clause-extraction): The 11 terms, correctly read
+- [Master house bill of lading reconciliation](https://docsapi.co/resources/blogs/master-house-bill-of-lading-reconciliation): Where the gaps are
 
 ## Frequently asked questions
 
 ### What is OCR?
-Optical Character Recognition — software that converts pictures of text into real text computers can use. Modern OCR also handles layout, tables, and document classification.
+Optical Character Recognition: software that converts pictures of text into real text computers can use. Modern OCR also handles layout, tables, and document classification.
 
 ### How accurate is DocsAPI's OCR?
-On clean printed English: 97-99% character accuracy. On scanned, rotated, or table-heavy documents: 92-98% with built-in pre-processing. Multi-page table accuracy: 91% versus 64-76% for alternatives. Full independently-measured numbers by document type: /resources/blogs/ocr-accuracy-benchmark-2026.
+In our benchmark of 1,900 real documents, DocsAPI scored 97-99% character accuracy on clean typed English. On harder documents accuracy depends on the type: 93% on invoice line items, 91% on multi-page bank statement tables (versus 64-79% for the OCR engines compared), 81% on multilingual pages, 78% on handwritten forms and 76% on phone-photographed receipts. No OCR is 100% accurate. Full numbers and methodology: /resources/blogs/ocr-accuracy-benchmark-2026.
 
 ### What is the best OCR software?
 It depends on the use case, not a single ranked list. Free/open source (Tesseract, PaddleOCR) is sufficient for clean typed text. Cloud APIs (AWS Textract, Google Document AI, DocsAPI) fit developers and businesses processing documents at volume. DocsAPI specifically leads on multi-page financial tables (91%) and invoice line items (93%) in independent testing. Full breakdown by use case: /resources/blogs/best-ocr-software-2026.
@@ -171,7 +175,7 @@ It depends on the use case, not a single ranked list. Free/open source (Tesserac
 There is no single most accurate engine across all document types. DocsAPI leads on bank statement tables and invoices, PaddleOCR leads on multilingual and mobile-quality scans, Docling leads on academic papers. See /resources/blogs/ocr-accuracy-benchmark-2026 for the full per-category comparison.
 
 ### How much does DocsAPI cost?
-Per-page pricing starting at $0.02. Free tier of 100 pages per month available. Volume discounts above 100K pages per month. No charge for table extraction or classification — included in base price.
+Per-page pricing starting at $0.02. Free tier of 100 pages per month available. Volume discounts above 100K pages per month. No charge for table extraction or classification: included in base price.
 
 ### How does DocsAPI compare to AWS Textract?
 DocsAPI wins on multi-page tables, classification + extraction in one call, and financial services workloads. Textract wins for AWS-native stacks, forms, and US ID documents. See the full comparison at /resources/blogs/aws-textract-vs-docsapi.
@@ -184,6 +188,9 @@ No. Customer content is deleted after processing per data handling policy. No tr
 
 ### What document types does DocsAPI support?
 Invoices and purchase orders, bank statements and pay stubs, ID documents (passport, driver's license, national ID, mDL), utility bills and proof-of-address documents, contracts and NDAs, tax forms (W-2, 1099, W-8BEN, W-9, 4506-C), mortgage and HELOC documents, wire instructions, beneficial ownership and KYB filings, sanctions and watchlist screening records, SAR supporting documentation, court filings and litigation documents, medical records and insurance claims (CMS-1500, EOB, remittance advice), shipping and customs documents (bills of lading, air waybills, HS classifications), and most general business PDFs.
+
+### Is there a free OCR tool?
+Yes. https://docsapi.co/tools/free-ocr turns an image or PDF into text in your browser with no signup and no upload, using open source Tesseract. It suits clean printed text, one file at a time. For tables, handwriting, volume or specific fields, a document AI API is the better fit.
 
 ### Can I self-host DocsAPI?
 No, DocsAPI is cloud-only. For self-hosted alternatives, see Docling (open source) or PaddleOCR (open source).

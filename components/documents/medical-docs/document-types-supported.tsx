@@ -9,21 +9,21 @@ export default function DocumentTypesSupported() {
       icon: <FileText className="h-10 w-10 text-indigo-700" />,
       description:
         "Extract medication names, dosages, patient details, and prescriber information from handwritten and printed prescriptions with 98% accuracy.",
-      href: "/documents/medical-docs/prescriptions",
+      href: "/resources/blogs/ndc-code-extraction",
     },
     {
       title: "Lab Reports",
       icon: <Flask className="h-10 w-10 text-indigo-700" />,
       description:
         "Capture test results, reference ranges, and critical values from complex lab reports. Supports all major lab formats and multi-page documents.",
-      href: "/documents/medical-docs/lab-reports",
+      href: "/resources/blogs/loinc-code-extraction",
     },
     {
       title: "Insurance Forms",
       icon: <FileCheck className="h-10 w-10 text-indigo-700" />,
       description:
         "Process claims, EOBs, and prior authorizations with automated field extraction. Reduce processing time by 75% and eliminate manual data entry.",
-      href: "/documents/medical-docs/insurance-forms",
+      href: "/resources/blogs/cms-1500-form-processing",
     },
   ]
 

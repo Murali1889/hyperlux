@@ -80,14 +80,16 @@ export const blogLd01: BlogPost = {
       <li>Ask the vendor directly whether alignment happens before or is combined with the diff step, and whether the tool distinguishes formatting changes from content changes. A vendor that can answer this specifically, rather than in feature-list language, is more likely to have actually solved the problem rather than wrapped a generic diff library around a document viewer.</li>
     </ul>
     <p>None of this requires the buyer to understand the O(ND) complexity bound or read Myers' original paper. It requires running four tests on your own documents before signing a contract for a tool that is, ironically, meant to make contract review more reliable. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
   `,
   image: "/images/idp-vs-ocr.png",
   featuredImage: "/images/idp-vs-ocr.png",
   category: "Legal",
   date: "August 30, 2026",
   datePublished: "2026-08-30T00:00:00.000Z",
-  dateModified: "2026-08-30T00:00:00.000Z",
-  last_updated: "August 30, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "contract redlining software",

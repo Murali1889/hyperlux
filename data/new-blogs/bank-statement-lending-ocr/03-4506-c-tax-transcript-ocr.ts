@@ -68,14 +68,16 @@ export const blogBl03: BlogPost = {
 
     <p>Ask which transcript type your process actually requests by default, and whether that choice matches the question you are trying to answer. A Return Transcript alone cannot tell you about post-filing amendments; only an Account Transcript or Record of Account can. Then ask whether your pipeline logs and checks the document count on every Wage and Income Transcript pulled, since a transcript sitting at or near the 85-document ceiling needs a supplemental step most pipelines silently skip. Finally, confirm your process has explicit handling for requests made in January and early February, before current-year wage and income data exists, so a genuinely empty transcript during that window gets treated as a timing artifact rather than a fraud flag on an applicant who has done nothing wrong.</p>
     <p>Automating the request side of a 4506-C is table stakes. What actually protects a lender from a fabricated income document is what happens after the transcript comes back, matching the right transcript type to the right question, catching a truncated document before trusting its total, and reconciling it line by line against what the applicant submitted. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guides: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a> and <a href="/resources/blogs/ocr-for-tax-documents">OCR for tax documents</a>.</p>
   `,
   image: "/images/transforming-financial-services.png",
   featuredImage: "/images/transforming-financial-services.png",
   category: "Lending",
   date: "August 16, 2026",
   datePublished: "2026-08-16T00:00:00.000Z",
-  dateModified: "2026-08-16T00:00:00.000Z",
-  last_updated: "August 16, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "4506-c tax transcript ocr",

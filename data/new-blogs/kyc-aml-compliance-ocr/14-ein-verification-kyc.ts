@@ -68,14 +68,16 @@ export const blogKa14: BlogPost = {
     <p>"Match or no match" is an accurate one-line summary of what EIN verification returns. It is not, on its own, an explanation of what is actually being compared, a derived four-character name control rather than a full legal name, or of what the response code genuinely distinguishes, an unissued number from a computation mismatch from incomplete records. That gap is exactly where a KYB pipeline's false-positive rate against entirely legitimate businesses gets decided.</p>
 
     <p>None of this argues against automating EIN verification. Manually walking IRS records for every onboarding business is not more accurate, just slower and considerably more expensive at real volume. It is a reason to confirm your pipeline derives name controls using the IRS's own rules rather than raw string comparison, and to reject the assumption that an EIN prefix still reveals a business's location, before a no-match response gets treated as fraud when it may simply be your own system computing the comparison incorrectly. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a>.</p>
   `,
   image: "/images/ocr-process.png",
   featuredImage: "/images/ocr-process.png",
   category: "Compliance",
   date: "August 27, 2026",
   datePublished: "2026-08-27T00:00:00.000Z",
-  dateModified: "2026-08-27T00:00:00.000Z",
-  last_updated: "August 27, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "ein verification kyc",

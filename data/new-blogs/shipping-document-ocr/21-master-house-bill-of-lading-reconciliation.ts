@@ -83,14 +83,16 @@ export const blogSd21: BlogPost = {
     <p>The pattern across all of it is the same one this post opened with. A master bill and a house bill covering the same cargo are not two versions of one truth that a pipeline can reconcile by comparing names field by field. They are two separate contracts describing one physical movement, built to diverge in specific, predictable ways, and a document intelligence system that cannot tell the difference between a normal divergence and an actual discrepancy will either generate false alarms on every consolidated shipment it touches or, worse, miss the one mismatch that actually determines whether a container gets released, and who ends up holding the liability when it doesn't.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-shipping-and-logistics-documents">OCR for shipping and logistics documents</a>.</p>
   `,
   image: "/images/passport-ocr-revolutionizing.png",
   featuredImage: "/images/passport-ocr-revolutionizing.png",
   category: "Logistics",
   date: "September 19, 2026",
   datePublished: "2026-09-19T00:00:00.000Z",
-  dateModified: "2026-09-19T00:00:00.000Z",
-  last_updated: "September 19, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "master house bill of lading reconciliation",

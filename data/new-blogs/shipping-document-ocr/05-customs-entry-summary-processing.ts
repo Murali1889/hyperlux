@@ -90,14 +90,16 @@ export const blogSd05: BlogPost = {
     <p>Entry summary accuracy is downstream of document extraction accuracy. If the system or team producing the Form 7501 draft is pulling entered value, HTS classification, and country of origin from source documents without a reconciliation step against the invoice and bill of lading, the entry summary is only as reliable as a single unchecked pass through the paperwork, and the statute treats an unchecked pass the same way it treats a careless one. Building the cross-check into the process, rather than treating it as an audit response after CBP flags something, is the difference between catching a $2,400 discrepancy internally and explaining it to CBP after the fact under a penalty framework that multiplies, rather than matches, the size of the original mistake. Related workflows worth understanding alongside this one include <a href="/resources/blogs/certificate-of-origin-verification">certificate of origin verification</a>, since origin documentation and entry summary country-of-origin fields have to agree, and <a href="/resources/blogs/packing-list-reconciliation">packing list reconciliation</a>, which feeds the quantity and weight figures that get checked against the bill of lading.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-shipping-and-logistics-documents">OCR for shipping and logistics documents</a>.</p>
   `,
   image: "/images/ocr-in-finance.png",
   featuredImage: "/images/ocr-in-finance.png",
   category: "Logistics",
   date: "September 3, 2026",
   datePublished: "2026-09-03T00:00:00.000Z",
-  dateModified: "2026-09-03T00:00:00.000Z",
-  last_updated: "September 3, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "customs entry summary processing",

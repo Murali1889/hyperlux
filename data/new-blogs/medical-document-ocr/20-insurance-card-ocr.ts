@@ -120,14 +120,16 @@ export const blogMd20: BlogPost = {
     </ul>
 
     <p>None of these are exotic edge cases. They are the direct, predictable consequence of asking a system to extract structured meaning from a document category that was never built to a shared structure in the first place. The fix isn't a smarter guess at what a card probably means. It's an extraction pipeline that treats every field's role as something to be verified against its actual function in the claims process, payer ID against a routing table, member ID and group number against expected format ranges for the identified payer, front against back, rather than trusting whatever the largest, cleanest text on the card happens to say. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
   `,
   image: "/images/the-ultimate-guide-to-small-business.png",
   featuredImage: "/images/the-ultimate-guide-to-small-business.png",
   category: "Healthcare",
   date: "September 18, 2026",
   datePublished: "2026-09-18T00:00:00.000Z",
-  dateModified: "2026-09-18T00:00:00.000Z",
-  last_updated: "September 18, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "insurance card ocr",

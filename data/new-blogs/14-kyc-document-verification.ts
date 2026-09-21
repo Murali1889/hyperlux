@@ -122,14 +122,16 @@ export const blog14: BlogPost = {
     <p>If you are building KYC from scratch: use a specialized vendor (Jumio, Onfido, DocsAPI). The regulatory expectations are specific enough that DIY usually misses something. The cost per verification ($1-3) is trivial compared to the cost of a failed audit.</p>
     <p>If you have an existing KYC process that "works": run a mock audit. Pick 20 customer files at random. Can you reconstruct every verification step? If not, fix the audit trail before the real auditor finds the gaps.</p>
     <p>If you are about to onboard a new market: research that country's specific KYC requirements. Document types, retention periods, and re-verification triggers vary significantly. (<a href="/author/nupura-ughade">I write about regulatory document patterns regularly</a>.)</p>
+
+    <p>Related guides: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a> and <a href="/resources/blogs/ocr-for-passports-id-cards-and-drivers-licenses">OCR for passports, ID cards and driver's licenses</a>.</p>
   `,
   image: "/images/passport-ocr-revolutionizing.png",
   featuredImage: "/images/passport-ocr-revolutionizing.png",
   category: "Compliance",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-07-04T00:00:00.000Z",
-  last_updated: "July 4, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "kyc",
@@ -163,7 +165,7 @@ export const blog14: BlogPost = {
     {
       question: "How accurate does KYC document verification need to be?",
       answer:
-        "For automated decisions, regulators generally expect 99%+ accuracy on field extraction and authenticity checks. Manual review is required for low-confidence cases. The exact thresholds vary by regulator.",
+        "Regulators do not set a numeric accuracy threshold for automated document checks. The US customer identification rule for banks (31 CFR 1020.220) requires procedures that let you form a reasonable belief that you know who the customer is, so measure error rates on your own documents and record why your thresholds are reasonable. Manual review is required for low-confidence cases. The exact thresholds vary by regulator.",
     },
     {
       question: "What is the difference between KYC and AML?",

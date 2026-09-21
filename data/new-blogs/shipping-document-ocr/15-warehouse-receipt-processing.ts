@@ -78,14 +78,16 @@ export const blogSd15: BlogPost = {
     <p>The underlying point carries across all of it. A document intelligence pipeline built for asset-backed lending cannot stop at reading what a warehouse receipt says the goods are. It has to determine what kind of legal instrument the receipt actually is, because that determination, not the quantity field, not the commodity description, is what decides whether the lender holds an enforceable claim to anything at all.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-shipping-and-logistics-documents">OCR for shipping and logistics documents</a>.</p>
   `,
   image: "/images/legal-document-automation.png",
   featuredImage: "/images/legal-document-automation.png",
   category: "Logistics",
   date: "September 13, 2026",
   datePublished: "2026-09-13T00:00:00.000Z",
-  dateModified: "2026-09-13T00:00:00.000Z",
-  last_updated: "September 13, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "warehouse receipt processing",

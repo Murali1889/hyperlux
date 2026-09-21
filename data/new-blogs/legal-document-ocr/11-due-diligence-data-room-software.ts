@@ -82,14 +82,16 @@ export const blogLd11: BlogPost = {
       <li>Ask whether the clause taxonomy is maintained and versioned, or fixed at whatever the product shipped with. Legal drafting conventions shift, and a taxonomy that cannot be updated will drift out of date the same way a manually maintained keyword list does.</li>
     </ul>
     <p>None of these checks require a deal team to understand the classification architecture in depth. They require running the vendor's tool against a handful of real, previously reviewed documents and checking whether the flags it produces match what a human reviewer already found, before trusting it on the thousands of documents nobody has time to open by hand. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
   `,
   image: "/images/legal-document-automation.png",
   featuredImage: "/images/legal-document-automation.png",
   category: "Legal",
   date: "September 9, 2026",
   datePublished: "2026-09-09T00:00:00.000Z",
-  dateModified: "2026-09-09T00:00:00.000Z",
-  last_updated: "September 9, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "due diligence data room software",

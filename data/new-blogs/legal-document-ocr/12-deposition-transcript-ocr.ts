@@ -76,14 +76,16 @@ export const blogLd12: BlogPost = {
     <p>Ask whether the pipeline validates the extracted line-number sequence against the 25-lines-per-page convention reporters actually use, flagging pages where the sequence skips or repeats rather than silently emitting whatever it detected. Ask whether Q&A and colloquy classification runs as an independent structural pass or gets inferred from generic paragraph breaks, since the second approach is exactly what collapses an objection into the preceding answer as shown in the worked example above. Ask whether page and line are tracked as linked structured fields, page resetting the line count, rather than a single running line count across the whole document. And ask for a sample extraction against a real deposition transcript with at least one colloquy interruption on a page, then manually check five citations against the printed original, because a demo run against a clean, uninterrupted Q&A page will not surface any of these failure modes at all.</p>
 
     <p>None of this argues that transcript extraction should stay manual. A litigation team manually retyping or hand-verifying every page:line citation across a multi-day deposition does not scale any better than manual contract review does, and is not obviously more accurate than a properly validated pipeline. It is a reason to be specific about what "OCR" means for a transcript before trusting its citations, and to test a vendor's claims against a messy real page rather than a clean one. For the broader mechanics of getting structured data out of legal filings more generally, our <a href="/resources/blogs/contract-ocr">contract OCR overview</a> covers the extraction layer this fits into, and our coverage of <a href="/documents/legal-docs">chain of custody documentation</a> touches the same underlying problem, that a document's evidentiary value depends on preserving structure exactly, not just extracting readable text. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
   `,
   image: "/images/revolutionizing-finance.png",
   featuredImage: "/images/revolutionizing-finance.png",
   category: "Legal",
   date: "September 10, 2026",
   datePublished: "2026-09-10T00:00:00.000Z",
-  dateModified: "2026-09-10T00:00:00.000Z",
-  last_updated: "September 10, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "deposition transcript ocr",

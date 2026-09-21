@@ -66,14 +66,16 @@ export const blogSd06: BlogPost = {
 
     <h2>The practical takeaway</h2>
     <p>A certificate of origin is a required, standardized claim. Rules of origin verification is the separate, underlying analysis, wholly obtained status, tariff shift, regional value content, de minimis, accumulation, that has to already be true and already be documented before that claim gets signed. Treating the certificate as proof rather than as a summary of proof is exactly the gap that turns into a customs verification request, a duty clawback, and, five years later, a records request the importer can't fully answer. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-shipping-and-logistics-documents">OCR for shipping and logistics documents</a>.</p>
   `,
   image: "/images/ocr-process.png",
   featuredImage: "/images/ocr-process.png",
   category: "Logistics",
   date: "September 4, 2026",
   datePublished: "2026-09-04T00:00:00.000Z",
-  dateModified: "2026-09-04T00:00:00.000Z",
-  last_updated: "September 4, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "certificate of origin verification",

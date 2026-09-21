@@ -65,14 +65,16 @@ export const blogBl11: BlogPost = {
 
     <p>None of these checks require better character recognition on the underlying documents. A waiver's text can extract with perfect accuracy and still be the wrong document type for its position in the payment sequence, the same distinction that matters for the credit-limit-versus-balance field-mapping problem covered in our <a href="/resources/blogs/heloc-document-ocr">HELOC document OCR piece</a>: a correct-looking figure pulled from the wrong field, or in this case, the wrong document type accepted at the wrong moment, produces an error extraction accuracy alone was never going to catch.</p>
     <p>Tracking that a lien waiver exists is the easy half of this problem. Whether it is the right type, collected at the right point relative to actual payment clearing, is the half that determines whether the document does what it is actually supposed to do, and it is exactly the distinction most draw automation content skips past on the way to describing how fast documents get processed. Speed is not the same protection as sequencing, and a fast pipeline that gets the sequencing wrong has simply arrived at the wrong outcome more quickly than a slow one would have. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a>.</p>
   `,
   image: "/images/ocr-in-finance.png",
   featuredImage: "/images/ocr-in-finance.png",
   category: "Lending",
   date: "August 19, 2026",
   datePublished: "2026-08-19T00:00:00.000Z",
-  dateModified: "2026-08-19T00:00:00.000Z",
-  last_updated: "August 19, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "hard money lender document ocr",

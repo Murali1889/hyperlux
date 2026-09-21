@@ -74,14 +74,16 @@ export const blogAp14: BlogPost = {
     <p>None of this means handwriting is unsolvable, and it does not mean the category should be ignored either. It means the honest number is worse than the marketing language suggests, and planning around the real number beats discovering the gap after go-live.</p>
 
     <p>Sources: accuracy figures from our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guides: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a> and <a href="/resources/blogs/how-to-measure-ocr-accuracy">how to measure OCR accuracy</a>.</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",
   category: "Accounts Payable",
   date: "August 13, 2026",
   datePublished: "2026-08-13T00:00:00.000Z",
-  dateModified: "2026-08-13T00:00:00.000Z",
-  last_updated: "August 13, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "handwritten invoice ocr",

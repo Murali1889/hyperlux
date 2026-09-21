@@ -126,14 +126,16 @@ export const blogLd06: BlogPost = {
     <h2>Where OCR and document intelligence fit into LEDES processing</h2>
 
     <p>Not every invoice a corporate legal department receives arrives as clean LEDES data. Smaller firms, solo practitioners, and firms using older practice management systems still send PDF invoices, sometimes scanned, sometimes generated straight from a word processor with no export capability at all. Getting that invoice into valid LEDES 1998B or XML means first extracting the same structured data the LEDES fields expect (timekeeper names, dates, hours, rates, narratives, and, if the firm coded it internally, task and activity codes) out of an unstructured document layout that varies firm to firm. That extraction step is document OCR and layout parsing, not billing logic, and it has to run before any of the validation described above is even possible. A document intelligence pipeline built for legal invoices has to combine layout-aware OCR to read the source document with a mapping layer that places extracted values into the correct LEDES fields and, where the source invoice never had UTBMS codes at all, a classification step that assigns them based on the narrative text. Getting that mapping right up front avoids exactly the kind of field-count and math mismatches described earlier, since a pipeline that extracts LINE_ITEM_NUMBER_OF_UNITS and LINE_ITEM_UNIT_COST directly from the source document, rather than having a person retype them, cannot introduce the rounding drift that causes so many LINE_ITEM_TOTAL mismatches in practice, the same line-item math validation problem covered from the vendor-invoice side in our <a href="/resources/blogs/invoice-line-item-ocr">invoice line item OCR</a> guide. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
   `,
   image: "/images/ocr-api.png",
   featuredImage: "/images/ocr-api.png",
   category: "Legal",
   date: "September 4, 2026",
   datePublished: "2026-09-04T00:00:00.000Z",
-  dateModified: "2026-09-04T00:00:00.000Z",
-  last_updated: "September 4, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "ledes billing format",

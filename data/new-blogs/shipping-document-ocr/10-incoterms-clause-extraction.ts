@@ -105,14 +105,16 @@ export const blogSd10: BlogPost = {
     <p>The upside of getting this right is proportionate to how much sits on top of one clause. An Incoterm extracted correctly, with its named place and its actual risk, cost, and insurance implications resolved, feeds a landed cost calculation that is right instead of approximately right, an insurance placement that actually covers the exposure window it is meant to cover, and a letter of credit presentation that matches across documents instead of triggering a discrepancy notice. An Incoterm extracted as a bare string, correct characters but no resolved meaning, is a label sitting on top of a decision nobody actually verified.</p>
 
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-shipping-and-logistics-documents">OCR for shipping and logistics documents</a>.</p>
   `,
   image: "/images/the-ultimate-guide-to-small-business.png",
   featuredImage: "/images/the-ultimate-guide-to-small-business.png",
   category: "Logistics",
   date: "September 8, 2026",
   datePublished: "2026-09-08T00:00:00.000Z",
-  dateModified: "2026-09-08T00:00:00.000Z",
-  last_updated: "September 8, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "incoterms clause extraction",

@@ -31,7 +31,7 @@ export const blogBl19: BlogPost = {
 
     <h2>Why this connects directly to bank-statement-derived features specifically</h2>
 
-    <p>This entire series has covered a set of genuinely technical, bank-statement-derived features that a modern cash-flow underwriting model might actually use: deposit volatility measured as a coefficient of variation, covered in our <a href="/resources/blogs/cash-flow-underwriting-ocr">cash flow underwriting piece</a>, cash-flow DTI built from a broader obligation picture than a credit-report DTI, and NSF and covered-overdraft frequency reconstructed from running balance rather than fee counts alone. Each of these is exactly the kind of feature the CFPB's guidance specifically flags as a concern, data the applicant did not directly provide on their application, gathered and computed from their bank statement, that can become a principal reason for denial. A generic, boilerplate reason code, "insufficient income" or "excessive obligations", does not specifically and accurately describe a denial actually driven by elevated deposit volatility or a high covered-overdraft frequency. The correct reason has to reflect what the production model genuinely weighted, described in language specific enough to be meaningful, not a generic category that happens to sound plausible.</p>
+    <p>This entire series has covered a set of genuinely technical, bank-statement-derived features that a modern cash-flow underwriting model might actually use: deposit volatility measured as a coefficient of variation, covered in our <a href="/resources/blogs/cash-flow-underwriting-ocr">cash flow underwriting piece</a>, cash-flow DTI built from a broader obligation picture than a credit-report DTI, and NSF and covered-overdraft frequency reconstructed from running balance rather than fee counts alone. Each of these is the kind of feature that adverse action reviews look at closely: data the applicant did not directly provide on their application, gathered and computed from their bank statement, that can become a principal reason for denial. A generic, boilerplate reason code, "insufficient income" or "excessive obligations", does not specifically and accurately describe a denial actually driven by elevated deposit volatility or a high covered-overdraft frequency. The correct reason has to reflect what the production model genuinely weighted, described in language specific enough to be meaningful, not a generic category that happens to sound plausible.</p>
 
     <table>
       <thead>
@@ -46,9 +46,9 @@ export const blogBl19: BlogPost = {
 
     <p>The right-hand column is not simply more detailed language layered onto the same legacy category. Each entry reflects a genuinely different, specific fact about the applicant's actual bank-statement data, exactly the kind of fact a legacy reason-code list, built before cash-flow underwriting existed as a methodology, was never designed to describe accurately in the first place.</p>
 
-    <h2>Recent regulatory attention makes this a live, current risk</h2>
+    <h2>The rule still applies even though the guidance changed</h2>
 
-    <p>CFPB guidance issued in 2026 reiterates and sharpens a position the agency has held since 2022 or 2023: lenders using complex algorithmic or machine learning underwriting models remain fully responsible for providing specific, accurate adverse action reasons, and an inability to explain a model's actual reasoning is not a defense, it is itself the compliance failure. A lender that cannot determine the true principal reasons behind its own model's decisions should not be using that model for adverse credit decisions at all, a standard that applies with equal force whether the explanation gap comes from genuine model opacity or from a surrogate-model shortcut that only appears to solve the explainability problem.</p>
+    <p>Lenders that use complex algorithmic or machine learning underwriting models remain responsible for giving specific, accurate adverse action reasons. Regulation B (12 CFR 1002.9) requires the specific principal reasons for a denial, and an inability to explain a model's reasoning is not an exception. The CFPB's 2022 circular on this point (Circular 2022-03) was withdrawn in May 2025, but the rule it interpreted has not changed, so the compliance risk did not go away with the circular. A lender that cannot determine the true principal reasons behind its own model's decisions should not be using that model for adverse credit decisions at all, a standard that applies whether the explanation gap comes from genuine model opacity or from a surrogate-model shortcut that only appears to solve the explainability problem.</p>
 
     <h2>How to actually monitor for this mismatch over time</h2>
 
@@ -66,14 +66,16 @@ export const blogBl19: BlogPost = {
 
     <p>Ask directly whether your adverse action reason codes are generated from the same model instance that made the actual credit decision, or from a separate, simplified surrogate model built specifically for explainability. If it is the second, ask how often, and by how much, the surrogate's stated reasons have actually been validated against the production model's real feature importance for individual denied applications, not just in aggregate. Then confirm your reason code language is specific enough to reflect genuinely technical, bank-statement-derived factors, deposit volatility, cash-flow DTI, covered-overdraft frequency, rather than defaulting to generic legacy categories that predate cash-flow underwriting entirely and were never built to describe what these newer models actually weigh. And confirm the monitoring described above actually runs on an ongoing schedule rather than as a one-time check performed only at initial model deployment, since production model behavior can drift meaningfully on new applicant populations over time, a related discipline covered from the training-data angle in our <a href="/resources/blogs/real-time-bank-statement-processing">point-in-time correctness piece</a>, where an unmonitored gap between what a model was built on and what it actually encounters in production similarly stayed invisible until someone went looking for it directly.</p>
     <p>The legal requirement, give applicants the real reason, is not new or complicated to state. What is genuinely easy to get wrong, quietly and at scale, is building a compliance pipeline that generates a plausible-sounding, well-formatted explanation from a model that was never actually the one making the decision, one that clears every internal review precisely because nobody thought to check it against the model that actually decided the case. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a>.</p>
   `,
   image: "/images/legal-document-automation.png",
   featuredImage: "/images/legal-document-automation.png",
   category: "Lending",
   date: "August 22, 2026",
   datePublished: "2026-08-22T00:00:00.000Z",
-  dateModified: "2026-08-22T00:00:00.000Z",
-  last_updated: "August 22, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "ecoa compliance document ocr",

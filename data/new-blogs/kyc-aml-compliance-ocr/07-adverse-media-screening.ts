@@ -66,14 +66,16 @@ export const blogKa07: BlogPost = {
     <p>A fraud-prevention expert wrongly flagged for fraud is a good, memorable illustration of the false-positive problem. It is not, on its own, an explanation of how a screening system actually tells that expert apart from an actual fraudster sharing the same name, and that gap, the real mechanics of semantic role labeling and coreference resolution working together rather than sentiment analysis alone, is exactly where a screening program's real precision gets decided.</p>
 
     <p>None of this is a reason to avoid automating adverse media screening in the first place, since the alternative, reviewing every raw name hit manually with no role classification at all, is not actually more accurate, just slower and considerably more expensive to run at any real volume. It is a reason to understand specifically what the automation in front of a review queue is and is not actually capable of resolving on its own, before assuming a low hit rate reflects genuine precision rather than a system quietly missing adverse roles buried a sentence or two past where the name itself first appears. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a>.</p>
   `,
   image: "/images/ocr-in-finance.png",
   featuredImage: "/images/ocr-in-finance.png",
   category: "Compliance",
   date: "August 25, 2026",
   datePublished: "2026-08-25T00:00:00.000Z",
-  dateModified: "2026-08-25T00:00:00.000Z",
-  last_updated: "August 25, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "adverse media screening",

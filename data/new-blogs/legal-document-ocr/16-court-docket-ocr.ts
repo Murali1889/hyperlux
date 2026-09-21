@@ -86,14 +86,16 @@ export const blogLd16: BlogPost = {
       <li>Does it check for judge-specific standing orders or local rules that override the default period, or does it only apply the generic rule?</li>
     </ul>
     <p>A tool that can answer these specifically, with examples, is doing the structural work this post describes. A tool that answers in terms of "AI-powered deadline tracking" without addressing any of the five points above is very likely computing deadlines the naive way, adding a fixed number of days to a date and hoping nothing lands on a weekend. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
   `,
   image: "/images/intelligent-document-processing.png",
   featuredImage: "/images/intelligent-document-processing.png",
   category: "Legal",
   date: "September 14, 2026",
   datePublished: "2026-09-14T00:00:00.000Z",
-  dateModified: "2026-09-14T00:00:00.000Z",
-  last_updated: "September 14, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "court docket ocr",

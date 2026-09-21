@@ -61,14 +61,16 @@ export const blogBl05: BlogPost = {
 
     <p>The document-intake side of this problem, classifying which of the dozen or so documents in an auto loan file is actually the title versus the application versus a proof-of-insurance page, is a separate but related check worth running alongside the policy questions above. Misclassifying a title as a generic supporting document, rather than routing it through title-specific extraction and the brand and lien logic above, quietly defeats every check described in this piece before any of them get a chance to run, the same intake-classification risk our <a href="/resources/blogs/mortgage-ocr">mortgage document OCR guide</a> covers for the mortgage-file equivalent of this problem.</p>
     <p>Reading a title document accurately is the well-solved part of auto loan processing. Whether that reading translates into a correctly perfected lien, a properly risk-adjusted loan, and a legally compliant disclosure depends on routing logic sitting one layer downstream of extraction, and that layer is where most of the real risk in this document type actually lives. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a>.</p>
   `,
   image: "/images/ocr-process.png",
   featuredImage: "/images/ocr-process.png",
   category: "Lending",
   date: "August 17, 2026",
   datePublished: "2026-08-17T00:00:00.000Z",
-  dateModified: "2026-08-17T00:00:00.000Z",
-  last_updated: "August 17, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "auto loan document ocr",

@@ -103,14 +103,16 @@ export const blogMd16: BlogPost = {
     <p>The distinction between minimum necessary and an authorization's own scope also matters when comparing ROI tooling to other redaction and disclosure controls in a health system, since they are governed by genuinely different rules; our <a href="/resources/blogs/hipaa-minimum-necessary-redaction">guide to minimum necessary redaction</a> covers the standard that applies to treatment, payment, and operations disclosures, which is a different legal test than the one governing an authorized ROI release. And because so much of ROI intake still arrives as an actual fax, the front-end document handling problem, turning a faxed form and its attached records into something a matching and scoping pipeline can actually read, is worth understanding on its own; our <a href="/resources/blogs/medical-fax-automation">medical fax automation guide</a> covers that layer in more depth.</p>
 
     <p>Release of information will likely stay fax and mail heavy for a long time yet, not because the technology to do better doesn't exist, but because the requester population is too fragmented and too legally varied for any single structured exchange standard to cover all of it. The leverage point isn't replacing the channel. It's making sure that whatever arrives through that channel gets validated, matched, and scoped correctly before anything goes back out, since that is where the actual compliance risk in ROI has always lived. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
   `,
   image: "/images/ocr-process.png",
   featuredImage: "/images/ocr-process.png",
   category: "Healthcare",
   date: "September 14, 2026",
   datePublished: "2026-09-14T00:00:00.000Z",
-  dateModified: "2026-09-14T00:00:00.000Z",
-  last_updated: "September 14, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "release of information processing",

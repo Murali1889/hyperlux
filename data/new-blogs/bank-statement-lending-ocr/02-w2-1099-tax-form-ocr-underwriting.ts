@@ -17,7 +17,7 @@ export const blogBl02: BlogPost = {
 
     <h2>Why tax form extraction is the easy half of this problem</h2>
 
-    <p>Getting the numbers off a W-2 or 1099 is a solved, standardized-layout problem. Both forms are IRS-registered under a fixed OMB control number, printed in the top right corner of every legitimate copy, 1545-0008 for Form W-2 and 1545-0116 for Form 1099-NEC. That number does not change year to year the way box positions occasionally shift with minor IRS revisions, which makes it a more reliable first-pass classifier than trying to match the visual layout of the form body. A classification step that reads the OMB number first, then falls back to layout and title matching only when the OMB field itself is unreadable, degrades more gracefully on a low-quality scan than layout matching alone, since a smudged or cropped form often still has a legible OMB number in the corner even when the rest of the page is compromised.</p>
+    <p>Getting the numbers off a W-2 or 1099 is a solved, standardized-layout problem. Both forms carry an OMB control number, printed in the top right corner of the IRS form. The number identifies the form, but the IRS assigns and renews it, so it can change between form years and you should not hard-code it: keep a table of the numbers printed on the form years you actually process. A classification step that reads the OMB number first, then falls back to layout and title matching when that field is unreadable, can degrade more gracefully on a low-quality scan than layout matching alone, since a smudged or cropped form may still have a legible number in the corner.</p>
 
     <p>Extraction accuracy at that stage is a genuinely solved problem for anyone building or buying a competent OCR pipeline. Qualification, what an underwriter is legally and practically required to do with the extracted numbers, is not solved by extraction accuracy at all. That is a separate calculation, governed by standard underwriting practice, that most tax form OCR content never touches because it lives downstream of the extraction step, in the underwriting logic layer, not the OCR layer.</p>
 
@@ -53,14 +53,16 @@ export const blogBl02: BlogPost = {
 
     <p>Ask specifically whether your extraction pipeline pulls Box 5 alongside Box 1 on every W-2, and whether anything downstream actually uses Box 5 when the two diverge meaningfully, or whether Box 1 is quietly the only figure that ever reaches the qualification calculation. Then ask whether 1099 and self-employment income run through a genuinely separate qualification path, net of expenses with defined add-back categories and two-year trend logic, or whether the pipeline extracts a headline number from the tax form and hands it to underwriting labeled the same way a W-2 wage figure would be. If the second is true for either question, the gap is not in your OCR accuracy. It is in the qualification logic sitting immediately downstream of it, and it is worth fixing before the accuracy of the extraction layer gets blamed for a wrong income figure that was never an extraction problem in the first place. Our <a href="/resources/blogs/mortgage-ocr">mortgage document OCR guide</a> covers where this fits in the broader income-document checklist a full mortgage file requires.</p>
     <p>Extraction accuracy gets most of the attention because it is the part that is easy to benchmark. Qualification logic is where a wrong number actually reaches a lending decision, and it deserves the same scrutiny extraction accuracy already gets. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guides: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a> and <a href="/resources/blogs/ocr-for-tax-documents">OCR for tax documents</a>.</p>
   `,
   image: "/images/ocr-in-finance.png",
   featuredImage: "/images/ocr-in-finance.png",
   category: "Lending",
   date: "August 16, 2026",
   datePublished: "2026-08-16T00:00:00.000Z",
-  dateModified: "2026-08-16T00:00:00.000Z",
-  last_updated: "August 16, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "w2 1099 ocr underwriting",
@@ -83,7 +85,7 @@ export const blogBl02: BlogPost = {
     {
       question: "What is the OMB control number and why does it matter for tax form OCR?",
       answer:
-        "It is the Office of Management and Budget's identifier for an approved IRS information collection, printed in the top right corner of the form: 1545-0008 for Form W-2, 1545-0116 for Form 1099-NEC. Classifying by this number first is more resilient on degraded scans than layout matching alone.",
+        "It is the Office of Management and Budget's identifier for an approved IRS information collection, printed in the top right corner of the form. It can change when the IRS renews a form, so keep a table of the numbers for the form years you process. Reading it first can make classification more resilient on degraded scans than layout matching alone.",
     },
     {
       question: "Should qualifying income use W-2 Box 1 or Box 5?",

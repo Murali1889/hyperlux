@@ -112,14 +112,16 @@ export const blogMd10: BlogPost = {
     <p>A practical implementation runs the checksum as the very first validation step immediately after OCR extraction pulls the DEA number field off a prescription, referral, or intake form, before that field ever gets written into a downstream system. A passing checksum lets the document proceed to the next validation layer, matching the registrant type letter against the prescriber's known credentials, confirming active registration status, and checking schedule authorization for the specific drug being prescribed. A failing checksum stops the document immediately and routes it to a human reviewer with the specific mismatch flagged, computed digit versus stated digit, rather than a vague "review this prescription" flag that gives the reviewer no starting point. That specificity is what separates a genuinely checkable control from a box-ticking compliance step, and it's the same design principle that shows up in verification workflows across other structured healthcare identifiers, including the <a href="/resources/blogs/npi-verification-api">NPI checksum</a> and the structured fields inside <a href="/resources/blogs/cms-1500-form-processing">CMS-1500 claim forms</a>.</p>
 
     <p>None of this replaces the DEA's own registrant lookup, and it shouldn't be sold as if it does. What it does is cheap, fast, and deterministic in a way that a registrant database call is not: it turns a plausible-looking nine-character string into either a mathematically consistent number worth checking further, or a number that's already, provably, wrong, before anyone has to pick up a phone or wait on an external API. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
+
+    <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
   `,
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "Healthcare",
   date: "September 8, 2026",
   datePublished: "2026-09-08T00:00:00.000Z",
-  dateModified: "2026-09-08T00:00:00.000Z",
-  last_updated: "September 8, 2026",
+  dateModified: "2026-09-21T00:00:00.000Z",
+  last_updated: "September 21, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "dea number verification",
