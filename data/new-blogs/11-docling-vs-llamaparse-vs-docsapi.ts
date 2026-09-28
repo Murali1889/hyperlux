@@ -6,225 +6,219 @@ export const blog11: BlogPost = {
   title: "Docling vs LlamaParse vs DocsAPI: 1,200-Doc Benchmark (2026)",
   slug: "docling-vs-llamaparse-vs-docsapi",
   excerpt:
-    "We benchmarked all three on 1,200 real documents over a weekend. Which won on tables, which on speed, which on developer experience, and which lost.",
+    "Docling is a free converter you run yourself; LlamaParse is a hosted parser billed in credits. Benchmark results on 1,200 documents, LlamaParse's real prices, and what Docling did with a 3-page bank statement we ran it on.",
   description:
-    "Benchmarked on 1,200 real docs: which of Docling, LlamaParse, or DocsAPI wins on tables, speed, accuracy, and developer experience in 2026. Founder write-up.",
+    "Docling vs LlamaParse in 2026: free self-hosted converter vs hosted parser. Benchmark results, LlamaParse credit prices, and our Docling bank statement test.",
   metaTag: "Docling vs LlamaParse vs DocsAPI: 1,200-Doc Test (2026)",
+  summary:
+    "Docling is a free, open-source converter you run on your own machines; LlamaParse is a hosted parser billed in credits, from $1.25 per 1,000 pages. Choose Docling for private, offline or technical documents, LlamaParse for LlamaIndex RAG pipelines and messy scans. For financial tables, also test a document API.",
   content: `
-    <p>We benchmarked Docling, LlamaParse, and DocsAPI on 1,200 real documents over a weekend in May. The results surprised me. Each tool wins on a specific axis. None of them is the universal answer, and most blog posts comparing them are wrong about which is best at what.</p>
-    <p>I am the founder of DocsAPI. I tried to be honest about where it lost. This guide is the writeup.</p>
+    <p>Short answer: Docling if your documents must stay on your own servers or you want no per-page fee, LlamaParse if you want a managed parser that plugs into LlamaIndex. Both turn documents into Markdown or JSON for AI pipelines. Below: our benchmark results, LlamaParse's actual prices, what Docling did with a 3-page bank statement we ran, and where Textract, Tesseract and Unstructured fit.</p>
 
-    <h2>Docling vs LlamaParse vs DocsAPI at a glance</h2>
-    <p>The short answer: Docling is the free self-hosted parser for academic and scientific PDFs, LlamaParse is the RAG-native hosted API tuned for Markdown output and messy consumer scans, and DocsAPI is the hosted API built for structured extraction from financial and business documents. None is the universal winner. The table below shows how they compare on the dimensions that decide the choice.</p>
+    <h2>Is Docling better than LlamaParse?</h2>
+    <p>Neither wins everywhere. In our 1,200-document benchmark Docling led on academic and technical PDFs (94% against 89%), while LlamaParse led on phone-scanned receipts (78% against 58%). Docling is free and runs offline; LlamaParse costs credits but needs no servers. So the docling vs llamaparse choice comes down to your documents and whether they may leave your network.</p>
+    <p>If you are building a retrieval-augmented generation (RAG) system, where an AI answers questions from your own documents, both produce the Markdown most pipelines want. If you need specific values, such as every transaction on a bank statement, read the test below first: reading the text was not the hard part.</p>
 
+    <h2>Docling vs LlamaParse at a glance</h2>
+    <p>The facts below come from each project's own pages, checked on September 28, 2026.</p>
     <table>
-      <thead><tr><th>Dimension</th><th>Docling</th><th>LlamaParse</th><th>DocsAPI</th></tr></thead>
+      <thead><tr><th>Dimension</th><th>Docling</th><th>LlamaParse</th></tr></thead>
       <tbody>
-        <tr><td>Type</td><td>Open-source library</td><td>Hosted API</td><td>Hosted API</td></tr>
-        <tr><td>License / cost</td><td>MIT, free (self-host)</td><td>Free tier, then pay-per-page</td><td>Free tier, then pay-per-page</td></tr>
-        <tr><td>Academic papers</td><td>94%</td><td>89%</td><td>87%</td></tr>
-        <tr><td>Bank statements (tables)</td><td>76%</td><td>71%</td><td>91%</td></tr>
-        <tr><td>Invoices</td><td>81%</td><td>87%</td><td>93%</td></tr>
-        <tr><td>Consumer scans / receipts</td><td>58%</td><td>78%</td><td>74%</td></tr>
-        <tr><td>Default output</td><td>Structured JSON</td><td>Markdown (RAG-ready)</td><td>Structured JSON (typed fields)</td></tr>
-        <tr><td>Setup</td><td>30 minutes</td><td>5 minutes</td><td>5 minutes</td></tr>
-        <tr><td>Best for</td><td>Scientific PDFs, self-host</td><td>RAG pipelines, consumer scans</td><td>Financial and business docs</td></tr>
+        <tr><td>What it is</td><td>Open-source document converter, started at IBM Research Zurich, now hosted by the LF AI and Data Foundation</td><td>Hosted parsing service from LlamaIndex, part of LlamaCloud</td></tr>
+        <tr><td>License and cost</td><td>MIT, free; you pay for the machines</td><td>Credits: $1.25 per 1,000 credits; free plan includes 10,000 credits a month</td></tr>
+        <tr><td>Where it runs</td><td>Your laptop or servers, including air-gapped ones</td><td>LlamaIndex's cloud; private cloud deployment offered to enterprise customers</td></tr>
+        <tr><td>Inputs</td><td>PDF, DOCX, PPTX, XLSX, HTML, images, email files, audio and more</td><td>Documents uploaded through the API or web app</td></tr>
+        <tr><td>Outputs</td><td>Markdown, HTML, lossless JSON, DocTags</td><td>Markdown by default, JSON on request</td></tr>
+        <tr><td>OCR for scans</td><td>Pluggable engines; our install used RapidOCR by default, and EasyOCR and Tesseract are options</td><td>Managed for you; accuracy depends on the tier you pay for</td></tr>
+        <tr><td>Latest version</td><td>2.130.0, September 22, 2026</td><td>Managed service; tiers are versioned</td></tr>
+        <tr><td>Best for</td><td>Private or offline documents, technical PDFs, no per-page fee</td><td>LlamaIndex RAG pipelines, messy scans, no servers to run</td></tr>
       </tbody>
     </table>
 
-    <h2>What These Three Tools Actually Are</h2>
-    <p>Docling is IBM's open-source Python parser for academic and scientific PDFs. LlamaParse is LlamaIndex's hosted API for turning documents into RAG-ready Markdown. DocsAPI is a hosted document-intelligence API built for production financial-services workflows, OCR, classification, extraction, validation. All three solve overlapping problems differently: open-source vs hosted, RAG-shaped output vs structured fields, generalist vs vertical. Pick by document type and engineering bandwidth.</p>
-
-    <h3>Docling (IBM, Open Source)</h3>
-    <p>Docling is IBM's open-source document parser. It is designed to turn documents into structured data that LLMs can consume. Strong on academic papers, scientific PDFs, and clean technical documents. Less strong on dirty real-world business documents like scanned receipts or photos.</p>
-    <p>Distribution: Python library, install via pip. Self-hosted. Free.</p>
-
-    <h3>LlamaParse (LlamaIndex)</h3>
-    <p>LlamaParse is part of the LlamaIndex ecosystem. It is designed to feed RAG pipelines, turn documents into Markdown that an LLM can use. Strong on Markdown-friendly content; mixed on complex tables. Tightly integrated with LlamaIndex's other tools.</p>
-    <p>Distribution: API. Pay-per-page. Free tier available.</p>
-
-    <h3>DocsAPI</h3>
-    <p>What we built. Designed for production document workflows, OCR, classification, extraction, validation. Strong on financial and business documents. Less focused on academic/scientific content. Honest disclosure: my product.</p>
-    <p>Distribution: API. Pay-per-page. Free tier available.</p>
-
-    <p>If you are brand new to this space, our <a href="/resources/blogs/optical-character-reader-2026">optical character reader 2026 guide</a> is the introductory piece. Come back for this one when you are choosing between specific tools.</p>
-
-    <h2>The Benchmark Setup</h2>
-    <p>I used four document categories, 300 documents each, on the same hardware (a mid-tier cloud machine for Docling, the public APIs for the others):</p>
+    <h2>What happened when we ran Docling on a 3-page bank statement</h2>
+    <p>Docling read every transaction correctly, on both a clean PDF and a scanned copy, but it returned three separate tables, one per page. Joining them took four lines of code, and a running-balance check confirmed all 110 rows. The work you must plan for is joining and checking, not reading.</p>
+    <p>Here is exactly what we did on September 28, 2026:</p>
     <ul>
-      <li><strong>Academic papers</strong> (PDFs from arXiv, varied layouts)</li>
-      <li><strong>Bank statements</strong> (real customer documents, anonymized)</li>
-      <li><strong>Invoices</strong> (real vendor invoices, anonymized)</li>
-      <li><strong>Scanned receipts</strong> (mobile-phone scans, low quality)</li>
+      <li><strong>Setup:</strong> Docling 2.130.0 on Python 3.12, default settings, on an Apple M5 laptop CPU with no GPU.</li>
+      <li><strong>Document:</strong> a 3-page bank statement PDF we generated with 110 transactions (date, description, debit, credit, balance), with the table header repeated at the top of each page, as real statements do.</li>
+      <li><strong>Scanned copy:</strong> the same pages turned into images at 200 DPI, tilted by up to 1.2 degrees, blurred and speckled with noise, then saved as an image-only PDF, so Docling had to run OCR.</li>
     </ul>
-    <p>Scoring was on three things: extraction accuracy (does the output match a hand-labeled ground truth), speed (wall-clock time per document), and developer experience (how painful was setup and integration).</p>
-
-    <h2>The Results, By Category</h2>
-
-    <h3>Academic Papers, Docling Wins</h3>
-    <p>Docling scored 94% extraction accuracy on academic papers. LlamaParse scored 89%. DocsAPI scored 87%. Docling's parser is purpose-built for this content type. The output preserves equations, citations, and figure references in ways the others do not.</p>
-    <p>If you are working with research papers, scientific PDFs, or technical books, Docling is the right pick. The other two will work but you will leave accuracy on the table.</p>
-
-    <h3>Bank Statements, DocsAPI Wins</h3>
-    <p>DocsAPI scored 91% on multi-page bank statement tables. Docling scored 76%. LlamaParse scored 71%. The differentiator was multi-page table handling. Bank statements often have transaction tables that span 5-15 pages. Naive parsers treat each page as a separate table; layout-aware parsers stitch them together.</p>
-    <p>For financial documents, bank statements, P&L statements, expense reports, table accuracy is everything. DocsAPI was built for this category. (Our <a href="/resources/blogs/pdf-parser-online">PDF parser table breakdown</a> covers why this is hard.)</p>
-
-    <h3>Invoices, DocsAPI Wins (Narrowly)</h3>
-    <p>DocsAPI scored 93% on invoice line-item extraction. LlamaParse scored 87%. Docling scored 81%. The gap is narrower here because invoices are more uniform than bank statements, but field-level accuracy still mattered for downstream accounting integration.</p>
-
-    <h3>Scanned Receipts, LlamaParse Wins</h3>
-    <p>LlamaParse scored 78% on phone-scanned receipts. DocsAPI scored 74%. Docling scored 58%. LlamaParse's OCR backend is well-tuned for low-quality consumer scans. DocsAPI is closing the gap; Docling lags significantly here.</p>
-    <p>If your workflow involves a lot of consumer-quality scans (receipts photographed in cars, faded thermal paper), LlamaParse currently has the edge.</p>
-
-    <h2>Speed Results</h2>
     <table>
-      <thead><tr><th>Tool</th><th>Avg time per page</th><th>Notes</th></tr></thead>
+      <thead><tr><th>File</th><th>Tables returned</th><th>Rows per table</th><th>Amounts and balances read correctly</th><th>Time for 3 pages</th></tr></thead>
       <tbody>
-        <tr><td>Docling (self-hosted)</td><td>0.8 seconds</td><td>Faster on local hardware; slower on cold start</td></tr>
-        <tr><td>LlamaParse (API)</td><td>1.4 seconds</td><td>Includes network round-trip</td></tr>
-        <tr><td>DocsAPI (API)</td><td>1.1 seconds</td><td>Includes network round-trip</td></tr>
+        <tr><td>Digital PDF (text layer)</td><td>3</td><td>35, 39, 36</td><td>110 of 110</td><td>23 to 31 seconds</td></tr>
+        <tr><td>Scanned PDF (OCR by RapidOCR)</td><td>3</td><td>35, 39, 36</td><td>110 of 110</td><td>22 seconds</td></tr>
       </tbody>
     </table>
-    <p>Docling wins on raw speed because it is self-hosted, no network round-trip. The catch: you pay for the compute. At meaningful volume, the per-page cost of Docling compute approaches the per-page cost of the APIs.</p>
+    <p>Three honest caveats. Our statement is cleaner than most real ones: no merged cells, no rows split across a page break, no stamps. Docling did recognize the repeated header on each page as a header, so no header rows leaked into the data. And on a laptop CPU it took 7 to 10 seconds a page; in our benchmark, on a cloud machine, it averaged 0.8 seconds, so hardware matters a lot.</p>
+    <p>The code we ran joins the per-page tables and checks every running balance against the opening balance printed on the statement:</p>
+    <pre><code>from docling.document_converter import DocumentConverter
+import pandas as pd
 
-    <h2>Developer Experience</h2>
+result = DocumentConverter().convert("statement_scan.pdf")
+doc = result.document
+tables = [t.export_to_dataframe(doc=doc) for t in doc.tables]
+statement = pd.concat(tables, ignore_index=True)
+print(len(doc.tables), "tables,", len(statement), "rows")
 
-    <h3>Setup Time</h3>
-    <ul>
-      <li><strong>Docling:</strong> 30 minutes (pip install, configure dependencies, write extraction code).</li>
-      <li><strong>LlamaParse:</strong> 5 minutes (signup, get API key, make first call).</li>
-      <li><strong>DocsAPI:</strong> 5 minutes (signup, get API key, make first call).</li>
-    </ul>
+def money(s):
+    return float(str(s).replace(",", "")) if str(s).strip() else 0.0
 
-    <h3>Documentation Quality</h3>
-    <p>Docling has the most thorough docs, written for engineers who want to understand the internals. LlamaParse docs are tied to the broader LlamaIndex ecosystem; you read about parsing in the context of RAG. DocsAPI docs are focused on production extraction.</p>
+balance = 12406.18  # opening balance printed on the statement
+problems = []
+for i, row in statement.iterrows():
+    balance = round(balance - money(row["Debit"]) + money(row["Credit"]), 2)
+    if balance != money(row["Balance"]):
+        problems.append(i)
+print("rows where the running balance does not match:", problems)</code></pre>
+    <p>Output: "3 tables, 110 rows" and an empty list of problems. Keep the balance check even when the reading is perfect; on real statements it is what catches a dropped or duplicated row at a page break. Our <a href="/resources/blogs/pdf-parser-online">PDF parser guide</a> shows those page-break failures, and our <a href="/resources/blogs/ocr-bank-statement-technology-revolutionizing-financial-data-processing">bank statement OCR guide</a> lists the other checks lenders run.</p>
 
-    <h3>Output Format</h3>
-    <p>Docling outputs structured JSON with rich metadata. LlamaParse outputs Markdown by default (RAG-friendly) and JSON on request. DocsAPI outputs structured JSON with extracted fields tagged by type.</p>
-
-    <h2>The Honest Recommendation Matrix</h2>
-    <p>Based on the benchmarks, here is who to pick for what:</p>
+    <h2>What did our 1,200-document benchmark find?</h2>
+    <p>Each tool won a different category. Docling led on academic papers, LlamaParse on phone-scanned receipts, and DocsAPI on bank statements and invoices. The table shows the full results from our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">2026 OCR benchmark</a>, which used 300 anonymized real documents per category.</p>
     <table>
-      <thead><tr><th>Your situation</th><th>Pick</th><th>Why</th></tr></thead>
+      <thead><tr><th>Document category</th><th>Docling</th><th>LlamaParse</th><th>DocsAPI</th></tr></thead>
       <tbody>
-        <tr><td>Academic papers, scientific PDFs</td><td>Docling</td><td>Purpose-built for technical content</td></tr>
-        <tr><td>Bank statements, financial docs</td><td>DocsAPI</td><td>Multi-page table handling</td></tr>
-        <tr><td>Invoices for AP automation</td><td>DocsAPI</td><td>Line-item accuracy</td></tr>
-        <tr><td>Consumer-quality scans, receipts</td><td>LlamaParse</td><td>OCR backend tuned for low quality</td></tr>
-        <tr><td>RAG pipeline with LlamaIndex</td><td>LlamaParse</td><td>Tightest integration</td></tr>
-        <tr><td>Self-hosted requirement</td><td>Docling</td><td>Only one of the three that is self-hostable</td></tr>
-        <tr><td>Mixed workloads</td><td>Try all three</td><td>Each wins in different categories</td></tr>
+        <tr><td>Academic papers (arXiv PDFs)</td><td>94%</td><td>89%</td><td>87%</td></tr>
+        <tr><td>Bank statements (multi-page tables, row-level)</td><td>76%</td><td>71%</td><td>91%</td></tr>
+        <tr><td>Invoices (line items)</td><td>81%</td><td>87%</td><td>93%</td></tr>
+        <tr><td>Phone-scanned receipts</td><td>58%</td><td>78%</td><td>74%</td></tr>
+        <tr><td>Average time per page</td><td>0.8 s (self-hosted, cloud machine)</td><td>1.4 s (API)</td><td>1.1 s (API)</td></tr>
       </tbody>
     </table>
+    <p>Why did Docling score 76% on real bank statements when it read our synthetic one perfectly? Real statements break tables in the middle of a row, merge cells, print notes between transactions and change layouts between banks. That is exactly where the joining and checking work sits. Treat any docling benchmark, including ours, as a starting point and test on 50 of your own documents.</p>
 
-    <h2>The Things None of the Three Do Well</h2>
-    <p>Honest about the field, not just my product:</p>
-    <ul>
-      <li><strong>Handwriting under 80%.</strong> All three struggle. Vision-language models do better but cost more. (See <a href="/resources/blogs/vlm-vs-ocr">VLM vs OCR</a>.)</li>
-      <li><strong>Mixed languages in one document.</strong> All three improving but still imperfect.</li>
-      <li><strong>Documents with stamps over text.</strong> Stamps obscure characters. All three lose accuracy.</li>
-      <li><strong>Doctor's notes.</strong> Nobody has solved this. Probably nobody will soon.</li>
-    </ul>
-
-    <h2>The Way I Would Pick a Tool If Starting Today</h2>
-    <p>Take 50 of your real documents. Run them through all three tools' free tiers. Compare output side-by-side against a hand-labeled ground truth. Whoever wins on your specific document mix is the right pick.</p>
-    <p>Do not trust general benchmarks (including this one). Your document mix is different from mine. The tool that wins on my bank statements may not win on yours. The 50-document test takes a few hours and saves you months of regret. (<a href="/resources/blogs/ocr-pdf-honest-guide">Our honest guide</a> goes deeper on real testing.)</p>
+    <h2>How much does LlamaParse cost?</h2>
+    <p>LlamaParse bills in credits at $1.25 per 1,000 credits, and each page costs 1 to 45 credits depending on the tier: Fast 1, Cost-effective 3, Agentic 10 and Agentic Plus 45. That works out to $1.25 to $56.25 per 1,000 pages. The free plan includes 10,000 credits a month; paid plans start at $50 a month.</p>
+    <table>
+      <thead><tr><th>LlamaParse tier</th><th>Credits per page</th><th>Cost per 1,000 pages</th><th>Pages in the free 10,000 credits</th><th>LlamaIndex suggests it for</th></tr></thead>
+      <tbody>
+        <tr><td>Fast</td><td>1</td><td>$1.25</td><td>10,000</td><td>Plain text, high volume</td></tr>
+        <tr><td>Cost-effective</td><td>3</td><td>$3.75</td><td>3,333</td><td>Text-heavy pages with simple tables</td></tr>
+        <tr><td>Agentic</td><td>10</td><td>$12.50</td><td>1,000</td><td>Tables, scans, multi-column layouts, charts</td></tr>
+        <tr><td>Agentic Plus</td><td>45</td><td>$56.25</td><td>222</td><td>Dense financial reports, papers with equations</td></tr>
+      </tbody>
+    </table>
+    <p>A worked example: 10,000 pages a month on the Agentic tier is 100,000 credits, or 100 x $1.25 = $125 a month. Docling costs nothing to license, but you pay for the machines and the engineering time to run them. LlamaIndex's plans are Free (10,000 credits a month), Starter at $50 a month (40,000 credits) and Pro at $500 a month (400,000 credits), with custom Enterprise plans.</p>
 
     <h2>Which is best for RAG pipelines?</h2>
-    <p>For retrieval-augmented generation pipelines, LlamaParse has the tightest fit because it is part of the LlamaIndex ecosystem and outputs clean Markdown by default, which is the format most RAG chunkers expect. If you are already building on LlamaIndex, LlamaParse removes integration friction that the other two would add. That said, RAG quality depends more on chunking strategy and retrieval than on the parser, so a strong Markdown output from any of the three can feed a good pipeline.</p>
-    <p>Where the choice actually matters for RAG is document type. If your knowledge base is scientific papers, Docling's structure-preserving output produces better chunks because it keeps equations, citations, and section hierarchy intact. If your knowledge base is financial documents with tables, DocsAPI's typed field extraction gives you structured data you can query directly rather than embedding a mangled table. Match the parser to the documents in the knowledge base, then wire it into the RAG framework of your choice.</p>
+    <p>For RAG, the LlamaParse vs Docling choice is mostly about your stack. LlamaParse fits most easily if you already build on LlamaIndex, because it is part of the same ecosystem and returns Markdown by default. Docling fits when documents must stay private or you want no per-page fee, and it also exports Markdown. RAG quality depends more on how you split and retrieve text than on which of the two parsed it.</p>
+    <p>Match the parser to the documents in your knowledge base. Scientific papers suit Docling, which keeps section structure, equations and citations in its output. Messy scans and mixed consumer documents suit LlamaParse's higher tiers. Financial documents with tables are better stored as structured data you can query, not as Markdown text chunks.</p>
 
-    <h2>Output format compared: Markdown vs structured JSON</h2>
-    <p>The output format is the most practical difference between the three and the one teams underweight. LlamaParse defaults to Markdown, which is ideal for feeding an LLM or a RAG chunker but weaker when you need specific fields in a database. Docling and DocsAPI default to structured JSON, which is what you want when the next step is populating an accounting system, a loan-origination system, or any workflow that needs the total, the vendor, and the date as separate fields rather than as prose.</p>
-    <p>The rule of thumb: if the document is going to an LLM for reasoning or search, Markdown output (LlamaParse) is the natural fit. If the document is going to a business system that needs specific values, typed JSON output (DocsAPI, or Docling with your own field mapping) saves you a parsing step. Choosing the wrong output format means writing a conversion layer you did not need.</p>
+    <h2>Docling vs Textract and Docling vs Tesseract</h2>
+    <p>They sit at different levels. Tesseract is an OCR engine that returns plain text. Docling is a converter that finds layout, tables and reading order, and calls an OCR engine (it can use Tesseract) only for scanned pages. AWS Textract is a hosted service that returns text, forms and tables, billed per page. So Tesseract vs Docling is not really either-or: Docling can call Tesseract to read scanned pages and then adds the structure on top.</p>
+    <table>
+      <thead><tr><th>Question</th><th>Docling</th><th>Tesseract</th><th>AWS Textract</th></tr></thead>
+      <tbody>
+        <tr><td>What you get</td><td>Markdown or JSON with layout, tables and reading order</td><td>Plain text</td><td>Text, key-value pairs, tables, receipt and US ID fields</td></tr>
+        <tr><td>Where it runs</td><td>Your machines</td><td>Your machines</td><td>AWS cloud</td></tr>
+        <tr><td>Cost</td><td>Free license</td><td>Free license</td><td>$1.50 per 1,000 pages for text, $15 with tables</td></tr>
+        <tr><td>Languages</td><td>Depends on the OCR engine you plug in</td><td>More than 100</td><td>Six (English and five Western European)</td></tr>
+      </tbody>
+    </table>
+    <p>For the aws textract vs docling decision, the question is usually whether documents may go to AWS and whether you want to run servers. Our <a href="/resources/blogs/aws-textract-vs-docsapi">Textract guide</a> has Textract's full price list and limits, and our <a href="/resources/blogs/paddleocr-vs-tesseract-vs-docsapi">PaddleOCR vs Tesseract test</a> shows how the underlying OCR engines differ on hard images.</p>
 
-    <h2>Self-hosted vs hosted: the deployment tradeoff</h2>
-    <p>Docling is the only one of the three you can self-host, which is decisive if your documents cannot leave your infrastructure for regulatory or data-residency reasons. Self-hosting gives you full control and no per-page fee, at the cost of owning deployment, scaling, and the compute bill. LlamaParse and DocsAPI are hosted APIs, so they remove the operational burden but require sending documents to a third party, which some regulated workflows cannot do.</p>
-    <p>At low volume, the hosted APIs are usually cheaper once you count engineering time, because running Docling well takes real work. At high volume with available engineering capacity, self-hosted Docling can win on unit cost. And for anything with a hard data-residency requirement, self-hosted Docling is often the only option on this list, which is why it shows up in regulated environments even when its accuracy on the specific document type is not the highest.</p>
+    <h2>What about Unstructured?</h2>
+    <p>If you are comparing docling vs llamaparse vs unstructured, Unstructured is the third common option: an open-source library (Apache 2.0) for turning documents into clean elements for AI pipelines, with a hosted platform alongside it. Like Docling it can run on your own machines; like LlamaParse it has a paid hosted option. We did not include it in our benchmark, so test it on your own documents before choosing.</p>
 
-    <h2>The Way I Explain This to Non-Engineers</h2>
-    <p>Imagine you need to hire a typist for the next year. You have three candidates. Each is a great typist but they specialize in different things.</p>
+    <h2>Should you self-host or use a hosted parser?</h2>
+    <p>Self-host (Docling or open-source Unstructured) when documents may not leave your network or volume is high and you have engineers to run it. Use a hosted parser (LlamaParse, or LlamaParse's private cloud option for enterprises) when you would rather pay per page than run servers. Our laptop test is a reminder that self-hosting speed depends heavily on hardware.</p>
+    <p>For a regulated team, the real checklist is data residency, retention, audit logging and who can see the files, not the parser's feature list. A hosted service's security documents matter as much as its accuracy.</p>
+
+    <h2>Where DocsAPI fits</h2>
+    <p>Disclosure: DocsAPI is our product. It is a hosted API for financial and business documents: it classifies each file, returns named fields as JSON, and joins transaction tables across pages, which is why it led on bank statements (91%) and invoices (93%) in our benchmark. It lost on academic papers and receipts. It costs from $0.02 per page with a free tier of 100 pages a month. It is not a general RAG parser and cannot run offline; for those, use Docling or LlamaParse. See our <a href="/resources/blogs/vlm-vs-ocr">VLM vs OCR guide</a> for handwriting, which none of these three handles reliably.</p>
+
+    <h2>What to do next</h2>
     <ul>
-      <li><strong>Docling</strong> is the scientific typist. She has typed thousands of academic papers. She knows equations, citations, figure captions cold.</li>
-      <li><strong>LlamaParse</strong> is the consumer-content typist. She types receipts, casual notes, photos from phones. She's used to messy input.</li>
-      <li><strong>DocsAPI</strong> is the business typist. She types invoices, bank statements, expense reports. She understands tables and line items.</li>
+      <li><strong>Documents must stay private or offline:</strong> install Docling and run the code above on 20 of your own files.</li>
+      <li><strong>You build on LlamaIndex:</strong> start LlamaParse on the Cost-effective tier and move up a tier only for pages that fail.</li>
+      <li><strong>You process bank statements or invoices:</strong> compare the joined tables from Docling, LlamaParse and the <a href="/products">DocsAPI free tier</a> on the same statements, and run the balance check on each.</li>
+      <li><strong>You are still choosing an OCR engine:</strong> the <a href="/tools/which-ocr">Which OCR should I use tool</a> asks six questions, and our <a href="/resources/blogs/ocr-pdf-honest-guide">OCR for PDFs guide</a> explains how to test fairly.</li>
     </ul>
-    <p>Pick based on what you mostly type. If your work is mixed, hire all three for a trial week and see who handles your specific mix best.</p>
 
-    <h2>What I'd Do Today</h2>
-    <p>If your documents are academic or scientific: Docling. Self-host it. The accuracy is worth the engineering effort.</p>
-    <p>If your documents are financial or business: try DocsAPI's free tier first. The multi-page table handling is what most teams need and can't get elsewhere.</p>
-    <p>If your documents are mostly consumer-quality scans: try LlamaParse's free tier. The OCR backend handles dirty input better than the alternatives.</p>
-    <p>If you do not know yet: try all three on 50 of your real documents over a weekend. The right answer is whichever wins on your mix. (<a href="/author/nupura-ughade">I have written more about this evaluation approach</a>.)</p>
-    <p>Want a quick steer before that weekend test? The free <a href="/tools/which-ocr">OCR selector tool</a> asks six questions and recommends Docling, LlamaParse, DocsAPI, or an open-source engine based on whether your documents are academic, financial, or consumer-quality scans.</p>
-
-    <p>Related guide: <a href="/resources/blogs/how-to-measure-ocr-accuracy">how to measure OCR accuracy</a>.</p>
+    <h2>Sources and how we checked this</h2>
+    <ul>
+      <li>Docling: features, formats, license and history from the <a href="https://github.com/docling-project/docling" target="_blank" rel="noopener">Docling GitHub repository</a>; version and release date from its releases, read September 28, 2026.</li>
+      <li>LlamaParse: plans and credit price from the <a href="https://www.llamaindex.ai/pricing" target="_blank" rel="noopener">LlamaIndex pricing page</a>; credits per page from the <a href="https://developers.llamaindex.ai/llamaparse/general/pricing/" target="_blank" rel="noopener">LlamaParse pricing documentation</a>; tier guidance from the <a href="https://developers.llamaindex.ai/llamaparse/parse/guides/tiers/" target="_blank" rel="noopener">tiers guide</a>.</li>
+      <li>Unstructured: license and description from the <a href="https://github.com/Unstructured-IO/unstructured" target="_blank" rel="noopener">Unstructured GitHub repository</a>.</li>
+      <li>Our Docling test: run September 28, 2026 as described above, on a synthetic statement, so it shows behavior, not an accuracy rate. Benchmark numbers come from our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>. Textract prices from AWS's public price list.</li>
+    </ul>
   `,
   image: "/images/idp-vs-ocr.png",
   featuredImage: "/images/idp-vs-ocr.png",
   category: "AI Document Intelligence",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
-  readTime: "10 min read",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
+  readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "docling",
   secondary_keywords: [
     "docling vs llamaparse",
+    "llamaparse vs docling",
     "llamaparse",
+    "docling vs llamaparse vs unstructured",
+    "aws textract vs docling",
+    "docling vs textract",
+    "docling vs tesseract",
+    "tesseract vs docling",
+    "docling benchmark",
+    "llamaparse pricing",
     "document parser comparison",
-    "docling ibm",
-    "llamaindex parser",
     "best document parser",
   ],
-  tags: ["Docling", "LlamaParse", "comparison", "document AI"],
+  tags: ["Docling", "LlamaParse", "comparison", "document AI", "RAG"],
   cluster: "ai-doc",
   faq: [
     {
       question: "Is Docling free?",
       answer:
-        "Yes. Docling is open source under the MIT license. You pay for the compute to run it, but the software itself is free. Self-hosting is the main cost.",
+        "Yes. Docling is open source under the MIT license, so it is free for commercial use. It started at IBM Research Zurich and is now hosted by the LF AI and Data Foundation. Your costs are the machines that run it and the time to set it up and keep it running.",
     },
     {
       question: "Is LlamaParse free?",
       answer:
-        "It has a free tier (a few thousand pages per month). Beyond that, pay-per-page. Pricing is competitive with other cloud OCR APIs.",
+        "It has a free plan with 10,000 credits a month. A page costs 1 credit on the Fast tier, 3 on Cost-effective, 10 on Agentic and 45 on Agentic Plus, so the free credits cover 10,000 Fast pages or 1,000 Agentic pages. Extra credits cost $1.25 per 1,000.",
+    },
+    {
+      question: "Does Docling join tables that run across pages?",
+      answer:
+        "Not in our test. On a 3-page bank statement it returned three tables, one per page, with every row read correctly. Joining them took a pandas concat, and a running-balance check confirmed all 110 rows. Plan that step yourself for statements and long invoices.",
+    },
+    {
+      question: "Can Docling read scanned PDFs?",
+      answer:
+        "Yes. For image-only pages it runs an OCR engine; our install used RapidOCR by default, and EasyOCR and Tesseract are options. It read all 110 transactions on our noisy, slightly tilted scanned statement. In our benchmark its weakest category was phone-photographed receipts, at 58%.",
+    },
+    {
+      question: "Can Docling run offline or in an air-gapped environment?",
+      answer:
+        "Yes. Docling runs entirely on your own machines once its models are downloaded, and its maintainers describe local execution for sensitive data and air-gapped environments as a design goal. That is the main reason regulated teams choose it over hosted parsers.",
+    },
+    {
+      question: "How fast is Docling?",
+      answer:
+        "It depends heavily on hardware. On a laptop CPU with default settings we measured 7 to 10 seconds a page on a 3-page statement. In our benchmark on a cloud machine it averaged 0.8 seconds a page. Time a sample of your own pages on the hardware you will use.",
     },
     {
       question: "Which is best for RAG pipelines?",
       answer:
-        "LlamaParse, narrowly, because of the LlamaIndex integration. Docling and DocsAPI both work with RAG, you just wire them up yourself.",
+        "LlamaParse if you already use LlamaIndex, because it plugs in directly and returns Markdown. Docling if documents must stay private or you want no per-page fee; it also exports Markdown. Chunking and retrieval usually matter more to answer quality than the parser.",
     },
     {
-      question: "Can I switch from one to another easily?",
+      question: "Is Docling better than Tesseract?",
       answer:
-        "Yes, in most cases. Input is the same (PDF, image). Output formats differ but converting between them is straightforward. Plan a half-day of migration.",
-    },
-    {
-      question: "Which has the best accuracy overall?",
-      answer:
-        "None, accuracy depends on document type. Docling wins on academic, DocsAPI on financial, LlamaParse on consumer scans. No universal winner.",
-    },
-    {
-      question: "Which is best for production at scale?",
-      answer:
-        "For most teams above 100K pages/month, a cloud API (LlamaParse or DocsAPI) because the overhead of running Docling at scale is significant. Below 100K pages/month, all three are viable.",
+        "They do different jobs. Tesseract only turns images into plain text. Docling understands layout, tables and reading order and exports Markdown or JSON, and it can use Tesseract as its OCR engine for scanned pages. If you only need text from clean scans, Tesseract alone is simpler.",
     },
     {
       question: "Is Docling better than LlamaParse?",
       answer:
-        "For academic and scientific PDFs, yes: Docling led at 94% versus LlamaParse's 89% and preserves equations and citations better. For consumer scans and RAG-shaped Markdown, LlamaParse is better (78% on receipts versus Docling's 58%). Docling wins on structured technical content; LlamaParse wins on messy input and RAG integration.",
+        "For academic and technical PDFs, yes: Docling led at 94% against 89% in our benchmark. For phone-scanned receipts LlamaParse led at 78% against 58%. Docling is free and self-hosted; LlamaParse is managed and billed in credits. Choose by your documents and where they are allowed to go.",
     },
     {
       question: "Which document parser is best for bank statements?",
       answer:
-        "DocsAPI led on bank statements at 91% row-level table accuracy versus Docling's 76% and LlamaParse's 71%, because it stitches multi-page transaction tables into one logical table while the others treat each page separately. For financial documents where table accuracy drives downstream accounting, that gap is the whole decision.",
-    },
-    {
-      question: "Does Docling do OCR on scanned documents?",
-      answer:
-        "Docling can process scanned documents but it was built for clean, digital-native PDFs, and its accuracy on low-quality consumer scans is the weakest of the three (58% on our receipt set). For scanned or photographed documents, LlamaParse or DocsAPI produce noticeably better results because their OCR backends are tuned for messy real-world input.",
+        "In our benchmark DocsAPI, our product, led at 91% row-level accuracy against 76% for Docling and 71% for LlamaParse, because it joins transaction tables across pages. With Docling you can get the same joined table using the code on this page, plus a running-balance check. Test on your own statements.",
     },
   ],
 }
