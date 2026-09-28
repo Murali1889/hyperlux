@@ -85,12 +85,14 @@ export const blogAp02: BlogPost = {
   category: "Accounts Payable",
   date: "August 9, 2026",
   datePublished: "2026-08-09T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "invoice ocr netsuite",
   secondary_keywords: [
+    "netsuite ocr software",
+    "netsuite ocr",
     "netsuite bill capture",
     "netsuite vendorbill api",
     "netsuite invoice automation",
@@ -130,6 +132,11 @@ export const blogAp02: BlogPost = {
       question: "Does NetSuite Bill Capture require a separate subscription?",
       answer:
         "Ask NetSuite or your account manager, because licensing is not covered in the technical documentation. Oracle's pages describe upload and email intake (up to 50 files per upload, up to 20 attachments per email), US-only availability and the file limits, but not what your contract includes.",
+    },
+    {
+      question: "What NetSuite OCR software options are there?",
+      answer:
+        "Start with NetSuite's own Bill Capture, which fills bill headers and suggests line items for a person to confirm; Oracle lists it as US only. Beyond that, NetSuite OCR software falls into AP automation suites that sync bills into NetSuite, and OCR APIs that post vendor bills through SuiteTalk REST, where you own the mapping and the checks.",
     },
   ],
 }

@@ -94,12 +94,14 @@ export const blogSd01: BlogPost = {
   category: "Logistics",
   date: "August 30, 2026",
   datePublished: "2026-08-30T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "bill of lading processing",
   secondary_keywords: [
+    "bill of lading ocr",
+    "ocr bill of lading",
     "straight bill of lading vs order bill of lading",
     "negotiable bill of lading",
     "document of title logistics",
@@ -139,6 +141,11 @@ export const blogSd01: BlogPost = {
       question: "What technical signals help correctly classify a bill of lading as straight or order?",
       answer:
         "Reliable classification checks for order or bearer phrasing in the consignee field, an explicit nonnegotiable marking, the number of originals issued (order bills are commonly issued in sets, often three), and endorsement marks on the reverse of the original or an attached allonge, rather than relying on the front-page layout alone.",
+    },
+    {
+      question: "How accurate is bill of lading OCR?",
+      answer:
+        "Typed, printed bills of lading read well. Accuracy drops on carbon copies, handwritten weights and piece counts, stamps over text and faxed copies. Good bill of lading OCR checks the extracted piece count and weight against the shipment record and sends mismatches to a person instead of trusting every field.",
     },
   ],
 }

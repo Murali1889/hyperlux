@@ -10,6 +10,8 @@ export const blog24: BlogPost = {
   description:
     "A 412-page mortgage packet took 73 days to close by hand. The same packet through modern mortgage OCR runs in 90 minutes. Field guide from production.",
   metaTag: "Mortgage OCR in 2026: 412 Pages → 90 Minutes",
+  summary:
+    "Mortgage OCR extracts data from the documents in a loan packet, such as the loan application (Form 1003), pay stubs, W-2s, tax returns, bank statements and appraisals. Each document type needs its own extraction and checks, and matching every document to the right borrower and year is the slow part.",
   content: `
     <p>The longest mortgage close I have personally witnessed took 73 days. The borrower was perfectly qualified. The lender was diligent. The bottleneck was a 412-page packet that took the processing team three weeks of back-and-forth to verify. The same packet, processed through a modern mortgage OCR pipeline, would have taken 90 minutes end-to-end. This guide is everything I have learned about closing that gap.</p>
     <p>If you work in mortgage lending, community bank, credit union, non-bank lender, or fintech, and time-to-close matters to your business, this is the field manual.</p>
@@ -138,12 +140,15 @@ export const blog24: BlogPost = {
   category: "Industry Trends",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "mortgage ocr",
   secondary_keywords: [
+    "mortgage forms ocr",
+    "ocr in home loan",
+    "what is ocr in home loan",
     "loan document ocr",
     "loan application ocr",
     "mortgage document automation",
@@ -183,6 +188,16 @@ export const blog24: BlogPost = {
       question: "What does mortgage OCR cost per loan?",
       answer:
         "Per-loan OCR costs typically run $5-25 depending on packet size and document mix. Compare against the loaded cost of manual processing, usually $300-600 per loan. Payback is fast.",
+    },
+    {
+      question: "What does OCR mean in a home loan?",
+      answer:
+        "In Indian home loans, OCR usually means Own Contribution Receipt: the receipt a builder or seller issues when you pay your own share of the property price, which lenders ask for before releasing the loan. It is unrelated to optical character recognition, the document-reading technology this page covers, although lenders can use OCR in home loan processing to read those receipts too.",
+    },
+    {
+      question: "Which mortgage forms does OCR handle well?",
+      answer:
+        "Standardized forms such as the loan application (Form 1003), W-2s, 1099s and IRS transcripts read well because their layouts rarely change. Pay stubs, bank statements, appraisals and scanned deeds vary far more, so mortgage forms OCR needs checks for each document type and human review of low-confidence fields.",
     },
   ],
 }

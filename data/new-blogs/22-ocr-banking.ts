@@ -10,6 +10,8 @@ export const blog22: BlogPost = {
   description:
     "OCR technology in banking, what actually works in production, where vendor demos lie, and the patterns that pass regulator audits.",
   metaTag: "OCR Banking, What Actually Works in 2026",
+  summary:
+    "OCR in banking reads loan applications, KYC IDs, checks, wire instructions and mortgage packets into data for core banking and compliance systems. Vendor accuracy claims usually come from clean demo files, so test on your own worst documents and keep human review for extractions that fail validation.",
   content: `
     <p>The most expensive sentence I have heard in banking technology was a community bank CFO telling me, "Our OCR vendor said 99% accuracy and we believed them." Three months later they had a $1.4M reconciliation backlog and a regulatory finding that started, "Failure to verify automated extraction outputs..." This guide is what I have learned helping mid-market banks pick OCR vendors over the last 18 months. The version where vendor demos do not survive contact with real documents.</p>
     <p>If you are evaluating OCR for a bank, community, regional, or BaaS sponsor, read this before you sign anything.</p>
@@ -148,8 +150,8 @@ export const blog22: BlogPost = {
   category: "Industry Trends",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-07-12T00:00:00.000Z",
-  last_updated: "July 12, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "ocr technology in banking",

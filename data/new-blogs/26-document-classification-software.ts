@@ -131,12 +131,15 @@ export const blog26: BlogPost = {
   category: "AI Document Intelligence",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-08-17T00:00:00.000Z",
-  last_updated: "August 17, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "document classification software",
   secondary_keywords: [
+    "automatic document classification software",
+    "ai document classification software",
+    "ocr document classification",
     "intelligent document recognition",
     "automated document recognition",
     "document classifier",
@@ -176,6 +179,11 @@ export const blog26: BlogPost = {
       question: "What does document classification software cost?",
       answer:
         "Per-document classification typically runs $0.005-$0.02, a fraction of OCR cost. The accuracy improvement on downstream extraction usually pays for it many times over.",
+    },
+    {
+      question: "How does AI document classification software work?",
+      answer:
+        "It looks at a page's text, layout and sometimes its images, and assigns a type, such as invoice, bank statement or pay stub, with a confidence score. Automatic document classification software then routes each file to the right extraction step, and pages with low confidence go to a person.",
     },
   ],
 }

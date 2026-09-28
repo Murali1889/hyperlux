@@ -88,12 +88,13 @@ export const blogAp07: BlogPost = {
   category: "Accounts Payable",
   date: "August 11, 2026",
   datePublished: "2026-08-11T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "invoice line item ocr",
   secondary_keywords: [
+    "line item extraction from invoices",
     "invoice line item extraction",
     "invoice table extraction accuracy",
     "multi page invoice ocr",
@@ -133,6 +134,11 @@ export const blogAp07: BlogPost = {
       question: "What should I ask a vendor before trusting their line-item extraction accuracy claim?",
       answer:
         "Ask what document set the number was measured against and whether it is character-level or field-level accuracy. Then test on 20 of your own real invoices, weighted toward multi-page tables, before trusting the number for your volume.",
+    },
+    {
+      question: "What is the hardest part of line item extraction from invoices?",
+      answer:
+        "Tables that change layout between vendors, rows that wrap onto two lines, and tables that continue onto the next page. Good line item extraction from invoices keeps each row's description, quantity, unit price and amount together, and checks that quantity times price equals the amount on every row.",
     },
   ],
 }

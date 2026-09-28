@@ -10,6 +10,8 @@ export const blogLd01: BlogPost = {
   description:
     "How contract redlining software detects changes: Myers diff mechanics, why line-diff breaks on reflowed legal prose, and what real tools do differently",
   metaTag: "Contract Redlining Software: The Diff Mechanics Explained",
+  summary:
+    "Contract redlining software compares two versions of a contract and shows what changed. The hard part is the comparison method: line-based diffs built for source code break on legal text that reflows, which is why a six-word edit can show up as hundreds of changes in a basic compare tool.",
   content: `
     <p>Take a 40-page credit agreement. Someone adds six words to a covenant in section 4.2. Nothing else in the document changes in substance, not one clause is added, removed, or renumbered. Run that pair of documents through a word processor's basic compare tool and you can end up with a redline showing 200+ changes, half the document highlighted, section 7 through section 12 all marked as "modified" even though every word in them is identical to the original. This is not a hypothetical. It is the default failure mode of line-based diffing applied to legal text, and it is the reason most in-house counsel still distrust automated redlines and quietly re-review the whole document by eye anyway.</p>
     <p>The cause is mechanical, not mysterious. Adding six words to one paragraph shifts every line boundary after it if the document reflows, which legal text does constantly because contracts get edited in word processors that re-wrap paragraphs to fit the page. A diff algorithm that compares documents line by line has no way to know that "line 340 of version B" is the same sentence as "line 338 of version A" with a few words changed, it just sees two different strings and marks both as changed. This post is about what is actually happening inside a diff engine when it compares two contract versions, why the naive approach falls apart specifically on legal prose, and what a redlining tool that works has to do differently. If you are evaluating tools for a lending or legal ops team, our <a href="/documents/legal-docs">document intelligence platform for legal documents</a> covers the broader extraction and comparison pipeline this fits into.</p>
@@ -88,8 +90,8 @@ export const blogLd01: BlogPost = {
   category: "Legal",
   date: "August 30, 2026",
   datePublished: "2026-08-30T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "contract redlining software",

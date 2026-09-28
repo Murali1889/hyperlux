@@ -172,14 +172,16 @@ export const post: BlogPost = {
     </ul>
 
     <p>Limits: we ran the DTI, deposit, DSCR and compounding arithmetic in Python, but the inputs are invented. Guidelines change, so confirm current text before you build rules. Fannie Mae's Day 1 Certainty page was blocked, so we used its press release. This page is not legal, tax or credit advice.</p>
+
+    <p>Related guide: <a href="/resources/blogs/smb-lending-automation-document-processing">SMB lending automation tools for document processing</a>.</p>
   `,
   image: "/images/the-ultimate-guide-to-small-business.png",
   featuredImage: "/images/the-ultimate-guide-to-small-business.png",
   category: "Lending",
   date: "September 22, 2026",
   datePublished: "2026-09-22T00:00:00.000Z",
-  dateModified: "2026-09-22T00:00:00.000Z",
-  last_updated: "September 22, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "13 min read",
   author: nupuraUghade,
   primary_keyword: "ocr for loan underwriting",

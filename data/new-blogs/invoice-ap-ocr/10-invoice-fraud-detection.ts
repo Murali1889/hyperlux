@@ -76,12 +76,13 @@ export const blogAp10: BlogPost = {
   category: "Accounts Payable",
   date: "August 12, 2026",
   datePublished: "2026-08-12T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "invoice fraud detection",
   secondary_keywords: [
+    "fake invoice detection ai",
     "fake vendor invoice detection",
     "invoice tampering detection",
     "vendor fraud checklist",
@@ -126,6 +127,11 @@ export const blogAp10: BlogPost = {
       question: "How should AP teams operationalize document-forensics fraud checks without slowing down processing?",
       answer:
         "Run the comparisons automatically as part of extraction and surface only invoices that trip a threshold, rather than showing a score on every document. A reviewer who sees rare flags investigates them; one shown constant noise starts ignoring the signal.",
+    },
+    {
+      question: "Can AI detect fake invoices?",
+      answer:
+        "Partly. Fake invoice detection with AI looks for signals such as a new or changed bank account, a vendor missing from your master file, duplicate or out-of-sequence invoice numbers, and edited PDF metadata. It flags risk for a person to review; the strongest single control is still confirming any bank-detail change through a phone number you already had on file.",
     },
   ],
 }

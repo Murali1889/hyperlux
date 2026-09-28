@@ -108,12 +108,13 @@ export const blogSd04: BlogPost = {
   category: "Logistics",
   date: "September 2, 2026",
   datePublished: "2026-09-02T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "freight invoice automation",
   secondary_keywords: [
+    "edi 210 motor carrier freight invoice",
     "EDI 210 freight invoice processing",
     "accessorial charge validation",
     "BOL invoice reconciliation",
@@ -127,7 +128,7 @@ export const blogSd04: BlogPost = {
     {
       question: "What is EDI 210 and how is it different from a standard invoice?",
       answer:
-        "EDI 210 is the X12 Motor Carrier Freight Details and Invoice transaction set, used by carriers to bill for freight services. Unlike EDI 810, the standard commercial invoice format, it is built to carry shipment specific rating detail, weight information, and accessorial charge line items that a commercial invoice format has no fields for.",
+        "EDI 210 is the X12 Motor Carrier Freight Details and Invoice transaction set, used by carriers to bill for freight services, which is why people often call it the EDI 210 motor carrier freight invoice. Unlike EDI 810, the standard commercial invoice format, it is built to carry shipment specific rating detail, weight information, and accessorial charge line items that a commercial invoice format has no fields for.",
     },
     {
       question: "What are accessorial charges on a freight invoice?",

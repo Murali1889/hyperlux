@@ -330,12 +330,15 @@ random 12-digit numbers that still pass Verhoeff: 10164 of 100000</code></pre>
   category: "Lending",
   date: "September 24, 2026",
   datePublished: "2026-09-24T00:00:00.000Z",
-  dateModified: "2026-09-24T00:00:00.000Z",
-  last_updated: "September 24, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "20 min read",
   author: nupuraUghade,
   primary_keyword: "OCR for tax forms",
   secondary_keywords: [
+    "tax return ocr",
+    "ocr software for tax forms",
+    "ocr tax software",
     "ocr for w2 forms",
     "ocr for 1099 forms",
     "ocr for tax document verification",
@@ -394,6 +397,11 @@ random 12-digit numbers that still pass Verhoeff: 10164 of 100000</code></pre>
       question: "What should happen when a check fails?",
       answer:
         "Do not fix it silently. Show a person the image with the field highlighted and the rule that failed. The one safe automatic repair is position-aware: replace an O with 0 in a digit-only field, then accept it only if the checksum passes. Log every change so an auditor can see what was corrected and why.",
+    },
+    {
+      question: "What should OCR software for tax forms handle?",
+      answer:
+        "At minimum W-2s, 1099s and Form 1040 with its schedules, plus IRS transcripts. Tax return OCR is harder than single-form OCR because schedules vary and figures must agree across pages, so good OCR tax software checks totals between the 1040 and its schedules and flags any mismatch.",
     },
   ],
 }

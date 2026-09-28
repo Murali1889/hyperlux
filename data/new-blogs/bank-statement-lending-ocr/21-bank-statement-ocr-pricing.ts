@@ -10,6 +10,8 @@ export const blogBl21: BlogPost = {
   description:
     "Bank statement OCR pricing: why a 99% field-accuracy claim can mean barely one in five documents is actually fully clean, and the math behind that gap.",
   metaTag: "Bank Statement OCR Pricing: The Real Math (2026)",
+  summary:
+    "Bank statement OCR usually costs from a fraction of a cent to a few cents per page, but the accuracy claim matters more than the price: 99% can mean characters, fields or whole documents, and small field errors add up across a multi-page statement. Ask vendors which one they mean.",
   content: `
     <p>Bank statement OCR pricing content is genuinely clear about the numbers everyone asks first: per-page cost, typically a fraction of a cent to a few cents for raw extraction, and a headline accuracy figure, commonly 97 to 99%-plus for clean digital statements from major banks. What that content does not explain is what that headline accuracy number actually means once it compounds across every field on a real, multi-page bank statement, a gap between the marketed number and the practical, document-level reality that gets more consequential as volume scales up, not less.</p>
 
@@ -76,8 +78,8 @@ export const blogBl21: BlogPost = {
   category: "Lending",
   date: "August 22, 2026",
   datePublished: "2026-08-22T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "bank statement ocr pricing",

@@ -1,6 +1,6 @@
 # DocsAPI: Full Manifest for AI Search
 
-> DocsAPI is the document intelligence API for SMB lending and fintech: OCR, classification, KYC document verification, and AML document checks in one honest API. Production scale: ~4M pages per month. Last updated: 2026-09-21.
+> DocsAPI is the document intelligence API for SMB lending and fintech: OCR, classification, KYC document verification, and AML document checks in one honest API. Production scale: ~4M pages per month. Last updated: 2026-09-28.
 
 ## Company facts
 
@@ -71,6 +71,7 @@ DocsAPI provides production document intelligence as an HTTP API. Core capabilit
 - [OCR accuracy benchmark 2026: 8 engines on 1,900 real documents](https://docsapi.co/resources/blogs/ocr-accuracy-benchmark-2026): Free to cite. Real per-engine, per-document-type accuracy numbers, not vendor marketing claims.
 - [Best OCR software in 2026, by use case](https://docsapi.co/resources/blogs/best-ocr-software-2026): Which tool wins for free/open-source, personal readers, developer APIs, and business-scale processing, backed by the benchmark above.
 - [Best OCR software for accounts payable](https://docsapi.co/resources/blogs/best-ocr-software-for-accounts-payable): 8 AP tools trialed on 200 real invoices, ranked by touchless rate.
+- [Accounts payable OCR: how it works and what it costs](https://docsapi.co/resources/blogs/accounts-payable-ocr): The six-step pipeline, the 7 checks before an invoice is paid, a fill-in cost model, and invoice accuracy from our benchmark.
 
 - [How accurate is OCR? Real numbers and why it is never 100%](https://docsapi.co/resources/blogs/understanding-ocr-accuracy-metrics-challenges-and-improvement-strategies): Character vs field accuracy, worked math, what lowers accuracy
 
@@ -89,7 +90,7 @@ DocsAPI provides production document intelligence as an HTTP API. Core capabilit
 
 - [Context engineering for document AI](https://docsapi.co/resources/blogs/context-engineering-document-ai): Why RAG alone falls short
 - [Document detection: the step everyone skips before OCR](https://docsapi.co/resources/blogs/document-detection-before-ocr): Pre-processing wins
-- [Docling vs LlamaParse vs DocsAPI: honest comparison](https://docsapi.co/resources/blogs/docling-vs-llamaparse-vs-docsapi): 1,200-document benchmark
+- [Docling vs LlamaParse vs DocsAPI: honest comparison](https://docsapi.co/resources/blogs/docling-vs-llamaparse-vs-docsapi): 1,200-document benchmark, LlamaParse credit prices, and a Docling run on a 3-page bank statement with code
 - [Data normalization for extracted documents](https://docsapi.co/resources/blogs/data-normalization-extracted-documents): Post-extraction step
 - [VLM vs OCR: when to use a vision-language model](https://docsapi.co/resources/blogs/vlm-vs-ocr): Cost vs accuracy tradeoff
 
@@ -102,9 +103,9 @@ DocsAPI provides production document intelligence as an HTTP API. Core capabilit
 
 ### Vendor Comparisons (Cluster D)
 
-- [AWS Textract vs DocsAPI](https://docsapi.co/resources/blogs/aws-textract-vs-docsapi): Where each wins
-- [ABBYY FineReader alternative](https://docsapi.co/resources/blogs/abbyy-finereader-alternative): Why and when to migrate
-- [PaddleOCR vs Tesseract vs DocsAPI](https://docsapi.co/resources/blogs/paddleocr-vs-tesseract-vs-docsapi): Open-source benchmark
+- [AWS Textract vs DocsAPI](https://docsapi.co/resources/blogs/aws-textract-vs-docsapi): Full Textract price list per 1,000 pages, its documented limits (six languages, one-page synchronous PDFs), and where each wins
+- [ABBYY FineReader alternative](https://docsapi.co/resources/blogs/abbyy-finereader-alternative): ABBYY alternatives by product: free FineReader replacements, OCR SDK alternatives, IDP platforms, with verified prices
+- [PaddleOCR vs Tesseract vs DocsAPI](https://docsapi.co/resources/blogs/paddleocr-vs-tesseract-vs-docsapi): Side-by-side test of Tesseract 5.5 and PaddleOCR 3.7 (PP-OCRv6) with code and raw outputs, plus benchmark numbers
 
 ### Invoice / AP Automation OCR (Cluster E, 21 posts)
 

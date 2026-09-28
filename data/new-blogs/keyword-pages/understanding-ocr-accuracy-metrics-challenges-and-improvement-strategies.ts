@@ -226,12 +226,13 @@ OCR output: Invoice INV-20458 dated 2026-03-14 total due $7,250.00 net 30 days</
   category: "Industry Trends",
   date: "May 28, 2025",
   datePublished: "2025-05-28T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "how accurate is ocr",
   secondary_keywords: [
+    "ocr accuracy rate",
     "100% accurate ocr",
     "is ocr 100 percent accurate",
     "ocr accuracy percentage",
@@ -294,6 +295,11 @@ OCR output: Invoice INV-20458 dated 2026-03-14 total due $7,250.00 net 30 days</
       question: "Is OCR accurate on photos taken with a phone?",
       answer:
         "Less than on flatbed scans. In our benchmark, phone-photographed receipts scored 58% on Tesseract, 82% on PaddleOCR and 76% on DocsAPI. The benchmark write-up says pre-processing such as deskew, rotation correction and page boundary detection closes most of that gap, so shoot flat, in even light, and crop before OCR.",
+    },
+    {
+      question: "What is a good OCR accuracy rate?",
+      answer:
+        "For clean printed documents, 97 to 99% character accuracy is normal for modern engines in our benchmark. Judge the OCR accuracy rate at field level, though: with 20 fields per document and 99% accuracy per field, 1 minus 0.99 to the power of 20 means about 18% of documents have at least one wrong field.",
     },
   ],
 }

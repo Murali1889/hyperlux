@@ -10,6 +10,8 @@ export const blog33: BlogPost = {
   description:
     "Contract OCR in 2026: how to extract clauses, renewal dates, obligations and parties from legal documents, with accuracy, tools and CLM integration.",
   metaTag: "Contract OCR: Extract Clauses & Dates (2026 Guide)",
+  summary:
+    "Contract OCR reads contracts and pulls out the terms that matter: parties, effective and renewal dates, notice deadlines, payment terms, obligations and liability caps. Unlike invoices, contracts are free-form legal text, so extraction needs language understanding and a person to confirm high-stakes clauses.",
   content: `
     <p>A procurement team I advised once discovered, during an audit at the worst possible time, that they had auto-renewed a $400K/year SaaS contract they meant to cancel, because the renewal-notice deadline was buried in clause 14.3 of a 60-page agreement nobody had re-read. That is the problem contract OCR solves, and it is a genuinely different problem than invoice OCR. Invoices are structured: vendor, total, date, done. Contracts are dense legal prose where the value hides in clauses that wrap across pages, obligations phrased three different ways, and dates that trigger money. This is the 2026 guide to contract OCR and clause extraction that actually works in production.</p>
 
@@ -86,8 +88,8 @@ export const blog33: BlogPost = {
   category: "AI Document Intelligence",
   date: "July 16, 2026",
   datePublished: "2026-07-16T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "contract ocr",

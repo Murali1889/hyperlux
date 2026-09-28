@@ -10,6 +10,8 @@ export const blog06: BlogPost = {
   description:
     "I tested 11 free online OCR tools on the same 12-page mortgage application. Three were good, two were okay, six wasted my time. The honest results.",
   metaTag: "Free Online OCR Tools: I Tested 11 (Only 3 Worth It)",
+  summary:
+    "Three free options held up when we ran 11 free online OCR tools on the same 12-page scanned document: Google Drive's built-in OCR, the DocsAPI free tier (our product) and OCRmyPDF. Most of the others scrambled layouts, capped usage or pushed paid plans.",
   content: `
     <p>On a Tuesday I had four hours, a list of every free online OCR tool I could find, and the same 12-page mortgage application I would feed each one. The goal was simple: figure out which "free OCR" tools actually work and which are dressed-up watermark traps. Eleven tools. Four hours. One coffee shop. No paid plans.</p>
     <p>If you just want to read a file right now, our <a href="/tools/free-ocr">free OCR tool</a> works in your browser, needs no signup and never uploads your file. Then come back here to see how the other tools compare.</p>
@@ -25,7 +27,7 @@ export const blog06: BlogPost = {
       <li><strong>Watermark and signup traps.</strong> Does the "free" tier actually let you download a usable file?</li>
     </ol>
     <p>The score is out of 10 per category, 50 total. Anything under 30 is "not worth your time". Anything over 40 made my bookmarks bar.</p>
-    <p>Note: I am the founder of DocsAPI, which has a free tier. I tested DocsAPI alongside the rest. Honest disclosure. I tried to be tough on my own product to keep the comparison fair.</p>
+    <p>Disclosure: DocsAPI is our product, and it has a free tier. It was scored alongside the rest with the same rules.</p>
 
     <h2>The Three Worth Using</h2>
 
@@ -129,8 +131,8 @@ export const blog06: BlogPost = {
   category: "OCR How-To",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-06-17T00:00:00.000Z",
-  last_updated: "June 17, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "free ocr online",

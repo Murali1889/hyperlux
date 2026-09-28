@@ -134,12 +134,13 @@ export const blogLd06: BlogPost = {
   category: "Legal",
   date: "September 4, 2026",
   datePublished: "2026-09-04T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "ledes billing format",
   secondary_keywords: [
+    "ledes billing software",
     "LEDES 1998B format",
     "UTBMS task codes",
     "LEDES XML",
@@ -179,6 +180,11 @@ export const blogLd06: BlogPost = {
       question: "How is LEDES XML different from LEDES 1998B?",
       answer:
         "LEDES 1998B is a flat, pipe-delimited file with 24 fields and no native tax support, which keeps it simple but repeats invoice-level data on every line. LEDES XML is hierarchical and schema-validated: XML 2.1 defines 16 segments and 194 data elements with withholding tax and credit note support, and XML 2.2 expands to 18 segments and 206 elements with tiered tax support for multi-jurisdiction billing. Most US firms still default to 1998B unless a specific client requires XML.",
+    },
+    {
+      question: "What does LEDES billing software do?",
+      answer:
+        "It exports a law firm's invoices in a LEDES format, most often LEDES 1998B, so a corporate client's e-billing system can check each line against the client's billing guidelines. Many time-billing and practice management tools include LEDES export; confirm which LEDES version each client requires before you switch tools.",
     },
   ],
 }

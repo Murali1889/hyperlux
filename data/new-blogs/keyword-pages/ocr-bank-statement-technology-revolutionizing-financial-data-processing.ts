@@ -248,12 +248,16 @@ print(routing_ok("123456789"))  # False</code></pre>
   category: "Industry Trends",
   date: "June 12, 2025",
   datePublished: "2025-06-12T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "13 min read",
   author: nupuraUghade,
   primary_keyword: "ocr for bank statements",
   secondary_keywords: [
+    "ocr bank statements",
+    "automated bank statement analyser",
+    "account statement ocr",
+    "scanning bank statements",
     "ocr for checks",
     "ocr for bank checks",
     "ocr for underwriters",
@@ -324,6 +328,21 @@ print(routing_ok("123456789"))  # False</code></pre>
       question: "Why is a passing routing number checksum not enough?",
       answer:
         "The checksum only tests that nine digits are well formed. About 1 in 10 random nine-digit strings passes; in a simulation of 200,000 random strings we saw 9.96% pass. So a pass does not show the number belongs to a bank. Look it up in the Federal Reserve's E-Payments Routing Directory. Neither test shows the check itself is genuine.",
+    },
+    {
+      question: "How do you OCR bank statements accurately?",
+      answer:
+        "Use the bank's original PDF whenever you can: digital statements carry a text layer that tools for OCR bank statements read almost perfectly, while scans and photos are where errors creep in. Then check the running balance on every row and compare the opening and closing balances with the statement summary.",
+    },
+    {
+      question: "What is an automated bank statement analyser?",
+      answer:
+        "Software that reads bank statements, extracts every transaction and then analyses them: payroll and other income deposits, recurring bills, overdraft and NSF fees, and cash-flow trends. Lenders use an automated bank statement analyser to underwrite faster, but it should only analyse statements whose balances have reconciled.",
+    },
+    {
+      question: "What matters when scanning bank statements for OCR?",
+      answer:
+        "Scan at 300 DPI, keep every page including ones that look blank, and avoid angled phone photos. Account statement OCR on a clean 300 DPI scan works well, but keep the running-balance check, because one misread digit changes every balance after it.",
     },
   ],
 }

@@ -51,6 +51,16 @@ const CONTENT = {
         "Contract abstraction is the process of extracting the key commercial and legal data points from a contract (parties, dates, payment terms, obligations, liability caps, auto-renewal triggers) so a team can track them without re-reading the full agreement. Contract abstraction AI reads the legal prose, locates each clause regardless of wording, and produces structured, searchable data.",
     },
     {
+      question: "What is the contract abstraction process?",
+      answer:
+        "The contract abstraction process runs in four steps: collect the contracts in one place, extract the clauses and data points that matter, have a reviewer confirm the high-stakes terms, and load the finished abstract into your contract or lease system with alerts for key dates. Automation speeds up the extraction step; the review step is what makes the abstract trustworthy.",
+    },
+    {
+      question: "What is contract data abstraction?",
+      answer:
+        "Contract data abstraction means pulling specific data points, such as dates, amounts, notice periods and renewal terms, out of contracts into fields you can search, report on and set reminders from. Document abstraction is the same idea applied to any long document, such as leases or loan agreements.",
+    },
+    {
       question: "How accurate is automated contract abstraction?",
       answer:
         "It depends on the clause. Well-structured clauses like effective dates and party names extract at 95% or better. Nuanced clauses like liability caps and complex renewal conditions land at 85% to 90% because the legal language is genuinely ambiguous. Contract abstraction accelerates legal review by 60% to 80% rather than replacing it on high-value agreements.",
@@ -71,7 +81,7 @@ const CONTENT = {
 export default function ContractAbstractionPage() {
   return (
     <main className="flex flex-col min-h-screen">
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service dateModified="2026-09-14" />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service dateModified="2026-09-28" />
       <ContractHero />
       <ManualReviewChallenges />
       <FeatureHighlights />

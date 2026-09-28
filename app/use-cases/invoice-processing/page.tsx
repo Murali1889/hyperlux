@@ -66,12 +66,19 @@ const CONTENT = {
         "For a single accounting integration with a turn-key tool, two to four weeks. For a custom pipeline across multiple ERPs, six to twelve weeks. The slow part is never the OCR itself; it is the validation rules, the exception queue, and the integration into your accounting system.",
     },
   ],
+  related: [
+    { href: "/resources/blogs/accounts-payable-ocr", label: "Accounts payable OCR: how it works and what it costs" },
+    { href: "/resources/blogs/best-ocr-software-for-accounts-payable", label: "Best OCR software for accounts payable" },
+    { href: "/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments", label: "OCR for invoices, receipts and purchase orders" },
+    { href: "/resources/blogs/duplicate-invoice-detection", label: "Duplicate invoice detection: the checks that stop double payments" },
+    { href: "/resources/blogs/3-way-match-invoice-automation", label: "3-way match automation for invoices" },
+  ],
 }
 
 export default function InvoiceProcessingPage() {
   return (
     <>
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service dateModified="2026-09-14" />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service dateModified="2026-09-28" />
     <main className="flex flex-col min-h-screen">
       <InvoiceHero />
       <ManualChallenges />
@@ -79,7 +86,7 @@ export default function InvoiceProcessingPage() {
       <WorkflowDiagram />
       <BusinessImpact />
       <DemoAnimation />
-      <UseCaseContent intro={CONTENT.intro} sections={CONTENT.sections} faqs={CONTENT.faqs} />
+      <UseCaseContent intro={CONTENT.intro} sections={CONTENT.sections} faqs={CONTENT.faqs} related={CONTENT.related} />
       <InvoiceFaq />
       <InvoiceCta />
     </main>

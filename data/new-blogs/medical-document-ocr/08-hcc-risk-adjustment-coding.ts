@@ -10,6 +10,8 @@ export const blogMd08: BlogPost = {
   description:
     "How CMS-HCC coding maps ICD-10-CM codes to Hierarchical Condition Categories, why hierarchies suppress less severe codes, and how V28 changed the math.",
   metaTag: "HCC Risk Adjustment Coding: The Real V28 Hierarchy Logic",
+  summary:
+    "HCC risk adjustment turns the diagnoses documented in a Medicare Advantage patient's chart into a risk score (RAF) that sets CMS payment. Under the CMS-HCC V28 model only some ICD-10-CM codes count, and when codes fall in the same hierarchy only the most severe one pays.",
   content: `
     <p>Two chart notes, six months apart, for the same Medicare Advantage patient. In January, a primary care note reads "chronic kidney disease, stage 3b." In June, a nephrology note reads "chronic kidney disease, stage 4, eGFR 22." Both are technically correct descriptions of a progressing condition. But under the CMS-HCC V28 model, that second note is worth 0.387 more in a patient's risk adjustment factor than the first, using CMS's own published relative factor coefficients for the community non-dual aged population (0.514 for stage 4 versus 0.127 for stage 3b). Multiply that gap across a health plan's full risk pool and you start to understand why risk adjustment coding teams obsess over documentation specificity that would look like pedantry to almost anyone else in healthcare.</p>
 
@@ -106,8 +108,8 @@ export const blogMd08: BlogPost = {
   category: "Healthcare",
   date: "September 6, 2026",
   datePublished: "2026-09-06T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "hcc risk adjustment coding",

@@ -10,6 +10,8 @@ export const blog21: BlogPost = {
   description:
     "OCR for accounting, how invoice and bookkeeping OCR actually works, what it cuts (hours per day), where it fails, and the simple path to production.",
   metaTag: "OCR Accounting Guide, Hours to Seconds Per Doc",
+  summary:
+    "OCR accounting means software that reads invoices, receipts, bank statements, expense reports and purchase orders and pushes the data into your bookkeeping system instead of someone typing it. Start with high-volume documents such as invoices and receipts, and keep a review step for anything that fails validation.",
   content: `
     <p>The first accountant I ever shadowed worked at a 12-person logistics firm in 2019. Her Saturday job was matching invoices to purchase orders by hand. Stack of paper on the left, ERP terminal on the right, a coffee that had gone cold by 10 AM. She told me she had been working Saturdays for 18 months. The OCR pilot we rolled out the next quarter cut her Saturdays to zero by the third month. This guide is the unromantic version of what changed and what we still got wrong.</p>
     <p>If you are weighing whether OCR makes sense for an accounting team, this is the honest field manual. Not a vendor pitch, not a buzzword tour. Just numbers and what to do this month.</p>
@@ -128,8 +130,8 @@ export const blog21: BlogPost = {
   category: "Industry Trends",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "ocr accounting",
