@@ -99,6 +99,22 @@ export const blogSd03: BlogPost = {
 
     <p>Large, EDI-mature suppliers generate their 856 directly from a warehouse management system, populated by what physically scanned onto the outbound truck, which is why Walmart's own implementation guidance stresses building the ASN from actual shipped data rather than from what was merely picked or planned. Smaller and mid-market suppliers, and the growing population of businesses selling into Amazon Vendor Central without a full WMS integration, frequently do not have that direct system-to-system pipeline. The shipment data that eventually becomes HL nodes and SN1 quantities often starts life as a commercial invoice, a 3PL-generated packing slip, or a scanned pallet manifest emailed over as a PDF or image, and someone has to correctly extract carton counts, item quantities, and SSCC assignments from that document before it can be mapped into a valid 856 tree at all. Every one of the structural defects described above, a missing pack level, a mismatched quantity, a wrong SSCC, can originate here just as easily as inside a WMS integration, and it is a step most ASN compliance content skips entirely by assuming the data is already structured and EDI-native by the time anyone is thinking about the 856. Document intelligence tooling that can reliably pull carton counts and item quantities out of a packing slip or manifest, feeding directly into ASN generation rather than a manual re-keying step, closes exactly that gap, and pairs naturally with the reconciliation work covered in our <a href="/resources/blogs/packing-list-reconciliation">packing list reconciliation guide</a>.</p>
 
+    <h2>What does an EDI 856 sample look like?</h2>
+    <p>An 856 EDI document is the X12 Ship Notice/Manifest transaction set. The EDI 856 format is a header (BSN) followed by nested HL loops, one per shipment, order, pack and item. Here is a trimmed, illustrative sample of one carton with one item, using BSN05 code 0001 (shipment, order, pack, item):</p>
+    <pre><code>ST*856*0001~
+BSN*00*SHP12345*20260928*1430*0001~
+HL*1**S~
+HL*2*1*O~
+PRF*PO4501~
+HL*3*2*P~
+MAN*GM*00012345678901234567~
+HL*4*3*I~
+LIN**UP*012345678905~
+SN1**24*EA~
+CTT*4~
+SE*12*0001~</code></pre>
+    <p>Read it top down: HL 1 is the shipment, HL 2 the order (PO 4501) inside it, HL 3 a carton identified by its 18-digit SSCC label in the MAN segment, and HL 4 the item (UPC 012345678905, 24 each) inside that carton. Real files add carrier, dates, addresses and weights, and each retailer's own specification decides which segments are required.</p>
+
     <h2>Building an ASN process that actually holds up</h2>
 
     <p>The practical takeaway from both halves of this, the tree structure and the penalty math, is that ASN accuracy work has to happen before transmission, not after a chargeback arrives. That means validating the HL hierarchy against the specific trading partner's BSN05 requirement and implementation guide rather than a generic template, confirming every SN1 quantity at the item level equals what physically shipped rather than what was merely planned, matching every MAN segment's SSCC-18 value against the barcode actually printed on the carton label, and monitoring the EDI 997 and 824 acknowledgments to confirm the transaction was not just sent but accepted before the freight gates in. Given how connected this is to the physical arrival event itself, it is worth reading alongside our <a href="/resources/blogs/warehouse-receipt-processing">warehouse receipt processing guide</a> and our <a href="/resources/blogs/bill-of-lading-processing">bill of lading processing guide</a>, since all three documents describe overlapping pieces of the same shipment and are frequently reconciled against each other during a receiving dispute.</p>
@@ -118,6 +134,12 @@ export const blogSd03: BlogPost = {
   author: nupuraUghade,
   primary_keyword: "advance ship notice processing",
   secondary_keywords: [
+    "edi 856 sample",
+    "edi 856 format",
+    "856 edi document type",
+    "what is an edi 856",
+    "856 edi api",
+    "amazon edi 856 specification",
     "EDI 856 hierarchical structure",
     "ASN accuracy chargebacks",
     "advance ship notice EDI",
@@ -157,6 +179,11 @@ export const blogSd03: BlogPost = {
       question: "Can an ASN be structurally valid EDI but still trigger a chargeback?",
       answer:
         "Yes. A transaction can pass basic EDI syntax validation while still using the wrong hierarchical structure code, omitting a required level, or containing quantities and SSCC values that do not match the physical shipment, all of which trigger accuracy-based chargebacks regardless of syntactic validity.",
+    },
+    {
+      question: "How does an 856 EDI API integration work?",
+      answer:
+        "An 856 EDI API integration usually works like this: your system sends shipment data as JSON to an EDI provider or integration platform through a REST API; the provider builds the HL hierarchy, validates it against each trading partner's specification, such as the Amazon EDI 856 specification, and transmits the X12 file over AS2 or a VAN.",
     },
   ],
 }

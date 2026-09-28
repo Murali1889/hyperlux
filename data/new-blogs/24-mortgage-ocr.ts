@@ -146,6 +146,9 @@ export const blog24: BlogPost = {
   author: nupuraUghade,
   primary_keyword: "mortgage ocr",
   secondary_keywords: [
+    "mortgage forms ocr",
+    "ocr in home loan",
+    "what is ocr in home loan",
     "loan document ocr",
     "loan application ocr",
     "mortgage document automation",
@@ -185,6 +188,16 @@ export const blog24: BlogPost = {
       question: "What does mortgage OCR cost per loan?",
       answer:
         "Per-loan OCR costs typically run $5-25 depending on packet size and document mix. Compare against the loaded cost of manual processing, usually $300-600 per loan. Payback is fast.",
+    },
+    {
+      question: "What does OCR mean in a home loan?",
+      answer:
+        "In Indian home loans, OCR usually means Own Contribution Receipt: the receipt a builder or seller issues when you pay your own share of the property price, which lenders ask for before releasing the loan. It is unrelated to optical character recognition, the document-reading technology this page covers, although lenders can use OCR in home loan processing to read those receipts too.",
+    },
+    {
+      question: "Which mortgage forms does OCR handle well?",
+      answer:
+        "Standardized forms such as the loan application (Form 1003), W-2s, 1099s and IRS transcripts read well because their layouts rarely change. Pay stubs, bank statements, appraisals and scanned deeds vary far more, so mortgage forms OCR needs checks for each document type and human review of low-confidence fields.",
     },
   ],
 }

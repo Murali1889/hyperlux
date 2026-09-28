@@ -250,12 +250,15 @@ npi_ok("1234567890")  False
   category: "Healthcare",
   date: "September 23, 2026",
   datePublished: "2026-09-23T00:00:00.000Z",
-  dateModified: "2026-09-23T00:00:00.000Z",
-  last_updated: "September 23, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "14 min read",
   author: nupuraUghade,
   primary_keyword: "ocr for healthcare",
   secondary_keywords: [
+    "medical record ocr",
+    "medical document ocr sdk",
+    "ocr medical prescription",
     "ocr for medical records",
     "ocr for insurance cards",
     "ocr for prescriptions",
@@ -319,6 +322,16 @@ npi_ok("1234567890")  False
       question: "Are my scanned documents PHI?",
       answer:
         "If a document links a patient's identity to health care, payment for care or a health condition, yes. HHS gives a medical record, a laboratory report and a hospital bill as examples, because each carries the patient's name or other identifying information. An insurance card in a provider's patient file is tied to payment for care, so treat it as PHI too, and ask your privacy officer if unsure.",
+    },
+    {
+      question: "Can OCR read medical records and prescriptions?",
+      answer:
+        "Typed medical records, lab reports and printed prescriptions read well. Handwritten prescriptions and clinician notes are much harder, and a misread drug name or dose is a patient-safety risk, so medical record OCR should send low-confidence text to a person and never fill in orders automatically.",
+    },
+    {
+      question: "Is there a medical document OCR SDK that runs on-premise?",
+      answer:
+        "Yes. Commercial OCR SDKs and open-source engines such as Tesseract and PaddleOCR can run inside your own network, which helps keep protected health information in-house. A medical document OCR SDK still needs your own checks for codes such as ICD-10 and NDC, and a HIPAA risk assessment covering where images and text are stored.",
     },
   ],
 }

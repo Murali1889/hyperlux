@@ -239,12 +239,15 @@ print(check_digit("G12345678"), check_digit("612345678"))  # G and 6 look the sa
   category: "Compliance",
   date: "September 23, 2026",
   datePublished: "2026-09-23T00:00:00.000Z",
-  dateModified: "2026-09-23T00:00:00.000Z",
-  last_updated: "September 23, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "ocr for passports",
   secondary_keywords: [
+    "drivers license ocr",
+    "driving license ocr",
+    "ocr drivers license",
     "ocr for driver's license",
     "ocr for id cards",
     "ocr for national id",
@@ -308,6 +311,11 @@ print(check_digit("G12345678"), check_digit("612345678"))  # G and 6 look the sa
       question: "Is it legal to scan and store a customer's ID?",
       answer:
         "It depends on where you operate and why you scan. GDPR asks for minimisation and limited storage, EU anti-money-laundering rules set a 5-year record period, and some US states restrict what you may do with license data. Ask your compliance team, and keep only what a rule or process needs.",
+    },
+    {
+      question: "How does drivers license OCR work?",
+      answer:
+        "US and Canadian driver's licenses carry a PDF417 barcode on the back that encodes most printed fields in the AAMVA standard format, so the most reliable drivers license OCR reads the barcode first and uses OCR on the front to cross-check the name, date of birth and license number. Outside North America, driving license OCR relies on the printed front, whose layout varies by country.",
     },
   ],
 }

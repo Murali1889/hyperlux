@@ -115,6 +115,10 @@ export const blog27: BlogPost = {
   author: nupuraUghade,
   primary_keyword: "ocr meaning in finance",
   secondary_keywords: [
+    "what is ocr finance",
+    "ocr finance meaning",
+    "ocr meaning in banking",
+    "ocr meaning in loan",
     "ocr full form in finance",
     "ocr meaning finance",
     "what is ocr in finance",
@@ -154,6 +158,16 @@ export const blog27: BlogPost = {
       question: "How is OCR different from AI document processing?",
       answer:
         "OCR is one step within document AI. Document AI also includes classification, field extraction, validation, and routing. OCR alone produces text. Document AI produces actionable structured data.",
+    },
+    {
+      question: "What does OCR mean in banking and loans?",
+      answer:
+        "Usually optical character recognition, the software that reads statements, applications and IDs. In Indian home loans, though, OCR also means Own Contribution Receipt, the builder's receipt for your down payment, so if a loan officer asks for your OCR they mean that receipt. In banking technology, the OCR meaning in banking is the document-reading software.",
+    },
+    {
+      question: "What is OCR finance?",
+      answer:
+        "The OCR finance meaning is simple: using optical character recognition in finance teams to read invoices, receipts, bank statements and tax forms into accounting and lending systems. The payoff is less manual keying, a faster close and faster loan decisions, and fewer typing errors, as long as the extracted data is checked automatically.",
     },
   ],
 }

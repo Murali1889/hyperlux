@@ -11,12 +11,12 @@ const TODAY = "2026-07-31"
 // for routes whose actual content changed, to avoid fake freshness signals.
 const STATIC_ROUTES: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]; lastModified?: string }[] = [
   { path: "", priority: 1.0, changeFrequency: "weekly", lastModified: "2026-09-21" },
-  { path: "/products", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-09-21" },
+  { path: "/products", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-09-28" },
   { path: "/use-cases", priority: 0.9, changeFrequency: "monthly" },
   { path: "/use-cases/invoice-processing", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-28" },
   { path: "/use-cases/loan-verification", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-14" },
   { path: "/use-cases/id-proofing", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-14" },
-  { path: "/use-cases/contract-abstraction", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-14" },
+  { path: "/use-cases/contract-abstraction", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-28" },
   { path: "/use-cases/digital-archiving", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-14" },
   { path: "/solutions/finance-automation", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-14" },
   { path: "/solutions/legal-automation", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-14" },
@@ -41,7 +41,7 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Metadata
   { path: "/resources/articles", priority: 0.6, changeFrequency: "weekly" },
   { path: "/resources/newsletters", priority: 0.5, changeFrequency: "monthly" },
   { path: "/tools/which-ocr", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/tools/free-ocr", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-21" },
+  { path: "/tools/free-ocr", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-28" },
   { path: "/book-demo", priority: 0.7, changeFrequency: "yearly" },
   { path: "/llms.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-09-21" },
   { path: "/llms-full.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-09-28" },

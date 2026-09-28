@@ -30,6 +30,11 @@ const FAQS = [
       "No. The image or PDF is read inside your browser and is not sent to DocsAPI or any other server. Only the open source OCR engine and its language data are downloaded from a public CDN. Your own security policy still applies to sensitive documents.",
   },
   {
+    question: "Can I OCR a PDF for free here?",
+    answer:
+      "Yes. It is a free OCR PDF tool as well as an image tool: you can OCR PDF free here with no signup, for files up to 20 pages and 25 MB, and every page is read in your browser with nothing uploaded. If you want to keep a scanned PDF as a searchable PDF rather than plain text, a free command-line tool such as OCRmyPDF adds a text layer to the file.",
+  },
+  {
     question: "Which file types and languages does it support?",
     answer:
       "Images (PNG, JPG, WebP, BMP, GIF) and PDFs. Languages include English, Spanish, French, German, Italian, Portuguese, Dutch, Turkish, Russian, Arabic, Hindi, Chinese (Simplified and Traditional), Japanese, Korean, Vietnamese and Indonesian. Pick the language of the text before you press Extract text.",
@@ -69,7 +74,7 @@ const FAQS = [
 export default function FreeOcrPage() {
   return (
     <main className="flex min-h-screen flex-col">
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} datePublished="2026-09-21" dateModified="2026-09-21" />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} datePublished="2026-09-21" dateModified="2026-09-28" />
       <JsonLd
         data={{
           "@context": "https://schema.org",

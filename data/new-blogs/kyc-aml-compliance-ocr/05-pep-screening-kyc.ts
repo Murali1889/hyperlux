@@ -80,12 +80,13 @@ export const blogKa05: BlogPost = {
   category: "Compliance",
   date: "August 24, 2026",
   datePublished: "2026-08-24T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "pep screening kyc",
   secondary_keywords: [
+    "pep api",
     "politically exposed person definition",
     "pep declassification timeline",
     "domestic vs foreign pep",
@@ -125,6 +126,11 @@ export const blogKa05: BlogPost = {
       question: "Why can't a single global PEP flag work for a multinational compliance program?",
       answer:
         "Different jurisdictions can reach genuinely different, simultaneously correct conclusions about the same person's PEP status, which a single binary flag cannot represent.",
+    },
+    {
+      question: "What does a PEP API do?",
+      answer:
+        "A PEP API checks a customer's name, ideally with date of birth and nationality, against lists of politically exposed persons and their family members and close associates, and returns possible matches with a score. It speeds up screening, but a person still reviews the matches, because common names produce many false positives.",
     },
   ],
 }

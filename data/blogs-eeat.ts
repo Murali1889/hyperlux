@@ -11,6 +11,10 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "OCR document management in 2026: the five-layer stack, cost comparison across 5 approaches ($0 to $360K/year), 90-day rollout playbook, and 6 FAQs.",
     primary_keyword: "ocr document management",
     secondary_keywords: [
+      "ocr document management software",
+      "cloud-based ocr document management",
+      "document management system with ocr",
+      "ocr for document management",
       "ocr technology",
       "document automation",
       "ai ocr",
@@ -40,6 +44,16 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
         question: "Is OCR worth it for a small finance team?",
         answer:
           "Yes if you process 200+ documents per month. The break-even point is typically under 6 months once you factor in the cost of manual data entry, error correction, and late payment penalties.",
+      },
+      {
+        question: "What should you look for in OCR document management software?",
+        answer:
+          "Check four things: how documents get in (email, scanner, upload), whether search covers the OCR text inside scanned files, whether it classifies documents and extracts key fields, and how it connects to the systems you already use. Cloud-based OCR document management suits most teams; keep documents on-premise only when regulation requires it.",
+      },
+      {
+        question: "Is a document management system with OCR worth it for a small team?",
+        answer:
+          "Usually, if you scan paper or receive PDFs you need to find later. Using OCR for document management makes scanned files searchable, and a document management system with OCR can also pull out fields such as dates and amounts. For a few documents a week, the OCR built into your scanner software or cloud storage may be enough.",
       },
     ],
   },
@@ -246,6 +260,7 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "How passport OCR cuts identity verification from 90 seconds to under 5, and where it still gets things wrong.",
     primary_keyword: "passport ocr",
     secondary_keywords: [
+      "passport ocr api",
       "passport scanner",
       "mrz reader",
       "identity verification",
@@ -262,6 +277,11 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
         question: "What is MRZ on a passport?",
         answer:
           "The Machine Readable Zone is the two lines of OCR-friendly text at the bottom of the passport bio page. It contains the holder's name, document number, nationality, date of birth, and a checksum, designed specifically for fast, accurate machine reading.",
+      },
+      {
+        question: "What does a passport OCR API return?",
+        answer:
+          "Typically the data-page fields (name, nationality, date of birth, sex, document number, expiry date, issuing country) plus the two MRZ lines and whether their check digits pass. Choose a passport OCR API that returns the check-digit results, because a failed check is the fastest sign of a misread or altered passport.",
       },
     ],
   },
@@ -301,6 +321,7 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "Practical guide to legal document automation: what works, what doesn't, and the change-management traps law firms keep falling into.",
     primary_keyword: "legal document automation",
     secondary_keywords: [
+      "document automation for lawyers",
       "law firm automation",
       "legal document software",
       "contract automation",
@@ -317,6 +338,11 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
         question: "What is legal document automation?",
         answer:
           "Software that generates legal documents from templates and structured client data, contracts, pleadings, wills, intake forms, without manual copy-paste. Cuts drafting time 70-85% on standardized documents.",
+      },
+      {
+        question: "Is document automation for lawyers worth it at a small firm?",
+        answer:
+          "Usually, if the firm drafts the same kinds of documents again and again, such as engagement letters, NDAs, wills or standard pleadings. Document automation for lawyers pays off through fewer drafting errors and faster turnaround; one-off, bespoke work gains little. Start by automating your five most-used templates.",
       },
     ],
   },

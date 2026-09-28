@@ -89,6 +89,10 @@ export const blogKa01: BlogPost = {
   author: nupuraUghade,
   primary_keyword: "mrz passport verification",
   secondary_keywords: [
+    "mrz checker",
+    "mrz reader api",
+    "mrz passport checker",
+    "mrz code passport",
     "icao 9303 check digit algorithm",
     "passport checksum validation",
     "mrz composite check digit",
@@ -128,6 +132,16 @@ export const blogKa01: BlogPost = {
       question: "What happens to a checksum if a forger changes a digit but doesn't update the check digit?",
       answer:
         "The recalculated check digit no longer matches the printed one. A worked example altering a date of birth by one digit shows the check digit shifting from 0 to 7, an immediate, detectable mismatch.",
+    },
+    {
+      question: "How do I use an MRZ checker?",
+      answer:
+        "An MRZ checker recomputes each check digit from the MRZ characters using the repeating 7, 3, 1 weights and compares it with the printed digit; any mismatch flags a misread or an altered field. You can run the steps on this page by hand, or call an MRZ reader API that returns both the parsed fields and the check results.",
+    },
+    {
+      question: "Where is the MRZ code on a passport?",
+      answer:
+        "At the bottom of the passport data page: two lines of 44 characters printed in the OCR-B font, with the < character as filler. Line one holds the document type, issuing country and name; line two holds the document number, nationality, date of birth, sex, expiry date and their check digits.",
     },
   ],
 }

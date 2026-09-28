@@ -96,6 +96,7 @@ export const blogKa15: BlogPost = {
   author: nupuraUghade,
   primary_keyword: "perpetual kyc monitoring",
   secondary_keywords: [
+    "what is perpetual kyc",
     "event driven kyc triggers",
     "pkyc risk scoring mechanism",
     "kyc materiality threshold",
@@ -135,6 +136,11 @@ export const blogKa15: BlogPost = {
       question: "What kind of event carries no weight in a perpetual KYC scoring mechanism?",
       answer:
         "A change with no underlying risk content, such as an address reformatted within the same country, should carry no weight and simply be logged without triggering a review.",
+    },
+    {
+      question: "What is perpetual KYC?",
+      answer:
+        "Perpetual KYC (pKYC) keeps customer due diligence up to date continuously, instead of re-checking every file on a fixed schedule that is often every one to five years depending on risk. It watches for events such as ownership changes, sanctions or adverse media hits and unusual activity, and re-reviews a customer when one of them occurs.",
     },
   ],
 }

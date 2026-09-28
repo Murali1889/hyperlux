@@ -227,12 +227,13 @@ out_deg.txt | line rows read: 2 | ['lines sum to 416.70, subtotal says 431.70']<
   category: "Industry Trends",
   date: "May 12, 2025",
   datePublished: "2025-05-12T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "ocr for invoices",
   secondary_keywords: [
+    "ocr invoice meaning",
     "ocr for receipts",
     "ocr for purchase orders",
     "ocr for expense receipts",
@@ -299,6 +300,11 @@ out_deg.txt | line rows read: 2 | ['lines sum to 416.70, subtotal says 431.70']<
       question: "What is the difference between OCR and intelligent document processing?",
       answer:
         "OCR turns an image into text. Intelligent document processing (IDP) wraps OCR with classification (is this an invoice?), field extraction (which number is the total?), validation (do the numbers add up?) and routing. For AP you need the whole set, because reading characters alone leaves the typing, checking and matching to people.",
+    },
+    {
+      question: "What does OCR invoice mean?",
+      answer:
+        "OCR invoice meaning, in short: an invoice whose data was captured by optical character recognition instead of being typed. In accounts payable it means software reads the vendor, invoice number, dates, line items and totals from the PDF or scan and sends them to your accounting system for checking and approval.",
     },
   ],
 }

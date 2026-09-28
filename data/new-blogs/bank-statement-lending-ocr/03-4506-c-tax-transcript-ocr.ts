@@ -76,12 +76,13 @@ export const blogBl03: BlogPost = {
   category: "Lending",
   date: "August 16, 2026",
   datePublished: "2026-08-16T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "4506-c tax transcript ocr",
   secondary_keywords: [
+    "form 4506-c ocr",
     "irs transcript verification lending",
     "wage and income transcript ocr",
     "tax return transcript reconciliation",
@@ -121,6 +122,11 @@ export const blogBl03: BlogPost = {
       question: "Why is extracting data from a tax transcript different from extracting a W-2 or 1099?",
       answer:
         "Transcripts are dense, text-formatted documents with labeled line items rather than the boxed layout of a W-2 or 1099. Correctly pairing a line label like adjusted gross income with its dollar figure is a harder extraction problem than reading a numbered box.",
+    },
+    {
+      question: "What does Form 4506-C OCR actually read?",
+      answer:
+        "Two things: the signed Form 4506-C request, to confirm who authorized which transcript for which tax years, and, more importantly, the IRS transcript that comes back. In practice Form 4506-C OCR is mostly transcript OCR: reading the figures and comparing them line by line with the tax return the borrower submitted.",
     },
   ],
 }

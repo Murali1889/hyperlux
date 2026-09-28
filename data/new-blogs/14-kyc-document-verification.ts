@@ -138,6 +138,8 @@ export const blog14: BlogPost = {
   author: nupuraUghade,
   primary_keyword: "kyc",
   secondary_keywords: [
+    "kyc documentation",
+    "kyc verification documents",
     "what is kyc",
     "kyc document verification",
     "kyc compliance",
@@ -178,6 +180,11 @@ export const blog14: BlogPost = {
       question: "Can I use OCR alone for KYC verification?",
       answer:
         "No. OCR extracts data but does not verify authenticity. You need OCR plus authenticity checks (security features, MRZ checksums, forgery database lookups) plus identity matching. OCR is one step, not the whole process.",
+    },
+    {
+      question: "What KYC documentation do you need to collect?",
+      answer:
+        "For individuals, KYC documentation usually means a government photo ID (passport, driver's license or national ID card) plus proof of address, such as a recent utility bill or bank statement. For businesses, add formation documents and beneficial ownership information. Which KYC verification documents you accept depends on your regulator and your risk policy.",
     },
   ],
 }
