@@ -11,5 +11,7 @@ import { post as p8 } from "./ocr-for-tax-documents"
 import { post as p9 } from "./ocr-integration-with-accounting-crm-erp"
 import { post as p10 } from "./smarter-invoice-processing-the-ocr-advantage-for-finance-departments"
 import { post as p11 } from "./understanding-ocr-accuracy-metrics-challenges-and-improvement-strategies"
+import { post as p12 } from "./invoice-ocr-api"
+import { post as p13 } from "./smb-lending-automation-document-processing"
 
-export const keywordPages: BlogPost[] = [p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11]
+export const keywordPages: BlogPost[] = [p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13]

@@ -68,15 +68,15 @@ export const blogBl14: BlogPost = {
     <p>None of this is a character-recognition problem in the way earlier posts in this series describe for structured forms like a W-2 or a 1099. It is a methodology problem sitting on top of already-extracted transaction data, the same layer covered from a fraud-detection angle in our <a href="/resources/blogs/personal-loan-document-ocr">loan stacking detection piece</a>, where the raw deposit data was correct and the pattern-recognition logic built on top of it was the part that actually mattered.</p>
     <p>Cash flow underwriting is a genuinely better signal than a lagging credit report in many cases, but only when the metrics behind that claim are actually defined, calculated, and built on correctly categorized transaction data. A general description of "using bank data" without naming the formulas is not a methodology, it is a category, and the difference between the two is exactly what determines whether the resulting decision is trustworthy or simply looks sophisticated because it draws on a richer data source than a credit report while quietly making the same kind of averaging mistake a simpler model would have made anyway. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
 
-    <p>Related guides: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a> and <a href="/resources/blogs/ocr-bank-statement-technology-revolutionizing-financial-data-processing">OCR for bank statements, checks and utility bills</a>.</p>
+    <p>Related guides: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a> and <a href="/resources/blogs/ocr-bank-statement-technology-revolutionizing-financial-data-processing">OCR for bank statements, checks and utility bills</a> and <a href="/resources/blogs/smb-lending-automation-document-processing">SMB lending automation tools for document processing</a>.</p>
   `,
   image: "/images/ocr-process.png",
   featuredImage: "/images/ocr-process.png",
   category: "Lending",
   date: "August 20, 2026",
   datePublished: "2026-08-20T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "cash flow underwriting ocr",

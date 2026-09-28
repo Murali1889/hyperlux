@@ -85,7 +85,7 @@ export const blog18: BlogPost = {
         <tr><td>AnalyzeLending</td><td>Page classification, splitting and extraction</td><td>Mortgage application packages</td></tr>
       </tbody>
     </table>
-    <p>Queries let you ask for a field in plain English, such as "What is the account number?", and get the answer back. They are limited to 15 per page on synchronous calls and 30 on asynchronous calls, and they only work on English documents.</p>
+    <p>Queries let you ask for a field in plain English, such as "What is the account number?", and get the answer back. They are limited to 15 per page on synchronous calls and 30 on asynchronous calls, and they only work on English documents. If invoices are your main job, our <a href="/resources/blogs/invoice-ocr-api">invoice OCR API comparison</a> maps AnalyzeExpense's field names against Azure, Google and Mindee.</p>
 
     <h2>What are AWS Textract's limits?</h2>
     <p>The limits that surprise teams most: only six languages (English, French, German, Italian, Portuguese, Spanish), handwriting only in English, no vertical text, and synchronous calls that accept just one page of a PDF or TIFF. Multi-page PDFs must go through the asynchronous AWS Textract API, up to 3,000 pages and 500 MB per file.</p>
