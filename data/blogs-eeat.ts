@@ -5,6 +5,8 @@ const DATE_MODIFIED = "2026-06-18T00:00:00.000Z"
 
 export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
   "revolutionizing-document-management-with-ocr-technology": {
+    summary:
+      "OCR document management makes scanned and photographed documents searchable and usable by turning images into text. A working setup has five layers: capture, OCR, classification and field extraction, validation, and routing into your systems. Most projects fail in the layers after OCR, not in the OCR itself.",
     description:
       "OCR document management in 2026: the five-layer stack, cost comparison across 5 approaches ($0 to $360K/year), 90-day rollout playbook, and 6 FAQs.",
     primary_keyword: "ocr document management",
@@ -19,8 +21,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "ocr document management system",
     ],
     datePublished: "2025-05-12T00:00:00.000Z",
-    dateModified: "2026-07-04T00:00:00.000Z",
-    last_updated: "July 4, 2026",
+    dateModified: "2026-09-28T00:00:00.000Z",
+    last_updated: "September 28, 2026",
     tags: ["OCR", "document management", "AI", "automation", "fintech"],
     cluster: "ocr",
     faq: [
@@ -126,6 +128,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
   },
 
   "idp-vs-ocr-understanding-the-key-differences-for-automation-success": {
+    summary:
+      "OCR turns an image of text into text. Intelligent document processing (IDP) adds classification, field extraction, validation and routing on top of OCR, so the output is checked data a system can use. Every IDP platform contains OCR; an OCR engine on its own does not do IDP.",
     description:
       "OCR reads pixels. IDP runs a workflow. The 2026 comparison of accuracy, cost, and output type, plus when each wins and named vendors in every category.",
     primary_keyword: "idp vs ocr",
@@ -140,8 +144,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "document automation",
     ],
     datePublished: "2025-05-27T00:00:00.000Z",
-    dateModified: "2026-07-04T00:00:00.000Z",
-    last_updated: "July 4, 2026",
+    dateModified: "2026-09-28T00:00:00.000Z",
+    last_updated: "September 28, 2026",
     tags: ["IDP", "OCR", "comparison", "document AI"],
     cluster: "ocr",
     faq: [
@@ -209,6 +213,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
   },
 
   "intelligent-document-processing-the-future-of-automated-data-extraction": {
+    summary:
+      "Intelligent document processing (IDP) automatically classifies documents, extracts the data that matters and validates it before sending it to business systems. It builds on OCR but adds an understanding of document types and checks, so the output can be used without retyping.",
     description:
       "A practical look at intelligent document processing, what it is, where it beats OCR, and how to deploy it without overengineering.",
     primary_keyword: "intelligent document processing",
@@ -220,8 +226,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "ai document processing",
     ],
     datePublished: "2025-05-28T00:00:00.000Z",
-    dateModified: DATE_MODIFIED,
-    last_updated: LAST_UPDATED,
+    dateModified: "2026-09-28T00:00:00.000Z",
+    last_updated: "September 28, 2026",
     tags: ["IDP", "automation", "document AI"],
     cluster: "ai-doc",
     faq: [
@@ -234,6 +240,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
   },
 
   "passport-ocr-revolutionizing-identity-verification-with-automated-data-extraction": {
+    summary:
+      "Passport OCR reads a passport's data page: the printed visual zone and the machine-readable zone (MRZ) defined by ICAO Document 9303. Because MRZ fields carry check digits, a correct read can be verified mathematically, which makes passport data easier to trust than most other ID documents.",
     description:
       "How passport OCR cuts identity verification from 90 seconds to under 5, and where it still gets things wrong.",
     primary_keyword: "passport ocr",
@@ -245,8 +253,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "id document ocr",
     ],
     datePublished: "2025-05-28T00:00:00.000Z",
-    dateModified: "2026-07-06T00:00:00.000Z",
-    last_updated: "July 6, 2026",
+    dateModified: "2026-09-28T00:00:00.000Z",
+    last_updated: "September 28, 2026",
     tags: ["passport OCR", "KYC", "identity", "MRZ"],
     cluster: "compliance",
     faq: [
@@ -259,6 +267,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
   },
 
   "ocr-in-finance-transforming-document-processing-for-modern-financial-operations": {
+    summary:
+      "OCR in finance converts invoices, receipts, statements and contracts into searchable, machine-readable data, so teams stop keying documents by hand. The value comes from pairing OCR with validation and integration into accounting systems, not from the OCR engine alone.",
     description:
       "Real numbers from finance teams running OCR in production: time saved, errors reduced, and the line items that matter most.",
     primary_keyword: "ocr in finance",
@@ -270,8 +280,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "ocr for accountants",
     ],
     datePublished: "2025-06-02T00:00:00.000Z",
-    dateModified: "2026-07-06T00:00:00.000Z",
-    last_updated: "July 6, 2026",
+    dateModified: "2026-09-28T00:00:00.000Z",
+    last_updated: "September 28, 2026",
     tags: ["OCR", "finance", "accounting", "automation"],
     cluster: "ocr",
     faq: [
@@ -285,6 +295,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
 
   
   "legal-document-automation-the-complete-guide-for-modern-law-firms": {
+    summary:
+      "Legal document automation uses templates, data extraction and workflow software to draft, review and manage legal documents faster and with fewer errors. It pays off most on high-volume, repeatable documents, and attorneys still review anything that carries legal judgment.",
     description:
       "Practical guide to legal document automation: what works, what doesn't, and the change-management traps law firms keep falling into.",
     primary_keyword: "legal document automation",
@@ -296,8 +308,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "document assembly",
     ],
     datePublished: "2025-06-05T00:00:00.000Z",
-    dateModified: "2026-07-06T00:00:00.000Z",
-    last_updated: "July 6, 2026",
+    dateModified: "2026-09-28T00:00:00.000Z",
+    last_updated: "September 28, 2026",
     tags: ["legal", "automation", "law firm", "document assembly"],
     cluster: "industry-trends",
     faq: [
@@ -407,6 +419,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
 
   "the-ultimate-guide-to-small-business-lending-automation-revolutionizing-sba-loans-and-financing":
     {
+    summary:
+      "Small business lending automation uses OCR, data extraction and rules to collect and check loan documents such as bank statements, tax returns and business records, so lenders reach decisions faster and with fewer manual errors. It speeds up SBA and other small business loans without replacing the underwriter's judgment.",
       description:
         "How small business lending automation is shrinking SBA loan timelines from 45 days to under a week, without sacrificing compliance.",
       primary_keyword: "small business lending automation",
@@ -418,8 +432,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
         "fintech lending",
       ],
       datePublished: "2025-06-27T00:00:00.000Z",
-      dateModified: "2026-07-06T00:00:00.000Z",
-      last_updated: "July 6, 2026",
+      dateModified: "2026-09-28T00:00:00.000Z",
+      last_updated: "September 28, 2026",
       tags: ["SBA loans", "lending", "automation", "small business"],
       cluster: "industry-trends",
       faq: [

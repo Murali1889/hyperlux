@@ -13,7 +13,7 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Metadata
   { path: "", priority: 1.0, changeFrequency: "weekly", lastModified: "2026-09-21" },
   { path: "/products", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-09-21" },
   { path: "/use-cases", priority: 0.9, changeFrequency: "monthly" },
-  { path: "/use-cases/invoice-processing", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-14" },
+  { path: "/use-cases/invoice-processing", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-28" },
   { path: "/use-cases/loan-verification", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-14" },
   { path: "/use-cases/id-proofing", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-14" },
   { path: "/use-cases/contract-abstraction", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-14" },

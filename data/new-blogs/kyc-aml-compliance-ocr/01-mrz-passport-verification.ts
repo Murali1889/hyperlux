@@ -10,6 +10,8 @@ export const blogKa01: BlogPost = {
   description:
     "Passport MRZ verification: the actual ICAO 9303 checksum algorithm, a fully computed worked example, and why it also catches OCR errors, not just fraud.",
   metaTag: "Passport MRZ Verification: The Real Algorithm (2026)",
+  summary:
+    "A passport's machine-readable zone (MRZ) protects the document number, birth date and expiry date with check digits: convert each character to a number, multiply by the repeating weights 7, 3, 1, add the results and keep the remainder after dividing by 10. A mismatch means a misread or an altered field.",
   content: `
     <p>KYC vendor content is consistent and confident on one point: the Machine Readable Zone on a passport contains checksums, and validating them catches document tampering. What that content almost never does is show the actual algorithm, the exact letter-to-number conversion, the weighting pattern, or a real, fully computed example proving the math genuinely works the way it is described. "The math is non-trivial" is a true statement that explains nothing.</p>
 
@@ -81,8 +83,8 @@ export const blogKa01: BlogPost = {
   category: "Compliance",
   date: "August 23, 2026",
   datePublished: "2026-08-23T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "mrz passport verification",

@@ -10,6 +10,8 @@ export const blog32: BlogPost = {
   description:
     "Enterprise document OCR in 2026: volume tiers, compliance needs, integration patterns and build vs buy, plus the governance layer SMB OCR skips.",
   metaTag: "Enterprise Document OCR: 2026 Buyer & Build Guide",
+  summary:
+    "Enterprise document OCR is document processing built for millions of pages, audit trails, data governance and integration with systems such as SAP, Oracle and Salesforce. At that scale, choosing a tool is mostly about compliance and integration, because accuracy alone does not survive an audit.",
   content: `
     <p>The most expensive OCR mistake I have watched an enterprise make was picking a tool that hit 98% accuracy in the pilot and then discovering, nine months and $2M into deployment, that it had no way to prove to auditors which documents drove which decisions. Accuracy was never the problem. Governance was. Enterprise document OCR is a fundamentally different problem than the SMB version. Volume, compliance, integration surface, and audit governance change the entire evaluation. This is the honest guide to buying or building an enterprise document processor in 2026, from someone who has helped both Fortune 500s and scale-ups get this decision right and wrong.</p>
 
@@ -99,8 +101,8 @@ export const blog32: BlogPost = {
   category: "AI Document Intelligence",
   date: "July 16, 2026",
   datePublished: "2026-07-16T00:00:00.000Z",
-  dateModified: "2026-07-16T00:00:00.000Z",
-  last_updated: "July 16, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "enterprise document ocr",

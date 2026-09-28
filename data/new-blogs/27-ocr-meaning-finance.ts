@@ -10,6 +10,8 @@ export const blog27: BlogPost = {
   description:
     "OCR in finance: 99% accuracy at less than a penny per page. What it stands for, where it fits in AP, lending, audit, and the tools that actually work in 2026.",
   metaTag: "OCR Meaning in Finance: 99% at $0.01/Page (2026)",
+  summary:
+    "OCR stands for optical character recognition. In finance it means software that reads invoices, bank statements, receipts and tax forms and turns them into data your accounting, lending or ERP systems can use, instead of someone typing it in by hand.",
   content: `
     <p>In March 2026, during a Series C board meeting for a fintech I advise, the CEO was 38 minutes into a slide on their AP automation roadmap when the lead board member, a partner at a top-tier VC, raised a hand and asked, out loud in front of 12 people: "What does OCR actually stand for again?" Half the room laughed nervously. The other half quietly looked relieved someone had asked. The presentation resumed. But it hit me that in most finance conversations, "OCR" gets used as if everyone knows what it means, when in reality most finance leaders have a fuzzy general sense and no clear model of what the tool actually does, where it fits in their stack, or what it should cost. This is the plain-English explainer that should have happened first, with the cost math, the accuracy numbers, three real case studies, and the five questions a CFO should ask before approving any OCR investment in 2026.</p>
 
@@ -107,8 +109,8 @@ export const blog27: BlogPost = {
   category: "Industry Trends",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-07-04T00:00:00.000Z",
-  last_updated: "July 4, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "ocr meaning in finance",

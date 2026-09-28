@@ -10,6 +10,8 @@ export const blogAp04: BlogPost = {
   description:
     "The real Xero Invoices API field mapping for invoice OCR: ACCPAY vs ACCREC, the DRAFT to AUTHORISED status workflow, and where automation actually breaks.",
   metaTag: "Xero Invoice OCR: The Real ACCPAY Field Map (2026)",
+  summary:
+    "To post OCR-read supplier invoices into Xero, create them as Type ACCPAY through the Invoices API, reference the supplier by ContactID, and choose the status on purpose: DRAFT for review, AUTHORISED only after approval. Most sync problems come from mapping and status, not from the OCR.",
   content: `
     <p>A bookkeeper managing eleven client organizations on Xero told me she had "automated" invoice entry for all of them, then spent an hour every Friday manually fixing bills that synced as AUTHORISED before anyone had actually approved them. The OCR tool she used had defaulted every posted bill straight to the AUTHORISED status because that was the simplest integration path to build, not because that was the right workflow for a firm managing client money on someone else's behalf. Nobody had told her the status field was even a choice, and by the time she noticed the pattern, three months of client bills had gone through with zero human review before hitting each client's actual books.</p>
 
@@ -80,8 +82,8 @@ export const blogAp04: BlogPost = {
   category: "Accounts Payable",
   date: "August 10, 2026",
   datePublished: "2026-08-10T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "invoice ocr xero",

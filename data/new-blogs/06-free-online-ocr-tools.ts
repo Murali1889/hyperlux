@@ -10,6 +10,8 @@ export const blog06: BlogPost = {
   description:
     "I tested 11 free online OCR tools on the same 12-page mortgage application. Three were good, two were okay, six wasted my time. The honest results.",
   metaTag: "Free Online OCR Tools: I Tested 11 (Only 3 Worth It)",
+  summary:
+    "Three free options held up when we ran 11 free online OCR tools on the same 12-page scanned document: Google Drive's built-in OCR, the DocsAPI free tier (our product) and OCRmyPDF. Most of the others scrambled layouts, capped usage or pushed paid plans.",
   content: `
     <p>On a Tuesday I had four hours, a list of every free online OCR tool I could find, and the same 12-page mortgage application I would feed each one. The goal was simple: figure out which "free OCR" tools actually work and which are dressed-up watermark traps. Eleven tools. Four hours. One coffee shop. No paid plans.</p>
     <p>If you just want to read a file right now, our <a href="/tools/free-ocr">free OCR tool</a> works in your browser, needs no signup and never uploads your file. Then come back here to see how the other tools compare.</p>

@@ -10,6 +10,8 @@ export const blog14: BlogPost = {
   description:
     "KYC document verification, from someone who sat through three audits in 2025. What auditors actually check, common failure modes, and how to pass cleanly.",
   metaTag: "KYC Document Verification: What Auditors Look For",
+  summary:
+    "KYC document verification is the step where a financial company collects a customer's ID documents, checks they are genuine and confirms they belong to that person. Auditors mostly want evidence: what was collected, what was checked, who approved it and when, kept in an audit trail.",
   content: `
     <p>I sat through three KYC audits in 2025. Two for clients, one for our own program. The thing nobody tells you in advance: the auditor checklist is way shorter than the vendor pitches make it sound. They have a small number of specific things they want to see. If you have those, you pass. If you don't, no amount of fancy tooling saves you.</p>
     <p>This guide is what auditors actually look for, what failure modes you should fix first, and how to build a KYC document verification process that passes without overengineering.</p>
@@ -130,8 +132,8 @@ export const blog14: BlogPost = {
   category: "Compliance",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "kyc",

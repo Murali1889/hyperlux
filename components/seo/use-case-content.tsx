@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { JsonLd } from "@/components/json-ld/JsonLd"
 
 export interface ContentSection {
@@ -10,10 +11,16 @@ export interface ContentFaq {
   answer: string
 }
 
+export interface RelatedLink {
+  href: string
+  label: string
+}
+
 interface UseCaseContentProps {
   intro: string
   sections: ContentSection[]
   faqs?: ContentFaq[]
+  related?: RelatedLink[]
 }
 
 /**
@@ -21,7 +28,7 @@ interface UseCaseContentProps {
  * Adds substantial unique indexable content (Google Helpful Content threshold)
  * plus FAQPage schema. No "use client" so the content is in the initial HTML.
  */
-export function UseCaseContent({ intro, sections, faqs }: UseCaseContentProps) {
+export function UseCaseContent({ intro, sections, faqs, related }: UseCaseContentProps) {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
@@ -37,6 +44,24 @@ export function UseCaseContent({ intro, sections, faqs }: UseCaseContentProps) {
               ))}
             </div>
           ))}
+
+          {related && related.length > 0 && (
+            <div className="mt-10">
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">Related guides</h2>
+              <ul className="list-disc pl-6 space-y-2">
+                {related.map((r) => (
+                  <li key={r.href} className="text-slate-700">
+                    <Link
+                      href={r.href}
+                      className="text-indigo-700 underline decoration-indigo-300 underline-offset-2 hover:text-indigo-900 hover:decoration-indigo-600"
+                    >
+                      {r.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {faqs && faqs.length > 0 && (
             <div className="mt-12">

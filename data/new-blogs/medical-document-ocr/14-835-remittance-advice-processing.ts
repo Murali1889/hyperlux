@@ -10,6 +10,8 @@ export const blogMd14: BlogPost = {
   description:
     "The 835 remittance advice is already parsed EDI, not a document to OCR. Real CLP and CAS segment structure, worked arithmetic, and why re-keying still persists.",
   metaTag: "ANSI X12 835 Remittance Advice: CAS Segments Explained",
+  summary:
+    "The ANSI X12 835 is the HIPAA-required electronic remittance advice a health plan sends a provider, explaining what was billed, allowed and paid for each claim. The CAS segments carry the adjustment reasons, so they are what you read to explain, post and appeal every underpaid dollar.",
   content: `
     <p>An 835 file is not raw data waiting to be interpreted. By the time it lands in a provider's inbox, a payer's adjudication engine has already broken every dollar of every claim into a coded, machine-readable explanation: what was billed, what was allowed, what was paid, and exactly why the rest was withheld. It arrives as a HIPAA-mandated ANSI X12 transaction with a fixed segment grammar, the same grammar for every compliant payer in the country. And yet a large share of the healthcare billing workforce spends its day opening 835 files, or the PDF remittance report a clearinghouse generated from them, and typing the numbers back into a practice management system by hand. That gap, between a document that is already structured and a workflow that treats it as if it weren't, is the subject of this post.</p>
     <p>If you work across the wider set of documents that feed a medical billing or lending pipeline, our <a href="/documents/medical-docs">medical document processing</a> page covers the full range, from CMS-1500 claim forms to insurance cards to remittance files like the one covered here. This post goes specifically into the 835: its real segment structure, why its CAS adjustment segments make it the single richest source of denial-reason data anywhere in the billing chain, and why so much of that structured data still gets manually re-keyed anyway.</p>
@@ -103,8 +105,8 @@ CAS*PR*2*66.00~</code></pre>
   category: "Healthcare",
   date: "September 12, 2026",
   datePublished: "2026-09-12T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "835 remittance advice processing",

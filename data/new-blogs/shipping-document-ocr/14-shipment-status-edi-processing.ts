@@ -10,6 +10,8 @@ export const blogSd14: BlogPost = {
   description:
     "How EDI 214 shipment status codes actually work, why visibility platforms parse AT7 codes instead of free text, and a worked delivery exception sequence.",
   metaTag: "EDI 214 Shipment Status Processing: Reading the Codes",
+  summary:
+    "The EDI 214 is the message a motor carrier sends to report each shipment event, from pickup to delivery. The meaning sits in the AT7 segment: a status code says what happened and a reason code says why, so reading only the status can hide the exceptions the reason code reports.",
   content: `
     <p>An asset-based lender monitoring a borrower's inventory in transit watches a shipment tracker flip to "arrived at delivery location" on a Tuesday afternoon. The system treats that as good news: goods pledged as collateral have reached the buyer, the sale is about to complete, and the borrowing base can be adjusted accordingly. What the tracker does not surface, because nobody built the parsing logic to look for it, is that the same shipment generates three more EDI status events over the following two days: an attempted delivery that failed, a hold for a missed appointment, and finally a refusal by the consignee that sends the trailer back to the shipper's dock. The inventory never changed hands. It is now sitting exactly where it started, and the lender's system still shows it as delivered, because "arrived" was the last status code anyone's dashboard actually rendered.</p>
 
@@ -169,8 +171,8 @@ export const blogSd14: BlogPost = {
   category: "Logistics",
   date: "September 12, 2026",
   datePublished: "2026-09-12T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-09-28T00:00:00.000Z",
+  last_updated: "September 28, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "shipment status edi processing",
