@@ -13,7 +13,7 @@ export const post: BlogPost = {
   summary:
     "OCR only reads a KYC document: it turns the image into text. Verification is the checks you run on that text, such as checksums, expiry rules, cross-document matching, face match and screening. OCR proves what a document says, not that it is genuine or that the applicant is its owner.",
   content: `
-    <p>OCR for KYC documents converts a photo of a passport or ID card into text. That is the whole job. Whether the document is genuine, in date, consistent with the applicant's other papers and held by the right person is decided by separate checks that run on the text. This page covers nine layers of checks, what each catches and misses, and what to keep for auditors.</p>
+    <p>A new customer is signing up on their phone late at night. The ID photo has glare across the date of birth, and if you ask them to retake it twice, they are gone. OCR's job in KYC is to read that document well enough, and fast enough, that the checks after it can do theirs. This guide walks through the nine layers of checks, what each one catches and misses, and what auditors will ask you to show.</p>
 
     <h2>How do companies verify documents automatically?</h2>
 
@@ -150,14 +150,14 @@ date of birth edited to 580325 1 printed 4</code></pre>
     <p>Write the rules first, build the layers in the order above, and send every failure to a retry or a person, never a silent reject. Let clean cases pass end to end. Keep people on exceptions and screening hits, and log each decision with its reason.</p>
 
     <ol>
-      <li><strong>Write the policy as checkable rules:</strong> accepted documents per country and risk tier, and when verification must finish (the US and EU rules below differ on timing).</li>
-      <li><strong>Capture with guidance</strong> and reject bad images at the door.</li>
-      <li><strong>Classify the document before reading it</strong> (passport, ID card or licence, and format such as ICAO's TD1, TD2 or TD3) so the right field positions and checksum rules apply.</li>
-      <li><strong>Read with OCR</strong> and prefer machine readable sources (MRZ, barcode, chip) over printed text. Keep a confidence score per field. If a vision language model does the read, check its output the same way (see <a href="/resources/blogs/vlm-vs-ocr">VLM vs OCR</a>).</li>
-      <li><strong>Validate and cross-check:</strong> check digits, dates parsed with an explicit format per document type, expiry with a forward buffer, then names and addresses against the application and other documents after normalizing.</li>
-      <li><strong>Run liveness and face match</strong>, with thresholds set by what a wrong accept would cost.</li>
-      <li><strong>Screen</strong> against sanctions, PEP and watchlists, and re-screen when lists or customer data change.</li>
-      <li><strong>Route the result</strong> with the table below, then store the evidence and start the retention clocks.</li>
+      <li>Write the policy as checkable rules: accepted documents per country and risk tier, and when verification must finish (the US and EU rules below differ on timing).</li>
+      <li>Capture with guidance and reject bad images at the door.</li>
+      <li>Classify the document before reading it (passport, ID card or licence, and format such as ICAO's TD1, TD2 or TD3) so the right field positions and checksum rules apply.</li>
+      <li>Read with OCR and prefer machine readable sources (MRZ, barcode, chip) over printed text. Keep a confidence score per field. If a vision language model does the read, check its output the same way (see <a href="/resources/blogs/vlm-vs-ocr">VLM vs OCR</a>).</li>
+      <li>Validate and cross-check: check digits, dates parsed with an explicit format per document type, expiry with a forward buffer, then names and addresses against the application and other documents after normalizing.</li>
+      <li>Run liveness and face match, with thresholds set by what a wrong accept would cost.</li>
+      <li>Screen against sanctions, PEP and watchlists, and re-screen when lists or customer data change.</li>
+      <li>Route the result with the table below, then store the evidence and start the retention clocks.</li>
     </ol>
 
     <table>
@@ -176,15 +176,15 @@ date of birth edited to 580325 1 printed 4</code></pre>
 
     <h2>Does OCR for fraud detection in documents work?</h2>
 
-    <p>OCR does not detect fraud by itself. It supplies clean text to checks that do: does the number satisfy its checksum, do the fields agree with each other, does the name match the application. Fraud signals come from those checks plus image and file forensics, and they can miss anything built to be consistent.</p>
+    <p>Forged documents rarely fail the OCR step. They pass it cleanly, which is exactly the problem. OCR does not detect fraud by itself. It supplies clean text to checks that do: does the number satisfy its checksum, do the fields agree with each other, does the name match the application. Fraud signals come from those checks plus image and file forensics, and they can miss anything built to be consistent.</p>
 
     <p>Here is what slips through:</p>
 
     <ul>
-      <li><strong>A genuine document used by the wrong person.</strong> Only liveness and face match address this, and content-only liveness can be beaten by injected video (see <a href="/resources/blogs/liveness-detection-kyc">liveness detection</a>).</li>
-      <li><strong>AI-generated or altered images.</strong> FinCEN's alert of November 13, 2024 says criminals have used generative AI to alter or create images for IDs such as driver's licences and passports, and institutions often found them by re-reviewing account opening documents. Red flags include a photo that does not fit the stated date of birth, identity documents that disagree with each other, and a third-party webcam plugin during a live check.</li>
-      <li><strong>A synthetic identity.</strong> The documents can look real while the person never existed (see <a href="/resources/blogs/synthetic-identity-fraud-detection">synthetic identity fraud</a>).</li>
-      <li><strong>An edited proof of address.</strong> A PDF's metadata can show an edit that is invisible on the page (see <a href="/resources/blogs/proof-of-address-verification">proof of address verification</a>).</li>
+      <li>A genuine document used by the wrong person. Only liveness and face match address this, and content-only liveness can be beaten by injected video (see <a href="/resources/blogs/liveness-detection-kyc">liveness detection</a>).</li>
+      <li>AI-generated or altered images. FinCEN's alert of November 13, 2024 says criminals have used generative AI to alter or create images for IDs such as driver's licences and passports, and institutions often found them by re-reviewing account opening documents. Red flags include a photo that does not fit the stated date of birth, identity documents that disagree with each other, and a third-party webcam plugin during a live check.</li>
+      <li>A synthetic identity. The documents can look real while the person never existed (see <a href="/resources/blogs/synthetic-identity-fraud-detection">synthetic identity fraud</a>).</li>
+      <li>An edited proof of address. A PDF's metadata can show an edit that is invisible on the page (see <a href="/resources/blogs/proof-of-address-verification">proof of address verification</a>).</li>
     </ul>
 
     <p>Beyond IDs, see <a href="/resources/blogs/bank-statement-fraud-detection">bank statement fraud detection</a>, <a href="/resources/blogs/invoice-fraud-detection">invoice fraud detection</a> and the <a href="/resources/blogs/document-fraud-detection-api">document fraud detection API guide</a>.</p>
@@ -214,9 +214,9 @@ date of birth edited to 580325 1 printed 4</code></pre>
     <p>Rules differ by country and licence, but the pattern holds: keep what you collected, the document you relied on, how you verified it, the result, and how you resolved any discrepancy. This summarizes public rules and is not legal advice. Confirm what applies to you with your regulator or counsel.</p>
 
     <ul>
-      <li><strong>US banks (31 CFR 1020.220, the Customer Identification Program or CIP rule).</strong> Collect name, date of birth, address and an identification number, and verify within a reasonable time after the account is opened. Keep the identifying information for five years after the account is closed. Keep a description of each document relied on, the methods and results of verification, and how each substantive discrepancy was resolved, for five years after the record is made.</li>
-      <li><strong>EU (Regulation 2024/1624, the AMLR, applying from 10 July 2027).</strong> Verify identity before the relationship starts, using an identity document plus reliable, independent sources where relevant, or qualifying electronic identification (Articles 22 and 23). Keep copies of the due diligence documents, unredacted, for five years from the end of the relationship, then delete personal data unless other law says otherwise. References can replace copies if the information can be produced immediately and cannot be modified (Article 77).</li>
-      <li><strong>FATF.</strong> Identify and verify customers using reliable, independent source documents, data or information, with a risk-based approach.</li>
+      <li>US banks (31 CFR 1020.220, the Customer Identification Program or CIP rule). Collect name, date of birth, address and an identification number, and verify within a reasonable time after the account is opened. Keep the identifying information for five years after the account is closed. Keep a description of each document relied on, the methods and results of verification, and how each substantive discrepancy was resolved, for five years after the record is made.</li>
+      <li>EU (Regulation 2024/1624, the AMLR, applying from 10 July 2027). Verify identity before the relationship starts, using an identity document plus reliable, independent sources where relevant, or qualifying electronic identification (Articles 22 and 23). Keep copies of the due diligence documents, unredacted, for five years from the end of the relationship, then delete personal data unless other law says otherwise. References can replace copies if the information can be produced immediately and cannot be modified (Article 77).</li>
+      <li>FATF. Identify and verify customers using reliable, independent source documents, data or information, with a risk-based approach.</li>
     </ul>
 
     <p>OCR for audit trail documentation is mostly a data design question. This record fits the wording above. The last row is our suggestion, not a requirement.</p>
@@ -236,17 +236,18 @@ date of birth edited to 580325 1 printed 4</code></pre>
 
     <p>OCR for auditors comes down to showing your work. Pick a closed file at random and check that a stranger could rebuild the decision from the record alone. A step that lives only in someone's memory is not in the trail. For how long to keep each record, see <a href="/resources/blogs/kyc-record-retention-requirements">KYC record retention</a>.</p>
 
-    <h2>What to do next</h2>
+    <h2>Where to begin with KYC</h2>
+    <p>Start small and a little boring: the checks that catch the most problems are usually the cheapest ones.</p>
 
     <ul>
-      <li><strong>Starting from nothing:</strong> pick the documents to accept (see <a href="/resources/blogs/know-your-customer-documents">know your customer documents</a>), build layers 1 to 5 for passports and licences first, and test on your own documents (see <a href="/resources/blogs/how-to-measure-ocr-accuracy">how to measure OCR accuracy</a>).</li>
-      <li><strong>Extracting fields but running no checks:</strong> add check digits, expiry rules and cross-document matching, then log every result.</li>
-      <li><strong>An audit is coming:</strong> pick 20 closed files, try to rebuild each decision from the record alone, and fix the gaps. <a href="/resources/blogs/kyc-document-verification">KYC document verification</a> gives an auditor's view of the same pipeline.</li>
-      <li><strong>Mostly identity documents, lending files or contracts:</strong> see <a href="/resources/blogs/ocr-for-passports-id-cards-and-drivers-licenses">passports, ID cards and driver's licenses</a>, <a href="/resources/blogs/ocr-for-lending-and-underwriting">lending and underwriting</a> or <a href="/resources/blogs/ocr-for-legal-documents">legal documents</a>.</li>
-      <li><strong>Want a product built for this:</strong> DocsAPI is our product, so weigh this accordingly. Its <a href="/solutions/compliance-risk">compliance and risk page</a> covers KYC, AML and audit trail use cases.</li>
+      <li>Starting from nothing: pick the documents to accept (see <a href="/resources/blogs/know-your-customer-documents">know your customer documents</a>), build layers 1 to 5 for passports and licences first, and test on your own documents (see <a href="/resources/blogs/how-to-measure-ocr-accuracy">how to measure OCR accuracy</a>).</li>
+      <li>Extracting fields but running no checks: add check digits, expiry rules and cross-document matching, then log every result.</li>
+      <li>An audit is coming: pick 20 closed files, try to rebuild each decision from the record alone, and fix the gaps. <a href="/resources/blogs/kyc-document-verification">KYC document verification</a> gives an auditor's view of the same pipeline.</li>
+      <li>Mostly identity documents, lending files or contracts: see <a href="/resources/blogs/ocr-for-passports-id-cards-and-drivers-licenses">passports, ID cards and driver's licenses</a>, <a href="/resources/blogs/ocr-for-lending-and-underwriting">lending and underwriting</a> or <a href="/resources/blogs/ocr-for-legal-documents">legal documents</a>.</li>
+      <li>Want a product built for this: DocsAPI is our product, so weigh this accordingly. Its <a href="/solutions/compliance-risk">compliance and risk page</a> covers KYC, AML and audit trail use cases.</li>
     </ul>
 
-    <h2>Sources and how we checked this</h2>
+    <h2>Sources and what we checked</h2>
 
     <ul>
       <li>ICAO, <a href="https://www.icao.int/sites/default/files/publications/DocSeries/9303_p3_cons_en.pdf">Doc 9303 Part 3, 8th edition (2021)</a>: section 4.9, Appendix A and the chip statement. We reproduced examples 1 and 3 in code and matched ICAO's answers of 3 and 8.</li>
@@ -262,10 +263,10 @@ date of birth edited to 580325 1 printed 4</code></pre>
   image: "/images/passport-ocr-revolutionizing.png",
   featuredImage: "/images/passport-ocr-revolutionizing.png",
   category: "Compliance",
-  date: "September 22, 2026",
-  datePublished: "2026-09-22T00:00:00.000Z",
-  dateModified: "2026-09-22T00:00:00.000Z",
-  last_updated: "September 22, 2026",
+  date: "October 5, 2026",
+  datePublished: "2026-10-05T00:00:00.000Z",
+  dateModified: "2026-10-05T00:00:00.000Z",
+  last_updated: "October 5, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "ocr for kyc verification",
@@ -282,7 +283,6 @@ date of birth edited to 580325 1 printed 4</code></pre>
   ],
   tags: ["KYC", "AML", "compliance", "OCR", "identity verification", "audit trail", "document fraud"],
   cluster: "compliance",
-  noindex: true,
   faq: [
     {
       question: "What does OCR stand for in compliance, and is it the HHS Office for Civil Rights?",

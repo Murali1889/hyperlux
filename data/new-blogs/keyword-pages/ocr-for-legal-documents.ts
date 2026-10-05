@@ -13,7 +13,7 @@ export const post: BlogPost = {
   summary:
     "Yes. OCR turns scanned contracts, court filings, deeds, notary records and immigration forms into searchable text and reliably pulls names, dates, numbers and legal descriptions from clean scans. It does not decide what a clause means, whether a title is good, or whether a notarization was proper.",
   content: `
-    <p>Yes, OCR can handle legal documents, and it works best on clean typed pages. It gives you searchable text, then names, dates, case numbers, form numbers and legal descriptions. The traps differ by document type: transcript line numbers, deed measurements, state notary rules, immigration form editions. Below is a table of what OCR extracts from each type, the trap for each, and a checklist for law firms.</p>
+    <p>Nobody went to law school to retype a deed's legal description or to scroll through hundreds of transcript pages looking for one date. OCR can take that reading work off your desk. It cannot tell you what a clause means or whether a notarization is valid, and the traps are different for every document type. Below: what OCR pulls from each kind of legal document, the trap for each, and a checklist before you buy.</p>
 
     <h2>Can OCR handle legal documents, and what does it not decide?</h2>
 
@@ -27,11 +27,11 @@ export const post: BlogPost = {
 
     <p>What OCR leaves to people:</p>
     <ul>
-      <li><strong>What a clause means.</strong> One sentence can name both the law and the courthouse, each tested under a different rule (<a href="/resources/blogs/governing-law-clause-extraction">governing law post</a>).</li>
-      <li><strong>Whether a document is privileged.</strong> Attorney-client privilege and work product follow different tests (<a href="/resources/blogs/privilege-log-automation">privilege log post</a>).</li>
-      <li><strong>Whether a title exception is still live.</strong> The ALTA commitment form's notice says a commitment is not an abstract of title, a legal opinion or an opinion of title.</li>
-      <li><strong>Whether a signer is competent and acting voluntarily.</strong> The model notary law lets a notary refuse when not satisfied, and treats both as matters of the notary's own judgment.</li>
-      <li><strong>What a deadline is when facts sit outside the document.</strong> Our <a href="/resources/blogs/legal-deadline-extraction">legal deadline extraction post</a> shows a four-year limit running 229 days longer because of a guarantor's military service.</li>
+      <li>What a clause means. One sentence can name both the law and the courthouse, each tested under a different rule (<a href="/resources/blogs/governing-law-clause-extraction">governing law post</a>).</li>
+      <li>Whether a document is privileged. Attorney-client privilege and work product follow different tests (<a href="/resources/blogs/privilege-log-automation">privilege log post</a>).</li>
+      <li>Whether a title exception is still live. The ALTA commitment form's notice says a commitment is not an abstract of title, a legal opinion or an opinion of title.</li>
+      <li>Whether a signer is competent and acting voluntarily. The model notary law lets a notary refuse when not satisfied, and treats both as matters of the notary's own judgment.</li>
+      <li>What a deadline is when facts sit outside the document. Our <a href="/resources/blogs/legal-deadline-extraction">legal deadline extraction post</a> shows a four-year limit running 229 days longer because of a guarantor's military service.</li>
     </ul>
 
     <h2>What does OCR extract from each type of legal document?</h2>
@@ -178,7 +178,7 @@ export const post: BlogPost = {
 
     <h2>What should a law firm check before buying or building legal OCR?</h2>
 
-    <p>Test four things on your own worst scans before you sign: accuracy, page and line numbers, where client documents go and how long they stay, and whether every automated step leaves a record. A clean-contract demo proves little, because the engines we compared all read clean typed English at 97-99%.</p>
+    <p>Read this one twice. A tool that shines on clean demo files can still stumble on your oldest, faintest scans, and those are usually the ones you need. Test four things on your own worst scans before you sign: accuracy, page and line numbers, where client documents go and how long they stay, and whether every automated step leaves a record. A clean-contract demo proves little, because the engines we compared all read clean typed English at 97-99%.</p>
 
     <table>
       <thead>
@@ -222,20 +222,21 @@ export const post: BlogPost = {
 
     <p>If you searched for OCR for legal industry, you probably want two answers. First, where it sits: usually inside something else. Relativity's <a href="https://help.relativity.com/RelativityOne/Content/Contracts/Contracts_OCR.htm">help documentation</a> describes a Contracts OCR step that needs imaging first and skips documents that already hold extracted text, and the Second Circuit's guide points filers to Acrobat's text recognition tools. Contract AI platforms and OCR APIs are other routes (our contract OCR guide compares them). A <a href="https://www.llamaindex.ai/insights/best-legal-ocr-software">vendor listicle from LlamaIndex</a> ranks its own product first and gives no accuracy numbers for any tool. Second, market size: we found no legal-specific figure from a source we could check, so we quote none.</p>
 
-    <h2>What to do next</h2>
+    <h2>Before you buy anything</h2>
+    <p>Your oldest, faintest scans are the honest test, so start there instead of with the clean ones.</p>
 
     <ul>
-      <li><strong>Law firm or legal ops:</strong> choose one document type, test 50 of your worst pages, and score by field, not by page.</li>
-      <li><strong>Litigation team:</strong> start with transcripts and dockets. Check five page and line citations and one paperless order.</li>
-      <li><strong>Title company or closing attorney:</strong> test on a file with an unresolved exception, and run a closure check on every legal description.</li>
-      <li><strong>Notary:</strong> read your state's journal and ID rules first, then use OCR for search and completeness checks.</li>
-      <li><strong>Immigration practice:</strong> validate identifiers and edition dates, and keep certified translations separate.</li>
-      <li><strong>Lender or fintech:</strong> see <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a>.</li>
+      <li>Law firm or legal ops: choose one document type, test 50 of your worst pages, and score by field, not by page.</li>
+      <li>Litigation team: start with transcripts and dockets. Check five page and line citations and one paperless order.</li>
+      <li>Title company or closing attorney: test on a file with an unresolved exception, and run a closure check on every legal description.</li>
+      <li>Notary: read your state's journal and ID rules first, then use OCR for search and completeness checks.</li>
+      <li>Immigration practice: validate identifiers and edition dates, and keep certified translations separate.</li>
+      <li>Lender or fintech: see <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a>.</li>
     </ul>
 
     <p>To try extraction on contracts, NDAs and court filings, see our <a href="/documents/legal-docs">legal documents page</a>. Disclosure: DocsAPI is our product. Per our published facts it is cloud-only, does not train on customer documents, deletes content after processing, and holds SOC 2 Type II and ISO 27001. We have not benchmarked a legal document category, so run your own test first.</p>
 
-    <h2>Sources and how we checked this</h2>
+    <h2>Sources</h2>
 
     <p>We opened each page below on September 21, 2026 and used only what it states. Benchmark numbers come from our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">accuracy benchmark</a>.</p>
     <ul>
@@ -250,10 +251,10 @@ export const post: BlogPost = {
   image: "/images/legal-document-automation.png",
   featuredImage: "/images/legal-document-automation.png",
   category: "Legal",
-  date: "September 23, 2026",
-  datePublished: "2026-09-23T00:00:00.000Z",
-  dateModified: "2026-09-23T00:00:00.000Z",
-  last_updated: "September 23, 2026",
+  date: "October 5, 2026",
+  datePublished: "2026-10-05T00:00:00.000Z",
+  dateModified: "2026-10-05T00:00:00.000Z",
+  last_updated: "October 5, 2026",
   readTime: "13 min read",
   author: nupuraUghade,
   primary_keyword: "ocr for legal documents",
@@ -270,7 +271,6 @@ export const post: BlogPost = {
   ],
   tags: ["legal document OCR", "law firms", "contracts", "court documents", "property deeds", "title companies", "notaries", "immigration"],
   cluster: "legal",
-  noindex: true,
   faq: [
     {
       question: "How do I know whether my PDF needs OCR?",

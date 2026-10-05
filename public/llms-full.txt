@@ -1,6 +1,6 @@
 # DocsAPI: Full Manifest for AI Search
 
-> DocsAPI is the document intelligence API for SMB lending and fintech: OCR, classification, KYC document verification, and AML document checks in one honest API. Production scale: ~4M pages per month. Last updated: 2026-09-28.
+> DocsAPI is the document intelligence API for SMB lending and fintech: OCR, classification, KYC document verification, and AML document checks in one honest API. Production scale: ~4M pages per month. Last updated: 2026-10-05.
 
 ## Company facts
 
@@ -74,6 +74,20 @@ DocsAPI provides production document intelligence as an HTTP API. Core capabilit
 - [Accounts payable OCR: how it works and what it costs](https://docsapi.co/resources/blogs/accounts-payable-ocr): The six-step pipeline, the 7 checks before an invoice is paid, a fill-in cost model, and invoice accuracy from our benchmark.
 
 - [How accurate is OCR? Real numbers and why it is never 100%](https://docsapi.co/resources/blogs/understanding-ocr-accuracy-metrics-challenges-and-improvement-strategies): Character vs field accuracy, worked math, what lowers accuracy
+
+### Guides by document type and job (published 2026-10-05)
+
+- [OCR for lending and underwriting](https://docsapi.co/resources/blogs/ocr-for-lending-and-underwriting): What OCR extracts from each loan document, where it fails, and what it never decides.
+- [SMB lending automation tools for document processing](https://docsapi.co/resources/blogs/smb-lending-automation-document-processing): Underwriting platforms vs document AI vs APIs, and a 10-file test packet.
+- [OCR for KYC verification](https://docsapi.co/resources/blogs/ocr-for-kyc-verification): Nine layers of checks, an MRZ worked example, and what auditors expect you to keep.
+- [OCR for passports, ID cards and driver's licenses](https://docsapi.co/resources/blogs/ocr-for-passports-id-cards-and-drivers-licenses): MRZ layouts, AAMVA barcodes, check digits and fixes for bad captures.
+- [Invoice OCR API compared](https://docsapi.co/resources/blogs/invoice-ocr-api): Field names across AWS, Azure, Google and Mindee, official prices per invoice, and validation code.
+- [OCR integration with accounting, CRM and ERP](https://docsapi.co/resources/blogs/ocr-integration-with-accounting-crm-erp): Five steps and field maps for QuickBooks, Xero, NetSuite, SAP and Salesforce.
+- [OCR for tax documents](https://docsapi.co/resources/blogs/ocr-for-tax-documents): W-2 and 1099 box checks, GSTIN, PAN and Aadhaar checks with code.
+- [OCR for legal documents](https://docsapi.co/resources/blogs/ocr-for-legal-documents): What OCR extracts per legal document type and the trap for each.
+- [OCR for medical documents](https://docsapi.co/resources/blogs/ocr-for-medical-documents): Fields, codes and failure points, accuracy, and HIPAA considerations.
+- [OCR for shipping and logistics documents](https://docsapi.co/resources/blogs/ocr-for-shipping-and-logistics-documents): Document map, container and air waybill check digits, one ocean shipment in order.
+- [How to measure OCR accuracy](https://docsapi.co/resources/blogs/how-to-measure-ocr-accuracy): CER, WER and field accuracy, a script we ran, and a 50-document test plan.
 
 ### OCR How-To guides (Cluster A)
 

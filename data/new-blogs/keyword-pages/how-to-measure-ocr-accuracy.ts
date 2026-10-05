@@ -13,7 +13,7 @@ export const post: BlogPost = {
   summary:
     "CER is the share of characters wrong, WER the share of words wrong, and field level accuracy the share of whole fields exactly right. Score fields for invoices and statements, CER and WER for search and reading. A commonly cited bar for printed text is a CER of 1 to 2% or better.",
   content: `
-    <p>Character error rate (CER) is the share of characters the OCR got wrong, word error rate (WER) is the share of words wrong, and field level accuracy is the share of whole fields, like an invoice total, that are exactly right. Score fields for invoices, statements and IDs. Score CER and WER for search and reading. Below: formulas, a script we ran, good scores, and a 50 document test plan.</p>
+    <p>A vendor tells you their OCR is 99% accurate. You run your first batch and roughly one invoice in five comes back with something wrong in it. Both can be true at the same time, and that gap is why this guide exists. It covers which accuracy number to trust for your documents, a script to measure it yourself, and the traps that make a demo look better than production.</p>
 
     <h2>What are CER, WER and field level accuracy, and which one should you use?</h2>
 
@@ -176,12 +176,12 @@ documents with every field right: 1/3</code></pre>
     <p>Pick 50 real documents from production, including the ugly ones. Have two people key every field independently from the original image and a third resolve differences. Run each engine on the same files, then count correct fields, correct documents, and missing versus wrong values. Fifty documents screen out clear failures but cannot settle close calls.</p>
 
     <ol>
-      <li><strong>Fix the fields and rules first.</strong> Pick 5 to 15 fields. For each, write how a match is judged: exact for IDs and dates, numeric for amounts, loose for names.</li>
-      <li><strong>Sample from production, not your best files.</strong> Pick at random within each group (clean PDFs, scans, phone photos, faxes, multi-page), give each hard group at least 5 documents, and cap any one vendor at a few files.</li>
-      <li><strong>Build the truth from the image, not from the OCR.</strong> Correcting OCR output is faster but can bias labels toward the engine's mistakes. In the clinical review cited below, double data entry had the lowest pooled error rate of the methods compared.</li>
-      <li><strong>Run every engine on the same files with fixed settings.</strong> Save raw output and confidence values so you can re-score later.</li>
-      <li><strong>Count.</strong> Field accuracy is correct fields over all fields. Document accuracy is documents with every key field right. Keep missing and wrong apart, and add CER and WER if you transcribed a text region.</li>
-      <li><strong>Report by group, with an interval.</strong> A blended score can hide a large gap between clean PDFs and phone photos.</li>
+      <li>Fix the fields and rules first. Pick 5 to 15 fields. For each, write how a match is judged: exact for IDs and dates, numeric for amounts, loose for names.</li>
+      <li>Sample from production, not your best files. Pick at random within each group (clean PDFs, scans, phone photos, faxes, multi-page), give each hard group at least 5 documents, and cap any one vendor at a few files.</li>
+      <li>Build the truth from the image, not from the OCR. Correcting OCR output is faster but can bias labels toward the engine's mistakes. In the clinical review cited below, double data entry had the lowest pooled error rate of the methods compared.</li>
+      <li>Run every engine on the same files with fixed settings. Save raw output and confidence values so you can re-score later.</li>
+      <li>Count. Field accuracy is correct fields over all fields. Document accuracy is documents with every key field right. Keep missing and wrong apart, and add CER and WER if you transcribed a text region.</li>
+      <li>Report by group, with an interval. A blended score can hide a large gap between clean PDFs and phone photos.</li>
     </ol>
 
     <p>Part 3 of the script shows what a set that size can prove:</p>
@@ -287,23 +287,24 @@ threshold  auto-accepted  wrong-in-accepted  error-rate  sent-to-review
 
     <h2>What goes wrong when you measure OCR accuracy?</h2>
 
-    <p>Most measurement mistakes come from an unfair test, not a bad engine: labels built from the OCR output, matching rules that change per engine, tuning and testing on the same files, and metrics that punish harmless differences such as reading order. Fix those four before you trust any score.</p>
+    <p>Most bad accuracy numbers are not lies. They are honest measurements of the wrong thing. Most measurement mistakes come from an unfair test, not a bad engine: labels built from the OCR output, matching rules that change per engine, tuning and testing on the same files, and metrics that punish harmless differences such as reading order. Fix those four before you trust any score.</p>
 
     <ul>
-      <li><strong>Reading order.</strong> On multi-column pages, an engine that reads the right column first is punished by CER even if every character is right. Score fields, or align text by region.</li>
-      <li><strong>Tuning and testing on the same files.</strong> If you adjust a pipeline until it scores well, test it on documents it never saw.</li>
+      <li>Reading order. On multi-column pages, an engine that reads the right column first is punished by CER even if every character is right. Score fields, or align text by region.</li>
+      <li>Tuning and testing on the same files. If you adjust a pipeline until it scores well, test it on documents it never saw.</li>
     </ul>
 
-    <h2>What to do next</h2>
+    <h2>Where to start this week</h2>
+    <p>You do not need a data science team for this. Fifty of your own documents, a spreadsheet and an afternoon will tell you more than any vendor deck.</p>
 
     <ul>
-      <li><strong>If you need searchable text or an archive:</strong> transcribe 20 pages, score CER and WER, and use a CER of 1 to 2% as a starting bar, with a WER under 5% if search quality matters.</li>
-      <li><strong>If you extract fields from invoices, statements or IDs:</strong> build the 50 document set, score field and document level accuracy, and set thresholds per field. Score handwriting and faxes as their own group (see the <a href="/resources/blogs/handwritten-faxed-invoice-ocr">handwritten and faxed invoice accuracy data</a>), and read <a href="/resources/blogs/invoice-line-item-ocr">where the invoice line item accuracy gap is</a> for tables.</li>
-      <li><strong>If you are choosing an engine:</strong> shortlist two or three by document type from the table above, then test them on your set. Our free <a href="/tools/which-ocr">Which OCR should I use selector</a> asks six questions and maps your document mix to the engines that won those categories in our benchmark. For vision-language models, see <a href="/resources/blogs/vlm-vs-ocr">VLM vs OCR</a>.</li>
-      <li><strong>If you are already live:</strong> sample a few dozen documents a month with frozen rules, per document group. Our <a href="/resources/blogs/ocr-pdf-honest-guide">production lessons from OCR at scale</a> cover the failures that show up first.</li>
+      <li>If you need searchable text or an archive: transcribe 20 pages, score CER and WER, and use a CER of 1 to 2% as a starting bar, with a WER under 5% if search quality matters.</li>
+      <li>If you extract fields from invoices, statements or IDs: build the 50 document set, score field and document level accuracy, and set thresholds per field. Score handwriting and faxes as their own group (see the <a href="/resources/blogs/handwritten-faxed-invoice-ocr">handwritten and faxed invoice accuracy data</a>), and read <a href="/resources/blogs/invoice-line-item-ocr">where the invoice line item accuracy gap is</a> for tables.</li>
+      <li>If you are choosing an engine: shortlist two or three by document type from the table above, then test them on your set. Our free <a href="/tools/which-ocr">Which OCR should I use selector</a> asks six questions and maps your document mix to the engines that won those categories in our benchmark. For vision-language models, see <a href="/resources/blogs/vlm-vs-ocr">VLM vs OCR</a>.</li>
+      <li>If you are already live: sample a few dozen documents a month with frozen rules, per document group. Our <a href="/resources/blogs/ocr-pdf-honest-guide">production lessons from OCR at scale</a> cover the failures that show up first.</li>
     </ul>
 
-    <h2>Sources and how we checked this</h2>
+    <h2>Sources</h2>
 
     <p>We opened each source on September 21, 2026 and took only the facts noted. The script outputs come from running the code shown, and the compounding numbers were checked in Python.</p>
 
@@ -324,10 +325,10 @@ threshold  auto-accepted  wrong-in-accepted  error-rate  sent-to-review
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",
   category: "AI Document Intelligence",
-  date: "September 22, 2026",
-  datePublished: "2026-09-22T00:00:00.000Z",
-  dateModified: "2026-09-22T00:00:00.000Z",
-  last_updated: "September 22, 2026",
+  date: "October 5, 2026",
+  datePublished: "2026-10-05T00:00:00.000Z",
+  dateModified: "2026-10-05T00:00:00.000Z",
+  last_updated: "October 5, 2026",
   readTime: "16 min read",
   author: nupuraUghade,
   primary_keyword: "how to measure ocr accuracy",
@@ -344,7 +345,6 @@ threshold  auto-accepted  wrong-in-accepted  error-rate  sent-to-review
   ],
   tags: ["OCR", "accuracy", "CER", "WER", "benchmark", "metrics", "confidence score"],
   cluster: "ai-doc",
-  noindex: true,
   faq: [
     {
       question: "Do I divide the errors by the length of the truth or of the OCR output?",

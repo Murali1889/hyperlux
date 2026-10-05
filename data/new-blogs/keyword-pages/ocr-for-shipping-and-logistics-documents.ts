@@ -13,7 +13,7 @@ export const post: BlogPost = {
   summary:
     "OCR can read almost every shipping, customs and freight document: bills of lading, air waybills, invoices, customs forms, labels and delivery receipts. It fails on look-alike digits, handwriting and legal meaning, so pair it with check digits and cross-document matching.",
   content: `
-    <p>OCR for logistics can read bills of lading, air waybills, commercial invoices, packing lists, customs forms, delivery receipts, warehouse receipts and shipping labels. It extracts parties, container and tracking numbers, weights, values and dates. It goes wrong on look-alike digits, handwriting and legal meaning, so reliable setups add check digits and cross-document matching. Below: a document map, worked check digits, and one ocean shipment in order.</p>
+    <p>One digit. That is all it takes for a container number or an air waybill to point at someone else's cargo, and a 3 and an 8 look alike on a faded carbon copy. OCR for logistics reads bills of lading, air waybills, commercial invoices, packing lists, customs forms and labels. The setups that hold up treat check digits and cross-document matching as part of the job. Below: a document map, worked check digits, and one ocean shipment in order.</p>
 
     <h2>Which shipping and customs documents can OCR read?</h2>
 
@@ -47,9 +47,9 @@ export const post: BlogPost = {
     <p>Three failure patterns repeat.</p>
 
     <ul>
-      <li><strong>Look-alike digits.</strong> 3 and 8, 0 and 7, 1 and 8. Check digits catch most swaps, not all.</li>
-      <li><strong>Meaning and matching, not text.</strong> "To order of" wording, a nonnegotiable stamp or a signed certificate can be read perfectly and still be judged wrong, and a delivery receipt can be read correctly and still fail to join to its shipment.</li>
-      <li><strong>Handwriting and phone photos.</strong> Our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a> measured character accuracy on handwritten forms at 61% (Tesseract), 73% (PaddleOCR) and 78% (DocsAPI, our product), and on phone-photographed receipts at 58%, 82% and 76%. It had no shipping documents, so read these as stand-ins.</li>
+      <li>Look-alike digits. 3 and 8, 0 and 7, 1 and 8. Check digits catch most swaps, not all.</li>
+      <li>Meaning and matching, not text. "To order of" wording, a nonnegotiable stamp or a signed certificate can be read perfectly and still be judged wrong, and a delivery receipt can be read correctly and still fail to join to its shipment.</li>
+      <li>Handwriting and phone photos. Our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a> measured character accuracy on handwritten forms at 61% (Tesseract), 73% (PaddleOCR) and 78% (DocsAPI, our product), and on phone-photographed receipts at 58%, 82% and 76%. It had no shipping documents, so read these as stand-ins.</li>
     </ul>
 
     <h2>How do check digits catch a misread container or air waybill number?</h2>
@@ -95,22 +95,22 @@ for s in ("5871748", "5871798", "5878748"):
     <p>This assumes the forwarder issues the house bill and the goods enter the US. Other lanes change the customs steps, not the logic.</p>
 
     <ol>
-      <li><strong>Shipping instructions and booking.</strong> These feed the bill of lading, so every later document is checked against them. <a href="/resources/blogs/incoterms-clause-extraction">Incoterms clause extraction</a> shows what the 11 Incoterms 2020 rules change and why FCA and FOB move risk at different points.</li>
-      <li><strong>Commercial invoice and packing list.</strong> Quantities must tie out even when descriptions share no words (19 CFR 141.86 lists what an invoice must state). <a href="/resources/blogs/packing-list-reconciliation">Packing list reconciliation</a> shows what to match on instead of text.</li>
-      <li><strong>Special-cargo and origin papers.</strong> A dangerous goods declaration if needed, a certificate of origin if a trade agreement is claimed. <a href="/resources/blogs/dangerous-goods-declaration-processing">Dangerous goods declaration processing</a> shows how a transposed UN number stays valid, and <a href="/resources/blogs/certificate-of-origin-verification">certificate of origin verification</a> shows the math behind a US-Mexico-Canada Agreement claim.</li>
-      <li><strong>Security filing (ISF) data.</strong> Due 24 hours before loading at the foreign port (19 CFR 149.2). Manufacturer, ship-to party, origin and the six-digit HTS number come off the invoice. <a href="/resources/blogs/hs-code-classification">HS code classification</a> explains why choosing the code is not a lookup.</li>
-      <li><strong>Container loading.</strong> Read the container number and seal, and run the check digit. The VGM must reach the carrier and terminal before loading. <a href="/resources/blogs/vgm-declaration-processing">VGM declaration processing</a> covers how a valid weight still gets a container rolled.</li>
-      <li><strong>House and master bills.</strong> Reconcile container, seal, total pieces and weight, and check negotiability on each layer. <a href="/resources/blogs/master-house-bill-of-lading-reconciliation">Master and house bill reconciliation</a> shows how one wrong piece count can hold an entire container.</li>
-      <li><strong>Letter of credit papers, if used.</strong> The bank checks documents, not goods. <a href="/resources/blogs/letter-of-credit-document-compliance">Letter of credit document compliance</a> walks through the UCP 600 (the letter of credit rulebook) 21-day presentation rule.</li>
-      <li><strong>Customs entry.</strong> CBP Form 3461 requests release, and the entry summary (Form 7501) follows within ten working days. <a href="/resources/blogs/customs-entry-summary-processing">Entry summary processing</a> covers the fields that set duty, and <a href="/resources/blogs/customs-power-of-attorney-processing">customs power of attorney processing</a> explains why a partnership's lapses after two years.</li>
-      <li><strong>Container pickup and return.</strong> Gate records and hold codes decide who owes demurrage and detention. <a href="/resources/blogs/demurrage-detention-documentation">Demurrage and detention documentation</a> lists the records that prove the timeline.</li>
-      <li><strong>Delivery.</strong> <a href="/resources/blogs/proof-of-delivery-processing">Proof of delivery processing</a> shows how a receipt with a misread PRO number still matches on date, weight and lane.</li>
-      <li><strong>Billing.</strong> Carrier invoices carry accessorial charges (extras such as liftgate or detention) the bill of lading may not authorize. <a href="/resources/blogs/freight-invoice-automation">Freight invoice automation</a> covers EDI 210, and <a href="/resources/blogs/freight-bill-audit-automation">freight bill audit automation</a> covers the overcharges an audit catches and the 180-day dispute window.</li>
+      <li>Shipping instructions and booking. These feed the bill of lading, so every later document is checked against them. <a href="/resources/blogs/incoterms-clause-extraction">Incoterms clause extraction</a> shows what the 11 Incoterms 2020 rules change and why FCA and FOB move risk at different points.</li>
+      <li>Commercial invoice and packing list. Quantities must tie out even when descriptions share no words (19 CFR 141.86 lists what an invoice must state). <a href="/resources/blogs/packing-list-reconciliation">Packing list reconciliation</a> shows what to match on instead of text.</li>
+      <li>Special-cargo and origin papers. A dangerous goods declaration if needed, a certificate of origin if a trade agreement is claimed. <a href="/resources/blogs/dangerous-goods-declaration-processing">Dangerous goods declaration processing</a> shows how a transposed UN number stays valid, and <a href="/resources/blogs/certificate-of-origin-verification">certificate of origin verification</a> shows the math behind a US-Mexico-Canada Agreement claim.</li>
+      <li>Security filing (ISF) data. Due 24 hours before loading at the foreign port (19 CFR 149.2). Manufacturer, ship-to party, origin and the six-digit HTS number come off the invoice. <a href="/resources/blogs/hs-code-classification">HS code classification</a> explains why choosing the code is not a lookup.</li>
+      <li>Container loading. Read the container number and seal, and run the check digit. The VGM must reach the carrier and terminal before loading. <a href="/resources/blogs/vgm-declaration-processing">VGM declaration processing</a> covers how a valid weight still gets a container rolled.</li>
+      <li>House and master bills. Reconcile container, seal, total pieces and weight, and check negotiability on each layer. <a href="/resources/blogs/master-house-bill-of-lading-reconciliation">Master and house bill reconciliation</a> shows how one wrong piece count can hold an entire container.</li>
+      <li>Letter of credit papers, if used. The bank checks documents, not goods. <a href="/resources/blogs/letter-of-credit-document-compliance">Letter of credit document compliance</a> walks through the UCP 600 (the letter of credit rulebook) 21-day presentation rule.</li>
+      <li>Customs entry. CBP Form 3461 requests release, and the entry summary (Form 7501) follows within ten working days. <a href="/resources/blogs/customs-entry-summary-processing">Entry summary processing</a> covers the fields that set duty, and <a href="/resources/blogs/customs-power-of-attorney-processing">customs power of attorney processing</a> explains why a partnership's lapses after two years.</li>
+      <li>Container pickup and return. Gate records and hold codes decide who owes demurrage and detention. <a href="/resources/blogs/demurrage-detention-documentation">Demurrage and detention documentation</a> lists the records that prove the timeline.</li>
+      <li>Delivery. <a href="/resources/blogs/proof-of-delivery-processing">Proof of delivery processing</a> shows how a receipt with a misread PRO number still matches on date, weight and lane.</li>
+      <li>Billing. Carrier invoices carry accessorial charges (extras such as liftgate or detention) the bill of lading may not authorize. <a href="/resources/blogs/freight-invoice-automation">Freight invoice automation</a> covers EDI 210, and <a href="/resources/blogs/freight-bill-audit-automation">freight bill audit automation</a> covers the overcharges an audit catches and the 180-day dispute window.</li>
     </ol>
 
     <h2>How does OCR for customs forms work, and who decides the classification?</h2>
 
-    <p>OCR reads customs forms and the papers behind them. It does not decide what the goods are, what they are worth for duty, or whether an origin claim holds. In the US, entries are typically filed electronically in ACE (CBP's Automated Commercial Environment), so OCR mostly reads the invoices, bills and certificates the filing is built from.</p>
+    <p>Customs is where a confident wrong answer costs real money, so it is also where OCR should be most modest. OCR reads customs forms and the papers behind them. It does not decide what the goods are, what they are worth for duty, or whether an origin claim holds. In the US, entries are typically filed electronically in ACE (CBP's Automated Commercial Environment), so OCR mostly reads the invoices, bills and certificates the filing is built from.</p>
 
     <p>Three forms to know: CBP Form 3461 (Entry/Immediate Delivery), Form 7501 (the entry summary) and Form 5291 (the customs power of attorney). On the 7501, get entered value right, not the invoice total: it starts from the invoice, removes non-dutiable charges such as international freight and insurance, and adds dutiable items such as assists.</p>
 
@@ -144,19 +144,20 @@ for s in ("5871748", "5871798", "5878748"):
 
     <p>OCR for shipping companies (carriers, truckers, parcel firms) hits the same wall. Printed bills of lading read easily, handwritten delivery receipts do not, and the bigger bottleneck is joining each receipt to one shipment. Pallet, a vendor selling an AI product for freight documents, argues template-based OCR breaks on format variety, and its author describes a mid-sized carrier needing 500 bill of lading templates. Read that as one vendor's view, and test any tool on your own documents.</p>
 
-    <h2>What to do next</h2>
+    <h2>Where to start on your shipments</h2>
+    <p>Begin with the numbers that carry check digits. That accuracy is free.</p>
 
     <ul>
       <li><strong>Freight forwarder or NVOCC (a non-vessel-operating carrier that issues house bills):</strong> start with shipping instructions, house and master bills and the container check digit.</li>
-      <li><strong>Carrier, trucker or parcel company:</strong> fix delivery receipt matching and freight invoice lines first, because those drive payment.</li>
-      <li><strong>Warehouse operator:</strong> keep barcodes for labels and pallets, and point OCR at supplier packing slips and driver paperwork.</li>
-      <li><strong>Trade or inventory lender:</strong> classify negotiable versus non-negotiable wording first, then see <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a>.</li>
-      <li><strong>Choosing a tool:</strong> score field-level accuracy on your own sample (see <a href="/resources/blogs/how-to-measure-ocr-accuracy">how to measure OCR accuracy</a>), and ask whether it validates container and air waybill numbers or only reads them.</li>
+      <li>Carrier, trucker or parcel company: fix delivery receipt matching and freight invoice lines first, because those drive payment.</li>
+      <li>Warehouse operator: keep barcodes for labels and pallets, and point OCR at supplier packing slips and driver paperwork.</li>
+      <li>Trade or inventory lender: classify negotiable versus non-negotiable wording first, then see <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a>.</li>
+      <li>Choosing a tool: score field-level accuracy on your own sample (see <a href="/resources/blogs/how-to-measure-ocr-accuracy">how to measure OCR accuracy</a>), and ask whether it validates container and air waybill numbers or only reads them.</li>
     </ul>
 
     <p>To try your own files, DocsAPI (our product) lists bills of lading, proofs of delivery and packing lists on its <a href="/documents/shipping-docs">shipping documents page</a>. We have not tested any vendor's shipping tools for this page.</p>
 
-    <h2>Sources and how we checked this</h2>
+    <h2>Sources</h2>
 
     <p>We checked these on September 21, 2026.</p>
 
@@ -174,10 +175,10 @@ for s in ("5871748", "5871798", "5878748"):
   image: "/images/ocr-process.png",
   featuredImage: "/images/ocr-process.png",
   category: "Logistics",
-  date: "September 24, 2026",
-  datePublished: "2026-09-24T00:00:00.000Z",
-  dateModified: "2026-09-24T00:00:00.000Z",
-  last_updated: "September 24, 2026",
+  date: "October 5, 2026",
+  datePublished: "2026-10-05T00:00:00.000Z",
+  dateModified: "2026-10-05T00:00:00.000Z",
+  last_updated: "October 5, 2026",
   readTime: "13 min read",
   author: nupuraUghade,
   primary_keyword: "OCR for logistics",
@@ -203,7 +204,6 @@ for s in ("5871748", "5871798", "5878748"):
     "warehouse",
   ],
   cluster: "logistics",
-  noindex: true,
   faq: [
     {
       question: "How accurate is OCR on bills of lading and other shipping documents?",

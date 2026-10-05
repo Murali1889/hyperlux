@@ -13,7 +13,7 @@ export const post: BlogPost = {
   summary:
     "OCR can turn scanned or photographed medical records, insurance cards, prescriptions, lab reports and claims into usable fields. Clean print reads well, but handwriting, faxes and medical codes need checking. Software is not HIPAA compliant by itself: the vendor agreement (BAA) and controls decide.",
   content: `
-    <p>OCR for healthcare reads the text in scanned, faxed or photographed medical documents, and extraction software then pulls out fields such as member ID, drug name, test name and diagnosis code. Clean print reads well. Handwriting, fax quality and code mapping are where errors hide. HIPAA safety depends on your vendor agreement and controls, not on the OCR itself. Not legal advice.</p>
+    <p>A fax lands at 4:50 pm, a little crooked, with a drug name handwritten in the margin. Somebody has to decide whether it says hydroxyzine or hydralazine before it goes anywhere near a chart or a claim. OCR reads most of that page well. The parts it cannot read safely are exactly the ones that matter, and this guide is about telling the two apart. It is not legal advice.</p>
 
     <h2>What can OCR do with medical documents?</h2>
 
@@ -22,11 +22,11 @@ export const post: BlogPost = {
     <p>Most failures happen after the reading step. Software must decide which text is the member ID and which is the group number, then validate values against code lists, check digits and arithmetic, and send doubtful fields to a person. Here is how that plays out for the five document families people search for most.</p>
 
     <ul>
-      <li><strong>OCR for medical records</strong> turns charts and outside records into searchable text and splits multi-report PDFs.</li>
-      <li><strong>OCR for insurance cards</strong> reads member ID, group number, payer ID and pharmacy numbers from both sides.</li>
-      <li><strong>OCR for prescriptions</strong> reads drug, strength, quantity, directions and prescriber identifiers.</li>
-      <li><strong>OCR for lab reports</strong> reads tests, results, units and reference ranges, then maps tests to LOINC codes.</li>
-      <li><strong>OCR for insurance claims</strong> reads claim forms such as the CMS-1500, plus EOBs and remittance advice.</li>
+      <li>OCR for medical records turns charts and outside records into searchable text and splits multi-report PDFs.</li>
+      <li>OCR for insurance cards reads member ID, group number, payer ID and pharmacy numbers from both sides.</li>
+      <li>OCR for prescriptions reads drug, strength, quantity, directions and prescriber identifiers.</li>
+      <li>OCR for lab reports reads tests, results, units and reference ranges, then maps tests to LOINC codes.</li>
+      <li>OCR for insurance claims reads claim forms such as the CMS-1500, plus EOBs and remittance advice.</li>
     </ul>
 
     <p>A naming trap: in HIPAA writing, "OCR" usually means the HHS Office for Civil Rights, which enforces the HIPAA rules. This page is about optical character recognition, the software. The two meet in the HIPAA section below.</p>
@@ -123,23 +123,23 @@ export const post: BlogPost = {
     <h3>What published medical studies found</h3>
 
     <ul>
-      <li><strong>Mayo Clinic, JAMIA Open, 2026.</strong> OCR plus a large language model processed 1,303 scanned outside-record PDFs from 116 institutions (breast cancer care). F1 scores (1.0 is perfect) were 0.95 for splitting multi-report PDFs, 0.96 for classifying documents and 0.90 for extracting study dates. In a pilot of 45 records, clinicians reported 2 classification errors and 1 date error, and estimated review time fell 40%.</li>
-      <li><strong>PLoS One, 2024.</strong> 38 volunteers recorded medication lists from photos of pharmacy notebooks, by OCR and by typing on a smartphone. Errors (characters omitted or misread) were 0.62% for OCR (30 of 4,814) and 1.10% for typing (53 of 4,814). A six-medication list took 18 seconds by OCR and 144 by typing, 8 times faster (144 ÷ 18 = 8). It used only six photos in a simulation, and several authors were paid by the OCR tool's maker.</li>
+      <li>Mayo Clinic, JAMIA Open, 2026. OCR plus a large language model processed 1,303 scanned outside-record PDFs from 116 institutions (breast cancer care). F1 scores (1.0 is perfect) were 0.95 for splitting multi-report PDFs, 0.96 for classifying documents and 0.90 for extracting study dates. In a pilot of 45 records, clinicians reported 2 classification errors and 1 date error, and estimated review time fell 40%.</li>
+      <li>PLoS One, 2024. 38 volunteers recorded medication lists from photos of pharmacy notebooks, by OCR and by typing on a smartphone. Errors (characters omitted or misread) were 0.62% for OCR (30 of 4,814) and 1.10% for typing (53 of 4,814). A six-medication list took 18 seconds by OCR and 144 by typing, 8 times faster (144 ÷ 18 = 8). It used only six photos in a simulation, and several authors were paid by the OCR tool's maker.</li>
     </ul>
 
     <p>The useful comparison is against typing, not perfection. Both studies are small and narrow, so neither predicts your mix of documents. Character accuracy can also look excellent while a claim bounces: a correct read of "Glucose" still needs the right specimen code. Our post on <a href="/resources/blogs/understanding-ocr-accuracy-metrics-challenges-and-improvement-strategies">why 99% accuracy can still mean wrong data</a> explains the gap, and <a href="/resources/blogs/how-to-measure-ocr-accuracy">how to measure OCR accuracy</a> shows how to score your own documents.</p>
 
     <h2>How do you catch OCR errors before they reach a claim?</h2>
 
-    <p>Use checks that do not depend on the OCR engine: check digits for identifiers, official code lists, arithmetic on payment documents, and a person for low-confidence fields. A wrong value that looks right is worse than a blank field, so send doubts to review instead of guessing.</p>
+    <p>In healthcare a misread is not a typo. It can be the wrong drug, the wrong patient or a denied claim. Use checks that do not depend on the OCR engine: check digits for identifiers, official code lists, arithmetic on payment documents, and a person for low-confidence fields. A wrong value that looks right is worse than a blank field, so send doubts to review instead of guessing.</p>
 
     <ol>
-      <li><strong>Identifiers.</strong> NPI and DEA numbers carry check digits. A failed check catches a misread digit. A pass does not prove the person exists, can prescribe or can bill.</li>
-      <li><strong>Drug codes.</strong> Convert a 10-digit NDC to the 11-digit 5-4-2 billing form by adding a zero to the short segment, not to the front of the string.</li>
-      <li><strong>Diagnosis codes.</strong> An ICD-10-CM code has 3 to 7 characters and is invalid without a required 7th. CMS says new codes take effect October 1, 2026, so check the list for the date of service.</li>
-      <li><strong>Payment arithmetic.</strong> On an EOB, allowed amount minus plan payment should equal what the patient owes.</li>
-      <li><strong>Reason codes in pairs.</strong> X12 says CARC 16 requires at least one remark code.</li>
-      <li><strong>Fields, not pages.</strong> Score each field, and score 50 of your messiest real documents against hand-typed answers before you scale.</li>
+      <li>Identifiers. NPI and DEA numbers carry check digits. A failed check catches a misread digit. A pass does not prove the person exists, can prescribe or can bill.</li>
+      <li>Drug codes. Convert a 10-digit NDC to the 11-digit 5-4-2 billing form by adding a zero to the short segment, not to the front of the string.</li>
+      <li>Diagnosis codes. An ICD-10-CM code has 3 to 7 characters and is invalid without a required 7th. CMS says new codes take effect October 1, 2026, so check the list for the date of service.</li>
+      <li>Payment arithmetic. On an EOB, allowed amount minus plan payment should equal what the patient owes.</li>
+      <li>Reason codes in pairs. X12 says CARC 16 requires at least one remark code.</li>
+      <li>Fields, not pages. Score each field, and score 50 of your messiest real documents against hand-typed answers before you scale.</li>
     </ol>
 
     <p>Here is a check for items 1 and 2, in plain Python 3. The NPI rule and its example (1234567893) come from the CMS check digit document. The NDC rule, adding a leading zero to the appropriate segment, comes from the FDA's March 2026 final rule text.</p>
@@ -179,11 +179,11 @@ npi_ok("1234567890")  False
     <p>Every document on this page is protected health information (PHI) once it ties a patient's identity to health care or payment. HHS's examples are a medical record, a laboratory report and a hospital bill. HHS's Office for Civil Rights (the other OCR) says it "does not endorse, certify, or recommend specific technology or products," so ask what a "HIPAA compliant" badge rests on. Five things decide the answer.</p>
 
     <ol>
-      <li><strong>The BAA.</strong> A vendor that creates, receives, maintains or transmits PHI for you is a business associate, even if it stores only encrypted data and holds no key. HHS says using a cloud provider to maintain ePHI without a BAA is a violation. Under 45 CFR 164.504(e) the contract must limit use of the data, require safeguards and, where feasible, return or destroy PHI at the end.</li>
-      <li><strong>Access controls and logs.</strong> The Security Rule requires administrative, physical and technical safeguards, including access control, audit controls (records of who touched what), authentication and transmission security. Ask who at the vendor can open your documents and how that is logged.</li>
-      <li><strong>Retention and deletion.</strong> HIPAA does not set how long medical records must be kept. HHS says state law generally does. Ask how long the vendor keeps a file after processing, whether you can delete on demand, and whether your documents train models. A business associate may use PHI only as its contract permits.</li>
-      <li><strong>De-identification.</strong> HHS recognizes Expert Determination and Safe Harbor, which removes 18 listed identifiers. De-identified data is no longer PHI, but redaction that misses a name in a margin note has not de-identified anything. A business associate may de-identify for you only if the BAA authorizes it. See <a href="/resources/blogs/hipaa-deidentification-automation">HIPAA de-identification automation</a>.</li>
-      <li><strong>Minimum necessary.</strong> Send and keep only what the job needs. It is a different standard from de-identification and has exceptions, such as treatment disclosures and signed authorizations. See <a href="/resources/blogs/hipaa-minimum-necessary-redaction">HIPAA minimum necessary redaction</a>.</li>
+      <li>The BAA. A vendor that creates, receives, maintains or transmits PHI for you is a business associate, even if it stores only encrypted data and holds no key. HHS says using a cloud provider to maintain ePHI without a BAA is a violation. Under 45 CFR 164.504(e) the contract must limit use of the data, require safeguards and, where feasible, return or destroy PHI at the end.</li>
+      <li>Access controls and logs. The Security Rule requires administrative, physical and technical safeguards, including access control, audit controls (records of who touched what), authentication and transmission security. Ask who at the vendor can open your documents and how that is logged.</li>
+      <li>Retention and deletion. HIPAA does not set how long medical records must be kept. HHS says state law generally does. Ask how long the vendor keeps a file after processing, whether you can delete on demand, and whether your documents train models. A business associate may use PHI only as its contract permits.</li>
+      <li>De-identification. HHS recognizes Expert Determination and Safe Harbor, which removes 18 listed identifiers. De-identified data is no longer PHI, but redaction that misses a name in a margin note has not de-identified anything. A business associate may de-identify for you only if the BAA authorizes it. See <a href="/resources/blogs/hipaa-deidentification-automation">HIPAA de-identification automation</a>.</li>
+      <li>Minimum necessary. Send and keep only what the job needs. It is a different standard from de-identification and has exceptions, such as treatment disclosures and signed authorizations. See <a href="/resources/blogs/hipaa-minimum-necessary-redaction">HIPAA minimum necessary redaction</a>.</li>
     </ol>
 
     <p>Running an open source engine yourself, such as Tesseract or PaddleOCR, means no outside company holds the data. The Security Rule duties, including a risk assessment of your ePHI, are then entirely yours.</p>
@@ -211,29 +211,30 @@ npi_ok("1234567890")  False
     <h3>Health insurance, step by step</h3>
 
     <ol>
-      <li><strong>The claim arrives.</strong> Providers send an ASC X12 837 (professional, institutional, dental) or NCPDP (retail pharmacy) claim, usually through a clearinghouse. Some send paper: the CMS-1500 or UB-04. CMS says Medicare takes the CMS-1500 from providers with a waiver from the electronic requirement, most paper claims to carriers are scanned with OCR, and photocopies are not accepted by all carriers because they cannot be scanned.</li>
-      <li><strong>Checks before payment.</strong> The payer verifies eligibility (270/271), and some services need prior authorization. See <a href="/resources/blogs/eligibility-verification-automation">eligibility verification automation</a> and <a href="/resources/blogs/prior-authorization-automation">prior authorization automation</a>.</li>
-      <li><strong>Adjudication.</strong> This is the payer's decision process. Plan rules and coverage policies are applied to each service line coded with the HIPAA standard code sets (ICD-10-CM, CPT and HCPCS, NDC). Each line can be paid, reduced or denied.</li>
-      <li><strong>The explanation.</strong> The provider gets an 835 remittance advice with CARC and RARC codes. The patient gets an EOB or, in Original Medicare, a Medicare Summary Notice. Private insurers called Medicare Administrative Contractors process Medicare claims.</li>
+      <li>The claim arrives. Providers send an ASC X12 837 (professional, institutional, dental) or NCPDP (retail pharmacy) claim, usually through a clearinghouse. Some send paper: the CMS-1500 or UB-04. CMS says Medicare takes the CMS-1500 from providers with a waiver from the electronic requirement, most paper claims to carriers are scanned with OCR, and photocopies are not accepted by all carriers because they cannot be scanned.</li>
+      <li>Checks before payment. The payer verifies eligibility (270/271), and some services need prior authorization. See <a href="/resources/blogs/eligibility-verification-automation">eligibility verification automation</a> and <a href="/resources/blogs/prior-authorization-automation">prior authorization automation</a>.</li>
+      <li>Adjudication. This is the payer's decision process. Plan rules and coverage policies are applied to each service line coded with the HIPAA standard code sets (ICD-10-CM, CPT and HCPCS, NDC). Each line can be paid, reduced or denied.</li>
+      <li>The explanation. The provider gets an 835 remittance advice with CARC and RARC codes. The patient gets an EOB or, in Original Medicare, a Medicare Summary Notice. Private insurers called Medicare Administrative Contractors process Medicare claims.</li>
     </ol>
 
     <h3>Auto and property insurance, and where OCR fits</h3>
 
     <p>The NAIC's guides describe a shorter path: report the loss, the insurer assigns an adjuster, and the adjuster assesses the damage to set the settlement amount. OCR sits at intake, reading scanned claim forms, attachments and remittances into data. The payment decision stays with the payer's rules and its people. Our post on <a href="/resources/blogs/revenue-cycle-management-document-intake">revenue cycle management document intake</a> explains why slow intake delays billing and shows a 20-transaction check for timing your own.</p>
 
-    <h2>What to do next</h2>
+    <h2>Where to begin</h2>
+    <p>Start with the documents where a misread hurts least, and earn trust before you go near prescriptions.</p>
 
     <ul>
-      <li><strong>Clinic or hospital front desk:</strong> start with insurance cards and faxed referrals. Score 50 real ones and read the payer ID and authorization numbers yourself.</li>
-      <li><strong>Pharmacy:</strong> start with the prescription and both sides of the card. Run the NPI, DEA and NDC checks and send doubtful drug fields to a pharmacist.</li>
-      <li><strong>Billing team:</strong> start with remittances and denials. Read CARC and RARC as a pair (<a href="/resources/blogs/denial-code-extraction">denial code extraction</a>).</li>
-      <li><strong>Adjuster or insurer:</strong> start with the documents that fill the file, and keep the coverage decision with people.</li>
-      <li><strong>Anyone handling patient data:</strong> get the BAA first, and test with synthetic or de-identified samples.</li>
+      <li>Clinic or hospital front desk: start with insurance cards and faxed referrals. Score 50 real ones and read the payer ID and authorization numbers yourself.</li>
+      <li>Pharmacy: start with the prescription and both sides of the card. Run the NPI, DEA and NDC checks and send doubtful drug fields to a pharmacist.</li>
+      <li>Billing team: start with remittances and denials. Read CARC and RARC as a pair (<a href="/resources/blogs/denial-code-extraction">denial code extraction</a>).</li>
+      <li>Adjuster or insurer: start with the documents that fill the file, and keep the coverage decision with people.</li>
+      <li>Anyone handling patient data: get the BAA first, and test with synthetic or de-identified samples.</li>
     </ul>
 
     <p>To test a document API, DocsAPI (our product) lists prescriptions, lab reports and claims on its <a href="/documents/medical-docs">medical documents page</a>. Its published policy says HIPAA-eligible with a BAA on request, SOC 2 Type II, and content deleted after processing and not used for training. Confirm that in the contract, as with any vendor. For contracts or IDs instead, see <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>, <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a> or <a href="/resources/blogs/ocr-for-passports-id-cards-and-drivers-licenses">OCR for passports, ID cards and driver's licenses</a>.</p>
 
-    <h2>Sources and how we checked this</h2>
+    <h2>Sources</h2>
 
     <p>We opened each source September 20 to 21, 2026. hhs.gov blocks automated fetching, so we read archived 2024 and 2025 copies of the HHS pages, which may have changed. The payer ID description relies on our <a href="/resources/blogs/insurance-card-ocr">insurance card OCR</a> post. Our benchmark has no medical documents, and we found no published head-to-head engine test on them. Nothing here is legal, medical or coding advice.</p>
 
@@ -241,17 +242,17 @@ npi_ok("1234567890")  False
       <li>HHS: <a href="https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/business-associates/index.html">Business Associates</a>, <a href="https://www.hhs.gov/hipaa/for-professionals/special-topics/health-information-technology/cloud-computing/index.html">Cloud Computing guidance</a>, <a href="https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html">De-identification</a>, <a href="https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html">Security Rule summary</a>, <a href="https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/minimum-necessary-requirement/index.html">Minimum Necessary</a>, <a href="https://www.hhs.gov/hipaa/for-professionals/faq/580/does-hipaa-require-covered-entities-to-keep-medical-records-for-any-period/index.html">FAQ 580</a>, <a href="https://www.hhs.gov/ocr/about-us/index.html">Office for Civil Rights</a>.</li>
       <li>eCFR: <a href="https://www.ecfr.gov/current/title-45/section-164.504">45 CFR 164.504</a>, <a href="https://www.ecfr.gov/current/title-45/section-162.1002">162.1002</a>, <a href="https://www.ecfr.gov/current/title-45/section-162.1102">162.1102</a>.</li>
       <li>Forms and codes: <a href="https://www.cms.gov/medicare/billing/electronicbillingeditrans/1500">CMS on the CMS-1500</a>, <a href="https://www.nucc.org/images/stories/PDF/1500_claim_form_instruction_manual_2020_07-v8.pdf">NUCC 1500 manual</a>, <a href="https://www.cms.gov/Regulations-and-Guidance/Administrative-Simplification/NationalProvIdentStand/Downloads/NPIcheckdigit.pdf">CMS NPI check digit</a>, <a href="https://www.govinfo.gov/content/pkg/FR-2026-03-05/pdf/2026-04368.pdf">FDA NDC final rule</a>, <a href="https://loinc.org/2345-7">LOINC 2345-7</a>, <a href="https://loinc.org/2339-0">2339-0</a>, <a href="https://x12.org/codes/claim-adjustment-reason-codes">X12 CARC</a>, <a href="https://x12.org/codes/remittance-advice-remark-codes">X12 RARC</a>, <a href="https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Publications/ICD10CM/2025-Update/ICD-10-CM-April-1-FY25-Guidelines.pdf">ICD-10-CM guidelines</a>, <a href="https://www.cms.gov/medicare/coding-billing/icd-10-codes">CMS ICD-10</a>, <a href="https://www.ama-assn.org/practice-management/cpt/cpt-overview-and-code-approval">AMA CPT</a>, <a href="https://www.ncpdp.org/NCPDP/media/pdf/WhitePaper/OverviewMedicarePartDPrescriptionDrugCOBProcess.pdf">NCPDP white paper</a>.</li>
-      <li>Claims: <a href="https://www.cms.gov/medicare/coverage/summary-notice">Medicare Summary Notice</a>, <a href="https://www.cms.gov/medicare/coding-billing/medicare-administrative-contractors-macs">MACs</a>, <a href="https://content.naic.org/sites/default/files/inline-files/Chapter%2018.pdf">NAIC adjuster handbook</a>, <a href="https://content.naic.org/article/navigating-claims-process-recover-and-rebuild">NAIC property claims</a>, <a href="https://content.naic.org/article/what-you-should-know-about-filing-auto-claim">NAIC auto claims</a>.</li>
+      <li>Claims: <a href="https://www.cms.gov/medicare/coverage/summary-notice">Medicare Summary Notice</a>, <a href="https://www.cms.gov/medicare/coding-billing/medicare-administrative-contractors-macs">MACs</a>, <a href="https://content.naic.org/sites/default/files/inline-files/Chapter%2018%20-%20Adjuster%20Licensing.pdf">NAIC adjuster handbook</a>, <a href="https://content.naic.org/article/navigating-claims-process-recover-and-rebuild">NAIC property claims</a>, <a href="https://content.naic.org/article/what-you-should-know-about-filing-auto-claim">NAIC auto claims</a>.</li>
       <li>Prescribing, fax, accuracy: <a href="https://www.cms.gov/medicare/e-health/eprescribing/cms-eprescribing-for-controlled-substances-program">CMS EPCS</a>, <a href="https://www.mgma.com/mgma-stats/time-warp-the-lingering-legacy-of-fax-in-medical-practices">MGMA fax poll</a>, <a href="https://datatracker.ietf.org/doc/html/rfc1314">RFC 1314</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/41924015/">Mayo study</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/38241403/">PLoS One study</a>, our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">benchmark</a>.</li>
     </ul>
   `,
   image: "/images/ocr-process.png",
   featuredImage: "/images/ocr-process.png",
   category: "Healthcare",
-  date: "September 23, 2026",
-  datePublished: "2026-09-23T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  date: "October 5, 2026",
+  datePublished: "2026-10-05T00:00:00.000Z",
+  dateModified: "2026-10-05T00:00:00.000Z",
+  last_updated: "October 5, 2026",
   readTime: "14 min read",
   author: nupuraUghade,
   primary_keyword: "ocr for healthcare",
@@ -271,7 +272,6 @@ npi_ok("1234567890")  False
   ],
   tags: ["OCR", "healthcare", "medical documents", "HIPAA", "insurance claims", "medical records"],
   cluster: "healthcare",
-  noindex: true,
   faq: [
     {
       question: "What does OCR mean in HIPAA?",

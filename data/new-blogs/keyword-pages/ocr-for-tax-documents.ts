@@ -13,7 +13,7 @@ export const post: BlogPost = {
   summary:
     "Yes, OCR can read W-2s, 1099s, GST invoices, PAN cards and Aadhaar cards, but it only reads. Check every value against rules the form supplies: box arithmetic on US forms, and format rules plus check digits on Indian identifiers. Anything that fails goes to a person.",
   content: `
-    <p>OCR can read W-2s, 1099s, GST invoices, PAN cards and Aadhaar cards. The harder job is proving that what it read is right. US forms give you box arithmetic to check against. Indian identifiers give you format rules and check digits. Below: the IRS box tables, Python checks we ran, what tax preparers and lenders should verify, and the Aadhaar privacy limits. This is not tax or legal advice.</p>
+    <p>Tax season does not care that half your W-2s arrived as phone photos. OCR can read W-2s, 1099s, GST invoices, PAN cards and Aadhaar cards; the harder job is proving that what it read is right before a return or a loan depends on it. US forms give you box arithmetic to check. Indian identifiers give you format rules and check digits. Below: the IRS box tables, Python checks we ran, and the Aadhaar privacy limits. Not tax or legal advice.</p>
 
     <h2>Can OCR read tax forms like W-2s and 1099s?</h2>
 
@@ -63,10 +63,10 @@ export const post: BlogPost = {
     <p>Four traps follow from the IRS text:</p>
 
     <ol>
-      <li><strong>Do not add every number on the page.</strong> On the 1099-NEC the IRS recipient instructions say of box 1b (cash tips) and box 1d (overtime): "This amount has been included in the amount reported in box 1a." Summing them double counts.</li>
-      <li><strong>Know the revision.</strong> A reader built for the 2025 layout looks for NEC Box 1, which is Box 1a on the 2026 form.</li>
-      <li><strong>No form does not mean no income.</strong> For tax years beginning after 2025 the IRS raised the minimum reporting threshold for certain payments to $2,000, so small payments can arrive without a 1099.</li>
-      <li><strong>Read VOID and CORRECTED.</strong> A checked VOID box tells IRS scanning equipment to skip the form. A corrected form fixes an earlier one, so match the two instead of counting both. Recipient copies may also show only the last four digits of the TIN.</li>
+      <li>Do not add every number on the page. On the 1099-NEC the IRS recipient instructions say of box 1b (cash tips) and box 1d (overtime): "This amount has been included in the amount reported in box 1a." Summing them double counts.</li>
+      <li>Know the revision. A reader built for the 2025 layout looks for NEC Box 1, which is Box 1a on the 2026 form.</li>
+      <li>No form does not mean no income. For tax years beginning after 2025 the IRS raised the minimum reporting threshold for certain payments to $2,000, so small payments can arrive without a 1099.</li>
+      <li>Read VOID and CORRECTED. A checked VOID box tells IRS scanning equipment to skip the form. A corrected form fixes an earlier one, so match the two instead of counting both. Recipient copies may also show only the last four digits of the TIN.</li>
     </ol>
 
     <h2>How does OCR for tax document verification work?</h2>
@@ -90,16 +90,16 @@ export const post: BlogPost = {
 
     <h2>What should tax preparers and lenders check before trusting OCR?</h2>
 
-    <p>Tax preparers should tie every imported value to its source form, avoid double counting corrected and duplicate forms, and protect client data under the FTC Safeguards Rule. Lenders should treat OCR output as a claim and verify income against pay stubs, deposits and an IRS transcript. Neither should skip human review of a failed check.</p>
+    <p>A wrong box on a W-2 does not look wrong. It looks like a perfectly normal number, which is why these checks exist. Tax preparers should tie every imported value to its source form, avoid double counting corrected and duplicate forms, and protect client data under the FTC Safeguards Rule. Lenders should treat OCR output as a claim and verify income against pay stubs, deposits and an IRS transcript. Neither should skip human review of a failed check.</p>
 
     <h3>OCR for tax preparers: what to tie out and protect</h3>
 
     <ul>
-      <li><strong>Tie totals.</strong> After import, the sum of Box 1 and Box 2 across forms should match a control total keyed separately. A payer missing from last year's return is either new income or a misread EIN.</li>
-      <li><strong>Corrections and duplicates.</strong> In the IRS example, a W-2c shows amounts under both "Previously reported" and "Correct information", so use the correct column. And an employer can issue more than one W-2 to an employee, for example to report more than four Box 12 items, so do not dedupe on EIN alone.</li>
-      <li><strong>Judgment stays human.</strong> OCR reads a box. It does not decide whether an amount is taxable, deductible or reportable. That is the preparer's call.</li>
-      <li><strong>Security is a duty.</strong> IRS Publication 4557 says the FTC Safeguards Rule requires preparers to have a security plan, a qualified individual in charge and multi-factor authentication, and to pick service providers that keep safeguards, require them by contract and oversee them. An OCR service that touches SSNs is one.</li>
-      <li><strong>Disclosure is a separate rule.</strong> Treasury regulation 301.7216-2 requires consent under 301.7216-3 before return information goes to a preparer located outside the United States. Whether a given OCR vendor counts, and where it processes files, are questions for counsel.</li>
+      <li>Tie totals. After import, the sum of Box 1 and Box 2 across forms should match a control total keyed separately. A payer missing from last year's return is either new income or a misread EIN.</li>
+      <li>Corrections and duplicates. In the IRS example, a W-2c shows amounts under both "Previously reported" and "Correct information", so use the correct column. And an employer can issue more than one W-2 to an employee, for example to report more than four Box 12 items, so do not dedupe on EIN alone.</li>
+      <li>Judgment stays human. OCR reads a box. It does not decide whether an amount is taxable, deductible or reportable. That is the preparer's call.</li>
+      <li>Security is a duty. IRS Publication 4557 says the FTC Safeguards Rule requires preparers to have a security plan, a qualified individual in charge and multi-factor authentication, and to pick service providers that keep safeguards, require them by contract and oversee them. An OCR service that touches SSNs is one.</li>
+      <li>Disclosure is a separate rule. Treasury regulation 301.7216-2 requires consent under 301.7216-3 before return information goes to a preparer located outside the United States. Whether a given OCR vendor counts, and where it processes files, are questions for counsel.</li>
     </ul>
 
     <h3>For lenders: reading is not qualifying</h3>
@@ -171,11 +171,11 @@ export const post: BlogPost = {
     <h3>What to look for in OCR software for Indian documents</h3>
 
     <ul>
-      <li><strong>Scripts, in writing.</strong> Indian documents can carry Hindi or another regional script next to English. Ask for the supported list and test your samples. Our benchmark's multilingual set was English with Mandarin and Spanish, so we have no numbers for Indian scripts.</li>
-      <li><strong>Validators</strong> for the GSTIN check character, PAN pattern and Verhoeff digit, built in or addable.</li>
-      <li><strong>Masking at extraction</strong>, so full Aadhaar numbers are not stored or logged by default, and <strong>QR reading</strong> for Aadhaar and e-invoices.</li>
-      <li><strong>Processing location and retention</strong>, in writing.</li>
-      <li><strong>Field-level confidence, a review queue</strong>, and accuracy measured per field on your own files.</li>
+      <li>Scripts, in writing. Indian documents can carry Hindi or another regional script next to English. Ask for the supported list and test your samples. Our benchmark's multilingual set was English with Mandarin and Spanish, so we have no numbers for Indian scripts.</li>
+      <li>Validators for the GSTIN check character, PAN pattern and Verhoeff digit, built in or addable.</li>
+      <li>Masking at extraction, so full Aadhaar numbers are not stored or logged by default, and <strong>QR reading</strong> for Aadhaar and e-invoices.</li>
+      <li>Processing location and retention, in writing.</li>
+      <li>Field-level confidence, a review queue, and accuracy measured per field on your own files.</li>
     </ul>
 
     <p>On our own product: our <a href="/solutions/finance-automation">finance automation page</a> mentions GST e-invoices. Our public product manifest lists W-2, 1099, W-8BEN, W-9 and 4506-C among tax forms and passport, driver's license, national ID and mDL among identity documents. It does not name GST invoices, PAN cards or Aadhaar cards. Treat support for those three as unconfirmed until you test your own files.</p>
@@ -302,16 +302,17 @@ random 12-digit numbers that still pass Verhoeff: 10164 of 100000</code></pre>
       <li>A wrong GSTIN check character passes by chance 1 time in 36, which is 2.8%. Neither check tells you the number is issued or belongs to the person in front of you.</li>
     </ul>
 
-    <h2>What to do next</h2>
+    <h2>Before the next filing season</h2>
+    <p>Run the box checks before anyone signs anything.</p>
 
     <ul>
-      <li><strong>If you prepare taxes:</strong> use OCR for import, run the tie-outs above, keep a written security plan, and ask counsel about disclosure if any processing happens outside the US.</li>
-      <li><strong>If you lend:</strong> treat extracted numbers as claims, verify against a source the applicant cannot edit, and keep qualification math separate from extraction.</li>
-      <li><strong>If you onboard users in India:</strong> validate GSTIN, PAN and Aadhaar in code, verify Aadhaar by QR where you can, mask on extraction, and get advice on which UIDAI rule binds you.</li>
-      <li><strong>If you want to test extraction on your own files:</strong> DocsAPI is our product, and its <a href="/use-cases/loan-verification">loan verification page</a> covers income documents. Bring real samples, including any GST, PAN or Aadhaar files, and hold the results to the checks on this page.</li>
+      <li>If you prepare taxes: use OCR for import, run the tie-outs above, keep a written security plan, and ask counsel about disclosure if any processing happens outside the US.</li>
+      <li>If you lend: treat extracted numbers as claims, verify against a source the applicant cannot edit, and keep qualification math separate from extraction.</li>
+      <li>If you onboard users in India: validate GSTIN, PAN and Aadhaar in code, verify Aadhaar by QR where you can, mask on extraction, and get advice on which UIDAI rule binds you.</li>
+      <li>If you want to test extraction on your own files: DocsAPI is our product, and its <a href="/use-cases/loan-verification">loan verification page</a> covers income documents. Bring real samples, including any GST, PAN or Aadhaar files, and hold the results to the checks on this page.</li>
     </ul>
 
-    <h2>Sources and how we checked this</h2>
+    <h2>How we checked this</h2>
 
     <p>Checked on September 21, 2026. IRS and NIC pages change with each tax year and API release, so confirm current versions before you build.</p>
 
@@ -328,10 +329,10 @@ random 12-digit numbers that still pass Verhoeff: 10164 of 100000</code></pre>
   image: "/images/ocr-in-finance.png",
   featuredImage: "/images/ocr-in-finance.png",
   category: "Lending",
-  date: "September 24, 2026",
-  datePublished: "2026-09-24T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  date: "October 5, 2026",
+  datePublished: "2026-10-05T00:00:00.000Z",
+  dateModified: "2026-10-05T00:00:00.000Z",
+  last_updated: "October 5, 2026",
   readTime: "20 min read",
   author: nupuraUghade,
   primary_keyword: "OCR for tax forms",
@@ -351,7 +352,6 @@ random 12-digit numbers that still pass Verhoeff: 10164 of 100000</code></pre>
   ],
   tags: ["OCR", "tax forms", "W-2", "1099", "GST invoice", "PAN card", "Aadhaar", "document verification"],
   cluster: "compliance",
-  noindex: true,
   faq: [
     {
       question: "Can OCR tell whether a W-2 or 1099 is fake?",
