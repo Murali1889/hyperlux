@@ -13,7 +13,7 @@ export const post: BlogPost = {
   summary:
     "OCR reads a passport or most ID cards from the machine readable zone (MRZ), 2 or 3 lines of text it can verify with check digits. US driver's licenses carry a PDF417 barcode. Everything else falls back to printed text, which has no built-in check.",
   content: `
-    <p>Passports and most ID cards carry a machine readable zone (MRZ): fixed-width lines of text that OCR reads and checks with check digits. US driver's licenses carry a PDF417 barcode with the same kind of data in a standard layout. Anything else, birth certificates included, is read as plain printed text, which is less reliable. Below: formats, a worked example, and fixes for bad captures.</p>
+    <p>Someone is holding a passport up to a laptop camera with a lamp right behind it, and your onboarding flow has a few seconds before they lose patience. The good news: passports and most ID cards carry a machine readable zone (MRZ) with check digits, and US driver's licenses carry a PDF417 barcode, so a correct read can be proven. Birth certificates and most other documents have no such safety net. Below: the formats, a worked example and fixes for bad captures.</p>
 
     <h2>How does OCR read a passport, ID card or driver's license?</h2>
 
@@ -156,7 +156,7 @@ print(check_digit("G12345678"), check_digit("612345678"))  # G and 6 look the sa
 
     <h2>What do you do when the MRZ is damaged or the photo has glare?</h2>
 
-    <p>Recompute the check digits first, because they tell you which fields failed. Try the usual look-alike characters (0 and O, 1 and I, 8 and B, 5 and S, 2 and Z) and accept a fix only if exactly one version passes. If that fails, cross-check the printed page, read the chip, or ask for a new photo.</p>
+    <p>Bad captures are the normal case, not the exception, so design for them from day one. Recompute the check digits first, because they tell you which fields failed. Try the usual look-alike characters (0 and O, 1 and I, 8 and B, 5 and S, 2 and Z) and accept a fix only if exactly one version passes. If that fails, cross-check the printed page, read the chip, or ask for a new photo.</p>
 
     <ol>
       <li>Check each field's digit and the composite. One failing field suggests a local misread. Several suggest glare, blur or a crop.</li>
@@ -210,7 +210,8 @@ print(check_digit("G12345678"), check_digit("612345678"))  # G and 6 look the sa
 
     <p>Our <a href="/resources/blogs/kyc-document-verification">KYC document verification post</a> covers what auditors look for, and our <a href="/resources/blogs/know-your-customer-documents">know your customer documents playbook</a> covers which documents to accept.</p>
 
-    <h2>What to do next</h2>
+    <h2>Getting started with ID capture</h2>
+    <p>Most of the easy wins here come from the capture screen, not from the OCR engine.</p>
 
     <ul>
       <li>Passports and EU ID cards: read the MRZ, verify every check digit, and add a chip read if you can.</li>
@@ -220,7 +221,7 @@ print(check_digit("G12345678"), check_digit("612345678"))  # G and 6 look the sa
       <li>To try extraction on these documents with our API, see <a href="/documents/identity-docs">identity document extraction</a>. DocsAPI is our product and our public manifest lists KYC document verification for passports, driver's licenses and IDs. We have not published an ID accuracy benchmark, so test it as you would any other tool.</li>
     </ul>
 
-    <h2>Sources and how we checked this</h2>
+    <h2>Sources and specs</h2>
 
     <p>We read the standards and laws themselves, recomputed ICAO's examples, and rebuilt AAMVA's sample barcode data in Python (278 bytes, the length its own header declares, every field parsed as printed).</p>
 
@@ -237,10 +238,10 @@ print(check_digit("G12345678"), check_digit("612345678"))  # G and 6 look the sa
   image: "/images/passport-ocr.png",
   featuredImage: "/images/passport-ocr.png",
   category: "Compliance",
-  date: "September 23, 2026",
-  datePublished: "2026-09-23T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  date: "October 5, 2026",
+  datePublished: "2026-10-05T00:00:00.000Z",
+  dateModified: "2026-10-05T00:00:00.000Z",
+  last_updated: "October 5, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "ocr for passports",
@@ -270,7 +271,6 @@ print(check_digit("G12345678"), check_digit("612345678"))  # G and 6 look the sa
     "identity verification",
   ],
   cluster: "compliance",
-  noindex: true,
   faq: [
     {
       question: "Does OCR prove that a passport or ID is genuine?",

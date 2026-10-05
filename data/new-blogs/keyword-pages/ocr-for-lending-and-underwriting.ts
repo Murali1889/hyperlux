@@ -13,7 +13,7 @@ export const post: BlogPost = {
   summary:
     "OCR for loan underwriting reads the documents in a loan file (applications, pay stubs, tax forms, bank statements) and turns them into data fields. It decides nothing. Income, debt, approval and decline reasons come from lender rules and people using what it read.",
   content: `
-    <p>OCR reads. Underwriting decides. In a loan file, OCR turns applications, pay stubs, tax forms and bank statements into data fields, and lender rules and people turn those fields into an income figure, a debt-to-income ratio (DTI) and a decision. This guide covers what OCR extracts from each document, where it goes wrong, what lenders use it for, what technology they choose, and what it never decides.</p>
+    <p>An underwriter has three bank statements, two pay stubs and a tax return open in separate tabs, and a broker who wants an answer by end of day. OCR's job is to turn that pile into numbers quickly and correctly. It does not make the call: income, the debt-to-income ratio (DTI) and the decision still come from your rules and your people. This guide covers what OCR extracts from each loan document, where it goes wrong, and what it never decides.</p>
 
     <h2>What does OCR extract in lending, and what does it decide?</h2>
 
@@ -46,13 +46,13 @@ export const post: BlogPost = {
     <p>OCR for mortgage underwriting and OCR for loan underwriting share the same jobs: sort incoming files, type fields into the loan system, feed income, debt and asset calculations, compare documents against each other, and flag tampering. These are the main OCR use cases in lending. Each result feeds a rule or a reviewer, who decides.</p>
 
     <ul>
-      <li><strong>Sorting packets.</strong> Mortgage files are large mixed packets. <a href="/resources/blogs/document-detection-before-ocr">Document detection before OCR</a> explains what breaks when splitting is skipped.</li>
-      <li><strong>Income.</strong> <a href="/resources/blogs/pay-stub-income-verification-ocr">Pay stub verification</a> covers amount, frequency and pattern checks against deposits, <a href="/resources/blogs/w2-1099-tax-form-ocr-underwriting">W-2 versus 1099</a> shows why equal gross income qualifies differently, and <a href="/resources/blogs/4506-c-tax-transcript-ocr">4506-C transcripts</a> add an IRS record to compare.</li>
-      <li><strong>Assets and debts.</strong> <a href="/resources/blogs/verification-of-assets-ocr">Verification of assets</a> covers the 50% large-deposit rule. <a href="/resources/blogs/dti-calculation-ocr">DTI calculation</a> explains which debts belong in the ratio.</li>
-      <li><strong>Cash flow.</strong> <a href="/resources/blogs/cash-flow-underwriting-ocr">Cash flow underwriting</a> defines deposit volatility and runway, <a href="/resources/blogs/nsf-overdraft-detection-ocr">overdraft detection</a> shows why fee counts miss covered shortfalls, and <a href="/resources/blogs/multi-account-bank-statement-ocr">multi-account statements</a> separates duplicates from transfers.</li>
-      <li><strong>Fraud checks.</strong> <a href="/resources/blogs/bank-statement-fraud-detection">Bank statement fraud detection</a> explains what PDF structure reveals that metadata does not.</li>
-      <li><strong>Loan-type rules.</strong> <a href="/resources/blogs/heloc-document-ocr">home equity lines of credit (HELOCs)</a> count the full credit line, <a href="/resources/blogs/auto-loan-document-ocr">auto loans</a> turn on lien perfection, <a href="/resources/blogs/personal-loan-document-ocr">personal loans</a> face stacking, <a href="/resources/blogs/student-loan-refinance-ocr">student loan refinances</a> depend on payoff good-through dates, <a href="/resources/blogs/business-line-of-credit-ocr">business lines</a> on borrowing base eligibility, <a href="/resources/blogs/hard-money-lender-document-ocr">hard money draws</a> on lien waiver order, and <a href="/resources/blogs/credit-union-lending-ocr">credit unions</a> track member business loans.</li>
-      <li><strong>State and program rules.</strong> <a href="/resources/blogs/state-mortgage-document-requirements">State mortgage document requirements</a> covers escrow interest, owed in some states and not others, and <a href="/resources/blogs/fintech-lending-api-ocr">fintech lending API OCR</a> covers the bank and fintech document trail.</li>
+      <li>Sorting packets. Mortgage files are large mixed packets. <a href="/resources/blogs/document-detection-before-ocr">Document detection before OCR</a> explains what breaks when splitting is skipped.</li>
+      <li>Income. <a href="/resources/blogs/pay-stub-income-verification-ocr">Pay stub verification</a> covers amount, frequency and pattern checks against deposits, <a href="/resources/blogs/w2-1099-tax-form-ocr-underwriting">W-2 versus 1099</a> shows why equal gross income qualifies differently, and <a href="/resources/blogs/4506-c-tax-transcript-ocr">4506-C transcripts</a> add an IRS record to compare.</li>
+      <li>Assets and debts. <a href="/resources/blogs/verification-of-assets-ocr">Verification of assets</a> covers the 50% large-deposit rule. <a href="/resources/blogs/dti-calculation-ocr">DTI calculation</a> explains which debts belong in the ratio.</li>
+      <li>Cash flow. <a href="/resources/blogs/cash-flow-underwriting-ocr">Cash flow underwriting</a> defines deposit volatility and runway, <a href="/resources/blogs/nsf-overdraft-detection-ocr">overdraft detection</a> shows why fee counts miss covered shortfalls, and <a href="/resources/blogs/multi-account-bank-statement-ocr">multi-account statements</a> separates duplicates from transfers.</li>
+      <li>Fraud checks. <a href="/resources/blogs/bank-statement-fraud-detection">Bank statement fraud detection</a> explains what PDF structure reveals that metadata does not.</li>
+      <li>Loan-type rules. <a href="/resources/blogs/heloc-document-ocr">home equity lines of credit (HELOCs)</a> count the full credit line, <a href="/resources/blogs/auto-loan-document-ocr">auto loans</a> turn on lien perfection, <a href="/resources/blogs/personal-loan-document-ocr">personal loans</a> face stacking, <a href="/resources/blogs/student-loan-refinance-ocr">student loan refinances</a> depend on payoff good-through dates, <a href="/resources/blogs/business-line-of-credit-ocr">business lines</a> on borrowing base eligibility, <a href="/resources/blogs/hard-money-lender-document-ocr">hard money draws</a> on lien waiver order, and <a href="/resources/blogs/credit-union-lending-ocr">credit unions</a> track member business loans.</li>
+      <li>State and program rules. <a href="/resources/blogs/state-mortgage-document-requirements">State mortgage document requirements</a> covers escrow interest, owed in some states and not others, and <a href="/resources/blogs/fintech-lending-api-ocr">fintech lending API OCR</a> covers the bank and fintech document trail.</li>
     </ul>
 
     <h3>How does OCR for credit risk assessment work?</h3>
@@ -63,14 +63,14 @@ export const post: BlogPost = {
 
     <h2>What does OCR not decide in underwriting?</h2>
 
-    <p>OCR does not decide which income counts, which debts count, whether a deposit is a problem, whether a document is genuine, or whether to approve. Those are policy and human judgment. OCR also cannot explain a denial: under Regulation B, which implements the Equal Credit Opportunity Act (ECOA), reasons must describe the factors the creditor actually considered.</p>
+    <p>This is the part vendor demos tend to skip, and the part an examiner will ask about. OCR does not decide which income counts, which debts count, whether a deposit is a problem, whether a document is genuine, or whether to approve. Those are policy and human judgment. OCR also cannot explain a denial: under Regulation B, which implements the Equal Credit Opportunity Act (ECOA), reasons must describe the factors the creditor actually considered.</p>
 
     <ul>
-      <li><strong>Which income counts.</strong> In our W-2 versus 1099 guide, $140,000 of gross income becomes $140,000 of qualifying income for a salaried borrower and $102,000 for a consultant with $38,000 of deductible expenses. Same reading, different rule.</li>
-      <li><strong>Which debts count.</strong> Fannie Mae's guide lets a lender leave out a debt someone else pays only with that person's last 12 months of canceled checks or bank statements showing no late payments. OCR only reads those statements.</li>
-      <li><strong>Whether a deposit matters.</strong> Fannie Mae defines a large deposit as a single deposit above 50% of total monthly qualifying income. On purchase loans, funds from an undocumented large deposit reduce verified funds. OCR reads the amount and description, nothing more.</li>
-      <li><strong>Whether a document is real.</strong> OCR reads a forged pay stub as faithfully as a real one. Tampering checks use file structure and independent records such as IRS transcripts, and our pay stub guide argues a failed cross-check should route to a person, not trigger an automatic decline.</li>
-      <li><strong>What the applicant is told.</strong> Regulation B (12 CFR 1002.9(b)(2)) requires specific, principal reasons, and citing internal standards or a failed qualifying score is insufficient. The official interpretation says reasons must relate to and accurately describe the factors actually considered or scored. Our <a href="/resources/blogs/ecoa-compliance-document-ocr">ECOA compliance guide</a> covers how explanation models drift from the deciding model. Not legal advice.</li>
+      <li>Which income counts. In our W-2 versus 1099 guide, $140,000 of gross income becomes $140,000 of qualifying income for a salaried borrower and $102,000 for a consultant with $38,000 of deductible expenses. Same reading, different rule.</li>
+      <li>Which debts count. Fannie Mae's guide lets a lender leave out a debt someone else pays only with that person's last 12 months of canceled checks or bank statements showing no late payments. OCR only reads those statements.</li>
+      <li>Whether a deposit matters. Fannie Mae defines a large deposit as a single deposit above 50% of total monthly qualifying income. On purchase loans, funds from an undocumented large deposit reduce verified funds. OCR reads the amount and description, nothing more.</li>
+      <li>Whether a document is real. OCR reads a forged pay stub as faithfully as a real one. Tampering checks use file structure and independent records such as IRS transcripts, and our pay stub guide argues a failed cross-check should route to a person, not trigger an automatic decline.</li>
+      <li>What the applicant is told. Regulation B (12 CFR 1002.9(b)(2)) requires specific, principal reasons, and citing internal standards or a failed qualifying score is insufficient. The official interpretation says reasons must relate to and accurately describe the factors actually considered or scored. Our <a href="/resources/blogs/ecoa-compliance-document-ocr">ECOA compliance guide</a> covers how explanation models drift from the deciding model. Not legal advice.</li>
     </ul>
 
     <h2>Worked example: from extracted fields to a DTI and a large-deposit check</h2>
@@ -146,19 +146,20 @@ export const post: BlogPost = {
 
     <p>Real errors cluster, so treat this as a planning estimate. In <a href="/resources/blogs/ocr-accuracy-benchmark-2026">our benchmark</a> the best result on multi-page bank statement tables was 91% and the worst was 64%, a gap of nearly 30 points, while clean typed English scored 97-99% on every engine. Size your review queue on your own documents.</p>
 
-    <h2>What to do next</h2>
+    <h2>What to do with this</h2>
+    <p>None of this replaces an underwriter's judgment. It gives them back the hours they spend retyping numbers.</p>
 
     <ul>
-      <li><strong>Choosing a vendor:</strong> score about 50 real files, messy ones included, field by field. <a href="/resources/blogs/how-to-measure-ocr-accuracy">How to measure OCR accuracy</a> explains how.</li>
-      <li><strong>Underwriting mortgages or consumer loans:</strong> start with pay stubs, W-2s and bank statements, then add income, debt and deposit rules. <a href="/resources/blogs/mortgage-ocr">Mortgage OCR</a> has the packet checklist.</li>
-      <li><strong>Underwriting SBA or small business loans:</strong> start with bank statements and business returns, and check your DSCR inputs against the current SOP text.</li>
-      <li><strong>Borrowers can link accounts:</strong> use the data connection first and keep OCR for everything else.</li>
-      <li><strong>Also verifying identity or taxes:</strong> <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a> covers identity checks, <a href="/resources/blogs/ocr-for-passports-id-cards-and-drivers-licenses">OCR for passports, ID cards and driver's licenses</a> covers the documents, and <a href="/resources/blogs/ocr-for-tax-documents">OCR for tax documents</a> goes deeper on returns.</li>
+      <li>Choosing a vendor: score about 50 real files, messy ones included, field by field. <a href="/resources/blogs/how-to-measure-ocr-accuracy">How to measure OCR accuracy</a> explains how.</li>
+      <li>Underwriting mortgages or consumer loans: start with pay stubs, W-2s and bank statements, then add income, debt and deposit rules. <a href="/resources/blogs/mortgage-ocr">Mortgage OCR</a> has the packet checklist.</li>
+      <li>Underwriting SBA or small business loans: start with bank statements and business returns, and check your DSCR inputs against the current SOP text.</li>
+      <li>Borrowers can link accounts: use the data connection first and keep OCR for everything else.</li>
+      <li>Also verifying identity or taxes: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a> covers identity checks, <a href="/resources/blogs/ocr-for-passports-id-cards-and-drivers-licenses">OCR for passports, ID cards and driver's licenses</a> covers the documents, and <a href="/resources/blogs/ocr-for-tax-documents">OCR for tax documents</a> goes deeper on returns.</li>
     </ul>
 
     <p>To see loan documents read and checked end to end, the <a href="/use-cases/loan-verification">DocsAPI loan verification page</a> shows how our product handles it.</p>
 
-    <h2>Sources and how we checked this</h2>
+    <h2>How we checked this</h2>
 
     <p>We opened each source below in September 2026. We did not test other vendors' accuracy.</p>
 
@@ -178,10 +179,10 @@ export const post: BlogPost = {
   image: "/images/the-ultimate-guide-to-small-business.png",
   featuredImage: "/images/the-ultimate-guide-to-small-business.png",
   category: "Lending",
-  date: "September 22, 2026",
-  datePublished: "2026-09-22T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  date: "October 5, 2026",
+  datePublished: "2026-10-05T00:00:00.000Z",
+  dateModified: "2026-10-05T00:00:00.000Z",
+  last_updated: "October 5, 2026",
   readTime: "13 min read",
   author: nupuraUghade,
   primary_keyword: "ocr for loan underwriting",
@@ -206,7 +207,6 @@ export const post: BlogPost = {
     "document extraction",
   ],
   cluster: "industry-trends",
-  noindex: true,
   faq: [
     {
       question: "Can OCR for loan applications read handwriting?",

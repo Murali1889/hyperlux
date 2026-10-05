@@ -13,18 +13,18 @@ export const post: BlogPost = {
   summary:
     "To connect OCR to QuickBooks, Salesforce, SAP or an expense tool, use the same five steps: capture the document, extract fields, validate them, map them to the target's fields, then post and confirm. Most failures come from mapping and validation, not from reading the page.",
   content: `
-    <p>OCR (optical character recognition) does not write to your books by itself. It reads a document and returns fields. Getting those fields into QuickBooks, Salesforce, SAP or an expense tool takes the same five steps every time: capture, extract, validate, map, and post and confirm. This page explains each step, gives field maps checked against each vendor's API docs, and links to our guide for each system.</p>
+    <p>OCR has done its part the moment it hands you the fields. Then comes the part that eats weekends: getting those fields into QuickBooks, Salesforce, SAP or an expense tool without a duplicate bill, a wrong vendor or a total that quietly changed. It is the same five steps every time: capture, extract, validate, map, and post and confirm. Below: each step, field maps checked against each vendor's API docs, and a guide for each system.</p>
 
     <h2>How does OCR integration with accounting software work?</h2>
 
     <p>OCR integration with accounting software is a five-step pipeline: capture the file, extract fields, validate them, map them to the target system's fields, then post and confirm. The OCR only covers step 2. Steps 3 to 5 are code or configuration you own, and they decide whether data lands in the right fields.</p>
 
     <ol>
-      <li><strong>Capture.</strong> The file arrives by email, upload, scan or API. Keep the original to attach later. Our <a href="/resources/blogs/email-invoice-parsing">email invoice parsing guide</a> covers intake traps.</li>
-      <li><strong>Extract.</strong> OCR returns fields as JSON (a plain-text data format): supplier, invoice number, dates, currency, lines, tax, total. It does not know your vendor list or chart of accounts.</li>
-      <li><strong>Validate.</strong> Check totals, duplicates, vendor match, tax and required fields before posting.</li>
-      <li><strong>Map.</strong> Turn each field into the target's field and ID: a vendor name becomes a vendor ID, and a category becomes a general ledger (GL) account. <a href="/resources/blogs/data-normalization-extracted-documents">Data normalization</a> cleans the inputs.</li>
-      <li><strong>Post and confirm.</strong> Call the API, read the response, store the returned ID, attach the source file, and send failures to a person.</li>
+      <li>Capture. The file arrives by email, upload, scan or API. Keep the original to attach later. Our <a href="/resources/blogs/email-invoice-parsing">email invoice parsing guide</a> covers intake traps.</li>
+      <li>Extract. OCR returns fields as JSON (a plain-text data format): supplier, invoice number, dates, currency, lines, tax, total. It does not know your vendor list or chart of accounts.</li>
+      <li>Validate. Check totals, duplicates, vendor match, tax and required fields before posting.</li>
+      <li>Map. Turn each field into the target's field and ID: a vendor name becomes a vendor ID, and a category becomes a general ledger (GL) account. <a href="/resources/blogs/data-normalization-extracted-documents">Data normalization</a> cleans the inputs.</li>
+      <li>Post and confirm. Call the API, read the response, store the returned ID, attach the source file, and send failures to a person.</li>
     </ol>
 
     <p>Terms: an ERP is enterprise resource planning software (SAP, NetSuite). A CRM is customer relationship management software (Salesforce). A PO is a purchase order. An API is how programs talk to each other.</p>
@@ -165,7 +165,7 @@ export const post: BlogPost = {
 
     <h2>What do you do when the ERP rejects a post?</h2>
 
-    <p>Read the error, fix the mapped field and retry only that record. Most OCR integration for ERP systems fails in repeatable ways: duplicates, missing required fields, wrong IDs, rate limits and closed periods. Never retry blindly, because a timed-out post may have succeeded.</p>
+    <p>A rejected post is the good outcome. The bad one is a post that goes through wrong. Read the error, fix the mapped field and retry only that record. Most OCR integration for ERP systems fails in repeatable ways: duplicates, missing required fields, wrong IDs, rate limits and closed periods. Never retry blindly, because a timed-out post may have succeeded.</p>
 
     <table>
       <thead><tr><th>System</th><th>What you see</th><th>Likely cause (per the docs)</th><th>What to do</th></tr></thead>
@@ -218,7 +218,8 @@ export const post: BlogPost = {
 
     <p>Ask any vendor: Which objects and fields do you write? Do you post as draft or final? What happens when a post is rejected? How do you avoid duplicates on retry? Is the original file attached to the record? Vendors who cannot answer sell extraction and leave the integration to you.</p>
 
-    <h2>What to do next</h2>
+    <h2>Where to start</h2>
+    <p>Pick one document type and one system, and get that loop right before you add the next.</p>
 
     <ul>
       <li>If you are still choosing a system, start with <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices and AP documents</a>. If you already run one, open its guide above, build the field map for your chart of accounts, and run 20 real invoices from your messiest suppliers next to manual entry (<a href="/resources/blogs/invoice-ocr-parallel-run-sample-size">parallel run sample size</a>).</li>
@@ -226,7 +227,7 @@ export const post: BlogPost = {
       <li>If you need invoice fields as JSON, see our <a href="/solutions/finance-automation">finance automation</a> page. DocsAPI is our product. Its public manifest describes an HTTP API that returns JSON and lists no prebuilt connectors for QuickBooks, Xero, NetSuite, SAP or Salesforce, so plan to write or buy the mapping and posting code.</li>
     </ul>
 
-    <h2>Sources and how we checked this</h2>
+    <h2>Sources</h2>
 
     <p>We opened each vendor's documentation on September 21, 2026 and checked every table field against it. Docs change, so recheck before you build. We did not run these calls against live sandboxes, so treat the tables as a starting point, not tested code.</p>
 
@@ -243,10 +244,10 @@ export const post: BlogPost = {
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "AI Document Intelligence",
-  date: "September 24, 2026",
-  datePublished: "2026-09-24T00:00:00.000Z",
-  dateModified: "2026-09-24T00:00:00.000Z",
-  last_updated: "September 24, 2026",
+  date: "October 5, 2026",
+  datePublished: "2026-10-05T00:00:00.000Z",
+  dateModified: "2026-10-05T00:00:00.000Z",
+  last_updated: "October 5, 2026",
   readTime: "13 min read",
   author: nupuraUghade,
   primary_keyword: "ocr integration with accounting software",
@@ -272,7 +273,6 @@ export const post: BlogPost = {
     "data entry automation",
   ],
   cluster: "industry-trends",
-  noindex: true,
   faq: [
     {
       question: "Can OCR post into QuickBooks or SAP without any code?",

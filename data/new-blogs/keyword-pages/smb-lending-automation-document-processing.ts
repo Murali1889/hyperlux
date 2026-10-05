@@ -13,7 +13,7 @@ export const post: BlogPost = {
   summary:
     "SMB lending automation tools for document processing come in three kinds: underwriting platforms that run the whole review (Ocrolus, Heron Data, Kaaj), document AI you configure (Docsumo), and document APIs you build on (DocsAPI, AWS Textract). Choose by who will own the workflow: the vendor, your ops team or your developers.",
   content: `
-    <p>Short answer: if you want a vendor to run bank statement analysis, fraud checks and cash-flow scoring end to end, look at underwriting platforms. If you want to keep your own workflow and only automate reading documents, look at document AI tools or APIs. Below: what the automation actually does, the tools in each group, pricing facts, and a 10-file test packet to compare them on your own deals.</p>
+    <p>A broker sends a 60-page PDF at 4:45 pm and wants an answer tomorrow. Somewhere in it are three months of statements, two tax returns, a driver's license and articles of organization, in no particular order. SMB lending automation tools exist to turn that into a decision-ready file, and they come in three kinds: underwriting platforms that run the review for you, document AI you configure, and document APIs you build on. Below: what each covers, pricing facts, and a 10-file test packet for your own deals.</p>
 
     <h2>What does lending automation for document processing do?</h2>
     <p>It takes the loan packet a small business sends (application, bank statements, tax returns, IDs, business registration) and turns it into checked data an underwriter can decide on. The steps are intake, classification, extraction, verification, analysis and routing into your loan system. Tools differ in how many of those steps they cover.</p>
@@ -77,16 +77,16 @@ export const post: BlogPost = {
     <p>Keep the same ten files for every vendor and for every later re-test, so results stay comparable over time. When a vendor ships a model update, run the packet again before you rely on it: a change that helps one bank's statement layout can quietly break another's, and you only see it if you test the same files.</p>
 
     <h2>What should you ask vendors before a pilot?</h2>
-    <p>Before you pilot any of these document automation tools for small business lending, get written answers to the questions below. They decide whether a tool fits your compliance rules and your workflow, and they are much harder to fix after a contract is signed.</p>
+    <p>Ask these before you fall for the demo, not after. Before you pilot any of these document automation tools for small business lending, get written answers to the questions below. They decide whether a tool fits your compliance rules and your workflow, and they are much harder to fix after a contract is signed.</p>
     <ol>
-      <li><strong>Data use:</strong> Are our documents used to train models? How long are files and extracted data kept, and can we set that period?</li>
-      <li><strong>Security:</strong> Can you share a current SOC 2 Type II report? Where is data stored, and can we choose the region?</li>
-      <li><strong>Unsure fields:</strong> What happens when the tool is not confident? Do we see which fields and rows it doubts, and can a reviewer fix them in place?</li>
-      <li><strong>Tampering:</strong> How are edited statements flagged, and what evidence do you show the underwriter?</li>
-      <li><strong>Pricing unit:</strong> Do you charge per page, per document, per application or per decision? What happens when a broker sends the same packet twice?</li>
-      <li><strong>Integration:</strong> Which loan origination systems and CRMs do you connect to today, and what does a webhook or API response look like?</li>
-      <li><strong>Turnaround:</strong> How long does a typical 60-page packet take, and what is the service level for support when something breaks?</li>
-      <li><strong>Exit:</strong> Can we export all extracted data and audit history if we leave?</li>
+      <li>Data use: Are our documents used to train models? How long are files and extracted data kept, and can we set that period?</li>
+      <li>Security: Can you share a current SOC 2 Type II report? Where is data stored, and can we choose the region?</li>
+      <li>Unsure fields: What happens when the tool is not confident? Do we see which fields and rows it doubts, and can a reviewer fix them in place?</li>
+      <li>Tampering: How are edited statements flagged, and what evidence do you show the underwriter?</li>
+      <li>Pricing unit: Do you charge per page, per document, per application or per decision? What happens when a broker sends the same packet twice?</li>
+      <li>Integration: Which loan origination systems and CRMs do you connect to today, and what does a webhook or API response look like?</li>
+      <li>Turnaround: How long does a typical 60-page packet take, and what is the service level for support when something breaks?</li>
+      <li>Exit: Can we export all extracted data and audit history if we leave?</li>
     </ol>
     <p>Ask for the answers to be tested against your 10-file packet, not described in a demo. A vendor that cannot show the unsure-field view or the tamper evidence on your own files will leave your underwriters guessing.</p>
 
@@ -97,24 +97,25 @@ export const post: BlogPost = {
     <h2>How much does SMB lending document automation cost?</h2>
     <p>The underwriting platforms in this comparison do not publish prices; expect quotes based on volume. Document APIs publish per-page prices, so you can estimate per application. The worked example below uses an illustrative packet; count the pages in your own recent applications instead.</p>
     <ul>
-      <li><strong>Example packet:</strong> three monthly bank statements of 8 pages each (24 pages), a 20-page business tax return, a 15-page personal return and a 1-page ID: 60 pages.</li>
-      <li><strong>At DocsAPI's starting price:</strong> 60 x $0.02 = $1.20 per application before volume discounts.</li>
-      <li><strong>At AWS AnalyzeLending's list price:</strong> 60 x $0.07 = $4.20 per application, though it is designed for mortgage documents.</li>
+      <li>Example packet: three monthly bank statements of 8 pages each (24 pages), a 20-page business tax return, a 15-page personal return and a 1-page ID: 60 pages.</li>
+      <li>At DocsAPI's starting price: 60 x $0.02 = $1.20 per application before volume discounts.</li>
+      <li>At AWS AnalyzeLending's list price: 60 x $0.07 = $4.20 per application, though it is designed for mortgage documents.</li>
     </ul>
     <p>Add the cost of what you build or buy on top: review screens, analysis rules and integration with your loan system. For a deeper look at statement pricing, see our <a href="/resources/blogs/bank-statement-ocr-pricing">bank statement OCR pricing guide</a>.</p>
 
     <h2>Where DocsAPI fits</h2>
     <p>Disclosure: DocsAPI is our product, built as a document AI and OCR API for SMB lending. It classifies each file in a packet, returns fields as JSON, joins bank statement tables that run across pages, reads ID documents and validates the data before you use it. It does not make credit decisions or replace your underwriting rules; teams use it when they want to own the workflow. It is a cloud API, from $0.02 per page, with 100 free pages a month.</p>
 
-    <h2>What to do next</h2>
+    <h2>What to do on Monday</h2>
+    <p>Pull last month's three messiest applications, build the 10-file packet from them, and send it to two vendors this week.</p>
     <ul>
-      <li><strong>Little engineering, want it done for you:</strong> shortlist two underwriting platforms and send each the 10-file packet above.</li>
-      <li><strong>Own ops team, varied documents:</strong> trial a configurable document AI tool on the same packet.</li>
-      <li><strong>Developers and your own rules:</strong> run the packet through the <a href="/products">DocsAPI free tier</a> and one other API, and compare the joined statement tables.</li>
-      <li><strong>SBA lending specifically:</strong> read our <a href="/resources/blogs/the-ultimate-guide-to-small-business-lending-automation-revolutionizing-sba-loans-and-financing">small business lending automation guide</a>.</li>
+      <li>Little engineering, want it done for you: shortlist two underwriting platforms and send each the 10-file packet above.</li>
+      <li>Own ops team, varied documents: trial a configurable document AI tool on the same packet.</li>
+      <li>Developers and your own rules: run the packet through the <a href="/products">DocsAPI free tier</a> and one other API, and compare the joined statement tables.</li>
+      <li>SBA lending specifically: read our <a href="/resources/blogs/the-ultimate-guide-to-small-business-lending-automation-revolutionizing-sba-loans-and-financing">small business lending automation guide</a>.</li>
     </ul>
 
-    <h2>Sources and how we checked this</h2>
+    <h2>Sources</h2>
     <ul>
       <li>Vendor descriptions from each company's own website, read September 28, 2026: <a href="https://www.ocrolus.com/" target="_blank" rel="noopener">Ocrolus</a>, <a href="https://www.herondata.io/" target="_blank" rel="noopener">Heron Data</a>, <a href="https://kaaj.ai/" target="_blank" rel="noopener">Kaaj</a> and <a href="https://www.docsumo.com/pricing" target="_blank" rel="noopener">Docsumo pricing</a>.</li>
       <li>AWS AnalyzeLending price from AWS's public price list and the <a href="https://aws.amazon.com/textract/pricing/" target="_blank" rel="noopener">Textract pricing page</a>.</li>
@@ -124,10 +125,10 @@ export const post: BlogPost = {
   image: "/images/ocr-bank-statement-technology.png",
   featuredImage: "/images/ocr-bank-statement-technology.png",
   category: "Lending",
-  date: "September 28, 2026",
-  datePublished: "2026-09-28T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  date: "October 5, 2026",
+  datePublished: "2026-10-05T00:00:00.000Z",
+  dateModified: "2026-10-05T00:00:00.000Z",
+  last_updated: "October 5, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "smb lending automation document processing",
@@ -145,7 +146,6 @@ export const post: BlogPost = {
   ],
   tags: ["SMB lending", "underwriting", "bank statements", "document automation", "comparison"],
   cluster: "comparison",
-  noindex: true,
   faq: [
     {
       question: "How many months of bank statements do SMB lenders usually review?",

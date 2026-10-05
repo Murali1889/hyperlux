@@ -13,7 +13,7 @@ export const post: BlogPost = {
   summary:
     "An invoice OCR API reads a PDF or photo of an invoice and returns the vendor, invoice number, dates, line items, tax and total as JSON. AWS, Azure, Google, Mindee and Veryfi return the same core fields under different names, at list prices from under a cent to 16 cents per one-page invoice.",
   content: `
-    <p>Short answer: for plain invoice extraction, AWS Textract AnalyzeExpense and Azure's prebuilt invoice model both cost $0.01 a page and return the same core fields. Google charges per document, Veryfi per invoice, Mindee by monthly credits. This page compares the fields each API returns, the real prices, the limits, and gives you code to check the output before it reaches your books.</p>
+    <p>Every invoice API demo looks the same: drop in a PDF, get tidy JSON back. The pain shows up later, the week you switch vendors or run two side by side and find that one calls the line total PRICE and another calls it total_price. We read the docs and price lists for AWS, Azure, Google, Mindee and Veryfi so you can compare fields, prices and limits in one place, and we ran the code that checks the output.</p>
 
     <h2>What is an invoice OCR API?</h2>
     <p>An invoice OCR API, sometimes sold as an invoice processing API, is a web service you send an invoice file to, and it returns the invoice's fields as structured JSON: vendor, invoice number, invoice and due dates, PO number, line items, subtotal, tax and total, usually with a confidence score and the position of each value on the page. You still decide what to do with the data.</p>
@@ -73,7 +73,7 @@ export const post: BlogPost = {
     <p>Two naming traps to catch in your mapping code. On AWS, PRICE is the line total and UNIT_PRICE is the price of one unit, so mapping PRICE to "unit price" breaks every multi-quantity line. And "subtotal" is called net_amount by Google and total_net by Mindee, which is easy to confuse with the total. Beyond these, Azure also returns AmountDue and payment details such as IBAN, and AWS returns ADDRESS blocks for bill-to, ship-to and remit-to.</p>
 
     <h2>What are the limits of each invoice OCR API?</h2>
-    <p>The limits that matter are languages, pages per invoice and how multi-page files are handled. Azure's invoice model supports 27 languages and up to 2,000 pages; Google's Invoice Parser lists 12 languages and handles up to 10 pages per synchronous request; Textract reads six languages and needs its asynchronous API for any PDF longer than one page.</p>
+    <p>This is the part pricing pages leave out, and the part that decides whether an API survives your real invoices. The limits that matter are languages, pages per invoice and how multi-page files are handled. Azure's invoice model supports 27 languages and up to 2,000 pages; Google's Invoice Parser lists 12 languages and handles up to 10 pages per synchronous request; Textract reads six languages and needs its asynchronous API for any PDF longer than one page.</p>
     <table>
       <thead><tr><th>API</th><th>Languages</th><th>Pages and files</th><th>Worth knowing</th></tr></thead>
       <tbody>
@@ -123,15 +123,16 @@ lines + tax + shipping - discount = 10217.13 but total is 4817.13</code></pre>
     <h2>Where DocsAPI fits</h2>
     <p>Disclosure: DocsAPI is our product. It classifies each document first, so invoices can arrive mixed with bank statements, pay stubs and IDs; it returns fields as JSON, joins line-item tables that run across pages, and runs validation before you use the data. It costs from $0.02 per page with tables and classification included, and has a free tier of 100 pages a month. If you only process single-page invoices on AWS or Azure, their $0.01 a page is cheaper.</p>
 
-    <h2>What to do next</h2>
+    <h2>If you are choosing an API this month</h2>
+    <p>Do not let a pricing page make this decision for you. Let fifty of your own invoices make it.</p>
     <ul>
-      <li><strong>Pick two APIs</strong> from the table that fit your cloud and languages, and run the same 50 invoices through both.</li>
-      <li><strong>Map both to your own field names</strong> using the crosswalk above, and run the check code on every result.</li>
-      <li><strong>Price your real page mix</strong>, not a one-page example: per-page and per-document pricing rank differently for long invoices.</li>
-      <li><strong>If you would rather not build the checks and routing yourself</strong>, compare AP tools in our <a href="/resources/blogs/best-ocr-software-for-accounts-payable">best OCR software for accounts payable guide</a>, or see how <a href="/use-cases/invoice-processing">DocsAPI handles invoice processing</a>.</li>
+      <li>Pick two APIs from the table that fit your cloud and languages, and run the same 50 invoices through both.</li>
+      <li>Map both to your own field names using the crosswalk above, and run the check code on every result.</li>
+      <li>Price your real page mix, not a one-page example: per-page and per-document pricing rank differently for long invoices.</li>
+      <li>If you would rather not build the checks and routing yourself, compare AP tools in our <a href="/resources/blogs/best-ocr-software-for-accounts-payable">best OCR software for accounts payable guide</a>, or see how <a href="/use-cases/invoice-processing">DocsAPI handles invoice processing</a>.</li>
     </ul>
 
-    <h2>Sources and how we checked this</h2>
+    <h2>Where these facts come from</h2>
     <ul>
       <li>AWS: field names from <a href="https://docs.aws.amazon.com/textract/latest/dg/invoices-receipts.html" target="_blank" rel="noopener">Analyzing invoices and receipts</a>; limits from <a href="https://docs.aws.amazon.com/textract/latest/dg/limits-document.html" target="_blank" rel="noopener">Set quotas in Amazon Textract</a>; prices from AWS's public price list and the <a href="https://aws.amazon.com/textract/pricing/" target="_blank" rel="noopener">Textract pricing page</a>.</li>
       <li>Azure: capabilities and limits from <a href="https://learn.microsoft.com/en-us/azure/ai-services/document-intelligence/prebuilt/invoice" target="_blank" rel="noopener">Invoice data extraction</a>; field names from Microsoft's published <a href="https://github.com/Azure-Samples/document-intelligence-code-samples/blob/main/schema/2024-11-30-ga/invoice.md" target="_blank" rel="noopener">invoice model schema</a>; prices from Microsoft's public retail prices API (East US).</li>
@@ -143,10 +144,10 @@ lines + tax + shipping - discount = 10217.13 but total is 4817.13</code></pre>
   image: "/images/ocr-api.png",
   featuredImage: "/images/ocr-api.png",
   category: "Vendor Comparisons",
-  date: "September 28, 2026",
-  datePublished: "2026-09-28T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  date: "October 5, 2026",
+  datePublished: "2026-10-05T00:00:00.000Z",
+  dateModified: "2026-10-05T00:00:00.000Z",
+  last_updated: "October 5, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "invoice ocr api",
@@ -164,7 +165,6 @@ lines + tax + shipping - discount = 10217.13 but total is 4817.13</code></pre>
   ],
   tags: ["invoice OCR", "API", "AWS Textract", "Azure", "Google Document AI", "Mindee", "Veryfi"],
   cluster: "comparison",
-  noindex: true,
   faq: [
     {
       question: "What is the best invoice OCR API?",
