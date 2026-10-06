@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 
@@ -20,8 +21,10 @@ export default function FinancialDocsCta() {
             improve accuracy.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white hover:bg-indigo-50 text-indigo-700 px-6 py-6 text-lg w-full sm:w-auto">
-              Request Demo
+            <Button asChild className="bg-white hover:bg-indigo-50 text-indigo-700 px-6 py-6 text-lg w-full sm:w-auto">
+              <Link href="/book-demo">
+                Request Demo
+              </Link>
             </Button>
           </div>
         </motion.div>

@@ -54,10 +54,10 @@ export default function SecurityCompliance() {
             <div>
               <h3 className="text-xl font-bold text-indigo-900 mb-2">Data Security Commitment</h3>
               <p className="text-gray-600">
-                All documents are processed in SOC 2 Type II certified environments with end-to-end encryption. We offer
-                flexible deployment options including on-premise solutions for organizations with strict data
-                sovereignty requirements. Our platform is regularly audited by independent security firms to ensure the
-                highest standards of protection.
+                DocsAPI is SOC 2 Type II and ISO 27001 certified. Customer documents are not used to train models, and
+                documents and extracted data are kept only for a short, configurable retention period and then deleted.
+                DocsAPI runs as a cloud API; if your contracts must stay inside your own environment, raise it in the
+                demo.
               </p>
             </div>
           </div>

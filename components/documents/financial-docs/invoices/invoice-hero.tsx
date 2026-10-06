@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 
@@ -17,11 +18,13 @@ export default function InvoiceHero() {
             Instant, Accurate Invoice Extraction
           </h1>
           <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-            Process invoices in any currency and over 25 languages with our AI-powered OCR that handles complex layouts
-            and tables with exceptional accuracy.
+            Process invoices in multiple currencies and languages with layout-aware OCR that reads line-item tables, at
+            93% line-item accuracy in our 2026 benchmark.
           </p>
-          <Button className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-6 text-lg">
-            Try Invoice OCR Now
+          <Button asChild className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-6 text-lg">
+            <Link href="/book-demo">
+              Book an Invoice OCR Demo
+            </Link>
           </Button>
         </motion.div>
       </div>

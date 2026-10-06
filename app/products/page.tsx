@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import ProductsHero from "@/components/products/products-hero"
 import ProductFeatures from "@/components/products/product-features"
 import ProductComparison from "@/components/products/product-comparison"
-import ProductTestimonials from "@/components/products/product-testimonials"
 import ProductsCTA from "@/components/products/products-cta"
 import ProductIntegrations from "@/components/products/product-integrations"
 import { buildPageMetadata } from "@/lib/page-metadata"
@@ -74,13 +73,12 @@ const CONTENT = {
 export default function ProductsPage() {
   return (
     <>
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} dateModified="2026-09-28" />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} dateModified="2026-10-06" />
       <ProductsHero />
       <ProductFeatures />
       <ProductComparison />
       <ProductIntegrations />
       <UseCaseContent intro={CONTENT.intro} sections={CONTENT.sections} faqs={CONTENT.faqs} related={CONTENT.related} />
-      <ProductTestimonials />
       <ProductsCTA />
     </>
   )

@@ -37,7 +37,7 @@ export default function KeyChallenges() {
     {
       title: "High Customer Drop-off Rates",
       description:
-        "Complex verification processes with multiple steps and document uploads lead to significant customer abandonment. Each additional step in the verification flow increases drop-off rates by 20-40%. This directly impacts customer acquisition costs and overall business growth.",
+        "Complex verification processes with multiple steps and document uploads lead to significant customer abandonment. Every extra step in the verification flow gives people another reason to leave, which directly impacts customer acquisition costs and overall business growth.",
       icon: (
         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />

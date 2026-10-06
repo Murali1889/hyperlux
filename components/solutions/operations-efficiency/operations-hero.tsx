@@ -97,7 +97,7 @@ export default function OperationsHero() {
               <div className="bg-indigo-700 text-white p-4 rounded-lg">
                 <div className="flex justify-between items-center mb-2">
                   <span className="font-medium">Processing Time</span>
-                  <span className="font-bold">30 seconds</span>
+                  <span className="font-bold">About 1.1 s per page</span>
                 </div>
                 <div className="w-full bg-indigo-800 rounded-full h-2.5">
                   <div className="bg-white h-2.5 rounded-full" style={{ width: "85%" }}></div>

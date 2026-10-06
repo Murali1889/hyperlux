@@ -36,7 +36,7 @@ const navItems = [
         children: [
           {
             title: "Invoices",
-            description: "Extract data from invoices with 99% accuracy",
+            description: "Extract invoice data, line items included",
             href: "/documents/financial-docs/invoices",
             icon: <FileText className="h-5 w-5 text-indigo-600" />,
           },

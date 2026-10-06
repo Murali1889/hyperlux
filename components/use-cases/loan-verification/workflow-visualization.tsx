@@ -54,8 +54,8 @@ export default function WorkflowVisualization() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Workflow Visualization</h2>
           <p className="text-lg text-slate-600">
-            See how our AI-powered solution transforms the loan verification process, reducing processing time by 75%
-            while improving accuracy.
+            How documents move from upload to a verified loan file, with people only stepping in where a field is
+            unclear.
           </p>
         </motion.div>
 
@@ -115,8 +115,8 @@ export default function WorkflowVisualization() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <p className="text-slate-700 text-center">
-            <span className="font-semibold">Key Benefits:</span> This streamlined workflow reduces verification time
-            from days to minutes, increases data accuracy to 98%, and allows loan officers to focus on customer
+            <span className="font-semibold">Key Benefits:</span> Documents are read at about 1.1 seconds per page,
+            unclear fields are flagged instead of guessed, and loan officers spend their time on customer
             relationships rather than paperwork. The result is faster loan decisions, improved borrower experience, and
             increased operational efficiency.
           </p>

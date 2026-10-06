@@ -32,7 +32,7 @@ export default function ProcessFlow() {
     },
     {
       title: "OCR",
-      description: "AI extracts data from ID document with 99% accuracy",
+      description: "AI extracts data from the ID and validates MRZ check digits",
       icon: (
         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path
@@ -172,7 +172,7 @@ export default function ProcessFlow() {
           className="mt-12 text-center"
         >
           <p className="text-lg text-indigo-700 font-medium">
-            Complete verification in as little as 10 seconds, with 99% accuracy
+            Documents are read at about 1.1 seconds per page, with unclear fields flagged for review
           </p>
         </motion.div>
       </div>

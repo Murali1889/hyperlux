@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 
@@ -14,14 +15,16 @@ export default function FinancialDocsHero() {
           transition={{ duration: 0.5 }}
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-indigo-900 mb-6">
-            Financial Documents — Ready-Made Extraction
+            Financial Documents: Ready-Made Extraction
           </h1>
           <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-            Instantly extract data from invoices, purchase orders, and bank statements with our pre-trained AI models.
-            Eliminate manual data entry and accelerate your financial workflows with 99% accuracy.
+            Extract data from invoices, purchase orders, and bank statements with pre-trained models. Accuracy is
+            benchmarked by document type: 93% on invoice line items and 91% on multi-page bank statement tables.
           </p>
-          <Button className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-6 text-lg">
-            Request Financial OCR Demo
+          <Button asChild className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-6 text-lg">
+            <Link href="/book-demo">
+              Request Financial OCR Demo
+            </Link>
           </Button>
         </motion.div>
       </div>

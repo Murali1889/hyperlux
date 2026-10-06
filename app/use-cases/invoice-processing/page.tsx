@@ -12,15 +12,15 @@ import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 import { UseCaseContent } from "@/components/seo/use-case-content"
 
 const PATH = "/use-cases/invoice-processing"
-const TITLE = "Invoice Processing OCR: Cut AP Time 80% With AI"
+const TITLE = "Invoice Processing OCR: Automate AP Data Entry"
 const DESCRIPTION =
-  "Automate invoice data capture, three-way match, and AP approval. 99% extraction accuracy. From $14 to $2.70 per invoice in production."
+  "Automate invoice data capture, three-way match, and AP approval. 93% line-item accuracy in our 2026 benchmark, with unclear fields sent to review."
 
 export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
 const CONTENT = {
   intro:
-    "Invoice processing is the workflow that takes an incoming vendor invoice from arrival to a paid, reconciled entry in your accounting system. Done manually, it costs $10 to $20 per invoice and takes days. Done with invoice processing OCR, it costs $2 to $4 and takes minutes. This page explains how automated invoice processing works, what it saves, and how to move your accounts payable team from manual data entry to a touchless pipeline.",
+    "Invoice processing is the workflow that takes an incoming vendor invoice from arrival to a paid, reconciled entry in your accounting system. Done manually, someone keys every field and the invoice waits in a queue for days. Done with invoice processing OCR, the fields are read and checked as the invoice arrives, and only the unclear ones wait for a person. This page explains how automated invoice processing works, what it saves, and how to move your accounts payable team from manual data entry to a touchless pipeline.",
   sections: [
     {
       heading: "How automated invoice processing works",
@@ -32,15 +32,15 @@ const CONTENT = {
     {
       heading: "What invoice processing OCR saves",
       paragraphs: [
-        "The headline number is per-invoice cost, which typically drops 75% to 85%, from around $14 fully loaded to around $2.70. But the compounding value is in three places: labor, because data-entry hours disappear; speed, because a two-day close replaces an eight-day one; and errors, because fewer duplicate payments and late fees mean cleaner vendor relationships. A team processing 2,000 or more invoices a month usually sees the investment pay back within a quarter.",
+        "The headline number is cost per invoice, and nobody can tell you yours without your own numbers. Add up the minutes your team spends keying, checking and chasing each invoice, multiply by the loaded hourly cost, then compare that with per-page pricing plus the time people still spend on exceptions. The accounts payable OCR guide linked below has a fill-in cost model for exactly this. The savings come from three places: labor, because data-entry hours disappear; speed, because invoices stop waiting to be keyed; and errors, because duplicate payments and late fees get caught before the money leaves.",
         "The larger strategic win is redeploying the accounts payable team. When the routine keying disappears, the same people move to vendor management, cash-flow forecasting, and month-end close acceleration. The team stops being the bottleneck for routine document work and starts doing the analysis that finance leaders actually want from them.",
       ],
     },
     {
       heading: "How to roll out invoice OCR without disruption",
       paragraphs: [
-        "The safe rollout starts narrow. Pick your top five vendors, which usually account for around 40% of volume, and run the OCR pipeline in parallel with your existing manual process for 30 days. Compare the outputs, tune the exception queue against real errors, then cut those five vendors over to touchless processing before expanding vendor by vendor. Full cutover on day one fails more often than it succeeds because one edge case can block all payments.",
-        "The most underrated deliverable is the exception review queue. Even at 80% touchless, one in five invoices needs a human pass, and without a structured queue that pre-highlights the uncertain fields, those invoices pile up in someone's inbox and the team loses trust in the automation. Design the queue before you design the extraction, and cap vendor expansion at whatever the queue can clear within its daily service level.",
+        "The safe rollout starts narrow. Pick your top five vendors, which often carry a big share of your volume, and run the OCR pipeline in parallel with your existing manual process for 30 days. Compare the outputs, tune the exception queue against real errors, then cut those five vendors over to touchless processing before expanding vendor by vendor. Full cutover on day one fails more often than it succeeds because one edge case can block all payments.",
+        "The most underrated deliverable is the exception review queue. Even a well-tuned pipeline sends some invoices to a person, and without a structured queue that pre-highlights the uncertain fields, those invoices pile up in someone's inbox and the team loses trust in the automation. Design the queue before you design the extraction, and cap vendor expansion at whatever the queue can clear within its daily service level.",
       ],
     },
   ],
@@ -53,12 +53,12 @@ const CONTENT = {
     {
       question: "How much does invoice OCR reduce cost?",
       answer:
-        "Typically 75% to 85%. Manual invoice processing runs $10 to $20 fully loaded per invoice; automated processing runs $2 to $4. One accounts payable team moved from $14 to $2.70 per invoice in 90 days. Payback is usually under one quarter for teams processing 2,000 or more invoices a month.",
+        "It depends on your volume and what an invoice costs you today. Work out your current cost per invoice (minutes spent keying, checking and chasing, times the loaded hourly cost), then compare it with per-page pricing plus the time your team still spends on exceptions. DocsAPI pricing starts at $0.02 per page. The accounts payable OCR guide has a fill-in cost model you can use with your own numbers.",
     },
     {
       question: "What is touchless invoice processing?",
       answer:
-        "Touchless processing is the share of invoices that flow from arrival to payment without any human review. Modern layout-aware OCR reaches 60% to 80% touchless on repeat-vendor invoices and 30% to 50% on first-time vendors. Touchless rate is the number that most directly drives accounts payable cost.",
+        "Touchless processing is the share of invoices that flow from arrival to payment without any human review. Repeat vendors with familiar layouts go touchless far more often than first-time vendors, whose layouts the system has not seen yet. Touchless rate is the number that most directly drives accounts payable cost.",
     },
     {
       question: "How long does an invoice OCR rollout take?",
@@ -78,7 +78,7 @@ const CONTENT = {
 export default function InvoiceProcessingPage() {
   return (
     <>
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service dateModified="2026-09-28" />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service dateModified="2026-10-06" />
     <main className="flex flex-col min-h-screen">
       <InvoiceHero />
       <ManualChallenges />

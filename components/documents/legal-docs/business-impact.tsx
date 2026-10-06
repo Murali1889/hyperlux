@@ -3,25 +3,25 @@ import { Clock, Bell, Users } from "lucide-react"
 export default function BusinessImpact() {
   const impacts = [
     {
-      title: "Clause Search Time Reduced",
-      description: "Find specific clauses across thousands of contracts in seconds instead of hours",
+      title: "Clauses You Can Search",
+      description: "Extracted clauses arrive as structured data, so your contract system can search them by type instead of someone reading page by page",
       icon: <Clock className="h-8 w-8 text-indigo-700" />,
-      metric: "98%",
-      metricLabel: "Time Saved",
+      metric: "JSON",
+      metricLabel: "Structured output",
     },
     {
       title: "Earlier Renewal Alerts",
-      description: "Automated extraction of key dates enables proactive renewal management",
+      description: "Renewal, notice and expiry dates come out as fields your calendar or contract system can alert on",
       icon: <Bell className="h-8 w-8 text-indigo-700" />,
-      metric: "30+",
-      metricLabel: "Days Earlier",
+      metric: "Dates",
+      metricLabel: "Extracted as fields",
     },
     {
-      title: "Paralegal Hours Saved",
-      description: "Dramatically reduce manual document review time for your legal team",
+      title: "Review Where It Matters",
+      description: "Low-confidence clauses are flagged for a reviewer, so people check the uncertain parts instead of every page",
       icon: <Users className="h-8 w-8 text-indigo-700" />,
-      metric: "200+",
-      metricLabel: "Hours Monthly",
+      metric: "Flagged",
+      metricLabel: "Clauses only",
     },
   ]
 
@@ -31,10 +31,10 @@ export default function BusinessImpact() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-indigo-900">
-              Business Impact & Time Savings
+              Where Legal Teams Get Time Back
             </h2>
             <p className="max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Quantifiable benefits that transform your legal operations and reduce business risk.
+              Time saved depends on your contract volume. These are the changes in the work.
             </p>
           </div>
         </div>
@@ -59,9 +59,9 @@ export default function BusinessImpact() {
         <div className="mt-12 bg-white p-6 rounded-xl shadow-md border border-indigo-100">
           <h3 className="text-xl font-bold text-indigo-900 mb-4">Risk Reduction & Contract Compliance</h3>
           <p className="text-gray-600">
-            Beyond time savings, our legal document OCR significantly reduces compliance risks by ensuring no critical
-            clauses or deadlines are missed. Organizations report 65% fewer contract-related disputes and a 40%
-            reduction in compliance violations after implementation, protecting both reputation and bottom line.
+            A missed renewal date or an unnoticed liability cap usually comes from a contract nobody had time to read
+            closely. Extraction reads every contract the same way and puts the dates into a system that can alert on
+            them. A reviewer still confirms the clauses that carry real risk.
           </p>
         </div>
       </div>

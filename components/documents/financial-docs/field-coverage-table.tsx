@@ -49,7 +49,7 @@ export default function FieldCoverageTable() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">Field Coverage Table</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Our AI extracts all essential data fields from your financial documents with exceptional accuracy
+            The fields DocsAPI returns for each financial document, as structured JSON
           </p>
         </motion.div>
 
@@ -113,7 +113,7 @@ export default function FieldCoverageTable() {
             </div>
           </div>
           <div className="bg-indigo-50 p-4 text-center">
-            <p className="text-indigo-900 font-medium">99%+ header, 96% line-item accuracy on benchmark set.</p>
+            <p className="text-indigo-900 font-medium">2026 benchmark: 93% on invoice line items, 91% on multi-page bank statement tables.</p>
           </div>
         </motion.div>
       </div>

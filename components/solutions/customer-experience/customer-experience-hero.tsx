@@ -20,8 +20,8 @@ export default function CustomerExperienceHero() {
               Sharper CX With Instant Document Decisions
             </h1>
             <p className="text-lg text-gray-700 mb-8">
-              Transform customer experiences with 30-second digital onboarding and see immediate CSAT gains. Our
-              AI-powered OCR solutions eliminate friction and accelerate customer journeys.
+              Read IDs and application forms during onboarding at about 1.1 seconds per page, with unclear fields
+              flagged for review, so the document step stops being the slow part of signing up.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-4 sm:py-6 rounded-lg text-base sm:text-lg w-full sm:w-auto">
@@ -47,7 +47,7 @@ export default function CustomerExperienceHero() {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg">Digital Onboarding</h3>
-                  <p className="text-gray-600">30-second customer verification</p>
+                  <p className="text-gray-600">ID and form extraction in seconds</p>
                 </div>
               </div>
 
@@ -76,7 +76,7 @@ export default function CustomerExperienceHero() {
 
               <div className="flex justify-between items-center">
                 <div className="text-sm text-gray-500">
-                  Average completion: <span className="font-bold text-indigo-700">30 seconds</span>
+                  Processing: <span className="font-bold text-indigo-700">about 1.1 s per page</span>
                 </div>
                 <Button variant="ghost" className="text-indigo-700 hover:text-indigo-800 p-0 flex items-center gap-1">
                   View details <ArrowRight className="w-4 h-4" />

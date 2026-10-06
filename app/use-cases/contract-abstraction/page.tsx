@@ -26,7 +26,7 @@ const CONTENT = {
       heading: "Why contract abstraction is different from invoice extraction",
       paragraphs: [
         "An invoice is a structured form: the total sits in roughly the same place every time. A contract is unstructured legal prose, where a termination clause might appear on page 3 or page 47, phrased as 'either party may terminate,' 'this agreement shall cease,' or 'upon 30 days written notice.' Contract abstraction needs layout-aware OCR to read the document plus a language-understanding layer, increasingly LLM-based, to locate and normalize each clause no matter how it is written or where it sits.",
-        "That second layer is what makes contract abstraction hard and valuable. Well-structured clauses like effective dates and party names extract at 95% or better. Nuanced clauses like liability caps and complex renewal conditions land closer to 85% to 90% because the legal language is genuinely ambiguous. The practical result is that contract abstraction accelerates legal review by 60% to 80% rather than replacing it: it surfaces the clauses for a human to confirm on the agreements that matter.",
+        "That second layer is what makes contract abstraction hard and valuable. Well-structured clauses like effective dates and party names extract reliably. Nuanced clauses like liability caps and complex renewal conditions are harder, because the legal language is genuinely ambiguous, so they need a reviewer. The practical result is that contract abstraction speeds up legal review rather than replacing it: it surfaces the clauses for a human to confirm on the agreements that matter.",
       ],
     },
     {
@@ -63,7 +63,7 @@ const CONTENT = {
     {
       question: "How accurate is automated contract abstraction?",
       answer:
-        "It depends on the clause. Well-structured clauses like effective dates and party names extract at 95% or better. Nuanced clauses like liability caps and complex renewal conditions land at 85% to 90% because the legal language is genuinely ambiguous. Contract abstraction accelerates legal review by 60% to 80% rather than replacing it on high-value agreements.",
+        "It depends on the clause. Well-structured clauses like effective dates and party names extract reliably. Nuanced clauses like liability caps and complex renewal conditions are harder because the legal language is genuinely ambiguous, so each extracted clause should carry a confidence score and the uncertain ones should go to a reviewer. On high-value agreements, abstraction speeds up legal review rather than replacing it.",
     },
     {
       question: "What does contract abstraction extract?",
@@ -81,7 +81,7 @@ const CONTENT = {
 export default function ContractAbstractionPage() {
   return (
     <main className="flex flex-col min-h-screen">
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service dateModified="2026-09-28" />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service dateModified="2026-10-06" />
       <ContractHero />
       <ManualReviewChallenges />
       <FeatureHighlights />

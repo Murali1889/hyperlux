@@ -5,17 +5,17 @@ export default function BankStatementFAQ() {
     {
       question: "Do you support multiple bank statement templates?",
       answer:
-        "Yes, our OCR engine supports over 200 bank statement formats from financial institutions worldwide. The system is continuously trained on new templates and can adapt to custom formats with minimal configuration. Our template-matching algorithm identifies the bank and applies the appropriate extraction rules automatically.",
+        "Yes. DocsAPI uses a layout-aware engine, with a vision-language model fallback for complex pages, so it reads the table structure instead of depending on one fixed template per bank. A new bank's format does not need its own setup. Customer documents are not used to train models.",
     },
     {
       question: "How do you handle password-protected statements?",
       answer:
-        "For password-protected PDF statements, we provide two options: 1) A secure client-side decryption tool that removes password protection before upload, ensuring credentials never leave your environment, or 2) A secure password submission API that handles decryption in a PCI-DSS compliant environment with immediate credential disposal after processing.",
+        "A password-protected PDF has to be unlocked before its text can be read. The simplest route is to remove the protection in your own system before upload, so the password never leaves your environment. We can walk through other options for your flow during the demo.",
     },
     {
       question: "Can you process passbook scans and physical statements?",
       answer:
-        "Yes, our OCR engine is optimized for both digital statements and scanned physical documents. For passbook scans, we apply additional image preprocessing techniques to handle handwritten entries, stamps, and varying scan qualities. While digital statements yield the highest accuracy (99%), scanned passbooks still achieve excellent results (95-97% accuracy) depending on scan quality.",
+        "Yes, our OCR engine is optimized for both digital statements and scanned physical documents. For passbook scans, we apply additional image preprocessing techniques to handle handwritten entries, stamps, and varying scan qualities. Digital statements exported from online banking give the best results. Scanned passbooks depend heavily on scan quality, and rows the engine is unsure about are flagged for a reviewer instead of guessed.",
     },
   ]
 

@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Copy, Download } from "lucide-react"
@@ -42,11 +43,11 @@ export default function SdkWidgetsSnippet() {
                 </Button>
               </div>
               <div className="p-4 text-xs sm:text-sm font-mono overflow-x-auto">
-                <pre className="text-green-400">// Initialize the DocsAPI SDK</pre>
+                <pre className="text-green-400">// Illustrative example. The SDK is shared with you after a demo.</pre>
                 <pre className="text-white">
                   <span className="text-blue-400">import</span> <span className="text-yellow-400">DocsAPISDK</span>{" "}
                   <span className="text-blue-400">from</span>{" "}
-                  <span className="text-green-400">'@docsapi/sdk'</span>;
+                  <span className="text-green-400">'./docsapi-sdk'</span>;
                 </pre>
                 <pre className="text-white">
                   <span className="text-blue-400">const</span> <span className="text-yellow-400">docsapi</span> ={" "}
@@ -102,7 +103,7 @@ export default function SdkWidgetsSnippet() {
             viewport={{ once: true }}
           >
             <div className="bg-white rounded-xl p-6 border border-indigo-100 shadow-md h-full flex flex-col">
-              <h3 className="text-xl font-bold text-indigo-900 mb-4">Mobile SDK Documentation</h3>
+              <h3 className="text-xl font-bold text-indigo-900 mb-4">Mobile SDK</h3>
               <div className="bg-gray-100 p-4 rounded-lg mb-6 flex-1 flex items-center justify-center">
                 <div className="bg-white p-4 rounded-lg shadow-sm">
                   <div className="w-48 h-48 mx-auto bg-indigo-700 rounded-lg flex items-center justify-center">
@@ -112,12 +113,14 @@ export default function SdkWidgetsSnippet() {
                       ))}
                     </div>
                   </div>
-                  <p className="text-center text-sm mt-2 text-gray-700">Scan for mobile docs</p>
+                  <p className="text-center text-sm mt-2 text-gray-700">Shared after a demo</p>
                 </div>
               </div>
-              <Button className="bg-indigo-700 hover:bg-indigo-800 text-white w-full flex items-center justify-center gap-2">
-                <Download className="w-4 h-4" />
-                Download SDK Package
+              <Button asChild className="bg-indigo-700 hover:bg-indigo-800 text-white w-full flex items-center justify-center gap-2">
+                <Link href="/book-demo">
+                  <Download className="w-4 h-4" />
+                  Ask for SDK Access
+                </Link>
               </Button>
             </div>
           </motion.div>

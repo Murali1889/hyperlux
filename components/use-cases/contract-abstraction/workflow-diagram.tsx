@@ -100,8 +100,8 @@ export default function WorkflowDiagram() {
           className="text-center mt-16 max-w-3xl mx-auto"
         >
           <p className="text-slate-700">
-            <span className="font-semibold">Time savings:</span> Reduce contract review time by up to 80% while
-            increasing accuracy and consistency. Our AI-powered workflow enables legal teams to focus on high-value
+            <span className="font-semibold">Time savings:</span> Every contract is read the same way, and
+            reviewers only check the clauses that are flagged. Our AI-powered workflow enables legal teams to focus on high-value
             analysis rather than tedious document review.
           </p>
         </motion.div>

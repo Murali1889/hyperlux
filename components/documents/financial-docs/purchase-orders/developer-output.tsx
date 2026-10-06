@@ -83,8 +83,8 @@ export default function DeveloperOutput() {
             </div>
           </div>
           <div className="mt-6 text-center">
-            <a href="#" className="text-indigo-700 font-medium hover:underline">
-              View full API documentation →
+            <a href="/book-demo" className="text-indigo-700 font-medium hover:underline">
+              Ask for the full API reference in a demo →
             </a>
           </div>
         </motion.div>

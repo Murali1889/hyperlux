@@ -3,16 +3,16 @@ import { CheckItem } from "@/components/ui/check-item"
 
 const benefits = [
   {
-    title: "70% Faster Processing",
-    description: "Reduce document processing time from hours to minutes with our AI-powered OCR solution",
+    title: "About 1.1 Seconds per Page",
+    description: "Documents are read as they arrive instead of waiting in a queue for someone to key them in",
   },
   {
-    title: "99.9% Accuracy Rate",
-    description: "Achieve near-perfect data extraction through machine learning and human-in-the-loop validation",
+    title: "Accuracy Published by Document Type",
+    description: "93% on invoice line items and 91% on multi-page bank statement tables in our 2026 benchmark, with unclear fields flagged for review",
   },
   {
-    title: "60% Cost Reduction",
-    description: "Lower operational costs by automating document classification and data extraction end-to-end",
+    title: "Per-Page Pricing From $0.02",
+    description: "Pay for the pages you process, with volume discounts above 100K pages a month and no charge for classification",
   },
   {
     title: "Enhanced Compliance",
@@ -65,15 +65,15 @@ export default function ValueProposition() {
                     </div>
                     <div className="flex items-center justify-between mb-2">
                       <div className="h-3 bg-indigo-100 rounded w-1/4"></div>
-                      <div className="text-xs font-medium text-green-600">70% Faster</div>
+                      <div className="text-xs font-medium text-green-600">Classified</div>
                     </div>
                     <div className="flex items-center justify-between mb-2">
                       <div className="h-3 bg-indigo-100 rounded w-1/3"></div>
-                      <div className="text-xs font-medium text-green-600">95% Accurate</div>
+                      <div className="text-xs font-medium text-green-600">Extracted</div>
                     </div>
                     <div className="flex items-center justify-between">
                       <div className="h-3 bg-indigo-100 rounded w-1/4"></div>
-                      <div className="text-xs font-medium text-green-600">60% Savings</div>
+                      <div className="text-xs font-medium text-green-600">Validated</div>
                     </div>
                   </div>
 
@@ -112,8 +112,8 @@ export default function ValueProposition() {
                 </svg>
               </div>
               <div>
-                <p className="text-sm font-medium">5x Faster Processing</p>
-                <p className="text-xs text-muted-foreground">Than manual classification</p>
+                <p className="text-sm font-medium">~1.1 s per page</p>
+                <p className="text-xs text-muted-foreground">In our 2026 OCR benchmark</p>
               </div>
             </div>
           </div>

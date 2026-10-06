@@ -12,7 +12,7 @@ export default function HowItWorks() {
     {
       number: 2,
       title: "AI-Powered Extraction",
-      description: "Our AI engine extracts text, tables, barcodes, and signatures from documents with 97% accuracy.",
+      description: "Our AI engine extracts text, tables, barcodes, and signatures, and flags any field it is unsure about for review.",
       icon: "/ai-extraction-icon.png",
     },
     {
@@ -195,7 +195,7 @@ export default function HowItWorks() {
         <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-2 bg-indigo-50 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">
             <CheckCircle className="w-4 h-4" />
-            <span>99.9% uptime with real-time processing</span>
+            <span>About 1.1 seconds per page in our 2026 benchmark</span>
           </div>
         </div>
       </div>

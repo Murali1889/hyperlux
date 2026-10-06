@@ -15,7 +15,7 @@ export default function PassportFAQ() {
     {
       question: "What are the differences between on-device and server processing?",
       answer:
-        "We offer both options. On-device processing provides faster results and works offline, but with slightly lower accuracy for complex cases. Server processing delivers our highest accuracy (99.9%) and supports all passport types, but requires internet connectivity. Many clients implement a hybrid approach: on-device for speed, with server fallback for low-confidence results.",
+        "We offer both options. On-device processing provides faster results and works offline, but with slightly lower accuracy for complex cases. Server processing gives the best accuracy and supports all passport types, but requires internet connectivity. Many clients implement a hybrid approach: on-device for speed, with server fallback for low-confidence results.",
     },
   ]
 

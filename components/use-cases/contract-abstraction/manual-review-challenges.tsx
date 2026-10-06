@@ -8,7 +8,7 @@ const challenges = [
     icon: <Clock className="h-8 w-8 text-red-500" />,
     title: "Time-intensive clause review",
     description:
-      "Legal professionals spend up to 80% of their time manually reviewing contracts to identify key clauses, obligations, and potential risks. This tedious process creates bottlenecks in business operations and increases costs significantly.",
+      "Legal professionals spend long hours manually reviewing contracts to identify key clauses, obligations, and potential risks. This tedious process creates bottlenecks in business operations and increases costs significantly.",
   },
   {
     icon: <AlertTriangle className="h-8 w-8 text-amber-500" />,

@@ -18,8 +18,10 @@ export default function NationalIdCta() {
             <Button asChild className="bg-indigo-700 hover:bg-indigo-800">
               <Link href="/book-demo">Request Demo</Link>
             </Button>
-            <Button variant="outline" className="border-indigo-700 text-indigo-700 hover:bg-indigo-50">
-              View Documentation
+            <Button asChild variant="outline" className="border-indigo-700 text-indigo-700 hover:bg-indigo-50">
+              <Link href="/book-demo">
+                Book a Demo
+              </Link>
             </Button>
           </div>
         </div>

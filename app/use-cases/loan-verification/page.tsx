@@ -11,16 +11,16 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/use-cases/loan-verification"
-const TITLE = "Loan Verification OCR: From 45 Days to 5 Days"
+const TITLE = "Loan Verification OCR: Faster Document Checks"
 const DESCRIPTION =
-  "Accelerate loan verification with automated bank statement OCR, ID checks, and compliance audits. 98% accuracy on financial documents."
+  "Speed up loan verification with bank statement OCR, ID checks, and compliance audits. 91% row accuracy on multi-page statements in our 2026 benchmark."
 
 export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
 export default function LoanVerificationPage() {
   return (
     <main className="flex flex-col min-h-screen">
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service dateModified="2026-09-14" />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service dateModified="2026-10-06" />
       <LoanHero />
       <ManualPainPoints />
       <KeyFeatures />

@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Upload, Phone } from "lucide-react"
@@ -20,9 +21,11 @@ export default function DocumentsCta() {
             Upload your sample documents to see our AI in action or contact our sales team for a personalized demo.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white hover:bg-indigo-50 text-indigo-700 px-6 py-6 text-lg w-full sm:w-auto flex items-center justify-center">
-              <Upload className="mr-2 h-5 w-5" />
-              Upload Sample PDF
+            <Button asChild className="bg-white hover:bg-indigo-50 text-indigo-700 px-6 py-6 text-lg w-full sm:w-auto flex items-center justify-center">
+              <Link href="/book-demo">
+                <Upload className="mr-2 h-5 w-5" />
+                Book a Demo With Your PDFs
+              </Link>
             </Button>
           </div>
         </motion.div>

@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Code, Phone } from "lucide-react"
@@ -17,13 +18,15 @@ export default function InvoiceCta() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Start extracting invoices today.</h2>
           <p className="text-xl text-indigo-100 mb-8">
-            Transform your invoice processing with our AI-powered OCR solution. Try our API with sample invoices or
-            contact our sales team for a personalized demo.
+            Bring a few of your own invoices to a demo and see exactly what comes back. Qualified lenders can then
+            try DocsAPI free for 30 days.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white hover:bg-indigo-50 text-indigo-700 px-6 py-6 text-lg w-full sm:w-auto flex items-center justify-center">
-              <Code className="mr-2 h-5 w-5" />
-              Try Sample API
+            <Button asChild className="bg-white hover:bg-indigo-50 text-indigo-700 px-6 py-6 text-lg w-full sm:w-auto flex items-center justify-center">
+              <Link href="/book-demo">
+                <Code className="mr-2 h-5 w-5" />
+                Book a Demo With Your Invoices
+              </Link>
             </Button>
           </div>
         </motion.div>

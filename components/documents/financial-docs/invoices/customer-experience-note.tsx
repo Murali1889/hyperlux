@@ -23,19 +23,19 @@ export default function CustomerExperienceNote() {
             <div className="md:w-5/6">
               <h2 className="text-2xl font-bold text-indigo-900 mb-4">Customer Experience Note</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Automating invoice processing transforms supplier relationships. With our system, suppliers receive
-                payment status updates 48 hours sooner than with manual processing. This transparency reduces payment
-                queries by 65% and strengthens vendor relationships. Your AP team spends less time answering basic
-                status questions and more time on strategic supplier management.
+                Suppliers feel the difference too. When invoices are captured as they arrive, your team can answer
+                &quot;where is my payment?&quot; from the system instead of digging through an inbox, and fewer invoices sit
+                unread until someone chases them. Your AP team spends less time on status questions and more on the
+                supplier relationships that matter.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <div className="bg-indigo-50 p-4 rounded-lg flex-1">
-                  <div className="text-2xl font-bold text-indigo-700 mb-1">48 hrs</div>
-                  <div className="text-gray-700">Faster payment status</div>
+                  <div className="text-2xl font-bold text-indigo-700 mb-1">1.1 s</div>
+                  <div className="text-gray-700">Per page, so invoices are captured as they arrive</div>
                 </div>
                 <div className="bg-indigo-50 p-4 rounded-lg flex-1">
-                  <div className="text-2xl font-bold text-indigo-700 mb-1">65%</div>
-                  <div className="text-gray-700">Fewer payment queries</div>
+                  <div className="text-2xl font-bold text-indigo-700 mb-1">Flagged</div>
+                  <div className="text-gray-700">Unclear fields are reviewed before payment</div>
                 </div>
               </div>
             </div>

@@ -18,8 +18,8 @@ export default function ProductsHero() {
               returns structured data. You pay per page, and qualified lenders can try it free for 30 days.
             </p>
             <p className="text-xl text-gray-600 max-w-2xl">
-              Our suite of AI-powered OCR products streamlines document processing, enhances fraud detection, and
-              accelerates lending decisions with up to 99.9% accuracy and intelligent automation. See the{" "}
+              Accuracy depends on the document, so we publish it by type: 93% on invoice line items and 91% on
+              multi-page bank statement tables, at about 1.1 seconds per page. See the{" "}
               <Link href="/resources/blogs/ocr-accuracy-benchmark-2026" className="underline hover:text-indigo-700">
                 real benchmark numbers
               </Link>
@@ -86,12 +86,12 @@ export default function ProductsHero() {
                 <h3 className="text-2xl font-bold mb-2">AI-Powered Document Processing</h3>
                 <div className="grid grid-cols-2 gap-4 mt-6">
                   <div className="bg-white/10 p-3 rounded-lg">
-                    <div className="text-3xl font-bold">99.9%</div>
-                    <div className="text-sm opacity-80">Accuracy</div>
+                    <div className="text-3xl font-bold">93%</div>
+                    <div className="text-sm opacity-80">Invoice line items</div>
                   </div>
                   <div className="bg-white/10 p-3 rounded-lg">
-                    <div className="text-3xl font-bold">80%</div>
-                    <div className="text-sm opacity-80">Faster</div>
+                    <div className="text-3xl font-bold">1.1 s</div>
+                    <div className="text-sm opacity-80">Per page</div>
                   </div>
                 </div>
               </div>

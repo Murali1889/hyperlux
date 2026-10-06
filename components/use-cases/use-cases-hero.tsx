@@ -59,7 +59,7 @@ export default function UseCasesHero() {
               className="text-xl text-slate-200 mb-8"
             >
               Transform document-heavy processes with intelligent automation that delivers unmatched speed, accuracy,
-              and efficiency across industries—from finance to healthcare and beyond.
+              and efficiency across industries, from finance to healthcare.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

@@ -12,9 +12,9 @@ import { buildPageMetadata } from "@/lib/page-metadata"
 import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 
 const PATH = "/documents/identity-docs/passports"
-const TITLE = "Passport OCR: MRZ + Face Extraction in 8 Seconds"
+const TITLE = "Passport OCR: MRZ and Face Extraction API"
 const DESCRIPTION =
-  "Extract MRZ, name, DOB, and expiry from passports. 99.9% accuracy on global ICAO formats, sub-5-second per document, KYC-ready output."
+  "Extract MRZ, name, DOB, and expiry from ICAO 9303 passports, with MRZ check digits validated so misreads get flagged. KYC-ready JSON output."
 
 export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 

@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { FileText, Phone } from "lucide-react"
@@ -21,9 +22,11 @@ export default function PurchaseOrderCta() {
             contact our sales team to learn more.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-white hover:bg-indigo-50 text-indigo-700 px-6 py-6 text-lg w-full sm:w-auto flex items-center justify-center">
-              <FileText className="mr-2 h-5 w-5" />
-              Request Demo
+            <Button asChild className="bg-white hover:bg-indigo-50 text-indigo-700 px-6 py-6 text-lg w-full sm:w-auto flex items-center justify-center">
+              <Link href="/book-demo">
+                <FileText className="mr-2 h-5 w-5" />
+                Request Demo
+              </Link>
             </Button>
           </div>
         </motion.div>

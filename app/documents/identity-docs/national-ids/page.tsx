@@ -14,7 +14,7 @@ import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 const PATH = "/documents/identity-docs/national-ids"
 const TITLE = "National ID Card OCR: Global Coverage, KYC-Ready"
 const DESCRIPTION =
-  "Extract identity fields from national ID cards worldwide, barcodes, QR codes, hologram text. 99% accuracy, validation built-in."
+  "Extract identity fields, barcodes and QR codes from national ID cards, with MRZ check digits validated and unclear fields flagged for review."
 
 export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 

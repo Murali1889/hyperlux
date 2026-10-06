@@ -34,8 +34,8 @@ export default function VerificationWorkflow() {
             </div>
             <h3 className="text-xl font-bold">AI Detects & Extracts Fields</h3>
             <p className="text-slate-500">
-              Our AI automatically identifies document type and extracts all relevant fields in under 1 second with
-              99.8% accuracy.
+              Our AI identifies the document type and extracts the relevant fields, at about 1.1 seconds per page in
+              our 2026 benchmark, with unclear fields flagged for review.
             </p>
           </div>
 
@@ -55,11 +55,6 @@ export default function VerificationWorkflow() {
           </div>
         </div>
 
-        <div className="mt-12 flex justify-center">
-          <div className="w-full max-w-4xl h-[200px] bg-slate-100 rounded-lg flex items-center justify-center">
-            <p className="text-slate-400 italic">SVG pipeline visualization</p>
-          </div>
-        </div>
       </div>
     </section>
   )

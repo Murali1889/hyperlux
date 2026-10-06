@@ -9,19 +9,19 @@ export default function RegulationCards() {
       title: "AML / KYC Automation",
       icon: <Shield className="h-12 w-12 text-indigo-700" />,
       description:
-        "Automate identity verification and due diligence with AI-powered document processing. Extract and verify customer information from ID cards, passports, and proof of address documents with 99.5% accuracy. Maintain complete audit trails for regulatory review and reduce manual verification time by 85%. Supports global AML regulations including FinCEN, FINTRAC, and international equivalents.",
+        "Automate identity verification and due diligence with AI-powered document processing. Extract and verify customer information from ID cards, passports, and proof of address documents, with MRZ check digits validated and unclear fields flagged for review. Keep a record of what was extracted for regulatory review. Supports global AML regulations including FinCEN, FINTRAC, and international equivalents.",
     },
     {
       title: "SOX Evidence Binder",
       icon: <FileCheck className="h-12 w-12 text-indigo-700" />,
       description:
-        "Create digital evidence binders for SOX section 404 compliance with automated document classification and data extraction. Maintain immutable audit trails for all financial controls documentation. Reduce evidence collection time by 70% while improving accuracy and completeness. Automatically flag exceptions and route for review, with full chain-of-custody tracking for every document and approval workflow.",
+        "Create digital evidence binders for SOX section 404 compliance with automated document classification and data extraction. Maintain immutable audit trails for all financial controls documentation. Evidence gets collected the same way every time instead of by whoever has a spare afternoon. Automatically flag exceptions and route for review, with full chain-of-custody tracking for every document and approval workflow.",
     },
     {
       title: "GDPR PII Redaction",
       icon: <UserX className="h-12 w-12 text-indigo-700" />,
       description:
-        "Automatically identify and redact personally identifiable information (PII) from documents to maintain GDPR compliance. Our AI identifies 50+ PII types including names, addresses, ID numbers, and biometric data. Create redacted copies for sharing while maintaining original documents in secure storage. Implement right-to-be-forgotten requests with automated PII discovery across document repositories.",
+        "Automatically identify and redact personally identifiable information (PII) from documents to maintain GDPR compliance. Our AI identifies PII such as names, addresses, ID numbers, and biometric data. Create redacted copies for sharing while maintaining original documents in secure storage. Implement right-to-be-forgotten requests with automated PII discovery across document repositories.",
     },
   ]
 

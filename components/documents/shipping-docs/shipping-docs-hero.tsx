@@ -73,8 +73,8 @@ export default function ShippingDocsHero() {
               Unlock Real-Time Shipment Data with Automated OCR
             </h1>
             <p className="text-xl text-slate-300 max-w-lg">
-              Transform bills of lading, proofs of delivery, and packing lists into structured data with 97% accuracy.
-              Streamline logistics workflows and gain instant shipment visibility.
+              Turn bills of lading, proofs of delivery, and packing lists into structured data, with unclear fields
+              flagged for review. Shipment details reach your systems without anyone retyping them.
             </p>
             <div className="pt-6">
               <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white rounded-md">
@@ -129,14 +129,14 @@ export default function ShippingDocsHero() {
                   </div>
 
                   {[
-                    { label: "Shipment ID", value: 95 },
-                    { label: "Consignee Details", value: 98 },
-                    { label: "Item Descriptions", value: 92 },
+                    { label: "Shipment ID", value: 100, status: "Extracted" },
+                    { label: "Consignee Details", value: 100, status: "Extracted" },
+                    { label: "Item Descriptions", value: 100, status: "Extracted" },
                   ].map((item, index) => (
                     <div key={index} className="space-y-1">
                       <div className="flex justify-between text-xs">
                         <span>{item.label}</span>
-                        <span>{item.value}%</span>
+                        <span>{item.status}</span>
                       </div>
                       <div className="h-2 bg-slate-700 rounded-full overflow-hidden">
                         <motion.div

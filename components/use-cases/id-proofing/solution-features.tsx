@@ -24,7 +24,7 @@ export default function SolutionFeatures() {
     {
       title: "Biometric Face Matching",
       description:
-        "Compare the photo on an ID document with a live selfie using advanced facial recognition algorithms. Our technology analyzes over 30,000 facial points to ensure the person presenting the ID is its rightful owner. The system works across different lighting conditions and angles with 99.8% accuracy.",
+        "Compare the photo on an ID document with a live selfie using advanced facial recognition algorithms. The match helps confirm the person presenting the ID is its rightful owner. Lighting and angle affect any face match, so borderline results go to a reviewer.",
       icon: (
         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path

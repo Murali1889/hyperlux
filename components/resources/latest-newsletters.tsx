@@ -36,7 +36,7 @@ const latestNewsletters = [
     id: 4,
     title: "Customer Success Stories with OCR Software - July 2023",
     excerpt:
-      "Highlighting recent success stories from customers using our OCR software across different financial sectors, including a lender who saved 100 hours monthly.",
+      "Highlighting recent success stories from customers using our OCR software across different financial sectors.",
     date: "July 31, 2023",
     slug: "customer-success-stories-july-2023",
     link: "/resources/newsletters/customer-success-stories-july-2023",

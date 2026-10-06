@@ -8,7 +8,7 @@ export default function DocumentTypesSupported() {
       title: "Prescriptions",
       icon: <FileText className="h-10 w-10 text-indigo-700" />,
       description:
-        "Extract medication names, dosages, patient details, and prescriber information from handwritten and printed prescriptions with 98% accuracy.",
+        "Extract medication names, dosages, patient details, and prescriber information from printed and handwritten prescriptions, with unclear handwriting flagged for review.",
       href: "/resources/blogs/ndc-code-extraction",
     },
     {
@@ -22,7 +22,7 @@ export default function DocumentTypesSupported() {
       title: "Insurance Forms",
       icon: <FileCheck className="h-10 w-10 text-indigo-700" />,
       description:
-        "Process claims, EOBs, and prior authorizations with automated field extraction. Reduce processing time by 75% and eliminate manual data entry.",
+        "Process claims, EOBs, and prior authorizations with automated field extraction, so your team reviews flagged fields instead of keying every form.",
       href: "/resources/blogs/cms-1500-form-processing",
     },
   ]

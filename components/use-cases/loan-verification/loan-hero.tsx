@@ -36,8 +36,8 @@ export default function LoanHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              Automate extraction from bank statements, income proof documents, and identity verification while
-              maintaining regulatory compliance and reducing processing time by 75%.
+              Automate extraction from bank statements, income proof documents, and IDs, with unclear fields
+              flagged for review, so loan officers decide on clean data instead of retyping it.
             </motion.p>
             <motion.div
               className="flex flex-col sm:flex-row gap-4"

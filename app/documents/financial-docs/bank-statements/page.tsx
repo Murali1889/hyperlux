@@ -15,7 +15,7 @@ import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 const PATH = "/documents/financial-docs/bank-statements"
 const TITLE = "Bank Statement OCR: Multi-Page Transaction Extraction"
 const DESCRIPTION =
-  "Convert PDF bank statements into structured transaction data. 99% line accuracy, multi-page table stitching, AML-ready CSV and JSON output."
+  "Convert PDF bank statements into structured transaction data. 91% row accuracy on multi-page tables in our 2026 benchmark, CSV and JSON output."
 
 export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 

@@ -7,15 +7,15 @@ export default function ClinicalOperationalBenefits() {
   const benefits = [
     {
       icon: <CheckCircle className="h-12 w-12 text-indigo-700" />,
-      title: "Reduce Transcription Errors by 90%",
+      title: "Fewer Transcription Errors",
       description:
-        "Eliminate manual data entry errors that can lead to medication mistakes, billing issues, and patient safety concerns.",
+        "Fields are read the same way every time, and unclear ones are flagged for review instead of guessed, which matters when a misread dosage or member ID has real consequences.",
     },
     {
       icon: <Clock className="h-12 w-12 text-indigo-700" />,
-      title: "Cut Document Processing Time by 75%",
+      title: "Data Available Sooner",
       description:
-        "Reduce the time from document receipt to data availability from hours to minutes, accelerating clinical decision-making.",
+        "Pages are processed at about 1.1 seconds each in our 2026 benchmark, so data no longer waits in a queue for someone to key it in.",
     },
     {
       icon: <TrendingUp className="h-12 w-12 text-indigo-700" />,

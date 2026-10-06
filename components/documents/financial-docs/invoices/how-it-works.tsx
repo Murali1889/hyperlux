@@ -14,7 +14,7 @@ export default function HowItWorks() {
       icon: <Search className="h-10 w-10 text-white" />,
       title: "Template Auto-Detect",
       description:
-        "Our AI identifies the invoice type and applies the appropriate template in just 1.2 seconds (median).",
+        "Our AI recognizes the document as an invoice and reads its layout, at about 1.1 seconds per page in our benchmark.",
     },
     {
       icon: <FileText className="h-10 w-10 text-white" />,

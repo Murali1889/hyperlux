@@ -36,7 +36,7 @@ export default function OperationalBenefits() {
       icon: <Clock className="h-10 w-10 text-indigo-600" />,
       title: "Reduce Manual Data Entry",
       description:
-        "Cut data entry time by 85% and eliminate rekeying errors that cause shipping delays and billing issues.",
+        "Stop rekeying shipment data by hand, along with the typos that cause shipping delays and billing disputes.",
     },
     {
       icon: <CheckSquare className="h-10 w-10 text-indigo-600" />,

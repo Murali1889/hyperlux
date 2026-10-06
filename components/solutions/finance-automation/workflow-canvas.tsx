@@ -21,9 +21,9 @@ export default function WorkflowCanvas() {
       id: "ocr",
       title: "OCR Processing",
       icon: <FileSearch className="h-10 w-10 text-white" />,
-      description: "Extract data with 99% accuracy using our advanced OCR",
+      description: "Extract line items, totals and vendor details from every invoice",
       details:
-        "Our AI-powered OCR extracts line items, totals, tax information, and vendor details from invoices in over 25 languages.",
+        "Our AI-powered OCR extracts line items, totals, tax information, and vendor details from invoices in multiple languages.",
       color: "bg-indigo-700",
     },
     {

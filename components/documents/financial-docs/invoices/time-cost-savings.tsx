@@ -8,23 +8,23 @@ export default function TimeCostSavings() {
     {
       icon: <Clock className="h-10 w-10 text-indigo-700" />,
       title: "Processing Time",
-      before: "180 sec",
-      after: "18 sec",
-      improvement: "90% faster",
+      before: "Keyed by hand",
+      after: "About 1.1 s per page",
+      improvement: "Measured in our 2026 benchmark",
     },
     {
       icon: <AlertTriangle className="h-10 w-10 text-indigo-700" />,
-      title: "Error Rate",
-      before: "4%",
-      after: "< 0.5%",
-      improvement: "87.5% reduction",
+      title: "Unclear Fields",
+      before: "Found after payment",
+      after: "Flagged before payment",
+      improvement: "Low-confidence fields go to review",
     },
     {
       icon: <DollarSign className="h-10 w-10 text-indigo-700" />,
       title: "AP Cost per Invoice",
-      before: "₹15",
-      after: "₹4",
-      improvement: "73% savings",
+      before: "Your loaded cost",
+      after: "From $0.02 per page",
+      improvement: "Volume discounts above 100K pages a month",
     },
   ]
 
@@ -38,9 +38,9 @@ export default function TimeCostSavings() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">Time & Cost Savings</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">What Changes When Invoices Are Automated</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Quantifiable benefits of automating your invoice processing
+            Your exact savings depend on volume and how your team works today, so here is what we can measure
           </p>
         </motion.div>
 

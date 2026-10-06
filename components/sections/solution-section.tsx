@@ -146,7 +146,7 @@ export default function SolutionSection() {
     <Section id="how-it-works">
       <SectionHeader
         title="Our AI-Powered OCR Solution"
-        description="Our intelligent document automation platform leverages machine learning and human-in-the-loop validation to classify, capture, detect, and analyze documents with 99.9% accuracy for lending workflows."
+        description="DocsAPI classifies, captures, checks, and analyzes lending documents through one API, and sends the fields it is unsure about to a person instead of guessing."
       />
 
       <div className="grid gap-8 md:grid-cols-3 mb-16">

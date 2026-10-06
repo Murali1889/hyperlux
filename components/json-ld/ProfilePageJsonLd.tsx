@@ -12,7 +12,7 @@ export function ProfilePageJsonLd({ author }: { author: Author }) {
         mainEntity: { "@id": `${SITE_URL}/author/${author.slug}#person` },
         about: { "@id": `${SITE_URL}/author/${author.slug}#person` },
         url: `${SITE_URL}/author/${author.slug}`,
-        name: `${author.name} — ${author.title}`,
+        name: `${author.name}, ${author.title}`,
       }}
     />
   )

@@ -35,7 +35,7 @@ const popularArticles = [
     id: 3,
     title: "The Role of AI OCR in Transforming Commercial Lending Operations",
     excerpt:
-      "How artificial intelligence and OCR software are reshaping commercial lending from application to portfolio management with 99.9% accurate data extraction.",
+      "How artificial intelligence and OCR software are reshaping commercial lending from application to portfolio management.",
     image:
       "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2310B981;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23059669;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='400' fill='url(%23grad3)'/%3E%3Ccircle cx='200' cy='150' r='30' stroke='white' strokeWidth='2' fill='none' opacity='0.3'/%3E%3Ccircle cx='300' cy='250' r='30' stroke='white' strokeWidth='2' fill='none' opacity='0.3'/%3E%3Ccircle cx='400' cy='150' r='30' stroke='white' strokeWidth='2' fill='none' opacity='0.3'/%3E%3Cpath d='M200,150 L300,250' stroke='white' strokeWidth='2' opacity='0.5'/%3E%3Cpath d='M300,250 L400,150' stroke='white' strokeWidth='2' opacity='0.5'/%3E%3Cpath d='M200,150 L400,150' stroke='white' strokeWidth='2' opacity='0.5'/%3E%3Ctext x='300' y='205' fontFamily='Arial' fontSize='16' fill='white' textAnchor='middle'%3EAI Technology%3C/text%3E%3Cpath d='M150,300 L250,200 L350,250 L450,150' stroke='white' strokeWidth='3' fill='none'/%3E%3C/svg%3E",
     category: "AI Technology",

@@ -9,11 +9,11 @@ const faqs = [
     question: "How accurate is clause extraction?",
     answer: (
       <>
-        Our AI-powered clause extraction achieves 85-95% accuracy depending on document quality and complexity, see
-        our <Link href="/resources/blogs/contract-ocr" className="underline hover:text-indigo-700">contract OCR guide</Link>{" "}
-        for the details. The system is trained on millions of legal documents and continuously improves through
-        machine learning. For critical contracts, we recommend using our human-in-the-loop validation workflow,
-        which combines AI efficiency with expert review to achieve near-perfect accuracy.
+        It depends on the clause and the document quality, see our{" "}
+        <Link href="/resources/blogs/contract-ocr" className="underline hover:text-indigo-700">contract OCR guide</Link>{" "}
+        for the details. Standard clauses in clean contracts extract reliably; unusual or ambiguous clauses are
+        harder. Every clause carries a confidence score, and for critical contracts a lawyer should confirm the
+        flagged ones. Customer documents are not used to train models.
       </>
     ),
   },
@@ -40,7 +40,7 @@ const faqs = [
   {
     question: "How is sensitive data handled?",
     answer:
-      "We take data security extremely seriously. All processing occurs within your secure environment, either on-premises or in your private cloud. The system supports automatic redaction of sensitive information based on configurable rules. We maintain SOC 2 Type II certification and comply with industry standards including GDPR, CCPA, and HIPAA where applicable.",
+      "DocsAPI is SOC 2 Type II and ISO 27001 certified, and HIPAA-eligible with a BAA. Customer documents are not used to train models, and documents and extracted data are kept only for a short, configurable retention period and then deleted. DocsAPI runs as a cloud API; if your contracts must stay inside your own environment, raise it in the demo.",
   },
 ]
 

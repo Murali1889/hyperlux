@@ -1,6 +1,6 @@
 # DocsAPI: Full Manifest for AI Search
 
-> DocsAPI is the document intelligence API for SMB lending and fintech: OCR, classification, KYC document verification, and AML document checks in one honest API. Production scale: ~4M pages per month. Last updated: 2026-10-05.
+> DocsAPI is the document intelligence API for SMB lending and fintech: OCR, classification, KYC document verification, and AML document checks in one honest API. Production scale: ~4M pages per month. Last updated: 2026-10-06.
 
 ## Company facts
 
@@ -53,7 +53,7 @@ DocsAPI provides production document intelligence as an HTTP API. Core capabilit
 - [Finance automation](https://docsapi.co/solutions/finance-automation): Invoice and reconciliation OCR
 - [Compliance and risk](https://docsapi.co/solutions/compliance-risk): KYC, AML, SAR-ready audit trails
 - [Legal automation](https://docsapi.co/solutions/legal-automation): Contract clause extraction
-- [Customer experience](https://docsapi.co/solutions/customer-experience): 30-second onboarding OCR
+- [Customer experience](https://docsapi.co/solutions/customer-experience): Onboarding OCR for IDs and forms
 - [Operations efficiency](https://docsapi.co/solutions/operations-efficiency): Supply chain document automation
 
 ### Document types (by document, not by industry)

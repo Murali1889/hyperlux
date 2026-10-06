@@ -58,7 +58,7 @@ const CONTENT = {
     {
       question: "How accurate is automated ID proofing?",
       answer:
-        "On clean captures, document authenticity and MRZ extraction clear 99% accuracy, and biometric matching is highly reliable. End-to-end verification success depends more on capture quality than the underlying models, ranging from about 78% to 92% depending on whether users capture through an app-controlled flow or an unrestricted photo upload.",
+        "There is no single number, and anyone who quotes one is skipping the hard part. Passport and ID MRZ lines carry check digits, so a misread usually fails the checksum and gets caught instead of passing silently. End-to-end success depends more on capture quality than on the models: an app-controlled capture flow with framing guides succeeds far more often than an unrestricted photo upload.",
     },
     {
       question: "What documents can be verified?",
@@ -71,7 +71,7 @@ const CONTENT = {
 export default function IdProofingPage() {
   return (
     <main className="flex flex-col min-h-screen">
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service dateModified="2026-09-14" />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service dateModified="2026-10-06" />
       <IdProofingHero />
       <KeyChallenges />
       <SolutionFeatures />

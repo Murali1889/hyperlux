@@ -8,7 +8,7 @@ const useCases = [
   {
     title: "Invoice Processing",
     description:
-      "Automate extraction of invoice data including line items, totals, and tax information with 99% accuracy, reducing processing time by 85%.",
+      "Automate extraction of invoice data including line items, totals, and tax information, at 93% line-item accuracy in our 2026 benchmark.",
     icon: <FileText className="h-8 w-8 text-indigo-600" />,
     href: "/use-cases/invoice-processing",
     color: "bg-indigo-50",

@@ -8,19 +8,19 @@ const challenges = [
     icon: <AlertTriangle className="h-8 w-8 text-amber-500" />,
     title: "Data Entry Errors",
     description:
-      "Manual invoice processing is prone to human errors, with studies showing error rates of 3-5%. These mistakes lead to payment issues, supplier disputes, and compliance risks. Automated OCR reduces error rates to less than 1%, ensuring accurate data capture from the start.",
+      "Typing invoice data by hand produces errors, and one wrong digit in an amount or bank detail means a wrong payment, a supplier dispute, or a compliance question. Automated extraction with validation catches many of those before the money leaves.",
   },
   {
     icon: <Clock className="h-8 w-8 text-amber-500" />,
     title: "Delayed Payments and Penalties",
     description:
-      "The average invoice takes 8-10 days to process manually, often resulting in missed early payment discounts and late payment penalties. These delays strain supplier relationships and increase costs. AI-powered invoice processing reduces cycle times to hours instead of days.",
+      "Invoices that sit in a queue miss early-payment discounts and pick up late fees, and suppliers notice. With automated capture, an invoice is read the day it arrives instead of whenever someone gets to it.",
   },
   {
     icon: <DollarSign className="h-8 w-8 text-amber-500" />,
     title: "High Processing Costs",
     description:
-      "Manual invoice processing costs between $10-$15 per invoice according to industry benchmarks. For companies processing thousands of invoices monthly, these costs add up significantly. Automation reduces per-invoice costs by 60-80%, creating substantial operational savings.",
+      "Every hand-keyed invoice carries the cost of the minutes spent typing, checking and chasing it. At thousands of invoices a month, that adds up to whole jobs. Per-page pricing changes the math, and you can work out yours with your own numbers.",
   },
 ]
 

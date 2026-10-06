@@ -28,10 +28,9 @@ const faqItems = [
         <Link href="/resources/blogs/handwritten-faxed-invoice-ocr" className="underline hover:text-indigo-700">
           handwritten and faxed invoice guide
         </Link>{" "}
-        for how this works. The system uses specialized handwriting recognition algorithms trained on diverse
-        handwriting styles. While machine-printed invoices typically achieve 99% accuracy, handwritten invoices
-        maintain 90-95% accuracy depending on legibility. The system also provides confidence scores and highlights
-        uncertain fields for human verification when needed.
+        for how this works. Handwriting is the hard case: in our 2026 benchmark DocsAPI scored 78% on
+        handwritten forms, against 97-99% on clean typed text. That is why every field carries a confidence score
+        and uncertain fields are highlighted for a person to check.
       </>
     ),
   },
