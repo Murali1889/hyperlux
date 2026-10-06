@@ -31,9 +31,9 @@ export default function ComplianceFAQ() {
       question: "What is your data retention policy for compliance documents?",
       answer: (
         <>
-          Our platform allows configurable retention policies based on document type and regulatory requirements.
-          Default retention periods align with common regulatory frameworks (7 years for financial documents, etc.),
-          but can be customized, see our{" "}
+          By default, documents and extracted data are kept only for a short retention period and then deleted.
+          Retention is configurable by document type, so teams with record-keeping obligations can set longer
+          periods themselves, see our{" "}
           <Link href="/resources/blogs/kyc-record-retention-requirements" className="underline hover:text-indigo-700">
             KYC record retention guide
           </Link>{" "}

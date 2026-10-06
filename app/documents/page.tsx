@@ -12,7 +12,7 @@ import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 const PATH = "/documents"
 const TITLE = "Document Types Supported by DocsAPI OCR (2026)"
 const DESCRIPTION =
-  "OCR for financial, identity, legal, medical, and shipping documents. 99.5% field accuracy on 20+ document templates. Free tier, no install."
+  "OCR for financial, identity, legal, medical, and shipping documents. Benchmarked accuracy by document type, 20+ templates, nothing to install."
 
 export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 

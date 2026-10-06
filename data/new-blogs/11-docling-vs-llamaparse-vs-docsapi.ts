@@ -125,13 +125,13 @@ print("rows where the running balance does not match:", problems)</code></pre>
     <p>For a regulated team, the real checklist is data residency, retention, audit logging and who can see the files, not the parser's feature list. A hosted service's security documents matter as much as its accuracy.</p>
 
     <h2>Where DocsAPI fits</h2>
-    <p>Disclosure: DocsAPI is our product. It is a hosted API for financial and business documents: it classifies each file, returns named fields as JSON, and joins transaction tables across pages, which is why it led on bank statements (91%) and invoices (93%) in our benchmark. It lost on academic papers and receipts. It costs from $0.02 per page with a free tier of 100 pages a month. It is not a general RAG parser and cannot run offline; for those, use Docling or LlamaParse. See our <a href="/resources/blogs/vlm-vs-ocr">VLM vs OCR guide</a> for handwriting, which none of these three handles reliably.</p>
+    <p>Disclosure: DocsAPI is our product. It is a hosted API for financial and business documents: it classifies each file, returns named fields as JSON, and joins transaction tables across pages, which is why it led on bank statements (91%) and invoices (93%) in our benchmark. It lost on academic papers and receipts. It costs from $0.02 per page, with a free 30-day trial for qualified lenders after a demo. It is not a general RAG parser and cannot run offline; for those, use Docling or LlamaParse. See our <a href="/resources/blogs/vlm-vs-ocr">VLM vs OCR guide</a> for handwriting, which none of these three handles reliably.</p>
 
     <h2>What to do next</h2>
     <ul>
       <li><strong>Documents must stay private or offline:</strong> install Docling and run the code above on 20 of your own files.</li>
       <li><strong>You build on LlamaIndex:</strong> start LlamaParse on the Cost-effective tier and move up a tier only for pages that fail.</li>
-      <li><strong>You process bank statements or invoices:</strong> compare the joined tables from Docling, LlamaParse and the <a href="/products">DocsAPI free tier</a> on the same statements, and run the balance check on each.</li>
+      <li><strong>You process bank statements or invoices:</strong> compare the joined tables from Docling, LlamaParse and a <a href="/book-demo">DocsAPI trial</a> on the same statements, and run the balance check on each.</li>
       <li><strong>You are still choosing an OCR engine:</strong> the <a href="/tools/which-ocr">Which OCR should I use tool</a> asks six questions, and our <a href="/resources/blogs/ocr-pdf-honest-guide">OCR for PDFs guide</a> explains how to test fairly.</li>
     </ul>
 
@@ -148,8 +148,8 @@ print("rows where the running balance does not match:", problems)</code></pre>
   category: "AI Document Intelligence",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  dateModified: "2026-10-06T00:00:00.000Z",
+  last_updated: "October 6, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "docling",

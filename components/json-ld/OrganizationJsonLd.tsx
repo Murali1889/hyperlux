@@ -27,7 +27,7 @@ export function OrganizationJsonLd() {
         },
         description: SITE_DESCRIPTION,
         foundingDate: ORG_FOUNDING_DATE,
-        sameAs: ORG_SAME_AS,
+        ...(ORG_SAME_AS.length ? { sameAs: ORG_SAME_AS } : {}),
         parentOrganization: {
           "@type": "Organization",
           name: PARENT_ORG.name,

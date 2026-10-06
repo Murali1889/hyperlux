@@ -232,7 +232,7 @@ npi_ok("1234567890")  False
       <li>Anyone handling patient data: get the BAA first, and test with synthetic or de-identified samples.</li>
     </ul>
 
-    <p>To test a document API, DocsAPI (our product) lists prescriptions, lab reports and claims on its <a href="/documents/medical-docs">medical documents page</a>. Its published policy says HIPAA-eligible with a BAA on request, SOC 2 Type II, and content deleted after processing and not used for training. Confirm that in the contract, as with any vendor. For contracts or IDs instead, see <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>, <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a> or <a href="/resources/blogs/ocr-for-passports-id-cards-and-drivers-licenses">OCR for passports, ID cards and driver's licenses</a>.</p>
+    <p>To test a document API, DocsAPI (our product) lists prescriptions, lab reports and claims on its <a href="/documents/medical-docs">medical documents page</a>. Its published policy says HIPAA-eligible with a BAA on request, SOC 2 Type II, a short configurable retention period, and no training on customer documents. Confirm that in the contract, as with any vendor. For contracts or IDs instead, see <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>, <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a> or <a href="/resources/blogs/ocr-for-passports-id-cards-and-drivers-licenses">OCR for passports, ID cards and driver's licenses</a>.</p>
 
     <h2>Sources</h2>
 

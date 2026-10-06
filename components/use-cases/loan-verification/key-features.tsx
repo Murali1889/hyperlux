@@ -16,8 +16,8 @@ export default function KeyFeatures() {
       icon: <DollarSign className="w-10 h-10 text-indigo-600" />,
       title: "Income and employment document verification",
       description:
-        "Automatically extract and verify income data from pay stubs, W-2s, tax returns, and employment verification letters. The system calculates gross and net income, identifies income sources, and verifies employment duration. It handles complex scenarios like variable income, multiple employers, and self-employment documentation. The AI engine learns from each verification, continuously improving accuracy and reducing exceptions. This comprehensive approach ensures thorough income verification while reducing processing time by 70%.",
-      features: ["Multiple document types", "Income calculation", "Employment verification", "Self-learning AI"],
+        "Automatically extract and verify income data from pay stubs, W-2s, tax returns, and employment verification letters. The system calculates gross and net income, identifies income sources, and verifies employment duration. It handles complex scenarios like variable income, multiple employers, and self-employment documentation. Low-confidence fields are flagged for a reviewer instead of being guessed. Customer documents are not used to train models.",
+      features: ["Multiple document types", "Income calculation", "Employment verification", "Reviewer flags"],
     },
     {
       icon: <ShieldAlert className="w-10 h-10 text-indigo-600" />,

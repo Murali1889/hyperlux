@@ -253,8 +253,8 @@ export const post: BlogPost = {
   category: "Legal",
   date: "October 5, 2026",
   datePublished: "2026-10-05T00:00:00.000Z",
-  dateModified: "2026-10-05T00:00:00.000Z",
-  last_updated: "October 5, 2026",
+  dateModified: "2026-10-06T00:00:00.000Z",
+  last_updated: "October 6, 2026",
   readTime: "13 min read",
   author: nupuraUghade,
   primary_keyword: "ocr for legal documents",
@@ -280,7 +280,7 @@ export const post: BlogPost = {
     {
       question: "How much does OCR for a law firm cost?",
       answer:
-        "Prices vary and we did not survey legal vendors, so we have no market average. Cloud OCR APIs generally charge per page, while desktop software is often licensed per seat. For our own product, DocsAPI lists per-page pricing from $0.02 and a free tier of 100 pages a month. Price a test batch of your own documents before comparing quotes.",
+        "Prices vary and we did not survey legal vendors, so we have no market average. Cloud OCR APIs generally charge per page, while desktop software is often licensed per seat. For our own product, DocsAPI lists per-page pricing from $0.02 and a free 30-day trial for qualified lenders after a demo. Price a test batch of your own documents before comparing quotes.",
     },
     {
       question: "Is a black box over text a valid redaction?",

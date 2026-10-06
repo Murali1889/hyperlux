@@ -15,7 +15,7 @@ export default function ProductsHero() {
             </h1>
             <p className="text-xl font-semibold text-gray-900 max-w-2xl">
               DocsAPI is an API that classifies, reads and checks documents such as bank statements, invoices and IDs, and
-              returns structured data. You pay per page, and there is a free tier.
+              returns structured data. You pay per page, and qualified lenders can try it free for 30 days.
             </p>
             <p className="text-xl text-gray-600 max-w-2xl">
               Our suite of AI-powered OCR products streamlines document processing, enhances fraud detection, and

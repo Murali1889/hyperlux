@@ -114,8 +114,8 @@ export const blog35: BlogPost = {
   category: "AI Document Intelligence",
   date: "September 20, 2026",
   datePublished: "2026-09-20T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-10-06T00:00:00.000Z",
+  last_updated: "October 6, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "best ocr software",
@@ -151,7 +151,7 @@ export const blog35: BlogPost = {
     {
       question: "What is the best free OCR reader?",
       answer:
-        "For a quick, genuinely free option, Google Drive's built-in OCR (upload a file, right-click, open with Google Docs) works on typed text but tends to struggle with tables and layout. We tested 11 free OCR tools on the same 12-page document and found only 3 worth using; the full results, including the traps to avoid, are in our free online OCR tools review.",
+        "For a quick, genuinely free option, Google Drive's built-in OCR (upload a file, right-click, open with Google Docs) works on typed text but tends to struggle with tables and layout. We tested 11 free OCR tools on the same 12-page document and found only 2 free tools worth using; the full results, including the traps to avoid, are in our free online OCR tools review.",
     },
     {
       question: "What is the best OCR converter for PDFs?",
