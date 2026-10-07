@@ -13,8 +13,8 @@ export default function MedicalDocsHero() {
                 Automate Medical Document Processing with Precision
               </h1>
               <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-                Extract data from prescriptions, lab reports, and insurance forms with 98% accuracy. HIPAA-compliant
-                processing delivers structured results in seconds, not hours.
+                Extract data from prescriptions, lab reports, and insurance forms, with unclear fields flagged for
+                review. HIPAA-eligible with a BAA, and results come back in seconds, not hours.
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -203,7 +203,7 @@ export default function MedicalDocsHero() {
                     <div className="p-4 space-y-4">
                       <div className="flex items-center justify-between">
                         <h4 className="text-sm font-semibold text-gray-700">Extracted Medical Data</h4>
-                        <span className="text-xs text-indigo-600 font-medium">Real-time accuracy</span>
+                        <span className="text-xs text-indigo-600 font-medium">Extraction status</span>
                       </div>
 
                       {/* Prescription Accuracy */}
@@ -213,7 +213,7 @@ export default function MedicalDocsHero() {
                             <div className="w-3 h-3 rounded-full bg-indigo-700 mr-2"></div>
                             <span className="text-xs text-gray-600">Prescriptions</span>
                           </div>
-                          <span className="text-xs font-bold text-indigo-700">92%</span>
+                          <span className="text-xs font-bold text-indigo-700">Done</span>
                         </div>
                         <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
                           <div className="h-full bg-indigo-700 rounded-full" style={{ width: "92%" }}></div>
@@ -227,7 +227,7 @@ export default function MedicalDocsHero() {
                             <div className="w-3 h-3 rounded-full bg-indigo-500 mr-2"></div>
                             <span className="text-xs text-gray-600">Lab Results</span>
                           </div>
-                          <span className="text-xs font-bold text-indigo-500">98%</span>
+                          <span className="text-xs font-bold text-indigo-500">Done</span>
                         </div>
                         <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
                           <div className="h-full bg-indigo-500 rounded-full" style={{ width: "98%" }}></div>
@@ -241,7 +241,7 @@ export default function MedicalDocsHero() {
                             <div className="w-3 h-3 rounded-full bg-indigo-400 mr-2"></div>
                             <span className="text-xs text-gray-600">Insurance Forms</span>
                           </div>
-                          <span className="text-xs font-bold text-indigo-400">85%</span>
+                          <span className="text-xs font-bold text-indigo-400">Review</span>
                         </div>
                         <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
                           <div className="h-full bg-indigo-400 rounded-full" style={{ width: "85%" }}></div>

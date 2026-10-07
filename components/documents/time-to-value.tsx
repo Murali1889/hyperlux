@@ -15,10 +15,10 @@ export default function TimeToValue() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Go live in &lt; 7 days with zero training data</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Start without training data</h2>
             <p className="text-xl text-indigo-100 max-w-3xl mx-auto">
-              Our pre-trained models eliminate the need for custom training, allowing you to implement document
-              processing in days, not months.
+              Pre-trained models mean you do not have to label your own documents before you start. After a demo,
+              qualified lenders can run their own documents during a free 30-day trial.
             </p>
           </motion.div>
 
@@ -44,7 +44,7 @@ export default function TimeToValue() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <span>API integration in less than a day</span>
+                    <span>One HTTP API to call from your stack</span>
                   </li>
                   <li className="flex items-start">
                     <div className="bg-indigo-600 rounded-full p-1 mr-3 mt-1">
@@ -60,7 +60,7 @@ export default function TimeToValue() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <span>Continuous improvement with no manual retraining</span>
+                    <span>No training on your documents needed</span>
                   </li>
                 </ul>
               </div>

@@ -52,8 +52,8 @@ export default function DocumentGlobe() {
 
       <div className="absolute w-[40%] h-[40%] rounded-full bg-indigo-50 flex items-center justify-center">
         <div className="text-indigo-700 font-bold text-center">
-          <div className="text-3xl">195+</div>
-          <div className="text-sm">Countries</div>
+          <div className="text-3xl">MRZ</div>
+          <div className="text-sm">Check digits validated</div>
         </div>
       </div>
     </div>

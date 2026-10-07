@@ -237,7 +237,7 @@ export default function TransformationSection() {
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>5x faster classification with 95% accuracy</span>
+                  <span>Documents classified at about 1.1 seconds per page</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <svg

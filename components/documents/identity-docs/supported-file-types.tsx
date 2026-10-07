@@ -7,7 +7,7 @@ export default function SupportedFileTypes() {
       icon: <Passport className="h-10 w-10 text-indigo-700" />,
       title: "Passports",
       description:
-        "Extract MRZ data and biometric information from e-passport chips with support for 120+ ICAO-compliant passport formats worldwide.",
+        "Extract MRZ data, printed fields and the face photo from ICAO 9303 passports, with MRZ check digits validated.",
       href: "/documents/identity-docs/passports",
     },
     {

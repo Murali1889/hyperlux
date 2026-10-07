@@ -7,21 +7,21 @@ export default function BenefitRail() {
   const benefits = [
     {
       icon: <Clock className="w-8 h-8 text-indigo-700" />,
-      metric: "30s",
-      title: "Signup Time",
-      description: "Complete digital onboarding in just 30 seconds with our AI-powered document processing.",
+      metric: "1.1s",
+      title: "Per Page",
+      description: "About 1.1 seconds per page in our 2026 benchmark, so the document step does not keep a customer waiting.",
     },
     {
       icon: <TrendingDown className="w-8 h-8 text-indigo-700" />,
-      metric: "↓ 40%",
-      title: "Drop-off Rate",
-      description: "Reduce customer abandonment by 40% with frictionless document verification flows.",
+      metric: "Flagged",
+      title: "Unclear Fields",
+      description: "Fields the engine is unsure about go to review instead of being guessed, so one bad read does not derail an onboarding.",
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-indigo-700" />,
-      metric: "↑ 18%",
-      title: "CSAT Score",
-      description: "Boost customer satisfaction scores by 18% with faster, more accurate document processing.",
+      metric: "SOC 2",
+      title: "Type II Certified",
+      description: "Customer documents are not used to train models and are kept only for a short, configurable retention period.",
     },
   ]
 

@@ -19,9 +19,9 @@ export default function HeroSection() {
               and gives you the data as clean, structured fields through one API.
             </p>
             <p className="text-lg text-muted-foreground md:text-xl max-w-[600px]">
-              Transform your lending workflows with AI-powered OCR software that delivers up to 99.9% accuracy in
-              document classification, data capture, fraud detection, and cash flow analysis - 5x faster than manual
-              processes. See the{" "}
+              Accuracy depends on the document, so we publish it by type: 93% on invoice line items and 91% on
+              multi-page bank statement tables, at about 1.1 seconds per page. Fields the engine is unsure about are
+              flagged for review instead of guessed. See the{" "}
               <Link href="/resources/blogs/ocr-accuracy-benchmark-2026" className="underline hover:text-indigo-700">
                 real per-document-type numbers
               </Link>
@@ -35,21 +35,9 @@ export default function HeroSection() {
                 <Link href="#how-it-works">See How It Works</Link>
               </Button>
             </div>
-            <div className="flex items-center space-x-4 text-sm">
-              <div className="flex -space-x-2">
-                <div className="h-8 w-8 rounded-full bg-indigo-200 flex items-center justify-center text-xs font-medium text-indigo-700 border-2 border-white">
-                  CB
-                </div>
-                <div className="h-8 w-8 rounded-full bg-green-200 flex items-center justify-center text-xs font-medium text-green-700 border-2 border-white">
-                  HS
-                </div>
-                <div className="h-8 w-8 rounded-full bg-amber-200 flex items-center justify-center text-xs font-medium text-amber-700 border-2 border-white">
-                  RN
-                </div>
-              </div>
-              <div className="text-muted-foreground">
-                Trusted by <span className="font-medium text-foreground">500+</span> financial institutions and fintechs
-              </div>
+            <div className="text-sm text-muted-foreground">
+              Built by <span className="font-medium text-foreground">HyperVerge</span>. SOC 2 Type II and ISO 27001
+              certified. About <span className="font-medium text-foreground">4 million</span> pages processed a month.
             </div>
           </div>
           <div className="flex justify-center lg:justify-end relative">
@@ -129,8 +117,8 @@ export default function HeroSection() {
                         </div>
                       </div>
                       <div className="mt-4 text-center">
-                        <div className="text-2xl font-bold text-red-700">45 min</div>
-                        <div className="text-xs text-red-600">per application</div>
+                        <div className="text-2xl font-bold text-red-700">Typed</div>
+                        <div className="text-xs text-red-600">field by field</div>
                       </div>
                     </div>
 
@@ -175,8 +163,8 @@ export default function HeroSection() {
                         </div>
                       </div>
                       <div className="mt-4 text-center">
-                        <div className="text-2xl font-bold text-green-700">9 min</div>
-                        <div className="text-xs text-green-600">per application</div>
+                        <div className="text-2xl font-bold text-green-700">~1.1 s</div>
+                        <div className="text-xs text-green-600">per page</div>
                       </div>
                     </div>
                   </div>
@@ -184,7 +172,7 @@ export default function HeroSection() {
                   <div className="bg-indigo-50 rounded-lg p-4 border border-indigo-100">
                     <div className="flex justify-between items-center mb-2">
                       <div className="text-sm font-medium text-indigo-800">Verification Results</div>
-                      <div className="text-xs text-indigo-600 bg-indigo-100 px-2 py-0.5 rounded-full">99.9% Verified</div>
+                      <div className="text-xs text-indigo-600 bg-indigo-100 px-2 py-0.5 rounded-full">Checks passed</div>
                     </div>
                     <div className="space-y-2">
                       <div className="flex justify-between text-sm">

@@ -123,7 +123,7 @@ export default function WorkflowDiagram() {
           className="text-center mt-16 max-w-3xl mx-auto"
         >
           <p className="text-slate-700">
-            This streamlined workflow eliminates manual touchpoints, reduces processing time by 70%, and provides
+            This workflow cuts out the retyping and provides
             complete visibility into invoice status at every stage. The system adapts to your existing approval
             hierarchies while providing opportunities for continuous process improvement.
           </p>

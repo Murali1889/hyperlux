@@ -14,7 +14,7 @@ import { UseCaseContent } from "@/components/seo/use-case-content"
 const PATH = "/use-cases/digital-archiving"
 const TITLE = "Digital Archiving OCR: Search Every Document"
 const DESCRIPTION =
-  "Convert paper and scanned archives into searchable structured data with AI-powered OCR. 30-second turnaround per document."
+  "Convert paper and scanned archives into searchable, structured data with AI-powered OCR, at about 1.1 seconds per page in our 2026 benchmark."
 
 export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
@@ -58,7 +58,7 @@ const CONTENT = {
     {
       question: "How accurate is OCR on old archived documents?",
       answer:
-        "On clean printed documents, 97% to 99%. On faded, damaged, or multi-generation photocopies, accuracy drops to 85% to 92%, and handwriting is lower still. This is why a large backfile conversion needs a validation pass for low-confidence extractions and a quality-control sample check, rather than trusting the raw OCR output.",
+        "On clean printed documents, 97% to 99% character accuracy in our 2026 benchmark. Faded, damaged, or multi-generation photocopies score lower, and handwriting lower still: the same benchmark measured 78% on handwritten forms. This is why a large backfile conversion needs a validation pass for low-confidence extractions and a quality-control sample check, rather than trusting the raw OCR output.",
     },
     {
       question: "How do I run a large document backfile conversion?",
@@ -71,7 +71,7 @@ const CONTENT = {
 export default function DigitalArchivingPage() {
   return (
     <main className="min-h-screen bg-slate-50">
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service dateModified="2026-09-14" />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service dateModified="2026-10-06" />
       <ArchivingHero />
       <ArchivingChallenges />
       <FeaturesOverview />

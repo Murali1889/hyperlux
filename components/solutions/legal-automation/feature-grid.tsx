@@ -9,7 +9,7 @@ export default function FeatureGrid() {
       icon: <FileText className="h-10 w-10 text-white" />,
       title: "Clause Extraction",
       description:
-        "Our advanced contract clause OCR technology automatically identifies and extracts key clauses from legal documents with 95% accuracy. The system recognizes over 50 common clause types including termination, indemnification, force majeure, and confidentiality provisions. Legal teams can instantly search across their entire contract repository by clause type, saving hours of manual review. The extracted clauses are presented in a structured format that can be exported to contract management systems or analyzed for risk assessment.",
+        "Our advanced contract clause OCR technology automatically identifies and extracts key clauses from legal documents and flags low-confidence clauses for review. It recognizes common clause types including termination, indemnification, force majeure, and confidentiality provisions. Legal teams can instantly search across their entire contract repository by clause type, saving hours of manual review. The extracted clauses are presented in a structured format that can be exported to contract management systems or analyzed for risk assessment.",
     },
     {
       icon: <Briefcase className="h-10 w-10 text-white" />,

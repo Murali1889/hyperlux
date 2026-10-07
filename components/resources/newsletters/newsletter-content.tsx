@@ -22,7 +22,7 @@ export default function NewsletterContent({ newsletter }: NewsletterContentProps
               seen significant developments in:
             </p>
             <ul>
-              <li>AI-driven risk assessment models showing 35% improvement in accuracy</li>
+              <li>AI-driven risk assessment models moving from pilots into production</li>
               <li>Regulatory changes affecting small business lending in key markets</li>
               <li>New partnerships between traditional banks and fintech companies</li>
             </ul>
@@ -30,45 +30,9 @@ export default function NewsletterContent({ newsletter }: NewsletterContentProps
             <h3>Product Updates</h3>
             <p>We're constantly improving our solutions to better serve your needs:</p>
             <ul>
-              <li>Enhanced document classification with 99.2% accuracy</li>
+              <li>Document accuracy published by document type in our OCR benchmark</li>
               <li>New dashboard features for better visibility into lending metrics</li>
               <li>Improved API integration options for seamless workflow</li>
-            </ul>
-
-            <h3>Customer Success Story</h3>
-            <p>
-              This month, we spotlight how AsiaFinance implemented DocsAPI's solutions to reduce their loan
-              processing time by 68% while improving accuracy by 45%.
-            </p>
-
-            <blockquote>
-              <p>
-                "DocsAPI has transformed our lending operations. What used to take days now takes hours, and our team
-                can focus on building relationships rather than processing paperwork."
-              </p>
-              <cite>— Sarah Chen, COO at AsiaFinance</cite>
-            </blockquote>
-
-            <h3>Upcoming Events</h3>
-            <p>Join us at these upcoming events to learn more about DocsAPI solutions:</p>
-            <ul>
-              <li>FinTech Forward Conference - June 15-17, Singapore</li>
-              <li>Digital Lending Summit - July 8-9, New York</li>
-              <li>DocsAPI Webinar: AI in Risk Assessment - June 22 (Virtual)</li>
-            </ul>
-
-            <h3>Resources You Might Have Missed</h3>
-            <p>Check out these recent resources from our team:</p>
-            <ul>
-              <li>
-                <a href="#">Whitepaper: The Future of Small Business Lending</a>
-              </li>
-              <li>
-                <a href="#">Case Study: How Credit Unions Can Compete with Digital-First Lenders</a>
-              </li>
-              <li>
-                <a href="#">Blog: 5 Ways AI is Transforming Risk Management</a>
-              </li>
             </ul>
 
             <p>

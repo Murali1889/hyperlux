@@ -10,11 +10,11 @@ export default function IdentityDocsHero() {
           <div className="flex flex-col justify-center space-y-4">
             <div className="space-y-2">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
-                Identity Documents — Instant Verification, Global Coverage
+                Identity Documents: Extract and Verify ID Data
               </h1>
               <p className="max-w-[600px] text-slate-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Seamlessly extract and verify data from passports, national IDs, and driver licenses with
-                industry-leading 99.8% accuracy. Process documents from 195+ countries in under 12 seconds.
+                Extract and verify data from passports, national IDs, and driver licenses. MRZ check digits are
+                validated, so a misread usually fails the checksum and gets flagged instead of passing silently.
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">

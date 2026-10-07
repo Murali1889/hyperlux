@@ -9,7 +9,7 @@ export default function ManualPainPoints() {
       icon: <Clock className="w-10 h-10 text-indigo-600" />,
       title: "Time-consuming document review",
       description:
-        "Loan officers spend up to 70% of their time manually reviewing bank statements, pay stubs, and tax documents. This tedious process creates bottlenecks in the loan pipeline, extends decision timelines, and reduces the number of applications an officer can process daily. In competitive markets, slow verification can mean lost business opportunities.",
+        "Loan officers spend a large share of their day manually reviewing bank statements, pay stubs, and tax documents. This tedious process creates bottlenecks in the loan pipeline, extends decision timelines, and reduces the number of applications an officer can process daily. In competitive markets, slow verification can mean lost business opportunities.",
     },
     {
       icon: <AlertTriangle className="w-10 h-10 text-indigo-600" />,

@@ -9,21 +9,21 @@ export default function KeyFeatures() {
       icon: <FileText className="w-10 h-10 text-indigo-600" />,
       title: "Bank statement OCR and parsing",
       description:
-        "Our advanced OCR technology automatically extracts and categorizes transaction data from bank statements across 10,000+ financial institutions. The system identifies deposits, withdrawals, recurring payments, and calculates average balances. It handles multiple statement formats including PDFs, images, and digital statements, while maintaining 98% accuracy even with poor-quality scans. This eliminates manual data entry and accelerates income verification by up to 85%.",
+        "Our advanced OCR technology automatically extracts and categorizes transaction data from bank statements issued by many different banks. The system identifies deposits, withdrawals, recurring payments, and calculates average balances. It handles multiple statement formats including PDFs, images, and digital statements, with 91% row accuracy on multi-page statement tables in our 2026 benchmark. Rows the engine is unsure about are flagged for review, and nobody has to retype a statement.",
       features: ["Multi-bank support", "Transaction categorization", "Balance calculation", "Format flexibility"],
     },
     {
       icon: <DollarSign className="w-10 h-10 text-indigo-600" />,
       title: "Income and employment document verification",
       description:
-        "Automatically extract and verify income data from pay stubs, W-2s, tax returns, and employment verification letters. The system calculates gross and net income, identifies income sources, and verifies employment duration. It handles complex scenarios like variable income, multiple employers, and self-employment documentation. The AI engine learns from each verification, continuously improving accuracy and reducing exceptions. This comprehensive approach ensures thorough income verification while reducing processing time by 70%.",
-      features: ["Multiple document types", "Income calculation", "Employment verification", "Self-learning AI"],
+        "Automatically extract and verify income data from pay stubs, W-2s, tax returns, and employment verification letters. The system calculates gross and net income, identifies income sources, and verifies employment duration. It handles complex scenarios like variable income, multiple employers, and self-employment documentation. Low-confidence fields are flagged for a reviewer instead of being guessed. Customer documents are not used to train models.",
+      features: ["Multiple document types", "Income calculation", "Employment verification", "Reviewer flags"],
     },
     {
       icon: <ShieldAlert className="w-10 h-10 text-indigo-600" />,
       title: "Fraud detection flags",
       description:
-        "Our AI-powered fraud detection system automatically identifies potential document tampering, inconsistencies, and suspicious patterns. It checks for pixel-level alterations, font inconsistencies, and mathematical discrepancies in financial documents. The system compares data across multiple documents to identify contradictions and maintains a database of known fraud patterns. Real-time alerts notify loan officers of potential issues, allowing for immediate investigation while reducing fraud losses by up to 60%.",
+        "Our AI-powered fraud detection system automatically identifies potential document tampering, inconsistencies, and suspicious patterns. It checks for pixel-level alterations, font inconsistencies, and mathematical discrepancies in financial documents. The system compares data across multiple documents to identify contradictions, and flags reach loan officers so they can investigate before a decision is made.",
       features: [
         "Document tampering detection",
         "Cross-document verification",

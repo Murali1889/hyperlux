@@ -12,11 +12,11 @@ export default function BankStatementHero() {
             </h1>
             <p className="text-xl text-gray-700 mb-8 leading-relaxed">
               Extract transaction-level data for KYC verification, credit scoring algorithms, and cash-flow based
-              underwriting decisions—all in seconds with enterprise-grade accuracy and compliance.
+              underwriting decisions, at about 1.1 seconds per page, with unclear rows flagged for review.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="bg-indigo-600 hover:bg-indigo-700">
-                <Link href="/book-demo">Try Bank Statement API</Link>
+                <Link href="/book-demo">Book a Bank Statement Demo</Link>
               </Button>
               <Button
                 asChild
@@ -38,7 +38,7 @@ export default function BankStatementHero() {
                 className="w-full h-auto rounded-lg"
               />
               <div className="absolute top-4 right-4 bg-green-100 text-green-800 text-xs font-medium px-2.5 py-1 rounded-full">
-                99% Accuracy
+                91% row accuracy on multi-page tables
               </div>
             </div>
           </div>

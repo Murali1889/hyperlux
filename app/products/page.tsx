@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import ProductsHero from "@/components/products/products-hero"
 import ProductFeatures from "@/components/products/product-features"
 import ProductComparison from "@/components/products/product-comparison"
-import ProductTestimonials from "@/components/products/product-testimonials"
 import ProductsCTA from "@/components/products/products-cta"
 import ProductIntegrations from "@/components/products/product-integrations"
 import { buildPageMetadata } from "@/lib/page-metadata"
@@ -12,13 +11,13 @@ import { UseCaseContent } from "@/components/seo/use-case-content"
 const PATH = "/products"
 const TITLE = "OCR & Document AI API for Builders: DocsAPI"
 const DESCRIPTION =
-  "Production-ready OCR and document intelligence API, classify, extract, validate, and ship in days. Free tier, transparent pricing, honest support."
+  "Production-ready OCR and document intelligence API, classify, extract, validate, and ship in days. Per-page pricing and a free 30-day trial for qualified lenders."
 
 export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
 const CONTENT = {
   intro:
-    "DocsAPI is a document processing API: you send a PDF or image over HTTP and get back the document type and its fields as JSON. It reads bank statements, invoices, IDs and other business documents, joins tables that run across several pages, and checks the extracted data before you use it. Pricing is per page, from $0.02, with a free tier of 100 pages a month.",
+    "DocsAPI is a document processing API: you send a PDF or image over HTTP and get back the document type and its fields as JSON. It reads bank statements, invoices, IDs and other business documents, joins tables that run across several pages, and checks the extracted data before you use it. Pricing is per page, from $0.02, and qualified lenders can start with a free 30-day trial for qualified lenders after a demo.",
   sections: [
     {
       heading: "What a document processing API does",
@@ -31,13 +30,13 @@ const CONTENT = {
       heading: "Who it is built for",
       paragraphs: [
         "It is built for document AI developers at lenders, fintechs and finance teams who need to read documents at volume and feed the results into their own systems. It runs as a cloud API: it is not a desktop application and it cannot run air-gapped.",
-        "Customer documents are not used for training and are deleted after processing, per our policy. DocsAPI is SOC 2 Type II and ISO 27001 certified, and HIPAA-eligible with a business associate agreement.",
+        "Customer documents are not used to train models. Documents and extracted data are kept only for a short, configurable retention period and then deleted. DocsAPI is built by HyperVerge and is SOC 2 Type II and ISO 27001 certified, and HIPAA-eligible with a business associate agreement.",
       ],
     },
     {
-      heading: "Start free, then pay per page",
+      heading: "Book a demo, try it free, then pay per page",
       paragraphs: [
-        "The free tier covers 100 pages a month for evaluation. Production use is billed per page from $0.02, with volume discounts above 100,000 pages a month, and table extraction and classification are included in the base price. If you only need text from one file, the free OCR tool runs in your browser with no signup.",
+        "Start with a short demo; qualified lenders then get a free 30-day trial on their own documents. Production use is billed per page from $0.02, with volume discounts above 100,000 pages a month, and table extraction and classification are included in the base price. If you only need text from one file, the free OCR tool runs in your browser with no signup.",
       ],
     },
   ],
@@ -55,12 +54,12 @@ const CONTENT = {
     {
       question: "Is there a free OCR API?",
       answer:
-        "If you need an OCR API free of charge for testing, DocsAPI's free tier covers 100 pages a month, and the large cloud providers offer limited free tiers too. For unlimited free OCR you can run open-source engines such as Tesseract or PaddleOCR yourself. For a single file, the free OCR tool on this site works in the browser.",
+        "If you need an OCR API free of charge for testing, DocsAPI offers a free 30-day trial for qualified lenders after a demo, and the large cloud providers offer limited free tiers too. For unlimited free OCR you can run open-source engines such as Tesseract or PaddleOCR yourself. For a single file, the free OCR tool on this site works in the browser.",
     },
     {
       question: "Does DocsAPI train on my documents?",
       answer:
-        "No. Customer documents are not used to train models and are deleted after processing, per our policy. DocsAPI is SOC 2 Type II and ISO 27001 certified, and HIPAA-eligible with a business associate agreement available on request.",
+        "No. Customer documents are not used to train models. Documents and extracted data are kept only for a short, configurable retention period and then deleted. DocsAPI is SOC 2 Type II and ISO 27001 certified, and HIPAA-eligible with a business associate agreement available on request.",
     },
   ],
   related: [
@@ -74,13 +73,12 @@ const CONTENT = {
 export default function ProductsPage() {
   return (
     <>
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} dateModified="2026-09-28" />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} dateModified="2026-10-06" />
       <ProductsHero />
       <ProductFeatures />
       <ProductComparison />
       <ProductIntegrations />
       <UseCaseContent intro={CONTENT.intro} sections={CONTENT.sections} faqs={CONTENT.faqs} related={CONTENT.related} />
-      <ProductTestimonials />
       <ProductsCTA />
     </>
   )

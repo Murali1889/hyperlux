@@ -5,7 +5,6 @@ import KeyFieldsExtracted from "@/components/documents/shipping-docs/key-fields-
 import HowItWorks from "@/components/documents/shipping-docs/how-it-works"
 import OperationalBenefits from "@/components/documents/shipping-docs/operational-benefits"
 import SecurityCompliance from "@/components/documents/shipping-docs/security-compliance"
-import CaseStudyHighlight from "@/components/documents/shipping-docs/case-study-highlight"
 import PillarClusterBlogs from "@/components/documents/shared/pillar-cluster-blogs"
 import ShippingDocsFaq from "@/components/documents/shipping-docs/shipping-docs-faq"
 import ShippingDocsCta from "@/components/documents/shipping-docs/shipping-docs-cta"
@@ -15,7 +14,7 @@ import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 const PATH = "/documents/shipping-docs"
 const TITLE = "Shipping Document OCR: BOL, PODs, Packing Lists"
 const DESCRIPTION =
-  "Extract data from bills of lading, proofs of delivery, packing lists, and manifests. 97% accuracy, real-time shipment visibility."
+  "Extract data from bills of lading, proofs of delivery, packing lists, and manifests into structured JSON, with unclear fields flagged for review."
 
 export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
@@ -29,7 +28,6 @@ export default function ShippingDocsPage() {
       <HowItWorks />
       <OperationalBenefits />
       <SecurityCompliance />
-      <CaseStudyHighlight />
       <PillarClusterBlogs
         cluster="logistics"
         title="Shipping & Logistics Document Processing Guides"

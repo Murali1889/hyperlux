@@ -12,7 +12,8 @@ export default function LegalDocsHero() {
             </h1>
             <p className="max-w-[600px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Automatically extract clauses, key dates, and confidential information from contracts, NDAs, and
-              litigation bundles with 95%+ accuracy. Accelerate legal review processes and minimize compliance risks.
+              litigation bundles, with low-confidence clauses flagged for review. Speed up legal review without
+              handing judgment to a machine.
             </p>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Button className="bg-indigo-700 hover:bg-indigo-800">

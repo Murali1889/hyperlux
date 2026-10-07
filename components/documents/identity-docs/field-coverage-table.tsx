@@ -59,7 +59,7 @@ export default function FieldCoverageTable() {
         </div>
 
         <div className="mt-4 text-center text-sm text-slate-500">
-          <p>99.8% MRZ line accuracy; 98% printed text accuracy.</p>
+          <p>MRZ check digits are validated on every passport and ID that carries one.</p>
         </div>
       </div>
     </section>

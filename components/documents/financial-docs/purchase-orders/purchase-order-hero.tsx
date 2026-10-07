@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 
@@ -20,8 +21,10 @@ export default function PurchaseOrderHero() {
             Transform paper and PDF purchase orders into structured data that seamlessly integrates with your
             procurement systems and inventory management for real-time stock visibility.
           </p>
-          <Button className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-6 text-lg">
-            Try Purchase Order OCR
+          <Button asChild className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-6 text-lg">
+            <Link href="/book-demo">
+              Book a PO OCR Demo
+            </Link>
           </Button>
         </motion.div>
       </div>

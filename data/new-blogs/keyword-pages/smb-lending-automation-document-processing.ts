@@ -51,7 +51,7 @@ export const post: BlogPost = {
         <tr><td>Kaaj</td><td>Underwriting platform</td><td>Bank statement analysis, tax return extraction, KYB checks against secretary of state filings, credit memo generation, fraud detection</td><td>REST API with webhooks; CRM and leasing system integrations</td><td>Not published</td></tr>
         <tr><td>Docsumo</td><td>Configurable document AI</td><td>Document extraction and validation for lending, insurance and other industries</td><td>API and integrations</td><td>Free trial up to 1,000 pages; paid plans by quote, plus setup fees</td></tr>
         <tr><td>AWS Textract AnalyzeLending</td><td>Document API</td><td>Classifies, splits and extracts mortgage application documents</td><td>AWS API</td><td>$70 per 1,000 pages ($55 above 1 million)</td></tr>
-        <tr><td>DocsAPI (our product)</td><td>Document API</td><td>Classification and field extraction for SMB lending documents, bank statement tables joined across pages, ID documents, validation</td><td>HTTP API returning JSON</td><td>From $0.02 per page; 100 free pages a month</td></tr>
+        <tr><td>DocsAPI (our product)</td><td>Document API</td><td>Classification and field extraction for SMB lending documents, bank statement tables joined across pages, ID documents, validation</td><td>HTTP API returning JSON</td><td>From $0.02 per page; free 30-day trial for qualified lenders</td></tr>
       </tbody>
     </table>
     <p>Note that AnalyzeLending is built for mortgage packages; business tax returns and SMB-specific documents are outside what AWS describes for it. For a wider view of document APIs, see our <a href="/resources/blogs/fintech-lending-api-ocr">fintech lending API guide</a>.</p>
@@ -104,14 +104,14 @@ export const post: BlogPost = {
     <p>Add the cost of what you build or buy on top: review screens, analysis rules and integration with your loan system. For a deeper look at statement pricing, see our <a href="/resources/blogs/bank-statement-ocr-pricing">bank statement OCR pricing guide</a>.</p>
 
     <h2>Where DocsAPI fits</h2>
-    <p>Disclosure: DocsAPI is our product, built as a document AI and OCR API for SMB lending. It classifies each file in a packet, returns fields as JSON, joins bank statement tables that run across pages, reads ID documents and validates the data before you use it. It does not make credit decisions or replace your underwriting rules; teams use it when they want to own the workflow. It is a cloud API, from $0.02 per page, with 100 free pages a month.</p>
+    <p>Disclosure: DocsAPI is our product, built as a document AI and OCR API for SMB lending. It classifies each file in a packet, returns fields as JSON, joins bank statement tables that run across pages, reads ID documents and validates the data before you use it. It does not make credit decisions or replace your underwriting rules; teams use it when they want to own the workflow. It is a cloud API, from $0.02 per page, with a free 30-day trial for qualified lenders after a demo.</p>
 
     <h2>What to do on Monday</h2>
     <p>Pull last month's three messiest applications, build the 10-file packet from them, and send it to two vendors this week.</p>
     <ul>
       <li>Little engineering, want it done for you: shortlist two underwriting platforms and send each the 10-file packet above.</li>
       <li>Own ops team, varied documents: trial a configurable document AI tool on the same packet.</li>
-      <li>Developers and your own rules: run the packet through the <a href="/products">DocsAPI free tier</a> and one other API, and compare the joined statement tables.</li>
+      <li>Developers and your own rules: run the packet through a <a href="/book-demo">DocsAPI trial</a> and one other API, and compare the joined statement tables.</li>
       <li>SBA lending specifically: read our <a href="/resources/blogs/the-ultimate-guide-to-small-business-lending-automation-revolutionizing-sba-loans-and-financing">small business lending automation guide</a>.</li>
     </ul>
 
@@ -127,8 +127,8 @@ export const post: BlogPost = {
   category: "Lending",
   date: "October 5, 2026",
   datePublished: "2026-10-05T00:00:00.000Z",
-  dateModified: "2026-10-05T00:00:00.000Z",
-  last_updated: "October 5, 2026",
+  dateModified: "2026-10-06T00:00:00.000Z",
+  last_updated: "October 6, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "smb lending automation document processing",

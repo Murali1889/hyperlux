@@ -5,7 +5,6 @@ import CriticalDataExtracted from "@/components/documents/medical-docs/critical-
 import HowItWorks from "@/components/documents/medical-docs/how-it-works"
 import ClinicalOperationalBenefits from "@/components/documents/medical-docs/clinical-operational-benefits"
 import PrivacySecurity from "@/components/documents/medical-docs/privacy-security"
-import CaseStudyHighlight from "@/components/documents/medical-docs/case-study-highlight"
 import PillarClusterBlogs from "@/components/documents/shared/pillar-cluster-blogs"
 import MedicalDocsFAQ from "@/components/documents/medical-docs/medical-docs-faq"
 import MedicalDocsCta from "@/components/documents/medical-docs/medical-docs-cta"
@@ -15,14 +14,14 @@ import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 const PATH = "/documents/medical-docs"
 const TITLE = "Medical Document OCR: Prescriptions, Lab Reports"
 const DESCRIPTION =
-  "Digitize medical prescriptions, lab results, and insurance forms with 98% field accuracy. HIPAA-eligible with BAA. Reduce manual errors."
+  "Digitize medical prescriptions, lab results, and insurance forms, with unclear handwriting flagged for review. HIPAA-eligible with a BAA."
 
 export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
 export default function MedicalDocsPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} dateModified="2026-09-21" />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} dateModified="2026-10-06" />
       <main className="flex-1">
         <MedicalDocsHero />
         <DocumentTypesSupported />
@@ -30,7 +29,6 @@ export default function MedicalDocsPage() {
         <HowItWorks />
         <ClinicalOperationalBenefits />
         <PrivacySecurity />
-        <CaseStudyHighlight />
         <PillarClusterBlogs
           cluster="healthcare"
           title="Healthcare Document Processing Guides"

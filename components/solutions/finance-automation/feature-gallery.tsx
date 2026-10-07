@@ -10,13 +10,13 @@ export default function FeatureGallery() {
       icon: <FileText className="h-10 w-10 text-white" />,
       title: "Invoice OCR",
       description:
-        "Extract data from invoices with 99% accuracy using our advanced OCR technology. Process multiple formats including PDFs, images, and scanned documents automatically.",
+        "Extract invoice data, including line-item tables, at 93% line-item accuracy in our 2026 benchmark. PDFs, images, and scanned documents all work.",
     },
     {
       icon: <CheckSquare className="h-10 w-10 text-white" />,
       title: "Three-Way Match",
       description:
-        "Automatically match purchase orders, receiving documents, and invoices to ensure accuracy and prevent fraud. Reduce manual verification time by up to 85%.",
+        "Automatically match purchase orders, receiving documents, and invoices and flag mismatches, so your team reviews the exceptions instead of every invoice.",
     },
     {
       icon: <BarChart4 className="h-10 w-10 text-white" />,

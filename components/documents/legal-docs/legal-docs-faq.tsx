@@ -5,7 +5,7 @@ export default function LegalDocsFAQ() {
     {
       question: "How accurate is clause detection?",
       answer:
-        "Our clause detection achieves 95-98% accuracy for standard clauses in well-formatted documents. For specialized or uncommon clauses, accuracy typically ranges from 85-95%. The system continuously improves through machine learning as it processes more documents. All extracted clauses include confidence scores, and our human-in-the-loop validation interface allows legal experts to review and correct any misidentified clauses.",
+        "It depends on the clause and the document. Standard clauses in well-formatted contracts extract reliably; specialized or unusual clauses are harder because the language varies so much. Each extracted clause carries a confidence score, and low-confidence clauses are flagged for a legal reviewer to confirm. Customer documents are not used to train models.",
     },
     {
       question: "Can the system handle multilingual contracts?",
@@ -13,9 +13,9 @@ export default function LegalDocsFAQ() {
         "Yes, our OCR system supports documents in over 25 languages, including English, Spanish, French, German, Chinese, Japanese, and Arabic. The system can process contracts with mixed languages and automatically detect the primary language of each document. For specialized legal terminology, we offer industry-specific language models that understand context-specific meanings across different jurisdictions and legal systems.",
     },
     {
-      question: "Is on-premise deployment supported?",
+      question: "Can DocsAPI run on-premise?",
       answer:
-        "Yes, we offer flexible deployment options including cloud-based SaaS, private cloud, and on-premise installations. Our on-premise solution is designed for organizations with strict data sovereignty requirements or regulatory constraints. It provides the same functionality as our cloud offering while keeping all data within your infrastructure. We provide comprehensive support for installation, configuration, and maintenance of on-premise deployments.",
+        "DocsAPI runs as a cloud API. If your documents must stay inside your own environment, raise it in the demo and we will tell you plainly what is and is not possible for your setup.",
     },
     {
       question: "How is sensitive data protected?",

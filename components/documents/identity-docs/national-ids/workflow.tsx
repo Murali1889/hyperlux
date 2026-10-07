@@ -6,7 +6,7 @@ export default function Workflow() {
     {
       icon: <Camera className="h-10 w-10 text-indigo-700" />,
       title: "Multi-angle Capture Assistant",
-      description: "Smart capture guide ensures optimal angle and lighting for ID scanning, reducing retries by 70%.",
+      description: "Capture guidance helps users get the angle and lighting right, so fewer scans need a retake.",
     },
     {
       icon: <Scan className="h-10 w-10 text-indigo-700" />,
@@ -17,7 +17,7 @@ export default function Workflow() {
     {
       icon: <ShieldCheck className="h-10 w-10 text-indigo-700" />,
       title: "Tamper & Duplicate Detection",
-      description: "Advanced algorithms detect altered IDs and flag potential duplicates with 97% accuracy.",
+      description: "Checks flag IDs that look altered and IDs already seen in another application, for a reviewer to confirm.",
     },
   ]
 

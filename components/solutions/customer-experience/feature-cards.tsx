@@ -16,9 +16,8 @@ export default function FeatureCards() {
           <Link href="/resources/blogs/mrz-passport-verification" className="underline hover:text-indigo-700">
             passport verification guide
           </Link>{" "}
-          for how MRZ extraction works. Reduce manual entry by 95% while improving accuracy to 99.5%. Our adaptive
-          learning algorithms continuously improve recognition for damaged or low-quality documents, ensuring
-          smooth verification even in challenging conditions.
+          for how MRZ extraction works. MRZ check digits are validated, and fields the engine is unsure about are
+          flagged for review, so damaged or low-quality documents do not slip through with wrong data.
         </>
       ),
     },
@@ -26,13 +25,13 @@ export default function FeatureCards() {
       icon: <MessageSquare className="w-10 h-10 text-white" />,
       title: "Chatbot Vision",
       description:
-        "Enhance your customer support chatbots with document vision capabilities. Customers can share screenshots, receipts, or product images directly in chat, and our AI instantly extracts relevant information. This visual context helps resolve issues 3x faster and reduces the need for follow-up questions. Integration with major chatbot platforms takes just minutes through our simple API.",
+        "Enhance your customer support chatbots with document vision capabilities. Customers can share screenshots, receipts, or product images directly in chat, and our AI instantly extracts relevant information. That context means fewer follow-up questions for the customer.",
     },
     {
       icon: <TicketCheck className="w-10 h-10 text-white" />,
       title: "Ticket Triage",
       description:
-        "Automatically categorize and prioritize customer support tickets based on document content. Our system analyzes attached documents, extracts key information, and routes tickets to the appropriate department with relevant context. This reduces response time by 65% and improves first-contact resolution rates. The system learns from agent actions to continuously improve routing accuracy.",
+        "Automatically categorize and prioritize customer support tickets based on document content. Our system analyzes attached documents, extracts key information, and routes tickets to the appropriate department with relevant context. Agents start with the context they need instead of opening every attachment.",
     },
   ]
 

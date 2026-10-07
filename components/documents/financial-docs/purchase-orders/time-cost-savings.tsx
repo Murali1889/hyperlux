@@ -14,9 +14,9 @@ export default function TimeCostSavings() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">Time & Cost Savings</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">Where the Time Goes Back</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Quantifiable benefits of automating your purchase order processing
+            How much time you save depends on your PO volume and how your team works today. Here is what changes.
           </p>
         </motion.div>
 
@@ -38,19 +38,19 @@ export default function TimeCostSavings() {
             <div className="space-y-4">
               <div className="flex justify-between items-center">
                 <span className="text-gray-700">Manual PO Entry:</span>
-                <span className="font-bold text-red-600">120 seconds</span>
+                <span className="font-bold text-red-600">Keyed line by line</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-gray-700">Automated Processing:</span>
-                <span className="font-bold text-green-600">12 seconds</span>
+                <span className="font-bold text-green-600">About 1.1 s per page</span>
               </div>
               <div className="h-px bg-gray-200 w-full my-2"></div>
-              <div className="text-center font-bold text-indigo-700">90% time savings</div>
+              <div className="text-center font-bold text-indigo-700">Speed measured in our 2026 benchmark</div>
             </div>
 
             <div className="mt-6 bg-indigo-50 p-4 rounded-lg">
               <p className="text-gray-700">
-                Process 10x more purchase orders with the same staff, allowing your team to focus on strategic supplier
+                Your team handles more purchase orders without adding people, and spends the time on supplier
                 management instead of data entry.
               </p>
             </div>
@@ -71,7 +71,7 @@ export default function TimeCostSavings() {
             </div>
 
             <div className="flex items-center justify-center mb-6">
-              <div className="text-5xl font-bold text-indigo-700">↓ 70%</div>
+              <div className="text-4xl font-bold text-indigo-700">Caught early</div>
             </div>
 
             <div className="space-y-4">

@@ -20,7 +20,7 @@ export default function ComplianceHero() {
             </h1>
             <p className="text-lg md:text-xl text-gray-700 mb-8">
               Streamline compliance with intelligent document processing for AML/KYC verification, SOX section 404
-              controls, and GDPR PII redaction—all with complete audit trails.
+              controls, and GDPR PII redaction, all with complete audit trails.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-4 sm:py-6 text-base sm:text-lg w-full sm:w-auto">
@@ -65,7 +65,7 @@ export default function ComplianceHero() {
                   </div>
                 </div>
                 <div className="bg-green-50 px-3 py-1 rounded-full border border-green-200">
-                  <span className="text-green-700 font-medium text-sm">94% Compliant</span>
+                  <span className="text-green-700 font-medium text-sm">On track</span>
                 </div>
               </div>
 

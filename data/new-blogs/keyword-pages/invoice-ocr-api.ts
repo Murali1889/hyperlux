@@ -43,7 +43,7 @@ export const post: BlogPost = {
         <tr><td>Google Invoice Parser</td><td>$0.10 per document of up to 10 pages</td><td>See Google's pricing page</td><td>10,000 x $0.10 = $1,000</td><td>10,000 x $0.10 = $1,000</td></tr>
         <tr><td>Mindee Starter</td><td>$44 a month for 6,000 credits (1 credit per page); overage at the plan rate plus 20%</td><td>14-day trial</td><td>$44 + 4,000 x $0.0088 = $79.20</td><td>$44 + 24,000 x $0.0088 = $255.20</td></tr>
         <tr><td>Veryfi Starter</td><td>$0.16 per invoice, $500 a month minimum</td><td>100 documents a month</td><td>10,000 x $0.16 = $1,600</td><td>10,000 x $0.16 = $1,600</td></tr>
-        <tr><td>DocsAPI (our product)</td><td>From $0.02 per page, tables and classification included</td><td>100 pages a month</td><td>10,000 x $0.02 = $200</td><td>30,000 x $0.02 = $600</td></tr>
+        <tr><td>DocsAPI (our product)</td><td>From $0.02 per page, tables and classification included</td><td>Free 30-day trial for qualified lenders, after a demo</td><td>10,000 x $0.02 = $200</td><td>30,000 x $0.02 = $600</td></tr>
       </tbody>
     </table>
     <p>How the Mindee overage works: $44 buys 6,000 credits, so the plan rate is $44 / 6,000 = $0.0073 a credit, and overage adds 20%, giving $0.0088. Mindee also counts 1.5 credits for a page when you ask for confidence scores, which raises these figures. Prices were read from each vendor's pricing page on September 28, 2026 and exclude volume discounts. For how per-page, per-document and subscription pricing play out across vendors, see our <a href="/resources/blogs/invoice-ocr-pricing-models">invoice OCR pricing models guide</a>.</p>
@@ -121,7 +121,7 @@ lines + tax + shipping - discount = 10217.13 but total is 4817.13</code></pre>
     <p>Our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a> has the full results, and our <a href="/resources/blogs/aws-textract-vs-docsapi">AWS Textract comparison</a> covers Textract's full price list and limits.</p>
 
     <h2>Where DocsAPI fits</h2>
-    <p>Disclosure: DocsAPI is our product. It classifies each document first, so invoices can arrive mixed with bank statements, pay stubs and IDs; it returns fields as JSON, joins line-item tables that run across pages, and runs validation before you use the data. It costs from $0.02 per page with tables and classification included, and has a free tier of 100 pages a month. If you only process single-page invoices on AWS or Azure, their $0.01 a page is cheaper.</p>
+    <p>Disclosure: DocsAPI is our product. It classifies each document first, so invoices can arrive mixed with bank statements, pay stubs and IDs; it returns fields as JSON, joins line-item tables that run across pages, and runs validation before you use the data. It costs from $0.02 per page with tables and classification included, and qualified lenders can get a free 30-day trial for qualified lenders after a demo. If you only process single-page invoices on AWS or Azure, their $0.01 a page is cheaper.</p>
 
     <h2>If you are choosing an API this month</h2>
     <p>Do not let a pricing page make this decision for you. Let fifty of your own invoices make it.</p>
@@ -146,8 +146,8 @@ lines + tax + shipping - discount = 10217.13 but total is 4817.13</code></pre>
   category: "Vendor Comparisons",
   date: "October 5, 2026",
   datePublished: "2026-10-05T00:00:00.000Z",
-  dateModified: "2026-10-05T00:00:00.000Z",
-  last_updated: "October 5, 2026",
+  dateModified: "2026-10-06T00:00:00.000Z",
+  last_updated: "October 6, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "invoice ocr api",
@@ -174,7 +174,7 @@ lines + tax + shipping - discount = 10217.13 but total is 4817.13</code></pre>
     {
       question: "Is there a free invoice OCR API?",
       answer:
-        "Several have free tiers: Azure's F0 tier covers 500 pages a month (reading the first two pages of each document), AWS gives 100 AnalyzeExpense pages a month for three months, Veryfi covers 100 documents a month, and DocsAPI 100 pages a month. Mindee offers a 14-day trial.",
+        "Several have free tiers: Azure's F0 tier covers 500 pages a month (reading the first two pages of each document), AWS gives 100 AnalyzeExpense pages a month for three months, Veryfi covers 100 documents a month, Mindee offers a 14-day trial, and DocsAPI offers a free 30-day trial for qualified lenders after a demo.",
     },
     {
       question: "What is the cheapest invoice OCR API?",

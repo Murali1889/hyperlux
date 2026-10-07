@@ -9,7 +9,7 @@ export default function SupportedFileTypes() {
     {
       title: "Invoices",
       description:
-        "Process invoices in PDF, TIFF, JPEG, and PNG formats. Extract vendor details, line items, tax information, and payment terms with 99% accuracy.",
+        "Process invoices in PDF, TIFF, JPEG, and PNG formats. Extract vendor details, line items, tax information, and payment terms, with 93% line-item accuracy in our 2026 benchmark.",
       icon: <FileText className="h-8 w-8 text-indigo-700" />,
       href: "/documents/financial-docs/invoices",
     },

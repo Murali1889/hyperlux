@@ -5,7 +5,7 @@ export default function NationalIdFAQ() {
     {
       question: "How does the system handle blurred photos on ID cards?",
       answer:
-        "Our advanced image enhancement algorithms can process and extract data from ID photos with up to 40% blur or glare. The system uses multi-frame capture to select the clearest image and applies proprietary deblurring technology to improve extraction accuracy. For severely damaged photos, the system will flag the issue and may request a recapture if confidence scores fall below threshold.",
+        "Image preprocessing corrects rotation and contrast before extraction, which rescues many slightly blurred or glary photos. When a field still cannot be read with confidence, it is flagged rather than guessed, and your flow can ask the user for a recapture. Guiding users to a flat, well-lit shot prevents most of these cases.",
     },
     {
       question: "Is there an offline mode for ID verification?",

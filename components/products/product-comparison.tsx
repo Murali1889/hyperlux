@@ -49,18 +49,6 @@ export default function ProductComparison() {
                 </td>
               </tr>
               <tr>
-                <td className="py-4 px-6 border-b">99.9% Classification Accuracy</td>
-                <td className="py-4 px-6 border-b text-center bg-indigo-50">
-                  <Check className="h-6 w-6 text-green-500 mx-auto" />
-                </td>
-                <td className="py-4 px-6 border-b text-center">
-                  <X className="h-6 w-6 text-red-500 mx-auto" />
-                </td>
-                <td className="py-4 px-6 border-b text-center">
-                  <X className="h-6 w-6 text-red-500 mx-auto" />
-                </td>
-              </tr>
-              <tr>
                 <td className="py-4 px-6 border-b">Real-time Document Processing</td>
                 <td className="py-4 px-6 border-b text-center bg-indigo-50">
                   <Check className="h-6 w-6 text-green-500 mx-auto" />

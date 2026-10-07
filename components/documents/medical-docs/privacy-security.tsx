@@ -72,9 +72,9 @@ export default function PrivacySecurity() {
                 protection for sensitive patient information.
               </p>
               <p className="text-gray-600">
-                We maintain compliance with HIPAA, HITECH, SOC 2 Type II, and other relevant healthcare data security
-                standards. Our platform can be deployed in your private cloud or on-premises environment for maximum
-                control over sensitive data.
+                DocsAPI is HIPAA-eligible with a BAA, and SOC 2 Type II and ISO 27001 certified. Customer documents are
+                not used to train models, and documents and extracted data are kept only for a short, configurable
+                retention period and then deleted.
               </p>
             </div>
           </div>

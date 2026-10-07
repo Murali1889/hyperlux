@@ -16,7 +16,7 @@ export default function AccuracyBenchmarks() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">Accuracy Benchmarks</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Our purchase order OCR delivers industry-leading accuracy across all document types
+            We have not published a purchase-order benchmark yet, so here are the closest figures we have measured
           </p>
         </motion.div>
 
@@ -32,11 +32,11 @@ export default function AccuracyBenchmarks() {
               <div className="bg-indigo-100 p-3 rounded-full mr-4">
                 <FileText className="h-8 w-8 text-indigo-700" />
               </div>
-              <h3 className="text-xl font-bold text-indigo-900">Scanned POs</h3>
+              <h3 className="text-xl font-bold text-indigo-900">Clean Typed Text</h3>
             </div>
             <div className="flex items-center justify-between mb-3">
-              <span className="text-gray-700 font-medium">Field Accuracy</span>
-              <span className="text-2xl font-bold text-indigo-700">98%</span>
+              <span className="text-gray-700 font-medium">Character Accuracy</span>
+              <span className="text-2xl font-bold text-indigo-700">97-99%</span>
             </div>
             <div className="h-3 bg-gray-100 rounded-full mb-6">
               <motion.div
@@ -48,8 +48,8 @@ export default function AccuracyBenchmarks() {
               ></motion.div>
             </div>
             <p className="text-gray-700">
-              Even with handwritten notes, stamps, and poor scan quality, our AI maintains exceptional accuracy on
-              physical purchase orders.
+              Printed PO headers, vendor details and item descriptions read cleanly. Handwritten notes, stamps and
+              poor scans score lower, and unclear fields are flagged for review.
             </p>
           </motion.div>
 
@@ -64,24 +64,24 @@ export default function AccuracyBenchmarks() {
               <div className="bg-indigo-100 p-3 rounded-full mr-4">
                 <CheckCircle className="h-8 w-8 text-indigo-700" />
               </div>
-              <h3 className="text-xl font-bold text-indigo-900">Digital PDFs</h3>
+              <h3 className="text-xl font-bold text-indigo-900">Line-Item Tables</h3>
             </div>
             <div className="flex items-center justify-between mb-3">
-              <span className="text-gray-700 font-medium">Field Accuracy</span>
-              <span className="text-2xl font-bold text-indigo-700">99.5%</span>
+              <span className="text-gray-700 font-medium">Invoice Line Items</span>
+              <span className="text-2xl font-bold text-indigo-700">93%</span>
             </div>
             <div className="h-3 bg-gray-100 rounded-full mb-6">
               <motion.div
                 className="h-3 bg-indigo-700 rounded-full"
                 initial={{ width: "0%" }}
-                whileInView={{ width: "99.5%" }}
+                whileInView={{ width: "93%" }}
                 viewport={{ once: true }}
                 transition={{ duration: 1, delay: 0.4 }}
               ></motion.div>
             </div>
             <p className="text-gray-700">
-              For digitally generated PDFs, our system achieves near-perfect accuracy, ensuring seamless integration
-              with your procurement systems.
+              PO line items look a lot like invoice line items: SKUs, quantities and unit prices in a table. Our
+              closest measured figure is invoice line-item extraction.
             </p>
           </motion.div>
         </div>
@@ -94,7 +94,11 @@ export default function AccuracyBenchmarks() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <p className="text-center text-gray-700">
-            Benchmarked on 15,000+ purchase orders from 200+ vendors across multiple industries and formats.
+            Figures from our{" "}
+            <a href="/resources/blogs/ocr-accuracy-benchmark-2026" className="text-indigo-700 underline">
+              2026 OCR accuracy benchmark
+            </a>
+            . The best test is your own POs, so bring a few to the demo.
           </p>
         </motion.div>
       </div>

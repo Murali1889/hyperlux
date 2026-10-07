@@ -16,10 +16,11 @@ export default function IndustriesPage() {
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-indigo-600 to-indigo-800 py-20 px-4 sm:px-6 lg:px-8 text-white">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Cut Loan Document Processing Time by 80%</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Document AI for Banks, Fintechs and Lenders</h1>
           <p className="text-xl md:text-2xl max-w-3xl mb-8">
             Banks, fintechs, credit unions, and microfinance institutions use DocsAPI to automate KYC, income
-            verification, and fraud checks, at 99.9% extraction accuracy.
+            verification, and fraud checks. Accuracy is published by document type: 91% on multi-page bank statement
+            tables in our 2026 benchmark.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
@@ -140,15 +141,15 @@ export default function IndustriesPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Banking</h2>
               <p className="text-lg text-gray-600 mb-6">
                 Our AI OCR software transforms document processing for banks, reducing loan origination costs and
-                accelerating account opening workflows. With 99.9% accuracy in data extraction, banks can automate KYC
-                verification and compliance checks.
+                accelerating account opening workflows. MRZ check digits are validated and unclear fields are flagged for
+                review, so banks can automate KYC verification and compliance checks without trusting blind output.
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <svg className="h-6 w-6 text-indigo-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Reduce mortgage document processing time by 80%</span>
+                  <span>Read mortgage documents at about 1.1 seconds per page</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="h-6 w-6 text-indigo-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -199,7 +200,7 @@ export default function IndustriesPage() {
                 <div className="mb-6">
                   <div className="flex justify-between text-sm mb-1">
                     <span className="text-gray-500">Processing mortgage documents</span>
-                    <span className="text-indigo-600 font-medium">80% faster</span>
+                    <span className="text-indigo-600 font-medium">In progress</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2.5">
                     <div className="bg-indigo-600 h-2.5 rounded-full" style={{ width: "80%" }}></div>
@@ -305,7 +306,7 @@ export default function IndustriesPage() {
                   </div>
                   <div className="flex justify-between items-center">
                     <div className="text-sm text-indigo-700">Automated audit trails and compliance verification</div>
-                    <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">99.9% Accurate</span>
+                    <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Checked</span>
                   </div>
                 </div>
               </div>
@@ -340,7 +341,7 @@ export default function IndustriesPage() {
                       <h3 className="font-bold">Fintech Lending Platform</h3>
                     </div>
                     <span className="bg-white text-indigo-600 text-xs px-2 py-1 rounded-full font-medium">
-                      10x Faster
+                      Automated
                     </span>
                   </div>
                 </div>
@@ -349,7 +350,7 @@ export default function IndustriesPage() {
                   <div className="mb-6">
                     <div className="flex justify-between text-sm mb-1">
                       <span className="text-gray-500">Loan Application Processing</span>
-                      <span className="text-green-600 font-medium">10x Faster</span>
+                      <span className="text-green-600 font-medium">Automated</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
                       <div className="bg-green-500 h-2 rounded-full" style={{ width: "90%" }}></div>
@@ -437,7 +438,7 @@ export default function IndustriesPage() {
                         </svg>
                         <span className="text-sm font-medium">Decision: Approved</span>
                       </div>
-                      <span className="text-xs text-gray-500">Processing time: 3 minutes</span>
+                      <span className="text-xs text-gray-500">All documents checked</span>
                     </div>
                   </div>
                 </div>
@@ -455,7 +456,7 @@ export default function IndustriesPage() {
                   <svg className="h-6 w-6 text-indigo-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Process loan applications 10x faster with automated data extraction</span>
+                  <span>Extract loan application data automatically instead of retyping it</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="h-6 w-6 text-indigo-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -550,7 +551,7 @@ export default function IndustriesPage() {
                   <div className="mb-6">
                     <div className="flex justify-between text-sm mb-1">
                       <span className="text-gray-500">Loan Processing Time</span>
-                      <span className="text-purple-600 font-medium">85% Reduction</span>
+                      <span className="text-purple-600 font-medium">Automated</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
                       <div className="bg-purple-500 h-2 rounded-full" style={{ width: "85%" }}></div>
@@ -580,16 +581,16 @@ export default function IndustriesPage() {
                       <h4 className="text-sm font-medium text-gray-700 mb-2">Member Experience</h4>
                       <div className="space-y-2">
                         <div className="flex items-center justify-between">
-                          <span className="text-xs">Satisfaction Score</span>
-                          <span className="text-xs bg-green-100 text-green-800 px-1.5 py-0.5 rounded">94%</span>
+                          <span className="text-xs">Status Updates</span>
+                          <span className="text-xs bg-green-100 text-green-800 px-1.5 py-0.5 rounded">Faster</span>
                         </div>
                         <div className="flex items-center justify-between">
                           <span className="text-xs">Wait Time</span>
-                          <span className="text-xs bg-green-100 text-green-800 px-1.5 py-0.5 rounded">-75%</span>
+                          <span className="text-xs bg-green-100 text-green-800 px-1.5 py-0.5 rounded">Shorter</span>
                         </div>
                         <div className="flex items-center justify-between">
-                          <span className="text-xs">Member Retention</span>
-                          <span className="text-xs bg-green-100 text-green-800 px-1.5 py-0.5 rounded">+18%</span>
+                          <span className="text-xs">Rekeying</span>
+                          <span className="text-xs bg-green-100 text-green-800 px-1.5 py-0.5 rounded">None</span>
                         </div>
                       </div>
                     </div>
@@ -615,7 +616,7 @@ export default function IndustriesPage() {
                     </div>
                     <div className="flex justify-between items-center">
                       <div className="text-sm text-purple-700">Automated regulatory compliance checks</div>
-                      <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">100% Compliant</span>
+                      <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Logged</span>
                     </div>
                   </div>
 
@@ -636,9 +637,9 @@ export default function IndustriesPage() {
                             d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                           />
                         </svg>
-                        <span className="text-sm font-medium">Average processing: 2.5 hours</span>
+                        <span className="text-sm font-medium">Documents read on arrival</span>
                       </div>
-                      <span className="text-xs text-gray-500">Previously: 2-3 days</span>
+                      <span className="text-xs text-gray-500">No queue for manual entry</span>
                     </div>
                   </div>
                 </div>
@@ -683,7 +684,7 @@ export default function IndustriesPage() {
                   <div className="mb-6">
                     <div className="flex justify-between text-sm mb-1">
                       <span className="text-gray-500">Small Loan Processing</span>
-                      <span className="text-emerald-600 font-medium">6x Volume Increase</span>
+                      <span className="text-emerald-600 font-medium">Automated</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
                       <div className="bg-emerald-500 h-2 rounded-full" style={{ width: "85%" }}></div>
@@ -713,16 +714,16 @@ export default function IndustriesPage() {
                       <h4 className="text-sm font-medium text-gray-700 mb-2">Impact Metrics</h4>
                       <div className="space-y-2">
                         <div className="flex items-center justify-between">
-                          <span className="text-xs">Borrowers Served</span>
-                          <span className="text-xs bg-green-100 text-green-800 px-1.5 py-0.5 rounded">+240%</span>
+                          <span className="text-xs">Loan Files</span>
+                          <span className="text-xs bg-green-100 text-green-800 px-1.5 py-0.5 rounded">Structured</span>
                         </div>
                         <div className="flex items-center justify-between">
-                          <span className="text-xs">Processing Cost</span>
-                          <span className="text-xs bg-green-100 text-green-800 px-1.5 py-0.5 rounded">-68%</span>
+                          <span className="text-xs">Pricing</span>
+                          <span className="text-xs bg-green-100 text-green-800 px-1.5 py-0.5 rounded">Per page</span>
                         </div>
                         <div className="flex items-center justify-between">
-                          <span className="text-xs">Rural Coverage</span>
-                          <span className="text-xs bg-green-100 text-green-800 px-1.5 py-0.5 rounded">+175%</span>
+                          <span className="text-xs">Unclear Fields</span>
+                          <span className="text-xs bg-green-100 text-green-800 px-1.5 py-0.5 rounded">Flagged</span>
                         </div>
                       </div>
                     </div>
@@ -769,9 +770,9 @@ export default function IndustriesPage() {
                             d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                           />
                         </svg>
-                        <span className="text-sm font-medium">Average processing: 15 minutes</span>
+                        <span className="text-sm font-medium">About 1.1 s per page</span>
                       </div>
-                      <span className="text-xs text-gray-500">Previously: 2-3 days</span>
+                      <span className="text-xs text-gray-500">In our 2026 OCR benchmark</span>
                     </div>
                   </div>
                 </div>

@@ -198,7 +198,7 @@ OCR output: Invoice INV-20458 dated 2026-03-14 total due $7,250.00 net 30 days</
     <ul>
       <li><strong>Your files are digital PDFs:</strong> check for a text layer first and skip OCR if it is there.</li>
       <li><strong>You scan or photograph documents yourself:</strong> apply steps 3 to 8 of the checklist.</li>
-      <li><strong>You are choosing a vendor:</strong> ask the five questions in the claims table, test 50 of your own documents, and start from the <a href="/resources/blogs/best-ocr-software-2026">best OCR software 2026 guide</a>. The free <a href="/tools/which-ocr">Which OCR selector</a> shortlists engines for your document mix. DocsAPI is our product and has a free tier of 100 pages a month for evaluation.</li>
+      <li><strong>You are choosing a vendor:</strong> ask the five questions in the claims table, test 50 of your own documents, and start from the <a href="/resources/blogs/best-ocr-software-2026">best OCR software 2026 guide</a>. The free <a href="/tools/which-ocr">Which OCR selector</a> shortlists engines for your document mix. DocsAPI is our product; qualified lenders can evaluate it with a free 30-day trial for qualified lenders after a demo.</li>
       <li><strong>You use Tesseract or PaddleOCR:</strong> see <a href="/resources/blogs/paddleocr-vs-tesseract-vs-docsapi">PaddleOCR vs Tesseract vs DocsAPI</a>.</li>
       <li><strong>You handle handwriting, faxes or money fields:</strong> budget for review and add check digits, reconciliation and thresholds (see the <a href="/resources/blogs/handwritten-faxed-invoice-ocr">handwritten invoice accuracy data</a>).</li>
       <li><strong>You are weighing AI vision models:</strong> read <a href="/resources/blogs/vlm-vs-ocr">VLM vs OCR</a>.</li>
@@ -226,8 +226,8 @@ OCR output: Invoice INV-20458 dated 2026-03-14 total due $7,250.00 net 30 days</
   category: "Industry Trends",
   date: "May 28, 2025",
   datePublished: "2025-05-28T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  dateModified: "2026-10-06T00:00:00.000Z",
+  last_updated: "October 6, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "how accurate is ocr",

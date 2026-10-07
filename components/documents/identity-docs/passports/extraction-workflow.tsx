@@ -10,7 +10,7 @@ export default function ExtractionWorkflow() {
     {
       icon: <Scan className="h-8 w-8 text-indigo-700" />,
       title: "Auto-detect & MRZ Parse",
-      description: "AI automatically detects passport type, orientation, and extracts MRZ data in under 1 second.",
+      description: "AI detects the passport type and orientation, then reads the MRZ and validates its check digits.",
     },
     {
       icon: <ShieldCheck className="h-8 w-8 text-indigo-700" />,

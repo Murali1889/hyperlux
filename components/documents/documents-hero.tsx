@@ -25,8 +25,8 @@ export default function DocumentsHero() {
             Every Document, One AI Engine
           </h1>
           <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-            Our intelligent OCR platform processes all document types — Financial, Identity, Legal, Medical, and
-            Shipping — with industry-leading accuracy and speed.
+            DocsAPI reads financial, identity, legal, medical, and shipping documents, and publishes its accuracy by
+            document type instead of quoting one number for everything.
           </p>
           <Button
             onClick={scrollToCategories}

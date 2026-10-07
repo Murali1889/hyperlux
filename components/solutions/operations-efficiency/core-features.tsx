@@ -37,7 +37,7 @@ export default function CoreFeatures() {
               <h3 className="text-xl font-bold text-indigo-900 mb-3">POD OCR</h3>
               <p className="text-gray-700">
                 Automatically extract delivery confirmation data from proof of delivery documents. Capture signatures,
-                timestamps, recipient details, and delivery notes with 99% accuracy. See our{" "}
+                timestamps, recipient details, and delivery notes, with unclear fields flagged for review. See our{" "}
                 <Link href="/resources/blogs/proof-of-delivery-processing" className="underline hover:text-indigo-700">
                   proof of delivery processing guide
                 </Link>

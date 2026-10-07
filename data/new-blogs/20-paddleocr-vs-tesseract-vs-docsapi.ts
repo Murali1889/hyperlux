@@ -155,7 +155,7 @@ print(" ".join(result[0]["rec_texts"]))</code></pre>
 
     <h2>Where a hosted API like DocsAPI fits</h2>
     <p>Disclosure: DocsAPI is our product. Both open-source engines give you text. Many business teams need more than text: named fields such as vendor, amount and date, tables stitched across pages, checks that the numbers add up, and someone else running the servers. That is what document APIs do.</p>
-    <p>In our benchmark DocsAPI led on multi-page bank statement tables (91%, against 79% for PaddleOCR and 64% for Tesseract) because it joins transaction tables across pages. It did not win everything: PaddleOCR scored higher on phone photos (82% against 76%) and mixed-language pages (89% against 81%). DocsAPI prices per page, starting at $0.02, with a free tier of 100 pages a month and volume discounts above 100,000 pages a month. At 100,000 pages that is $2,000 a month before discounts. The open-source engines cost nothing to license but not nothing to run: as an example, 4 hours a month of engineering at $100 an hour is $400 a month before compute. A hosted API cannot run air-gapped, so for data that must never leave your network, the open-source engines are the only option here.</p>
+    <p>In our benchmark DocsAPI led on multi-page bank statement tables (91%, against 79% for PaddleOCR and 64% for Tesseract) because it joins transaction tables across pages. It did not win everything: PaddleOCR scored higher on phone photos (82% against 76%) and mixed-language pages (89% against 81%). DocsAPI prices per page, starting at $0.02, with volume discounts above 100,000 pages a month and a free 30-day trial for qualified lenders after a demo. At 100,000 pages that is $2,000 a month before discounts. The open-source engines cost nothing to license but not nothing to run: as an example, 4 hours a month of engineering at $100 an hour is $400 a month before compute. A hosted API cannot run air-gapped, so for data that must never leave your network, the open-source engines are the only option here.</p>
     <p>For other comparisons, see <a href="/resources/blogs/docling-vs-llamaparse-vs-docsapi">Docling vs LlamaParse</a>, <a href="/resources/blogs/aws-textract-vs-docsapi">AWS Textract vs DocsAPI</a>, <a href="/resources/blogs/abbyy-finereader-alternative">ABBYY FineReader alternatives</a> and our <a href="/resources/blogs/best-ocr-software-2026">best OCR software guide</a>.</p>
 
     <h2>What to do next</h2>
@@ -163,7 +163,7 @@ print(" ".join(result[0]["rec_texts"]))</code></pre>
       <li><strong>You just need text from a clean image or PDF right now:</strong> our <a href="/tools/free-ocr">free OCR tool</a> runs Tesseract in your browser with no upload and no signup.</li>
       <li><strong>You are not sure which engine fits:</strong> the <a href="/tools/which-ocr">Which OCR should I use tool</a> asks six questions and is honest about when open source is the right call.</li>
       <li><strong>You are building on open source:</strong> copy the code above, run PaddleOCR, Tesseract and any API you are considering on 20 of your hardest documents, and count wrong amounts, not just character errors. Our <a href="/resources/blogs/pdf-text-recognition">PDF text recognition guide</a> covers when Tesseract alone is enough, and our <a href="/resources/blogs/ocr-pdf-honest-guide">OCR for PDFs guide</a> covers scanned PDFs.</li>
-      <li><strong>You need fields from bank statements or invoices:</strong> compare the output on your own files with the <a href="/products">DocsAPI free tier</a>.</li>
+      <li><strong>You need fields from bank statements or invoices:</strong> compare the output on your own files in a <a href="/book-demo">DocsAPI trial</a>.</li>
     </ul>
 
     <h2>Sources and how we checked this</h2>
@@ -180,8 +180,8 @@ print(" ".join(result[0]["rec_texts"]))</code></pre>
   category: "Vendor Comparisons",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  dateModified: "2026-10-06T00:00:00.000Z",
+  last_updated: "October 6, 2026",
   readTime: "13 min read",
   author: nupuraUghade,
   primary_keyword: "paddleocr",

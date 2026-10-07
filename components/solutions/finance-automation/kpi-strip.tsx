@@ -7,18 +7,18 @@ export default function KPIStrip() {
   const kpis = [
     {
       icon: <Clock className="h-12 w-12 text-indigo-200" />,
-      metric: "65%",
-      description: "faster AP cycle",
+      metric: "93%",
+      description: "invoice line-item accuracy",
     },
     {
       icon: <AlertTriangle className="h-12 w-12 text-indigo-200" />,
-      metric: "35%",
-      description: "reduction in exceptions",
+      metric: "91%",
+      description: "row accuracy on multi-page bank statement tables",
     },
     {
       icon: <CheckCircle className="h-12 w-12 text-indigo-200" />,
-      metric: "99%",
-      description: "extraction fidelity",
+      metric: "$0.02",
+      description: "per page to start, with volume discounts",
     },
   ]
 
@@ -32,9 +32,9 @@ export default function KPIStrip() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Proven Results for Finance Teams</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Numbers You Can Check</h2>
           <p className="text-lg text-indigo-100 max-w-3xl mx-auto">
-            Our customers achieve significant improvements in their finance operations
+            Accuracy figures from our published 2026 OCR benchmark, which also lists the categories where we lose
           </p>
         </motion.div>
 

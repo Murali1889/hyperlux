@@ -31,20 +31,20 @@ export default function CustomerExperienceCta() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-3xl mx-auto">
             <div className="bg-white p-4 rounded-lg shadow-sm">
-              <div className="text-3xl font-bold text-indigo-700 mb-1">30s</div>
-              <p className="text-gray-700 text-sm">Average onboarding time</p>
+              <div className="text-3xl font-bold text-indigo-700 mb-1">1.1s</div>
+              <p className="text-gray-700 text-sm">Per page in our 2026 benchmark</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm">
-              <div className="text-3xl font-bold text-indigo-700 mb-1">99.5%</div>
-              <p className="text-gray-700 text-sm">Data extraction accuracy</p>
+              <div className="text-3xl font-bold text-indigo-700 mb-1">Flagged</div>
+              <p className="text-gray-700 text-sm">Unclear fields go to review</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm">
-              <div className="text-3xl font-bold text-indigo-700 mb-1">40%</div>
-              <p className="text-gray-700 text-sm">Reduction in drop-offs</p>
+              <div className="text-3xl font-bold text-indigo-700 mb-1">SOC 2</div>
+              <p className="text-gray-700 text-sm">Type II certified</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow-sm">
-              <div className="text-3xl font-bold text-indigo-700 mb-1">18%</div>
-              <p className="text-gray-700 text-sm">Increase in CSAT scores</p>
+              <div className="text-3xl font-bold text-indigo-700 mb-1">30 days</div>
+              <p className="text-gray-700 text-sm">Free trial for qualified lenders</p>
             </div>
           </div>
         </motion.div>

@@ -23,20 +23,19 @@ export default function CustomerExperienceImpact() {
             <div className="md:w-3/4">
               <h2 className="text-2xl md:text-3xl font-bold text-indigo-900 mb-4">Customer Experience Impact</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Automating financial document processing doesn't just save time and money—it transforms your vendor and
-                customer relationships. Vendors are paid 2 days sooner on average, leading to stronger supplier
-                relationships and potential early payment discounts. AP disputes have fallen by 30% due to higher
-                accuracy, reducing friction in your business relationships and freeing up staff time for more strategic
-                activities.
+                Vendors and customers notice when documents stop waiting in a queue. Invoices get captured the day they
+                arrive, so payments are less likely to slip and early-payment discounts are easier to catch. Fields the
+                engine is unsure about are flagged before anyone pays, which means fewer awkward calls about wrong
+                amounts.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <div className="text-3xl font-bold text-indigo-700 mb-1">2 days</div>
-                  <div className="text-gray-700">Faster vendor payments</div>
+                  <div className="text-3xl font-bold text-indigo-700 mb-1">Same day</div>
+                  <div className="text-gray-700">Invoices captured as they arrive</div>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <div className="text-3xl font-bold text-indigo-700 mb-1">30%</div>
-                  <div className="text-gray-700">Fewer AP disputes</div>
+                  <div className="text-3xl font-bold text-indigo-700 mb-1">Flagged</div>
+                  <div className="text-gray-700">Unclear amounts checked before payment</div>
                 </div>
               </div>
             </div>

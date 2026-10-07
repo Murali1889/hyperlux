@@ -15,7 +15,7 @@ import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 const PATH = "/documents/financial-docs"
 const TITLE = "Financial Document OCR: Statements, Invoices, POs"
 const DESCRIPTION =
-  "Extract data from bank statements, invoices, purchase orders, and financial reports. 99% header + line-item accuracy. Structured JSON output."
+  "Extract data from bank statements, invoices, purchase orders, and financial reports. Accuracy benchmarked by document type, structured JSON output."
 
 // Invoice/AP, bank-statement/lending, and standalone finance-document posts.
 // These clusters share generic `cluster` tags (comparison/compliance/ai-doc)
@@ -84,7 +84,7 @@ export const metadata: Metadata = buildPageMetadata({ title: TITLE, description:
 export default function FinancialDocsPage() {
   return (
     <main className="min-h-screen">
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} dateModified="2026-09-14" />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} dateModified="2026-10-06" />
       <FinancialDocsHero />
       <SupportedFileTypes />
       <FieldCoverageTable />

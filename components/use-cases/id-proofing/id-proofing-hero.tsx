@@ -160,7 +160,7 @@ export default function IdProofingHero() {
                     <div className="h-2 w-3/4 bg-indigo-200 rounded overflow-hidden">
                       <div className="h-full w-4/5 bg-indigo-600 rounded"></div>
                     </div>
-                    <div className="ml-auto text-xs font-medium text-indigo-600">98%</div>
+                    <div className="ml-auto text-xs font-medium text-indigo-600">Checked</div>
                   </div>
                 </div>
               </motion.div>
@@ -183,7 +183,7 @@ export default function IdProofingHero() {
                   </div>
                   <div className="text-center">
                     <div className="text-lg font-semibold text-green-700">Verification Complete</div>
-                    <div className="text-sm text-green-600">Identity verified in 2.3 seconds</div>
+                    <div className="text-sm text-green-600">All checks passed</div>
                   </div>
                   <div className="h-2 w-full bg-slate-100 rounded-full overflow-hidden">
                     <div className="h-full w-full bg-green-500 rounded-full"></div>

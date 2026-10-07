@@ -115,8 +115,8 @@ export const blog31: BlogPost = {
   category: "AI Document Intelligence",
   date: "July 4, 2026",
   datePublished: "2026-07-04T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  dateModified: "2026-10-06T00:00:00.000Z",
+  last_updated: "October 6, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "best ocr software for accounts payable",
@@ -156,7 +156,7 @@ export const blog31: BlogPost = {
     {
       question: "Is DocsAPI a good choice for accounts payable?",
       answer:
-        "DocsAPI is the builder stack pick, layout-aware OCR from $0.02 per page with field-level confidence scores and a free tier of 100 pages a month. Best fit for teams wanting to own the workflow, or at 10,000+ invoices/month where unit economics favor DIY. You build the validation and routing layers yourself; the OCR quality is production-ready.",
+        "DocsAPI is the builder stack pick, layout-aware OCR from $0.02 per page with field-level confidence scores, and a free 30-day trial for qualified lenders after a demo. Best fit for teams wanting to own the workflow, or at 10,000+ invoices/month where unit economics favor DIY. You build the validation and routing layers yourself; the OCR quality is production-ready.",
     },
     {
       question: "How do I trial AP OCR software?",

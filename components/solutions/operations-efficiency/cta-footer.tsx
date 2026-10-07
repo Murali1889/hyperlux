@@ -20,8 +20,7 @@ export default function CtaFooter() {
             Ready to Transform Your Supply Chain Operations?
           </h2>
           <p className="text-lg text-indigo-100 mb-10 max-w-3xl mx-auto">
-            Join hundreds of companies that have streamlined their document processing and gained real-time visibility
-            into their supply chain.
+            Bring a few of your own bills of lading or delivery notes to the demo and see exactly what comes back.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -35,20 +34,20 @@ export default function CtaFooter() {
 
           <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
             <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">200+</div>
-              <div className="text-indigo-100">Implementations</div>
+              <div className="text-3xl font-bold text-white mb-2">1.1 s</div>
+              <div className="text-indigo-100">Per page</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">85%</div>
-              <div className="text-indigo-100">Faster Processing</div>
+              <div className="text-3xl font-bold text-white mb-2">Flagged</div>
+              <div className="text-indigo-100">Unclear fields reviewed</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">99.7%</div>
-              <div className="text-indigo-100">Accuracy Rate</div>
+              <div className="text-3xl font-bold text-white mb-2">SOC 2</div>
+              <div className="text-indigo-100">Type II certified</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">24/7</div>
-              <div className="text-indigo-100">Support</div>
+              <div className="text-3xl font-bold text-white mb-2">$0.02</div>
+              <div className="text-indigo-100">Per page to start</div>
             </div>
           </div>
         </motion.div>

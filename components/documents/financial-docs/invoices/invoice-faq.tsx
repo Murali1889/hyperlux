@@ -8,7 +8,7 @@ export default function InvoiceFAQ() {
     {
       question: "Does your system support multi-currency invoices?",
       answer:
-        "Yes, our invoice OCR system fully supports multi-currency invoices. It automatically detects the currency from the invoice and processes the amounts accordingly. The system currently supports over 30 currencies including USD, EUR, GBP, JPY, INR, and many more. All currency symbols and formatting conventions are recognized, and the extracted amounts are normalized for consistent processing.",
+        "Yes, our invoice OCR system fully supports multi-currency invoices. It automatically detects the currency from the invoice and processes the amounts accordingly. Common currencies such as USD, EUR, GBP, JPY and INR are recognized. All currency symbols and formatting conventions are recognized, and the extracted amounts are normalized for consistent processing.",
     },
     {
       question: "How does duplicate invoice detection work?",

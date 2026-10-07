@@ -27,7 +27,7 @@ export const blog18: BlogPost = {
         <tr><td>Languages</td><td>English, French, German, Italian, Portuguese, Spanish</td><td>Major commercial languages; test yours</td></tr>
         <tr><td>Multi-page PDFs</td><td>Asynchronous job (synchronous calls take 1 page)</td><td>Whole document per request</td></tr>
         <tr><td>ID documents</td><td>AnalyzeID: US passports and US driver's licenses only</td><td>ID documents supported; test your countries</td></tr>
-        <tr><td>Free tier</td><td>3 months: 1,000 text pages and 100 forms or tables pages a month</td><td>100 pages a month, ongoing</td></tr>
+        <tr><td>Free tier</td><td>3 months: 1,000 text pages and 100 forms or tables pages a month</td><td>Free 30-day trial for qualified lenders, after a demo</td></tr>
         <tr><td>Best fit</td><td>AWS-native teams, forms, receipts, US IDs, mortgage packages</td><td>Lending and fintech documents, multi-page statements and invoices</td></tr>
       </tbody>
     </table>
@@ -123,7 +123,7 @@ export const blog18: BlogPost = {
     <h2>Where DocsAPI is the better choice, and where it is not</h2>
     <p>DocsAPI (our product) classifies each document, extracts named fields as JSON and joins tables across pages, with tables and classification included in the per-page price. That suits lending, fintech and accounts payable teams processing bank statements, pay stubs, invoices and IDs.</p>
     <ul>
-      <li><strong>Better for:</strong> mixed document packets where you do not know the type in advance, multi-page statement and invoice tables, teams not on AWS, and teams that want one price per page instead of per feature. There is a free tier of 100 pages a month, and DocsAPI is SOC 2 Type II and ISO 27001 certified and HIPAA-eligible with a business associate agreement.</li>
+      <li><strong>Better for:</strong> mixed document packets where you do not know the type in advance, multi-page statement and invoice tables, teams not on AWS, and teams that want one price per page instead of per feature. Qualified lenders get a free 30-day trial after a demo, and DocsAPI is SOC 2 Type II and ISO 27001 certified and HIPAA-eligible with a business associate agreement.</li>
       <li><strong>Not better for:</strong> plain text at the lowest possible price (Textract's $0.0015 a page wins), teams that need everything on one AWS bill, and research papers or scientific PDFs, where tools like Docling fit better (see our <a href="/resources/blogs/docling-vs-llamaparse-vs-docsapi">Docling vs LlamaParse comparison</a>). It is a cloud API, so it cannot run air-gapped.</li>
     </ul>
 
@@ -156,7 +156,7 @@ export const blog18: BlogPost = {
     <h2>What to do next</h2>
     <ul>
       <li><strong>On AWS, reading English forms or US IDs:</strong> stay on Textract and switch on only the features each page needs.</li>
-      <li><strong>Processing multi-page bank statements or mixed lending packets:</strong> run the same files through Textract and the <a href="/products">DocsAPI free tier</a> and compare the joined tables.</li>
+      <li><strong>Processing multi-page bank statements or mixed lending packets:</strong> run the same files through Textract and a <a href="/book-demo">DocsAPI trial</a> and compare the joined tables.</li>
       <li><strong>Documents outside Textract's six languages:</strong> test Google Document AI, Azure, PaddleOCR or Tesseract instead.</li>
       <li><strong>Not sure yet:</strong> our <a href="/tools/which-ocr">Which OCR should I use tool</a> asks six questions and suggests an engine.</li>
     </ul>
@@ -174,8 +174,8 @@ export const blog18: BlogPost = {
   category: "Vendor Comparisons",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  dateModified: "2026-10-06T00:00:00.000Z",
+  last_updated: "October 6, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "aws textract",

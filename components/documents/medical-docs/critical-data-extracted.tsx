@@ -99,8 +99,8 @@ export default function CriticalDataExtracted() {
               Critical Data Extracted
             </h2>
             <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              Our OCR technology extracts and structures key medical data fields with 98% accuracy, even from
-              handwritten documents.
+              Key medical fields come back as structured data. Handwriting is the hard case: our 2026 benchmark
+              measured 78% on handwritten forms, so handwritten fields are flagged for review.
             </p>
           </div>
         </div>

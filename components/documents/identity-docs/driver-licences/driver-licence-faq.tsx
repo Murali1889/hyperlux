@@ -5,7 +5,7 @@ export default function DriverLicenceFAQ() {
     {
       question: "How does the system handle glare and reflections on plastic licence cards?",
       answer:
-        "Our SDK includes real-time glare detection that guides users to adjust their camera angle. Additionally, our AI has been trained on millions of images with varying lighting conditions and can compensate for moderate glare. For severe cases, the system will request a retake with guidance on positioning.",
+        "Our SDK includes real-time glare detection that guides users to adjust their camera angle. Image preprocessing can compensate for moderate glare. For severe cases, the system will request a retake with guidance on positioning.",
     },
     {
       question: "Do you support state-specific templates for all US states and territories?",

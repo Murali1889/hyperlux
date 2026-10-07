@@ -108,9 +108,8 @@ export default function WorkflowVisualization() {
           transition={{ duration: 0.5, delay: 0.8 }}
         >
           <p className="text-lg text-slate-700">
-            This end-to-end workflow provides unprecedented speed and accuracy in document processing, reducing
-            retrieval times by up to 85% while maintaining complete data integrity and security throughout the document
-            lifecycle.
+            Every page goes through the same steps, so the archive ends up searchable and consistent, and the pages
+            the engine was unsure about are set aside for a person to check.
           </p>
         </motion.div>
       </div>

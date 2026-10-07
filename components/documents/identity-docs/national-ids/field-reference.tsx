@@ -81,14 +81,14 @@ export default function FieldReference() {
                           {type !== "Social Security" ? (
                             <CheckCircle className="h-5 w-5 text-indigo-600 mx-auto" />
                           ) : (
-                            <span className="text-gray-400">—</span>
+                            <span className="text-gray-400">n/a</span>
                           )}
                         </TableCell>
                         <TableCell className="text-center">
                           {type !== "Social Security" ? (
                             <CheckCircle className="h-5 w-5 text-indigo-600 mx-auto" />
                           ) : (
-                            <span className="text-gray-400">—</span>
+                            <span className="text-gray-400">n/a</span>
                           )}
                         </TableCell>
                       </TableRow>

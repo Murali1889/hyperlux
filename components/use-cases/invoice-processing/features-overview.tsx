@@ -14,13 +14,13 @@ const features = [
     icon: <Table className="h-8 w-8 text-indigo-600" />,
     title: "Line-item and Header Data Extraction",
     description:
-      "Extract complete invoice data including header information, line items, tax details, and payment terms with 99% accuracy. Our AI engine recognizes complex table structures, handles varying layouts, and captures crucial metadata like invoice numbers, dates, and vendor information. The system also supports multi-currency invoices and tax jurisdictions.",
+      "Extract complete invoice data including header information, line items, tax details, and payment terms, at 93% line-item accuracy in our 2026 benchmark. Our AI engine recognizes complex table structures, handles varying layouts, and captures crucial metadata like invoice numbers, dates, and vendor information. The system also supports multi-currency invoices and tax jurisdictions.",
   },
   {
     icon: <CheckCircle className="h-8 w-8 text-indigo-600" />,
     title: "Automatic Validation and Exception Routing",
     description:
-      "Validate extracted data against purchase orders, receipts, and master data in real-time. The system automatically flags discrepancies, routes exceptions to the appropriate personnel, and provides an intuitive interface for quick resolution. Machine learning continuously improves validation rules based on historical patterns and user corrections.",
+      "Validate extracted data against purchase orders, receipts, and master data in real-time. The system automatically flags discrepancies, routes exceptions to the appropriate personnel, and provides an intuitive interface for quick resolution. Validation rules are yours to set, and customer documents are not used to train models.",
   },
   {
     icon: <ArrowRightLeft className="h-8 w-8 text-indigo-600" />,

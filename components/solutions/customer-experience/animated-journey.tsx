@@ -46,7 +46,7 @@ export default function AnimatedJourney() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">30-Second Customer Journey</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">The Customer Journey, Step by Step</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             See how our technology transforms the customer onboarding experience from minutes to seconds.
           </p>
@@ -160,7 +160,7 @@ export default function AnimatedJourney() {
                         <h3 className="text-sm font-bold mb-2">Verification Complete!</h3>
                         <p className="text-xs text-gray-600 mb-4">Your account is now active</p>
                         <div className="bg-green-50 text-green-700 text-xs py-1 px-3 rounded-full">
-                          Completed in 30 seconds
+                          All checks passed
                         </div>
                       </div>
                     )}
@@ -242,7 +242,7 @@ export default function AnimatedJourney() {
                         <div className="h-5 w-5 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
                           <span className="text-indigo-700 text-xs">2</span>
                         </div>
-                        <span className="text-gray-700">Form fields auto-populate with 99.5% accuracy</span>
+                        <span className="text-gray-700">Form fields auto-populate, with unclear ones flagged</span>
                       </li>
                       <li className="flex items-center">
                         <div className="h-5 w-5 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
@@ -271,7 +271,7 @@ export default function AnimatedJourney() {
                         <div className="h-5 w-5 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
                           <span className="text-indigo-700 text-xs">3</span>
                         </div>
-                        <span className="text-gray-700">Entire process completed in just 30 seconds</span>
+                        <span className="text-gray-700">Each page is read in about 1.1 seconds</span>
                       </li>
                     </ul>
                   )}

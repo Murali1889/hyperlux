@@ -5,7 +5,6 @@ import KeyFieldsExtracted from "@/components/documents/legal-docs/key-fields-ext
 import HowItWorks from "@/components/documents/legal-docs/how-it-works"
 import BusinessImpact from "@/components/documents/legal-docs/business-impact"
 import SecurityCompliance from "@/components/documents/legal-docs/security-compliance"
-import CaseStudyHighlight from "@/components/documents/legal-docs/case-study-highlight"
 import PillarClusterBlogs from "@/components/documents/shared/pillar-cluster-blogs"
 import LegalDocsFAQ from "@/components/documents/legal-docs/legal-docs-faq"
 import LegalDocsCta from "@/components/documents/legal-docs/legal-docs-cta"
@@ -15,7 +14,7 @@ import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 const PATH = "/documents/legal-docs"
 const TITLE = "Legal Document OCR: Contracts, NDAs, Litigation"
 const DESCRIPTION =
-  "Extract clauses, dates, parties, and obligations from contracts, NDAs, and legal bundles. 95%+ accuracy on multi-column layouts."
+  "Extract clauses, dates, parties, and obligations from contracts, NDAs, and legal bundles, with low-confidence clauses flagged for legal review."
 
 export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
@@ -29,7 +28,6 @@ export default function LegalDocsPage() {
       <HowItWorks />
       <BusinessImpact />
       <SecurityCompliance />
-      <CaseStudyHighlight />
       <PillarClusterBlogs
         cluster="legal"
         title="Legal Document Processing Guides"

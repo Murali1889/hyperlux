@@ -12,7 +12,7 @@ export default function Footer() {
               <img src="/docsapi-logo.png" alt="DocsAPI Logo" className="h-8 w-8" />
               <span className="text-xl font-bold text-white">DocsAPI</span>
             </Link>
-            <p className="text-gray-400">AI-powered solutions for small business lending and financial services.</p>
+            <p className="text-gray-400">AI-powered solutions for small business lending and financial services. DocsAPI is built by <a href="https://hyperverge.co" className="underline hover:text-white">HyperVerge</a>.</p>
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/HyperVerge/" target="blank" className="text-gray-400 hover:text-white transition-colors">
                 <Facebook className="h-5 w-5" />

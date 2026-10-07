@@ -20,9 +20,8 @@ export default function ArticleContent({ slug }: { slug: string }) {
           <h2>The Current State of Small Business Lending</h2>
           <p>
             Despite being the backbone of most economies, small businesses often struggle to access the capital they
-            need to grow. According to our research, the average small business loan application takes 3-5 weeks to
-            process using traditional methods, with approval rates hovering around 50-60% for established businesses and
-            much lower for startups.
+            need to grow. A small business loan application can sit for weeks while someone gathers and reads
+            statements, tax returns and IDs, and plenty of good applicants give up along the way.
           </p>
 
           <h2>How AI is Transforming Risk Assessment</h2>
@@ -42,16 +41,15 @@ export default function ArticleContent({ slug }: { slug: string }) {
           <h2>Key Benefits of AI-Driven Risk Assessment</h2>
           <h3>1. Speed and Efficiency</h3>
           <p>
-            Our case studies show that AI-powered lending platforms can reduce processing times from weeks to days or
-            even hours. One financial institution we worked with decreased their average processing time from 21 days to
-            just 48 hours after implementing our AI risk assessment solution.
+            Most of the waiting in a loan file is document work: collecting, reading and retyping. Automating the reading
+            removes that queue, so a decision can happen as soon as the file is complete.
           </p>
 
           <h3>2. Improved Accuracy</h3>
           <p>
-            Machine learning models continuously learn from outcomes, refining their algorithms to improve prediction
-            accuracy over time. In our controlled studies, AI-driven risk assessment demonstrated a 15-20% improvement
-            in default prediction compared to traditional scoring methods.
+            Extraction removes retyping errors, so the figures an underwriter or a model sees match the documents.
+            Accuracy still depends on the document type, which is why we publish ours by type in our OCR accuracy
+            benchmark.
           </p>
 
           <h3>3. Reduced Bias</h3>
@@ -62,8 +60,8 @@ export default function ArticleContent({ slug }: { slug: string }) {
 
           <h3>4. Cost Reduction</h3>
           <p>
-            Automating the risk assessment process significantly reduces operational costs. Financial institutions
-            implementing these technologies report cost savings of 30-40% in their underwriting departments.
+            Automating the document reading cuts the hours spent keying data. How much it saves depends on your volume
+            and what a loan file costs you today.
           </p>
 
           <h2>Challenges and Considerations</h2>

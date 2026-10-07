@@ -11,8 +11,8 @@ export default function PassportHero() {
               Instant, Accurate Passport Verification
             </h1>
             <p className="text-xl text-gray-700 max-w-2xl">
-              Support for 120+ ICAO passport templates worldwide, with e-passport chip image extraction and biometric
-              verification capabilities in a single API call.
+              Read the MRZ, printed fields and face photo from ICAO 9303 passports in a single API call. MRZ check
+              digits are validated, so a misread gets flagged instead of passing silently.
             </p>
             <Button className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-3 rounded-lg text-lg font-medium">
               Browse Templates <ArrowRight className="ml-2 h-5 w-5" />
@@ -27,7 +27,7 @@ export default function PassportHero() {
                 className="relative z-10 rounded-xl shadow-xl w-full"
               />
               <div className="absolute -bottom-4 -right-4 bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-medium shadow-lg">
-                99.9% MRZ Accuracy
+                MRZ check digits validated
               </div>
             </div>
           </div>

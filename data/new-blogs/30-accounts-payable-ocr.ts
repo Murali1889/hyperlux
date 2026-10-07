@@ -122,7 +122,7 @@ export const blog30: BlogPost = {
     <ul>
       <li><strong>Under a few hundred invoices a month:</strong> the capture tool in your accounting system or a small AP suite is usually enough.</li>
       <li><strong>Thousands a month, standard ERP:</strong> shortlist two suites and one API, and run your worst 20 invoices through each.</li>
-      <li><strong>You have developers and want control:</strong> see how <a href="/use-cases/invoice-processing">DocsAPI handles invoice processing</a> and test the free tier on your own invoices.</li>
+      <li><strong>You have developers and want control:</strong> see how <a href="/use-cases/invoice-processing">DocsAPI handles invoice processing</a> and ask for a trial on your own invoices.</li>
       <li><strong>You process receipts and purchase orders too:</strong> our <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">guide to OCR for invoices, receipts and purchase orders</a> covers each document type.</li>
     </ul>
 
@@ -139,8 +139,8 @@ export const blog30: BlogPost = {
   category: "AI Document Intelligence",
   date: "July 1, 2026",
   datePublished: "2026-07-01T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  dateModified: "2026-10-06T00:00:00.000Z",
+  last_updated: "October 6, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "accounts payable ocr",

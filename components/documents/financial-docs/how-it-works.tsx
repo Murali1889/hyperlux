@@ -16,7 +16,7 @@ export default function HowItWorks() {
     {
       icon: <Search className="h-10 w-10 text-white" />,
       title: "Smart Template Match",
-      description: "Our AI identifies the document type and applies the appropriate template in under 2 seconds.",
+      description: "Our AI identifies the document type and reads its layout, at about 1.1 seconds per page in our benchmark.",
     },
     {
       icon: <FileText className="h-10 w-10 text-white" />,
@@ -118,10 +118,9 @@ export default function HowItWorks() {
                         <Search className="h-6 w-6 text-indigo-700" />
                       </div>
                       <div>
-                        <div className="font-medium text-indigo-900">Template Matching Speed</div>
+                        <div className="font-medium text-indigo-900">Processing Speed</div>
                         <div className="text-gray-600">
-                          <span className="font-bold text-green-600">{"<"} 2 seconds</span> for any financial document
-                          type
+                          <span className="font-bold text-green-600">About 1.1 s</span> per page in our 2026 benchmark
                         </div>
                       </div>
                     </div>
@@ -137,8 +136,8 @@ export default function HowItWorks() {
                       <div>
                         <div className="font-medium text-indigo-900">Line-Item Accuracy</div>
                         <div className="text-gray-600">
-                          <span className="font-bold text-green-600">96%</span> accuracy on complex tables and line
-                          items
+                          <span className="font-bold text-green-600">93%</span> on invoice line items in our 2026
+                          benchmark
                         </div>
                       </div>
                     </div>

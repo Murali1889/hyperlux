@@ -22,8 +22,10 @@ export default function NationalIdHero() {
               <Button asChild className="bg-indigo-700 hover:bg-indigo-800">
                 <Link href="/book-demo">Request Demo</Link>
               </Button>
-              <Button variant="outline" className="border-indigo-700 text-indigo-700 hover:bg-indigo-50">
-                View Documentation
+              <Button asChild variant="outline" className="border-indigo-700 text-indigo-700 hover:bg-indigo-50">
+                <Link href="/book-demo">
+                  Book a National ID OCR Demo
+                </Link>
               </Button>
             </div>
           </div>
@@ -141,7 +143,7 @@ export default function NationalIdHero() {
                     <span>Barcode & text extraction</span>
                     <span className="flex items-center">
                       <span className="inline-block w-2 h-2 bg-green-500 rounded-full mr-1 animate-pulse"></span>
-                      99% accuracy
+                      Unclear fields flagged
                     </span>
                   </div>
                 </div>

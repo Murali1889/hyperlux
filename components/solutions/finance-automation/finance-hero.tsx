@@ -18,8 +18,8 @@ export default function FinanceHero() {
             Automate Payables, Receivables & Reconciliation
           </h1>
           <p className="text-lg sm:text-xl text-indigo-700 max-w-2xl mx-auto mb-2">
-            Cut AP cycle time 65% and exceptions 35% by extracting and reconciling invoices, receipts, and
-            statements automatically, at 99% field accuracy.
+            Extract and reconcile invoices, receipts, and statements automatically, at 93% invoice line-item
+            accuracy in our 2026 benchmark, with unclear fields flagged for review.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Button

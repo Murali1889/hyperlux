@@ -14,7 +14,7 @@ import { PageJsonLd } from "@/components/json-ld/PageJsonLd"
 const PATH = "/documents/identity-docs"
 const TITLE = "Identity Document OCR: Passport, License, ID Cards"
 const DESCRIPTION =
-  "Extract MRZ, barcodes, and face data from passports, national IDs, and driver licenses. 99.8% accuracy in under 12 seconds. KYC-ready."
+  "Extract MRZ, barcodes, and face data from passports, national IDs, and driver licenses. MRZ check digits validated, KYC-ready JSON output."
 
 // The KYC/AML cluster covers broader compliance-program topics (sanctions,
 // SAR filing, beneficial ownership) beyond identity-document extraction, so
@@ -36,7 +36,7 @@ export const metadata: Metadata = buildPageMetadata({ title: TITLE, description:
 export default function IdentityDocsPage() {
   return (
     <main className="flex flex-col min-h-screen">
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} dateModified="2026-09-14" />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} dateModified="2026-10-06" />
       <IdentityDocsHero />
       <SupportedFileTypes />
       <FieldCoverageTable />

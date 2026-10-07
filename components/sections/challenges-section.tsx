@@ -38,7 +38,7 @@ export default function ChallengesSection() {
                   <div>
                     <h4 className="font-medium">Time-Consuming Process</h4>
                     <p className="text-sm text-muted-foreground">
-                      Analysts spend 30-45 minutes per business researching and classifying
+                      Analysts spend a long stretch on every business, researching and classifying it by hand
                     </p>
                   </div>
                 </div>
@@ -120,15 +120,15 @@ export default function ChallengesSection() {
                     <div className="mt-6 space-y-2">
                       <div className="flex justify-between text-sm">
                         <span>Average Processing Time:</span>
-                        <span className="font-medium text-red-500">5-7 days</span>
+                        <span className="font-medium text-red-500">Days, not minutes</span>
                       </div>
                       <div className="flex justify-between text-sm">
                         <span>Classification Accuracy:</span>
-                        <span className="font-medium text-amber-500">76%</span>
+                        <span className="font-medium text-amber-500">Varies by analyst</span>
                       </div>
                       <div className="flex justify-between text-sm">
                         <span>Customer Satisfaction:</span>
-                        <span className="font-medium text-amber-500">65%</span>
+                        <span className="font-medium text-amber-500">Drops while they wait</span>
                       </div>
                     </div>
                   </div>

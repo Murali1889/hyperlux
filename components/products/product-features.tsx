@@ -3,10 +3,10 @@ import { CheckCircle } from "lucide-react"
 const features = [
   {
     title: "Industry Classification",
-    description: "Automatically classify businesses into the correct industry categories with 95% accuracy",
+    description: "Automatically classify businesses into the correct industry categories, with uncertain cases flagged for review",
     image: "/classification-process.png",
     benefits: [
-      "Reduce manual classification time by 80%",
+      "Cut the manual research behind each classification",
       "Ensure regulatory compliance",
       "Improve portfolio segmentation",
       "Enable industry-specific risk assessment",
@@ -17,7 +17,7 @@ const features = [
     description: "Extract and analyze critical data from financial documents with our advanced AI",
     image: "/competitor-analysis.png",
     benefits: [
-      "Reduce document processing time by 75%",
+      "Read documents at about 1.1 seconds per page",
       "Eliminate manual data entry errors",
       "Standardize data extraction across documents",
       "Enable faster lending decisions",
@@ -28,7 +28,7 @@ const features = [
     description: "Comprehensive risk analysis for informed lending decisions",
     image: "/roi-dashboard.png",
     benefits: [
-      "Reduce default rates by up to 30%",
+      "Base decisions on extracted data instead of retyped figures",
       "Identify high-risk applications early",
       "Standardize risk assessment processes",
       "Enable data-driven lending decisions",
@@ -43,8 +43,8 @@ export default function ProductFeatures() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">AI-Powered OCR Features</h2>
           <p className="text-xl text-gray-600">
-            Our intelligent document automation platform leverages machine learning to classify, capture, detect, and
-            analyze documents with 99.9% accuracy
+            Classify, capture, check, and analyze lending documents through one API, with accuracy published by
+            document type
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export default function ProductFeatures() {
                           </div>
                           <div className="text-green-600 font-semibold flex items-center">
                             <span className="h-2 w-2 bg-green-500 rounded-full mr-2"></span>
-                            95% Accuracy
+                            Confidence scored
                           </div>
                         </div>
 
@@ -179,7 +179,7 @@ export default function ProductFeatures() {
                                 </div>
                                 <div className="flex justify-between text-xs mt-1">
                                   <span>0%</span>
-                                  <span className="text-green-600 font-medium">95% Accurate</span>
+                                  <span className="text-green-600 font-medium">High confidence</span>
                                   <span>100%</span>
                                 </div>
                               </div>
@@ -224,12 +224,12 @@ export default function ProductFeatures() {
                             <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
                               <div className="text-sm text-gray-500 mb-1">Credit Score</div>
                               <div className="text-2xl font-bold text-green-600">A+</div>
-                              <div className="mt-2 text-xs text-gray-500">Top 5% of applicants</div>
+                              <div className="mt-2 text-xs text-gray-500">Example score</div>
                             </div>
                             <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
                               <div className="text-sm text-gray-500 mb-1">Default Probability</div>
                               <div className="text-2xl font-bold text-green-600">2.1%</div>
-                              <div className="mt-2 text-xs text-gray-500">Industry avg: 7.8%</div>
+                              <div className="mt-2 text-xs text-gray-500">Example applicant</div>
                             </div>
                             <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
                               <div className="text-sm text-gray-500 mb-1">Debt Service Ratio</div>

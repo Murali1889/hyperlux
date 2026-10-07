@@ -5,7 +5,7 @@ export default function MedicalDocsFAQ() {
     {
       question: "How do you handle handwriting recognition?",
       answer:
-        "Our OCR engine uses specialized neural networks trained on millions of handwritten medical documents. It recognizes both printed and handwritten text, including doctor's notes and prescriptions. For challenging handwriting, our system employs contextual analysis and medical terminology databases to improve accuracy. In cases where confidence is low, the system flags the field for human review.",
+        "DocsAPI reads both printed and handwritten text, including doctor's notes and prescriptions, but handwriting is the hard case: our 2026 benchmark measured 78% on handwritten forms. For challenging handwriting, our system employs contextual analysis and medical terminology databases to improve accuracy. In cases where confidence is low, the system flags the field for human review.",
     },
     {
       question: "Is multi-language support available?",
@@ -15,7 +15,7 @@ export default function MedicalDocsFAQ() {
     {
       question: "How is patient data protected?",
       answer:
-        "We implement comprehensive security measures including end-to-end encryption (AES-256), role-based access controls, and detailed audit logs. All processing is HIPAA-compliant with BAA agreements available. Data can be processed in your private cloud or on-premises environment for maximum security. We also offer automatic redaction of sensitive information and configurable data retention policies to meet regulatory requirements.",
+        "We implement comprehensive security measures including end-to-end encryption (AES-256), role-based access controls, and detailed audit logs. DocsAPI is HIPAA-eligible, with a BAA available, and customer documents are not used to train models. We also offer automatic redaction of sensitive information and configurable data retention policies to meet regulatory requirements.",
     },
     {
       question: "What formats are supported?",

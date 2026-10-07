@@ -25,7 +25,7 @@ export default function LegalFAQ() {
     {
       question: "Can the system be deployed on-premises instead of cloud?",
       answer:
-        "Absolutely. While our cloud solution offers the fastest implementation and automatic updates, we understand that many legal departments have strict data sovereignty requirements. Our on-premises deployment option provides the same powerful features while keeping all data within your security perimeter. The on-premises version includes a dedicated installation package, regular security updates, and optional air-gapped configurations for highly sensitive environments. Our team will work with your IT department to ensure smooth implementation that meets your specific security protocols.",
+        "DocsAPI runs as a cloud API. If your documents must stay inside your own environment, raise it in the demo and we will tell you plainly what is and is not possible for your setup. Customer documents are not used to train models, and documents and extracted data are kept only for a short, configurable retention period and then deleted.",
     },
     {
       question: "What redaction standards does your solution comply with?",
