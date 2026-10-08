@@ -8,12 +8,12 @@ export const blog34: BlogPost = {
   excerpt:
     "We tested eight OCR engines and document APIs on 1,900 real documents across invoices, bank statements, receipts, and academic papers. The full accuracy numbers, methodology, and per-category winners, free to cite.",
   description:
-    "Independent 2026 OCR benchmark: 8 engines tested on 1,900 real documents. Accuracy by document type, speed and full methodology, free to cite.",
+    "Our 2026 OCR benchmark: 8 engines tested on 1,900 real documents. Accuracy by document type, speed and full methodology, free to cite.",
   metaTag: "OCR Accuracy Benchmark 2026 (8 Engines, Real Docs)",
   summary:
     "We tested 8 OCR engines on 1,900 real documents. On clean printed text they all score 97-99%. On tables, handwriting and phone photos the gap between best and worst reaches 20 to 30 points, and the winner changes by document type.",
   content: `
-    <p>Most OCR accuracy numbers you find online come from vendor marketing decks tested on clean documents nobody uses in production. We ran an independent benchmark instead: eight OCR engines and document APIs on 1,900 real documents across the categories that actually matter for finance and document workflows. This page is the full result set, with methodology, per-category winners, and the raw numbers. It is free to cite, and the last section tells you exactly how.</p>
+    <p>Most OCR accuracy numbers you find online come from vendor marketing decks tested on clean documents nobody uses in production. We ran our own benchmark instead, and we publish the categories where DocsAPI loses: eight OCR engines and document APIs on 1,900 real documents across the categories that actually matter for finance and document workflows. This page is the full result set, with methodology, per-category winners, and the raw numbers. It is free to cite, and the last section tells you exactly how.</p>
 
     <p>If you want the deeper head-to-head write-ups, we have separate guides for <a href="/resources/blogs/paddleocr-vs-tesseract-vs-docsapi">PaddleOCR vs Tesseract vs DocsAPI</a>, <a href="/resources/blogs/docling-vs-llamaparse-vs-docsapi">Docling vs LlamaParse vs DocsAPI</a>, and <a href="/resources/blogs/aws-textract-vs-docsapi">AWS Textract vs DocsAPI</a>. This page is the consolidated benchmark that pulls all of it together. If you want these numbers turned into a buyer's guide by use case instead, see <a href="/resources/blogs/best-ocr-software-2026">best OCR software in 2026</a>.</p>
 
@@ -129,8 +129,8 @@ export const blog34: BlogPost = {
   category: "AI Document Intelligence",
   date: "July 31, 2026",
   datePublished: "2026-07-31T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-10-08T00:00:00.000Z",
+  last_updated: "October 8, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "ocr accuracy benchmark",

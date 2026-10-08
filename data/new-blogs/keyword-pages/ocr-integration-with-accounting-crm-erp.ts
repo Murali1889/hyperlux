@@ -246,8 +246,8 @@ export const post: BlogPost = {
   category: "AI Document Intelligence",
   date: "October 5, 2026",
   datePublished: "2026-10-05T00:00:00.000Z",
-  dateModified: "2026-10-05T00:00:00.000Z",
-  last_updated: "October 5, 2026",
+  dateModified: "2026-10-08T00:00:00.000Z",
+  last_updated: "October 8, 2026",
   readTime: "13 min read",
   author: nupuraUghade,
   primary_keyword: "ocr integration with accounting software",
@@ -322,7 +322,7 @@ export const post: BlogPost = {
     {
       question: "What does DocsAPI connect to?",
       answer:
-        "Its public manifest describes an HTTP API that returns extracted fields as JSON, with classification and validation, and it is cloud-only. The manifest does not list prebuilt connectors for QuickBooks, Xero, NetSuite, SAP or Salesforce, so the mapping and posting code is yours or a partner's. This page states only what the manifest says.",
+        "Its public manifest describes an HTTP API that returns extracted fields as JSON, with classification and validation, and it runs as a cloud API. The manifest does not list prebuilt connectors for QuickBooks, Xero, NetSuite, SAP or Salesforce, so the mapping and posting code is yours or a partner's. This page states only what the manifest says.",
     },
   ],
 }

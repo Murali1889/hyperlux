@@ -10,8 +10,8 @@ const TODAY = "2026-07-31"
 // lastModified defaults to TODAY unless overridden below — only override
 // for routes whose actual content changed, to avoid fake freshness signals.
 const STATIC_ROUTES: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]; lastModified?: string }[] = [
-  { path: "", priority: 1.0, changeFrequency: "weekly", lastModified: "2026-10-06" },
-  { path: "/products", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-10-06" },
+  { path: "", priority: 1.0, changeFrequency: "weekly", lastModified: "2026-10-08" },
+  { path: "/products", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-10-08" },
   { path: "/use-cases", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-10-06" },
   { path: "/use-cases/invoice-processing", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-06" },
   { path: "/use-cases/loan-verification", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-06" },
@@ -38,14 +38,12 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Metadata
   { path: "/documents/shipping-docs", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-10-06" },
   { path: "/resources", priority: 0.7, changeFrequency: "weekly", lastModified: "2026-10-06" },
   { path: "/resources/blogs", priority: 0.8, changeFrequency: "weekly", lastModified: "2026-08-08" },
-  { path: "/resources/articles", priority: 0.6, changeFrequency: "weekly" },
-  { path: "/resources/newsletters", priority: 0.5, changeFrequency: "monthly" },
-  { path: "/tools/which-ocr", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/tools/which-ocr", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-08" },
   { path: "/tools/free-ocr", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-28" },
-  { path: "/book-demo", priority: 0.7, changeFrequency: "yearly" },
-  { path: "/llms.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-10-06" },
-  { path: "/llms-full.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-10-06" },
-  { path: "/ai.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-10-06" },
+  { path: "/book-demo", priority: 0.7, changeFrequency: "yearly", lastModified: "2026-10-08" },
+  { path: "/llms.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-10-08" },
+  { path: "/llms-full.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-10-08" },
+  { path: "/ai.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-10-08" },
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {

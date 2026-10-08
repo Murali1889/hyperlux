@@ -16,15 +16,15 @@ const solutions = [
     icon: "database",
   },
   {
-    title: "Fraud Detection & Risk Assessment",
+    title: "Validation & Document Checks",
     description:
-      "Identify potentially fraudulent documents and assess risk factors with advanced analytics and anomaly detection.",
+      "Check extracted fields against format rules, verify ID documents, and run AML document checks before data reaches your systems.",
     icon: "search",
   },
   {
-    title: "Automated Cash Flow Analysis",
+    title: "Multi-Page Table Stitching",
     description:
-      "Analyze financial documents to automate cash flow analysis and gain insights into borrower's financial health.",
+      "Bank statement tables that run across pages come back as one table: 91% on multi-page bank statements in our 2026 benchmark.",
     icon: "trending-up",
   },
 ]
@@ -32,86 +32,69 @@ const solutions = [
 const steps = [
   {
     number: "01",
-    title: "Data Collection",
+    title: "Upload",
     description:
-      "Our system gathers business information from multiple sources including business name, website, address, and transaction data",
+      "Send a PDF or image to the API, from a single page to a full application packet",
   },
   {
     number: "02",
-    title: "AI Analysis",
+    title: "Classify",
     description:
-      "Our advanced algorithms analyze the collected data to identify key business activities and characteristics",
+      "DocsAPI identifies each document type, such as a bank statement, invoice, pay stub, or ID",
   },
   {
     number: "03",
-    title: "Industry Classification",
-    description: "The system maps the business to the appropriate SIC/NAICS codes with confidence scores",
+    title: "Extract",
+    description: "Fields and tables come back as JSON, with tables that run across pages stitched into one",
   },
   {
     number: "04",
-    title: "Verification & Refinement",
-    description: "Results are verified against industry databases and refined for maximum accuracy",
+    title: "Check",
+    description: "Fields are checked against format rules, and anything DocsAPI is unsure about is flagged for a person to review",
   },
 ]
 
 const ClassificationDemo = () => {
   const classificationData = {
-    businessName: "Tech Solutions Inc.",
-    confidence: 95,
-    classifications: [
-      {
-        type: "Primary",
-        sicCode: "7372",
-        naicsCode: "541511",
-        industry: "Custom Computer Programming Services",
-        confidence: 98
-      },
-      {
-        type: "Secondary",
-        sicCode: "7373",
-        naicsCode: "541512",
-        industry: "Computer Systems Design Services",
-        confidence: 85
-      }
+    fileName: "loan_application_packet.pdf",
+    documents: [
+      { type: "Bank statement", pages: "Pages 1-6", fields: "Rows stitched into one table" },
+      { type: "Pay stub", pages: "Page 7", fields: "Employer, pay period, net pay" },
     ],
     dataPoints: [
-      { label: "Website Analysis", status: "complete" },
-      { label: "Business Description", status: "complete" },
-      { label: "Transaction History", status: "complete" },
-      { label: "Industry Database Match", status: "complete" }
-    ]
+      { label: "Document types identified", status: "complete" },
+      { label: "Fields and tables extracted", status: "complete" },
+      { label: "Format checks passed", status: "complete" },
+      { label: "1 field flagged for review", status: "complete" },
+    ],
   }
 
   return (
     <div className="w-full max-w-md bg-indigo-700 rounded-lg p-6 shadow-lg">
       <div className="space-y-6">
         <div className="flex justify-between items-center">
-          <h3 className="text-white font-semibold">Classification Results</h3>
+          <h3 className="text-white font-semibold">Sample Output</h3>
           <div className="bg-indigo-600 text-white px-3 py-1 rounded-full text-sm">
-            {classificationData.confidence}% Confidence
+            Illustrative
           </div>
         </div>
 
         <div className="bg-indigo-800 rounded-lg p-4">
-          <div className="text-white font-medium mb-2">{classificationData.businessName}</div>
-          {classificationData.classifications.map((classification, index) => (
+          <div className="text-white font-medium mb-2">{classificationData.fileName}</div>
+          {classificationData.documents.map((document, index) => (
             <div key={index} className="mb-3 last:mb-0">
               <div className="flex items-center gap-2 mb-1">
-                <span className="text-indigo-300 text-sm">{classification.type}</span>
+                <span className="text-indigo-300 text-sm">{document.pages}</span>
                 <div className="h-px flex-1 bg-indigo-600"></div>
               </div>
               <div className="grid grid-cols-2 gap-2 text-sm">
-                <div>
-                  <span className="text-indigo-300">SIC:</span>
-                  <span className="text-white ml-1">{classification.sicCode}</span>
-                </div>
-                <div>
-                  <span className="text-indigo-300">NAICS:</span>
-                  <span className="text-white ml-1">{classification.naicsCode}</span>
+                <div className="col-span-2">
+                  <span className="text-indigo-300">Type:</span>
+                  <span className="text-white ml-1">{document.type}</span>
                 </div>
                 <div className="col-span-2">
-                  <span className="text-indigo-300">Industry:</span>
-                  <span className="text-white ml-1">{classification.industry}</span>
+                  <span className="text-indigo-300">Output:</span>
+                  <span className="text-white ml-1">{document.fields}</span>
                 </div>
               </div>
             </div>
@@ -129,12 +112,6 @@ const ClassificationDemo = () => {
               <span className="text-white text-sm">{point.label}</span>
             </div>
           ))}
-        </div>
-
-        <div className="flex justify-end">
-          <button className="bg-white text-indigo-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-indigo-50 transition-colors">
-            View Details
-          </button>
         </div>
       </div>
     </div>
@@ -235,7 +212,7 @@ export default function SolutionSection() {
       <div className="bg-gradient-to-br from-indigo-900 to-indigo-800 rounded-2xl overflow-hidden shadow-xl">
         <div className="grid md:grid-cols-2">
           <div className="p-8 md:p-12 text-white">
-            <h3 className="text-2xl font-bold mb-6">The Classification Process</h3>
+            <h3 className="text-2xl font-bold mb-6">How a Document Moves Through DocsAPI</h3>
             <div className="space-y-8">
               {steps.map((step) => (
                 <ProcessStep key={step.number} number={step.number} title={step.title} description={step.description} />

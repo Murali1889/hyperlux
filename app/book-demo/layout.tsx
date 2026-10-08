@@ -12,7 +12,7 @@ export const metadata: Metadata = buildPageMetadata({ title: TITLE, description:
 export default function BookDemoLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} dateModified="2026-10-08" />
       {children}
     </>
   )

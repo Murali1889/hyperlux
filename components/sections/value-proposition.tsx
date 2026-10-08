@@ -32,7 +32,7 @@ export default function ValueProposition() {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <div className="h-8 bg-indigo-100 rounded-full px-4 flex items-center">
-                      <span className="text-sm font-medium text-indigo-800">Industry Classification</span>
+                      <span className="text-sm font-medium text-indigo-800">Document Processing</span>
                     </div>
                     <div className="flex space-x-1">
                       <div className="w-3 h-3 rounded-full bg-red-400"></div>
@@ -46,7 +46,7 @@ export default function ValueProposition() {
                       <div className="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
                         <span className="text-xs font-medium text-indigo-800">1</span>
                       </div>
-                      <div className="text-sm font-medium">Business Information</div>
+                      <div className="text-sm font-medium">Document Upload</div>
                     </div>
                     <div className="grid grid-cols-2 gap-2 mb-2">
                       <div className="h-4 bg-slate-100 rounded"></div>

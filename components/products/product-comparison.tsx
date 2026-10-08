@@ -25,7 +25,7 @@ export default function ProductComparison() {
             </thead>
             <tbody>
               <tr>
-                <td className="py-4 px-6 border-b">Automated Industry Classification</td>
+                <td className="py-4 px-6 border-b">Document Type Classification</td>
                 <td className="py-4 px-6 border-b text-center bg-indigo-50">
                   <Check className="h-6 w-6 text-green-500 mx-auto" />
                 </td>
@@ -85,7 +85,7 @@ export default function ProductComparison() {
                 </td>
               </tr>
               <tr>
-                <td className="py-4 px-6 border-b">Custom Model Training</td>
+                <td className="py-4 px-6 border-b">Multi-page Table Stitching</td>
                 <td className="py-4 px-6 border-b text-center bg-indigo-50">
                   <Check className="h-6 w-6 text-green-500 mx-auto" />
                 </td>
