@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <>
       <WebApplicationJsonLd />
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} dateModified="2026-10-06" />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} dateModified="2026-10-08" />
       <HeroSection />
       <TrustedBy />
       <ValueProposition />

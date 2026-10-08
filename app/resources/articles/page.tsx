@@ -11,7 +11,8 @@ const TITLE = "Articles: Industry Classification & Commercial Lending"
 const DESCRIPTION =
   "Articles on SIC and NAICS codes, regulatory compliance, AI in commercial lending, and industry concentration risk for fintech operations."
 
-export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
+// 2023 template pages with a placeholder author: kept out of the index until rewritten
+export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH, noindex: true })
 
 export default function ArticlesPage() {
   return (

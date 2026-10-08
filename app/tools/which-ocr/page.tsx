@@ -16,7 +16,7 @@ export const metadata: Metadata = buildPageMetadata({ title: TITLE, description:
 
 const CONTENT = {
   intro:
-    "Choosing an OCR engine is confusing because every tool claims to be the most accurate, and those claims are almost always measured on clean documents nobody uses in production. This free selector asks six quick questions about your documents and points you at the engine that fits best, based on an independent benchmark of eight OCR tools run on 1,900 real, anonymized documents. It recommends open-source engines when they are the right call, because a tool that only ever recommends the vendor who built it is not worth trusting.",
+    "Choosing an OCR engine is confusing because every tool claims to be the most accurate, and those claims are almost always measured on clean documents nobody uses in production. This free selector asks six quick questions about your documents and points you at the engine that fits best, based on our own benchmark of eight OCR tools run on 1,900 real, anonymized documents. It recommends open-source engines when they are the right call, because a tool that only ever recommends the vendor who built it is not worth trusting.",
   sections: [
     {
       heading: "How the recommendation works",
@@ -59,7 +59,7 @@ const CONTENT = {
     {
       question: "Is this selector tool free?",
       answer:
-        "Yes. The selector is free, requires no signup, and gives an honest recommendation, including open-source engines when they fit your needs best. It is based on an independent benchmark of eight OCR tools tested on 1,900 real documents.",
+        "Yes. The selector is free, requires no signup, and gives an honest recommendation, including open-source engines when they fit your needs best. It is based on our own benchmark of eight OCR tools tested on 1,900 real documents, which also reports where DocsAPI loses.",
     },
   ],
 }
@@ -67,7 +67,7 @@ const CONTENT = {
 export default function WhichOcrPage() {
   return (
     <main className="flex flex-col min-h-screen">
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} dateModified="2026-10-08" />
       <JsonLd
         data={{
           "@context": "https://schema.org",

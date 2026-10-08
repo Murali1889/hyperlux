@@ -15,8 +15,8 @@ export default function BookDemoPage() {
             </div>
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">See DocsAPI in Action</h1>
             <p className="text-xl text-muted-foreground">
-              Schedule a personalized demo to see how our AI-powered industry classification solution can transform your
-              small business lending process.
+              Schedule a personalized demo to see how DocsAPI reads, classifies, and checks the documents in your
+              lending workflow.
             </p>
           </div>
 

@@ -10,7 +10,8 @@ const TITLE = "DocsAPI Newsletter: Document AI Updates"
 const DESCRIPTION =
   "Monthly newsletter on OCR, document AI, and compliance trends for fintech and lending teams. Practical updates, no fluff."
 
-export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
+// 2023 template pages with a placeholder author: kept out of the index until rewritten
+export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH, noindex: true })
 
 export default function NewslettersPage() {
   return (

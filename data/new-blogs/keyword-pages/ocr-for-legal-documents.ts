@@ -234,7 +234,7 @@ export const post: BlogPost = {
       <li>Lender or fintech: see <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a>.</li>
     </ul>
 
-    <p>To try extraction on contracts, NDAs and court filings, see our <a href="/documents/legal-docs">legal documents page</a>. Disclosure: DocsAPI is our product. Per our published facts it is cloud-only, does not train on customer documents, deletes content after processing, and holds SOC 2 Type II and ISO 27001. We have not benchmarked a legal document category, so run your own test first.</p>
+    <p>To try extraction on contracts, NDAs and court filings, see our <a href="/documents/legal-docs">legal documents page</a>. Disclosure: DocsAPI is our product. Per our published facts it runs as a cloud API, does not train on customer documents, keeps documents only for a short, configurable retention period, and holds SOC 2 Type II and ISO 27001. We have not benchmarked a legal document category, so run your own test first.</p>
 
     <h2>Sources</h2>
 
@@ -253,8 +253,8 @@ export const post: BlogPost = {
   category: "Legal",
   date: "October 5, 2026",
   datePublished: "2026-10-05T00:00:00.000Z",
-  dateModified: "2026-10-06T00:00:00.000Z",
-  last_updated: "October 6, 2026",
+  dateModified: "2026-10-08T00:00:00.000Z",
+  last_updated: "October 8, 2026",
   readTime: "13 min read",
   author: nupuraUghade,
   primary_keyword: "ocr for legal documents",

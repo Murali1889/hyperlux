@@ -2,42 +2,42 @@ import { Section, SectionHeader } from "@/components/ui/section"
 import { CheckCircle, XCircle } from "lucide-react"
 
 const features = [
-  { name: "Accuracy" },
-  { name: "Speed" },
-  { name: "Scalability" },
-  { name: "Consistency" },
-  { name: "Multi-source verification" },
+  { name: "Speed at volume" },
+  { name: "Multi-page table stitching" },
+  { name: "Document type classification" },
+  { name: "Structured JSON output" },
+  { name: "Consistent results" },
 ]
 
 const competitors = [
   {
-    name: "Traditional Methods",
+    name: "Manual Review",
     features: {
-      Accuracy: false,
-      Speed: false,
-      Scalability: false,
-      Consistency: false,
-      "Multi-source verification": false,
+      "Speed at volume": false,
+      "Multi-page table stitching": true,
+      "Document type classification": true,
+      "Structured JSON output": false,
+      "Consistent results": false,
     },
   },
   {
-    name: "Basic Automation Tools",
+    name: "Basic OCR Tools",
     features: {
-      Accuracy: false,
-      Speed: true,
-      Scalability: true,
-      Consistency: false,
-      "Multi-source verification": false,
+      "Speed at volume": true,
+      "Multi-page table stitching": false,
+      "Document type classification": false,
+      "Structured JSON output": false,
+      "Consistent results": true,
     },
   },
   {
-    name: "DocsAPI AI",
+    name: "DocsAPI",
     features: {
-      Accuracy: true,
-      Speed: true,
-      Scalability: true,
-      Consistency: true,
-      "Multi-source verification": true,
+      "Speed at volume": true,
+      "Multi-page table stitching": true,
+      "Document type classification": true,
+      "Structured JSON output": true,
+      "Consistent results": true,
     },
     highlight: true,
   },
@@ -47,8 +47,8 @@ export default function CompetitiveAdvantage() {
   return (
     <Section background="muted" id="comparison">
       <SectionHeader
-        title="Why DocsAPI Outperforms Competitors"
-        description="See how our AI-powered industry classification solution compares to traditional methods and basic automation tools"
+        title="DocsAPI vs Manual Review vs Basic OCR"
+        description="How reading lending documents by hand, with a plain OCR tool, and with DocsAPI compare on the jobs lenders care about"
       />
 
       <div className="max-w-5xl mx-auto">
@@ -87,8 +87,8 @@ export default function CompetitiveAdvantage() {
               {competitor.highlight && (
                 <div className="p-4 bg-indigo-50">
                   <p className="text-sm text-indigo-700">
-                    <span className="font-medium">DocsAPI AI</span> combines multiple data sources, machine learning,
-                    and industry expertise to deliver superior classification accuracy.
+                    In our 2026 benchmark, <span className="font-medium">DocsAPI</span> read multi-page bank
+                    statement tables at 91%, against 64% for Tesseract and 79% for PaddleOCR.
                   </p>
                 </div>
               )}

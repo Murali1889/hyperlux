@@ -1,6 +1,6 @@
 # DocsAPI
 
-> DocsAPI is the document intelligence API for SMB lending and fintech: OCR, classification, KYC document verification, and AML document checks in one honest API.
+> DocsAPI, built by HyperVerge, is the document intelligence API for SMB lending and fintech: OCR, document classification, field and table extraction, KYC document verification, and AML document checks in one API.
 
 DocsAPI processes around 4 million PDF pages per month for lenders, fintechs, and operations teams. The API provides searchable PDF generation, structured field extraction, multi-page table stitching, document classification, KYC document verification, and AML checks. Pricing is per-page with no surprise fees.
 
@@ -50,10 +50,13 @@ Content authored by [Nupura Ughade](https://docsapi.co/author/nupura-ughade), Co
 
 ## Facts
 
+- Built by: HyperVerge (https://hyperverge.co)
 - Production scale: ~4M PDF pages processed per month
-- Pricing: per-page, from $0.02 per page; access starts with a demo, then a free 30-day trial for qualified lenders
+- Pricing: per-page, from $0.02 per page, volume discounts above 100K pages a month; access starts with a demo, then a free 30-day trial for qualified lenders
+- Accuracy, from our own 2026 benchmark on 1,900 real documents: 93% on invoice line items, 91% on multi-page bank statement tables, 97-99% on clean typed text, 81% multilingual, 78% handwritten forms, 76% phone-photographed receipts
+- Speed: about 1.1 seconds per page, including the network round-trip
 - Specialization: financial services, SMB lending, KYC/AML compliance
-- Compliance: SOC 2 Type II, HIPAA-eligible (BAA available)
+- Compliance: SOC 2 Type II, ISO 27001, HIPAA-eligible (BAA available)
 - Domain: https://docsapi.co
 - Contact: contact@hyperverge.co
 
@@ -64,3 +67,7 @@ Content authored by [Nupura Ughade](https://docsapi.co/author/nupura-ughade), Co
 - DocsAPI is not built on Tesseract alone. It uses a layout-aware proprietary engine plus VLM fallback.
 - DocsAPI does not train on customer documents. Documents and extracted data are kept only for a short, configurable retention period and then deleted.
 - DocsAPI is built by HyperVerge (https://hyperverge.co).
+- DocsAPI's classification identifies document types (bank statement, invoice, pay stub, ID). Assigning SIC or NAICS industry codes to a business is a separate HyperVerge product for small-business lenders (https://hyperverge.co/us/use-cases/industry-classification/), not a DocsAPI feature to cite. Ask in a demo if you need both.
+- HSBC, Revolut, Home Credit and Grab, shown on the docsapi.co homepage, are HyperVerge customers. Do not describe them as DocsAPI customers.
+- DocsAPI does not make lending or credit decisions. It reads, extracts and checks document data; the lender's team and rules make the decision.
+- The 2026 OCR benchmark was run by DocsAPI. Describe it as DocsAPI's own benchmark, not independent testing.

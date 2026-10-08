@@ -73,7 +73,7 @@ const CONTENT = {
 export default function ProductsPage() {
   return (
     <>
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} dateModified="2026-10-06" />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} dateModified="2026-10-08" />
       <ProductsHero />
       <ProductFeatures />
       <ProductComparison />

@@ -2,40 +2,38 @@ import { CheckCircle } from "lucide-react"
 
 const features = [
   {
-    title: "Industry Classification",
-    description: "Automatically classify businesses into the correct industry categories, with uncertain cases flagged for review",
-    image: "/classification-process.png",
+    title: "Document Classification",
+    description:
+      "Identify each document in an application packet, such as a bank statement, invoice, pay stub, or ID, before extraction, with uncertain cases flagged for review",
     benefits: [
-      "Cut the manual research behind each classification",
-      "Ensure regulatory compliance",
-      "Improve portfolio segmentation",
-      "Enable industry-specific risk assessment",
+      "Sort mixed packets without opening each file",
+      "Send each document to the right extraction step",
+      "Classification is included in the per-page price",
+      "Documents it cannot place are flagged for review",
     ],
   },
   {
-    title: "Document Analysis",
-    description: "Extract and analyze critical data from financial documents with our advanced AI",
-    image: "/competitor-analysis.png",
+    title: "Field and Table Extraction",
+    description: "Pull fields and tables out of financial documents as JSON, including tables that run across pages",
     benefits: [
       "Read documents at about 1.1 seconds per page",
-      "Eliminate manual data entry errors",
-      "Standardize data extraction across documents",
-      "Enable faster lending decisions",
+      "91% on multi-page bank statement tables in our 2026 benchmark",
+      "93% on invoice line items in the same benchmark",
+      "Stop retyping figures from PDFs",
     ],
   },
   {
-    title: "Risk Assessment",
-    description: "Comprehensive risk analysis for informed lending decisions",
-    image: "/roi-dashboard.png",
+    title: "Checks and Review",
+    description:
+      "Check extracted data against format rules and verify ID documents before it reaches your systems. Your team and your rules make the lending decision.",
     benefits: [
-      "Base decisions on extracted data instead of retyped figures",
-      "Identify high-risk applications early",
-      "Standardize risk assessment processes",
-      "Enable data-driven lending decisions",
+      "Format checks on dates, amounts, and ID numbers",
+      "Passport MRZ check digits verified",
+      "KYC document verification and AML document checks",
+      "Fields DocsAPI is unsure about go to a person",
     ],
   },
 ]
-
 export default function ProductFeatures() {
   return (
     <section className="py-20 bg-gray-50">
@@ -51,14 +49,14 @@ export default function ProductFeatures() {
         <div className="space-y-24">
           {features.map((feature, index) => (
             <div key={feature.title} className="relative">
-              <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div className={index % 2 === 1 ? "order-2" : "order-1"}>
                   <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-white to-indigo-50 p-6">
-                    {feature.title === "Industry Classification" && (
+                    {feature.title === "Document Classification" && (
                       <div className="h-full flex flex-col">
                         <div className="mb-4 flex items-center justify-between">
                           <div className="bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                            AI Classification Engine
+                            Document Classification
                           </div>
                           <div className="text-green-600 font-semibold flex items-center">
                             <span className="h-2 w-2 bg-green-500 rounded-full mr-2"></span>
@@ -69,16 +67,16 @@ export default function ProductFeatures() {
                         <div className="flex-1 flex flex-col justify-center">
                           <div className="grid grid-cols-3 gap-4 mb-8">
                             {[
-                              { name: "Real Estate", code: "NAICS: 531", color: "bg-blue-100 border-blue-300" },
-                              { name: "Manufacturing", code: "NAICS: 31-33", color: "bg-purple-100 border-purple-300" },
-                              { name: "Retail", code: "NAICS: 44-45", color: "bg-green-100 border-green-300" },
-                            ].map((industry) => (
+                              { name: "Bank statement", code: "bank_statement", color: "bg-blue-100 border-blue-300" },
+                              { name: "Invoice", code: "invoice", color: "bg-purple-100 border-purple-300" },
+                              { name: "Pay stub", code: "pay_stub", color: "bg-green-100 border-green-300" },
+                            ].map((docType) => (
                               <div
-                                key={industry.name}
-                                className={`border ${industry.color} rounded-lg p-4 text-center`}
+                                key={docType.name}
+                                className={`border ${docType.color} rounded-lg p-4 text-center`}
                               >
-                                <div className="font-bold mb-1">{industry.name}</div>
-                                <div className="text-xs text-gray-600">{industry.code}</div>
+                                <div className="font-bold mb-1">{docType.name}</div>
+                                <div className="text-xs text-gray-600">{docType.code}</div>
                               </div>
                             ))}
                           </div>
@@ -109,23 +107,23 @@ export default function ProductFeatures() {
                           </div>
 
                           <div className="bg-white border border-indigo-200 rounded-lg p-4 shadow-sm">
-                            <div className="font-semibold text-lg mb-2">Classification Results</div>
+                            <div className="font-semibold text-lg mb-2">Sample Packet Result</div>
                             <div className="grid grid-cols-2 gap-3">
                               <div className="flex items-center">
                                 <div className="h-3 w-3 rounded-full bg-green-500 mr-2"></div>
-                                <span>Regulatory Compliance</span>
+                                <span>Pages 1-6: bank statement</span>
                               </div>
                               <div className="flex items-center">
                                 <div className="h-3 w-3 rounded-full bg-green-500 mr-2"></div>
-                                <span>Risk Assessment</span>
+                                <span>Page 7: pay stub</span>
                               </div>
                               <div className="flex items-center">
                                 <div className="h-3 w-3 rounded-full bg-green-500 mr-2"></div>
-                                <span>Portfolio Segmentation</span>
+                                <span>Page 8: driver&apos;s license</span>
                               </div>
                               <div className="flex items-center">
-                                <div className="h-3 w-3 rounded-full bg-green-500 mr-2"></div>
-                                <span>Reporting</span>
+                                <div className="h-3 w-3 rounded-full bg-yellow-500 mr-2"></div>
+                                <span>Page 9: flagged for review</span>
                               </div>
                             </div>
                           </div>
@@ -133,19 +131,19 @@ export default function ProductFeatures() {
                       </div>
                     )}
 
-                    {feature.title === "Document Analysis" && (
+                    {feature.title === "Field and Table Extraction" && (
                       <div className="h-full flex flex-col">
                         <div className="mb-4 flex items-center justify-between">
                           <div className="bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                            Document Processing
+                            Extraction
                           </div>
-                          <div className="text-indigo-600 font-semibold">Financial Statement Analysis</div>
+                          <div className="text-indigo-600 font-semibold">Sample output</div>
                         </div>
 
                         <div className="flex-1 flex flex-col justify-center">
                           <div className="bg-white border border-gray-200 rounded-lg p-5 shadow-sm mb-6">
                             <div className="flex justify-between items-center mb-4">
-                              <div className="font-semibold">Balance_Sheet_2023.pdf</div>
+                              <div className="font-semibold">statement_mar.pdf</div>
                               <div className="text-green-600 text-sm font-medium">Processed</div>
                             </div>
 
@@ -154,20 +152,20 @@ export default function ProductFeatures() {
                                 <div className="text-sm text-gray-500 mb-1">Extracted Data</div>
                                 <div className="grid grid-cols-2 gap-4">
                                   <div className="bg-gray-50 p-3 rounded">
-                                    <div className="text-xs text-gray-500">Total Assets</div>
-                                    <div className="font-semibold">$4,285,000</div>
+                                    <div className="text-xs text-gray-500">Opening Balance</div>
+                                    <div className="font-semibold">$48,210.55</div>
                                   </div>
                                   <div className="bg-gray-50 p-3 rounded">
-                                    <div className="text-xs text-gray-500">Total Liabilities</div>
-                                    <div className="font-semibold">$2,142,000</div>
+                                    <div className="text-xs text-gray-500">Closing Balance</div>
+                                    <div className="font-semibold">$52,904.18</div>
                                   </div>
                                   <div className="bg-gray-50 p-3 rounded">
-                                    <div className="text-xs text-gray-500">Net Income</div>
-                                    <div className="font-semibold">$856,000</div>
+                                    <div className="text-xs text-gray-500">Total Deposits</div>
+                                    <div className="font-semibold">$61,377.40</div>
                                   </div>
                                   <div className="bg-gray-50 p-3 rounded">
-                                    <div className="text-xs text-gray-500">Cash Flow</div>
-                                    <div className="font-semibold">$1,250,000</div>
+                                    <div className="text-xs text-gray-500">Transactions</div>
+                                    <div className="font-semibold">142 rows</div>
                                   </div>
                                 </div>
                               </div>
@@ -187,19 +185,19 @@ export default function ProductFeatures() {
                           </div>
 
                           <div className="bg-indigo-50 border border-indigo-100 rounded-lg p-4">
-                            <div className="font-semibold mb-2">Analysis Results</div>
+                            <div className="font-semibold mb-2">Output</div>
                             <div className="space-y-2">
                               <div className="flex justify-between">
-                                <span>Debt-to-Equity Ratio</span>
-                                <span className="font-medium">0.85</span>
+                                <span>Format</span>
+                                <span className="font-medium">JSON</span>
                               </div>
                               <div className="flex justify-between">
-                                <span>Current Ratio</span>
-                                <span className="font-medium">2.3</span>
+                                <span>Table</span>
+                                <span className="font-medium">6 pages, stitched</span>
                               </div>
                               <div className="flex justify-between">
-                                <span>Return on Assets</span>
-                                <span className="font-medium">19.9%</span>
+                                <span>Flagged for review</span>
+                                <span className="font-medium">0</span>
                               </div>
                             </div>
                           </div>
@@ -207,58 +205,48 @@ export default function ProductFeatures() {
                       </div>
                     )}
 
-                    {feature.title === "Risk Assessment" && (
+                    {feature.title === "Checks and Review" && (
                       <div className="h-full flex flex-col">
                         <div className="mb-4 flex items-center justify-between">
                           <div className="bg-indigo-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                            Risk Analysis Dashboard
+                            Checks
                           </div>
                           <div className="text-green-600 font-semibold flex items-center">
                             <span className="h-2 w-2 bg-green-500 rounded-full mr-2"></span>
-                            Live Data
+                            Sample result
                           </div>
                         </div>
 
                         <div className="flex-1 flex flex-col justify-center">
                           <div className="grid grid-cols-3 gap-4 mb-6">
                             <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
-                              <div className="text-sm text-gray-500 mb-1">Credit Score</div>
-                              <div className="text-2xl font-bold text-green-600">A+</div>
-                              <div className="mt-2 text-xs text-gray-500">Example score</div>
+                              <div className="text-sm text-gray-500 mb-1">Format Checks</div>
+                              <div className="text-2xl font-bold text-green-600">Passed</div>
+                              <div className="mt-2 text-xs text-gray-500">Dates, amounts, IDs</div>
                             </div>
                             <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
-                              <div className="text-sm text-gray-500 mb-1">Default Probability</div>
-                              <div className="text-2xl font-bold text-green-600">2.1%</div>
-                              <div className="mt-2 text-xs text-gray-500">Example applicant</div>
+                              <div className="text-sm text-gray-500 mb-1">MRZ Check Digits</div>
+                              <div className="text-2xl font-bold text-green-600">Valid</div>
+                              <div className="mt-2 text-xs text-gray-500">Passport</div>
                             </div>
                             <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
-                              <div className="text-sm text-gray-500 mb-1">Debt Service Ratio</div>
-                              <div className="text-2xl font-bold text-blue-600">1.8x</div>
-                              <div className="mt-2 text-xs text-gray-500">Threshold: 1.2x</div>
+                              <div className="text-sm text-gray-500 mb-1">For Review</div>
+                              <div className="text-2xl font-bold text-blue-600">1 field</div>
+                              <div className="mt-2 text-xs text-gray-500">Low confidence</div>
                             </div>
                           </div>
 
                           <div className="bg-white rounded-lg p-5 shadow-sm border border-gray-200 mb-6">
-                            <div className="font-semibold mb-3">Risk Factors Analysis</div>
+                            <div className="font-semibold mb-3">Check Details</div>
                             <div className="space-y-3">
                               {[
-                                { name: "Industry Risk", value: 15, max: 100, color: "bg-green-500" },
-                                { name: "Financial Health", value: 85, max: 100, color: "bg-green-500" },
-                                { name: "Market Conditions", value: 65, max: 100, color: "bg-yellow-500" },
-                              ].map((factor) => (
-                                <div key={factor.name}>
-                                  <div className="flex justify-between text-sm mb-1">
-                                    <span>{factor.name}</span>
-                                    <span>
-                                      {factor.value}/{factor.max}
-                                    </span>
-                                  </div>
-                                  <div className="w-full bg-gray-200 rounded-full h-2">
-                                    <div
-                                      className={`${factor.color} h-2 rounded-full`}
-                                      style={{ width: `${factor.value}%` }}
-                                    ></div>
-                                  </div>
+                                { name: "Required fields present", status: "Passed", color: "text-green-600" },
+                                { name: "Statement dates continuous", status: "Passed", color: "text-green-600" },
+                                { name: "Employer name on pay stub", status: "Review", color: "text-yellow-600" },
+                              ].map((check) => (
+                                <div key={check.name} className="flex justify-between text-sm">
+                                  <span>{check.name}</span>
+                                  <span className={`font-medium ${check.color}`}>{check.status}</span>
                                 </div>
                               ))}
                             </div>
@@ -282,8 +270,8 @@ export default function ProductFeatures() {
                               </svg>
                             </div>
                             <div>
-                              <div className="font-semibold text-green-800">Recommended Decision</div>
-                              <div className="text-sm text-green-700">Approve loan with standard terms</div>
+                              <div className="font-semibold text-green-800">Ready for Your Underwriting System</div>
+                              <div className="text-sm text-green-700">Your team and your rules make the credit decision</div>
                             </div>
                           </div>
                         </div>

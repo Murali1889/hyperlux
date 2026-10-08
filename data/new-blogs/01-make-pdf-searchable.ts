@@ -138,8 +138,8 @@ ocrmypdf scanned.pdf searchable.pdf</code></pre>
   category: "OCR How-To",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-06-17T00:00:00.000Z",
-  last_updated: "June 17, 2026",
+  dateModified: "2026-10-08T00:00:00.000Z",
+  last_updated: "October 8, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "make pdf searchable",
@@ -179,7 +179,7 @@ ocrmypdf scanned.pdf searchable.pdf</code></pre>
     {
       question: "Is online OCR safe for private documents?",
       answer:
-        "Reputable APIs (DocsAPI, AWS, Google) encrypt data in transit and delete after processing. Random 'free OCR' sites often save copies or train models on your file. For private content, use a reputable API with a clear privacy policy or run Tesseract locally.",
+        "Reputable APIs (DocsAPI, AWS, Google) encrypt data in transit and delete files after a short retention period. Random 'free OCR' sites often save copies or train models on your file. For private content, use a reputable API with a clear privacy policy or run Tesseract locally.",
     },
     {
       question: "Can I OCR a handwritten PDF?",

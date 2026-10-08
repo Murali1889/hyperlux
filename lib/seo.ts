@@ -6,7 +6,7 @@ export const SITE_DESCRIPTION =
 export const SITE_LOGO = `${SITE_URL}/docsapi-logo.png`
 export const SITE_OG_IMAGE = `${SITE_URL}/og-default.png`
 export const ORG_CONTACT_EMAIL = "contact@hyperverge.co"
-export const ORG_FOUNDING_DATE = "2023-01-01"
+export const ORG_FOUNDING_DATE = "2023"
 
 // DocsAPI is a HyperVerge product. Its own sameAs stays empty (it has no separate
 // profiles); HyperVerge's profiles belong on PARENT_ORG so DocsAPI is not declared to be HyperVerge.
