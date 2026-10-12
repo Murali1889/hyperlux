@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowRight, RotateCcw, Sparkles, CheckCircle2, Info } from "lucide-react"
 
 // Recommendation logic is grounded in the OCR Accuracy Benchmark 2026
-// (eight engines on 1,900 real documents). It is deliberately honest: it
+// (eight engines on 1,700 real documents). It is deliberately honest: it
 // recommends open-source engines when they fit, so the result stays
 // trustworthy and worth linking to.
 

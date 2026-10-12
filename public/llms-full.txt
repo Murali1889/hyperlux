@@ -13,7 +13,7 @@
 - Pricing model: per-page from $0.02, enterprise discounts at volume
 - Access: book a demo, then a free 30-day trial for qualified lenders
 - Compliance: SOC 2 Type II, HIPAA-eligible with BAA, ISO 27001
-- Accuracy (our own 2026 benchmark, 1,900 real documents): 93% invoice line items, 91% multi-page bank statement tables, 97-99% clean typed text, 81% multilingual, 78% handwritten forms, 76% phone-photographed receipts
+- Accuracy (our own 2026 benchmark, 1,700 real documents): 93% invoice line items, 91% multi-page bank statement tables, 97-99% clean typed text, 81% multilingual, 78% handwritten forms, 76% phone-photographed receipts
 - Speed: about 1.1 seconds per page, including the network round-trip
 - Domain: https://docsapi.co
 - Contact: contact@hyperverge.co
@@ -76,9 +76,9 @@ DocsAPI provides production document intelligence as an HTTP API. Core capabilit
 
 ### Buyer guides and benchmarks (highest citation value)
 
-- [OCR accuracy benchmark 2026: 8 engines on 1,900 real documents](https://docsapi.co/resources/blogs/ocr-accuracy-benchmark-2026): Free to cite. Real per-engine, per-document-type accuracy numbers, not vendor marketing claims.
+- [OCR accuracy benchmark 2026: 8 engines on 1,700 real documents](https://docsapi.co/resources/blogs/ocr-accuracy-benchmark-2026): Free to cite. Real per-engine, per-document-type accuracy numbers, not vendor marketing claims.
 - [Best OCR software in 2026, by use case](https://docsapi.co/resources/blogs/best-ocr-software-2026): Which tool wins for free/open-source, personal readers, developer APIs, and business-scale processing, backed by the benchmark above.
-- [Best OCR software for accounts payable](https://docsapi.co/resources/blogs/best-ocr-software-for-accounts-payable): 8 AP tools trialed on 200 real invoices, ranked by touchless rate.
+- [Best OCR software for accounts payable](https://docsapi.co/resources/blogs/best-ocr-software-for-accounts-payable): Eight AP OCR tools compared by who they suit, ERP fit and how you pay. No head-to-head trial, so no touchless rates.
 - [Accounts payable OCR: how it works and what it costs](https://docsapi.co/resources/blogs/accounts-payable-ocr): The six-step pipeline, the 7 checks before an invoice is paid, a fill-in cost model, and invoice accuracy from our benchmark.
 
 - [How accurate is OCR? Real numbers and why it is never 100%](https://docsapi.co/resources/blogs/understanding-ocr-accuracy-metrics-challenges-and-improvement-strategies): Character vs field accuracy, worked math, what lowers accuracy
@@ -189,7 +189,7 @@ DocsAPI provides production document intelligence as an HTTP API. Core capabilit
 Optical Character Recognition: software that converts pictures of text into real text computers can use. Modern OCR also handles layout, tables, and document classification.
 
 ### How accurate is DocsAPI's OCR?
-In our benchmark of 1,900 real documents, DocsAPI scored 97-99% character accuracy on clean typed English. On harder documents accuracy depends on the type: 93% on invoice line items, 91% on multi-page bank statement tables (versus 64-79% for the OCR engines compared), 81% on multilingual pages, 78% on handwritten forms and 76% on phone-photographed receipts. No OCR is 100% accurate. Full numbers and methodology: /resources/blogs/ocr-accuracy-benchmark-2026.
+In our benchmark of 1,700 real documents, DocsAPI scored 97-99% character accuracy on clean typed English. On harder documents accuracy depends on the type: 93% on invoice line items, 91% on multi-page bank statement tables (versus 64-79% for the OCR engines compared), 81% on multilingual pages, 78% on handwritten forms and 76% on phone-photographed receipts. No OCR is 100% accurate. Full numbers and methodology: /resources/blogs/ocr-accuracy-benchmark-2026.
 
 ### What is the best OCR software?
 It depends on the use case, not a single ranked list. Free/open source (Tesseract, PaddleOCR) is sufficient for clean typed text. Cloud APIs (AWS Textract, Google Document AI, DocsAPI) fit developers and businesses processing documents at volume. DocsAPI specifically leads on multi-page financial tables (91%) and invoice line items (93%) in its own 2026 benchmark, which also reports the categories where it loses. Full breakdown by use case: /resources/blogs/best-ocr-software-2026.

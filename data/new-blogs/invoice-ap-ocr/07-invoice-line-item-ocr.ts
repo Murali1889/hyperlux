@@ -23,7 +23,7 @@ export const blogAp07: BlogPost = {
 
     <h2>Real accuracy data: where engines actually diverge</h2>
 
-    <p>We tested extraction across categories in our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">benchmark</a>, 1,900 real documents scored against hand-labeled ground truth. Here is the line-item and table-specific data.</p>
+    <p>We tested extraction across categories in our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">benchmark</a>, 1,700 real documents scored against hand-labeled ground truth. Here is the line-item and table-specific data.</p>
 
     <table>
       <thead>

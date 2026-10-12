@@ -164,7 +164,7 @@ export default function FreeOcrPage() {
             <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">How accurate is this OCR scanner online free?</h2>
             <p>
               Accuracy depends far more on the document than on the tool. This is the same open source engine family we
-              tested in our <Link href="/resources/blogs/ocr-accuracy-benchmark-2026">1,900-document OCR accuracy benchmark</Link>,
+              tested in our <Link href="/resources/blogs/ocr-accuracy-benchmark-2026">1,700-document OCR accuracy benchmark</Link>,
               where Tesseract 5.x scored as follows. Expect results in the same range, not identical numbers, because your
               documents are different from ours.
             </p>

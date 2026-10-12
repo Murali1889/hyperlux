@@ -173,7 +173,7 @@ print(check_digit("G12345678"), check_digit("612345678"))  # G and 6 look the sa
 
     <h3>How reliable is it, in numbers?</h3>
 
-    <p>We have no ID-document benchmark of our own, but our 1,900-document benchmark shows what a bad capture costs: phone-photographed receipts scored 58% to 82% across engines, against 97 to 99% on clean typed English. IDs are not receipts, so read that as a warning about capture quality, not a forecast.</p>
+    <p>We have no ID-document benchmark of our own, but our 1,700-document benchmark shows what a bad capture costs: phone-photographed receipts scored 58% to 82% across engines, against 97 to 99% on clean typed English. IDs are not receipts, so read that as a warning about capture quality, not a forecast.</p>
 
     <p>Vendor figures are claims. Mindee's page says accuracy is generally above 95% for most fields and Veryfi's says 99.4%. Neither states its test set, so they cannot be compared. The PassportEye README says it recognizes a clearly visible MRZ in around 80% of cases, mostly failing on badly blurred scans. Our guide to <a href="/resources/blogs/how-to-measure-ocr-accuracy">how to measure OCR accuracy</a> shows how to run your own test.</p>
 

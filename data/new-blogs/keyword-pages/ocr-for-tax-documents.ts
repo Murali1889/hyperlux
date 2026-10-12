@@ -21,7 +21,7 @@ export const post: BlogPost = {
 
     <p>The tax year matters. For 2026 the IRS splits W-2 Box 14 into 14a and 14b, and the 1099-NEC turns Box 1 into Box 1a with new boxes 1b to 1d. The IRS also gave the W-2 a new OMB control number, 1545-0029, starting with the 2025 forms. A reader that classifies by template or printed number needs the tax year first.</p>
 
-    <p>We have not benchmarked tax forms. Our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">1,900-document accuracy benchmark</a> covered categories such as typed English, bank statements, multilingual pages and handwritten forms. On handwritten forms, character-level accuracy was 61% for Tesseract, 73% for PaddleOCR and 78% for DocsAPI, against 97-99% on clean typed English. Read that as a sign of how much harder handwriting is, not as a W-2 score.</p>
+    <p>We have not benchmarked tax forms. Our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">1,700-document accuracy benchmark</a> covered categories such as typed English, bank statements, multilingual pages and handwritten forms. On handwritten forms, character-level accuracy was 61% for Tesseract, 73% for PaddleOCR and 78% for DocsAPI, against 97-99% on clean typed English. Read that as a sign of how much harder handwriting is, not as a W-2 score.</p>
 
     <h2>What is on a W-2, and which boxes does OCR misread most?</h2>
 

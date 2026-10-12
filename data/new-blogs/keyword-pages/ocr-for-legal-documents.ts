@@ -21,7 +21,7 @@ export const post: BlogPost = {
 
     <p>Think of three layers. OCR reads the characters. Extraction finds the fields or clauses you need. Judgment decides what they mean for a client. Software handles the first layer well, the second with testing, and the third not at all.</p>
 
-    <p>On the first layer, our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">1,900-document benchmark</a> found clean typed English scored 97-99% for all three OCR engines in its comparison table. Phone-photographed receipts scored 58% to 82%, handwritten forms 61% to 78%, and multi-page scanned bank statement tables 64% to 91%, by engine. The benchmark had no legal category, so use these as a guide: typed contracts are easy, while photographed pages, handwriting and tables that span pages are not. Score your own pages with <a href="/resources/blogs/how-to-measure-ocr-accuracy">how to measure OCR accuracy</a>.</p>
+    <p>On the first layer, our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">1,700-document benchmark</a> found clean typed English scored 97-99% for all three OCR engines in its comparison table. Phone-photographed receipts scored 58% to 82%, handwritten forms 61% to 78%, and multi-page scanned bank statement tables 64% to 91%, by engine. The benchmark had no legal category, so use these as a guide: typed contracts are easy, while photographed pages, handwriting and tables that span pages are not. Score your own pages with <a href="/resources/blogs/how-to-measure-ocr-accuracy">how to measure OCR accuracy</a>.</p>
 
     <p>OCR here means optical character recognition, not the Office for Civil Rights that shows up in some results, such as the <a href="https://www.ed.gov/about/ed-offices/ocr">US Department of Education's OCR</a>.</p>
 

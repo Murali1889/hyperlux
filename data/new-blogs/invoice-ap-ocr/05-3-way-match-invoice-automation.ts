@@ -52,7 +52,7 @@ export const blogAp05: BlogPost = {
 
     <p>The failure mode above compounds badly once a PO or receipt spans more than one page, which is routine for large orders with 15 or more line items. Generic OCR reads a document left to right, top to bottom, without understanding that a table's columns continue onto the next page. It is very good at reading a single page in isolation and very bad at knowing that row 14 on page 1 and row 15 on page 2 belong to the same table.</p>
 
-    <p>We track this specifically in our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>, testing 1,900 real documents including multi-page tables. The gap between engines is large enough to explain most of a false-exception queue on its own.</p>
+    <p>We track this specifically in our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>, testing 1,700 real documents including multi-page tables. The gap between engines is large enough to explain most of a false-exception queue on its own.</p>
 
     <table>
       <thead>

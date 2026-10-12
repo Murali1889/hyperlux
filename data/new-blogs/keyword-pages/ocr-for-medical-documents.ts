@@ -105,7 +105,7 @@ export const post: BlogPost = {
 
     <h3>What our benchmark measured, and what it did not</h3>
 
-    <p>We tested eight engines on 1,900 real documents, including invoices, bank statements, receipts, handwritten forms and academic papers, but no medical documents. These rows show what clean print, handwriting and phone photos do. DocsAPI is our product. Method: <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>.</p>
+    <p>We tested eight engines on 1,700 real documents, including invoices, bank statements, receipts, handwritten forms and academic papers, but no medical documents. These rows show what clean print, handwriting and phone photos do. DocsAPI is our product. Method: <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>.</p>
 
     <table>
       <thead>

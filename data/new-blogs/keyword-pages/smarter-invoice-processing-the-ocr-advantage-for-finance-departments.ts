@@ -31,7 +31,7 @@ export const post: BlogPost = {
       </tbody>
     </table>
 
-    <p>When a vendor quotes one accuracy figure, ask which step it measures. Classify each file before reading it. Statements, tax forms and packing slips land in the same inbox, and treating them as invoices creates bad bills (<a href="/resources/blogs/document-classification-software">document classification software</a>). To choose a tool, our <a href="/resources/blogs/best-ocr-software-for-accounts-payable">accounts payable (AP) buyer's guide</a> ranks 8 of them on 200 real invoices, and <a href="/resources/blogs/accounts-payable-ocr">accounts payable OCR</a> gives the wider overview.</p>
+    <p>When a vendor quotes one accuracy figure, ask which step it measures. Classify each file before reading it. Statements, tax forms and packing slips land in the same inbox, and treating them as invoices creates bad bills (<a href="/resources/blogs/document-classification-software">document classification software</a>). To choose a tool, our <a href="/resources/blogs/best-ocr-software-for-accounts-payable">accounts payable (AP) buyer's guide</a> compares 8 of them, and <a href="/resources/blogs/accounts-payable-ocr">accounts payable OCR</a> gives the wider overview.</p>
 
     <h2>How are invoices, receipts, purchase orders and delivery notes different for OCR?</h2>
 
@@ -133,18 +133,18 @@ out_deg.txt | line rows read: 2 | ['lines sum to 416.70, subtotal says 431.70']<
 
     <h2>Can you use OCR to eliminate manual invoice processing?</h2>
 
-    <p>Not completely. OCR removes most of the typing, but people still review exceptions, approve payments and fix mismatches. In Ardent Partners' 2025 benchmark report, 32.6% of invoices were processed touchless on average (no human touch from receipt to posting), and 49.2% at best-in-class companies. In our own 200-invoice trial of 8 AP tools, touchless rates ran from 65% to 81%.</p>
+    <p>Not completely. OCR removes most of the typing, but people still review exceptions, approve payments and fix mismatches. In Ardent Partners' 2025 benchmark report, 32.6% of invoices were processed touchless on average (no human touch from receipt to posting), and 49.2% at best-in-class companies.</p>
 
     <table>
-      <thead><tr><th>Measure</th><th>Ardent Partners 2025 report</th><th>Our 200-invoice AP trial</th></tr></thead>
+      <thead><tr><th>Measure</th><th>Ardent Partners 2025 report</th></tr></thead>
       <tbody>
-        <tr><td>Touchless rate</td><td>32.6% average; 49.2% best-in-class; 23.4% all others</td><td>65% to 81% across 8 tools; 81% for our tuned pipeline (DocsAPI), about 65% out of the box before validation</td></tr>
-        <tr><td>Exception rate</td><td>14% average; 9.0% best-in-class; 22.0% all others</td><td>Not reported</td></tr>
-        <tr><td>Sample</td><td>212 AP leaders surveyed March to May 2024; 53% at companies above $1 billion revenue</td><td>200 real invoices: 60% clean PDFs from repeat vendors, 25% scanned, 15% first-time vendors</td></tr>
+        <tr><td>Touchless rate</td><td>32.6% average; 49.2% best-in-class; 23.4% all others</td></tr>
+        <tr><td>Exception rate</td><td>14% average; 9.0% best-in-class; 22.0% all others</td></tr>
+        <tr><td>Sample</td><td>212 AP leaders surveyed March to May 2024; 53% at companies above $1 billion revenue</td></tr>
       </tbody>
     </table>
 
-    <p>Ardent defines best-in-class as the 20% of enterprises with the lowest invoice cost and shortest cycle time. Our trial was small and includes our own product. Use the two as a range: about a third of invoices touchless on average, a ceiling in the low 80s on a tuned pipeline, and a review queue for the rest.</p>
+    <p>Ardent defines best-in-class as the 20% of enterprises with the lowest invoice cost and shortest cycle time. Use the average as a starting expectation: about a third of invoices touchless, with a review queue for the rest. Measure your own rate before you promise more.</p>
 
     <p>Exceptions are the reason. These are invoices flagged for coding errors, missing information, approval bottlenecks or missing PO data, and Ardent lists them (53% of respondents) as the top AP challenge. OCR reads what is on the page, and a missing PO number stays missing. It also cannot tell whether an invoice is real: it reads a forged one as accurately as a genuine one, and 29% of Ardent's respondents named fraud a top threat (<a href="/resources/blogs/invoice-fraud-detection">invoice fraud detection</a>).</p>
 
@@ -217,7 +217,7 @@ out_deg.txt | line rows read: 2 | ['lines sum to 416.70, subtotal says 431.70']<
       <li><a href="https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html" rel="nofollow">Tesseract documentation, improving output quality</a></li>
       <li><a href="https://en.wikipedia.org/wiki/Thermal_paper" rel="nofollow">Wikipedia, Thermal paper</a></li>
       <li><a href="https://ramp.com/blog/accounts-payable/goods-receipt" rel="nofollow">Ramp, Goods receipt guide</a></li>
-      <li>Our numbers come from the <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a> (1,900 documents, 8 engines, including a 200-invoice AP trial).</li>
+      <li>Our numbers come from the <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a> (1,700 documents, 8 engines).</li>
     </ul>
 
     <p>Limits. Ardent's survey is self-reported and skews to large companies, so a small business may differ. APQC's per-invoice figures sit behind a membership, so we did not use them. The Tesseract demo used one synthetic invoice, and the cost inputs are invented on purpose. Nothing here is tax or legal advice: retention rules and invoice contents differ by country, so confirm with your accountant. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
@@ -227,8 +227,8 @@ out_deg.txt | line rows read: 2 | ['lines sum to 416.70, subtotal says 431.70']<
   category: "Industry Trends",
   date: "May 12, 2025",
   datePublished: "2025-05-12T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  dateModified: "2026-10-12T00:00:00.000Z",
+  last_updated: "October 12, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "ocr for invoices",
