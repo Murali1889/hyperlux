@@ -9,7 +9,7 @@ export const blogLd06: BlogPost = {
     "LEDES 1998B has exactly 24 fields in a fixed order. Get one wrong and the invoice bounces. The real structure, the UTBMS codes, and the validation rules.",
   description:
     "A field-by-field breakdown of LEDES 1998B and LEDES XML, the UTBMS codes they carry, and the validation rules that actually reject law firm e-billing invoices.",
-  metaTag: "LEDES Billing Format: The Real Field Structure Explained",
+  metaTag: "LEDES Billing Format: 1998B and XML Fields Explained",
   content: `
     <p>A law firm sends a perfectly correct invoice: the hours are right, the rate is right, the narrative is honest, the client agreed to every dollar on it. The client's e-billing system rejects it anyway, not because anything about the legal work is wrong, but because line 14 of the file has 23 pipe-delimited fields instead of 24. Nobody misspelled anything. A comma-separated export tool dropped one blank field at the end of a row, and a format built in 1998 has no tolerance for that. This happens constantly in legal billing, and it is the reason the phrase "ledes billing format" shows up in support tickets more often than in marketing copy. Firms that process high volumes of legal invoices, or build document intelligence into their <a href="/documents/legal-docs">legal document workflows</a>, eventually have to understand LEDES at the field level, not the marketing-page level, because that is the level where files actually fail.</p>
 
@@ -134,8 +134,8 @@ export const blogLd06: BlogPost = {
   category: "Legal",
   date: "September 4, 2026",
   datePublished: "2026-09-04T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  dateModified: "2026-10-12T00:00:00.000Z",
+  last_updated: "October 12, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "ledes billing format",

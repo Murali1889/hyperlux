@@ -9,7 +9,7 @@ export const blog20: BlogPost = {
     "We ran Tesseract 5.5 and PaddleOCR 3.7 (PP-OCRv6) on the same six images and published the raw output. PaddleOCR was more accurate on hard images; Tesseract was far faster on a CPU.",
   description:
     "PaddleOCR vs Tesseract in 2026: we ran both on the same images. Which is more accurate, which is faster on a CPU, and which to pick, with code and outputs.",
-  metaTag: "PaddleOCR vs Tesseract vs DocsAPI: Builder's Benchmark",
+  metaTag: "PaddleOCR vs Tesseract: 2026 Test With Code and Results",
   summary:
     "PaddleOCR is more accurate than Tesseract on phone photos, faded receipts, tables and Chinese text. Tesseract is lighter, much faster on an ordinary CPU, and just as accurate on clean printed English. In our side-by-side test, only PaddleOCR read every amount correctly.",
   content: `
@@ -180,8 +180,8 @@ print(" ".join(result[0]["rec_texts"]))</code></pre>
   category: "Vendor Comparisons",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-10-06T00:00:00.000Z",
-  last_updated: "October 6, 2026",
+  dateModified: "2026-10-12T00:00:00.000Z",
+  last_updated: "October 12, 2026",
   readTime: "13 min read",
   author: nupuraUghade,
   primary_keyword: "paddleocr",

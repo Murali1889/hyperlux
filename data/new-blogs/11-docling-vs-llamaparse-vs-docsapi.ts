@@ -9,7 +9,7 @@ export const blog11: BlogPost = {
     "Docling is a free converter you run yourself; LlamaParse is a hosted parser billed in credits. Benchmark results on 1,200 documents, LlamaParse's real prices, and what Docling did with a 3-page bank statement we ran it on.",
   description:
     "Docling vs LlamaParse in 2026: free self-hosted converter vs hosted parser. Benchmark results, LlamaParse credit prices, and our Docling bank statement test.",
-  metaTag: "Docling vs LlamaParse vs DocsAPI: 1,200-Doc Test (2026)",
+  metaTag: "LlamaParse vs Docling: 1,200-Doc Benchmark (2026)",
   summary:
     "Docling is a free, open-source converter you run on your own machines; LlamaParse is a hosted parser billed in credits, from $1.25 per 1,000 pages. Choose Docling for private, offline or technical documents, LlamaParse for LlamaIndex RAG pipelines and messy scans. For financial tables, also test a document API.",
   content: `
@@ -148,8 +148,8 @@ print("rows where the running balance does not match:", problems)</code></pre>
   category: "AI Document Intelligence",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-10-06T00:00:00.000Z",
-  last_updated: "October 6, 2026",
+  dateModified: "2026-10-12T00:00:00.000Z",
+  last_updated: "October 12, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "docling",

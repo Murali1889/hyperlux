@@ -9,7 +9,7 @@ export const blog18: BlogPost = {
     "AWS Textract pricing per 1,000 pages for every API, its real limits (six languages, one-page synchronous PDFs, US-only ID reading), and when Textract or DocsAPI is the better fit.",
   description:
     "AWS Textract pricing per 1,000 pages for every API, its real limits (6 languages, 1-page sync PDFs), and when Textract or DocsAPI fits better. Checked 2026.",
-  metaTag: "AWS Textract vs DocsAPI: An Honest Comparison",
+  metaTag: "AWS Textract Pricing 2026 vs DocsAPI: Costs and Limits",
   summary:
     "Pick AWS Textract if you already run on AWS and read English or Western European forms, receipts or US IDs; plain OCR costs $1.50 per 1,000 pages. Pick a document API like DocsAPI when you need multi-page statement tables joined and fields returned in one call.",
   content: `
@@ -174,8 +174,8 @@ export const blog18: BlogPost = {
   category: "Vendor Comparisons",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-10-06T00:00:00.000Z",
-  last_updated: "October 6, 2026",
+  dateModified: "2026-10-12T00:00:00.000Z",
+  last_updated: "October 12, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "aws textract",

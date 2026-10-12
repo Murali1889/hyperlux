@@ -6,9 +6,9 @@ export const blog29: BlogPost = {
   title: "OCR in Finance: The 2026 Pillar Guide (Tools, Cost, Accuracy)",
   slug: "ocr-finance",
   excerpt:
-    "OCR in finance handles invoices, bank statements, tax forms, loan packets, and IDs at 92-99% accuracy and under $0.05 per page. The pillar guide, what it does, the tools that work, and the cost math from production.",
+    "OCR in finance handles invoices, bank statements, tax forms, loan packets, and IDs at 92-99% accuracy and under $0.05 per page. The pillar guide, what it does, the tools that work, and the cost math.",
   description:
-    "OCR in finance: 92-99% accuracy at $0.01-$0.05/page in 2026. Tools, use cases, vendor selection, and cost-savings math from production.",
+    "OCR in finance: 92-99% accuracy at $0.01-$0.05/page in 2026. Tools, use cases, vendor selection, and cost-savings math.",
   metaTag: "OCR in Finance 2026: Tools, Cost, Accuracy",
   summary:
     "OCR in finance turns financial documents such as invoices, bank statements, receipts and mortgage packets into structured data for accounting, lending and audit systems. The engine matters less than matching the tool to each document type and validating totals and tables before the data reaches your books.",
@@ -60,7 +60,7 @@ export const blog29: BlogPost = {
         <tr><td>Tesseract</td><td>Hobbyist / very low volume</td><td>$0</td><td>Free, but no layout awareness</td></tr>
         <tr><td>AWS Textract</td><td>Builder stacks, mid-volume</td><td>$0.015-$0.05/page</td><td>Strong on tables, weak on multi-page stitching</td></tr>
         <tr><td>Google Document AI</td><td>Form-heavy workloads</td><td>$0.02-$0.06/page</td><td>Best for structured forms (W-2, 1099)</td></tr>
-        <tr><td>DocsAPI</td><td>Finance-specific pipelines</td><td>$0.01-$0.04/page</td><td>Multi-page table stitching, finance templates</td></tr>
+        <tr><td>DocsAPI</td><td>Finance-specific pipelines</td><td>From $0.02/page</td><td>Multi-page table stitching, classification and extraction in one call</td></tr>
         <tr><td>Ocrolus</td><td>Lender bank statement processing</td><td>$1-$3/statement</td><td>Cash flow analysis baked in</td></tr>
         <tr><td>Bill.com / AvidXchange</td><td>Turn-key AP automation</td><td>$5-$15/invoice</td><td>End-to-end vendor-to-payment workflow</td></tr>
       </tbody>
@@ -169,8 +169,8 @@ export const blog29: BlogPost = {
   category: "AI Document Intelligence",
   date: "June 25, 2026",
   datePublished: "2026-06-25T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  dateModified: "2026-10-12T00:00:00.000Z",
+  last_updated: "October 12, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "ocr finance",

@@ -9,7 +9,7 @@ export const blog19: BlogPost = {
     "The right ABBYY alternative depends on which ABBYY product you are replacing: the desktop app, the OCR SDK, the old Cloud OCR SDK or FlexiCapture. Here are the options for each, with verified prices and licenses.",
   description:
     "ABBYY alternatives by product: free FineReader replacements, OCR SDKs to swap for FineReader Engine, and IDP platforms. Verified prices, licenses, 2026.",
-  metaTag: "ABBYY FineReader Alternative: 2026 Honest Comparison",
+  metaTag: "ABBYY FineReader Alternatives: Free, SDK and Enterprise",
   summary:
     "Pick the ABBYY alternative by the product you replace. Free tools like NAPS2, OCRmyPDF or Google Drive cover desktop FineReader. Tesseract, PaddleOCR, Aspose.OCR, IronOCR, Apryse or a cloud OCR API replace the FineReader Engine SDK. For FlexiCapture, compare IDP platforms and document APIs.",
   content: `
@@ -148,8 +148,8 @@ export const blog19: BlogPost = {
   category: "Vendor Comparisons",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  dateModified: "2026-10-12T00:00:00.000Z",
+  last_updated: "October 12, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "abbyy finereader",

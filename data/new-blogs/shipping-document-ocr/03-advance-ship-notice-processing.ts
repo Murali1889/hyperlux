@@ -9,7 +9,7 @@ export const blogSd03: BlogPost = {
     "A $50,000 PO ships correctly and still costs $2,000 in chargebacks, because the ASN's hierarchy, not the freight, was wrong.",
   description:
     "Advance ship notice processing explained through the real EDI 856 HL hierarchy, why a broken level slows receiving, and the retailer chargeback math behind it.",
-  metaTag: "Advance Ship Notice Processing: The EDI 856 Guide",
+  metaTag: "ASN Meaning: Advance Ship Notice Processing and EDI 856",
   summary:
     "An advance ship notice (ASN) is the EDI 856 message a supplier sends before goods arrive, describing the shipment, orders, packs and items as a tree of HL loops. Retailers measure ASN accuracy and charge back for mismatches, so the tree must match exactly what was shipped.",
   content: `
@@ -128,8 +128,8 @@ SE*12*0001~</code></pre>
   category: "Logistics",
   date: "September 1, 2026",
   datePublished: "2026-09-01T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  dateModified: "2026-10-12T00:00:00.000Z",
+  last_updated: "October 12, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "advance ship notice processing",
