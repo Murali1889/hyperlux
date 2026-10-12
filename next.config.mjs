@@ -18,6 +18,13 @@ const nextConfig = {
         destination: "/resources/blogs/passport-ocr-revolutionizing-identity-verification-with-automated-data-extraction",
         permanent: true,
       },
+      {
+        // Consolidated: the 2025 "OCR in Finance" anecdote post competed with the 2026 pillar guide
+        // for "ocr in finance". Folded into ocr-finance.
+        source: "/resources/blogs/ocr-in-finance-transforming-document-processing-for-modern-financial-operations",
+        destination: "/resources/blogs/ocr-finance",
+        permanent: true,
+      },
     ]
   },
 }

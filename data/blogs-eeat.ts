@@ -257,7 +257,7 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
     summary:
       "Passport OCR reads a passport's data page: the printed visual zone and the machine-readable zone (MRZ) defined by ICAO Document 9303. Because MRZ fields carry check digits, a correct read can be verified mathematically, which makes passport data easier to trust than most other ID documents.",
     description:
-      "How passport OCR cuts identity verification from 90 seconds to under 5, and where it still gets things wrong.",
+      "How passport OCR works, the MRZ checks behind it, how accuracy differs between the MRZ and the printed page, and the failure modes to fix.",
     primary_keyword: "passport ocr",
     secondary_keywords: [
       "passport ocr api",
@@ -268,8 +268,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "id document ocr",
     ],
     datePublished: "2025-05-28T00:00:00.000Z",
-    dateModified: "2026-09-28T00:00:00.000Z",
-    last_updated: "September 28, 2026",
+    dateModified: "2026-10-12T00:00:00.000Z",
+    last_updated: "October 12, 2026",
     tags: ["passport OCR", "KYC", "identity", "MRZ"],
     cluster: "compliance",
     faq: [
@@ -286,32 +286,7 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
     ],
   },
 
-  "ocr-in-finance-transforming-document-processing-for-modern-financial-operations": {
-    summary:
-      "OCR in finance converts invoices, receipts, statements and contracts into searchable, machine-readable data, so teams stop keying documents by hand. The value comes from pairing OCR with validation and integration into accounting systems, not from the OCR engine alone.",
-    description:
-      "Real numbers from finance teams running OCR in production: time saved, errors reduced, and the line items that matter most.",
-    primary_keyword: "ocr in finance",
-    secondary_keywords: [
-      "finance ocr",
-      "financial document ocr",
-      "ocr accounting",
-      "finance automation",
-      "ocr for accountants",
-    ],
-    datePublished: "2025-06-02T00:00:00.000Z",
-    dateModified: "2026-09-28T00:00:00.000Z",
-    last_updated: "September 28, 2026",
-    tags: ["OCR", "finance", "accounting", "automation"],
-    cluster: "ocr",
-    faq: [
-      {
-        question: "Which finance documents benefit most from OCR?",
-        answer:
-          "Highest ROI: invoices, receipts, bank statements, and W-2/1099 tax forms. Highest difficulty: handwritten check stubs and irregular vendor statements. Start with the high-volume, high-uniformity documents first.",
-      },
-    ],
-  },
+
 
   
   "legal-document-automation-the-complete-guide-for-modern-law-firms": {
@@ -329,8 +304,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "document assembly",
     ],
     datePublished: "2025-06-05T00:00:00.000Z",
-    dateModified: "2026-09-28T00:00:00.000Z",
-    last_updated: "September 28, 2026",
+    dateModified: "2026-10-12T00:00:00.000Z",
+    last_updated: "October 12, 2026",
     tags: ["legal", "automation", "law firm", "document assembly"],
     cluster: "industry-trends",
     faq: [

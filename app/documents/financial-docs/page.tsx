@@ -74,7 +74,6 @@ const FINANCIAL_DOCS_SLUGS = [
   "best-ocr-software-for-accounts-payable",
   "smarter-invoice-processing-the-ocr-advantage-for-finance-departments",
   "ocr-apis-the-secret-weapon-smart-finance-teams-are-using-right-now",
-  "ocr-in-finance-transforming-document-processing-for-modern-financial-operations",
   "ocr-bank-statement-technology-revolutionizing-financial-data-processing",
   "revolutionizing-finance-how-automated-bank-statement-analysis-transforms-lending-decisions",
 ]
