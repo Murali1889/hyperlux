@@ -105,7 +105,7 @@ export const post: BlogPost = {
 
     <h3>What our benchmark measured, and what it did not</h3>
 
-    <p>We tested eight engines on 1,900 real documents, including invoices, bank statements, receipts, handwritten forms and academic papers, but no medical documents. These rows show what clean print, handwriting and phone photos do. DocsAPI is our product. Method: <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>.</p>
+    <p>We tested eight engines on 1,700 real documents, including invoices, bank statements, receipts, handwritten forms and academic papers, but no medical documents. These rows show what clean print, handwriting and phone photos do. DocsAPI is our product. Method: <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>.</p>
 
     <table>
       <thead>
@@ -251,8 +251,8 @@ npi_ok("1234567890")  False
   category: "Healthcare",
   date: "October 5, 2026",
   datePublished: "2026-10-05T00:00:00.000Z",
-  dateModified: "2026-10-05T00:00:00.000Z",
-  last_updated: "October 5, 2026",
+  dateModified: "2026-10-12T00:00:00.000Z",
+  last_updated: "October 12, 2026",
   readTime: "14 min read",
   author: nupuraUghade,
   primary_keyword: "ocr for healthcare",

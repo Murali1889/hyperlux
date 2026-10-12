@@ -63,7 +63,7 @@ export const post: BlogPost = {
 
     <p>These bands come from historic newspaper scans at the National Library of Australia, not invoices, and Holley notes her group did not agree whether they meant characters or words. Its test of 45 pages found raw OCR accuracy between 71% and 98.02%. For search, a simulation study found significant retrieval impacts starting at a 5% error rate, counted on words.</p>
 
-    <p>For business fields, use one rule: send a field to review when the chance it is wrong, times the cost of fixing it later, is bigger than the cost of checking it now. A payment amount and a memo line should not share a threshold. As a document level reality check, the best touchless rate (invoices processed with no human review) in our accounts payable trial on 200 real invoices was 81%, from our own tuned pipeline, with the next best tool at 80%. See the <a href="/resources/blogs/best-ocr-software-for-accounts-payable">accounts payable OCR buyer guide</a>.</p>
+    <p>For business fields, use one rule: send a field to review when the chance it is wrong, times the cost of fixing it later, is bigger than the cost of checking it now. A payment amount and a memo line should not share a threshold. See the <a href="/resources/blogs/best-ocr-software-for-accounts-payable">accounts payable OCR buyer guide</a> for how to measure the share of invoices that need no human review on your own files.</p>
 
     <h2>How to measure OCR accuracy: a Python script you can run</h2>
 
@@ -263,7 +263,7 @@ threshold  auto-accepted  wrong-in-accepted  error-rate  sent-to-review
 
     <h2>What is the most accurate OCR software available?</h2>
 
-    <p>There is no single most accurate OCR software, because accuracy depends on the document type. In our OCR accuracy benchmark of 1,900 real documents, Tesseract, PaddleOCR and DocsAPI tied at 97-99% on clean typed English, while the winner changed on tables, handwriting, phone photos, other languages and academic papers.</p>
+    <p>There is no single most accurate OCR software, because accuracy depends on the document type. In our OCR accuracy benchmark of 1,700 real documents, Tesseract, PaddleOCR and DocsAPI tied at 97-99% on clean typed English, while the winner changed on tables, handwriting, phone photos, other languages and academic papers.</p>
 
     <p>Disclosure: DocsAPI is our product, and the benchmark reports where it loses. Scoring was character-level or field-level against hand-labeled ground truth depending on document type, so two 91% scores in different rows are not the same unit. Read the method on the <a href="/resources/blogs/ocr-accuracy-benchmark-2026">full OCR accuracy benchmark</a> before comparing rows.</p>
 
@@ -317,7 +317,7 @@ threshold  auto-accepted  wrong-in-accepted  error-rate  sent-to-review
       <li><a href="https://docs.aws.amazon.com/textract/latest/dg/API_Block.html" target="_blank" rel="noopener noreferrer">Amazon Textract API reference, Block</a>: Confidence, a float from 0 to 100.</li>
       <li><a href="https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html" target="_blank" rel="noopener noreferrer">Tesseract documentation, command line usage</a>: per-word conf in TSV output, -1 on structure rows.</li>
       <li><a href="https://arxiv.org/abs/2409.04117" target="_blank" rel="noopener noreferrer">Hemmer et al., confidence-aware OCR error detection, arXiv 2024</a> (abstract).</li>
-      <li><a href="/resources/blogs/ocr-accuracy-benchmark-2026">DocsAPI, OCR Accuracy Benchmark 2026</a>: every benchmark number above and the 81% touchless rate.</li>
+      <li><a href="/resources/blogs/ocr-accuracy-benchmark-2026">DocsAPI, OCR Accuracy Benchmark 2026</a>: every benchmark number above.</li>
     </ul>
 
     <p>Limits. The human error rates come from clinical data entry studies published 18 to 48 years ago, not from invoices. The Holley bands come from historic newspapers. The 5% search finding uses simulated errors. The confidence table uses invented fields. Our benchmark was run by a vendor and not independently replicated. We did not verify how other vendors define their published accuracy figures.</p>
@@ -327,8 +327,8 @@ threshold  auto-accepted  wrong-in-accepted  error-rate  sent-to-review
   category: "AI Document Intelligence",
   date: "October 5, 2026",
   datePublished: "2026-10-05T00:00:00.000Z",
-  dateModified: "2026-10-05T00:00:00.000Z",
-  last_updated: "October 5, 2026",
+  dateModified: "2026-10-12T00:00:00.000Z",
+  last_updated: "October 12, 2026",
   readTime: "16 min read",
   author: nupuraUghade,
   primary_keyword: "how to measure ocr accuracy",

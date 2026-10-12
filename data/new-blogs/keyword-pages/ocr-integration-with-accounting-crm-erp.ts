@@ -161,7 +161,7 @@ export const post: BlogPost = {
 
     <p>One trap: Xero allows a RoundingAmount up to 0.10 either way when you send totals. Use it only for rounding printed on the invoice, not to pass a misread like the 0.08 above.</p>
 
-    <p>This matters because OCR is never perfect. In our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">benchmark</a>, the best result on invoice line items was 93%, so some lines will be wrong. In our <a href="/resources/blogs/best-ocr-software-for-accounts-payable">200-invoice AP trial</a>, our own pipeline (DocsAPI, our product) reached 81% touchless with a validation layer we built, and about 65% before it. More in <a href="/resources/blogs/invoice-line-item-ocr">invoice line-item extraction</a>.</p>
+    <p>This matters because OCR is never perfect. In our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">benchmark</a>, the best result on invoice line items was 93%, so some lines will be wrong. Plan for a review queue for the rest. More in <a href="/resources/blogs/invoice-line-item-ocr">invoice line-item extraction</a>.</p>
 
     <h2>What do you do when the ERP rejects a post?</h2>
 
@@ -211,7 +211,7 @@ export const post: BlogPost = {
       <thead><tr><th>Type</th><th>Examples</th><th>Good when</th><th>Watch out for</th></tr></thead>
       <tbody>
         <tr><td>Built into the target system</td><td>NetSuite Bill Capture, Dynamics 365 receipt capture, Salesforce Intelligent Document Reader</td><td>You use one system and want the fewest moving parts</td><td>Limits. Oracle says Bill Capture is US only, takes PDFs up to 30 pages, 8 MB per file, one bill per file, and a person clicks Create Bill. Dynamics reads three receipt fields.</td></tr>
-        <tr><td>AP or expense platform</td><td>Tools ranked in our <a href="/resources/blogs/best-ocr-software-for-accounts-payable">AP tools trial</a></td><td>You want intake, approval and payment in one product</td><td>Which objects and fields it writes to your ERP. In our trial, no AP tool reached the 99% touchless rate vendors advertise.</td></tr>
+        <tr><td>AP or expense platform</td><td>Tools compared in our <a href="/resources/blogs/best-ocr-software-for-accounts-payable">AP software guide</a></td><td>You want intake, approval and payment in one product</td><td>Which objects and fields it writes to your ERP. Vendors advertise very high touchless rates, so test yours on your own invoices.</td></tr>
         <tr><td>OCR or document AI API</td><td>AWS Textract, Google Document AI, DocsAPI</td><td>You have developers, unusual documents or high volume</td><td>You write validation, mapping, posting and the exception queue. Costs: <a href="/resources/blogs/invoice-ocr-pricing-models">how invoice OCR pricing models compare</a>.</td></tr>
       </tbody>
     </table>
@@ -246,8 +246,8 @@ export const post: BlogPost = {
   category: "AI Document Intelligence",
   date: "October 5, 2026",
   datePublished: "2026-10-05T00:00:00.000Z",
-  dateModified: "2026-10-08T00:00:00.000Z",
-  last_updated: "October 8, 2026",
+  dateModified: "2026-10-12T00:00:00.000Z",
+  last_updated: "October 12, 2026",
   readTime: "13 min read",
   author: nupuraUghade,
   primary_keyword: "ocr integration with accounting software",
@@ -317,7 +317,7 @@ export const post: BlogPost = {
     {
       question: "Can OCR to automate data entry run with no human review?",
       answer:
-        "Not for most invoice streams. In our benchmark of 8 AP tools on 200 real invoices, none reached the 99% touchless rate vendors advertise, and the realistic ceiling was in the low 80s. Our own pipeline scored 81% with a validation layer we built and about 65% without it. Keep a review queue for the rest.",
+        "Not for most invoice streams. Ardent Partners' 2025 benchmarks found only 32.6% of invoices were processed touchless on average, and 49.2% at best-in-class companies. Measure the rate on your own invoices and keep a review queue for the rest.",
     },
     {
       question: "What does DocsAPI connect to?",

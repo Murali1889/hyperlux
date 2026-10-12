@@ -169,7 +169,7 @@ export const post: BlogPost = {
       <li>IRS: <a href="https://www.irs.gov/instructions/iw2w3">Forms W-2 and W-3 instructions</a>, <a href="https://www.irs.gov/pub/irs-pdf/f1040sc.pdf">Schedule C (2025 form)</a> and <a href="https://www.irs.gov/individuals/transcript-types-and-ways-to-order-them">transcript types</a>.</li>
       <li>SBA: <a href="https://www.naggl.org/wp-content/uploads/2026/05/5000-875701.pdf">Procedural Notice 5000-875701</a>, the <a href="https://legacy.sba.gov/document/sop-50-10-lender-development-company-loan-programs">SOP 50 10 page</a>, <a href="https://legacy.sba.gov/document/information-notice-5000-880695-issuance-sop-50-10-81">Information Notice 5000-880695</a>, the <a href="https://legacy.sba.gov/document/sba-form-1919-borrower-information-form">Form 1919 page</a> and <a href="https://www.naggl.org/two-major-sba-announcements-issuance-of-sop-50-10-8-1-and-a-new-expansion-of-the-itl-program/">NAGGL's summary</a>.</li>
       <li>CFPB: <a href="https://www.consumerfinance.gov/rules-policy/regulations/1002/9/">Regulation B section 1002.9</a> and its <a href="https://www.consumerfinance.gov/rules-policy/regulations/1002/interp-9/">official interpretation</a>.</li>
-      <li>Our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a> (1,900 real documents, 8 engines). We build DocsAPI, so it is a vendor benchmark.</li>
+      <li>Our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a> (1,700 real documents, 8 engines). We build DocsAPI, so it is a vendor benchmark.</li>
     </ul>
 
     <p>Limits: we ran the DTI, deposit, DSCR and compounding arithmetic in Python, but the inputs are invented. Guidelines change, so confirm current text before you build rules. Fannie Mae's Day 1 Certainty page was blocked, so we used its press release. This page is not legal, tax or credit advice.</p>
@@ -181,8 +181,8 @@ export const post: BlogPost = {
   category: "Lending",
   date: "October 5, 2026",
   datePublished: "2026-10-05T00:00:00.000Z",
-  dateModified: "2026-10-05T00:00:00.000Z",
-  last_updated: "October 5, 2026",
+  dateModified: "2026-10-12T00:00:00.000Z",
+  last_updated: "October 12, 2026",
   readTime: "13 min read",
   author: nupuraUghade,
   primary_keyword: "ocr for loan underwriting",

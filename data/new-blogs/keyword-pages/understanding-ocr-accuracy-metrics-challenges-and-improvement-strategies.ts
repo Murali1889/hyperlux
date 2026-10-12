@@ -6,7 +6,7 @@ export const post: BlogPost = {
   title: "How Accurate Is OCR? Real Numbers and Why It Is Never 100%",
   slug: "understanding-ocr-accuracy-metrics-challenges-and-improvement-strategies",
   excerpt:
-    "No OCR is 100% accurate. Here is what 1,900 real documents measured, why 99% per character still gives wrong fields, and a checklist to raise your own accuracy.",
+    "No OCR is 100% accurate. Here is what 1,700 real documents measured, why 99% per character still gives wrong fields, and a checklist to raise your own accuracy.",
   description:
     "No OCR is 100% accurate. Clean print reads at 97-99% per character, hard documents at 58-91% in our test. See why 99% still breaks fields and how to fix it.",
   metaTag: "How Accurate Is OCR? Real Numbers (It Is Never 100%)",
@@ -17,7 +17,7 @@ export const post: BlogPost = {
 
     <h2>How accurate is OCR on real documents?</h2>
 
-    <p>It depends on the document far more than on the engine. In our benchmark of 1,900 real documents, clean typed English scored 97-99% character accuracy on all three OCR engines we compared. Scanned bank statements, phone-photographed receipts, multilingual pages and handwriting scored between 58% and 91%, and the best engine changed by category.</p>
+    <p>It depends on the document far more than on the engine. In our benchmark of 1,700 real documents, clean typed English scored 97-99% character accuracy on all three OCR engines we compared. Scanned bank statements, phone-photographed receipts, multilingual pages and handwriting scored between 58% and 91%, and the best engine changed by category.</p>
 
     <table>
       <thead><tr><th>Document category</th><th>Tesseract 5.x</th><th>PaddleOCR</th><th>DocsAPI</th></tr></thead>
@@ -152,7 +152,7 @@ OCR output: Invoice INV-20458 dated 2026-03-14 total due $7,250.00 net 30 days</
 
     <h2>How reliable is OCR technology for financial documents?</h2>
 
-    <p>Reliable enough to do most of the typing, not reliable enough to run unchecked. In our benchmark the best result on multi-page bank statement tables was 91% and on invoice line items 93%, and the best of eight accounts-payable tools passed 81% of 200 real invoices with no human review. Plan for review, not perfection.</p>
+    <p>Reliable enough to do most of the typing, not reliable enough to run unchecked. In our benchmark the best result on multi-page bank statement tables was 91% and on invoice line items 93%. Plan for review, not perfection.</p>
 
     <table>
       <thead><tr><th>Test in our benchmark</th><th>Weakest result</th><th>Strongest result</th></tr></thead>
@@ -160,11 +160,11 @@ OCR output: Invoice INV-20458 dated 2026-03-14 total due $7,250.00 net 30 days</
         <tr><td>Scanned bank statements, multi-page tables (OCR engines)</td><td>64% (Tesseract 5.x)</td><td>91% (DocsAPI)</td></tr>
         <tr><td>Invoices, line-item extraction (document parsers)</td><td>81% (Docling)</td><td>93% (DocsAPI)</td></tr>
         <tr><td>Scanned receipts, mobile quality (document parsers)</td><td>58% (Docling)</td><td>78% (LlamaParse)</td></tr>
-        <tr><td>Touchless rate on 200 real invoices (8 accounts-payable tools)</td><td>65% (Melio)</td><td>81% (DocsAPI, tuned pipeline)</td></tr>
+        
       </tbody>
     </table>
 
-    <p>The tests score differently: character level for the OCR engines, extraction accuracy for the parsers, and touchless rate (the share of invoices needing no human review) for accounts-payable tools. DocsAPI's 81% comes from a tuned pipeline with a validation layer we built, and out of the box it lands closer to 65%. No tool reached the 99% touchless rate that marketing claims. The realistic ceiling on a real invoice mix was the low 80s.</p>
+    <p>The tests score differently: character level for the OCR engines and extraction accuracy for the parsers, so compare results within a row, not across rows.</p>
 
     <p>OCR turns an image into text and fields. It does not decide whether an applicant qualifies, an invoice should be paid or a document is genuine. Those decisions need your rules and, in regulated work such as lending, tax or identity checks, a person and your compliance process. This page is not legal, tax or lending advice.</p>
 
@@ -206,7 +206,7 @@ OCR output: Invoice INV-20458 dated 2026-03-14 total due $7,250.00 net 30 days</
 
     <h2>Sources and how we checked this</h2>
 
-    <p>Numbers described as ours come from the <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark 2026</a> (1,900 real, anonymized documents), quoted as published there. Everything else comes from these pages, opened on September 21, 2026.</p>
+    <p>Numbers described as ours come from the <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark 2026</a> (1,700 real, anonymized documents), quoted as published there. Everything else comes from these pages, opened on September 21, 2026.</p>
 
     <ul>
       <li><a href="https://docs.aws.amazon.com/textract/latest/dg/limits-document.html" rel="noopener">Amazon Textract quotas</a>: text height, image limit, handwriting, languages.</li>
@@ -226,8 +226,8 @@ OCR output: Invoice INV-20458 dated 2026-03-14 total due $7,250.00 net 30 days</
   category: "Industry Trends",
   date: "May 28, 2025",
   datePublished: "2025-05-28T00:00:00.000Z",
-  dateModified: "2026-10-06T00:00:00.000Z",
-  last_updated: "October 6, 2026",
+  dateModified: "2026-10-12T00:00:00.000Z",
+  last_updated: "October 12, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "how accurate is ocr",

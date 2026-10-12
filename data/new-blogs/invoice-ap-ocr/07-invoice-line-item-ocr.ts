@@ -23,7 +23,7 @@ export const blogAp07: BlogPost = {
 
     <h2>Real accuracy data: where engines actually diverge</h2>
 
-    <p>We tested extraction across categories in our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">benchmark</a>, 1,900 real documents scored against hand-labeled ground truth. Here is the line-item and table-specific data.</p>
+    <p>We tested extraction across categories in our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">benchmark</a>, 1,700 real documents scored against hand-labeled ground truth. Here is the line-item and table-specific data.</p>
 
     <table>
       <thead>
@@ -88,8 +88,8 @@ export const blogAp07: BlogPost = {
   category: "Accounts Payable",
   date: "August 11, 2026",
   datePublished: "2026-08-11T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  dateModified: "2026-10-12T00:00:00.000Z",
+  last_updated: "October 12, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "invoice line item ocr",

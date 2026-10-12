@@ -13,7 +13,7 @@ DocsAPI processes around 4 million PDF pages per month for lenders, fintechs, an
 
 ## Top guides
 
-- [OCR accuracy benchmark 2026: 8 engines on 1,900 real documents](https://docsapi.co/resources/blogs/ocr-accuracy-benchmark-2026): free to cite
+- [OCR accuracy benchmark 2026: 8 engines on 1,700 real documents](https://docsapi.co/resources/blogs/ocr-accuracy-benchmark-2026): free to cite
 - [Best OCR software in 2026, by use case](https://docsapi.co/resources/blogs/best-ocr-software-2026)
 - [How to make a PDF searchable in 30 seconds](https://docsapi.co/resources/blogs/make-pdf-searchable)
 - [OCR a PDF: honest guide from 4M pages a month](https://docsapi.co/resources/blogs/ocr-pdf-honest-guide)
@@ -53,7 +53,7 @@ Content authored by [Nupura Ughade](https://docsapi.co/author/nupura-ughade), Co
 - Built by: HyperVerge (https://hyperverge.co)
 - Production scale: ~4M PDF pages processed per month
 - Pricing: per-page, from $0.02 per page, volume discounts above 100K pages a month; access starts with a demo, then a free 30-day trial for qualified lenders
-- Accuracy, from our own 2026 benchmark on 1,900 real documents: 93% on invoice line items, 91% on multi-page bank statement tables, 97-99% on clean typed text, 81% multilingual, 78% handwritten forms, 76% phone-photographed receipts
+- Accuracy, from our own 2026 benchmark on 1,700 real documents: 93% on invoice line items, 91% on multi-page bank statement tables, 97-99% on clean typed text, 81% multilingual, 78% handwritten forms, 76% phone-photographed receipts
 - Speed: about 1.1 seconds per page, including the network round-trip
 - Specialization: financial services, SMB lending, KYC/AML compliance
 - Compliance: SOC 2 Type II, ISO 27001, HIPAA-eligible (BAA available)

@@ -6,83 +6,62 @@ export const blog31: BlogPost = {
   title: "Best OCR Software for Accounts Payable (2026 Buyer Guide)",
   slug: "best-ocr-software-for-accounts-payable",
   excerpt:
-    "We trialed 8 AP OCR tools on 200 real invoices across QuickBooks, NetSuite, and SAP stacks. The 2026 buyer's guide, who wins on touchless rate, ERP integration, and total cost.",
+    "A 2026 buyer's guide to 8 AP OCR tools: who each one suits, how it fits your ERP, and how to test finalists on your own invoices. We have not run a head-to-head trial, so there are no touchless rates here.",
   description:
-    "8 AP OCR tools trialed on 200 real invoices. Bill.com, AvidXchange, Tipalti, Basware, DocsAPI ranked by touchless rate, ERP fit, cost. 2026.",
+    "Best OCR software for accounts payable: Bill.com, AvidXchange, Tipalti, Basware, Coupa, Melio, SAP Ariba and DocsAPI compared by fit and ERP. 2026.",
   metaTag: "Best OCR Software for Accounts Payable: 8 Tools (2026)",
   summary:
     "The best OCR software for accounts payable depends on invoice volume and your ERP: small teams on QuickBooks or Xero usually start with BILL or Melio, mid-market teams with AvidXchange or Tipalti, SAP and Oracle enterprises with Basware or Coupa, and teams with developers with an OCR API. Test finalists on your own invoices.",
   content: `
-    <p>Every AP OCR vendor claims 99% touchless. Two years and 200 real invoices later, trialed across QuickBooks, NetSuite, and SAP customer stacks, I can tell you almost none of them actually hit that number on messy production invoices. Some ship the workflow you need out of the box; some need six months of template tuning; some are overpriced platforms wrapping a $0.03 OCR API. Below are 8 tools ranked by touchless rate, ERP fit, and total cost of ownership.</p>
+    <p>Every AP OCR vendor advertises a very high touchless rate. In practice the rate depends on your vendor mix, and first-time vendors and scanned invoices pull it down. Some tools ship the workflow you need out of the box, some need months of template tuning, and some are platforms built around a per-page OCR API. Below are 8 tools compared by who they suit, how they fit your ERP and how you pay. We have not run a head-to-head trial of them, so there are no touchless rates here. Test finalists on your own invoices.</p>
 
     <p>New to the topic? Our <a href="/resources/blogs/accounts-payable-ocr">accounts payable OCR guide</a> explains how AP OCR works, the checks it must run before payment and a cost model you can fill in. This page compares the software.</p>
 
     <h2>What is the best OCR software for accounts payable in 2026?</h2>
 
-    <p>The best OCR software for accounts payable in 2026 depends on invoice volume and existing ERP. For SMBs under 500 invoices/month on QuickBooks or Xero, Bill.com or Melio wins on time-to-value. For mid-market at 500-5,000/month, AvidXchange or Tipalti balances feature depth with ERP integration. For enterprise at 5,000+/month on SAP or Oracle, Basware or Coupa offer end-to-end procure-to-pay. For builders at any volume who want to own the workflow, a custom stack on AWS Textract (AnalyzeExpense lists $0.01 per page), Google Document AI, or DocsAPI (from $0.02 per page) gives full control.</p>
+    <p>The best OCR software for accounts payable in 2026 depends on invoice volume and existing ERP. As a rule of thumb, for SMBs under 500 invoices/month on QuickBooks or Xero, Bill.com or Melio is quickest to start. For mid-market at 500-5,000/month, AvidXchange or Tipalti balances feature depth with ERP integration. For enterprise at 5,000+/month on SAP or Oracle, Basware or Coupa offer end-to-end procure-to-pay. For builders at any volume who want to own the workflow, a custom stack on AWS Textract (AnalyzeExpense lists $0.01 per page), Google Document AI, or DocsAPI (from $0.02 per page) gives full control.</p>
 
-    <h2>How we ranked these 8 AP OCR tools</h2>
-
-    <p>Ranking methodology: we trialed each tool on 200 real invoices sampled from actual production streams, 60% clean PDFs from repeat vendors, 25% scanned invoices, 15% first-time-vendor invoices with unusual layouts. We measured five things per tool: touchless processing rate (percentage of invoices flowing through without human review), field-level accuracy on the four critical fields (vendor, PO, total, due date), ERP integration depth (native connector vs CSV export), time-to-first-value (days from signup to first automated invoice), and total cost per invoice fully-loaded (subscription + per-invoice fees + implementation time amortized over 24 months).</p>
-
-    <h2>The 2026 ranking table</h2>
-
-    <table>
-      <thead><tr><th>Rank</th><th>Tool</th><th>Best for</th><th>Touchless rate*</th><th>Per-invoice cost</th><th>ERP fit</th></tr></thead>
-      <tbody>
-        <tr><td>1</td><td>Bill.com</td><td>SMB on QuickBooks/Xero</td><td>72%</td><td>$5-$10</td><td>Native QB/Xero</td></tr>
-        <tr><td>2</td><td>AvidXchange</td><td>Mid-market real estate/HOA</td><td>78%</td><td>$8-$15</td><td>Deep mid-market ERPs</td></tr>
-        <tr><td>3</td><td>Tipalti</td><td>Mid-market with global suppliers</td><td>74%</td><td>$10-$18</td><td>NetSuite, Sage, custom</td></tr>
-        <tr><td>4</td><td>DocsAPI (builder stack)</td><td>Any volume, custom workflow</td><td>81%*</td><td>From $0.02/page</td><td>Any (you build it)</td></tr>
-        <tr><td>5</td><td>Basware</td><td>Enterprise SAP/Oracle</td><td>80%</td><td>Custom (~$15-$30)</td><td>SAP, Oracle native</td></tr>
-        <tr><td>6</td><td>Coupa</td><td>Enterprise procurement-led</td><td>76%</td><td>Custom (~$20-$40)</td><td>SAP, Oracle, Workday</td></tr>
-        <tr><td>7</td><td>Melio</td><td>US SMB with QuickBooks</td><td>65%</td><td>$5-$8 (free tier)</td><td>QuickBooks only</td></tr>
-        <tr><td>8</td><td>SAP Ariba</td><td>Enterprise SAP-only</td><td>68%</td><td>Custom</td><td>SAP native (weak elsewhere)</td></tr>
-      </tbody>
-    </table>
-
-    <p>*Touchless rates measured on our 200-invoice sample. Your actual numbers will vary based on vendor mix and invoice complexity. DocsAPI's 81% reflects a tuned pipeline; out-of-the-box it lands closer to 65% before you build the validation layer. Cost includes fully-loaded per-invoice cost with subscription amortized over trial volume.</p>
-
-    <h2>#1 Bill.com, best AP OCR software for SMB</h2>
-
-    <p>Bill.com is the best AP OCR software for SMBs on QuickBooks or Xero at under 500 invoices/month. Setup takes an afternoon, native accounting integration means zero CSV wrangling, and their marketplace payment rails handle vendor payments automatically. Trial touchless rate: 72% on our sample. Where it loses: complex multi-line invoices with unusual layouts drop touchless to 45%, and there's no fine-grained control over the OCR layer if you want to build validation on top. Best fit: 100-1,000 invoices/month with straightforward workflow requirements.</p>
-
-    <h2>#2 AvidXchange, best for mid-market real estate + HOA</h2>
-
-    <p>AvidXchange leads mid-market AP OCR for real estate, HOA management, and vertical-specific stacks. Their per-vertical templates handle unusual invoice formats (property management fees, utility bills, contractor invoices) that generic tools mangle. Touchless rate: 78% on our sample, highest among mid-market platforms. Where it loses: setup takes 4-6 weeks, per-invoice cost is 40-60% higher than Bill.com, and it's overkill for standard AP without industry-specific requirements. Best fit: 1,000-5,000 invoices/month with industry-vertical layouts.</p>
-
-    <h2>#3 Tipalti, best for global supplier networks</h2>
-
-    <p>Tipalti wins for AP teams with international suppliers. Built-in W-8/W-9 tax compliance, multi-currency payment rails, and supplier onboarding automation are core features other tools bolt on later. Touchless rate: 74% on our sample. Where it loses: pricing is opaque, minimum contract sizes exclude smaller teams, and the workflow platform is heavier than most SMBs need. Best fit: 500-5,000 invoices/month with 30%+ international suppliers.</p>
-
-    <h2>#4 DocsAPI (builder stack), best for custom workflows</h2>
-
-    <p>For teams wanting to own the workflow, DocsAPI is the best OCR software for accounts payable when you're building a custom stack. Layout-aware OCR from $0.02 per page with tables and classification included, field-level confidence scores exposed via API, and no per-invoice pricing to scale against your growth. Tuned pipeline touchless rate: 81%, highest in this ranking, but that reflects a validation layer we built ourselves. Out of the box, expect 65% and plan to build the four IDP layers (classification, extraction, validation, routing) yourself. Best fit: 5,000+ invoices/month with engineering capacity, or any volume where you need to own the workflow.</p>
-
-    <h2>#5 Basware, best enterprise SAP/Oracle e-invoicing</h2>
-
-    <p>Basware is the enterprise pick for SAP and Oracle shops needing e-invoicing plus AP OCR in one platform. Their supplier network handles e-invoice ingestion at scale, and the OCR layer catches paper/PDF invoices from suppliers not yet on the network. Touchless rate: 80% on our sample. Where it loses: implementation is 3-6 months and pricing starts at ~$50K/year for real deployments. Best fit: enterprise SAP/Oracle at 10,000+ invoices/month with active e-invoicing initiatives.</p>
-
-    <h2>#6 Coupa, best for procurement-led enterprise</h2>
-
-    <p>Coupa is the choice for enterprises where procurement drives AP (rather than finance-led AP driving procurement). Their source-to-pay platform covers the full procurement lifecycle with AP as one module. Touchless rate: 76% on our sample, respectable but not the highest. Where it loses: procurement-heavy workflow is overkill for finance-led AP teams, and pricing starts at ~$75K/year. Best fit: enterprise procurement-led operations at 5,000+ invoices/month.</p>
-
-    <h2>#7 Melio, best free tier for US SMBs</h2>
-
-    <p>Melio offers the best AP OCR free tier for US SMBs on QuickBooks. Free ACH payments, basic OCR, and simple two-way sync with QuickBooks make it a starting point at 20-200 invoices/month. Touchless rate: 65% on our sample, lowest among finalists but reflects the free-tier positioning. Where it loses: OCR quality degrades on scanned invoices, no support for non-QuickBooks stacks, and international payment support is limited. Best fit: US-only SMBs under 200 invoices/month on QuickBooks with tight budget.</p>
-
-    <h2>#8 SAP Ariba, best only if you're already on SAP</h2>
-
-    <p>SAP Ariba is included in this ranking because it's frequently evaluated, but it's really only the right pick if you're an existing SAP customer. Native SAP integration is best-in-class; integration with anything else is painful. Touchless rate: 68% on our sample, mid-tier. Where it loses: pricing, implementation complexity, and vendor lock-in make it a hard sell outside SAP shops. Best fit: enterprise SAP customers where "one throat to choke" matters more than best-of-breed features.</p>
-
-    <h2>How to pick AP OCR software for your specific stack</h2>
+    <h2>How these 8 AP OCR tools were compared</h2>
+<p>We compared the tools on public information: who each one is built for, which ERPs it connects to, and how you pay for it. We did not run them on a shared set of invoices, so we do not publish touchless rates or per-invoice costs for them. Those depend on your vendor mix and invoice quality, and vendor pricing changes, so confirm current features and prices with each vendor. The tools are listed roughly from smaller teams to larger ones, not ranked.</p>
+<h2>The 2026 comparison table</h2>
+<table>
+<thead><tr><th>Tool</th><th>Best for</th><th>ERP fit</th></tr></thead>
+<tbody>
+<tr><td>Bill.com</td><td>SMB on QuickBooks/Xero</td><td>Native QB/Xero</td></tr>
+<tr><td>Melio</td><td>US SMB with a tight budget</td><td>Check which accounting systems it syncs with</td></tr>
+<tr><td>AvidXchange</td><td>Mid-market real estate/HOA</td><td>Mid-market ERPs</td></tr>
+<tr><td>Tipalti</td><td>Mid-market with global suppliers</td><td>NetSuite, Sage, custom</td></tr>
+<tr><td>DocsAPI (builder stack)</td><td>Any volume, custom workflow</td><td>Any (you build it)</td></tr>
+<tr><td>Basware</td><td>Enterprise SAP/Oracle</td><td>SAP, Oracle native</td></tr>
+<tr><td>Coupa</td><td>Enterprise procurement-led</td><td>SAP, Oracle, Workday</td></tr>
+<tr><td>SAP Ariba</td><td>Enterprise SAP-only</td><td>SAP native</td></tr>
+</tbody>
+</table>
+<p>DocsAPI is our product, so weigh our description of it accordingly. Pricing: DocsAPI starts from $0.02 per page and AWS Textract's AnalyzeExpense lists $0.01 per page. The suites price per invoice, per user or by quote, so ask each vendor for the all-in cost per invoice, including implementation.</p>
+<h2>Bill.com, best AP OCR software for SMB</h2>
+<p>Bill.com fits SMBs on QuickBooks or Xero with straightforward AP. Native accounting integration means little CSV wrangling, and its payment network handles vendor payments. Where it can fall short: invoices with unusual layouts may need manual fixing, and you get little control over the OCR layer if you want to build your own validation on top. Best fit: small teams with simple workflow requirements.</p>
+<h2>AvidXchange, best for mid-market real estate and HOA</h2>
+<p>AvidXchange is built for mid-market AP in real estate, HOA management and similar vertical stacks. Its vertical templates are meant for formats that generic tools struggle with, such as property management fees, utility bills and contractor invoices. Where it can fall short: confirm setup time and pricing with the vendor, because it is more than you need for standard AP without industry-specific requirements. Best fit: mid-market teams with industry-vertical layouts.</p>
+<h2>Tipalti, best for global supplier networks</h2>
+<p>Tipalti suits AP teams with international suppliers. Built-in W-8/W-9 tax compliance, multi-currency payments and supplier onboarding are core features that other tools add later. Where it can fall short: pricing is not published, and the platform is heavier than many SMBs need. Best fit: mid-market teams where a large share of suppliers are international.</p>
+<h2>DocsAPI (builder stack), best for custom workflows</h2>
+<p>For teams that want to own the workflow, DocsAPI is a builder-stack option for accounts payable. It is layout-aware OCR from $0.02 per page with tables and classification included, so there is no per-invoice price to scale against your growth. In our 2026 benchmark it read invoice line items at 93%, which means some lines will still be wrong and need checking. You build the four IDP layers (classification, extraction, validation, routing) yourself. Best fit: teams with engineering capacity, or any volume where you need to own the workflow.</p>
+<h2>Basware, best enterprise SAP/Oracle e-invoicing</h2>
+<p>Basware is an enterprise pick for SAP and Oracle shops that need e-invoicing and AP OCR in one platform. Its supplier network handles e-invoice ingestion, and the OCR layer covers paper and PDF invoices from suppliers not yet on the network. Where it can fall short: expect a long implementation and enterprise pricing, and confirm both with the vendor. Best fit: enterprise SAP/Oracle teams with active e-invoicing initiatives.</p>
+<h2>Coupa, best for procurement-led enterprise</h2>
+<p>Coupa is the choice for enterprises where procurement drives AP, rather than finance-led AP driving procurement. Its source-to-pay platform covers the procurement lifecycle with AP as one module. Where it can fall short: the procurement-heavy workflow is more than a finance-led AP team needs, and pricing is by quote. Best fit: enterprise procurement-led operations.</p>
+<h2>Melio, best for US SMBs on a tight budget</h2>
+<p>Melio is built around payments for US small businesses, with basic invoice capture and accounting sync, which makes it an easy starting point at low invoice volumes. Where it can fall short: test it on scanned invoices, confirm it syncs with your accounting system, and check how it handles international payments. Best fit: US-only SMBs with low volume and a tight budget.</p>
+<h2>SAP Ariba, best only if you are already on SAP</h2>
+<p>SAP Ariba is included because it is frequently evaluated, but it is mainly the right pick if you are an existing SAP customer. Native SAP integration is its strength, and integration with other systems takes more work. Where it can fall short: pricing, implementation complexity and vendor lock-in make it a hard sell outside SAP shops. Best fit: enterprise SAP customers who prefer one vendor to best-of-breed features.</p>
+<h2>How to pick AP OCR software for your specific stack</h2>
 
     <p>Pick accounts payable OCR software by first identifying your invoice volume tier and existing ERP. Under 500/month with QuickBooks or Xero: default to Bill.com or Melio. 500-5,000/month mid-market: choose AvidXchange (vertical templates), Tipalti (global suppliers), or DocsAPI (custom workflow). 5,000+/month enterprise: Basware or Coupa depending on whether e-invoicing or procurement leads, or DocsAPI for the DIY path. Then trial the 2-3 finalists on 20 of your worst real invoices before signing anything. Vendor demos use clean files; your invoices are messier.</p>
 
     <h3>The five-test evaluation checklist</h3>
 
     <ol>
-      <li><strong>Real invoice touchless rate:</strong> run 20 repeat-vendor invoices. Anything under 60% is a red flag.</li>
+      <li><strong>Real invoice touchless rate:</strong> run 20 of your own repeat-vendor invoices and decide your pass bar in advance.</li>
       <li><strong>PO matching by vendor + PO number:</strong> not PO number alone, that enables duplicate payments.</li>
       <li><strong>Field-level confidence scores in the API response:</strong> without them, your exception queue is guesswork.</li>
       <li><strong>Native ERP connector:</strong> not "we support CSV export nightly." Nightly CSV = broken workflow.</li>
@@ -90,10 +69,8 @@ export const blog31: BlogPost = {
     </ol>
 
     <h2>How much should AP OCR software cost?</h2>
-
-    <p>AP OCR software cost in 2026 ranges from free (Melio's free tier) to $40+ per invoice fully-loaded at enterprise platforms. Fair pricing benchmarks by tier: SMB ($5-$10/invoice on Bill.com, Melio); mid-market ($8-$18/invoice on AvidXchange, Tipalti); enterprise ($15-$40/invoice on Basware, Coupa, SAP Ariba); builder stack (per page on Textract, Document AI or DocsAPI, from about $0.01 to $0.05 for invoice extraction; multiply by the pages in a typical invoice, before you factor in engineering time to build the layers on top).</p>
-
-    <h2>Accounts payable OCR software or an OCR API: which do you need?</h2>
+<p>There is no single price. Some tools have a free tier, suites charge per invoice, per user or by quote, and enterprise platforms add implementation costs, so ask each vendor for the all-in cost per invoice. On the builder path you pay per page: AWS Textract's AnalyzeExpense lists $0.01 per page and DocsAPI starts from $0.02 per page. Multiply by the pages in a typical invoice, then add the engineering time to build the layers on top.</p>
+<h2>Accounts payable OCR software or an OCR API: which do you need?</h2>
     <p>Choose an AP automation suite if you want intake, OCR, approvals and payments in one product and have little engineering time. Choose an OCR or document API if you have developers and want to control the checks, routing and posting yourself. The API is cheaper per page; the suite is cheaper in engineering hours.</p>
     <p>With an API you build what the suites include: a duplicate check, the invoice math check, vendor and PO matching, a review queue, and posting into your ERP. Those steps are where most AP automation fails, not the reading. Our guides on <a href="/resources/blogs/duplicate-invoice-detection">duplicate invoice detection</a> and <a href="/resources/blogs/3-way-match-invoice-automation">3-way match automation</a> cover the two checks that prevent most wrong payments, and our <a href="/resources/blogs/aws-textract-vs-docsapi">AWS Textract comparison</a> lists the published per-page prices for Textract, Google and Azure.</p>
     <p>Whichever path you take, the posting step differs by system. See our field-mapping guides for <a href="/resources/blogs/invoice-ocr-quickbooks-integration">QuickBooks</a> and <a href="/resources/blogs/invoice-ocr-netsuite">NetSuite</a> before you sign, because a tool that reads invoices well can still post them badly. To see what the API route looks like in practice, here is how <a href="/use-cases/invoice-processing">DocsAPI handles invoice processing</a>.</p>
@@ -104,7 +81,7 @@ export const blog31: BlogPost = {
 
     <h2>Sources and how we checked this</h2>
     <ul>
-      <li>Touchless rates and per-invoice costs in the ranking come from our own trial of 200 invoices described above; they will differ on your invoices, and vendor pricing changes, so confirm current prices with each vendor.</li>
+      <li>We have not run a head-to-head trial of these tools. Descriptions reflect each vendor's public positioning, and features and prices change, so confirm current details with each vendor before you decide.</li>
       <li>API list prices: <a href="https://aws.amazon.com/textract/pricing/" target="_blank" rel="noopener">Amazon Textract pricing</a> and Microsoft's public retail prices for Azure AI Document Intelligence, checked September 28, 2026. DocsAPI's price is from our own published pricing.</li>
       <li>NetSuite Bill Capture behavior and limits: Oracle's <a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article_1021105256.html" target="_blank" rel="noopener">Bill Capture documentation</a>.</li>
       <li>For industry-wide cost and exception benchmarks, see Ardent Partners' <a href="https://payablesplace.ardentpartners.com/2026/01/state-of-epayables-part-nine-ap-benchmarks-and-best-in-class-performance/" target="_blank" rel="noopener">State of ePayables 2025 benchmarks</a>.</li>
@@ -115,8 +92,8 @@ export const blog31: BlogPost = {
   category: "AI Document Intelligence",
   date: "July 4, 2026",
   datePublished: "2026-07-04T00:00:00.000Z",
-  dateModified: "2026-10-06T00:00:00.000Z",
-  last_updated: "October 6, 2026",
+  dateModified: "2026-10-12T00:00:00.000Z",
+  last_updated: "October 12, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "best ocr software for accounts payable",
@@ -141,12 +118,12 @@ export const blog31: BlogPost = {
     {
       question: "What's the average touchless processing rate on AP OCR software?",
       answer:
-        "60-80% for repeat-vendor invoices with modern layout-aware OCR. Best tools in our ranking hit 78-81% on production sample. Free-tier tools (Melio) land closer to 65%. Rates drop 15-20 points on first-time vendors and complex multi-page invoices.",
+        "It varies a lot with your vendor mix. Ardent Partners' benchmarks report an average touchless rate of 32.6% and 49.2% at best-in-class companies. Expect lower on first-time vendors, scanned files and complex multi-page invoices, and measure the rate on your own invoices before you trust any vendor's figure.",
     },
     {
       question: "How much does the best AP OCR software cost?",
       answer:
-        "SMB: $5-$10 per invoice (Bill.com, Melio). Mid-market: $8-$18 per invoice (AvidXchange, Tipalti). Enterprise: $15-$40 per invoice (Basware, Coupa, SAP Ariba). Builder stack: roughly $0.01 to $0.05 per page for invoice extraction, times the pages per invoice, plus engineering time.",
+        "Suite pricing varies by vendor and is often by quote, so ask each one for the all-in cost per invoice, including implementation. On the builder path, AWS Textract's AnalyzeExpense lists $0.01 per page and DocsAPI starts from $0.02 per page, times the pages per invoice, plus engineering time.",
     },
     {
       question: "Which AP OCR tool has the best QuickBooks integration?",
@@ -156,12 +133,12 @@ export const blog31: BlogPost = {
     {
       question: "Is DocsAPI a good choice for accounts payable?",
       answer:
-        "DocsAPI is the builder stack pick, layout-aware OCR from $0.02 per page with field-level confidence scores, and a free 30-day trial for qualified lenders after a demo. Best fit for teams wanting to own the workflow, or at 10,000+ invoices/month where unit economics favor DIY. You build the validation and routing layers yourself.",
+        "DocsAPI is the builder-stack option: layout-aware OCR from $0.02 per page, with access starting with a demo and a free 30-day trial for qualified lenders. It suits teams that want to own the workflow. You build the validation and routing layers yourself.",
     },
     {
       question: "How do I trial AP OCR software?",
       answer:
-        "Run 20 of your worst real invoices through the top 2-3 finalists, not their clean demo files. Measure touchless rate (target above 60% on repeat vendors), field-level accuracy on vendor/PO/total/due date, and whether their PO matching reconciles vendor and PO number together. Anything below those bars fails at go-live.",
+        "Run 20 of your worst real invoices through the top 2-3 finalists, not their clean demo files. Measure touchless rate, field-level accuracy on vendor, PO, total and due date, and whether their PO matching reconciles vendor and PO number together. Set your pass bar before you start, based on what a manual review costs you.",
     },
     {
       question: "What is the best OCR for accounts payable on NetSuite?",
