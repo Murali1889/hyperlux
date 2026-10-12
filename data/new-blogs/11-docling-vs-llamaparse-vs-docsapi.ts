@@ -13,7 +13,7 @@ export const blog11: BlogPost = {
   summary:
     "Docling is a free, open-source converter you run on your own machines; LlamaParse is a hosted parser billed in credits, from $1.25 per 1,000 pages. Choose Docling for private, offline or technical documents, LlamaParse for LlamaIndex RAG pipelines and messy scans. For financial tables, also test a document API.",
   content: `
-    <p>Short answer: Docling if your documents must stay on your own servers or you want no per-page fee, LlamaParse if you want a managed parser that plugs into LlamaIndex. Both turn documents into Markdown or JSON for AI pipelines. Below: our benchmark results, LlamaParse's actual prices, what Docling did with a 3-page bank statement we ran, and where Textract, Tesseract and Unstructured fit.</p>
+    <p>Short answer: Docling if your documents must stay on your own servers or you want no per-page fee, LlamaParse if you want a managed parser that plugs into LlamaIndex. Both turn documents into Markdown or JSON for AI pipelines. Below are our benchmark results, LlamaParse's actual prices, and what Docling did with a 3-page bank statement we ran.</p>
 
     <h2>Is Docling better than LlamaParse?</h2>
     <p>Neither wins everywhere. In our 1,200-document benchmark Docling led on academic and technical PDFs (94% against 89%), while LlamaParse led on phone-scanned receipts (78% against 58%). Docling is free and runs offline; LlamaParse costs credits but needs no servers. So the docling vs llamaparse choice comes down to your documents and whether they may leave your network.</p>
@@ -50,7 +50,7 @@ export const blog11: BlogPost = {
         <tr><td>Scanned PDF (OCR by RapidOCR)</td><td>3</td><td>35, 39, 36</td><td>110 of 110</td><td>22 seconds</td></tr>
       </tbody>
     </table>
-    <p>Three honest caveats. Our statement is cleaner than most real ones: no merged cells, no rows split across a page break, no stamps. Docling did recognize the repeated header on each page as a header, so no header rows leaked into the data. And on a laptop CPU it took 7 to 10 seconds a page; in our benchmark, on a cloud machine, it averaged 0.8 seconds, so hardware matters a lot.</p>
+    <p>Three caveats. Our statement is cleaner than most real ones: no merged cells, no rows split across a page break, no stamps. Docling did recognize the repeated header on each page as a header, so no header rows leaked into the data. And on a laptop CPU it took 7 to 10 seconds a page; in our benchmark, on a cloud machine, it averaged 0.8 seconds, so hardware matters a lot.</p>
     <p>The code we ran joins the per-page tables and checks every running balance against the opening balance printed on the statement:</p>
     <pre><code>from docling.document_converter import DocumentConverter
 import pandas as pd
@@ -85,7 +85,7 @@ print("rows where the running balance does not match:", problems)</code></pre>
         <tr><td>Average time per page</td><td>0.8 s (self-hosted, cloud machine)</td><td>1.4 s (API)</td><td>1.1 s (API)</td></tr>
       </tbody>
     </table>
-    <p>Why did Docling score 76% on real bank statements when it read our synthetic one perfectly? Real statements break tables in the middle of a row, merge cells, print notes between transactions and change layouts between banks. That is exactly where the joining and checking work sits. Treat any docling benchmark, including ours, as a starting point and test on 50 of your own documents.</p>
+    <p>Why did Docling score 76% on real bank statements when it read our synthetic one perfectly? Real statements break tables in the middle of a row, merge cells, print notes between transactions and change layouts between banks. That is exactly where the joining and checking work sits. Treat any docling benchmark, ours included, as a starting point and test on 50 of your own documents.</p>
 
     <h2>How much does LlamaParse cost?</h2>
     <p>LlamaParse bills in credits at $1.25 per 1,000 credits, and each page costs 1 to 45 credits depending on the tier: Fast 1, Cost-effective 3, Agentic 10 and Agentic Plus 45. That works out to $1.25 to $56.25 per 1,000 pages. The free plan includes 10,000 credits a month; paid plans start at $50 a month.</p>
@@ -121,8 +121,8 @@ print("rows where the running balance does not match:", problems)</code></pre>
     <p>If you are comparing docling vs llamaparse vs unstructured, Unstructured is the third common option: an open-source library (Apache 2.0) for turning documents into clean elements for AI pipelines, with a hosted platform alongside it. Like Docling it can run on your own machines; like LlamaParse it has a paid hosted option. We did not include it in our benchmark, so test it on your own documents before choosing.</p>
 
     <h2>Should you self-host or use a hosted parser?</h2>
-    <p>Self-host (Docling or open-source Unstructured) when documents may not leave your network or volume is high and you have engineers to run it. Use a hosted parser (LlamaParse, or LlamaParse's private cloud option for enterprises) when you would rather pay per page than run servers. Our laptop test is a reminder that self-hosting speed depends heavily on hardware.</p>
-    <p>For a regulated team, the real checklist is data residency, retention, audit logging and who can see the files, not the parser's feature list. A hosted service's security documents matter as much as its accuracy.</p>
+    <p>Self-host (Docling or open-source Unstructured) when documents may not leave your network or volume is high and you have engineers to run it. Use a hosted parser (LlamaParse, or LlamaParse's private cloud option for enterprises) when you would rather pay per page than run servers. Our laptop test showed how much self-hosting speed depends on hardware.</p>
+    <p>For a regulated team, the real checklist is data residency, retention, audit logging and who can see the files, not the parser's feature list.</p>
 
     <h2>Where DocsAPI fits</h2>
     <p>Disclosure: DocsAPI is our product. It is a hosted API for financial and business documents: it classifies each file, returns named fields as JSON, and joins transaction tables across pages, which is why it led on bank statements (91%) and invoices (93%) in our benchmark. It lost on academic papers and receipts. It costs from $0.02 per page, with a free 30-day trial for qualified lenders after a demo. It is not a general RAG parser and cannot run offline; for those, use Docling or LlamaParse. See our <a href="/resources/blogs/vlm-vs-ocr">VLM vs OCR guide</a> for handwriting, which none of these three handles reliably.</p>

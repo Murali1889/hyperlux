@@ -13,7 +13,7 @@ export const blog31: BlogPost = {
   summary:
     "The best OCR software for accounts payable depends on invoice volume and your ERP: small teams on QuickBooks or Xero usually start with BILL or Melio, mid-market teams with AvidXchange or Tipalti, SAP and Oracle enterprises with Basware or Coupa, and teams with developers with an OCR API. Test finalists on your own invoices.",
   content: `
-    <p>Every AP OCR vendor claims 99% touchless. Two years and 200 real invoices later, trialed across QuickBooks, NetSuite, and SAP customer stacks, I can tell you almost none of them actually hit that number on messy production invoices. Some ship the workflow you need out of the box; some need six months of template tuning; some are overpriced platforms wrapping a $0.03 OCR API. This is the honest 2026 buyer's guide for the best OCR software for accounts payable, 8 tools ranked by touchless rate, ERP fit, and total cost of ownership.</p>
+    <p>Every AP OCR vendor claims 99% touchless. Two years and 200 real invoices later, trialed across QuickBooks, NetSuite, and SAP customer stacks, I can tell you almost none of them actually hit that number on messy production invoices. Some ship the workflow you need out of the box; some need six months of template tuning; some are overpriced platforms wrapping a $0.03 OCR API. Below are 8 tools ranked by touchless rate, ERP fit, and total cost of ownership.</p>
 
     <p>New to the topic? Our <a href="/resources/blogs/accounts-payable-ocr">accounts payable OCR guide</a> explains how AP OCR works, the checks it must run before payment and a cost model you can fill in. This page compares the software.</p>
 
@@ -69,7 +69,7 @@ export const blog31: BlogPost = {
 
     <h2>#7 Melio, best free tier for US SMBs</h2>
 
-    <p>Melio offers the best AP OCR free tier for US SMBs on QuickBooks. Free ACH payments, basic OCR, and simple two-way sync with QuickBooks make it a good starting point at 20-200 invoices/month. Touchless rate: 65% on our sample, lowest among finalists but reflects the free-tier positioning. Where it loses: OCR quality degrades on scanned invoices, no support for non-QuickBooks stacks, and international payment support is limited. Best fit: US-only SMBs under 200 invoices/month on QuickBooks with tight budget.</p>
+    <p>Melio offers the best AP OCR free tier for US SMBs on QuickBooks. Free ACH payments, basic OCR, and simple two-way sync with QuickBooks make it a starting point at 20-200 invoices/month. Touchless rate: 65% on our sample, lowest among finalists but reflects the free-tier positioning. Where it loses: OCR quality degrades on scanned invoices, no support for non-QuickBooks stacks, and international payment support is limited. Best fit: US-only SMBs under 200 invoices/month on QuickBooks with tight budget.</p>
 
     <h2>#8 SAP Ariba, best only if you're already on SAP</h2>
 
@@ -100,7 +100,7 @@ export const blog31: BlogPost = {
 
     <h2>What I'd do today</h2>
 
-    <p>For most teams under 5,000 invoices/month with a standard ERP, Bill.com or AvidXchange gets you 80% of the value with 20% of the setup pain. Trial both on 20 of your real invoices for 2 weeks before signing. For teams with unusual requirements, global suppliers (Tipalti), vertical-specific layouts (AvidXchange), enterprise SAP (Basware), or full workflow control (DocsAPI), pick the specialist, not the generalist. Above 10,000/month or with engineering capacity, the builder path on raw OCR APIs plus a custom validation layer often wins on unit economics and flexibility. (For the broader AP context, our <a href="/resources/blogs/accounts-payable-ocr">accounts payable OCR pillar</a> covers the workflow. For OCR-vs-IDP context, see our <a href="/resources/blogs/idp-vs-ocr-understanding-the-key-differences-for-automation-success">IDP vs OCR guide</a>. For the invoice-specific rewrite, our <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">invoice processing OCR playbook</a>.)</p>
+    <p>For most teams under 5,000 invoices/month with a standard ERP, Bill.com or AvidXchange is the usual starting point. Trial both on 20 of your real invoices for 2 weeks before signing. For teams with unusual requirements, global suppliers (Tipalti), vertical-specific layouts (AvidXchange), enterprise SAP (Basware), or full workflow control (DocsAPI), pick the specialist, not the generalist. Above 10,000/month or with engineering capacity, the builder path on raw OCR APIs plus a custom validation layer often wins on unit economics and flexibility. (For the broader AP context, our <a href="/resources/blogs/accounts-payable-ocr">accounts payable OCR pillar</a> covers the workflow. For OCR-vs-IDP context, see our <a href="/resources/blogs/idp-vs-ocr-understanding-the-key-differences-for-automation-success">IDP vs OCR guide</a>. For invoice-specific detail, our <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">invoice processing OCR playbook</a>.)</p>
 
     <h2>Sources and how we checked this</h2>
     <ul>
@@ -156,7 +156,7 @@ export const blog31: BlogPost = {
     {
       question: "Is DocsAPI a good choice for accounts payable?",
       answer:
-        "DocsAPI is the builder stack pick, layout-aware OCR from $0.02 per page with field-level confidence scores, and a free 30-day trial for qualified lenders after a demo. Best fit for teams wanting to own the workflow, or at 10,000+ invoices/month where unit economics favor DIY. You build the validation and routing layers yourself; the OCR quality is production-ready.",
+        "DocsAPI is the builder stack pick, layout-aware OCR from $0.02 per page with field-level confidence scores, and a free 30-day trial for qualified lenders after a demo. Best fit for teams wanting to own the workflow, or at 10,000+ invoices/month where unit economics favor DIY. You build the validation and routing layers yourself.",
     },
     {
       question: "How do I trial AP OCR software?",

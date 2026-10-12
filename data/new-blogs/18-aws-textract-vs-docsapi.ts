@@ -13,7 +13,7 @@ export const blog18: BlogPost = {
   summary:
     "Pick AWS Textract if you already run on AWS and read English or Western European forms, receipts or US IDs; plain OCR costs $1.50 per 1,000 pages. Pick a document API like DocsAPI when you need multi-page statement tables joined and fields returned in one call.",
   content: `
-    <p>AWS Textract is cheap for plain text ($1.50 per 1,000 pages) and gets expensive once you turn on forms ($50 per 1,000). It reads six languages, handles handwriting only in English, and needs an asynchronous job for any PDF over one page. This page gives the full Textract price list, its limits, worked costs, and when Textract, DocsAPI, Tesseract or another cloud fits.</p>
+    <p>AWS Textract is cheap for plain text ($1.50 per 1,000 pages) and gets expensive once you turn on forms ($50 per 1,000). It reads six languages, handles handwriting only in English, and needs an asynchronous job for any PDF over one page.</p>
 
     <h2>Should you use AWS Textract or DocsAPI?</h2>
     <p>Use Textract if your stack is on AWS and your documents are English or Western European forms, receipts or US IDs. Use DocsAPI if you need document classification and named fields in one call, and bank statement or invoice tables joined across pages. Disclosure: DocsAPI is our product, so test both on your own documents.</p>
@@ -55,7 +55,7 @@ export const blog18: BlogPost = {
     <p>The free tier lasts three months for new AWS customers: 1,000 pages a month of text detection, 100 pages a month of forms, tables or layout, 100 of AnalyzeExpense, 100 of AnalyzeID and 2,000 of AnalyzeLending. Prices differ slightly by AWS region, so check the region you will run in.</p>
 
     <h3>What Textract costs at 100,000 pages a month</h3>
-    <p>Here is AWS Textract pricing per 1,000 pages turned into monthly bills, so you can see which feature drives the cost. All of these stay in the first-million price tier.</p>
+    <p>The same prices as monthly bills, so you can see which feature drives the cost. All of these stay in the first-million price tier.</p>
     <table>
       <thead><tr><th>What you run on 100,000 pages</th><th>Math</th><th>Monthly cost</th></tr></thead>
       <tbody>
@@ -71,7 +71,7 @@ export const blog18: BlogPost = {
         <tr><td>DocsAPI, for comparison (our product)</td><td>100,000 x $0.02</td><td>$2,000 before volume discounts</td></tr>
       </tbody>
     </table>
-    <p>The takeaway: if you only need text, Textract is far cheaper than any document API. If you need forms on every page, Textract can cost more than a specialized API. And above a million pages the second tier kicks in: 2 million pages of plain text cost 1,000 x $1.50 + 1,000 x $0.60 = $2,100 a month. For how per-page, per-document and subscription pricing compare across vendors, see our <a href="/resources/blogs/invoice-ocr-pricing-models">invoice OCR pricing guide</a> and <a href="/resources/blogs/bank-statement-ocr-pricing">bank statement OCR pricing guide</a>.</p>
+    <p>If you only need text, Textract is far cheaper than any document API. If you need forms on every page, Textract can cost more than a specialized API. And above a million pages the second tier kicks in: 2 million pages of plain text cost 1,000 x $1.50 + 1,000 x $0.60 = $2,100 a month. For how per-page, per-document and subscription pricing compare across vendors, see our <a href="/resources/blogs/invoice-ocr-pricing-models">invoice OCR pricing guide</a> and <a href="/resources/blogs/bank-statement-ocr-pricing">bank statement OCR pricing guide</a>.</p>
 
     <h2>Which Textract API do you need?</h2>
     <p>There are five Textract APIs, not one, and each Amazon Textract API call is billed per page. DetectDocumentText returns text and handwriting. AnalyzeDocument adds forms, tables, layout, signatures and queries. AnalyzeExpense reads invoices and receipts. AnalyzeID reads US passports and driver's licenses. AnalyzeLending classifies and extracts mortgage application documents. You pay for each feature you switch on.</p>
@@ -88,7 +88,7 @@ export const blog18: BlogPost = {
     <p>Queries let you ask for a field in plain English, such as "What is the account number?", and get the answer back. They are limited to 15 per page on synchronous calls and 30 on asynchronous calls, and they only work on English documents. If invoices are your main job, our <a href="/resources/blogs/invoice-ocr-api">invoice OCR API comparison</a> maps AnalyzeExpense's field names against Azure, Google and Mindee.</p>
 
     <h2>What are AWS Textract's limits?</h2>
-    <p>The limits that surprise teams most: only six languages (English, French, German, Italian, Portuguese, Spanish), handwriting only in English, no vertical text, and synchronous calls that accept just one page of a PDF or TIFF. Multi-page PDFs must go through the asynchronous AWS Textract API, up to 3,000 pages and 500 MB per file.</p>
+    <p>The main limits: only six languages (English, French, German, Italian, Portuguese, Spanish), handwriting only in English, no vertical text, and synchronous calls that accept just one page of a PDF or TIFF. Multi-page PDFs must go through the asynchronous AWS Textract API, up to 3,000 pages and 500 MB per file.</p>
     <table>
       <thead><tr><th>Limit</th><th>What AWS documents</th><th>What it means for you</th></tr></thead>
       <tbody>

@@ -13,7 +13,7 @@ export const blog30: BlogPost = {
   summary:
     "Accounts payable OCR reads supplier invoices (vendor, invoice number, dates, line items, tax, total) and sends the data to your AP system for approval and payment. Reading is the cheap part; the savings come from automatic checks, PO matching and a review queue for the invoices that fail them.",
   content: `
-    <p>Accounts payable (AP) OCR replaces typing invoices by hand. It reads each invoice, checks the numbers against your vendor list and purchase orders, and sends clean invoices straight to approval while flagging the rest for a person. This page explains how it works, the checks that prevent wrong payments, what it saves using a cost model you can fill in, how accurate it is, and how to choose software.</p>
+    <p>Accounts payable (AP) OCR replaces typing invoices by hand. It reads each invoice, checks the numbers against your vendor list and purchase orders, and sends clean invoices straight to approval while flagging the rest for a person.</p>
 
     <h2>What is accounts payable OCR?</h2>
     <p>Accounts payable OCR is software that reads supplier invoices, whether PDF, scan, photo or email, and turns them into structured fields such as vendor, invoice number, dates, line items, tax and total. Unlike plain OCR, which only returns text, AP OCR knows what each field means and checks it before the invoice reaches your AP or accounting system.</p>
@@ -32,18 +32,18 @@ export const blog30: BlogPost = {
     </table>
 
     <h2>How does OCR for accounts payable work?</h2>
-    <p>An AP OCR pipeline has six steps: intake, image clean-up, reading the layout, extracting fields, validating them, and routing the invoice. Clean invoices go straight to approval; the rest go to a review queue with the doubtful fields highlighted. The reading step gets the attention, but the validation step decides whether you can trust the result.</p>
+    <p>An AP OCR pipeline has six steps: intake, image clean-up, reading the layout, extracting fields, validating them, and routing the invoice. The reading step gets the attention, but the validation step decides whether you can trust the result.</p>
     <ol>
       <li><strong>Intake.</strong> Invoices arrive by email, supplier portal, scanner or upload. Email is the messiest channel, with forwarded threads and invoices in the email body; our <a href="/resources/blogs/email-invoice-parsing">email invoice parsing guide</a> covers the traps.</li>
       <li><strong>Clean-up.</strong> Straighten tilted scans, fix rotation, split files that contain several invoices.</li>
       <li><strong>Layout reading.</strong> Find the header, the line-item table and the totals block, and read text in the right order, including tables that continue onto the next page. Our <a href="/resources/blogs/invoice-line-item-ocr">invoice line-item OCR guide</a> shows where this breaks.</li>
       <li><strong>Field extraction.</strong> Pull each field and normalize it: dates to one format, amounts to numbers, vendor names to vendor IDs.</li>
       <li><strong>Validation.</strong> Run the checks in the next section.</li>
-      <li><strong>Routing.</strong> Invoices that pass go to approval or straight into your accounting system. Invoices that fail go to a person, with the reason shown.</li>
+      <li><strong>Routing.</strong> Invoices that pass go to approval or straight into your accounting system. Invoices that fail go to a review queue with the doubtful fields highlighted and the reason shown.</li>
     </ol>
 
     <h2>What should AP OCR check before an invoice is paid?</h2>
-    <p>At minimum: duplicates, the invoice math, the vendor, the purchase order, dates and terms, currency and tax, and the confidence of each field. These seven checks catch most wrong payments, whether the cause is an OCR misread, a supplier mistake or fraud.</p>
+    <p>At minimum: duplicates, the invoice math, the vendor, the purchase order, dates and terms, currency and tax, and the confidence of each field. Between them they cover an OCR misread, a supplier mistake and fraud.</p>
     <table>
       <thead><tr><th>Check</th><th>What it catches</th><th>How to run it</th></tr></thead>
       <tbody>
@@ -91,7 +91,7 @@ export const blog30: BlogPost = {
         <tr><td>Invoice line items, Docling</td><td>81%</td></tr>
       </tbody>
     </table>
-    <p>Two practical points. First, character accuracy is not field accuracy: one wrong digit in a 12-digit total is 99% character accuracy and a wrong payment. Measure fields, as our <a href="/resources/blogs/understanding-ocr-accuracy-metrics-challenges-and-improvement-strategies">OCR accuracy metrics guide</a> explains. Second, the number that drives cost is the touchless rate: the share of invoices that pass every check with no human touch. Measure it on your own invoices, split by repeat and new vendors. Full results are in our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>.</p>
+    <p>Character accuracy is not field accuracy: one wrong digit in a 12-digit total is 99% character accuracy and a wrong payment. Measure fields, as our <a href="/resources/blogs/understanding-ocr-accuracy-metrics-challenges-and-improvement-strategies">OCR accuracy metrics guide</a> explains. The number that drives cost is the touchless rate, the share of invoices that pass every check with no human touch. Measure it on your own invoices, split by repeat and new vendors. Full results are in our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>.</p>
 
     <h2>Which accounts payable OCR software should you consider?</h2>
     <p>There are three kinds: AP automation suites that include OCR, approvals and payments; capture features built into your ERP or accounting system; and OCR or document APIs you connect yourself. Suites are fastest to start, ERP features avoid another vendor, and APIs give the most control but need engineering work.</p>

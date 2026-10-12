@@ -17,7 +17,7 @@ export const blog20: BlogPost = {
 
     <h2>Is PaddleOCR better than Tesseract?</h2>
     <p>Yes, on hard images. PaddleOCR made fewer errors than Tesseract on a skewed phone-style photo, a faded receipt and Chinese text in our test, and scored 15 to 24 points higher on tables, phone photos and mixed-language pages in our larger benchmark. On clean printed English the two tie, and Tesseract runs far faster on a CPU.</p>
-    <p>So the useful question is not which engine is better in general, but which errors you can live with. Tesseract's mistakes in our test were the kind that slip into a database unnoticed: a ZIP code read as "$0205" and a receipt total read as "Ti ay". PaddleOCR's default model got every number right and only changed some punctuation. If your pipeline pulls amounts, dates or IDs, that difference matters more than speed.</p>
+    <p>The useful question is which errors you can live with. Tesseract's mistakes in our test were the kind that slip into a database unnoticed: a ZIP code read as "$0205" and a receipt total read as "Ti ay". PaddleOCR's default model got every number right and only changed some punctuation. If your pipeline pulls amounts, dates or IDs, that difference matters more than speed.</p>
 
     <h2>PaddleOCR vs Tesseract: our side-by-side test (September 2026)</h2>
     <p>On September 28, 2026 we ran both engines, with default settings, on the same six images and compared the output with the exact text we put in. This small test shows the kinds of errors each engine makes. It is not an error rate to expect on your documents; for that, see the benchmark section further down.</p>
@@ -51,7 +51,7 @@ export const blog20: BlogPost = {
       <li><strong>PaddleOCR tiny:</strong> read $4,812.50 as "$4.812.50" and 8.25% as "8.258". These are the silent amount errors that break financial data, so test the tiny tier carefully before trusting it with numbers.</li>
       <li><strong>PaddleOCR small:</strong> no errors on any of the six images.</li>
     </ul>
-    <p>One more finding worth knowing. When we forced Tesseract into page segmentation mode 6 (the --psm 6 flag, "treat the image as one block of text"), a common tip for tables, it turned the ruled bank table into nonsense and got 0 of 11 amounts right. The default mode (3) read the same table perfectly. If you tune Tesseract, test every setting on your own documents before you rely on it.</p>
+    <p>One more finding. When we forced Tesseract into page segmentation mode 6 (the --psm 6 flag, "treat the image as one block of text"), a common tip for tables, it turned the ruled bank table into nonsense and got 0 of 11 amounts right. The default mode (3) read the same table perfectly. If you tune Tesseract, test every setting on your own documents before you rely on it.</p>
 
     <h2>The code we ran</h2>
     <p>Both engines take a few lines. Tesseract runs from the command line (Python users usually call it through the pytesseract wrapper):</p>
@@ -70,7 +70,7 @@ print(" ".join(result[0]["rec_texts"]))</code></pre>
     <p>For a faster tier, add text_detection_model_name="PP-OCRv6_small_det" and text_recognition_model_name="PP-OCRv6_small_rec" (or the tiny names) when you create the PaddleOCR object.</p>
 
     <h2>Tesseract OCR vs PaddleOCR at a glance</h2>
-    <p>Here is the PaddleOCR vs Tesseract comparison in one table. Versions and language counts come from each project's GitHub page, checked on September 28, 2026. Speeds come from our test above.</p>
+    <p>Versions and language counts come from each project's GitHub page, checked on September 28, 2026. Speeds come from our test above.</p>
     <table>
       <thead><tr><th>Dimension</th><th>Tesseract</th><th>PaddleOCR</th></tr></thead>
       <tbody>
@@ -138,7 +138,7 @@ print(" ".join(result[0]["rec_texts"]))</code></pre>
 
     <h2>Which reads more languages?</h2>
     <p>Both claim more than 100. The difference is how you use them. Tesseract needs one model file per language and you name the languages with -l, for example -l eng+chi_sim. PaddleOCR's PP-OCRv6 reads Chinese, English, Japanese and 46 Latin-script languages with a single model, so mixed English and Chinese pages need no switching.</p>
-    <p>In our test that showed up clearly: PaddleOCR read the Chinese invoice lines with no errors, while Tesseract with its official Chinese model lost one character and the currency sign. Our benchmark found the same direction on mixed English and Mandarin or Spanish pages (89% against 71%). If your documents are Latin-script only, language is not the deciding factor; tables, photos and speed are.</p>
+    <p>PaddleOCR read the Chinese invoice lines with no errors, while Tesseract with its official Chinese model lost one character and the currency sign. Our benchmark found the same direction on mixed English and Mandarin or Spanish pages (89% against 71%). If your documents are Latin-script only, language is not the deciding factor; tables, photos and speed are.</p>
 
     <h2>Tesseract vs PaddleOCR vs EasyOCR, and where docTR fits</h2>
     <p>If you are weighing EasyOCR vs Tesseract vs PaddleOCR: EasyOCR is the quickest deep-learning option for teams that already use PyTorch, but it has not shipped a release since version 1.7.2 in September 2024. docTR, from Mindee, is an actively released PyTorch library for documents (1.1.0 in August 2026). We did not test either in this round, so the notes below come from their GitHub pages.</p>
@@ -154,7 +154,7 @@ print(" ".join(result[0]["rec_texts"]))</code></pre>
     <p>For docTR vs Tesseract specifically: docTR works like PaddleOCR, with one neural network that finds text and a second that reads it, so expect it to behave more like PaddleOCR than Tesseract on hard images, and to need more setup. Test it on your own documents before you decide.</p>
 
     <h2>Where a hosted API like DocsAPI fits</h2>
-    <p>Disclosure: DocsAPI is our product. Both open-source engines give you text. Many business teams need more than text: named fields such as vendor, amount and date, tables stitched across pages, checks that the numbers add up, and someone else running the servers. That is what document APIs do.</p>
+    <p>Disclosure: DocsAPI is our product. Both open-source engines give you text. Many business teams need more than text: named fields such as vendor, amount and date, tables stitched across pages, checks that the numbers add up, and someone else running the servers.</p>
     <p>In our benchmark DocsAPI led on multi-page bank statement tables (91%, against 79% for PaddleOCR and 64% for Tesseract) because it joins transaction tables across pages. It did not win everything: PaddleOCR scored higher on phone photos (82% against 76%) and mixed-language pages (89% against 81%). DocsAPI prices per page, starting at $0.02, with volume discounts above 100,000 pages a month and a free 30-day trial for qualified lenders after a demo. At 100,000 pages that is $2,000 a month before discounts. The open-source engines cost nothing to license but not nothing to run: as an example, 4 hours a month of engineering at $100 an hour is $400 a month before compute. A hosted API cannot run air-gapped, so for data that must never leave your network, the open-source engines are the only option here.</p>
     <p>For other comparisons, see <a href="/resources/blogs/docling-vs-llamaparse-vs-docsapi">Docling vs LlamaParse</a>, <a href="/resources/blogs/aws-textract-vs-docsapi">AWS Textract vs DocsAPI</a>, <a href="/resources/blogs/abbyy-finereader-alternative">ABBYY FineReader alternatives</a> and our <a href="/resources/blogs/best-ocr-software-2026">best OCR software guide</a>.</p>
 
