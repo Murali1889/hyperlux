@@ -21,21 +21,20 @@ const faqs = [
     question: "Can it handle multi-language contracts?",
     answer: (
       <>
-        Yes, our solution supports contract abstraction in multiple languages including English, Spanish, French,
-        German, Italian, Portuguese, Dutch, and Japanese. See our{" "}
+        Yes, but expect more flagged fields. In our 2026 benchmark, multilingual documents read at 81%, below the
+        97-99% for clean typed English text. We have not published a clause-level figure for each language, so test
+        with your own contracts. See our{" "}
         <Link href="/resources/blogs/legal-document-translation-ocr" className="underline hover:text-indigo-700">
           legal document translation guide
         </Link>{" "}
-        for how this works. The system can identify and extract key clauses regardless of language, though accuracy
-        may vary slightly for less common languages. We're continuously expanding our language capabilities based on
-        customer demand.
+        for how translation and extraction fit together.
       </>
     ),
   },
   {
     question: "Is human review supported?",
     answer:
-      "Absolutely. Our platform includes a comprehensive human review interface that allows legal professionals to validate and refine AI-generated results. The system highlights extracted clauses, flags potential issues, and enables quick corrections. This human-in-the-loop approach combines the efficiency of AI with the expertise of your legal team for optimal results.",
+      "Your legal team does the review. DocsAPI returns a confidence score with each clause and flags the ones it is unsure about, so reviewers start with the uncertain clauses instead of rereading every agreement. Review happens in your own tools or workflow.",
   },
   {
     question: "How is sensitive data handled?",

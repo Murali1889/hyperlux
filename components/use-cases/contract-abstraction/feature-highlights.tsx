@@ -6,31 +6,31 @@ import { FileSearch, Calendar, Shield, Link2 } from "lucide-react"
 const features = [
   {
     icon: <FileSearch className="h-8 w-8 text-indigo-600" />,
-    title: "Clause extraction and classification",
+    title: "Clause and field extraction",
     description:
-      "Our AI engine automatically identifies and extracts over 50 common clause types including payment terms, termination conditions, renewal provisions, and liability limitations. The system classifies each clause by type, risk level, and enforceability, providing a comprehensive overview of contract obligations and rights. Legal teams can quickly search across thousands of contracts to find specific language or compare similar clauses across multiple agreements.",
-    tags: ["NLP", "Machine Learning", "Legal Analysis"],
+      "Pulls parties, payment terms, termination and renewal provisions, and liability limitations out of contract text and returns them as JSON fields. Each clause carries a confidence score, so your legal team can see which extractions are solid and which need a lawyer to look.",
+    tags: ["JSON output", "Confidence scores", "Clause fields"],
   },
   {
     icon: <Calendar className="h-8 w-8 text-indigo-600" />,
-    title: "Key date detection and alerts",
+    title: "Key date fields",
     description:
-      "Never miss another critical deadline with automated date extraction and proactive notifications. The system identifies important dates including renewal windows, termination rights, payment schedules, and compliance deadlines. Configurable alerts notify stakeholders at predetermined intervals before key dates, ensuring teams have adequate time to evaluate options and take appropriate action. Calendar integration allows for seamless incorporation of contract milestones into your existing workflow.",
-    tags: ["Automated Alerts", "Calendar Integration", "Deadline Management"],
+      "Effective, renewal, notice, and expiry dates come back as date fields instead of sentences buried on page 47. Your contract system or calendar can then send the reminders; DocsAPI supplies the dates it reads, and flags any it is unsure about.",
+    tags: ["Renewal dates", "Notice periods", "Flagged when unsure"],
   },
   {
     icon: <Shield className="h-8 w-8 text-indigo-600" />,
-    title: "Confidential data redaction",
+    title: "Handling of sensitive contracts",
     description:
-      "Protect sensitive information with intelligent redaction capabilities that automatically identify and obscure confidential data. The system recognizes personally identifiable information (PII), financial details, and custom-defined sensitive content. Role-based access controls ensure that team members only see the information relevant to their function. All processing occurs within your secure environment, maintaining data sovereignty and compliance with privacy regulations like GDPR, CCPA, and industry-specific requirements.",
-    tags: ["Data Privacy", "Compliance", "Security"],
+      "DocsAPI is SOC 2 Type II and ISO 27001 certified, and HIPAA-eligible with a BAA. Customer documents are not used to train models, and documents and extracted data are kept only for a short, configurable retention period. DocsAPI runs as a cloud API, so if your contracts must stay inside your own environment, raise it at the demo.",
+    tags: ["SOC 2 Type II", "ISO 27001", "No training on your documents"],
   },
   {
     icon: <Link2 className="h-8 w-8 text-indigo-600" />,
-    title: "Integration with contract management systems",
+    title: "Output for your contract system",
     description:
-      "Seamlessly connect our contract abstraction engine with your existing contract lifecycle management (CLM) platform through our comprehensive API. Extracted data automatically populates your contract repository with structured metadata, eliminating manual data entry. The system works with leading CLM solutions including DocuSign CLM, Icertis, Agiloft, and Conga. Custom integrations are available for proprietary systems, ensuring a smooth implementation regardless of your current technology stack.",
-    tags: ["API Integration", "CLM Compatibility", "Workflow Automation"],
+      "Extracted data is returned through the API as structured JSON that you load into your contract repository or lifecycle management tool. We do not list named integrations; the output is plain JSON, so your team maps the fields into whichever system you use.",
+    tags: ["API", "Structured JSON", "Your repository"],
   },
 ]
 

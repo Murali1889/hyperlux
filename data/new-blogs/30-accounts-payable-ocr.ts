@@ -13,7 +13,7 @@ export const blog30: BlogPost = {
   summary:
     "Accounts payable OCR reads supplier invoices (vendor, invoice number, dates, line items, tax, total) and sends the data to your AP system for approval and payment. Reading is the cheap part; the savings come from automatic checks, PO matching and a review queue for the invoices that fail them.",
   content: `
-    <p>Accounts payable (AP) OCR replaces typing invoices by hand. It reads each invoice, checks the numbers against your vendor list and purchase orders, and sends clean invoices straight to approval while flagging the rest for a person.</p>
+    <p>Accounts payable (AP) OCR replaces typing invoices by hand. It reads each invoice, checks the numbers against your vendor list and <a href="/documents/financial-docs/purchase-orders">purchase orders</a>, and sends clean invoices straight to approval while flagging the rest for a person.</p>
 
     <h2>What is accounts payable OCR?</h2>
     <p>Accounts payable OCR is software that reads supplier invoices, whether PDF, scan, photo or email, and turns them into structured fields such as vendor, invoice number, dates, line items, tax and total. Unlike plain OCR, which only returns text, AP OCR knows what each field means and checks it before the invoice reaches your AP or accounting system.</p>
@@ -139,8 +139,8 @@ export const blog30: BlogPost = {
   category: "AI Document Intelligence",
   date: "July 1, 2026",
   datePublished: "2026-07-01T00:00:00.000Z",
-  dateModified: "2026-10-06T00:00:00.000Z",
-  last_updated: "October 6, 2026",
+  dateModified: "2026-10-14T00:00:00.000Z",
+  last_updated: "October 14, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "accounts payable ocr",

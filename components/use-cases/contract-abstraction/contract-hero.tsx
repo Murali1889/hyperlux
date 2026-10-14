@@ -20,8 +20,7 @@ export default function ContractHero() {
               Automate Contract Abstraction with AI
             </h1>
             <p className="text-lg md:text-xl text-slate-200 mb-8 max-w-2xl mx-auto lg:mx-0">
-              Instantly identify key clauses, extract critical dates, and flag potential risks with our AI-powered
-              contract analysis platform. Reduce review time and never miss a renewal deadline.
+              Read key clauses and dates out of contracts as structured data, with a confidence score on each one. Uncertain clauses are flagged for a person, and renewal dates land in your contract system as fields.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button size="lg" className="bg-white text-indigo-700 hover:bg-slate-100 text-base font-medium" asChild>

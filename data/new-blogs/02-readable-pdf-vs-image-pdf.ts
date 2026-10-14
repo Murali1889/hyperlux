@@ -73,6 +73,40 @@ export const blog02: BlogPost = {
     <p>This one is the most annoying. Sometimes OCR ran on a PDF but did a terrible job. The text layer exists but it is gibberish. Ctrl+F returns results, but the matches are nonsense.</p>
     <p>You can usually catch this by copying a sentence out and pasting it somewhere. If what you paste is "dl0w !@@# Tcv$" instead of "Total amount due $4,200", the text layer is broken. The fix: strip the bad layer and re-OCR fresh. Tools like <code>ocrmypdf --force-ocr</code> do this in one command. Modern OCR APIs do it automatically.</p>
 
+    <h2>Checking a Whole Folder of PDFs With Code</h2>
+    <p>Ctrl+F works for one file. It does not work for 4,000 files that arrived overnight. To sort them, check each page for two things: how much text it has, and how much of the page is covered by a picture. A page with text and little image coverage is readable. A page with a full-page picture and no text is an image page. A page with both is a scan that already has an OCR layer, and that layer is the one to spot-check.</p>
+    <p>Here is a short Python script that does it, using PyMuPDF. It labels every page, not just the file, so hybrid PDFs show up.</p>
+    <pre><code>import sys
+import fitz  # PyMuPDF: pip install pymupdf
+
+def classify_page(page, min_chars=25):
+    text = page.get_text().strip()
+    has_text = len(text) >= min_chars
+    page_area = page.rect.width * page.rect.height
+    image_area = 0
+    for img in page.get_image_info():
+        r = fitz.Rect(img["bbox"]) &amp; page.rect
+        image_area += r.width * r.height
+    mostly_image = image_area &gt; 0.8 * page_area
+    if has_text and not mostly_image:
+        return "text"
+    if not has_text and mostly_image:
+        return "image"
+    if has_text and mostly_image:
+        return "image+text layer"  # a scan with an OCR layer: spot-check it
+    return "blank/other"
+
+for path in sys.argv[1:]:
+    doc = fitz.open(path)
+    print(path, [classify_page(p) for p in doc])</code></pre>
+    <p>I ran it on four test files I generated: a two-page text PDF, the same two pages rendered to pictures, a hybrid with one text page and one picture page, and a picture page with invisible text laid over it. The output was:</p>
+    <pre><code>text.pdf ['text', 'text']
+image.pdf ['image', 'image']
+hybrid.pdf ['text', 'image']
+ghost.pdf ['image+text layer']</code></pre>
+    <p>That last label matters. A page can be a picture of a document with a text layer from an older OCR run sitting on top. The script cannot tell you whether that layer is good. For those pages, compare the extracted text against what the page shows, or re-run OCR and diff the two. The 25-character and 80 percent thresholds are my choices, so adjust them if your files are mostly stamps or logos.</p>
+    <p>If you only need a quick shell check, <code>pdftotext file.pdf - | wc -w</code> gives a word count for the whole file. Zero words means image PDF, but a hybrid with one text page will still pass, which is why the per-page script is the safer routine. For the OCR step itself, see <a href="/resources/blogs/ocr-pdf-honest-guide">our honest guide to OCR on PDFs</a>, and for sorting mixed files before extraction, <a href="/resources/blogs/document-detection-before-ocr">document detection before OCR</a>.</p>
+
     <h2>How to Fix an Image PDF (Three Fast Ways)</h2>
     <p>If you have an image PDF and need a readable one, here is the simple ranking. Pick based on your situation.</p>
     <table>
@@ -113,9 +147,9 @@ export const blog02: BlogPost = {
   category: "OCR How-To",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-06-17T00:00:00.000Z",
-  last_updated: "June 17, 2026",
-  readTime: "9 min read",
+  dateModified: "2026-10-14T00:00:00.000Z",
+  last_updated: "October 14, 2026",
+  readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "readable pdf",
   secondary_keywords: [
@@ -154,6 +188,11 @@ export const blog02: BlogPost = {
       question: "Can image PDFs be smaller in file size?",
       answer:
         "Often yes, especially after compression. Some 'PDF shrinker' tools convert readable PDFs into image PDFs to make them smaller. The file is smaller, but you lost search and copy. Use a proper compression tool that preserves the text layer.",
+    },
+    {
+      question: "How do I find image-only pages in a folder of PDFs?",
+      answer:
+        "Check each page for extractable text and for how much of the page a picture covers. A page with almost no text and a full-page picture is an image page. A page with both is a scan with an OCR layer that needs a spot-check. The article includes a short PyMuPDF script that labels every page this way, so hybrid files are not missed.",
     },
   ],
 }

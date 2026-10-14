@@ -268,8 +268,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "id document ocr",
     ],
     datePublished: "2025-05-28T00:00:00.000Z",
-    dateModified: "2026-10-12T00:00:00.000Z",
-    last_updated: "October 12, 2026",
+    dateModified: "2026-10-14T00:00:00.000Z",
+    last_updated: "October 14, 2026",
     tags: ["passport OCR", "KYC", "identity", "MRZ"],
     cluster: "compliance",
     faq: [

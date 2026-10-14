@@ -19,7 +19,7 @@ export const blogAp03: BlogPost = {
 
     <p>SAP recognizes two fundamentally different kinds of incoming invoice, and which one you have determines the entire posting path. An MM invoice references a purchase order and goes through Logistics Invoice Verification, the MIRO transaction in the SAP GUI, matched against the purchase order and the goods receipt before it can post. An FI invoice has no PO reference at all and posts directly to Financial Accounting, typically through FB60 or a direct FI posting BAPI, with no 3-way match involved because there is nothing to match against.</p>
 
-    <p>Every real AP department has both. Inventory and direct-spend purchases (raw materials, equipment, anything requisitioned through procurement) generate MM invoices. Recurring operating costs (software subscriptions, utilities, legal and consulting fees, rent) generate FI invoices, because nobody cuts a purchase order for a SaaS renewal. An OCR pipeline that assumes every invoice has a PO number will either force-match FI invoices against nonexistent purchase orders or, worse, silently drop the PO-matching step entirely and let genuine MM invoices post without verification.</p>
+    <p>Every real AP department has both. Inventory and direct-spend purchases (raw materials, equipment, anything requisitioned through procurement) generate MM invoices. Recurring operating costs (software subscriptions, utilities, legal and consulting fees, rent) generate FI invoices, because nobody cuts a purchase order for a SaaS renewal. An OCR pipeline that assumes every invoice has a PO number will either force-match FI invoices against nonexistent <a href="/documents/financial-docs/purchase-orders">purchase orders</a> or, worse, silently drop the PO-matching step entirely and let genuine MM invoices post without verification.</p>
 
     <p>The four-month project I mentioned above is a common shape of failure, not a rare one, because most published guidance on SAP invoice automation is written from the MM side only, since that is where the interesting matching logic lives. FI-only invoices get treated as an afterthought, "also post the ones without a PO," when in practice they are often close to half of total invoice volume by count, even if a smaller share of total dollar value. A pipeline that only handles MM invoices well has solved the more interesting engineering problem and left the more common one for someone to notice later.</p>
 
@@ -77,8 +77,8 @@ export const blogAp03: BlogPost = {
   category: "Accounts Payable",
   date: "August 9, 2026",
   datePublished: "2026-08-09T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-10-14T00:00:00.000Z",
+  last_updated: "October 14, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "invoice ocr sap",

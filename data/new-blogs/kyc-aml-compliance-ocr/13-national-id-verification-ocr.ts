@@ -53,7 +53,7 @@ export const blogKa13: BlogPost = {
 
     <h2>Where template classification still genuinely matters</h2>
 
-    <p>None of this argues that template libraries are unnecessary in general, only that they are the wrong primary mechanism for the specific, large category of documents already governed by a uniform machine-readable standard. International national ID cards without an equivalent standardized barcode or chip, and the enormous diversity of formats Regula and ABBYY's large template counts genuinely exist to cover, still require classification against a known visual layout to locate fields correctly, since there is no equivalent to AAMVA's Annex D to fall back on for most of the world's ID formats. The correct architecture is not "templates versus standards" as a binary choice but a priority order: check for a standardized machine-readable payload first, and fall back to template-based visual classification only when no such standard applies to the document in hand.</p>
+    <p>None of this argues that template libraries are unnecessary in general, only that they are the wrong primary mechanism for the specific, large category of documents already governed by a uniform machine-readable standard. International <a href="/documents/identity-docs/national-ids">national ID cards</a> without an equivalent standardized barcode or chip, and the enormous diversity of formats Regula and ABBYY's large template counts genuinely exist to cover, still require classification against a known visual layout to locate fields correctly, since there is no equivalent to AAMVA's Annex D to fall back on for most of the world's ID formats. The correct architecture is not "templates versus standards" as a binary choice but a priority order: check for a standardized machine-readable payload first, and fall back to template-based visual classification only when no such standard applies to the document in hand.</p>
 
     <h2>Why a classification-confidence threshold matters more than raw template count</h2>
 
@@ -73,8 +73,8 @@ export const blogKa13: BlogPost = {
   category: "Compliance",
   date: "August 27, 2026",
   datePublished: "2026-08-27T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-10-14T00:00:00.000Z",
+  last_updated: "October 14, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "national id verification ocr",

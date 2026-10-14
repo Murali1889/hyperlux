@@ -8,17 +8,17 @@ export default function PurchaseOrderFAQ() {
     {
       question: "How are scanned POs handled?",
       answer:
-        "Our system processes scanned purchase orders using advanced image preprocessing techniques to enhance quality before OCR extraction. We handle skewed scans, low resolution documents, and even handwritten annotations. The AI is trained on thousands of real-world scanned POs and can identify key information even when the document quality is suboptimal. For best results, we recommend scanning at 300 DPI or higher, but our system can handle lower quality scans with minimal degradation in accuracy.",
+        "Scanned and photographed POs go through the same extraction as PDFs, and accuracy follows the quality of the scan. In our 2026 benchmark, clean typed text read at 97-99%, handwriting at 78%, and phone-photographed receipts at 76%. Handwritten notes in a margin are the most likely thing to need a person to check. Scanning at 300 DPI or higher helps any OCR tool.",
     },
     {
-      question: "Can you map custom SKU fields?",
+      question: "What happens to SKU and part numbers?",
       answer:
-        "Yes, our system supports custom SKU field mapping to align with your specific inventory system. During implementation, we configure the system to recognize your unique SKU formats and naming conventions. The AI can be trained to extract and normalize proprietary product codes, internal part numbers, or vendor-specific SKUs. We also support cross-referencing between different SKU systems, allowing you to maintain your internal product codes while processing vendor documents that use different identification systems.",
+        "Item codes come back as text fields, exactly as they are printed on the PO. Matching them to your own item master is done in your ERP or AP software, not in the extraction step. If you need a mapping step, bring a few real POs to the demo and we will show you what the output looks like.",
     },
     {
       question: "Is there support for multi-page POs?",
       answer:
-        "Absolutely. Our system handles multi-page purchase orders seamlessly, maintaining context across pages to ensure accurate data extraction. The AI recognizes when line items continue across multiple pages and correctly associates them with the same purchase order. We also handle complex scenarios like different sections spanning multiple pages (e.g., terms and conditions, appendices) and can extract data from tables that break across page boundaries. There's no practical limit to the number of pages we can process in a single purchase order document.",
+        "Yes. Line-item tables that continue across pages are read as one table. We publish 93% for invoice line items and 91% for multi-page bank statement tables. We have not published a PO-specific figure, so the best test is a few of your own multi-page POs.",
     },
   ]
 

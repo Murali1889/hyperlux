@@ -8,22 +8,22 @@ const steps = [
   {
     icon: <Upload className="h-6 w-6 text-indigo-600" />,
     title: "Upload",
-    description: "Upload contracts in any format including PDF, Word, or scanned documents.",
+    description: "Send contracts as PDFs or scans through the API.",
   },
   {
     icon: <Cpu className="h-6 w-6 text-indigo-600" />,
     title: "AI Extraction",
-    description: "Our AI engine identifies and extracts key clauses, dates, and obligations.",
+    description: "Key clauses, dates, and obligations are read out and given confidence scores.",
   },
   {
     icon: <CheckCircle className="h-6 w-6 text-indigo-600" />,
-    title: "Human Review",
-    description: "Optional review interface for legal teams to validate and refine AI results.",
+    title: "Review",
+    description: "Your legal team checks the clauses flagged as uncertain.",
   },
   {
     icon: <FileOutput className="h-6 w-6 text-indigo-600" />,
     title: "Export",
-    description: "Export structured data to your CLM or download as Excel, JSON, or CSV.",
+    description: "Load the structured JSON into your contract system.",
   },
 ]
 
