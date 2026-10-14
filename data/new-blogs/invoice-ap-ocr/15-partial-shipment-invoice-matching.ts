@@ -11,7 +11,7 @@ export const blogAp15: BlogPost = {
     "Partial shipment invoice matching explained: cumulative quantity and amount tracking against one PO, with a real worked example and OCR error compounding.",
   metaTag: "Partial Shipment Invoice Matching: Real Logic (2026)",
   content: `
-    <p>A single purchase order for 1,000 units rarely arrives, and gets invoiced, all at once, especially on larger orders where a vendor's own production or logistics constraints make one clean shipment impractical. A vendor ships 800 units this week, 100 next week, and 200 the week after, invoicing each shipment separately against the same PO line. Every guide to <a href="/resources/blogs/3-way-match-invoice-automation">invoice matching</a> mentions "partial matching" as a feature that exists. Almost none explain the mechanic that actually matters: partial invoices need to be tracked cumulatively against the PO line, not evaluated one at a time in isolation, and a matching system that checks each partial invoice independently against the full PO quantity will pass invoices it should not.</p>
+    <p>A single <a href="/documents/financial-docs/purchase-orders">purchase order</a> for 1,000 units rarely arrives, and gets invoiced, all at once, especially on larger orders where a vendor's own production or logistics constraints make one clean shipment impractical. A vendor ships 800 units this week, 100 next week, and 200 the week after, invoicing each shipment separately against the same PO line. Every guide to <a href="/resources/blogs/3-way-match-invoice-automation">invoice matching</a> mentions "partial matching" as a feature that exists. Almost none explain the mechanic that actually matters: partial invoices need to be tracked cumulatively against the PO line, not evaluated one at a time in isolation, and a matching system that checks each partial invoice independently against the full PO quantity will pass invoices it should not.</p>
 
     <p>This is the cumulative-tracking mechanics for <a href="/solutions/finance-automation">invoice automation</a>, plus a failure mode specific to OCR-extracted partial invoices that generic matching content never mentions.</p>
 
@@ -78,8 +78,8 @@ export const blogAp15: BlogPost = {
   category: "Accounts Payable",
   date: "August 13, 2026",
   datePublished: "2026-08-13T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-10-14T00:00:00.000Z",
+  last_updated: "October 14, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "partial shipment invoice matching",

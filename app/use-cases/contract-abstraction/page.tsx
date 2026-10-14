@@ -14,7 +14,7 @@ import { UseCaseContent } from "@/components/seo/use-case-content"
 const PATH = "/use-cases/contract-abstraction"
 const TITLE = "Contract Abstraction AI: Extract Clauses & Dates"
 const DESCRIPTION =
-  "Extract key clauses, dates, parties, and obligations from contracts automatically. Save hours of legal review per agreement."
+  "Extract key clauses, dates, parties, and obligations from contracts as structured data. Each clause gets a confidence score, uncertain ones are flagged."
 
 export const metadata: Metadata = buildPageMetadata({ title: TITLE, description: DESCRIPTION, path: PATH })
 
@@ -32,8 +32,15 @@ const CONTENT = {
     {
       heading: "Where contract abstraction pays off most",
       paragraphs: [
-        "The biggest single win is preventing the unwanted auto-renewal. Organizations routinely re-sign contracts they meant to cancel because the renewal-notice deadline was buried in a clause nobody re-read. Extracting renewal and termination dates across a portfolio, then feeding them into a contract management system that alerts before each deadline, usually pays for the whole project on its own.",
+        "The biggest single win is preventing the unwanted auto-renewal. Organizations routinely re-sign contracts they meant to cancel because the renewal-notice deadline was buried in a clause nobody re-read. Extracting renewal and termination dates across a portfolio, then feeding them into a contract management system that alerts before each deadline, is often the most valuable single field to start with.",
         "The second is contract lifecycle management intake: bulk-importing thousands of legacy contracts into a searchable database instead of a document dump. The third is mergers and acquisitions diligence, where an acquirer must review a target's entire contract portfolio for change-of-control clauses and material obligations in weeks. In each case, abstraction turns a stack of PDFs into a queryable dataset the business can actually act on.",
+      ],
+    },
+    {
+      heading: "What a contract abstract looks like, and the date that actually matters",
+      paragraphs: [
+        "For a vendor master service agreement, a useful abstract is about a dozen fields: the parties, effective date, term length, renewal type (automatic or manual), renewal date, notice period, termination rights, payment terms, contract value, liability cap, governing law, and the page where each was found. Keeping the page reference lets a reviewer check any field in seconds instead of searching the PDF.",
+        "The date to alert on is not the renewal date. It is the renewal date minus the notice period. If a contract renews on 1 January 2028 and requires 90 days written notice, the last day to cancel is 3 October 2027. An abstract that stores only the renewal date will send its reminder three months too late. Extract both fields, and let your contract system calculate the deadline.",
       ],
     },
     {
@@ -43,6 +50,12 @@ const CONTENT = {
         "Trying to extract everything from every contract type at once fails because contract language variety is enormous. Narrow first, prove accuracy on the fields that matter most, then widen the coverage once the core extraction is reliable. The renewal date alone justifies most projects, so lead with it.",
       ],
     },
+  ],
+  related: [
+    { href: "/resources/blogs/contract-ocr", label: "Contract OCR: extract clauses, dates and obligations" },
+    { href: "/solutions/legal-automation", label: "Legal automation" },
+    { href: "/documents/legal-docs", label: "Legal document OCR" },
+    { href: "/resources/blogs/legal-document-translation-ocr", label: "Legal document translation and OCR" },
   ],
   faqs: [
     {
@@ -81,14 +94,14 @@ const CONTENT = {
 export default function ContractAbstractionPage() {
   return (
     <main className="flex flex-col min-h-screen">
-      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service dateModified="2026-10-06" />
+      <PageJsonLd path={PATH} title={TITLE} description={DESCRIPTION} service dateModified="2026-10-14" />
       <ContractHero />
       <ManualReviewChallenges />
       <FeatureHighlights />
       <WorkflowDiagram />
       <BusinessImpact />
       <DemoVideo />
-      <UseCaseContent intro={CONTENT.intro} sections={CONTENT.sections} faqs={CONTENT.faqs} />
+      <UseCaseContent intro={CONTENT.intro} sections={CONTENT.sections} faqs={CONTENT.faqs} related={CONTENT.related} />
       <ContractFaq />
       <ContractCta />
     </main>

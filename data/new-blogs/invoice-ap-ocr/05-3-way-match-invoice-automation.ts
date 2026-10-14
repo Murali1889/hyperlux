@@ -11,7 +11,7 @@ export const blogAp05: BlogPost = {
     "3-way match automation flags correct invoices as mismatches. The cause is often OCR misreads, not real errors. A diagnostic framework to tell them apart.",
   metaTag: "3-Way Match Invoice Automation: Why It Breaks (2026)",
   content: `
-    <p>A controller I worked with in early 2026 pulled up her AP exception queue and counted 214 invoices flagged as quantity mismatches that month. She sampled 30 of them by hand, pulling the original PDF for each one. Nineteen were not real mismatches. The purchase order was right, the delivery was right, the invoice total was right. Somewhere in the pipeline, OCR had misread a "3" as an "8" on a faxed copy, or dropped a decimal point, or split one line item into two rows. Her team was spending roughly six hours a week chasing exceptions that did not exist.</p>
+    <p>A controller I worked with in early 2026 pulled up her AP exception queue and counted 214 invoices flagged as quantity mismatches that month. She sampled 30 of them by hand, pulling the original PDF for each one. Nineteen were not real mismatches. The <a href="/documents/financial-docs/purchase-orders">purchase order</a> was right, the delivery was right, the invoice total was right. Somewhere in the pipeline, OCR had misread a "3" as an "8" on a faxed copy, or dropped a decimal point, or split one line item into two rows. Her team was spending roughly six hours a week chasing exceptions that did not exist.</p>
 
     <p>That is the part of <a href="/solutions/finance-automation">3-way match automation</a> nobody selling AP workflow software talks about. The matching logic is not what breaks first. The extraction underneath it is, and no amount of better approval rules fixes a number that was wrong before it ever reached the matching engine.</p>
 
@@ -100,8 +100,8 @@ export const blogAp05: BlogPost = {
   category: "Accounts Payable",
   date: "August 10, 2026",
   datePublished: "2026-08-10T00:00:00.000Z",
-  dateModified: "2026-10-12T00:00:00.000Z",
-  last_updated: "October 12, 2026",
+  dateModified: "2026-10-14T00:00:00.000Z",
+  last_updated: "October 14, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "3-way match invoice automation",

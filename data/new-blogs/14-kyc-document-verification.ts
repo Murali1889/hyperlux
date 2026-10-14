@@ -17,7 +17,7 @@ export const blog14: BlogPost = {
     <p>This guide is what auditors actually look for, what failure modes you should fix first, and how to build a KYC document verification process that passes without overengineering.</p>
 
     <h2>What "KYC Document Verification" Actually Means</h2>
-    <p>KYC stands for Know Your Customer. It is the regulatory requirement for financial institutions to verify who their customers really are before opening accounts or processing transactions. KYC document verification is the specific step where you collect identity documents from a customer (passport, driver's license, utility bill) and verify they are real and match the customer.</p>
+    <p>KYC stands for Know Your Customer. It is the regulatory requirement for financial institutions to verify who their customers really are before opening accounts or processing transactions. KYC document verification is the specific step where you collect identity documents from a customer (passport, <a href="/documents/identity-docs/driver-licences">driver's license</a>, utility bill) and verify they are real and match the customer.</p>
     <p>The basic flow:</p>
     <ol>
       <li>Customer applies for an account.</li>
@@ -83,7 +83,7 @@ export const blog14: BlogPost = {
     <ol>
       <li><strong>Collect:</strong> Customer uploads photo ID and proof of address. Store originals immutably.</li>
       <li><strong>Detect:</strong> Identify document type. Crop and orient correctly. (See our <a href="/resources/blogs/document-detection-before-ocr">document detection guide</a>.)</li>
-      <li><strong>Extract:</strong> Run OCR. Extract MRZ for passports, fields for IDs.</li>
+      <li><strong>Extract:</strong> Run OCR. Extract MRZ for <a href="/documents/identity-docs/passports">passports</a>, fields for IDs.</li>
       <li><strong>Authenticate:</strong> Check security features (where present). Validate MRZ checksums. Check against forgery databases.</li>
       <li><strong>Compare:</strong> Cross-check name, DOB, address against the application data. Flag mismatches.</li>
       <li><strong>Verify Liveness:</strong> If a selfie is required, compare against the photo ID. Run liveness check to ensure the selfie is a real person, not a photo of a photo.</li>
@@ -132,8 +132,8 @@ export const blog14: BlogPost = {
   category: "Compliance",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  dateModified: "2026-10-14T00:00:00.000Z",
+  last_updated: "October 14, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "kyc",

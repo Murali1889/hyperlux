@@ -12,13 +12,13 @@ export default function AutomationWorkflow() {
     },
     {
       icon: <FileSearch className="h-10 w-10 text-white" />,
-      title: "Extract & Normalise SKU Codes",
-      description: "AI extracts all data and standardizes SKU codes to match your inventory system.",
+      title: "Extract Header Fields and Line Items",
+      description: "PO number, supplier, dates, and every line item come back as JSON, with SKU and part numbers as printed.",
     },
     {
       icon: <Database className="h-10 w-10 text-white" />,
-      title: "Push JSON to ERP",
-      description: "Structured data is sent to your ERP system for three-way matching with invoices and receipts.",
+      title: "Send JSON to Your Systems",
+      description: "Your ERP or AP software uses the data for three-way matching with invoices and receipts.",
     },
   ]
 
@@ -88,12 +88,9 @@ export default function AutomationWorkflow() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <h3 className="text-xl font-bold text-indigo-900 mb-3">Three-Way Match Automation</h3>
+            <h3 className="text-xl font-bold text-indigo-900 mb-3">Where the Three-Way Match Happens</h3>
             <p className="text-gray-700">
-              Our system enables true three-way matching by automatically comparing purchase order data with received
-              goods and invoices. This automation eliminates manual reconciliation, reduces errors, and accelerates the
-              procure-to-pay cycle. The system flags discrepancies for review while automatically approving matched
-              transactions, saving your AP team valuable time.
+              DocsAPI covers the first step of a three-way match: it reads the PO and returns clean data. The comparison of PO, goods receipt, and invoice, with the tolerances you set, runs in your ERP or AP software. Fields DocsAPI is unsure about are flagged for review, so a bad read is not mistaken for a real mismatch.
             </p>
           </motion.div>
         </div>
