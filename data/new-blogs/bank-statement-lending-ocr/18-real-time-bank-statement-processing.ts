@@ -62,15 +62,15 @@ export const blogBl18: BlogPost = {
     <p>Start with the training pipeline itself, since that is where this specific problem actually originates, well before it ever shows up as a mysterious performance gap in production. Ask whether your training data pipeline computes historical features using a point-in-time join against ingestion timestamps, or by filtering current, fully-settled data against a historical date window, since the second approach leaks future information into every historical training example without necessarily producing any obviously wrong output. Then ask whether anyone has actually compared backtested model performance against real, live production performance on a comparable population, since a meaningful, unexplained gap between the two is one of the clearest available signals that point-in-time leakage is happening somewhere in the training pipeline. Confirm your system tracks transaction ingestion timestamps as a distinct field from transaction date, since without that distinction, a point-in-time-correct join is not actually possible to build at all, no matter how fast the live-decision infrastructure itself has become. And specifically ask whether your training pipeline queries live, continuously updated views for historical backtesting, or immutable, timestamped historical snapshots, since the same-day-different-account distinction covered in our <a href="/resources/blogs/multi-account-bank-statement-ocr">multi-account aggregation piece</a> illustrates a related principle here: two data points that look identical on the surface can require completely different handling depending on a distinction the surface fields alone never reveal.</p>
     <p>Real-time architecture has made the live decision fast. Whether the model making that fast decision was actually trained on data it would have genuinely had access to at each historical decision moment is a separate, quieter question, and it is exactly the one that determines whether the speed is delivering an accurate answer or just a quick one. A model can clear every latency benchmark a real-time architecture review would check and still be quietly wrong in a way none of those benchmarks were ever designed to catch. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
 
-    <p>Related guides: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a> and <a href="/resources/blogs/ocr-bank-statement-technology-revolutionizing-financial-data-processing">OCR for bank statements, checks and utility bills</a>.</p>
+    <p>Related guides: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a>, <a href="/resources/blogs/ocr-bank-statement-technology-revolutionizing-financial-data-processing">OCR for bank statements, checks and utility bills</a> and <a href="/resources/blogs/real-time-document-validation-api">Real-time document validation API</a>.</p>
   `,
   image: "/images/ocr-in-finance.png",
   featuredImage: "/images/ocr-in-finance.png",
   category: "Lending",
   date: "August 21, 2026",
   datePublished: "2026-08-21T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-10-19T00:00:00.000Z",
+  last_updated: "October 19, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "real time bank statement processing",

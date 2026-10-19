@@ -163,14 +163,16 @@ export const blog29: BlogPost = {
     <h2>What I'd do today</h2>
 
     <p>For under 500 finance documents per month, build with Tesseract plus custom validation scripts. It will be painful but the math doesn't support paid tools at that volume. For 500-10,000 per month, pick a layout-aware OCR API (Textract, Document AI, or DocsAPI) and trial on 20 of your real documents before signing. For 10,000+ per month, the right answer is a hybrid: vendor handles extraction, you own the validation rules and exception queue. The vendor cost is trivial compared to the time you save; the validation layer is what makes it audit-ready. (<a href="/author/nupura-ughade">More on the build-vs-buy math in my other writing</a>.)</p>
+
+    <p>Related guide: <a href="/resources/blogs/transforming-financial-services-the-complete-guide-to-document-automation">Financial services document automation</a>.</p>
   `,
   image: "/images/revolutionizing-finance.png",
   featuredImage: "/images/revolutionizing-finance.png",
   category: "AI Document Intelligence",
   date: "June 25, 2026",
   datePublished: "2026-06-25T00:00:00.000Z",
-  dateModified: "2026-10-12T00:00:00.000Z",
-  last_updated: "October 12, 2026",
+  dateModified: "2026-10-19T00:00:00.000Z",
+  last_updated: "October 19, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "ocr finance",

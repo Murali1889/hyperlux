@@ -31,6 +31,11 @@ export const blog34: BlogPost = {
 
     <p>Across the five OCR-engine categories, no single engine won everything. Tesseract and PaddleOCR tie the field on clean printed English, PaddleOCR leads on multilingual and mobile-quality documents, and DocsAPI leads on multi-page tables and handwriting. The table below shows character-level accuracy per category on the 500-document OCR-engine set.</p>
 
+    <figure>
+      <img src="/images/ocr-accuracy-by-document-type-2026.png" alt="Bar chart of 2026 OCR accuracy by document type for Tesseract, PaddleOCR and DocsAPI: all three score 97-99% on clean typed English, DocsAPI leads on multi-page bank statements (91%) and handwriting (78%), and PaddleOCR leads on multilingual (89%) and phone-photographed receipts (82%)." width="1200" height="630" loading="lazy" />
+      <figcaption>Accuracy by document type, from the table below. Free to reuse with a link to this page.</figcaption>
+    </figure>
+
     <table>
       <thead><tr><th>Document category</th><th>Tesseract 5.x</th><th>PaddleOCR</th><th>DocsAPI</th></tr></thead>
       <tbody>
@@ -104,13 +109,13 @@ export const blog34: BlogPost = {
 
     <p>Related guide: <a href="/resources/blogs/how-to-measure-ocr-accuracy">how to measure OCR accuracy</a>.</p>
   `,
-  image: "/images/ocr-accuracy.png",
-  featuredImage: "/images/ocr-accuracy.png",
+  image: "/images/ocr-accuracy-by-document-type-2026.png",
+  featuredImage: "/images/ocr-accuracy-by-document-type-2026.png",
   category: "AI Document Intelligence",
   date: "July 31, 2026",
   datePublished: "2026-07-31T00:00:00.000Z",
-  dateModified: "2026-10-12T00:00:00.000Z",
-  last_updated: "October 12, 2026",
+  dateModified: "2026-10-19T00:00:00.000Z",
+  last_updated: "October 19, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "ocr accuracy benchmark",

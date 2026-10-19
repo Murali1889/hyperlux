@@ -144,14 +144,16 @@ export const blog22: BlogPost = {
     <p>If you are at a community bank under $1B in assets: do not build your own OCR. Pick a vendor with proven banking customers, real SOC 2, and clear US data residency. Use the five tests above.</p>
     <p>If you are at a regional bank ($1-50B): you need a multi-vendor strategy. Use your core's built-in OCR for routine documents. Layer a specialty vendor for mortgage, KYC, or commercial lending packets where the core's OCR falls short.</p>
     <p>If you are at a BaaS sponsor: your liability profile is higher than your customers expect. Require your fintech partners to use OCR vendors you have approved. Audit their extraction logs quarterly. (<a href="/author/nupura-ughade">I write about these regulated-industry tradeoffs often.</a>)</p>
+
+    <p>Related guide: <a href="/resources/blogs/transforming-financial-services-the-complete-guide-to-document-automation">Financial services document automation</a>.</p>
   `,
   image: "/images/ocr-bank-statement-technology.png",
   featuredImage: "/images/ocr-bank-statement-technology.png",
   category: "Industry Trends",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  dateModified: "2026-10-19T00:00:00.000Z",
+  last_updated: "October 19, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "ocr technology in banking",

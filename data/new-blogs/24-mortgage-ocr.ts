@@ -133,15 +133,15 @@ export const blog24: BlogPost = {
     <p>If you close 50-500 loans per month: this is where ROI is highest. The time savings compound across the team. Trial a vendor for 30 days on live applications and measure days-to-close before and after.</p>
     <p>If you close 500+ loans per month: you probably already have something. Ask the vendor for current accuracy data on business tax returns and complex appraisals. If they cannot answer with field-level accuracy numbers, switch. (<a href="/author/nupura-ughade">I write about mortgage tech rollouts often.</a>)</p>
 
-    <p>Related guide: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a>.</p>
+    <p>Related guides: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a> and <a href="/resources/blogs/transforming-financial-services-the-complete-guide-to-document-automation">Financial services document automation</a>.</p>
   `,
   image: "/images/transforming-financial-services.png",
   featuredImage: "/images/transforming-financial-services.png",
   category: "Industry Trends",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  dateModified: "2026-10-19T00:00:00.000Z",
+  last_updated: "October 19, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "mortgage ocr",

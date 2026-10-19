@@ -125,15 +125,15 @@ export const blog14: BlogPost = {
     <p>If you have an existing KYC process that "works": run a mock audit. Pick 20 customer files at random. Can you reconstruct every verification step? If not, fix the audit trail before the real auditor finds the gaps.</p>
     <p>If you are about to onboard a new market: research that country's specific KYC requirements. Document types, retention periods, and re-verification triggers vary significantly. (<a href="/author/nupura-ughade">I write about regulatory document patterns regularly</a>.)</p>
 
-    <p>Related guides: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a> and <a href="/resources/blogs/ocr-for-passports-id-cards-and-drivers-licenses">OCR for passports, ID cards and driver's licenses</a>.</p>
+    <p>Related guides: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a>, <a href="/resources/blogs/ocr-for-passports-id-cards-and-drivers-licenses">OCR for passports, ID cards and driver's licenses</a> and <a href="/resources/blogs/real-time-document-validation-api">Real-time document validation API</a>.</p>
   `,
   image: "/images/passport-ocr-revolutionizing.png",
   featuredImage: "/images/passport-ocr-revolutionizing.png",
   category: "Compliance",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-10-14T00:00:00.000Z",
-  last_updated: "October 14, 2026",
+  dateModified: "2026-10-19T00:00:00.000Z",
+  last_updated: "October 19, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "kyc",

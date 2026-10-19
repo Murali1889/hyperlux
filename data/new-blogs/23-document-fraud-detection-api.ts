@@ -87,15 +87,15 @@ export const blog23: BlogPost = {
     <p>If you have an existing KYC system with weak fraud detection: add a fraud check API in front of your existing workflow. The five checks alone will catch most of what you are missing.</p>
     <p>If you are at a fintech with growing fraud loss: stop guessing which checks matter. Pull last quarter's actual fraud losses, categorize them by failure mode, and pick a vendor whose checks address your top three categories. (<a href="/author/nupura-ughade">I write about fraud architecture decisions often.</a>)</p>
 
-    <p>Related guide: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a>.</p>
+    <p>Related guides: <a href="/resources/blogs/ocr-for-kyc-verification">OCR for KYC verification</a> and <a href="/resources/blogs/real-time-document-validation-api">Real-time document validation API</a>.</p>
   `,
   image: "/images/passport-mrz-highlight.png",
   featuredImage: "/images/passport-mrz-highlight.png",
   category: "Compliance",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-10-19T00:00:00.000Z",
+  last_updated: "October 19, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "document fraud detection api",
