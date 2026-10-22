@@ -70,8 +70,8 @@ export const blog27: BlogPost = {
       </tbody>
     </table>
 
-    <h3>The cost-savings calculation, worked out</h3>
-    <p>A mid-size lender processing 8,000 bank statements per month at 15 minutes each manually: 2,000 hours × $80 loaded cost = $160,000/month. The same volume through an OCR API at $0.04 per page (12 pages avg per statement) costs $3,840/month plus roughly 100 hours of exception review (~$8,000). Total automated cost: $11,840. Monthly savings: $148,160. Payback period: under one week.</p>
+    <h3>A way to work out the cost savings</h3>
+    <p>This is an illustration with assumptions, not a customer result. Say a lender processes 8,000 bank statements a month and each takes 15 minutes to key in by hand: that is 2,000 hours a month, or $160,000 at an $80 loaded hourly cost. Through an OCR API the cost is the per-page price times the pages per statement, plus staff time for the exceptions the tool flags. Replace each assumption with your own numbers before you trust the result.</p>
 
     <h2>The way I explain OCR to a CFO at a cocktail party</h2>
     <p>Imagine the company stopped hiring data entry clerks ten years ago and instead hired a single careful junior employee. She reads every invoice, every receipt, every bank statement that arrives. She types the important parts into the right systems. She works in seconds. She costs cents per page. She never gets tired, never makes carry-over typos, and never quits in Q4 for a higher offer. That is OCR. Finance teams stop being the bottleneck for routine document work and start focusing on the analysis and judgment work CFOs actually want them doing.</p>
@@ -109,8 +109,8 @@ export const blog27: BlogPost = {
   category: "Industry Trends",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-10-12T00:00:00.000Z",
-  last_updated: "October 12, 2026",
+  dateModified: "2026-10-22T00:00:00.000Z",
+  last_updated: "October 22, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "ocr meaning in finance",

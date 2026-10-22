@@ -61,11 +61,9 @@ export const blog32: BlogPost = {
       <li><strong>Hybrid</strong> (the most common enterprise pattern): builder OCR API for extraction, a custom orchestration layer you own for governance and routing, and best-of-breed point solutions for specialized workflows (KYC, e-invoicing). Best balance of cost, control, and compliance.</li>
     </ul>
 
-    <h2>Real enterprise deployment: a global insurer's claims OCR</h2>
+    <h2>What makes an enterprise rollout succeed</h2>
 
-    <p>In 2025 I helped a global insurer (40M+ documents/year across claims, underwriting, and policy servicing) replace a legacy ABBYY FlexiCapture deployment that had become a maintenance burden. Starting state: FlexiCapture handling ~60% of document types with per-template professional-services costs, 18 different document workflows, no unified audit trail, and a compliance team spending weeks assembling documentation for each regulatory exam.</p>
-
-    <p>The rebuild: DocsAPI for OCR + classification across all document types, a custom orchestration and governance layer (built on the insurer's existing Kafka + microservices stack) that produced unified audit trails and role-based access control, and integration into their Guidewire claims system plus their data warehouse. The engineering took 9 months with a team of 6; the compliance-documentation work ran in parallel. Post-deployment: document coverage rose from 60% to 94%, per-document cost dropped 55%, and, the metric the CFO cared about, regulatory exam prep dropped from weeks to days because the unified audit trail was queryable. The governance layer, not the OCR accuracy, was what made the project a success.</p>
+    <p>Whatever stack you choose, the governance layer matters more than OCR accuracy at enterprise scale: unified audit trails, role-based access control, and integration into the claims or ERP system are what make a rollout succeed and what compliance teams ask for first.</p>
 
     <h2>Enterprise document OCR cost in 2026</h2>
 
@@ -101,8 +99,8 @@ export const blog32: BlogPost = {
   category: "AI Document Intelligence",
   date: "July 16, 2026",
   datePublished: "2026-07-16T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  dateModified: "2026-10-22T00:00:00.000Z",
+  last_updated: "October 22, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "enterprise document ocr",

@@ -86,7 +86,7 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       {
         question: "How much does OCR reduce invoice processing cost?",
         answer:
-          "Real customer data: from roughly $14 per invoice (manual) to $2.70 per invoice with OCR, 80% cost reduction. Most teams see 70-85% reduction within six months. Payback below one quarter for teams processing 2,000+ invoices per month.",
+          "It depends on your invoice volume, your exception rate and what you pay people to key data. We have not published a customer cost figure. Work it out with your own volumes: the cost of the OCR step is per-page or per-invoice pricing, plus the staff time spent on invoices the tool flags for review.",
       },
       {
         question: "What's the touchless processing rate on invoice OCR in 2026?",
@@ -158,8 +158,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "document automation",
     ],
     datePublished: "2025-05-27T00:00:00.000Z",
-    dateModified: "2026-09-28T00:00:00.000Z",
-    last_updated: "September 28, 2026",
+    dateModified: "2026-10-22T00:00:00.000Z",
+    last_updated: "October 22, 2026",
     tags: ["IDP", "OCR", "comparison", "document AI"],
     cluster: "ocr",
     faq: [
@@ -171,7 +171,7 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       {
         question: "Is IDP just a rebrand of OCR?",
         answer:
-          "No. IDP is a workflow layer built on top of OCR. OCR reads text; IDP classifies documents, extracts fields, validates business rules, and routes structured output to downstream systems. In production, OCR gets you 82% field accuracy; IDP typically hits 92-99% because the validation layer catches errors OCR alone can't.",
+          "No. IDP is a workflow layer built on top of OCR. OCR reads text; IDP classifies documents, extracts fields, validates business rules, and routes structured output to downstream systems. In production, the validation layer is what catches errors OCR alone can't.",
       },
       {
         question: "When should I pick OCR over IDP?",
@@ -186,7 +186,7 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       {
         question: "What's the accuracy difference between OCR and IDP?",
         answer:
-          "In production, OCR alone typically stalls at 80-85% field-level usable accuracy because there's no validation layer. IDP hits 92-99% because it reconciles extracted totals against document totals, applies business rules, and routes low-confidence rows to a human review queue. The gap is 10-15 percentage points on the same underlying OCR engine.",
+          "OCR alone has no validation layer, so its errors reach downstream systems. IDP reconciles extracted totals against document totals, applies business rules, and routes low-confidence rows to a human review queue.",
       },
       {
         question: "Which OCR and IDP vendors should I evaluate in 2026?",
@@ -268,8 +268,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "id document ocr",
     ],
     datePublished: "2025-05-28T00:00:00.000Z",
-    dateModified: "2026-10-14T00:00:00.000Z",
-    last_updated: "October 14, 2026",
+    dateModified: "2026-10-22T00:00:00.000Z",
+    last_updated: "October 22, 2026",
     tags: ["passport OCR", "KYC", "identity", "MRZ"],
     cluster: "compliance",
     faq: [
@@ -304,15 +304,15 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "document assembly",
     ],
     datePublished: "2025-06-05T00:00:00.000Z",
-    dateModified: "2026-10-12T00:00:00.000Z",
-    last_updated: "October 12, 2026",
+    dateModified: "2026-10-22T00:00:00.000Z",
+    last_updated: "October 22, 2026",
     tags: ["legal", "automation", "law firm", "document assembly"],
     cluster: "industry-trends",
     faq: [
       {
         question: "What is legal document automation?",
         answer:
-          "Software that generates legal documents from templates and structured client data, contracts, pleadings, wills, intake forms, without manual copy-paste. Cuts drafting time 70-85% on standardized documents.",
+          "Software that generates legal documents from templates and structured client data, contracts, pleadings, wills, intake forms, without manual copy-paste.",
       },
       {
         question: "Is document automation for lawyers worth it at a small firm?",

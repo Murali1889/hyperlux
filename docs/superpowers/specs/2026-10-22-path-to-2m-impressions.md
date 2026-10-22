@@ -26,6 +26,14 @@ So 2M is a stretch north star, not a forecast. Track the weekly growth rate, and
 - Daily: `~/docsapi-gsc-monitor/run_daily.sh` (GSC), X and Reddit monitor, digest.
 - Weekly: compare impressions, clicks and average position by page cluster; recheck AI visibility; request indexing for changed pages; pick the next page from queries at positions 5 to 20.
 
+## Added after the full X and Reddit read (same day)
+- **Yardsticks.** Two self-reported small-site cases land at about 100K to 137K impressions in three to six months. That is strong execution, and 2M in two months is about 20 times that pace.
+- **Impressions are a weak target on their own.** Three independent reports say AI Overviews can remove clicks even at a top position (a page at position 4.2 with 100K impressions and 105 clicks). Track clicks, demo requests, and whether DocsAPI is named or cited in AI answers. The prompt set is in `2026-10-22-ai-visibility-prompts.md`.
+- **Audit before publishing more.** Consistent facts across pages, schema and files matter more than volume. Done today: two posts showed DocsAPI at $0.01 to $0.05 per page (approved: from $0.02), and several older posts carried unsourced case studies and ROI figures (a global insurer story that implied a DocsAPI customer, an 85% processing-time claim, $148K monthly savings, a 71% to 58% neobank anecdote). All removed or relabelled as illustrations.
+- **Pace.** Publish at a human pace. Do not mass-publish or mass-translate.
+- **Third-party corroboration** is what finance-type answers lean on. This remains the biggest gap and needs the owner.
+- **llms.txt** has four independent reports of negligible measured effect. Keep it accurate, do not invest more.
+
 ## Open risks
 - `/documents/financial-docs` is a soft 404 in Google even though the live page is fine. About half the text blocks render at opacity 0 until scrolled (framer-motion `whileInView`). Unproven cause. Check with a URL Inspection live test.
 - The benchmark post says "8 engines" but names 7.

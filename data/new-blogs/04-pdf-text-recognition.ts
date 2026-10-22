@@ -48,9 +48,9 @@ export const blog04: BlogPost = {
     <table>
       <thead><tr><th>Failure mode</th><th>Best alternative</th><th>Approximate cost</th></tr></thead>
       <tbody>
-        <tr><td>Tables and forms</td><td>AWS Textract or DocsAPI extraction</td><td>$0.015-$0.05 per page</td></tr>
+        <tr><td>Tables and forms</td><td>AWS Textract or DocsAPI extraction</td><td>DocsAPI from $0.02 per page; Textract lists its own per-page prices</td></tr>
         <tr><td>Handwritten text</td><td>Google Document AI or VLM (Claude/GPT vision)</td><td>$0.05-$0.10 per page (VLM higher)</td></tr>
-        <tr><td>Foreign languages</td><td>Azure or DocsAPI with auto language detection</td><td>$0.01-$0.03 per page</td></tr>
+        <tr><td>Foreign languages</td><td>Azure or DocsAPI with auto language detection</td><td>DocsAPI from $0.02 per page</td></tr>
         <tr><td>Faded scans</td><td>Any modern API (adaptive thresholding built-in)</td><td>Standard pricing</td></tr>
         <tr><td>Complex layouts</td><td>Layout-aware OCR (DocsAPI, Textract)</td><td>$0.02-$0.05 per page</td></tr>
       </tbody>
@@ -100,8 +100,8 @@ export const blog04: BlogPost = {
   category: "OCR How-To",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-06-17T00:00:00.000Z",
-  last_updated: "June 17, 2026",
+  dateModified: "2026-10-22T00:00:00.000Z",
+  last_updated: "October 22, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "pdf text recognition",
