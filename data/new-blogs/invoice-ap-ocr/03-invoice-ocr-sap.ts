@@ -70,15 +70,15 @@ export const blogAp03: BlogPost = {
     <p>Pull a sample of last month's invoices and split them into PO-referenced and non-PO-referenced before building anything. If your pipeline only handles one path, you already know which half of your invoice volume it covers. Then check your OMR6 tolerance configuration against current vendor pricing reality, since a stale tolerance band produces false rejections that get misdiagnosed as extraction failures. Finally, confirm which posting mechanism, BAPI or IDoc, your actual vendor mix requires, since a vendor already set up for EDI e-invoicing is likely arriving as an IDoc regardless of what your pipeline was originally designed to handle. For the pipeline-agnostic version of this evaluation process, see our <a href="/resources/blogs/accounts-payable-ocr">accounts payable OCR guide</a>, and for the specific failure pattern of matching logic flagging correct invoices, see our <a href="/resources/blogs/3-way-match-invoice-automation">3-way matching breakdown</a>.</p>
     <p>Sources: BAPI_INCOMINGINVOICE_CREATE field structure verified against SAP technical community references and function module documentation. Extraction accuracy figures from our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
 
-    <p>Related guides: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a> and <a href="/resources/blogs/ocr-integration-with-accounting-crm-erp">how to connect OCR to accounting, CRM and ERP systems</a>.</p>
+    <p>Related guides: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a>, <a href="/resources/blogs/ocr-integration-with-accounting-crm-erp">how to connect OCR to accounting, CRM and ERP systems</a> and <a href="/resources/blogs/best-ocr-software-for-accounts-payable">best OCR software for accounts payable</a>.</p>
   `,
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "Accounts Payable",
   date: "August 9, 2026",
   datePublished: "2026-08-09T00:00:00.000Z",
-  dateModified: "2026-10-14T00:00:00.000Z",
-  last_updated: "October 14, 2026",
+  dateModified: "2026-10-22T00:00:00.000Z",
+  last_updated: "October 22, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "invoice ocr sap",

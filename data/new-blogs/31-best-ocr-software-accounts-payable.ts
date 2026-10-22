@@ -25,21 +25,23 @@ export const blog31: BlogPost = {
 <p>We compared the tools on public information: who each one is built for, which ERPs it connects to, and how you pay for it. We did not run them on a shared set of invoices, so we do not publish touchless rates or per-invoice costs for them. Those depend on your vendor mix and invoice quality, and vendor pricing changes, so confirm current features and prices with each vendor. The tools are listed roughly from smaller teams to larger ones, not ranked.</p>
 <h2>The 2026 comparison table</h2>
 <table>
-<thead><tr><th>Tool</th><th>Best for</th><th>ERP fit</th></tr></thead>
+<thead><tr><th>Tool</th><th>Best for</th><th>Accounting and ERP links named by the vendor</th><th>Published price (checked October 22, 2026)</th></tr></thead>
 <tbody>
-<tr><td>Bill.com</td><td>SMB on QuickBooks/Xero</td><td>Native QB/Xero</td></tr>
-<tr><td>Melio</td><td>US SMB with a tight budget</td><td>Check which accounting systems it syncs with</td></tr>
-<tr><td>AvidXchange</td><td>Mid-market real estate/HOA</td><td>Mid-market ERPs</td></tr>
-<tr><td>Tipalti</td><td>Mid-market with global suppliers</td><td>NetSuite, Sage, custom</td></tr>
-<tr><td>DocsAPI (builder stack)</td><td>Any volume, custom workflow</td><td>Any (you build it)</td></tr>
-<tr><td>Basware</td><td>Enterprise SAP/Oracle</td><td>SAP, Oracle native</td></tr>
-<tr><td>Coupa</td><td>Enterprise procurement-led</td><td>SAP, Oracle, Workday</td></tr>
-<tr><td>SAP Ariba</td><td>Enterprise SAP-only</td><td>SAP native</td></tr>
+<tr><td>Bill.com</td><td>SMB on QuickBooks or Xero</td><td>QuickBooks Online and Xero: automatic 2-way sync on Team and Corporate, manual CSV on Essentials. NetSuite, Sage Intacct and QuickBooks Enterprise on Enterprise only</td><td>Per user per month: Essentials $49, Team $65, Corporate $89, Enterprise custom. AI bill coding on Team and above</td></tr>
+<tr><td>Melio</td><td>US SMB with a tight budget</td><td>QuickBooks Online, QuickBooks Desktop, Xero, NetSuite</td><td>Go $0 (one user, 5 free ACH a month), Core $25, Boost $55, Unlimited $80 a month; first 90 days free</td></tr>
+<tr><td>Tipalti</td><td>Mid-market with global suppliers</td><td>NetSuite, Sage Intacct, QuickBooks, Microsoft Dynamics, SAP</td><td>AP plans start at $99 a month, plus per-invoice and per-payment pricing that is quoted</td></tr>
+<tr><td>AvidXchange</td><td>Mid-market real estate and HOA</td><td>Mid-market ERPs, confirm yours with the vendor</td><td>No public list price found, quote based</td></tr>
+<tr><td>DocsAPI (builder stack)</td><td>Any volume, custom workflow</td><td>Any, because you build the posting step</td><td>From $0.02 per page, volume discounts above 100K pages a month</td></tr>
+<tr><td>Basware</td><td>Enterprise SAP and Oracle</td><td>SAP and Oracle</td><td>Quote based, not checked here</td></tr>
+<tr><td>Coupa</td><td>Enterprise, procurement-led</td><td>SAP, Oracle, Workday</td><td>Quote based, not checked here</td></tr>
+<tr><td>SAP Ariba</td><td>Enterprise on SAP</td><td>SAP</td><td>Quote based, not checked here</td></tr>
 </tbody>
 </table>
-<p>DocsAPI is our product, so weigh our description of it accordingly. Pricing: DocsAPI starts from $0.02 per page and AWS Textract's AnalyzeExpense lists $0.01 per page. The suites price per invoice, per user or by quote, so ask each vendor for the all-in cost per invoice, including implementation.</p>
+<p>Prices and integrations come from each vendor's own pricing page on the date above, and the entries marked "not checked" are ones we did not verify. They change, so confirm before you buy.</p>
+<p><strong>What the published prices tell you.</strong> The three vendors that publish prices charge for the platform, not for reading an invoice. BILL charges per user, so a three-person AP team on the Team plan pays $195 a month before payment fees. Melio's plans are priced by how many ACH payments you make. Tipalti starts at $99 a month and then adds per-invoice and per-payment pricing. None of them quotes a price per page of OCR, which is why an OCR API at $0.01 to $0.02 per page and a suite cannot be compared on one number. Ask every vendor for the all-in monthly cost at your invoice and payment volume.</p>
+<p>DocsAPI is our product, so weigh our description of it accordingly. AWS Textract's AnalyzeExpense lists $0.01 per page, and DocsAPI starts from $0.02 per page.</p>
 <h2>Bill.com, best AP OCR software for SMB</h2>
-<p>Bill.com fits SMBs on QuickBooks or Xero with straightforward AP. Native accounting integration means little CSV wrangling, and its payment network handles vendor payments. Where it can fall short: invoices with unusual layouts may need manual fixing, and you get little control over the OCR layer if you want to build your own validation on top. Best fit: small teams with simple workflow requirements.</p>
+<p>Bill.com fits SMBs on QuickBooks or Xero with straightforward AP. On the Team and Corporate plans, QuickBooks Online and Xero sync automatically in both directions, while the Essentials plan is manual CSV import and export. Its payment network handles vendor payments. Where it can fall short: invoices with unusual layouts may need manual fixing, and you get little control over the OCR layer if you want to build your own validation on top. Best fit: small teams with simple workflow requirements.</p>
 <h2>AvidXchange, best for mid-market real estate and HOA</h2>
 <p>AvidXchange is built for mid-market AP in real estate, HOA management and similar vertical stacks. Its vertical templates are meant for formats that generic tools struggle with, such as property management fees, utility bills and contractor invoices. Where it can fall short: confirm setup time and pricing with the vendor, because it is more than you need for standard AP without industry-specific requirements. Best fit: mid-market teams with industry-vertical layouts.</p>
 <h2>Tipalti, best for global supplier networks</h2>
@@ -51,7 +53,7 @@ export const blog31: BlogPost = {
 <h2>Coupa, best for procurement-led enterprise</h2>
 <p>Coupa is the choice for enterprises where procurement drives AP, rather than finance-led AP driving procurement. Its source-to-pay platform covers the procurement lifecycle with AP as one module. Where it can fall short: the procurement-heavy workflow is more than a finance-led AP team needs, and pricing is by quote. Best fit: enterprise procurement-led operations.</p>
 <h2>Melio, best for US SMBs on a tight budget</h2>
-<p>Melio is built around payments for US small businesses, with basic invoice capture and accounting sync, which makes it an easy starting point at low invoice volumes. Where it can fall short: test it on scanned invoices, confirm it syncs with your accounting system, and check how it handles international payments. Best fit: US-only SMBs with low volume and a tight budget.</p>
+<p>Melio is built around payments for US small businesses, with basic invoice capture and accounting sync, which makes it an easy starting point at low invoice volumes. Where it can fall short: test it on scanned invoices and check how it handles international payments, which carry their own fees (a $20 flat fee for global ACH to USD on its pricing page). Best fit: US-only SMBs with low volume and a tight budget.</p>
 <h2>SAP Ariba, best only if you are already on SAP</h2>
 <p>SAP Ariba is included because it is frequently evaluated, but it is mainly the right pick if you are an existing SAP customer. Native SAP integration is its strength, and integration with other systems takes more work. Where it can fall short: pricing, implementation complexity and vendor lock-in make it a hard sell outside SAP shops. Best fit: enterprise SAP customers who prefer one vendor to best-of-breed features.</p>
 <h2>How to pick AP OCR software for your specific stack</h2>
@@ -81,6 +83,7 @@ export const blog31: BlogPost = {
 
     <h2>Sources and how we checked this</h2>
     <ul>
+      <li>Vendor prices and integrations in the table: <a href="https://www.bill.com/pricing" target="_blank" rel="noopener">BILL pricing</a>, <a href="https://melio.com/pricing/" target="_blank" rel="noopener">Melio pricing</a> and <a href="https://tipalti.com/pricing/" target="_blank" rel="noopener">Tipalti pricing</a>, checked October 22, 2026. AvidXchange does not publish a list price that we could find.</li>
       <li>We have not run a head-to-head trial of these tools. Descriptions reflect each vendor's public positioning, and features and prices change, so confirm current details with each vendor before you decide.</li>
       <li>API list prices: <a href="https://aws.amazon.com/textract/pricing/" target="_blank" rel="noopener">Amazon Textract pricing</a> and Microsoft's public retail prices for Azure AI Document Intelligence, checked September 28, 2026. DocsAPI's price is from our own published pricing.</li>
       <li>NetSuite Bill Capture behavior and limits: Oracle's <a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article_1021105256.html" target="_blank" rel="noopener">Bill Capture documentation</a>.</li>
@@ -92,8 +95,8 @@ export const blog31: BlogPost = {
   category: "AI Document Intelligence",
   date: "July 4, 2026",
   datePublished: "2026-07-04T00:00:00.000Z",
-  dateModified: "2026-10-12T00:00:00.000Z",
-  last_updated: "October 12, 2026",
+  dateModified: "2026-10-22T00:00:00.000Z",
+  last_updated: "October 22, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "best ocr software for accounts payable",

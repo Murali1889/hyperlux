@@ -10,7 +10,7 @@ Short copy to seed the benchmark on link-and-attention channels. These are not b
 
 **Title:**
 ```
-Show HN: I benchmarked 8 OCR engines on 1,900 real documents
+Show HN: I benchmarked 8 OCR engines on 1,700 real documents
 ```
 
 **First comment (post this yourself right after submitting):**
@@ -27,8 +27,6 @@ The findings that surprised me:
 - On multi-page bank statement tables, the spread was 64% to 91% row
   accuracy on the same documents. Most engines read each page independently
   and break row continuity across page boundaries.
-- No accounts-payable tool actually hit the 99% touchless rate vendors
-  advertise. On a realistic messy-invoice mix it topped out in the low 80s.
 - There is no universal best engine. Different tools won on academic PDFs,
   financial tables, and phone-photo receipts.
 
@@ -48,13 +46,13 @@ Target subs (check rules first): r/MachineLearning (only if framed as data, use 
 
 **Title:**
 ```
-[P] I benchmarked 8 OCR engines on 1,900 real documents (per-category data inside)
+[P] I benchmarked 8 OCR engines on 1,700 real documents (per-category data inside)
 ```
 
 **Body:**
 ```
 I kept seeing OCR accuracy numbers that were clearly measured on clean
-documents, so I ran my own test: eight engines and document APIs on 1,900
+documents, so I ran my own test: eight engines and document APIs on 1,700
 real, anonymized documents (invoices, bank statements, receipts, academic
 papers, handwritten forms), scored by category.
 
@@ -82,7 +80,7 @@ Happy to share more detail on the scoring or any specific engine.
 ## 3. LinkedIn (founder personal post)
 
 ```
-Every OCR vendor claims 99% accuracy. So I tested eight of them on 1,900
+Every OCR vendor claims 99% accuracy. So I tested eight of them on 1,700
 real documents, including my own product, and reported where each one
 loses.
 
@@ -92,10 +90,6 @@ exact same files. The reason is that most engines read each page on its
 own and break the transaction table every time it crosses a page. If you
 work with statements, that one capability matters more than any headline
 accuracy number.
-
-Second finding: no accounts-payable tool actually hit the 99% touchless
-rate the decks promise. On a realistic messy-invoice mix, the best topped
-out in the low 80s.
 
 Full data and methodology, free to cite:
 https://docsapi.co/resources/blogs/ocr-accuracy-benchmark-2026

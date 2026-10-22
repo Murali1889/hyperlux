@@ -11,11 +11,11 @@
 
 ## Title
 
-I benchmarked 8 OCR engines on 1,900 real documents. Here is what surprised me.
+I benchmarked 8 OCR engines on 1,700 real documents. Here is what surprised me.
 
 ## Body
 
-Every OCR accuracy number you find online was tested on clean documents nobody uses in production. So I ran my own benchmark: eight OCR engines and document APIs on 1,900 real, anonymized documents across invoices, bank statements, receipts, academic papers, and handwritten forms. Here are the findings that actually changed how I pick an OCR tool.
+Every OCR accuracy number you find online was tested on clean documents nobody uses in production. So I ran my own benchmark: eight OCR engines and document APIs on 1,700 real, anonymized documents across invoices, bank statements, receipts, academic papers, and handwritten forms. Here are the findings that actually changed how I pick an OCR tool.
 
 Quick disclosure up front: I am the founder of DocsAPI, which is one of the eight tools tested. I scored every competitor on its strengths and I report the categories where DocsAPI loses, because a benchmark you cannot trust is worthless. The full numbers and methodology are in the [OCR accuracy benchmark](https://docsapi.co/resources/blogs/ocr-accuracy-benchmark-2026), free to cite.
 
@@ -33,11 +33,7 @@ The reason is that most engines read each page independently and treat a 12-page
 
 For anything harder than clean printed text, PaddleOCR won clearly: 15 points better than Tesseract on multi-page tables, 24 points better on phone-photographed receipts, and a wide margin on Chinese and other CJK scripts. If you are choosing an open-source engine and your documents are not pristine English, PaddleOCR is the stronger pick. The full [PaddleOCR vs Tesseract comparison](https://docsapi.co/resources/blogs/paddleocr-vs-tesseract-vs-docsapi) has the per-category numbers.
 
-### Finding 4: no AP tool hits the 99% touchless that vendors claim
-
-I also ran eight accounts-payable OCR tools on 200 real invoices. Touchless rate (invoices that flow through with no human review) topped out in the low 80s on a realistic invoice mix, not the 99% that vendor decks promise. The 99% is measured on clean demo invoices. Your production mix has angled phone photos, faded scans, and weird layouts, and those pull the number down.
-
-### Finding 5: there is no universal best OCR engine
+### Finding 4: there is no universal best OCR engine
 
 Academic papers, financial tables, and mobile receipts each had a different winner. Docling led on academic PDFs, DocsAPI led on financial tables, PaddleOCR led on mobile-quality receipts. This is why the hybrid pattern wins at scale: run a cheap engine on the easy bulk, route only the hard documents to a specialized tool.
 

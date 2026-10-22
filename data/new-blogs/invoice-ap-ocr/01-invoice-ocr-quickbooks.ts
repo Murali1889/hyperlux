@@ -87,15 +87,15 @@ export const blogAp01: BlogPost = {
     <p>Run a parallel period before you cut over. Post the same batch of invoices through both the old manual process and the new OCR-to-QuickBooks pipeline for two to three weeks, then diff the results field by field, not just total by total. A wrong GL code or a duplicate vendor record can carry a correct total amount, which means checking only the total will miss exactly the errors that matter most for a clean books close. For the broader AP OCR evaluation process beyond QuickBooks specifically, see our <a href="/resources/blogs/accounts-payable-ocr">accounts payable OCR guide</a>.</p>
     <p>Sources: field names verified against the <a href="https://developer.intuit.com/app/developer/qbo/docs/api/accounting/all-entities/bill" target="_blank" rel="noopener">QuickBooks Online Bill entity reference</a> (Intuit developer documentation). Extraction accuracy figures from our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
 
-    <p>Related guides: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a> and <a href="/resources/blogs/ocr-integration-with-accounting-crm-erp">how to connect OCR to accounting, CRM and ERP systems</a>.</p>
+    <p>Related guides: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a>, <a href="/resources/blogs/ocr-integration-with-accounting-crm-erp">how to connect OCR to accounting, CRM and ERP systems</a> and <a href="/resources/blogs/best-ocr-software-for-accounts-payable">best OCR software for accounts payable</a>.</p>
   `,
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "Accounts Payable",
   date: "August 9, 2026",
   datePublished: "2026-08-09T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-10-22T00:00:00.000Z",
+  last_updated: "October 22, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "invoice ocr quickbooks integration",

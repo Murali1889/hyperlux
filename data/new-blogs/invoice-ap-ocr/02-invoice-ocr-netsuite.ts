@@ -78,15 +78,15 @@ export const blogAp02: BlogPost = {
     <p>Take 15 recent bills created through Bill Capture and count how many lines landed as items versus expenses, because line type decides whether those bills can be matched against a PO line. Then pull 15 real multi-subsidiary invoices from vendors that bill more than one of your entities and check whether the subsidiary assignment is right, not just present. Both checks take under an hour and catch the two failure modes that cost the most to unwind after the fact, a bill posted against the wrong intercompany entity or a PO-eligible invoice whose lines cannot be matched to a PO line because they landed as expenses. Neither failure throws an error at post time, which is exactly why they survive undetected for months.</p>
     <p>Sources: Bill Capture behavior and limits from Oracle's NetSuite documentation on <a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article_1021105256.html" target="_blank" rel="noopener">uploading documents to Bill Capture</a> and its <a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article_0417034348.html" target="_blank" rel="noopener">considerations page</a>, checked September 21, 2026. Field structure verified against NetSuite's SuiteTalk REST vendor bill payload documentation and independent technical references. Extraction accuracy figures from our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
 
-    <p>Related guides: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a> and <a href="/resources/blogs/ocr-integration-with-accounting-crm-erp">how to connect OCR to accounting, CRM and ERP systems</a>.</p>
+    <p>Related guides: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a>, <a href="/resources/blogs/ocr-integration-with-accounting-crm-erp">how to connect OCR to accounting, CRM and ERP systems</a> and <a href="/resources/blogs/best-ocr-software-for-accounts-payable">best OCR software for accounts payable</a>.</p>
   `,
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "Accounts Payable",
   date: "August 9, 2026",
   datePublished: "2026-08-09T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  dateModified: "2026-10-22T00:00:00.000Z",
+  last_updated: "October 22, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "invoice ocr netsuite",

@@ -59,7 +59,7 @@ Multiply each category score by how often that category shows up in your product
 
 ### A shortcut for the "which is even worth testing" question
 
-If you want a starting shortlist before you run your own set, use an independent benchmark to narrow the field, then validate the finalists on your documents. I published one you can use as that starting point: eight engines on 1,900 real documents with per-category numbers, free to reference. [OCR Accuracy Benchmark 2026](https://docsapi.co/resources/blogs/ocr-accuracy-benchmark-2026). Use it to pick your 2 or 3 finalists, then do steps 1 through 5 on your own files, because your documents are the only benchmark that predicts your production.
+If you want a starting shortlist before you run your own set, use a published benchmark to narrow the field, then validate the finalists on your documents. I published one you can use as that starting point: eight engines on 1,700 real documents with per-category numbers, free to reference. [OCR Accuracy Benchmark 2026](https://docsapi.co/resources/blogs/ocr-accuracy-benchmark-2026). Use it to pick your 2 or 3 finalists, then do steps 1 through 5 on your own files, because your documents are the only benchmark that predicts your production.
 
 ### The one rule to remember
 

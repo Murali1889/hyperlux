@@ -121,16 +121,16 @@ Once the "OCR Accuracy Benchmark 2026" page is live, use it to earn editorial li
 ### Template C: to a blogger who wrote an OCR comparison
 
 ```
-Subject: Independent OCR accuracy data for your [topic] article
+Subject: OCR accuracy data for your [topic] article
 
 Hi [name],
 
 I read your piece on [their article title / topic] and found the
 [specific thing you actually liked] section useful.
 
-We just published an independent OCR accuracy benchmark: eight engines
+We just published an OCR accuracy benchmark: eight engines
 (Tesseract, PaddleOCR, AWS Textract, Google Document AI, Docling,
-LlamaParse, and DocsAPI) tested on 1,900 real production documents, with
+LlamaParse, and DocsAPI) tested on 1,700 real production documents, with
 the full per-category numbers and methodology. It is free to cite:
 
 docsapi.co/resources/blogs/ocr-accuracy-benchmark-2026
@@ -153,14 +153,13 @@ Hi [name],
 
 Your "[roundup title]" list is one of the better OCR resources out there.
 
-We ran an independent accuracy benchmark across eight engines on 1,900
+We ran an accuracy benchmark across eight engines on 1,700
 real documents and published the full numbers, free to cite:
 
 docsapi.co/resources/blogs/ocr-accuracy-benchmark-2026
 
-Two things your readers might find useful: the per-category winners (no
-single engine wins everything) and the finding that no AP tool actually
-hits the 99% touchless rate vendors claim on messy invoices.
+One thing your readers might find useful: the per-category winners (no
+single engine wins everything).
 
 If you update the roundup, the data is there to reference. Thanks for
 maintaining such a useful list.
@@ -231,7 +230,7 @@ services). I have been reading [Publication] for [genuine specific
 reason].
 
 I'd like to contribute a piece backed by original data we collected: an
-independent benchmark of eight OCR engines on 1,900 real documents.
+benchmark of eight OCR engines on 1,700 real documents.
 Possible angles:
 
 - Why generic OCR fails on bank statements (the multi-page table problem)
