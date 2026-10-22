@@ -56,6 +56,37 @@ export default function Footer() {
           </div>
 
           <div>
+            <h3 className="text-white font-bold mb-4">Popular Guides</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/resources/blogs/best-ocr-software-for-accounts-payable" className="text-gray-400 hover:text-white transition-colors">
+                  Best OCR software for AP
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources/blogs/accounts-payable-ocr" className="text-gray-400 hover:text-white transition-colors">
+                  Accounts payable OCR
+                </Link>
+              </li>
+              <li>
+                <Link href="/documents/financial-docs" className="text-gray-400 hover:text-white transition-colors">
+                  Financial document OCR
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources/blogs/ocr-accuracy-benchmark-2026" className="text-gray-400 hover:text-white transition-colors">
+                  OCR accuracy benchmark 2026
+                </Link>
+              </li>
+              <li>
+                <Link href="/resources/blogs/paddleocr-vs-tesseract-vs-docsapi" className="text-gray-400 hover:text-white transition-colors">
+                  PaddleOCR vs Tesseract
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
             <h3 className="text-white font-bold mb-4">Contact</h3>
             <ul className="space-y-3">
               {/* <li className="flex items-start">
