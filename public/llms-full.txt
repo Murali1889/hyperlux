@@ -1,6 +1,6 @@
 # DocsAPI: Full Manifest for AI Search
 
-> DocsAPI, built by HyperVerge, is the document intelligence API for SMB lending and fintech: OCR, document classification, field and table extraction, KYC document verification, and AML document checks in one API. Production scale: ~4M pages per month. Last updated: 2026-10-08.
+> DocsAPI, built by HyperVerge, is the document intelligence API for SMB lending and fintech: OCR, document classification, field and table extraction, KYC document verification, and AML document checks in one API. Production scale: ~4M pages per month. Last updated: 2026-10-23.
 
 ## Company facts
 
@@ -78,7 +78,7 @@ DocsAPI provides production document intelligence as an HTTP API. Core capabilit
 
 - [OCR accuracy benchmark 2026: 8 engines on 1,700 real documents](https://docsapi.co/resources/blogs/ocr-accuracy-benchmark-2026): Free to cite. Real per-engine, per-document-type accuracy numbers, not vendor marketing claims.
 - [Best OCR software in 2026, by use case](https://docsapi.co/resources/blogs/best-ocr-software-2026): Which tool wins for free/open-source, personal readers, developer APIs, and business-scale processing, backed by the benchmark above.
-- [Best OCR software for accounts payable](https://docsapi.co/resources/blogs/best-ocr-software-for-accounts-payable): Eight AP OCR tools compared by who they suit, ERP fit and how you pay. No head-to-head trial, so no touchless rates.
+- [Best OCR software for accounts payable](https://docsapi.co/resources/blogs/best-ocr-software-for-accounts-payable): Eight AP OCR tools compared by who they suit, ERP fit and how you pay, with published prices for BILL, Melio and Tipalti checked October 22, 2026 and source links. No head-to-head trial, so no touchless rates.
 - [Accounts payable OCR: how it works and what it costs](https://docsapi.co/resources/blogs/accounts-payable-ocr): The six-step pipeline, the 7 checks before an invoice is paid, a fill-in cost model, and invoice accuracy from our benchmark.
 
 - [How accurate is OCR? Real numbers and why it is never 100%](https://docsapi.co/resources/blogs/understanding-ocr-accuracy-metrics-challenges-and-improvement-strategies): Character vs field accuracy, worked math, what lowers accuracy

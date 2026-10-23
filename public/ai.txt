@@ -1,6 +1,6 @@
 # DocsAPI: AI Policy & Fact File
 
-Last updated: 2026-10-08
+Last updated: 2026-10-23
 
 ## What DocsAPI is
 
