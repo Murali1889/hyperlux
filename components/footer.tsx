@@ -52,6 +52,11 @@ export default function Footer() {
                   Resources
                 </Link>
               </li>
+              <li>
+                <Link href="/pricing" className="text-gray-400 hover:text-white transition-colors">
+                  Pricing
+                </Link>
+              </li>
             </ul>
           </div>
 

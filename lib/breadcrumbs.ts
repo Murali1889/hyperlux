@@ -32,6 +32,7 @@ const SEGMENT_NAMES: Record<string, string> = {
   articles: "Articles",
   newsletters: "Newsletters",
   "book-demo": "Book a Demo",
+  pricing: "Pricing",
   author: "Authors",
   tools: "Tools",
   "which-ocr": "Which OCR Should I Use?",

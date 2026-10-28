@@ -1,6 +1,6 @@
 # DocsAPI: Full Manifest for AI Search
 
-> DocsAPI, built by HyperVerge, is the document intelligence API for SMB lending and fintech: OCR, document classification, field and table extraction, KYC document verification, and AML document checks in one API. Production scale: ~4M pages per month. Last updated: 2026-10-23.
+> DocsAPI, built by HyperVerge, is the document intelligence API for SMB lending and fintech: OCR, document classification, field and table extraction, KYC document verification, and AML document checks in one API. Production scale: ~4M pages per month. Last updated: 2026-10-28.
 
 ## Company facts
 
@@ -52,6 +52,7 @@ DocsAPI provides production document intelligence as an HTTP API. Core capabilit
 - [Industries](https://docsapi.co/industries)
 - [Free OCR tool: image and PDF to text in your browser, no signup](https://docsapi.co/tools/free-ocr)
 - [Which OCR should I use? Free selector](https://docsapi.co/tools/which-ocr)
+- [Pricing](https://docsapi.co/pricing): from $0.02 per page, volume discounts above 100K pages a month, demo then a free 30-day trial for qualified lenders (checked October 28, 2026)
 - [Book a demo](https://docsapi.co/book-demo)
 
 ### Solutions (by team/function)

@@ -5,8 +5,7 @@ import { SITE_URL } from "@/lib/seo"
 
 const TODAY = "2026-07-31"
 
-// All real, indexable static routes (excludes /pricing which 404s,
-// and dynamic [slug] routes which are expanded separately).
+// All real, indexable static routes (dynamic [slug] routes are expanded separately).
 // lastModified defaults to TODAY unless overridden below — only override
 // for routes whose actual content changed, to avoid fake freshness signals.
 const STATIC_ROUTES: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]; lastModified?: string }[] = [
@@ -40,10 +39,11 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Metadata
   { path: "/resources/blogs", priority: 0.8, changeFrequency: "weekly", lastModified: "2026-08-08" },
   { path: "/tools/which-ocr", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-08" },
   { path: "/tools/free-ocr", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-28" },
+  { path: "/pricing", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-28" },
   { path: "/book-demo", priority: 0.7, changeFrequency: "yearly", lastModified: "2026-10-08" },
-  { path: "/llms.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-10-08" },
-  { path: "/llms-full.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-10-08" },
-  { path: "/ai.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-10-08" },
+  { path: "/llms.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-10-28" },
+  { path: "/llms-full.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-10-28" },
+  { path: "/ai.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-10-28" },
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
