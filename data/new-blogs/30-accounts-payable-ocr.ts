@@ -68,7 +68,7 @@ export const blog30: BlogPost = {
         <tr><td>Minutes to key one invoice by hand</td><td>5</td></tr>
         <tr><td>Fully loaded AP clerk cost per hour</td><td>$40</td></tr>
         <tr><td>Pages per invoice</td><td>2</td></tr>
-        <tr><td>OCR price per page</td><td>$0.02 (DocsAPI's starting list price; other tools differ)</td></tr>
+        <tr><td>OCR price per page</td><td>$0.02 (<a href="/pricing">DocsAPI's starting list price</a>; other tools differ)</td></tr>
         <tr><td>Share of invoices that still need review</td><td>30%</td></tr>
         <tr><td>Minutes to review one flagged invoice</td><td>3</td></tr>
       </tbody>
@@ -139,7 +139,7 @@ export const blog30: BlogPost = {
   category: "AI Document Intelligence",
   date: "July 1, 2026",
   datePublished: "2026-07-01T00:00:00.000Z",
-  dateModified: "2026-10-14T00:00:00.000Z",
+  dateModified: "2026-10-28T00:00:00.000Z",
   last_updated: "October 14, 2026",
   readTime: "12 min read",
   author: nupuraUghade,

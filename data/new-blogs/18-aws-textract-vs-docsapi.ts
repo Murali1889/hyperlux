@@ -21,7 +21,7 @@ export const blog18: BlogPost = {
       <thead><tr><th>Dimension</th><th>AWS Textract</th><th>DocsAPI</th></tr></thead>
       <tbody>
         <tr><td>What it is</td><td>AWS managed service with separate APIs for text, forms, tables, queries, expenses, IDs and mortgage documents</td><td>Standalone document API: classification, field extraction and validation</td></tr>
-        <tr><td>Plain OCR price</td><td>$1.50 per 1,000 pages (first million a month)</td><td>Per page, from $0.02, tables and classification included</td></tr>
+        <tr><td>Plain OCR price</td><td>$1.50 per 1,000 pages (first million a month)</td><td>Per page, <a href="/pricing">from $0.02</a>, tables and classification included</td></tr>
         <tr><td>Tables</td><td>$15 per 1,000 pages, returned page by page</td><td>Included; tables that run across pages are joined into one</td></tr>
         <tr><td>Forms (key-value pairs)</td><td>$50 per 1,000 pages</td><td>Included for supported document types</td></tr>
         <tr><td>Languages</td><td>English, French, German, Italian, Portuguese, Spanish</td><td>Major commercial languages; test yours</td></tr>
@@ -174,7 +174,7 @@ export const blog18: BlogPost = {
   category: "Vendor Comparisons",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-10-12T00:00:00.000Z",
+  dateModified: "2026-10-28T00:00:00.000Z",
   last_updated: "October 12, 2026",
   readTime: "12 min read",
   author: nupuraUghade,

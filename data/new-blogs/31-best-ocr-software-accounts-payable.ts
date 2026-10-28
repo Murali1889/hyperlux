@@ -39,7 +39,7 @@ export const blog31: BlogPost = {
 </table>
 <p>Prices and integrations come from each vendor's own pricing page on the date above, and the entries marked "not checked" are ones we did not verify. They change, so confirm before you buy.</p>
 <p><strong>What the published prices tell you.</strong> The three vendors that publish prices charge for the platform, not for reading an invoice. BILL charges per user, so a three-person AP team on the Team plan pays $195 a month before payment fees. Melio's plans are priced by how many ACH payments you make. Tipalti starts at $99 a month and then adds per-invoice and per-payment pricing. None of them quotes a price per page of OCR, which is why an OCR API at $0.01 to $0.02 per page and a suite cannot be compared on one number. Ask every vendor for the all-in monthly cost at your invoice and payment volume.</p>
-<p>DocsAPI is our product, so weigh our description of it accordingly. AWS Textract's AnalyzeExpense lists $0.01 per page, and DocsAPI starts from $0.02 per page.</p>
+<p>DocsAPI is our product, so weigh our description of it accordingly. AWS Textract's AnalyzeExpense lists $0.01 per page, and <a href="/pricing">DocsAPI starts from $0.02 per page</a>.</p>
 <h2>Bill.com, best AP OCR software for SMB</h2>
 <p>Bill.com fits SMBs on QuickBooks or Xero with straightforward AP. On the Team and Corporate plans, QuickBooks Online and Xero sync automatically in both directions, while the Essentials plan is manual CSV import and export. Its payment network handles vendor payments. Where it can fall short: invoices with unusual layouts may need manual fixing, and you get little control over the OCR layer if you want to build your own validation on top. Best fit: small teams with simple workflow requirements.</p>
 <h2>AvidXchange, best for mid-market real estate and HOA</h2>
@@ -95,7 +95,7 @@ export const blog31: BlogPost = {
   category: "AI Document Intelligence",
   date: "July 4, 2026",
   datePublished: "2026-07-04T00:00:00.000Z",
-  dateModified: "2026-10-22T00:00:00.000Z",
+  dateModified: "2026-10-28T00:00:00.000Z",
   last_updated: "October 22, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
