@@ -6,13 +6,13 @@ export const blog16: BlogPost = {
   title: "RCM: Why 12-Day Document Intake Is Killing Your AR (2026)",
   slug: "revenue-cycle-management-document-intake",
   excerpt:
-    "Our AR aging report blamed customers. The real problem was 12-day document intake. Here's how we found our stuck step and cut intake to 18 hours.",
+    "When cash is slow, the cause is often upstream of payment: the days between a document arriving and its data reaching your system. Here is how to measure that gap and shorten it.",
   description:
     "Our AR aging blamed customers. The real problem was 12-day document intake. Find your own stuck step and cut RCM intake from days to hours in 2026.",
   metaTag: "RCM: 12-Day Intake Is Killing Your AR (Fix in 2026)",
   content: `
-    <p>Our AR aging report told a story: customers paying slowly, lots of disputed invoices, cash flow lumpy. The fix everyone proposed was "send more reminders" and "tighten credit terms". We did. It barely moved the needle.</p>
-    <p>The real problem was 12-day document intake. Between a customer sending us the documents needed to process their claim and us actually having those documents in our system as structured data, twelve days passed on average. Most of our AR drag was upstream of payment. This is the story of how we found it and fixed it.</p>
+    <p>When accounts receivable runs slow, the usual fixes are more reminders and tighter credit terms. They often barely move the needle, because the delay is upstream of payment.</p>
+    <p>The hidden delay is document intake: the days between a customer sending the documents needed to process a claim or invoice and your system holding them as structured data. This guide shows how to measure that gap and how to shorten it.</p>
 
     <h2>What "Revenue Cycle Management" Actually Means</h2>
     <p>Revenue Cycle Management (RCM) is the end-to-end process of getting paid for work you do. It starts when a customer engages and ends when cash is in your bank account. In between are documents, proposals, contracts, work orders, claims, invoices, payments, disputes, adjustments, and the data inside those documents drives every step.</p>
@@ -70,16 +70,16 @@ export const blog16: BlogPost = {
     <p>The gap between #1 and #2 is your document intake time. If it's more than 1-2 days on average, you have a document intake problem. If you can't reconstruct the timeline at all, you have an even bigger problem, no visibility into your own RCM.</p>
 
     <h2>The Three-Tier Intake Pipeline That Works</h2>
-    <p>The pattern I've seen cut intake time from 12 days to under 1 day:</p>
+    <p>A three-tier intake pattern that shortens intake time:</p>
 
     <h3>Tier 1: Automated</h3>
-    <p>Document arrives via email, portal, or API. OCR runs immediately. Fields extract. Validation runs. If everything looks clean, the document moves to billing automatically. About 70-80% of documents.</p>
+    <p>Document arrives via email, portal, or API. OCR runs immediately. Fields extract. Validation runs. If everything looks clean, the document moves to billing automatically. This should be the bulk of your documents.</p>
 
     <h3>Tier 2: Light Review</h3>
-    <p>Document has low-confidence fields or missing data. Routed to a human queue with the suspect fields highlighted. The human reviews in 2-5 minutes. About 15-25% of documents.</p>
+    <p>Document has low-confidence fields or missing data. Routed to a human queue with the suspect fields highlighted. A person reviews it in a few minutes. This is a smaller share, and the share depends on your documents.</p>
 
     <h3>Tier 3: Customer Follow-Up</h3>
-    <p>Document is missing required fields entirely or doesn't match expected formats. Automated email goes back to the customer with specific requests. About 5-10% of documents.</p>
+    <p>Document is missing required fields entirely or doesn't match expected formats. Automated email goes back to the customer with specific requests. This should be the smallest share.</p>
 
     <p>This pattern works because it matches review effort to the actual problem. Most documents are fine and don't need humans. The remaining few get focused attention. (See our <a href="/resources/blogs/ocr-pdf-honest-guide">honest guide from 4M pages a month</a>.)</p>
 
@@ -112,8 +112,8 @@ export const blog16: BlogPost = {
   category: "Compliance",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-10-29T00:00:00.000Z",
+  last_updated: "October 29, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "what is revenue cycle management",

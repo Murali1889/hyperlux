@@ -13,7 +13,7 @@ export const blog14: BlogPost = {
   summary:
     "KYC document verification is the step where a financial company collects a customer's ID documents, checks they are genuine and confirms they belong to that person. Auditors mostly want evidence: what was collected, what was checked, who approved it and when, kept in an audit trail.",
   content: `
-    <p>I sat through three KYC audits in 2025. Two for clients, one for our own program. The thing nobody tells you in advance: the auditor checklist is way shorter than the vendor pitches make it sound. They have a small number of specific things they want to see. If you have those, you pass. If you don't, no amount of fancy tooling saves you.</p>
+    <p>A KYC review usually comes down to a short list of evidence: what you collected, what you checked, who approved it and when. If you can show those for every customer, you are in good shape. If you cannot, extra tooling will not save you. This guide covers that evidence and a pipeline that produces it.</p>
     <p>This guide is what auditors actually look for, what failure modes you should fix first, and how to build a KYC document verification process that passes without overengineering.</p>
 
     <h2>What "KYC Document Verification" Actually Means</h2>
@@ -79,7 +79,7 @@ export const blog14: BlogPost = {
     <p>Fix: require a documented reason for every manual override. Audit trail must include the human reasoning.</p>
 
     <h2>The Document Verification Pipeline That Passes Audits</h2>
-    <p>The pipeline I have seen pass audits cleanly looks like this:</p>
+    <p>A pipeline that is easy to defend in a review looks like this:</p>
     <ol>
       <li><strong>Collect:</strong> Customer uploads photo ID and proof of address. Store originals immutably.</li>
       <li><strong>Detect:</strong> Identify document type. Crop and orient correctly. (See our <a href="/resources/blogs/document-detection-before-ocr">document detection guide</a>.)</li>
@@ -109,7 +109,7 @@ export const blog14: BlogPost = {
       </tbody>
     </table>
 
-    <p>Prices vary by jurisdiction (EU + UK check costs run 20-40% higher than US-only), risk tier (enhanced due diligence for high-risk customers can 3-5x base cost), and whether ongoing monitoring is included in the per-verification price or billed separately.</p>
+    <p>Prices vary by jurisdiction, by risk tier (enhanced due diligence for high-risk customers costs more than a standard check) and by whether ongoing monitoring is included in the per-verification price or billed separately.</p>
 
     <h2>Build vs buy: KYC verification in 2026</h2>
     <p>Build vs buy for KYC in 2026 comes down to volume, jurisdictional complexity, and existing engineering capacity. Under 500 verifications per month across a single jurisdiction: buy a full-service platform (Jumio, Onfido, Persona). The math on DIY doesn't work below that volume, regulatory expectations are specific enough that missing one requirement is a bigger cost than the vendor fee. 500-5,000 per month with 1-2 jurisdictions: still buy the platform but negotiate volume discounts and own the exception queue and manual review workflow to avoid platform lock-in. Above 5,000 per month or across 3+ jurisdictions: the hybrid path, best-of-breed APIs (DocsAPI for OCR, iProov or Incode for liveness, Refinitiv or ComplyAdvantage for screening) integrated into a KYC orchestration layer you own, usually wins on unit economics and jurisdictional flexibility.</p>
@@ -132,8 +132,8 @@ export const blog14: BlogPost = {
   category: "Compliance",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-10-19T00:00:00.000Z",
-  last_updated: "October 19, 2026",
+  dateModified: "2026-10-29T00:00:00.000Z",
+  last_updated: "October 29, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "kyc",

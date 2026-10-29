@@ -11,7 +11,7 @@ export const blog04: BlogPost = {
     "When Tesseract fails on PDF text recognition, four document categories where it breaks, the pre-processing that saves it, and the alternatives that work.",
   metaTag: "PDF Text Recognition: When Tesseract Fails (Fixes Inside)",
   content: `
-    <p>I love Tesseract. It is free. It is open source. It has been around longer than my career. We ran a Tesseract-based pipeline for the first 18 months of our document API. Then, around month 14, the failure rate on certain document categories started costing us more in customer support tickets than the engine saved us in licensing fees. This guide is the honest version of when Tesseract stops being the right answer.</p>
+    <p>Tesseract is free, open source and has been around for a long time. For clean, typed, single-column text it is often the right answer. This guide is the honest version of when it stops being the right answer.</p>
 
     <h2>What "PDF Text Recognition" Actually Means</h2>
     <p>PDF text recognition is the simple-sounding job of taking a PDF and pulling the readable words out. If the PDF was made on a computer (typed in Word, exported from a website, etc.), the words are already in there as real text. No recognition needed, just open and read.</p>
@@ -20,24 +20,24 @@ export const blog04: BlogPost = {
     <p>If this whole topic is new to you, our <a href="/resources/blogs/make-pdf-searchable">make a PDF searchable guide</a> is the friendly starting point. This article assumes you have already tried Tesseract and want to know when it is not enough.</p>
 
     <h2>Where Tesseract Is Genuinely Great</h2>
-    <p>Be honest about Tesseract's strengths before discussing its weaknesses. On clean, printed English at 300 DPI, Tesseract 5+ hits 97-99% character accuracy. That is excellent. It is free. It runs on a laptop. The community has answered most of the common questions over 20 years.</p>
-    <p>For 80% of one-off PDF text recognition jobs, Tesseract is the right tool. If you have a single document, a personal project, or a small recurring task, do not pay for an API. The free engine will probably do the job.</p>
+    <p>Be honest about Tesseract's strengths before discussing its weaknesses. On clean, printed English at a decent scan resolution, Tesseract does very well. Our 2026 benchmark shows 97 to 99% character accuracy on clean typed text across the engines we tested. It is free. It runs on a laptop. The community has answered most of the common questions over 20 years.</p>
+    <p>For most one-off PDF text recognition jobs, Tesseract is the right tool. If you have a single document, a personal project, or a small recurring task, do not pay for an API. The free engine will probably do the job.</p>
     <p>The trouble starts when you have <strong>variance</strong>. Documents from multiple sources. Mixed scan quality. Tables. Foreign languages. Forms with handwritten fields. The accuracy starts dropping in ways that compound through the pipeline. The cost of fixing OCR errors downstream usually exceeds the cost of a better engine, but you only see that math after the painful migration. We learned the hard way and wrote about it in our <a href="/resources/blogs/ocr-pdf-honest-guide">honest guide from 4M pages a month</a>.</p>
 
     <h2>The Four Document Categories Where Tesseract Falls Apart</h2>
-    <p>Across more than 200,000 documents through our old pipeline, four categories had failure rates above 15%. If your documents look like any of these, expect trouble:</p>
+    <p>Tesseract tends to struggle with four kinds of document. If yours look like any of these, expect trouble:</p>
 
     <h3>1. Tables and Multi-Column Layouts</h3>
     <p>Tesseract reads top-to-bottom, left-to-right. A two-column legal brief becomes word salad: line 1 of column 1, then line 1 of column 2, then line 2 of column 1. A reader can sometimes reconstruct the meaning. Downstream code cannot. It just sees scrambled output.</p>
     <p>The fix is <strong>layout-aware OCR</strong>. The engine detects column boundaries and table structure before reading. AWS Textract does this well for forms; we built layout-aware extraction into DocsAPI specifically because Tesseract could not. Same fundamental issue is discussed in our <a href="/resources/blogs/pdf-parser-online">PDF parser breakdown</a>.</p>
 
     <h3>2. Handwritten Text</h3>
-    <p>Tesseract supports handwriting via its legacy LSTM model. Real-world accuracy is below 70% in our testing. Doctors' notes, signed forms, and check fields are the worst. Modern alternatives, Google Document AI, Azure Form Recognizer, and vision-language models, clear 85-90% on neat handwriting. Still not perfect, but the gap matters when your documents include any handwritten content.</p>
+    <p>Tesseract supports handwriting via its legacy LSTM model. Tesseract is built for printed text, and handwriting accuracy is poor. Doctors' notes, signed forms, and check fields are the worst. Modern engines and vision-language models do better, but none is perfect. In our 2026 benchmark, DocsAPI scored 78% on handwritten forms, so plan for human review of handwritten fields.</p>
     <p>If your workflow has even occasional handwriting (a signature, a hand-filled date, a written note), Tesseract alone will frustrate you. Hybrid pipelines that route handwritten regions to a different engine work well.</p>
 
     <h3>3. Foreign Languages and Mixed Scripts</h3>
     <p>Tesseract supports 100+ languages, but you have to specify which language(s) a document is in. A multilingual document, English headers, Mandarin line items, Arabic stamps, requires running multiple language packs or doing per-region detection. Few teams get this right.</p>
-    <p>Modern engines auto-detect language per region and switch models on the fly. If your documents cross borders, this single feature can lift accuracy 10+ points overnight.</p>
+    <p>Modern engines auto-detect language per region and switch models on the fly. If your documents cross borders, this feature matters a lot.</p>
 
     <h3>4. Faded, Low-Contrast Scans</h3>
     <p>Thermal-paper receipts, old archives, photocopied generations, the contrast is low enough that Tesseract either skips text or hallucinates it. Adaptive thresholding (a pre-processing step) recovers most of this. Tesseract does not include it by default; modern OCR APIs do.</p>
@@ -55,18 +55,18 @@ export const blog04: BlogPost = {
         <tr><td>Complex layouts</td><td>Layout-aware OCR (DocsAPI, Textract)</td><td>$0.02-$0.05 per page</td></tr>
       </tbody>
     </table>
-    <p>The realistic answer for most production teams: keep Tesseract for the easy 70% of your traffic, route the hard 30% to a paid API. Hybrid is cheaper than running everything through a paid API and more reliable than running everything through Tesseract. Our <a href="/resources/blogs/paddleocr-vs-tesseract-vs-docsapi">PaddleOCR vs Tesseract vs DocsAPI</a> piece goes deeper on the open-source side.</p>
+    <p>The realistic answer for most production teams: keep Tesseract for the easy documents and route the hard ones to a paid API. The split depends on your documents, so measure it on a sample. Hybrid is cheaper than running everything through a paid API and more reliable than running everything through Tesseract. Our <a href="/resources/blogs/paddleocr-vs-tesseract-vs-docsapi">PaddleOCR vs Tesseract vs DocsAPI</a> piece goes deeper on the open-source side.</p>
 
     <h2>The Pre-Processing That Recovers Most Tesseract Failures</h2>
     <p>Before you give up on Tesseract, try these five steps in order. Each takes minutes to add and recovers measurable accuracy:</p>
     <ol>
       <li><strong>Deskew.</strong> Run <code>ocrmypdf --deskew</code>. Recovers 2-4 percentage points on tilted scans.</li>
       <li><strong>Rotation correction.</strong> Auto-detect each page's orientation. Recovers 10+ points on rotated documents.</li>
-      <li><strong>Adaptive thresholding.</strong> Pre-process the image before OCR using OpenCV. Recovers 3-5 points on low-contrast scans.</li>
-      <li><strong>Resolution upscaling.</strong> If the source is below 200 DPI, upscale before OCR. Recovers 2-3 points.</li>
+      <li><strong>Adaptive thresholding.</strong> Pre-process the image before OCR using OpenCV. Helps on low-contrast scans.</li>
+      <li><strong>Resolution upscaling.</strong> If the source is below 200 DPI, upscale before OCR. Helps on low-resolution sources.</li>
       <li><strong>Language hints.</strong> Pass <code>-l eng+spa</code> for known multilingual content. Recovers 5+ points on multilingual documents.</li>
     </ol>
-    <p>After all five, Tesseract's accuracy on hard documents typically climbs from 75% to 90%+. The remaining 10% is where layout-aware engines pull ahead. <a href="/resources/blogs/document-detection-before-ocr">Document detection</a> covers the auto-rotation step in more depth.</p>
+    <p>Together these steps usually improve Tesseract's results on hard documents, but by how much depends on your files, so measure before and after. The gap that remains is where layout-aware engines pull ahead. <a href="/resources/blogs/document-detection-before-ocr">Document detection</a> covers the auto-rotation step in more depth.</p>
 
     <h2>Why "Free" OCR Is Often the Most Expensive Choice</h2>
     <p>The math that traps teams: Tesseract is free. A paid API is $0.02 per page. For 10,000 pages a month, the API costs $200 and Tesseract costs $0. Obvious choice, right?</p>
@@ -93,15 +93,15 @@ export const blog04: BlogPost = {
 
     <h2>What I'd Do Today</h2>
     <p>Run Tesseract on a representative sample of your real documents, not the clean demo PDFs, the messy ones from your inbox. Measure accuracy honestly. If you clear 95% on the field-level data you care about, keep Tesseract and move on. If you are below 90%, the cost of fixing OCR errors downstream almost always exceeds the marginal cost of a paid API.</p>
-    <p>The single most common mistake: teams use Tesseract because it is free, accept 85% accuracy, and then build elaborate manual review workflows to catch the 15% errors. That review workflow costs more than the API would have. Run the math before you commit. (<a href="/author/nupura-ughade">I write about these tradeoffs a lot</a>.)</p>
+    <p>The single most common mistake: teams use Tesseract because it is free, accept a weak accuracy on hard documents, and then build elaborate manual review workflows to catch the errors. That review workflow can cost more than an API would have. Run the math before you commit.</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",
   category: "OCR How-To",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-10-22T00:00:00.000Z",
-  last_updated: "October 22, 2026",
+  dateModified: "2026-10-29T00:00:00.000Z",
+  last_updated: "October 29, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "pdf text recognition",
@@ -140,7 +140,7 @@ export const blog04: BlogPost = {
     {
       question: "Can vision-language models replace OCR entirely?",
       answer:
-        "For small batches and complex layouts, yes. For high-volume production, cost and speed make pure VLM impractical today. Hybrid pipelines, fast OCR for bulk, VLM for trickiest 5-10%, are the realistic 2026 pattern.",
+        "For small batches and complex layouts, yes. For high-volume production, cost and speed make pure VLM impractical today. Hybrid pipelines, fast OCR for bulk, VLM for the trickiest documents, are the realistic 2026 pattern.",
     },
     {
       question: "Why is my Tesseract output garbled on rotated pages?",
