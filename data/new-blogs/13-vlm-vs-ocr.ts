@@ -49,7 +49,7 @@ export const blog13: BlogPost = {
     <p>Dedicated OCR: gives you text. That's it. You have to write code to interpret. VLMs: can answer "what was the total?" or "is this a real invoice?" directly. Massive difference when semantic understanding is needed.</p>
 
     <h3>4. Layout Handling</h3>
-    <p>Dedicated OCR (layout-aware): handles tables, forms, multi-column layouts reliably. VLMs: handle complex layouts including hand-drawn diagrams, weird formatting, and mixed content surprisingly well. VLMs win on the trickiest 5% of documents.</p>
+    <p>Dedicated OCR (layout-aware): handles tables, forms, multi-column layouts reliably. VLMs: handle complex layouts including hand-drawn diagrams, weird formatting, and mixed content surprisingly well. VLMs tend to win on the trickiest documents.</p>
 
     <h3>5. Output Flexibility</h3>
     <p>Dedicated OCR: fixed output formats (JSON, XML, text). VLMs: any format you ask for. "Give me this invoice as JSON with these specific fields" works.</p>
