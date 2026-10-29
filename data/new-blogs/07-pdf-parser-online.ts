@@ -6,12 +6,12 @@ export const blog07: BlogPost = {
   title: "PDF Parser Online: Why Most Tools Mangle Tables",
   slug: "pdf-parser-online",
   excerpt:
-    "Our first PDF parser mangled every single bank statement table. Six months later we shipped one that didn't. Here is what we learned about why most parsers break, and how to pick one that won't.",
+    "Most online PDF parsers handle plain text and mangle tables. Here is why bank statement and invoice tables break parsers, the four table patterns to test, and how to pick one that does not.",
   description:
     "Why most PDF parsers break on tables, the engineering behind a parser that doesn't, and how to pick the right tool for table-heavy documents.",
   metaTag: "PDF Parser Online: Why Most Tools Mangle Tables",
   content: `
-    <p>The first version of our PDF parser worked beautifully on regular text and mangled every single bank statement we threw at it. Six months later, after rewriting the table extraction three times, we shipped one that did not mangle them. This guide is what we learned along the way.</p>
+    <p>Most online PDF parsers work well on plain text and fail on tables. A bank statement or invoice table is where they split columns wrongly, merge rows and drop whatever sits on the next page. This guide explains why that happens, which table patterns to test, and how to pick a parser that handles them.</p>
     <p>If you are picking a PDF parser for any document with tables, invoices, bank statements, forms, financial reports, lab results, read this before you commit. Most tools fail on the exact thing you need them for.</p>
 
     <h2>What "Parse a PDF" Actually Means</h2>
@@ -74,7 +74,7 @@ export const blog07: BlogPost = {
     <p>Strong table parsing. Handles borderless tables well, merged cells okay, multi-page tables reliably. Pay-per-page. Best fit if you live in AWS. Textract's table detection follows the same conceptual row-and-column clustering logic described above, but runs its own proprietary model rather than the open, inspectable Camelot approach, which is why its merged-cell and multi-page handling is generally stronger out of the box.</p>
 
     <h3>DocsAPI</h3>
-    <p>Honest disclosure: my product. Layout-aware parsing built specifically for the failure cases above. Handles all four table patterns, including multi-page bank statements. Outputs JSON ready for downstream systems. Try it on a real document at <a href="/products">/products</a>.</p>
+    <p>Disclosure: DocsAPI is our product, built by HyperVerge. Layout-aware parsing built specifically for the failure cases above. Handles all four table patterns, including multi-page bank statements. Outputs JSON ready for downstream systems. Try it on a real document at <a href="/products">/products</a>.</p>
 
     <h2>Why understanding the mechanism changes how you evaluate a parser</h2>
     <p>Knowing that layout-aware parsing works through row grouping, edge detection, column-count estimation, and boundary refinement, rather than some undifferentiated "AI magic," changes what questions are actually worth asking a vendor. Instead of asking whether a parser "handles tables," ask specifically whether it handles borderless tables, since that is the case the whole four-step method exists to solve. Instead of asking about accuracy generally, ask about merged-cell handling specifically, since that is the documented edge case where column-count estimation alone is not enough. A vendor who can answer these specific questions understands their own tool's actual mechanism; a vendor who can only repeat a blended accuracy percentage likely does not.</p>
@@ -111,15 +111,15 @@ export const blog07: BlogPost = {
     <h2>What I'd Do Today</h2>
     <p>If you are parsing simple, paragraph-heavy documents: any free tool will do. SmallPDF, ILovePDF, Adobe Online. Pick one and move on.</p>
     <p>If you are parsing tables, forms, or anything structured: do not waste time on free parsers. Pay for a layout-aware engine, AWS Textract, Google Document AI, or DocsAPI. The cost is trivial compared to the cleanup time you save.</p>
-    <p>If you are building something production: test 10 real documents with each candidate before paying. The marketing demos are always optimistic. Your documents are always messier. (<a href="/author/nupura-ughade">I have written about this realistic testing approach many times</a>.)</p>
+    <p>If you are building something production: test 10 real documents with each candidate before paying. The marketing demos are always optimistic. Your documents are always messier.</p>
   `,
   image: "/images/idp-vs-ocr.png",
   featuredImage: "/images/idp-vs-ocr.png",
   category: "OCR How-To",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-08-17T00:00:00.000Z",
-  last_updated: "August 17, 2026",
+  dateModified: "2026-10-29T00:00:00.000Z",
+  last_updated: "October 29, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "pdf parse online",
