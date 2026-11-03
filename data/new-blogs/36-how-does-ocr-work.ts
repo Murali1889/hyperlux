@@ -34,6 +34,12 @@ export const blog36: BlogPost = {
 
     <p>If a PDF came from a scanner it is usually just a picture of a page, which is why it needs OCR at all. We explain how to tell the difference in <a href="/resources/blogs/readable-pdf-vs-image-pdf">readable PDF vs image PDF</a>.</p>
 
+        <h2>What resolution should you scan at?</h2>
+
+    <p>For printed documents, 300 DPI is the widely used starting point, and Tesseract's own guidance recommends it. Below about 150 DPI, small characters lose the detail the recognizer needs, so a 6 point footnote or a faint stamp starts to fail first. Going above 600 DPI makes the file much larger without helping normal text, and it slows processing. If you are photographing a page with a phone instead of scanning it, the rules are simple: hold the phone parallel to the page, use even light with no shadow across the text, fill the frame with the page, and let the camera focus before you shoot.</p>
+
+    <p>One practical test: zoom to 100 percent and look at the smallest text you need. If you cannot read it comfortably yourself, an engine will struggle too.</p>
+
     <h2>Step 2: Clean-up straightens and sharpens the image</h2>
 
     <p>Preprocessing makes the image easier to read without changing what it says. The common operations are:</p>
@@ -46,6 +52,26 @@ export const blog36: BlogPost = {
     </ul>
 
     <p>Over-cleaning can hurt. Aggressive binarization can erase thin strokes, faint grey text and stamps, which are exactly what you lose on faded thermal receipts.</p>
+
+        <p>Here is what clean-up looks like in code, using the open source OpenCV library. The first version picks one brightness threshold for the whole page. The second picks a threshold per small neighborhood, which copes with a shadow across part of the page.</p>
+
+    <pre><code>import cv2
+
+img = cv2.imread("scan.png", cv2.IMREAD_GRAYSCALE)
+img = cv2.GaussianBlur(img, (3, 3), 0)
+
+# One threshold for the whole page (Otsu)
+_, bw_global = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+
+# A threshold per neighborhood, for uneven lighting
+bw_local = cv2.adaptiveThreshold(
+    img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 31, 15
+)
+
+cv2.imwrite("clean_global.png", bw_global)
+cv2.imwrite("clean_local.png", bw_local)</code></pre>
+
+    <p>Save both and run OCR on each. On an evenly lit scan the global version is usually fine. On a phone photo with a shadow, the local one often keeps text the global one wipes out. Comparing the two on your own worst page takes five minutes and tells you whether clean-up is your problem.</p>
 
     <h2>Step 3: Layout analysis finds what to read, and in what order</h2>
 
@@ -61,6 +87,12 @@ export const blog36: BlogPost = {
 
     <p>The engine does not "know" a letter. It assigns probabilities, for example 90% that a shape is an "8" and 8% that it is a "B", and picks the most likely one. Those probabilities become the confidence scores you see in the output, and they are the most useful thing OCR gives you for deciding what to trust. A recognizer that returned the top guess with no score would force you to either trust everything or check everything.</p>
 
+        <h2>Printed text, handwriting and text in photos are three different problems</h2>
+
+    <p>Recognition difficulty depends on what kind of text it is, and the same engine can sit at very different accuracy on each. Printed text in a regular font is the easy case. Handwriting varies from person to person, so even the best engine we tested scored 78% on handwritten forms of mixed neatness, with 73% for PaddleOCR and 61% for Tesseract. Text photographed in the real world, such as a thermal receipt on a table, adds blur, glare and low contrast: 82% for PaddleOCR, 76% for DocsAPI and 58% for Tesseract on phone-photographed receipts. Multilingual pages add a different issue, since the engine needs models for each script: 89% for PaddleOCR, 81% for DocsAPI and 71% for Tesseract on English mixed with Mandarin and Spanish.</p>
+
+    <p>The lesson is to test on the kind of text you have. A great score on clean print says nothing about your handwritten forms. The full numbers, with methodology, are in the <a href="/resources/blogs/ocr-accuracy-benchmark-2026">benchmark write-up</a>. Remember that DocsAPI ran this benchmark itself, so treat it as DocsAPI's own result.</p>
+
     <h2>Step 5: Post-processing catches mistakes the recognizer cannot see</h2>
 
     <p>Recognition works one line at a time and does not know what the line means. Post-processing adds that knowledge. Typical checks:</p>
@@ -72,6 +104,23 @@ export const blog36: BlogPost = {
     </ul>
 
     <p>The cross-field check is the strongest one for financial documents, because an arithmetic mismatch flags an error even when every individual character looked confident. It is the idea behind the checks in <a href="/resources/blogs/data-normalization-extracted-documents">data normalization for extracted documents</a>.</p>
+
+        <h2>How to use confidence scores to decide what a person checks</h2>
+
+    <p>Confidence is the most practical output of the whole process, because it tells you where to spend human time. A simple routing rule has three bands:</p>
+
+    <table>
+      <thead>
+        <tr><th>Confidence band</th><th>What happens</th><th>Why</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>High</td><td>Accept automatically, and spot-check a small random sample</td><td>The sample catches drift that scores alone hide</td></tr>
+        <tr><td>Middle</td><td>Send to a person with the image beside the value</td><td>Most real errors live here</td></tr>
+        <tr><td>Low</td><td>Reject and ask for a better scan, or key it in by hand</td><td>Reviewing garbage costs more than rescanning</td></tr>
+      </tbody>
+    </table>
+
+    <p>Where you draw the lines should come from your own data, not from a default. Run 200 real documents, compare the output with the correct values, and count the errors in each confidence bucket. If errors are rare above 0.95 and common below 0.80, those become your band edges. The method is in <a href="/resources/blogs/how-to-measure-ocr-accuracy">how to measure OCR accuracy</a>. Set the thresholds per field as well, because a total amount deserves a stricter threshold than a free-text note.</p>
 
     <h2>Step 6: Output decides how useful the result is</h2>
 
@@ -116,6 +165,16 @@ for i, word in enumerate(data["text"]):
       </tbody>
     </table>
 
+        <h2>Five common myths about how OCR works</h2>
+
+    <ul>
+      <li><strong>"Good OCR is 100 percent accurate."</strong> No engine is. Even on clean print the best results sit around 97-99%, and harder documents are lower. Plan for review, not perfection.</li>
+      <li><strong>"Only the scanner matters."</strong> A good scan helps, but layout and post-processing decide whether tables and fields come out right. Three engines that tied on clean text spread from 64% to 91% on bank statement tables.</li>
+      <li><strong>"AI has replaced OCR."</strong> Vision language models read pages directly, but they still have to see the pixels, and they can be confidently wrong. Many production systems combine both ideas.</li>
+      <li><strong>"A searchable PDF is an editable document."</strong> It is the original image with a hidden text layer. You can search and copy, but the layout is a picture.</li>
+      <li><strong>"One engine is best for everything."</strong> The winner changes by document type, which is why a single ranking can mislead. Our <a href="/resources/blogs/best-ocr-software-2026">best OCR software guide</a> breaks the choice down by use case.</li>
+    </ul>
+
     <h2>Where traditional OCR ends and AI extraction begins</h2>
 
     <p>The six steps describe classic OCR. Newer systems based on vision language models read the page image directly and answer questions about it, which blurs steps 3 to 5. They can handle messy layouts well, and they can also produce confident wrong numbers, which is a serious problem for finance. We compare the two approaches in <a href="/resources/blogs/vlm-vs-ocr">VLM vs OCR</a>. Whichever you use, the same rule holds: measure it on your own documents, using the method in <a href="/resources/blogs/how-to-measure-ocr-accuracy">how to measure OCR accuracy</a>.</p>
@@ -129,7 +188,7 @@ for i, word in enumerate(data["text"]):
   datePublished: "2026-11-03T00:00:00.000Z",
   dateModified: "2026-11-03T00:00:00.000Z",
   last_updated: "November 3, 2026",
-  readTime: "8 min read",
+  readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "how does ocr work",
   secondary_keywords: [

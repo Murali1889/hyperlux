@@ -34,6 +34,17 @@ export const blog37: BlogPost = {
 
     <p>Two cautions on these numbers. First, they assume pages are independent, so a 40-page statement counts as 40 pages. Second, the parallel columns assume your plan allows that many simultaneous requests. Ask what concurrency and rate limits apply to you before you plan a deadline around them. Local engines have a different ceiling: in our benchmark Tesseract took about 1.8 seconds per page on a mid-tier laptop CPU, and PaddleOCR 0.4 seconds with a GPU, so the same batch is limited by your own hardware.</p>
 
+        <h2>Plan the project in four phases</h2>
+
+    <ol>
+      <li><strong>Sample (day 1):</strong> pull 200 to 500 random files from the real batch, including the ugly ones, and run them end to end. Record seconds per page, failure rate, review rate and cost.</li>
+      <li><strong>Pilot (week 1):</strong> run a few thousand files through the full pipeline with real reviewers. Fix what the failed list shows you before you scale.</li>
+      <li><strong>Ramp:</strong> raise parallel requests in steps, for example 5, 10, 25, and watch error rates at each step. A rise in timeouts means you have hit a limit.</li>
+      <li><strong>Steady state:</strong> run the full batch with monitoring, and keep a rolling sample for quality checks.</li>
+    </ol>
+
+    <p>The point of the first two phases is to find the 1 percent of weird files while they are cheap to fix. A scanner that produced upside-down pages for one whole month shows up in a sample of 500 and costs you a day. It shows up in a full run of 500,000 and costs you a rerun.</p>
+
     <h2>What will it cost?</h2>
 
     <p>DocsAPI pricing starts at $0.02 per page, with volume discounts above 100,000 pages a month. Table extraction and classification are included in that price. At list price that is $2,000 for 100,000 pages and $20,000 for 1,000,000 pages, before any volume discount. Access starts with a demo, then a free 30-day trial for qualified lenders. Current terms are on the <a href="/pricing">pricing page</a>.</p>
@@ -50,6 +61,18 @@ export const blog37: BlogPost = {
       <li><strong>A confidence gate.</strong> Fields below your threshold go to review. See <a href="/resources/blogs/how-to-measure-ocr-accuracy">how to measure OCR accuracy</a> for choosing a threshold from a real sample instead of a guess.</li>
       <li><strong>Counters.</strong> Track files received, processed, failed and in review. At any moment, received should equal the other three added together. If it does not, files are going missing.</li>
     </ol>
+
+        <h2>Prepare the files before you send them</h2>
+
+    <p>A surprising share of bulk failures come from the files, not the OCR. A short preparation step pays for itself:</p>
+
+    <ul>
+      <li><strong>Split combined scans.</strong> One scan of 80 pages is often 12 separate documents. Split at document boundaries so each result maps to one document, and so a failure on page 40 does not discard the other 79.</li>
+      <li><strong>Fix rotation.</strong> Pages scanned sideways or upside down read badly. Detect orientation and correct it first.</li>
+      <li><strong>Drop blank pages.</strong> Duplex scanners create blank backs. They add cost and noise.</li>
+      <li><strong>Check for locked files.</strong> Password protected or corrupt PDFs will fail every time. Catch them before the queue and put them on the failed list with a clear reason.</li>
+      <li><strong>Keep a map of original names.</strong> Store the source path next to the content hash so a person can always find the original file for a result.</li>
+    </ul>
 
     <h2>A parallel worker sketch</h2>
 
@@ -80,6 +103,32 @@ with ThreadPoolExecutor(max_workers=10) as pool:
 
     <p>In production add a delay between retries, persist <code>done</code> and <code>failed</code> to a database so a restart resumes where it stopped, and cap the worker count at what your plan allows.</p>
 
+        <h2>What to store for every result</h2>
+
+    <p>Decide the storage format before the run, not after. A result row that can answer "where did this value come from, and how sure were we" saves days later. A good minimum:</p>
+
+    <table>
+      <thead>
+        <tr><th>Column</th><th>Why you need it</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>job_id (content hash)</td><td>Dedupe and safe retries</td></tr>
+        <tr><td>source_path</td><td>Find the original file</td></tr>
+        <tr><td>document_type</td><td>Report accuracy by type, not overall</td></tr>
+        <tr><td>page_number</td><td>Trace a value to a page</td></tr>
+        <tr><td>field_name and value</td><td>The extracted data</td></tr>
+        <tr><td>confidence</td><td>Drives routing to review</td></tr>
+        <tr><td>status</td><td>done, in_review, failed, or accepted_by_reviewer</td></tr>
+        <tr><td>processed_at</td><td>Audit trail and time-based cleanup</td></tr>
+      </tbody>
+    </table>
+
+    <p>Also keep the reviewer's correction when a person changes a value. Those corrections are your best data for tuning thresholds and for spotting a document type that needs special handling.</p>
+
+    <h2>Design the review queue so it does not become the bottleneck</h2>
+
+    <p>At volume, review is where the time goes, so design it on purpose. Show the page image next to the value, not a bare field. Sort by confidence so the riskiest items come first. Group by document type so a reviewer builds speed on one layout. Let a reviewer accept a whole page with one click when the values look right. And sample a small random share of the automatically accepted items for a second look, because that is how you find a quiet problem that confidence scores do not reveal.</p>
+
     <h2>What breaks first at volume</h2>
 
     <ul>
@@ -87,6 +136,66 @@ with ThreadPoolExecutor(max_workers=10) as pool:
       <li><strong>Duplicates.</strong> The same invoice arrives by email and by upload. Hashing catches exact copies. Near-duplicates need field-level matching, covered in <a href="/resources/blogs/duplicate-invoice-detection">duplicate invoice detection</a>.</li>
       <li><strong>Bad scans hiding in the average.</strong> A 96 percent average can hide a batch of faded receipts at 60 percent. Track accuracy by document type, not overall. Our benchmark shows the gap: phone-photographed receipts scored 58% to 82% across engines, against 97-99% on clean typed text.</li>
       <li><strong>Sensitive data sitting in your queue.</strong> Know how long documents are kept. DocsAPI does not train on customer documents, and keeps documents and extracted data only for a short, configurable retention period before deleting them.</li>
+    </ul>
+
+        <h2>Five numbers to watch while a batch runs</h2>
+
+    <ul>
+      <li><strong>Pages per minute:</strong> a sudden drop means a limit, a slow network or a stuck worker.</li>
+      <li><strong>Failure rate:</strong> a jump from 1 percent to 8 percent usually means a bad folder or a changed file source, not random noise.</li>
+      <li><strong>Review rate:</strong> if it rises, a new document type or a worse scanner has entered the stream.</li>
+      <li><strong>Queue age:</strong> the oldest waiting job. If it keeps growing, workers cannot keep up.</li>
+      <li><strong>Received versus accounted for:</strong> files received should equal done plus failed plus in review at all times. Alert on any gap.</li>
+    </ul>
+
+    <h2>Local engine or cloud API for a large batch?</h2>
+
+    <table>
+      <thead>
+        <tr><th>Question</th><th>Local engine (Tesseract, PaddleOCR)</th><th>Cloud API</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Who sets the speed limit?</td><td>Your hardware</td><td>Your plan's concurrency</td></tr>
+        <tr><td>Cost shape</td><td>Servers and engineering time</td><td>Per page, from $0.02 for DocsAPI</td></tr>
+        <tr><td>Tables and handwriting</td><td>Weaker on multi-page tables: 64% for Tesseract on bank statements in our benchmark</td><td>Built for them: 91% for DocsAPI on the same test</td></tr>
+        <tr><td>Data stays where?</td><td>Inside your environment</td><td>Sent to the provider, so check retention and agreements</td></tr>
+      </tbody>
+    </table>
+
+    <p>If your documents must never leave your environment, that points to a local engine. DocsAPI runs as a cloud API, and the self-hosting question is one to raise in a demo. The open source engines are compared in <a href="/resources/blogs/paddleocr-vs-tesseract-vs-docsapi">PaddleOCR vs Tesseract vs DocsAPI</a>.</p>
+
+        <h2>A worked planning example</h2>
+
+    <p>Suppose you have a backlog of 250,000 pages and want it cleared this month. These are illustrative numbers, so replace them with your own sample results.</p>
+
+    <ul>
+      <li><strong>Processing time:</strong> 250,000 pages x 1.1 seconds / 20 parallel requests = 13,750 seconds, or about 3.8 hours.</li>
+      <li><strong>Processing cost:</strong> 250,000 pages x $0.02 = $5,000 at list price, before any volume discount.</li>
+      <li><strong>Review time at a 5 percent review rate:</strong> 12,500 pages x 2 minutes = 25,000 minutes, about 417 hours of people time.</li>
+      <li><strong>Review time at a 3 percent review rate:</strong> 7,500 pages x 2 minutes = 15,000 minutes, 250 hours.</li>
+    </ul>
+
+    <p>The machine work finishes before lunch, and the people work takes weeks. Two points of review rate are worth 167 hours, which is far more than any rounding in the processing cost. That is why threshold tuning, clean scans and per-field confidence deserve more attention than raw speed.</p>
+
+    <h2>Security and retention checklist for large batches</h2>
+
+    <ul>
+      <li>Know where files sit while they wait in your queue, and who can read that storage.</li>
+      <li>Ask the provider how long documents and extracted data are kept. For DocsAPI that is a short, configurable retention period, then deletion, and documents are not used to train models.</li>
+      <li>Delete your own temporary copies when a batch completes, not when someone remembers.</li>
+      <li>Keep the audit trail, meaning job ID, time and reviewer, without keeping the document longer than needed.</li>
+      <li>If health data is involved, confirm a business associate agreement is in place first. DocsAPI is HIPAA-eligible with a BAA.</li>
+    </ul>
+
+    <h2>Common mistakes in bulk OCR projects</h2>
+
+    <ul>
+      <li>Starting the full run before testing a sample.</li>
+      <li>Measuring one overall accuracy number instead of accuracy per document type.</li>
+      <li>Retrying forever instead of moving stubborn files to a failed list.</li>
+      <li>Not storing confidence, so there is no way to route review later.</li>
+      <li>Forgetting retention: documents sitting in your own queue and storage are still sensitive data.</li>
+      <li>Planning the deadline on peak speed instead of speed under real, mixed documents.</li>
     </ul>
 
     <h2>Run a pilot before the full batch</h2>
@@ -102,7 +211,7 @@ with ThreadPoolExecutor(max_workers=10) as pool:
   datePublished: "2026-11-03T00:00:00.000Z",
   dateModified: "2026-11-03T00:00:00.000Z",
   last_updated: "November 3, 2026",
-  readTime: "8 min read",
+  readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "bulk ocr processing",
   secondary_keywords: [
