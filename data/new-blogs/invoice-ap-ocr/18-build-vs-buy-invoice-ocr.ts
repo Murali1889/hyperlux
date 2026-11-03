@@ -75,6 +75,8 @@ export const blogAp18: BlogPost = {
 
     <p>The teams that get this decision right are the ones who ran the full calculation honestly before committing, not the ones who guessed correctly after the fact.</p>
 
+    <p>If you are weighing a local engine, <a href="/resources/blogs/bulk-and-high-volume-ocr-processing">bulk OCR processing</a> has measured Tesseract throughput on a 10-core machine, from 0.28 pages per second with one worker to 2.21 with ten, and a tested pipeline script.</p>
+
     <p>Sources: infrastructure and cost figures drawn from independent open-source OCR cost analysis. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
 
     <p>Related guides: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a> and <a href="/resources/blogs/best-ocr-software-for-accounts-payable">best OCR software for accounts payable</a>.</p>
@@ -84,8 +86,8 @@ export const blogAp18: BlogPost = {
   category: "Accounts Payable",
   date: "August 14, 2026",
   datePublished: "2026-08-14T00:00:00.000Z",
-  dateModified: "2026-10-22T00:00:00.000Z",
-  last_updated: "October 22, 2026",
+  dateModified: "2026-11-03T00:00:00.000Z",
+  last_updated: "November 3, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "build vs buy invoice ocr",

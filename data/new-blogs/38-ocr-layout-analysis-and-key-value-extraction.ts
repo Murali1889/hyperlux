@@ -3,147 +3,216 @@ import { nupuraUghade } from "../authors"
 
 export const blog38: BlogPost = {
   id: "new-38",
-  title: "OCR Layout Analysis and Key-Value Extraction: How Fields Get Found",
+  title: "OCR Layout Analysis: How Columns and Tables Break, Measured",
   slug: "ocr-layout-analysis-and-key-value-extraction",
   excerpt:
-    "Reading characters is only half of document OCR. The other half is knowing which text is a table cell, which is a label, and which value belongs to it. This guide explains layout analysis, table recognition and key-value extraction, and where each one breaks.",
+    "Layout analysis decides what text is a column, a table cell or a field, and it is where OCR goes wrong without anyone noticing. We tested it on 560 bank statement rows per condition: one setting moved the same image from 0% to 100% correct, and a balance check caught most errors.",
   description:
-    "How OCR finds tables, labels and values: layout analysis, table structure and key-value extraction explained, with benchmark table accuracy and a field-level test sheet.",
-  metaTag: "OCR Layout Analysis and Key-Value Extraction Explained",
+    "OCR layout analysis tested: one setting took a table from 0% to 100% correct, a wrong column mode scrambled 88% of words, and a balance check flagged errors.",
+  metaTag: "OCR Layout Analysis: How Tables and Columns Break",
   summary:
-    "Layout analysis finds regions and reading order. Table recognition rebuilds rows and columns. Key-value extraction links a label to its value. Tables are where engines differ most: 64% to 91% on multi-page bank statements in our benchmark.",
+    "Layout analysis finds regions, reading order and table structure before characters are read. In our tests the same table image scored 0% or 100% depending on one segmentation setting, a two-column page came back with every word present and 88% of them misplaced, and a running-balance check flagged 85 of 91 statements with errors and none of 69 clean ones.",
   content: `
-    <p>Layout analysis is the step where OCR decides what kind of thing each piece of text is: a heading, a paragraph, a table cell, a label or a value. Key-value extraction then links a label such as "Invoice date" to its value. Plain OCR gives you a stream of text. These two steps turn it into fields a system can use, and they are where engines differ most.</p>
+    <p>Layout analysis is the step where OCR decides what each piece of text is: a column, a heading, a table cell, a label or a value. Key-value extraction then links a label such as "Invoice date" to its value. Plain OCR gives you a stream of words. These two steps turn it into rows and fields a system can use, and in our tests they are where results swing hardest.</p>
 
-    <p>Here is the gap in numbers. In our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">1,700-document benchmark</a>, three engines tied at 97-99% on clean typed English. On multi-page bank statement tables they scored 64%, 79% and 91%. Recognizing characters was never the difference. Finding the structure was.</p>
+    <p>Three measured results, all from Tesseract 5.5.2 on pages with known answers. <strong>First,</strong> a two-column page came back with 100 percent of its words present and 88 percent of them in the wrong place, one setting away from a perfect read. <strong>Second,</strong> the same bank statement table scored 0 percent or 100 percent of rows correct depending on a single page segmentation setting, and which setting worked depended on whether the table had grid lines. <strong>Third,</strong> a running-balance check flagged 85 of the 91 statements that had an OCR error, with no false alarms on 69 clean ones. The rest of this guide shows how we got those numbers and what to do about them.</p>
+
+    <p>Context from our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">1,700-document benchmark</a>, which DocsAPI ran itself: three engines tied at 97 to 99 percent on clean typed English, then scored 64, 79 and 91 percent on multi-page bank statement tables. Recognizing characters was never the difference. Finding the structure was. These tests show why, on the free engine anyone can repeat.</p>
+
+    <h2>How we tested</h2>
+
+    <ul>
+      <li><strong>Two-column pages:</strong> 20 synthetic pages with two 3.3 inch columns of 10 point text, at 300 DPI. The correct reading order is left column first, then right.</li>
+      <li><strong>Tables:</strong> 20 synthetic bank statements per condition, each with 28 rows of date, description, debit, credit and a running balance, so 560 rows per condition. Some had ruled grid lines and some had none.</li>
+      <li><strong>Engine:</strong> Tesseract 5.5.2, English model, on a 10-core Apple M5 Mac. We did not run DocsAPI on these synthetic pages.</li>
+      <li><strong>Page segmentation mode (PSM):</strong> Tesseract's setting for how to split a page into regions before reading. Mode 3 is automatic, 4 assumes a single column, 6 assumes a single block, and 11 reads sparse text with no structure.</li>
+      <li><strong>Limits:</strong> one font, clean backgrounds, English. Real statements are messier, so use the pattern, not the exact percentages. We test every engine we evaluate on real files for that reason.</li>
+    </ul>
 
     <h2>What does layout analysis do?</h2>
 
-    <p>It splits a page image into regions and gives each a type and an order. A typical result lists a header block, a two-column body, a table, a footer and a stamp, with coordinates for each. Three jobs matter most:</p>
+    <p>It splits a page image into regions and gives each a type and an order. A typical result lists a header block, a body in two columns, a table, a footer and a stamp, with coordinates for each. Three jobs matter most: region detection (where the text blocks and tables are), reading order (which block comes first), and region typing (table, paragraph, heading, or something to ignore such as a logo). A failure here is invisible to a character score, as the next test shows.</p>
+
+    <h2>Reading order: every word right, the page unreadable</h2>
+
+    <p>On the 20 two-column pages we ran four approaches and scored each against the correct left-then-right order.</p>
+
+    <table>
+      <thead>
+        <tr><th>Approach</th><th>Words wrong (in order)</th><th>Words present (any order)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Automatic segmentation (mode 3)</td><td>0.0%</td><td>100%</td></tr>
+        <tr><td>Find the gap between columns, read each half (mode 6)</td><td>0.0%</td><td>100%</td></tr>
+        <tr><td>Single column mode (mode 4)</td><td>88.2%</td><td>100%</td></tr>
+        <tr><td>Single block mode (mode 6 on the whole page)</td><td>88.2%</td><td>100%</td></tr>
+      </tbody>
+    </table>
+
+    <p>The last two rows are the trap. Told the page is one block, the engine read straight across both columns, interleaving a line from the left with a line from the right. Every word was recognized correctly, so a check that asks "did the words come out?" scores 100 percent, while a check of the order scores 12 percent. This is the failure that makes <a href="/resources/blogs/how-to-measure-ocr-accuracy">character-level accuracy</a> a poor guide to whether a document is usable.</p>
+
+    <p>Automatic mode did fine on a clean two-column page. The second approach is worth knowing because it is simple and does not depend on the engine guessing: find the widest empty vertical band near the middle of the page, cut there, and read each half alone.</p>
+
+    <pre><code>import numpy as np
+
+def find_gutter(gray):
+    ink = (gray &lt; 160).sum(axis=0)      # dark pixels per pixel column
+    w = gray.shape[1]
+    lo, hi = int(w * 0.35), int(w * 0.65)
+    best_len = best_start = run = start = 0
+    for i, v in enumerate(ink[lo:hi]):
+        if v == 0:
+            if run == 0:
+                start = i
+            run += 1
+            if run &gt; best_len:
+                best_len, best_start = run, start
+        else:
+            run = 0
+    return lo + best_start + best_len // 2
+
+cut = find_gutter(gray)
+left, right = gray[:, :cut], gray[:, cut:]   # OCR each half separately</code></pre>
+
+    <p>On real scans a few specks will cross the gap, so count a column as empty when it has a handful of dark pixels or fewer, not exactly zero.</p>
+
+    <h2>Tables: the same image scored 0% or 100%</h2>
+
+    <p>For tables we scored a row as correct only if one line of output held both the amount and the running balance, exactly right. That is the minimum for a row you can use. Here is the share of the 560 rows that passed, by segmentation mode and table style.</p>
+
+    <table>
+      <thead>
+        <tr><th>Mode</th><th>No grid lines</th><th>Ruled grid</th><th>Grid erased first</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>3, automatic</td><td>0%</td><td>100%</td><td>0%</td></tr>
+        <tr><td>4, single column</td><td>100%</td><td>100%</td><td>not tested</td></tr>
+        <tr><td>6, single block</td><td>100%</td><td>0%</td><td>100%</td></tr>
+        <tr><td>11, sparse text</td><td>0%</td><td>0%</td><td>not tested</td></tr>
+      </tbody>
+    </table>
+
+    <p>There is no gradual middle here. Each cell is all or nothing, and the winner changes with the table style. We looked at the output to see why:</p>
 
     <ul>
-      <li><strong>Region detection:</strong> where the text blocks, tables and images are on the page.</li>
-      <li><strong>Reading order:</strong> which block comes first. A two-column page read straight across mixes the columns.</li>
-      <li><strong>Region typing:</strong> table, paragraph, heading, list, or something to ignore such as a logo or a margin note.</li>
+      <li><strong>Automatic mode on a borderless table</strong> read each column as its own block: all the dates, then all the descriptions. The values from one row ended up in different blocks, so no line held an amount and a balance together.</li>
+      <li><strong>Sparse mode</strong> reads words with no line structure, so rows never form.</li>
+      <li><strong>Single block mode on a ruled table</strong> turned the text into unreadable strings. The grid lines were read as characters, and the text around them came out as unreadable strings.</li>
+      <li><strong>Erasing the grid first</strong> (we removed long horizontal and vertical lines with a morphological filter) fixed single block mode on the ruled table. It also broke automatic mode, which then scored 0 percent, the same as on a borderless table.</li>
     </ul>
 
-    <p>If this step fails, a correct character recognizer still produces wrong results. That is why we call it out as step 3 in <a href="/resources/blogs/how-does-ocr-work">how OCR works</a>.</p>
+    <p>Single column mode was the one setting that passed both table styles in this test. That is a result about synthetic tables in one font, not a rule to copy, but the lesson carries: <strong>the segmentation choice is a layout decision, and a wrong one fails completely rather than partly.</strong> A pipeline that handles several table styles has to pick per region, not once for the whole job. That region-by-region choice is what a layout-aware engine does for you, and it is why tables separate engines by 64 to 91 percent in the benchmark while clean text does not.</p>
 
-        <p>Reading order is easiest to see on a two-column page. A person reads the whole left column and then the right one. A naive reader scans left to right across the full width, so line 1 of the left column is followed by line 1 of the right column, and the sentences interleave. Every word is correct and the page is unreadable. Layout analysis prevents this by detecting the two columns as separate regions first and reading them one after the other. Forms add another case: a label and its value can sit in different regions, so order alone does not tell you which value belongs to which label. That is the job of key-value extraction below.</p>
+    <h2>Plain text loses the column</h2>
+
+    <p>Even when the rows come out right, text output drops something a bank statement depends on: which column a number sat in. These are two real lines from our generated statements, as plain OCR returns them.</p>
+
+    <pre><code>10 Feb GROCERY Fuel 11.99 6,821.27
+07 Dec PHARMACY Subscription 68.59 6,741.31</code></pre>
+
+    <p>The first is a debit and the second is a credit. In text they have the same shape, because the empty cell leaves no trace. Two things recover the direction. One is position: assign each amount to the nearest column header by its horizontal coordinate. On our clean borderless statements that got the direction right on 560 of 560 rows. The other is arithmetic, which is the next section. Either way you need the positions, not only the text, which is why structured output with coordinates matters for finance documents.</p>
+
+    <h2>A running-balance check, measured</h2>
+
+    <p>A bank statement checks itself. Each row's balance should differ from the previous balance by exactly that row's amount, in either direction. A misread digit or a mangled row breaks the chain at that point. This version ignores whether the row was a debit or a credit, because we just showed that text alone cannot tell.</p>
+
+    <pre><code>def check_running_balance(rows, expected_rows, tolerance=0.005):
+    """rows: (amount, balance) per parsed row, in page order."""
+    flagged = []
+    if len(rows) != expected_rows:
+        flagged.append("row count %d, expected %d" % (len(rows), expected_rows))
+    for i in range(1, len(rows)):
+        amount, balance = rows[i]
+        previous = rows[i - 1][1]
+        if abs(abs(balance - previous) - amount) &gt; tolerance:
+            flagged.append(i)
+    return flagged</code></pre>
+
+    <p>We ran it on all 20 statements in each condition, reading with single column mode, and counted statements that had at least one error against statements the check flagged. A statement counts as having an error if any row was wrong, lost, or could not be matched to its source row.</p>
+
+    <table>
+      <thead>
+        <tr><th>Condition (no grid lines)</th><th>Rows exactly right</th><th>Statements with an error</th><th>Flagged by the check</th><th>Clean statements falsely flagged</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Clean, 300 DPI</td><td>100%</td><td>0 of 20</td><td>none needed</td><td>0 of 20</td></tr>
+        <tr><td>150 DPI</td><td>98.0%</td><td>7 of 20</td><td>7 of 7</td><td>0 of 13</td></tr>
+        <tr><td>Tilted 2 degrees, 200 DPI, blur, noise, JPEG quality 40</td><td>69.1%</td><td>20 of 20</td><td>14 of 20</td><td>none clean</td></tr>
+        <tr><td>Same, straightened first</td><td>93.0%</td><td>17 of 20</td><td>17 of 17</td><td>0 of 3</td></tr>
+      </tbody>
+    </table>
+
+    <p>Read the table in three steps.</p>
+
+    <ol>
+      <li><strong>The check is trustworthy when it speaks.</strong> Across the 69 statements with no errors, borderless and ruled together, it raised zero false alarms. Everything it flagged was worth a look.</li>
+      <li><strong>It found nearly every error it had rows to test.</strong> At 150 DPI it caught 7 of 7. After straightening, 17 of 17. Counting the ruled runs too, it flagged 85 of the 91 statements that had an error.</li>
+      <li><strong>Its misses are the part to design for.</strong> In the roughest condition it flagged 14 of 20. We looked at the six it did not flag. In four, OCR returned no rows at all, and an arithmetic check over zero rows has nothing to fail. In the other two, every number passed and only a description on the last row was garbled, which arithmetic cannot see. The fix for the first kind is the row count in the code above, plus checking the first and last balance against the statement's printed opening and closing figures.</li>
+    </ol>
+
+    <p>The bigger number is in the third row against the fourth. Straightening the page before reading took rows exactly right from 69 percent to 93 percent, with no change to the engine. The method and the thresholds are in <a href="/resources/blogs/how-does-ocr-work">how OCR works</a>, and the same idea applies to invoices, where line items should add up to the subtotal and the subtotal plus tax should equal the total. Reconciling balances across several accounts is a separate problem, covered in <a href="/resources/blogs/multi-account-bank-statement-ocr">multi-account bank statement OCR</a>. A chain that does not add up can also point to an edited statement, which <a href="/resources/blogs/bank-statement-fraud-detection">bank statement fraud detection</a> looks at.</p>
+
+    <h2>Grid lines made it worse, even with the best mode</h2>
+
+    <p>One more pattern from the same table. With the single column mode that worked on both styles, the ruled tables still did worse than the borderless ones once the page was degraded: 54.6 percent of rows exactly right against 69.1 percent for the same page without lines, and 69.8 percent against 93.0 percent after straightening. The check still flagged 20 of 20 ruled statements in both cases, so the errors were caught, but there were more of them. If you control the document format, a statement without cell borders reads better. If you do not, test ruled and borderless samples separately, because they fail differently.</p>
 
     <h2>How does OCR read a table?</h2>
 
-    <p>A table is a grid, and the engine has to rebuild it from the positions of the text. Table recognition normally does four things: finds the table region, finds the rows and columns, assigns each piece of text to a cell, and handles cells that span several rows or columns. Then it outputs rows and columns, for example as CSV or JSON, instead of lines of text.</p>
-
-    <p>Tables break in predictable ways:</p>
+    <p>It finds the table region, finds the rows and columns, assigns each word to a cell, handles cells that span several rows or columns, and outputs rows and columns instead of lines of text. Tables break in a few predictable ways:</p>
 
     <table>
       <thead>
         <tr><th>Table problem</th><th>What goes wrong</th></tr>
       </thead>
       <tbody>
-        <tr><td>No ruling lines</td><td>Columns have to be inferred from spacing, so values drift into the neighboring column</td></tr>
-        <tr><td>A table that continues over several pages</td><td>Each page is read alone, so headers are missing on page two and rows are not joined</td></tr>
-        <tr><td>Wrapped text in a cell</td><td>One long description is split into two rows</td></tr>
-        <tr><td>Merged or spanning cells</td><td>A total or a group heading is assigned to one column only</td></tr>
-        <tr><td>Numbers with symbols or negatives</td><td>A minus sign, a bracket or a currency mark is dropped or moved</td></tr>
+        <tr><td>No ruling lines</td><td>Columns must be inferred from spacing, and values drift into the neighboring column</td></tr>
+        <tr><td>Ruling lines</td><td>Lines are read as characters or break the layout, as in our single block result</td></tr>
+        <tr><td>A table that continues over several pages</td><td>Each page is read alone, so headers go missing and rows are not joined</td></tr>
+        <tr><td>Wrapped text in a cell</td><td>One long description becomes two rows</td></tr>
+        <tr><td>Merged or spanning cells</td><td>A total or a group heading lands in one column only</td></tr>
+        <tr><td>Numbers with signs and brackets</td><td>A minus sign or a bracket is dropped or moved</td></tr>
       </tbody>
     </table>
 
-    <p>Multi-page statements combine several of these at once, which is why they separate the engines in the benchmark: 64% for Tesseract, 79% for PaddleOCR and 91% for DocsAPI. On invoices, where line items are the table, the same test gave 81% for Docling, 87% for LlamaParse and 93% for DocsAPI. We cover line items in detail in <a href="/resources/blogs/invoice-line-item-ocr">invoice line item OCR</a>.</p>
-
-        <h2>A running balance check for bank statements</h2>
-
-    <p>Tables are easier to trust when they check themselves. A bank statement has a built-in test: each row's balance should equal the previous balance plus the credit minus the debit. If a digit is misread or a row lands in the wrong place, the chain breaks at that row, and you know exactly where to look.</p>
-
-    <pre><code>def check_running_balance(rows, opening_balance, tolerance=0.01):
-    """rows: list of dicts with credit, debit and balance as floats."""
-    previous = opening_balance
-    problems = []
-    for i, row in enumerate(rows):
-        expected = previous + row["credit"] - row["debit"]
-        if abs(expected - row["balance"]) &gt; tolerance:
-            problems.append((i, expected, row["balance"]))
-        previous = row["balance"]
-    return problems</code></pre>
-
-    <p>Rows that fail are the ones to send to review, and a clean pass across 200 rows is strong evidence the table was read correctly, stronger than any average confidence. The same idea works on invoices, where line items should add up to the subtotal, and the subtotal plus tax should equal the total.</p>
+    <p>On invoices, where line items are the table, the benchmark gave 81 percent for Docling, 87 for LlamaParse and 93 for DocsAPI. We cover that case in <a href="/resources/blogs/invoice-line-item-ocr">invoice line item OCR</a>.</p>
 
     <h2>Joining a table that continues across pages</h2>
 
-    <p>A long statement or invoice repeats its header row on every page and splits a table in two at the page break. If each page is processed alone, page two starts with no header, and a row may be cut in half. A reliable approach has three rules: treat a table on page N as a continuation of page N-1 if the column positions match and the first rows have no header; drop repeated header rows when merging; and run the running balance check across the join, which exposes any row that was lost or duplicated at the break. This is one reason multi-page statements score so much lower than single pages on plain OCR.</p>
+    <p>A long statement repeats its header on some pages and splits a table at the page break. Processed page by page, a later page starts with no header, and a row can be cut in half. Three rules help. Treat a table on page N as a continuation of page N minus 1 if the column positions match and the first rows are not headers. Drop repeated header rows when merging. And run the balance check across the join: a row lost or duplicated at the break shows up as a flag on the row after it. We did not measure this case separately, so test it on your own multi-page files.</p>
 
     <h2>What is key-value extraction?</h2>
 
     <p>It pulls out a labeled field and its value from a page, such as "Total due" and "1,240.00". There are two broad ways to do it:</p>
 
     <ul>
-      <li><strong>Template or rule based:</strong> you tell the system where a field sits or what text surrounds it. This works well for one fixed form and fails when a vendor changes its layout.</li>
-      <li><strong>Learned or model based:</strong> a model reads the page and finds the field by meaning and position. It copes with layouts it has not seen, at the price of less predictable mistakes. We compare the approaches for invoices in <a href="/resources/blogs/rules-based-vs-ai-invoice-extraction">rules-based vs AI invoice extraction</a>.</li>
+      <li><strong>Template or rule based:</strong> you say where a field sits or what text surrounds it. It works well for one fixed form and fails when a vendor changes its layout.</li>
+      <li><strong>Learned or model based:</strong> a model reads the page and finds the field by meaning and position. It copes with layouts it has not seen, with less predictable mistakes. We compare the two for invoices in <a href="/resources/blogs/rules-based-vs-ai-invoice-extraction">rules-based vs AI invoice extraction</a>.</li>
     </ul>
 
-    <p>The hard cases are where a label and value are not next to each other. A label above a value, a value two columns to the right, a label that appears twice (a "Date" for the invoice and a "Date" for the ship date), or a field with no label at all, like a vendor name that is just a logo.</p>
+    <p>The hard cases are where the label and value are not adjacent: a label above its value, a value two columns to the right, a label that appears twice (a "Date" for the invoice and a "Date" for shipping), or a field with no label, like a vendor name that is only a logo. Without a template, a system usually combines three signals: the words near the value, the position of the value on the page, and its appearance, such as bold type or a box. Any one alone is easy to fool, which is also why such systems can fail in ways a fixed template never would, for example by picking the subtotal when the page also shows a grand total.</p>
 
-        <h2>How models find the right field: three signals</h2>
+    <h2>Confidence per field, not per page</h2>
 
-    <p>When a system finds "Total due" without a fixed template, it usually combines three kinds of evidence:</p>
+    <p>A single score for a page hides problems. What you want is one score per field or table cell, so a person reviews only the cell that is uncertain. A statement with 300 values and 3 low-confidence cells should send 3 items to review. How reliable those scores are is a separate question, and <a href="/resources/blogs/how-does-ocr-work">our calibration test</a> shows a sizable share of errors can still carry a high score, which is the reason to pair confidence with arithmetic checks like the one above.</p>
 
-    <ul>
-      <li><strong>Text:</strong> the words near the value, such as "Total", "Amount due" or "Balance".</li>
-      <li><strong>Position:</strong> where on the page the value sits, such as bottom right on an invoice, and how it lines up with the label.</li>
-      <li><strong>Appearance:</strong> bold type, a box around the number, or a larger font, which often marks the field that matters.</li>
-    </ul>
+    <p>Forms add two non-text elements. A checkbox should come back as marked or empty, and a signature as present or missing. Detecting that a signature exists is a different job from verifying who signed, and OCR does not do the second. Check how any tool handles both before you rely on it.</p>
 
-    <p>Any one signal alone is easy to fool. Text alone confuses a "Date" label that appears twice. Position alone fails when vendors lay out the page differently. Combining them is why newer models cope with layouts they were not given in advance, and it is also why they can fail in ways a fixed template never would, for example by picking the wrong "Total" on a page that shows both a subtotal and a grand total.</p>
-
-    <h2>Confidence works at the cell and field level too</h2>
-
-    <p>A single score for the whole page hides problems. What you want is one score per field or per table cell, so a person only reviews the cell that is uncertain. A statement with 300 values and 3 low-confidence cells should send 3 items to review, not the whole document. Ask any tool you test whether it gives scores at that level, because it changes how much human time the workflow costs.</p>
-
-    <h2>Checkboxes and signatures</h2>
-
-    <p>Forms add two element types that are not text. A checkbox is either marked or empty, and the result should be a true or false, not a character. A signature is a region that is present or missing. Detecting that a signature exists is a different job from verifying who signed it, and OCR does not do the second one. Check how any tool you evaluate handles both, because they are easy to overlook in a demo. If you need this for your documents, raise it in a demo with your own samples.</p>
-
-            <h2>A walk-through of how a page break breaks a table</h2>
-
-    <p>Here is an illustrative case. A three-page statement has 90 transaction rows, 30 per page. Page one has a header row with Date, Description, Debit, Credit and Balance. Page two repeats the header. Page three starts mid-table with no header because the bank's template only printed it once on the first page of that section.</p>
-
-    <ol>
-      <li>Each page is read alone. Page three has no header, so the engine cannot tell which number is a debit and which is a credit, and it guesses from position.</li>
-      <li>The last row of page one wraps its description onto a second line that lands on page two, so one transaction becomes a row on page one and a stray fragment on page two.</li>
-      <li>The balance column drifts left by a few pixels on page two because the scan was slightly rotated. Some balances are assigned to the Credit column.</li>
-    </ol>
-
-    <p>None of these is a character error. The characters are right and the structure is wrong, which is why a character-level score can look good while the data is unusable. The running balance check above would flag every one of these rows. This is the pattern behind the gap between 64% and 91% on multi-page statements.</p>
-
-    <h2>Where layout analysis still fails</h2>
+    <h2>Questions to ask a vendor, based on what failed</h2>
 
     <ul>
-      <li><strong>Stamps and signatures over text:</strong> the overlap confuses both region detection and recognition.</li>
-      <li><strong>Handwritten notes in the margins of a table:</strong> they can be read as part of a row.</li>
-      <li><strong>Rotated or skewed tables:</strong> a few degrees is manageable, but a table photographed at an angle bends the columns.</li>
-      <li><strong>Nested tables and unusual forms:</strong> a table inside a cell, or a form with overlapping boxes, breaks assumptions about a clean grid.</li>
-      <li><strong>Very small print:</strong> footnotes and fine-print terms fall below the size where region detection works reliably.</li>
-    </ul>
-
-    <p>Knowing these limits helps you decide what to review by hand. If your documents often have stamps over tables, put that in your test set. For the broader chain these steps sit in, see <a href="/resources/blogs/how-does-ocr-work">how OCR works</a>, and for fixing the data after extraction, <a href="/resources/blogs/data-normalization-extracted-documents">data normalization for extracted documents</a>.</p>
-
-    <h2>Questions to ask a vendor about layout and fields</h2>
-
-    <ul>
-      <li>Does it rebuild tables that have no ruling lines, and tables that continue over several pages?</li>
-      <li>Do I get rows and columns as structured output, or only text?</li>
-      <li>Is there a confidence score per field or per cell?</li>
-      <li>What happens when a label appears twice on a page?</li>
-      <li>How are checkboxes and signatures returned?</li>
+      <li>Does it read ruled and borderless tables equally well? Send both.</li>
+      <li>Does it rebuild tables that continue over several pages, with headers dropped from page two?</li>
+      <li>Does the output keep coordinates, so a debit can be told from a credit?</li>
+      <li>Is there a confidence score per cell and per field?</li>
+      <li>What does the response look like when a page produces no rows? A silent empty result is how four of our twenty worst statements slipped past a check.</li>
       <li>Can I test it on my own worst multi-page documents before I decide?</li>
     </ul>
 
-    <p>Notice that none of these questions is about character accuracy. On clean text every serious engine is close. The questions that separate vendors are all about structure.</p>
+    <p>None of these is about character accuracy. On clean text every serious engine is close, and the questions that separate vendors are about structure.</p>
 
     <h2>A field-level test sheet</h2>
 
-    <p>Document-level accuracy hides structure errors. Test at the field level instead. Pick 30 real documents, list the fields that matter, and fill in a sheet like this for each tool:</p>
+    <p>Document-level accuracy hides structure errors, so test per field. Pick 30 real documents, list the fields that matter, and fill in a sheet like this for each tool:</p>
 
     <table>
       <thead>
@@ -158,17 +227,17 @@ export const blog38: BlogPost = {
       </tbody>
     </table>
 
-    <p>The last column matters most. A value that was found but landed under the wrong label is worse than one that was missed, because it looks right. Count "found but wrong" separately. For how to turn this into a pass mark, see <a href="/resources/blogs/how-to-measure-ocr-accuracy">how to measure OCR accuracy</a>.</p>
+    <p>The last column matters most. A value that was found but landed under the wrong label is worse than one that was missed, because it looks right. For how to turn the sheet into a pass mark, see <a href="/resources/blogs/how-to-measure-ocr-accuracy">how to measure OCR accuracy</a>.</p>
 
     <h2>Choosing a tool by structure, not by headline accuracy</h2>
 
     <ul>
-      <li><strong>Clean text only:</strong> free engines such as Tesseract and PaddleOCR are enough. See <a href="/resources/blogs/paddleocr-vs-tesseract-vs-docsapi">PaddleOCR vs Tesseract vs DocsAPI</a>.</li>
-      <li><strong>Tables and fields at volume:</strong> use a document AI API and test it on your worst multi-page files. In our benchmark Docling led on academic papers at 94%, while DocsAPI led on bank statements at 91% and invoices at 93%. Compare the parsers in <a href="/resources/blogs/docling-vs-llamaparse-vs-docsapi">Docling vs LlamaParse vs DocsAPI</a>.</li>
-      <li><strong>Mixed document streams:</strong> classify first so each type goes to the right extraction, as described in <a href="/resources/blogs/document-classification-software">document classification software</a>.</li>
+      <li><strong>Clean text only:</strong> free engines are enough. See <a href="/resources/blogs/paddleocr-vs-tesseract-vs-docsapi">PaddleOCR vs Tesseract vs DocsAPI</a>.</li>
+      <li><strong>Tables and fields at volume:</strong> use a document AI API and test it on your worst multi-page files. In our benchmark Docling led on academic papers at 94 percent, while DocsAPI led on bank statements at 91 percent and invoices at 93 percent. The parsers are compared in <a href="/resources/blogs/docling-vs-llamaparse-vs-docsapi">Docling vs LlamaParse vs DocsAPI</a>.</li>
+      <li><strong>Mixed document streams:</strong> classify first so each type gets the right extraction, as in <a href="/resources/blogs/document-classification-software">document classification software</a>. For lending files, <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a> shows where statements fit.</li>
     </ul>
 
-    <p>DocsAPI extracts fields and tables, flags low-confidence fields for a person to review, and includes table extraction and classification in its price of $0.02 per page and up. The benchmark was run by DocsAPI, so cite it as DocsAPI's own benchmark and check the result on your own documents.</p>
+    <p>DocsAPI extracts fields and tables, flags low-confidence fields for review, and includes table extraction and classification in its price of $0.02 per page and up. The benchmark was run by DocsAPI, so cite it as DocsAPI's own and verify it on your documents. If your volume is large, <a href="/resources/blogs/bulk-and-high-volume-ocr-processing">bulk OCR processing</a> covers speed, cost and review time, and <a href="/resources/blogs/data-normalization-extracted-documents">data normalization for extracted documents</a> covers cleaning the values once they are out.</p>
   `,
   image: "/images/ocr-process.png",
   featuredImage: "/images/ocr-process.png",
@@ -177,7 +246,7 @@ export const blog38: BlogPost = {
   datePublished: "2026-11-03T00:00:00.000Z",
   dateModified: "2026-11-03T00:00:00.000Z",
   last_updated: "November 3, 2026",
-  readTime: "11 min read",
+  readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "ocr layout analysis",
   secondary_keywords: [
@@ -187,13 +256,13 @@ export const blog38: BlogPost = {
     "how ocr reads tables",
     "key value pair extraction from documents",
   ],
-  tags: ["OCR", "layout analysis", "table extraction", "key-value", "explainer"],
+  tags: ["OCR", "layout analysis", "table extraction", "key-value", "bank statements"],
   cluster: "ai-doc",
   faq: [
     {
       question: "What is layout analysis in OCR?",
       answer:
-        "The step that splits a page into regions such as headings, paragraphs, tables and images, gives each a type, and works out the reading order. It decides what to read and in what order before any characters are recognized.",
+        "The step that splits a page into regions such as headings, paragraphs, columns and tables, gives each a type, and works out the reading order, before any characters are recognized. A failure here can leave every word correct and the page unusable.",
     },
     {
       question: "What is key-value extraction?",
@@ -201,34 +270,34 @@ export const blog38: BlogPost = {
         "Finding a labeled field and its value in a document, for example the label Invoice date and the value 14 March. It turns a page of text into named fields a system can use.",
     },
     {
-      question: "How does OCR extract tables from a document?",
+      question: "Why does OCR scramble the text on two-column pages?",
       answer:
-        "It finds the table region, works out the rows and columns from the positions of the text, assigns each piece of text to a cell, and handles cells that span several rows or columns. The result is rows and columns, such as CSV or JSON, not lines of text.",
+        "If the engine is told to read the page as one block, it reads straight across both columns. In our test every word was still recognized, but 88.2 percent were out of order. Automatic segmentation, or cutting the page at the gap between columns and reading each half, gave 0.0 percent wrong.",
     },
     {
       question: "Why do tables cause so many OCR errors?",
       answer:
-        "Tables combine several hard cases: missing ruling lines, wrapped text in cells, merged cells and tables that continue across pages. In our benchmark, multi-page bank statement tables scored 64%, 79% and 91% on three engines that all scored 97-99% on clean typed text.",
+        "Tables combine hard cases: missing or heavy grid lines, wrapped cells, merged cells and page breaks. In our test the same table image scored 0 percent or 100 percent of rows correct depending on one segmentation setting, and the working setting changed with the table style.",
+    },
+    {
+      question: "How can I check that OCR read a bank statement correctly?",
+      answer:
+        "Use the running balance: each row's balance should differ from the previous one by exactly that row's amount. In our tests this check raised no false alarms on 69 clean statements, and flagged 85 of 91 statements that had an error. Add a row count and check the opening and closing balances, because a page that returns no rows passes silently.",
+    },
+    {
+      question: "Why does OCR lose debit and credit columns?",
+      answer:
+        "Plain text output drops the empty cell, so a debit and a credit line look identical. Assign each amount to the nearest column header by its horizontal position, which was right on 560 of 560 clean rows in our test, or use the balance arithmetic to infer direction.",
     },
     {
       question: "Is template-based or AI-based extraction better?",
       answer:
-        "Templates are predictable and work well for one fixed form but fail when the layout changes. Model-based extraction handles layouts it has not seen but can make less predictable mistakes. Many teams test both on their own documents.",
-    },
-    {
-      question: "Can OCR detect checkboxes and signatures?",
-      answer:
-        "A checkbox should come back as marked or empty, and a signature as present or missing. Detecting that a signature exists is not the same as verifying who signed it, and OCR does not verify identity. Test any tool on your own forms to see how it handles both.",
-    },
-    {
-      question: "How do I test table and field accuracy?",
-      answer:
-        "Use 30 or more real documents and check each field one by one: was it found, was the value right, and did it land under the right label. Count values that were found but wrong separately, because they look correct and are harder to catch than missing ones.",
+        "Templates are predictable and work for one fixed form but fail when the layout changes. Model-based extraction handles layouts it has not seen but can make less predictable mistakes. Many teams test both on their own documents.",
     },
     {
       question: "Which OCR is best for bank statements and invoices?",
       answer:
-        "In our own 2026 benchmark, DocsAPI scored 91% on multi-page bank statement tables and 93% on invoice line items, ahead of the other engines we compared. The benchmark was run by DocsAPI, so cite it as DocsAPI's own and test on your documents.",
+        "In our own 2026 benchmark, DocsAPI scored 91 percent on multi-page bank statement tables and 93 percent on invoice line items, ahead of the other engines compared. The benchmark was run by DocsAPI, so cite it as DocsAPI's own and test on your documents.",
     },
   ],
 }

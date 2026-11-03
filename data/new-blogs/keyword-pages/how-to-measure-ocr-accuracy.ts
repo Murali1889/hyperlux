@@ -304,6 +304,8 @@ threshold  auto-accepted  wrong-in-accepted  error-rate  sent-to-review
       <li>If you are already live: sample a few dozen documents a month with frozen rules, per document group. Our <a href="/resources/blogs/ocr-pdf-honest-guide">production lessons from OCR at scale</a> cover the failures that show up first.</li>
     </ul>
 
+    <p>To see confidence scores against ground truth, we measured 276,564 OCR words in <a href="/resources/blogs/how-does-ocr-work">how OCR works</a>: the error rate in each confidence band, and the share of errors that still carried a score of 95 or higher. For field-level checks on tables, <a href="/resources/blogs/ocr-layout-analysis-and-key-value-extraction">OCR layout analysis, tested</a> shows a running-balance check that flagged 85 of 91 bank statements containing errors.</p>
+
     <h2>Sources</h2>
 
     <p>We opened each source on September 21, 2026 and took only the facts noted. The script outputs come from running the code shown, and the compounding numbers were checked in Python.</p>
@@ -327,8 +329,8 @@ threshold  auto-accepted  wrong-in-accepted  error-rate  sent-to-review
   category: "AI Document Intelligence",
   date: "October 5, 2026",
   datePublished: "2026-10-05T00:00:00.000Z",
-  dateModified: "2026-10-12T00:00:00.000Z",
-  last_updated: "October 12, 2026",
+  dateModified: "2026-11-03T00:00:00.000Z",
+  last_updated: "November 3, 2026",
   readTime: "16 min read",
   author: nupuraUghade,
   primary_keyword: "how to measure ocr accuracy",

@@ -166,6 +166,8 @@ print(" ".join(result[0]["rec_texts"]))</code></pre>
       <li><strong>You need fields from bank statements or invoices:</strong> compare the output on your own files in a <a href="/book-demo">DocsAPI trial</a>.</li>
     </ul>
 
+    <p>Our side-by-side test above uses six hand-made images. For a controlled sweep of where Tesseract's accuracy collapses, with 20 pages per condition across resolution, tilt, blur, noise and uneven lighting, see <a href="/resources/blogs/how-does-ocr-work">how OCR works, with measured error rates</a>. For how its page segmentation modes behave on tables and two-column pages, including a setting that took the same table from 0% to 100% correct, see <a href="/resources/blogs/ocr-layout-analysis-and-key-value-extraction">OCR layout analysis, tested</a>.</p>
+
     <h2>Sources and how we checked this</h2>
     <ul>
       <li>Tesseract: history, language count and license from the <a href="https://github.com/tesseract-ocr/tesseract" target="_blank" rel="noopener">Tesseract GitHub repository</a> (developed at HP from 1985 to 1994, open-sourced in 2005, developed by Google from 2006 to 2017); release dates from its <a href="https://github.com/tesseract-ocr/tesseract/releases" target="_blank" rel="noopener">releases page</a>; image-quality advice from <a href="https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html" target="_blank" rel="noopener">Improving the quality of the output</a>.</li>
@@ -180,8 +182,8 @@ print(" ".join(result[0]["rec_texts"]))</code></pre>
   category: "Vendor Comparisons",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-10-12T00:00:00.000Z",
-  last_updated: "October 12, 2026",
+  dateModified: "2026-11-03T00:00:00.000Z",
+  last_updated: "November 3, 2026",
   readTime: "13 min read",
   author: nupuraUghade,
   primary_keyword: "paddleocr",

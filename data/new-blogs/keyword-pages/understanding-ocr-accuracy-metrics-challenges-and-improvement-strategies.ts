@@ -204,6 +204,8 @@ OCR output: Invoice INV-20458 dated 2026-03-14 total due $7,250.00 net 30 days</
       <li><strong>You are weighing AI vision models:</strong> read <a href="/resources/blogs/vlm-vs-ocr">VLM vs OCR</a>.</li>
     </ul>
 
+    <p>The per-character arithmetic above has a measured companion. <a href="/resources/blogs/how-does-ocr-work">How OCR works</a> shows how accuracy on one engine stays near perfect until tilt, blur or resolution crosses a threshold and then collapses, with the numbers for each defect and the fix that worked.</p>
+
     <h2>Sources and how we checked this</h2>
 
     <p>Numbers described as ours come from the <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark 2026</a> (1,700 real, anonymized documents), quoted as published there. Everything else comes from these pages, opened on September 21, 2026.</p>
@@ -226,8 +228,8 @@ OCR output: Invoice INV-20458 dated 2026-03-14 total due $7,250.00 net 30 days</
   category: "Industry Trends",
   date: "May 28, 2025",
   datePublished: "2025-05-28T00:00:00.000Z",
-  dateModified: "2026-10-12T00:00:00.000Z",
-  last_updated: "October 12, 2026",
+  dateModified: "2026-11-03T00:00:00.000Z",
+  last_updated: "November 3, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "how accurate is ocr",
