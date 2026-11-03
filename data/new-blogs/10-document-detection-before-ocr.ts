@@ -118,14 +118,16 @@ ocrmypdf --deskew --rotate-pages --remove-background input.pdf output.pdf</code>
     <p>If you have a working OCR pipeline that disappoints: add deskew and rotation correction first. Two flags in ocrmypdf or a few lines of code in your own pipeline. The accuracy lift is typically 4-8 points.</p>
     <p>If you are starting a new pipeline: do not write the OCR step until you have written the pre-processing. The pre-processing is what makes the OCR work.</p>
     <p>If you are evaluating a vendor: ask what document detection they do. The answer should be specific, boundary detection, rotation, deskew, classification. Not just "yes". (<a href="/author/nupura-ughade">I write about this gap a lot</a>.)</p>
+
+    <p>Detection is the front of a longer chain. For the full sequence from capture to structured output, see <a href="/resources/blogs/how-does-ocr-work">how OCR works in six steps</a>.</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",
   category: "AI Document Intelligence",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-07-30T00:00:00.000Z",
-  last_updated: "July 30, 2026",
+  dateModified: "2026-11-03T00:00:00.000Z",
+  last_updated: "November 3, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "document detection",

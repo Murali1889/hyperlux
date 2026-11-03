@@ -125,14 +125,16 @@ export const blog26: BlogPost = {
     <p>If you process under 1,000 documents per month: skip classification. The volume does not justify the engineering. Use one extraction template for everything and accept lower accuracy.</p>
     <p>If you process 1K-100K per month with 5+ document types: this is where classification pays off fastest. Pick a vendor with pre-trained classes that cover your top 5 types. The accuracy lift is dramatic and the cost is small.</p>
     <p>If you process 100K+ per month: classification is non-negotiable. Build or buy, but you need it. Without it, your downstream accuracy will plateau no matter how good your OCR engine is. (<a href="/author/nupura-ughade">I write about pipeline architecture decisions often.</a>)</p>
+
+    <p>Classification matters most at volume, when thousands of mixed files arrive together. See <a href="/resources/blogs/bulk-and-high-volume-ocr-processing">bulk OCR processing</a> for the throughput math, retries and review routing.</p>
   `,
   image: "/images/intelligent-document-processing.png",
   featuredImage: "/images/intelligent-document-processing.png",
   category: "AI Document Intelligence",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  dateModified: "2026-11-03T00:00:00.000Z",
+  last_updated: "November 3, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "document classification software",
