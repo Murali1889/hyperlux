@@ -74,6 +74,7 @@ export const post: BlogPost = {
       </tbody>
     </table>
     <p>Score each tool by how many files pass without a person fixing anything, and write down how long each run took. Our guides to <a href="/resources/blogs/multi-account-bank-statement-ocr">multi-account bank statements</a> and <a href="/resources/blogs/w2-1099-tax-form-ocr-underwriting">tax forms in underwriting</a> explain what can go wrong in files 3, 6 and 7.</p>
+    <p>Files 1 to 4 lean on the running-balance check, so it helps to know how strong that check is. In our own Tesseract test on 160 synthetic bank statements (not DocsAPI, and cleaner than real scans), a check that compares each row's balance change with its amount flagged 85 of the 91 statements that had an OCR error, with no false alarms on the 69 clean ones. Four of the six it missed returned no rows at all, which is why your pass criteria should also count rows read. The full method and the code are in <a href="/resources/blogs/ocr-layout-analysis-and-key-value-extraction">OCR layout analysis: how columns and tables break</a>.</p>
     <p>Keep the same ten files for every vendor and for every later re-test, so results stay comparable over time. When a vendor ships a model update, run the packet again before you rely on it: a change that helps one bank's statement layout can quietly break another's, and you only see it if you test the same files.</p>
 
     <h2>What should you ask vendors before a pilot?</h2>
@@ -127,8 +128,8 @@ export const post: BlogPost = {
   category: "Lending",
   date: "October 5, 2026",
   datePublished: "2026-10-05T00:00:00.000Z",
-  dateModified: "2026-10-06T00:00:00.000Z",
-  last_updated: "October 6, 2026",
+  dateModified: "2026-11-04T00:00:00.000Z",
+  last_updated: "November 4, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "smb lending automation document processing",

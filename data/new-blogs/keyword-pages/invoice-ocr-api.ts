@@ -120,6 +120,7 @@ lines + tax + shipping - discount = 10217.13 but total is 4817.13</code></pre>
     <p>On clean, digital invoices, header fields such as vendor, number, date and total are usually right; line items are the hard part. In our 2026 benchmark, the best engine extracted invoice line items at 93%, and general document parsers scored 81 to 87%. Test any API on 50 of your own invoices, including scans and multi-page ones, before you commit.</p>
     <p>Our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a> has the full results, and our <a href="/resources/blogs/aws-textract-vs-docsapi">AWS Textract comparison</a> covers Textract's full price list and limits.</p>
 
+    <p>Format checks on amounts and dates are not enough on their own. In our Tesseract test, 8 wrong amounts out of 300 still looked like valid amounts, which is why cross-field totals matter. See <a href="/resources/blogs/how-to-fix-ocr-errors">how to fix OCR errors in numbers and IDs</a> for the measured results.</p>
     <h2>Where DocsAPI fits</h2>
     <p>Disclosure: DocsAPI is our product. It classifies each document first, so invoices can arrive mixed with bank statements, pay stubs and IDs; it returns fields as JSON, joins line-item tables that run across pages, and runs validation before you use the data. It costs from $0.02 per page with tables and classification included, and qualified lenders can get a free 30-day trial for qualified lenders after a demo. If you only process single-page invoices on AWS or Azure, their $0.01 a page is cheaper.</p>
 
@@ -146,8 +147,8 @@ lines + tax + shipping - discount = 10217.13 but total is 4817.13</code></pre>
   category: "Vendor Comparisons",
   date: "October 5, 2026",
   datePublished: "2026-10-05T00:00:00.000Z",
-  dateModified: "2026-10-06T00:00:00.000Z",
-  last_updated: "October 6, 2026",
+  dateModified: "2026-11-04T00:00:00.000Z",
+  last_updated: "November 4, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "invoice ocr api",

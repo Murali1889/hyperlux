@@ -71,6 +71,7 @@ export const blogKa01: BlogPost = {
 
     <p>A passport MRZ checksums four separate fields plus a composite, five distinct opportunities for the algorithm to catch either tampering or an extraction error, compared to simpler machine-readable formats that checksum only one or two fields. This makes a passport's MRZ a genuinely richer verification signal than many other machine-readable document types, but only if a pipeline actually implements and checks all five, not just the composite alone. A pipeline that only validates the composite check digit and skips the four individual field checksums still catches most tampering, since tampering with any field breaks the composite too, but it loses the more specific diagnostic value of knowing exactly which individual field failed, information that matters directly for deciding whether a failure looks like an OCR error concentrated in one field or a deliberate alteration.</p>
 
+    <p>A checksum is also what makes a retry safe. In our Tesseract test on 300 poor-quality IBANs, a mod 97 check caught all 117 wrong reads, and re-reading with different settings recovered 94 of them with no wrong value accepted. The same idea applies to MRZ lines: read again only when a check digit fails. The numbers and a script are in <a href="/resources/blogs/how-to-fix-ocr-errors">how to fix OCR errors in numbers and IDs</a>.</p>
     <h2>What I would check in your current MRZ verification pipeline</h2>
 
     <p>Ask whether your pipeline actually recomputes every field checksum, including the composite, or only extracts the MRZ text and trusts it without validation, since extraction accuracy and checksum validity are two different claims and only the second one actually catches tampering or misreads. Then ask whether a checksum failure routes differently depending on likely cause, a probable OCR misread on an otherwise-consistent document versus a genuine tampering signal, or whether every failure gets treated identically regardless of context. Confirm document-type classification, TD1, TD2, or TD3, runs before checksum logic, using the correct field-position rules for that specific format rather than a single hardcoded layout. And check specifically how filler characters are handled during extraction, since a misread filler boundary corrupts the checksum before the algorithm itself ever gets a chance to run correctly.</p>
@@ -83,8 +84,8 @@ export const blogKa01: BlogPost = {
   category: "Compliance",
   date: "August 23, 2026",
   datePublished: "2026-08-23T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  dateModified: "2026-11-04T00:00:00.000Z",
+  last_updated: "November 4, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "mrz passport verification",

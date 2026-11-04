@@ -69,6 +69,7 @@ export const blogAp12: BlogPost = {
 
     <p>Separating those two sources of variance matters for a practical reason beyond bookkeeping neatness: if your accrual estimates are consistently close on quantity but consistently off on rate, the fix is a better rate-lookup process, not a better spend forecast. Conflating the two into one blended "accrual miss" number makes it impossible to tell which half of the process actually needs attention, and teams that do not separate them tend to spend improvement effort on the wrong half.</p>
 
+    <p>Bank details are worth validating before payment. An IBAN carries a mod 97 check, and in our Tesseract test it let us retry only the reads that failed and lift poor-quality IBANs from 61% to 92% correct with none wrong accepted. The method is in <a href="/resources/blogs/how-to-fix-ocr-errors">how to fix OCR errors in numbers and IDs</a>.</p>
     <h2>What I would check in your current international invoice process</h2>
 
     <p>Ask specifically what exchange rate your system uses when booking a foreign invoice, and whether that matches the invoice date or defaults to processing date. If it defaults to processing date, and your invoice-to-processing lag is more than a day or two, you have a real, quantifiable misstatement accumulating that nobody is currently measuring. Then check your currency disambiguation logic specifically for vendors using the dollar sign without an ISO code, since that is the single highest-risk case for a silent USD-default error on a genuinely non-USD invoice.</p>
@@ -83,8 +84,8 @@ export const blogAp12: BlogPost = {
   category: "Accounts Payable",
   date: "August 12, 2026",
   datePublished: "2026-08-12T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-11-04T00:00:00.000Z",
+  last_updated: "November 4, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "multi currency invoice ocr",

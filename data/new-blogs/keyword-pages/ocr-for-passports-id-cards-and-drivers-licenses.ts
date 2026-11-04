@@ -198,6 +198,7 @@ print(check_digit("G12345678"), check_digit("612345678"))  # G and 6 look the sa
       </tbody>
     </table>
 
+    <p>Document numbers mix letters and digits, which is the hardest case for OCR. In our Tesseract test on 8-character codes, 28.4% of digits were involved in a mistake against 3.1% of letters, and digits were most often read as S or O. See <a href="/resources/blogs/how-to-fix-ocr-errors">how to fix OCR errors in numbers and IDs</a> for the full swap table and what recovered the fields.</p>
     <h2>How should you handle privacy and retention?</h2>
 
     <p>Read only the fields you need, store extracted fields and check results rather than raw images unless a rule requires them, and delete the rest on a schedule. This is not legal advice: rules differ by country and state, so your compliance team should set retention. Three examples show why.</p>
@@ -240,8 +241,8 @@ print(check_digit("G12345678"), check_digit("612345678"))  # G and 6 look the sa
   category: "Compliance",
   date: "October 5, 2026",
   datePublished: "2026-10-05T00:00:00.000Z",
-  dateModified: "2026-10-12T00:00:00.000Z",
-  last_updated: "October 12, 2026",
+  dateModified: "2026-11-04T00:00:00.000Z",
+  last_updated: "November 4, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "ocr for passports",
