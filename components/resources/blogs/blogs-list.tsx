@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Calendar, Clock } from "lucide-react"
 import Link from "next/link"
+import { optimizedImage } from "@/lib/blog-image"
 import Image from "next/image"
 import { blogs } from "@/data/blogs"
 
@@ -20,7 +21,8 @@ export default function BlogsList() {
             <Card className="border-slate-200 overflow-hidden h-full transition-all duration-200 group-hover:border-indigo-300 group-hover:shadow-md">
               <div className="aspect-[16/9] relative overflow-hidden bg-slate-100">
                 <Image
-                  src={blog.image || "/placeholder.svg"}
+                  src={optimizedImage(blog.image)}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                   alt={blog.title}
                   fill
                   className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"

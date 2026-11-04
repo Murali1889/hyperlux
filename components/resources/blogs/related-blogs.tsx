@@ -2,6 +2,7 @@ import { Section, SectionHeader } from "@/components/ui/section"
 import { Card, CardContent } from "@/components/ui/card"
 import { Calendar, Clock } from "lucide-react"
 import Link from "next/link"
+import { optimizedImage } from "@/lib/blog-image"
 import { blogs } from "@/data/blogs"
 import type { BlogPost } from "@/types/resources"
 
@@ -52,7 +53,9 @@ export default function RelatedBlogs({ currentBlogId }: { currentBlogId: string 
             <Card className="border-slate-200 overflow-hidden h-full transition-all duration-200 group-hover:border-indigo-300 group-hover:shadow-md">
               <div className="aspect-[16/9] relative overflow-hidden bg-slate-100">
                 <img
-                  src={blog.image || "/placeholder.svg"}
+                  src={optimizedImage(blog.image)}
+                  loading="lazy"
+                  decoding="async"
                   alt={blog.title}
                   className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
                 />

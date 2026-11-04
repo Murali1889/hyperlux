@@ -4,12 +4,7 @@ import { useState, useEffect, useRef, useMemo } from "react";
 import { ChevronUp, ChevronDown, ArrowLeft } from "lucide-react";
 import type { BlogPost } from "@/types/resources";
 import Link from "next/link";
-
-// Two hero images were multi-megabyte PNGs; use the compressed WebP copies.
-const HERO_WEBP: Record<string, string> = {
-  "/images/ocr-process.png": "/images/ocr-process.webp",
-  "/images/invoice-processing.png": "/images/invoice-processing.webp",
-};
+import { optimizedImage } from "@/lib/blog-image";
 
 const decodeEntities = (s: string) =>
   s
@@ -47,7 +42,7 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
   const contentRef = useRef<HTMLDivElement>(null);
 
   const { html, toc: tableOfContents } = useMemo(() => prepareContent(blog.content), [blog.content]);
-  const heroSrc = blog.image ? HERO_WEBP[blog.image] || blog.image : "";
+  const heroSrc = blog.image ? optimizedImage(blog.image) : "";
 
   // One rAF-throttled, passive scroll listener; state only changes when a value changes.
   useEffect(() => {

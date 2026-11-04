@@ -2,6 +2,7 @@ import { Section } from "@/components/ui/section"
 import { Button } from "@/components/ui/button"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import { optimizedImage } from "@/lib/blog-image"
 import Image from "next/image"
 import { blogs } from "@/data/blogs"
 
@@ -19,7 +20,7 @@ export default function FeaturedBlog() {
           className="relative aspect-[4/3] md:aspect-[16/10] overflow-hidden rounded-xl bg-slate-100 group block"
         >
           <Image
-            src={featuredBlog.image || "/placeholder.svg"}
+            src={optimizedImage(featuredBlog.image)}
             alt={featuredBlog.title}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
