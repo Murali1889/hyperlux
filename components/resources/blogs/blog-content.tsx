@@ -44,13 +44,17 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
   const { html, toc: tableOfContents } = useMemo(() => prepareContent(blog.content), [blog.content]);
   const heroSrc = blog.image ? optimizedImage(blog.image) : "";
 
-  // One rAF-throttled, passive scroll listener; state only changes when a value changes.
+  const tocListRef = useRef<HTMLUListElement>(null);
+  const tocIds = useMemo(() => tableOfContents.map((t) => t.id), [tableOfContents]);
+
+  // One rAF-throttled, passive scroll listener. Headings are looked up fresh on every
+  // frame (a cached list goes stale if React re-creates the article DOM).
   useEffect(() => {
-    const headings = Array.from(document.querySelectorAll<HTMLElement>(".blog-prose h2"));
     let ticking = false;
     const update = () => {
       ticking = false;
-      setShowBackToTop(window.scrollY > 300);
+      const y = window.scrollY;
+      setShowBackToTop(y > 300);
       const el = contentRef.current;
       if (el) {
         const r = el.getBoundingClientRect();
@@ -58,8 +62,10 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
         setScrollProgress(Math.round(Math.min(100, Math.max(0, (-r.top / total) * 100))));
       }
       let current = "";
-      for (const h of headings) {
-        if (h.getBoundingClientRect().top < 160) current = h.id;
+      for (const id of tocIds) {
+        const h = document.getElementById(id);
+        if (!h || !h.isConnected) continue;
+        if (h.getBoundingClientRect().top <= 140) current = id;
         else break;
       }
       setActiveSection(current);
@@ -72,8 +78,24 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
     };
     update();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [html]);
+    window.addEventListener("resize", onScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, [tocIds]);
+
+  // Keep the active item visible inside the contents panel without moving the page.
+  useEffect(() => {
+    const list = tocListRef.current;
+    const nav = list?.parentElement;
+    const btn = list?.querySelector<HTMLElement>('[aria-current="true"]');
+    if (!nav || !btn) return;
+    const top = btn.offsetTop - nav.offsetTop;
+    if (top < nav.scrollTop + 60 || top > nav.scrollTop + nav.clientHeight - 90) {
+      nav.scrollTo({ top: Math.max(0, top - 120), behavior: "smooth" });
+    }
+  }, [activeSection]);
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
   const scrollToSection = (id: string) =>
@@ -148,7 +170,7 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
           <aside className="hidden lg:block">
             <nav
               aria-label="Table of contents"
-              className="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto rounded-xl border border-slate-200 bg-white p-5"
+              className="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto rounded-xl border border-slate-200 bg-white p-5 shadow-sm"
             >
               <button
                 onClick={() => setTocOpen(!tocOpen)}
@@ -160,28 +182,47 @@ export default function BlogContent({ blog }: { blog: BlogPost }) {
                   className={`h-4 w-4 text-slate-500 transition-transform ${tocOpen ? "rotate-180" : ""}`}
                 />
               </button>
-              <div className="mt-3 flex items-center gap-3">
-                <div className="h-1 flex-1 overflow-hidden rounded-full bg-slate-100">
-                  <div className="h-full rounded-full bg-indigo-600" style={{ width: `${scrollProgress}%` }} />
+              <div className="mt-3">
+                <div className="h-1.5 overflow-hidden rounded-full bg-slate-100">
+                  <div
+                    className="h-full rounded-full bg-indigo-600 transition-[width] duration-150"
+                    style={{ width: `${scrollProgress}%` }}
+                  />
                 </div>
-                <span className="w-9 text-right text-xs tabular-nums text-slate-500">{scrollProgress}%</span>
+                <div className="mt-1.5 flex justify-between text-xs tabular-nums text-slate-500">
+                  <span>
+                    {Math.max(0, tocIds.indexOf(activeSection) + 1)} of {tocIds.length} sections
+                  </span>
+                  <span>{scrollProgress}% read</span>
+                </div>
               </div>
               {tocOpen && (
-                <ul className="mt-4 space-y-0.5 border-l border-slate-200">
-                  {tableOfContents.map((item) => (
-                    <li key={item.id}>
-                      <button
-                        onClick={() => scrollToSection(item.id)}
-                        className={`-ml-px block w-full border-l-2 py-1.5 pl-4 pr-1 text-left text-sm leading-snug transition-colors ${
-                          activeSection === item.id
-                            ? "border-indigo-600 font-medium text-indigo-700"
-                            : "border-transparent text-slate-500 hover:text-slate-900"
-                        }`}
-                      >
-                        {item.title}
-                      </button>
-                    </li>
-                  ))}
+                <ul ref={tocListRef} className="mt-4 space-y-0.5">
+                  {tableOfContents.map((item, i) => {
+                    const active = activeSection === item.id;
+                    return (
+                      <li key={item.id}>
+                        <button
+                          onClick={() => scrollToSection(item.id)}
+                          aria-current={active ? "true" : undefined}
+                          className={`flex w-full items-start gap-3 rounded-lg px-2.5 py-2 text-left text-[13px] leading-snug transition-colors ${
+                            active
+                              ? "bg-indigo-50 font-medium text-indigo-700"
+                              : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+                          }`}
+                        >
+                          <span
+                            className={`mt-px w-5 shrink-0 text-xs tabular-nums ${
+                              active ? "text-indigo-500" : "text-slate-400"
+                            }`}
+                          >
+                            {String(i + 1).padStart(2, "0")}
+                          </span>
+                          <span className="line-clamp-3">{item.title}</span>
+                        </button>
+                      </li>
+                    );
+                  })}
                 </ul>
               )}
             </nav>
