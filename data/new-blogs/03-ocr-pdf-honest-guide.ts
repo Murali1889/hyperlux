@@ -90,6 +90,9 @@ export const blog03: BlogPost = {
     <p>You can buy this pipeline as an API (us, AWS, Google). You can also build it in-house. Building it took us nine months and a small team. Most companies should buy. The reason is not the OCR engine, that is a few weeks of work, it is everything around it. Production OCR is a maintenance problem more than a model problem.</p>
     <p>The <a href="/resources/blogs/data-normalization-extracted-documents">data normalization step</a> is where post-correction lives. It is what separates "I have text" from "I have data my systems can act on".</p>
 
+    <h2>When the PDF Was Made From a Fax or a Photo</h2>
+    <p>If the scan came from a fax machine or a phone, clean it before you run OCR. In our Tesseract tests, removing specks and then enlarging a noisy standard-mode fax cut wrong words from 15.1% to 7.4%, while enlarging it first made it 44.6% wrong. The method, with a script, is in <a href="/resources/blogs/convert-fax-tiff-jpg-png-to-text">converting fax, TIFF, JPG and PNG to text</a>.</p>
+
     <h2>What I'd Do Today</h2>
     <p>If your volume is tiny and documents are simple: Tesseract on a laptop. Free, works, move on.</p>
     <p>If your volume is medium (a few hundred a week) and documents are mixed: an OCR API. Almost always cheaper than the engineering hours you'd spend tuning Tesseract.</p>
@@ -108,8 +111,8 @@ export const blog03: BlogPost = {
   category: "OCR How-To",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-11-05T00:00:00.000Z",
+  last_updated: "November 5, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "ocr pdf",

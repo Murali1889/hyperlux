@@ -137,6 +137,9 @@ ghost.pdf ['image+text layer']</code></pre>
     <p>Analogy 2: <strong>The library book</strong>. A readable PDF is a library book where every word is printed. An image PDF is a stack of photocopies of every page. Both let you read the book. Only the printed version lets the librarian's computer find every chapter on World War II in one search.</p>
     <p>Pick whichever one lands better with whoever you are talking to. Both work.</p>
 
+    <h2>What Is Inside an Image PDF</h2>
+    <p>An image PDF is usually one picture per page inside a PDF wrapper, so the quality of that picture decides the result. Three things in the picture file mattered in our tests: a DPI number that does not match the pixels, a photo stored sideways, and a noisy fax that is enlarged before it is cleaned. We measured each one in <a href="/resources/blogs/convert-fax-tiff-jpg-png-to-text">converting fax, TIFF, JPG and PNG to text</a>. We did not test PDF files themselves in that guide, only the image formats that go inside them.</p>
+
     <h2>What I'd Do Today</h2>
     <p>If you are a regular person dealing with one PDF: do the 2-second test. If it is an image, drag-and-drop into the <a href="/products">DocsAPI dashboard</a> for a free trial. Thirty seconds and you have a real searchable PDF.</p>
     <p>If you are an engineer building software that consumes PDFs: stop assuming PDFs are readable. Add a one-line check at intake. Auto-route image PDFs to OCR before downstream processing. Most production bugs that trace back to "the PDF was weird" would have been caught by this check.</p>
@@ -147,8 +150,8 @@ ghost.pdf ['image+text layer']</code></pre>
   category: "OCR How-To",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-10-14T00:00:00.000Z",
-  last_updated: "October 14, 2026",
+  dateModified: "2026-11-05T00:00:00.000Z",
+  last_updated: "November 5, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "readable pdf",

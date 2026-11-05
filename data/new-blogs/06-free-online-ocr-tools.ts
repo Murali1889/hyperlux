@@ -114,6 +114,9 @@ export const blog06: BlogPost = {
     <p>Three or four samples in the store are good. The rest are dressed-up sales pitches. Most people end up just paying for the actual food because it is simpler.</p>
     <p>OCR is the same. There are three or four genuinely good free options. The rest waste your time. If you OCR more than a handful of documents per month, just pay for the food.</p>
 
+    <h2>If Your File Is a Fax, a TIFF or an Odd Image</h2>
+    <p>Free tools usually hide what they do to the file before reading it. We tested 14 image formats, wrong DPI tags and three fax resolutions with Tesseract. The format barely mattered, but a DPI tag that claimed 600 on a 150 DPI page made 92.5% of the words wrong, and enlarging a noisy fax before cleaning it tripled the errors. The full numbers are in <a href="/resources/blogs/convert-fax-tiff-jpg-png-to-text">converting fax, TIFF, JPG and PNG to text</a>.</p>
+
     <h2>What I'd Do Today</h2>
     <p>If you are testing OCR for the first time: try Google Drive's trick on a one-page document. Free, low-stakes, takes 30 seconds.</p>
     <p>If you want something free with no traps: OCRmyPDF for PDFs, or our <a href="/tools/free-ocr">free OCR tool</a> for a single image or PDF in your browser.</p>
@@ -124,8 +127,8 @@ export const blog06: BlogPost = {
   category: "OCR How-To",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-10-06T00:00:00.000Z",
-  last_updated: "October 6, 2026",
+  dateModified: "2026-11-05T00:00:00.000Z",
+  last_updated: "November 5, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "free ocr online",

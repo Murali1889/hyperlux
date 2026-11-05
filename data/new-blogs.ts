@@ -39,6 +39,7 @@ import { blog36 } from "./new-blogs/36-how-does-ocr-work"
 import { blog37 } from "./new-blogs/37-bulk-and-high-volume-ocr-processing"
 import { blog38 } from "./new-blogs/38-ocr-layout-analysis-and-key-value-extraction"
 import { blog39 } from "./new-blogs/39-how-to-fix-ocr-errors"
+import { blog40 } from "./new-blogs/40-convert-fax-tiff-jpg-png-to-text"
 
 // Invoice/AP-OCR cluster (topic 1 of 3, 21 posts) — see
 // docs/superpowers/specs/2026-08-07-invoice-ap-ocr-cluster-design.md
@@ -225,6 +226,7 @@ export const newBlogs: BlogPost[] = [
   blog37,
   blog38,
   blog39,
+  blog40,
   blogAp01,
   blogAp02,
   blogAp03,
