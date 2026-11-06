@@ -66,6 +66,9 @@ export const blogAp14: BlogPost = {
 
     <p>If handwritten and faxed documents make up even 5 to 10% of your invoice volume, and they land at 78% accuracy rather than the 93% your clean-PDF invoices get, that specific subset needs a meaningfully higher manual-review rate than your blended average suggests. Building a single confidence threshold across your entire document mix under-flags this subset for review (since the threshold gets calibrated against the easier majority) unless document quality itself feeds into the confidence score, not just field-level extraction certainty within a single document. A field extracted at 85% confidence on a clean PDF and the same 85% confidence on a faxed handwritten form are not equally trustworthy, even though the number looks identical.</p>
 
+    <h2>If you read faxed invoices with fixed boxes</h2>
+    <p>Fixed-box reading is fragile on faxes because pages arrive tilted or at a different size. In a Tesseract test on 640 invoices, a 2 degree tilt took padded zones to 68.8% and a 5% size change took every zone to 0% or close. See <a href="/resources/blogs/what-is-zonal-ocr">what is zonal OCR</a>.</p>
+
     <h2>What I would check before trusting a vendor's handwriting claim</h2>
 
     <p>Ask for the actual accuracy number on handwriting specifically, not a qualitative claim like "reasonable" or "good," and ask whether that number is character-level or field-level, the same distinction that matters for <a href="/resources/blogs/invoice-line-item-ocr">line-item extraction generally</a>. Then pull 15 real handwritten and faxed invoices from your own worst vendors and test directly, since this is exactly the category where a vendor's clean-demo number and your real-world number are most likely to diverge sharply.</p>
@@ -82,8 +85,8 @@ export const blogAp14: BlogPost = {
   category: "Accounts Payable",
   date: "August 13, 2026",
   datePublished: "2026-08-13T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-11-06T00:00:00.000Z",
+  last_updated: "November 6, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "handwritten invoice ocr",
