@@ -67,6 +67,9 @@ export const blogAp20: BlogPost = {
 
     <p>The practical design choice: surface both signals separately in the review interface rather than collapsing them into one number, and route accordingly. A low model-confidence field genuinely needs a human to look at the source image and judge what the correct value should be. A field that failed a rule check despite high model confidence needs a different kind of review, usually a quick check for which specific extracted field is actually wrong among several that individually looked fine, since the arithmetic inconsistency alone does not identify which value is the culprit.</p>
 
+    <h2>How far can a template move before it fails?</h2>
+    <p>Fixed-position templates are the simplest rule-based method, so we measured where they stop working. On 640 test invoices read with Tesseract, template zones were 97.2% right when the page matched, 0% after a 1.7 millimetre shift with tight zones, and wrong on the subtotal, tax and total whenever the table had a different number of rows. The tests and a small label-based script are in <a href="/resources/blogs/what-is-zonal-ocr">what is zonal OCR</a>.</p>
+
     <h2>What I would check in your current extraction pipeline</h2>
 
     <p>Ask whether your pipeline runs any deterministic validation at all beyond the model's own confidence scores, specifically arithmetic reconciliation and checksum checks on the fields where these apply. If the answer is no, you are relying entirely on a model's self-reported confidence for problems that have a definite, verifiable right answer, which is strictly weaker than actually checking. Then ask whether your highest-volume repeat vendors get any positional-rule fast path at all, or whether every single invoice, including the ten-thousandth invoice from a vendor whose layout has not changed in two years, runs through the full general-purpose model regardless.</p>
@@ -81,8 +84,8 @@ export const blogAp20: BlogPost = {
   category: "Accounts Payable",
   date: "August 15, 2026",
   datePublished: "2026-08-15T00:00:00.000Z",
-  dateModified: "2026-10-22T00:00:00.000Z",
-  last_updated: "October 22, 2026",
+  dateModified: "2026-11-06T00:00:00.000Z",
+  last_updated: "November 6, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "rules based vs ai invoice extraction",

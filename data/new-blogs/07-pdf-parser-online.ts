@@ -108,6 +108,9 @@ export const blog07: BlogPost = {
     <p>A good reader understands the book. She tells you "Chapter 1 starts on page 7. The index is on page 240. Here is the recipe for chocolate cake, with ingredients in one column and instructions in another."</p>
     <p>A PDF parser is the same. A bad parser gives you text. A good parser gives you structure. The difference is what your downstream systems can actually use.</p>
 
+    <h2>If a Parser Asks You to Draw Boxes</h2>
+    <p>Some parsers work by having you draw boxes around fields on a sample page and reusing those boxes on later files. That is zonal OCR, and it only works while every page lines up with the sample. We measured how much shift, tilt and size change it tolerates, and what happens when a table grows, in <a href="/resources/blogs/what-is-zonal-ocr">what is zonal OCR</a>.</p>
+
     <h2>What I'd Do Today</h2>
     <p>If you are parsing simple, paragraph-heavy documents: any free tool will do. SmallPDF, ILovePDF, Adobe Online. Pick one and move on.</p>
     <p>If you are parsing tables, forms, or anything structured: do not waste time on free parsers. Pay for a layout-aware engine, AWS Textract, Google Document AI, or DocsAPI. The cost is trivial compared to the cleanup time you save.</p>
@@ -118,8 +121,8 @@ export const blog07: BlogPost = {
   category: "OCR How-To",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-10-29T00:00:00.000Z",
-  last_updated: "October 29, 2026",
+  dateModified: "2026-11-06T00:00:00.000Z",
+  last_updated: "November 6, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "pdf parse online",

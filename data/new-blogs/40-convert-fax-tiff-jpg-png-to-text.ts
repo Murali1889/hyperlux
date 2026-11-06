@@ -227,7 +227,7 @@ if __name__ == "__main__":
     <p>The fax result of 5.0% differs from the 7.4% in the cleaning table because these are 3-page files at 10 points, not the mix of text sizes behind that table. One more limit: the script finds the uneven fax resolution from the TIFF's own resolution tags, which our test files carried. A fax file with no tags would be treated as evenly spaced and would not be stretched correctly. Our first version of this script used the enlarge-then-median order and scored 16.3% on the fax files, worse than plain Tesseract at 14.3%. We changed it to despeckle first after the cleaning test above showed why. The script that is printed here is the second version, and the table is its result.</p>
 
     <h2>What about PDF and CSV output?</h2>
-    <p>We did not test PDF in this round. A scanned PDF is usually an image or several images inside a PDF wrapper, so the checks above apply to the images inside it, and how to tell which kind of PDF you have is explained in <a href="/resources/blogs/readable-pdf-vs-image-pdf">readable PDF versus image PDF</a>. For converting to CSV, the file format is not the hard part. Finding the table, its rows and its columns is, and that is where results varied most in our earlier work. See <a href="/resources/blogs/ocr-layout-analysis-and-key-value-extraction">OCR layout analysis and key-value extraction</a> for the table results. If you are just trying a tool on a single file today, <a href="/resources/blogs/free-online-ocr-tools">our review of free online OCR tools</a> covers which ones are safe to upload to.</p>
+    <p>We did not test PDF in this round. A scanned PDF is usually an image or several images inside a PDF wrapper, so the checks above apply to the images inside it, and how to tell which kind of PDF you have is explained in <a href="/resources/blogs/readable-pdf-vs-image-pdf">readable PDF versus image PDF</a>. For pulling fields from a fixed form, how far a page can move before fixed zones fail is measured in <a href=\"/resources/blogs/what-is-zonal-ocr\">what is zonal OCR</a>. For converting to CSV, the file format is not the hard part. Finding the table, its rows and its columns is, and that is where results varied most in our earlier work. See <a href="/resources/blogs/ocr-layout-analysis-and-key-value-extraction">OCR layout analysis and key-value extraction</a> for the table results. If you are just trying a tool on a single file today, <a href="/resources/blogs/free-online-ocr-tools">our review of free online OCR tools</a> covers which ones are safe to upload to.</p>
 
     <h2>What do these tests not show?</h2>
     <p>Six things. First, the pages are clean renders of Arial text with added blur and noise, and real scans bring folds, stamps, colour backgrounds and shadows that are worse than anything we simulated. Second, we tested one engine. A newer engine that uses a language model could react very differently to a wrong DPI tag or to a noisy fax, and the ranking of fixes could change. Third, the fax noise is our own model, and real line noise varies by phone line and machine. Fourth, we tested English only, so none of this says anything about other scripts. Fifth, the odd-file table is one page per row. Sixth, we tested a 10 point font family at 8, 10 and 12 points on an 8.5 inch page, and we did not test handwriting, stamps, photographs of paper, JPEG 2000, HEIC or PDF.</p>
@@ -246,8 +246,8 @@ if __name__ == "__main__":
   category: "AI Document Intelligence",
   date: "November 5, 2026",
   datePublished: "2026-11-05T00:00:00.000Z",
-  dateModified: "2026-11-05T00:00:00.000Z",
-  last_updated: "November 5, 2026",
+  dateModified: "2026-11-06T00:00:00.000Z",
+  last_updated: "November 6, 2026",
   readTime: "16 min read",
   author: nupuraUghade,
   primary_keyword: "convert fax to text",
