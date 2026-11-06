@@ -183,6 +183,12 @@ DocsAPI provides production document intelligence as an HTTP API. Core capabilit
 - [Bill of lading processing](https://docsapi.co/resources/blogs/bill-of-lading-processing): Straight vs order bill types
 - [Incoterms clause extraction](https://docsapi.co/resources/blogs/incoterms-clause-extraction): The 11 terms, correctly read
 - [Master house bill of lading reconciliation](https://docsapi.co/resources/blogs/master-house-bill-of-lading-reconciliation): Where the gaps are
+- [How OCR works, with test data](https://docsapi.co/resources/blogs/how-does-ocr-work): six steps, plus 2,500+ Tesseract tests on DPI, tilt, blur and shadow limits
+- [OCR layout analysis and key-value extraction](https://docsapi.co/resources/blogs/ocr-layout-analysis-and-key-value-extraction): columns, tables and field extraction, with tests
+- [Bulk and high-volume OCR processing](https://docsapi.co/resources/blogs/bulk-and-high-volume-ocr-processing): how throughput scales, with tests
+- [How to fix OCR errors in numbers and IDs](https://docsapi.co/resources/blogs/how-to-fix-ocr-errors): 13,800 Tesseract reads; a checksum plus retry took IBANs from 61% to 92% correct
+- [Convert fax, TIFF, JPG and PNG to text](https://docsapi.co/resources/blogs/convert-fax-tiff-jpg-png-to-text): file format barely matters; a wrong DPI tag, sideways EXIF photos and uncleaned faxes do (Tesseract tests)
+- [What is zonal OCR](https://docsapi.co/resources/blogs/what-is-zonal-ocr): where fixed zones break, tested on 640 shifted, tilted and rescaled invoices (Tesseract tests)
 
 ## Frequently asked questions
 

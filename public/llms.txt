@@ -44,6 +44,12 @@ DocsAPI processes around 4 million PDF pages per month for lenders, fintechs, an
 - [OCR for medical documents](https://docsapi.co/resources/blogs/ocr-for-medical-documents): fields, codes and failure points, accuracy, and HIPAA considerations
 - [OCR for shipping and logistics documents](https://docsapi.co/resources/blogs/ocr-for-shipping-and-logistics-documents): document map, container and air waybill check digits, one ocean shipment in order
 - [How to measure OCR accuracy](https://docsapi.co/resources/blogs/how-to-measure-ocr-accuracy): CER, WER and field accuracy, a script we ran, and a 50-document test plan
+- [How OCR works, with test data](https://docsapi.co/resources/blogs/how-does-ocr-work): six steps, plus 2,500+ Tesseract tests on DPI, tilt, blur and shadow limits
+- [OCR layout analysis and key-value extraction](https://docsapi.co/resources/blogs/ocr-layout-analysis-and-key-value-extraction): columns, tables and field extraction, with tests
+- [Bulk and high-volume OCR processing](https://docsapi.co/resources/blogs/bulk-and-high-volume-ocr-processing): how throughput scales, with tests
+- [How to fix OCR errors in numbers and IDs](https://docsapi.co/resources/blogs/how-to-fix-ocr-errors): 13,800 Tesseract reads; a checksum plus retry took IBANs from 61% to 92% correct
+- [Convert fax, TIFF, JPG and PNG to text](https://docsapi.co/resources/blogs/convert-fax-tiff-jpg-png-to-text): file format barely matters; a wrong DPI tag, sideways EXIF photos and uncleaned faxes do (Tesseract tests)
+- [What is zonal OCR](https://docsapi.co/resources/blogs/what-is-zonal-ocr): where fixed zones break, tested on 640 shifted, tilted and rescaled invoices (Tesseract tests)
 
 ## Author
 
