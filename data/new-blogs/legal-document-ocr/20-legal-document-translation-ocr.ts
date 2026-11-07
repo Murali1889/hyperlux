@@ -13,7 +13,7 @@ export const blogLd20: BlogPost = {
   content: `
     <p>In 2018, a Florida boat-dock manufacturer and a Turkish plastics company ended up arguing in a U.S. federal court over what a single word meant. Their distribution agreement had been drafted in Turkish and translated into English, and the two versions did not say quite the same thing about which country's courts would hear a dispute. The English text used the word "execution." The Turkish original used "uygulamasinda," a word closer to "in practice" or "implementation" than to "signing." One reading meant the Turkish courts had exclusive jurisdiction over the whole relationship. The other meant they only had jurisdiction over the act of signing, leaving everything else open to a Florida courtroom. That is not a hypothetical drafting-class example. It is Marine Pro Dock System, LLC v. Polietilen Mamulleri San. Tic. Ltd. Sti., Case No. 2:18-cv-14006, filed in the U.S. District Court for the Southern District of Florida. The court ultimately dismissed the case on diversity jurisdiction grounds before reaching the merits of the translation fight, but the underlying problem never went away, it just moved to whatever forum the parties ended up in next.</p>
 
-    <p>That case is a small, concrete illustration of a much bigger structural fact that most document translation software glosses over: a translated contract is not, by itself, a legally binding document. It is a convenience copy unless a governing-language clause says otherwise, and even when one exists, the clause only controls disputes about meaning, it does nothing to prevent the dispute from arising in the first place. For lenders and fintechs doing <a href="/use-cases/contract-abstraction">contract abstraction</a> on cross-border loan agreements, guarantees, and security documents, that distinction is not academic. It determines whether the English-language extraction your pipeline produces is something you can rely on or something that only looks reliable until a counterparty reads the original.</p>
+    <p>That case is a small, concrete illustration of a much bigger structural fact that most document translation software glosses over: a translated contract is not, by itself, a legally binding document. It is a convenience copy unless a governing-language clause says otherwise, and even when one exists, the clause only controls disputes about meaning, it does nothing to prevent the dispute from arising in the first place. For lenders and fintechs doing <a href="/use-cases/contract-abstraction">contract abstraction</a> on cross-border loan agreements, guarantees, and security documents, that distinction is not academic. It determines whether the English-language extraction your pipeline produces is something you can rely on or something that only looks reliable until a counterparty reads the original. Reading the page comes before translating it: an English-only OCR model returned 11.8% character error on Turkish pages and dropped the dots and cedillas, as our <a href="/resources/blogs/multilingual-ocr-guide">multilingual OCR test</a> shows.</p>
 
     <h2>Why a translation has no legal force of its own</h2>
 
@@ -81,8 +81,8 @@ export const blogLd20: BlogPost = {
   category: "Legal",
   date: "September 18, 2026",
   datePublished: "2026-09-18T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-11-07T00:00:00.000Z",
+  last_updated: "November 7, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "legal document translation ocr",

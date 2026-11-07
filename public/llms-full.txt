@@ -189,6 +189,7 @@ DocsAPI provides production document intelligence as an HTTP API. Core capabilit
 - [How to fix OCR errors in numbers and IDs](https://docsapi.co/resources/blogs/how-to-fix-ocr-errors): 13,800 Tesseract reads; a checksum plus retry took IBANs from 61% to 92% correct
 - [Convert fax, TIFF, JPG and PNG to text](https://docsapi.co/resources/blogs/convert-fax-tiff-jpg-png-to-text): file format barely matters; a wrong DPI tag, sideways EXIF photos and uncleaned faxes do (Tesseract tests)
 - [What is zonal OCR](https://docsapi.co/resources/blogs/what-is-zonal-ocr): where fixed zones break, tested on 640 shifted, tilted and rescaled invoices (Tesseract tests)
+- [Multilingual OCR guide](https://docsapi.co/resources/blogs/multilingual-ocr-guide): 16 languages tested with and without language packs; English-only Tesseract made 89.8% character error on non-Latin scripts, and Greek and Hindi packs alone misread digits (Tesseract tests, not the DocsAPI benchmark)
 
 ## Frequently asked questions
 

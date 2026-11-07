@@ -13,7 +13,7 @@ export const blogKa13: BlogPost = {
   content: `
     <p>National ID OCR vendors compete heavily on template counts: sixteen thousand document templates, ten thousand supported ID card types, coverage across two hundred and fifty countries and territories. Those numbers are real and the underlying problem is real too, national identity documents genuinely do vary enormously, a Swiss card carries fields in five languages, Singapore's indicates race, Mexico's includes a home address, South Africa's states residence status. What that marketing rarely explains is that for the single largest ID category by verification volume in the US market, state-issued driver's licenses and ID cards, the right architecture barely needs templates at all, because a machine-readable standard already solves the hard part underneath the visual chaos.</p>
 
-    <p>This matters directly for <a href="/use-cases/id-proofing">identity verification</a> pipelines built for a US-heavy customer base, and extends the standardized-format argument from our <a href="/resources/blogs/mrz-passport-verification">MRZ passport verification piece</a> from international travel documents into domestic state-issued IDs.</p>
+    <p>This matters directly for <a href="/use-cases/id-proofing">identity verification</a> pipelines built for a US-heavy customer base, and extends the standardized-format argument from our <a href="/resources/blogs/mrz-passport-verification">MRZ passport verification piece</a> from international travel documents into domestic state-issued IDs. Where an ID carries text in several scripts, the choice of language packs matters too, and we measured it in our <a href="/resources/blogs/multilingual-ocr-guide">16-language OCR test</a>.</p>
 
     <h2>Two architectures for handling format diversity</h2>
 
@@ -73,8 +73,8 @@ export const blogKa13: BlogPost = {
   category: "Compliance",
   date: "August 27, 2026",
   datePublished: "2026-08-27T00:00:00.000Z",
-  dateModified: "2026-10-14T00:00:00.000Z",
-  last_updated: "October 14, 2026",
+  dateModified: "2026-11-07T00:00:00.000Z",
+  last_updated: "November 7, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "national id verification ocr",

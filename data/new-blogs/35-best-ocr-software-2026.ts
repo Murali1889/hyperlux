@@ -28,7 +28,7 @@ export const blog35: BlogPost = {
     <p>Instead of one ranked list, here is what actually separates the categories, since most "best OCR software" searches are really asking about a specific one of these.</p>
 
     <h3>Best free and open source OCR engines</h3>
-    <p>Tesseract and PaddleOCR are the two real open source options. Tesseract is one of the most widely used open source OCR engines, a long-standing default for typed English text: it is free and runs locally with no cloud dependency. PaddleOCR, built by Baidu, is the stronger open source choice once you move past clean English: in our benchmark it beat Tesseract by 18 to 24 points on multilingual documents and mobile-quality scans. Both require you to run and maintain the software yourself, which is the real tradeoff against a paid API.</p>
+    <p>Tesseract and PaddleOCR are the two real open source options. Tesseract is one of the most widely used open source OCR engines, a long-standing default for typed English text: it is free and runs locally with no cloud dependency. PaddleOCR, built by Baidu, is the stronger open source choice once you move past clean English: in our benchmark it beat Tesseract by 18 to 24 points on multilingual documents and mobile-quality scans. Both require you to run and maintain the software yourself, which is the real tradeoff against a paid API. If you run Tesseract on non-English documents, the <a href="/resources/blogs/multilingual-ocr-guide">multilingual OCR test across 16 languages</a> shows which setups keep accents, digits and currency symbols intact.</p>
 
     <h3>Best OCR reader and converter for personal use</h3>
     <p>A "reader" and a "converter" are answering slightly different questions, even though most tools do both. An OCR reader makes an existing scan or PDF searchable and selectable, so you can find a word or copy a paragraph, without necessarily producing a new file. A converter goes further: it takes an image or scanned PDF and outputs it in a genuinely editable format, a Word document, plain text, or a clean searchable PDF you can annotate and edit like a native file. If all you need is to search inside an old scanned contract, a reader-only tool is enough. If you need to actually edit the text, you need a converter, and that is where layout preservation (does the output keep your tables and headers intact) becomes the real differentiator between tools, more than raw text accuracy.</p>
@@ -114,8 +114,8 @@ export const blog35: BlogPost = {
   category: "AI Document Intelligence",
   date: "September 20, 2026",
   datePublished: "2026-09-20T00:00:00.000Z",
-  dateModified: "2026-10-12T00:00:00.000Z",
-  last_updated: "October 12, 2026",
+  dateModified: "2026-11-07T00:00:00.000Z",
+  last_updated: "November 7, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "best ocr software",
