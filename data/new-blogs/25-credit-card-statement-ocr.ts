@@ -53,7 +53,7 @@ export const blog25: BlogPost = {
     <p>Different layouts per issuer. Some compress transaction tables into tiny font. Modern OCR clears 95-97% with proper pre-processing.</p>
 
     <h3>Hard: Scanned Statements</h3>
-    <p>Customer photographs the statement on their phone. Angled, dim, sometimes one page at a time. Pre-processing (deskew, rotation correction, page boundary detection, see our <a href="/resources/blogs/document-detection-before-ocr">document detection guide</a>) is critical.</p>
+    <p>Customer photographs the statement on their phone. Angled, dim, sometimes one page at a time. Pre-processing (deskew, rotation correction, page boundary detection, see our <a href="/resources/blogs/document-detection-before-ocr">document detection guide</a>) is critical, and a page turned the wrong way is the case that fails hardest, as our <a href="/resources/blogs/ocr-upside-down-sideways-pages">rotation tests</a> show.</p>
 
     <h3>Brutal: Multi-Page Statements With Continuation Tables</h3>
     <p>Annual summary statements where transactions span 20+ pages. Naive OCR treats each page as a separate table. Layout-aware OCR stitches the rows correctly. Pick the latter.</p>
@@ -122,8 +122,8 @@ export const blog25: BlogPost = {
   category: "Industry Trends",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-11-08T00:00:00.000Z",
+  last_updated: "November 8, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "credit card statement ocr",

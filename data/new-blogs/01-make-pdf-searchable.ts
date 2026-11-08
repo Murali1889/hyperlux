@@ -92,7 +92,7 @@ ocrmypdf scanned.pdf searchable.pdf</code></pre>
 
     <h3>Trap 1: A Page Is Sideways</h3>
     <p>If page 47 was scanned sideways or upside-down, OCR reads it as gibberish. You get nonsense letters in the hidden text layer. Ctrl+F technically "finds" words but they are not real.</p>
-    <p>The fix: rotate the page back to normal before OCR. Most quality OCR tools do this automatically. Most free tools do not. (Our deeper post on <a href="/resources/blogs/document-detection-before-ocr">document detection</a> explains why rotation correction is the single biggest accuracy win in OCR.)</p>
+    <p>The fix: rotate the page back to normal before OCR. Most quality OCR tools do this automatically. Most free tools do not. (Our deeper post on <a href="/resources/blogs/document-detection-before-ocr">document detection</a> explains why rotation correction is the single biggest accuracy win in OCR. We also measured which rotations fail and which fixes work in <a href="/resources/blogs/ocr-upside-down-sideways-pages">OCR on upside-down and sideways pages</a>.)</p>
 
     <h3>Trap 2: The Document Has Two Columns</h3>
     <p>Legal papers, school textbooks, newspapers, and academic articles often have two columns. Naive OCR reads top-to-bottom, left-to-right. So it reads line 1 of column 1, then line 1 of column 2, then line 2 of column 1, and the meaning is destroyed.</p>
@@ -138,8 +138,8 @@ ocrmypdf scanned.pdf searchable.pdf</code></pre>
   category: "OCR How-To",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-10-08T00:00:00.000Z",
-  last_updated: "October 8, 2026",
+  dateModified: "2026-11-08T00:00:00.000Z",
+  last_updated: "November 8, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "make pdf searchable",

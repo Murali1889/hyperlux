@@ -36,7 +36,7 @@ ocrmypdf scanned.pdf searchable.pdf</code></pre>
       <li>100 pages: about 90 seconds</li>
       <li>1,000 pages: about 18 minutes</li>
     </ul>
-    <p>Add <code>--deskew</code> and <code>--rotate-pages</code> flags if your scan has tilted or sideways pages. Both are cheap and recover real accuracy. (<a href="/resources/blogs/document-detection-before-ocr">More on this in our document detection piece</a>.)</p>
+    <p>Add <code>--deskew</code> and <code>--rotate-pages</code> flags if your scan has tilted or sideways pages. Both are cheap and recover real accuracy. (<a href="/resources/blogs/document-detection-before-ocr">More on this in our document detection piece</a>. For measured results on sideways and upside-down pages, see <a href="/resources/blogs/ocr-upside-down-sideways-pages">what fixes rotated pages before OCR</a>.)</p>
 
     <h3>Mac Way 3: DocsAPI Dashboard (Fastest, Cloud-Based)</h3>
     <p>If your document is not sensitive and you want speed, drag-and-drop into the <a href="/products">DocsAPI dashboard</a>. Upload, wait 30 seconds, download. Works in any browser. No install. The layout stays perfect, signatures, stamps, tables, all in the same spots.</p>
@@ -128,8 +128,8 @@ done</code></pre>
   category: "OCR How-To",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-06-17T00:00:00.000Z",
-  last_updated: "June 17, 2026",
+  dateModified: "2026-11-08T00:00:00.000Z",
+  last_updated: "November 8, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "how do i make a searchable pdf document",
