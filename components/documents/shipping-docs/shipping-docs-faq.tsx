@@ -5,6 +5,11 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 export default function ShippingDocsFaq() {
   const faqs = [
     {
+      question: "What does an OCR API capture from a packing list?",
+      answer:
+        "It reads the item descriptions, quantities, weights, dimensions and packaging details on a packing list and returns them as structured JSON, with unclear fields flagged for review. The data can then be used to match received items against the list for faster inventory updates and reconciliation.",
+    },
+    {
       question: "How do you handle handwritten signatures and annotations?",
       answer:
         "Our OCR technology uses advanced AI specifically trained on handwritten content in shipping documents. For signatures, we capture both the image and position data for verification purposes. For handwritten annotations, we extract the text while preserving its location context on the document, allowing for accurate interpretation of margin notes, special delivery instructions, and other manual additions.",

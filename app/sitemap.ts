@@ -34,7 +34,7 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Metadata
   { path: "/documents/identity-docs/national-ids", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-10-06" },
   { path: "/documents/legal-docs", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-10-06" },
   { path: "/documents/medical-docs", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-10-06" },
-  { path: "/documents/shipping-docs", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-10-06" },
+  { path: "/documents/shipping-docs", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-11-08" },
   { path: "/resources", priority: 0.7, changeFrequency: "weekly", lastModified: "2026-10-06" },
   { path: "/resources/blogs", priority: 0.8, changeFrequency: "weekly", lastModified: "2026-08-08" },
   { path: "/tools/which-ocr", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-08" },
