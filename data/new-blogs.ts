@@ -43,6 +43,7 @@ import { blog40 } from "./new-blogs/40-convert-fax-tiff-jpg-png-to-text"
 import { blog41 } from "./new-blogs/41-what-is-zonal-ocr"
 import { blog42 } from "./new-blogs/42-multilingual-ocr-guide"
 import { blog43 } from "./new-blogs/43-ocr-upside-down-sideways-pages"
+import { blog44 } from "./new-blogs/44-ocr-stamps-watermarks-highlighter"
 
 // Invoice/AP-OCR cluster (topic 1 of 3, 21 posts) — see
 // docs/superpowers/specs/2026-08-07-invoice-ap-ocr-cluster-design.md
@@ -233,6 +234,7 @@ export const newBlogs: BlogPost[] = [
   blog41,
   blog42,
   blog43,
+  blog44,
   blogAp01,
   blogAp02,
   blogAp03,

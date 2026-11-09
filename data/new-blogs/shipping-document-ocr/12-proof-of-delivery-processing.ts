@@ -30,7 +30,7 @@ export const blogSd12: BlogPost = {
         <tr><th>Match signal</th><th>Typical source format</th><th>Reliability as a standalone key</th><th>Common failure mode</th></tr>
       </thead>
       <tbody>
-        <tr><td>PRO / BOL / load number</td><td>Handwritten, stamped, or driver-app selected</td><td>High when clean, but the single most error-prone field on the document</td><td>Digit transposition or substitution from handwriting or low-res scans</td></tr>
+        <tr><td>PRO / BOL / load number</td><td>Handwritten, stamped, or driver-app selected</td><td>High when clean, but the single most error-prone field on the document</td><td>Digit transposition or substitution from handwriting or low-res scans; a stamp over the number is another cause (see <a href="/resources/blogs/ocr-stamps-watermarks-highlighter">how stamps affect OCR</a>)</td></tr>
         <tr><td>Delivery date</td><td>Printed timestamp or handwritten date</td><td>Moderate; narrows candidates to a single day</td><td>Handwritten dates default to the wrong month near month boundaries</td></tr>
         <tr><td>Weight or piece count</td><td>Carried over from the BOL, sometimes re-keyed by the driver</td><td>Moderate; strong when it matches exactly, weak on its own</td><td>Partial deliveries or re-weighed loads legitimately differ from the BOL</td></tr>
         <tr><td>Origin / destination pair</td><td>Printed address block or zip code</td><td>Low alone, since many shipments share a lane</td><td>Multi-stop routes share destination with several other loads that day</td></tr>
@@ -100,8 +100,8 @@ export const blogSd12: BlogPost = {
   category: "Logistics",
   date: "September 10, 2026",
   datePublished: "2026-09-10T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-11-09T00:00:00.000Z",
+  last_updated: "November 9, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "proof of delivery processing",

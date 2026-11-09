@@ -48,7 +48,7 @@ export const post: BlogPost = {
 
     <ul>
       <li>Look-alike digits. 3 and 8, 0 and 7, 1 and 8. Check digits catch most swaps, not all.</li>
-      <li>Meaning and matching, not text. "To order of" wording, a nonnegotiable stamp or a signed certificate can be read perfectly and still be judged wrong, and a delivery receipt can be read correctly and still fail to join to its shipment.</li>
+      <li>Meaning and matching, not text. "To order of" wording, a nonnegotiable stamp or a signed certificate can be read perfectly and still be judged wrong, and a delivery receipt can be read correctly and still fail to join to its shipment. Stamps over the text are a reading problem too, and we measured them in <a href="/resources/blogs/ocr-stamps-watermarks-highlighter">OCR with stamps, watermarks and highlighter</a>.</li>
       <li>Handwriting and phone photos. Our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a> measured character accuracy on handwritten forms at 61% (Tesseract), 73% (PaddleOCR) and 78% (DocsAPI, our product), and on phone-photographed receipts at 58%, 82% and 76%. It had no shipping documents, so read these as stand-ins.</li>
     </ul>
 
@@ -177,8 +177,8 @@ for s in ("5871748", "5871798", "5878748"):
   category: "Logistics",
   date: "October 5, 2026",
   datePublished: "2026-10-05T00:00:00.000Z",
-  dateModified: "2026-10-05T00:00:00.000Z",
-  last_updated: "October 5, 2026",
+  dateModified: "2026-11-09T00:00:00.000Z",
+  last_updated: "November 9, 2026",
   readTime: "13 min read",
   author: nupuraUghade,
   primary_keyword: "OCR for logistics",
