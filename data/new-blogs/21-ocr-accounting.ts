@@ -124,14 +124,15 @@ export const blog21: BlogPost = {
     <p>If you process 1,000+ invoices/month: do not waste time evaluating. The payback is fast enough that even an imperfect first pick is cheaper than not starting. Pick an API with classification + extraction + validation in one product. Start with invoices, expand to receipts and bank statements within 90 days. (<a href="/author/nupura-ughade">I write about these rollout patterns often.</a>)</p>
 
     <p>Related guides: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a> and <a href="/resources/blogs/ocr-integration-with-accounting-crm-erp">how to connect OCR to accounting, CRM and ERP systems</a>.</p>
+    <p>For a field level view of receipt capture, including what a subtotal plus tax check catches, see <a href="/resources/blogs/ocr-apis-the-secret-weapon-smart-finance-teams-are-using-right-now">why 95% OCR accuracy is not enough</a>.</p>
   `,
   image: "/images/ocr-in-finance.png",
   featuredImage: "/images/ocr-in-finance.png",
   category: "Industry Trends",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  dateModified: "2026-11-10T00:00:00.000Z",
+  last_updated: "November 10, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "ocr accounting",

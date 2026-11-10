@@ -66,14 +66,15 @@ export const blogBl13: BlogPost = {
     <p>The DTI formula has not changed in decades and is not the part worth spending engineering effort on. The debt classification feeding into it, what counts, what can be documented away, and what depends on a judgment call rather than a fixed threshold, is where the real accuracy work lives, and it is exactly the layer most DTI-focused content skips on the way to explaining the division. A precise answer to the wrong question is still the wrong answer, however cleanly it was computed. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
 
     <p>Related guide: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a>.</p>
+    <p>Income and debt figures taken from statements are only as good as the extraction. <a href="/resources/blogs/revolutionizing-finance-how-automated-bank-statement-analysis-transforms-lending-decisions">Automated bank statement analysis</a> shows a balance check that caught every bad statement in our test of 600.</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",
   category: "Lending",
   date: "August 20, 2026",
   datePublished: "2026-08-20T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-11-10T00:00:00.000Z",
+  last_updated: "November 10, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "dti calculation ocr",

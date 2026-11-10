@@ -72,14 +72,15 @@ export const blogBl01: BlogPost = {
     <p>None of these three checks are individually complicated. Running all three together, consistently, and routing the results by confidence rather than a flat pass/fail is the part that actually makes the difference between a real verification process and a box someone checks once and quietly forgets about. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
 
     <p>Related guides: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a> and <a href="/resources/blogs/ocr-for-tax-documents">OCR for tax documents</a>.</p>
+    <p>Matching the employee on a pay stub to the account holder on a bank statement is a step of its own, and we tested how to do it without accepting the wrong person in <a href="/resources/blogs/transforming-financial-services-the-complete-guide-to-document-automation">document automation for financial services</a>.</p>
   `,
   image: "/images/ocr-bank-statement-technology.png",
   featuredImage: "/images/ocr-bank-statement-technology.png",
   category: "Lending",
   date: "August 16, 2026",
   datePublished: "2026-08-16T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-11-10T00:00:00.000Z",
+  last_updated: "November 10, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "income verification api",

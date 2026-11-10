@@ -68,14 +68,15 @@ export const blogBl19: BlogPost = {
     <p>The legal requirement, give applicants the real reason, is not new or complicated to state. What is genuinely easy to get wrong, quietly and at scale, is building a compliance pipeline that generates a plausible-sounding, well-formatted explanation from a model that was never actually the one making the decision, one that clears every internal review precisely because nobody thought to check it against the model that actually decided the case. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
 
     <p>Related guide: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a>.</p>
+    <p>A flag with a stated reason, such as a house number that differs between documents, is easier to review and document than a bare low confidence score. See <a href="/resources/blogs/transforming-financial-services-the-complete-guide-to-document-automation">document automation for financial services, tested</a>.</p>
   `,
   image: "/images/legal-document-automation.png",
   featuredImage: "/images/legal-document-automation.png",
   category: "Lending",
   date: "August 22, 2026",
   datePublished: "2026-08-22T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-11-10T00:00:00.000Z",
+  last_updated: "November 10, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "ecoa compliance document ocr",

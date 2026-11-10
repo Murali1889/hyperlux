@@ -142,14 +142,15 @@ print("rows where the running balance does not match:", problems)</code></pre>
       <li>Unstructured: license and description from the <a href="https://github.com/Unstructured-IO/unstructured" target="_blank" rel="noopener">Unstructured GitHub repository</a>.</li>
       <li>Our Docling test: run September 28, 2026 as described above, on a synthetic statement, so it shows behavior, not an accuracy rate. Benchmark numbers come from our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>. Textract prices from AWS's public price list.</li>
     </ul>
+    <p>Open source engines make you choose layout settings. We measured what a wrong choice costs, up to 64% error on two column pages, in <a href="/resources/blogs/optical-character-reader-2026">optical character reader settings</a>.</p>
   `,
   image: "/images/idp-vs-ocr.png",
   featuredImage: "/images/idp-vs-ocr.png",
   category: "AI Document Intelligence",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-10-12T00:00:00.000Z",
-  last_updated: "October 12, 2026",
+  dateModified: "2026-11-10T00:00:00.000Z",
+  last_updated: "November 10, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "docling",

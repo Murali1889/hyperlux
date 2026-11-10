@@ -112,31 +112,52 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
   },
 
   "ocr-apis-the-secret-weapon-smart-finance-teams-are-using-right-now": {
+    summary:
+      "In Tesseract 5.5.2 tests on 300 synthetic receipts under six capture conditions, character error of 4.4% to 6.4% on phone, faded and crumpled receipts still meant only 42%, 32% and 68% of receipts had merchant, date, tax and total all right. Shadow was the worst (52.4% character error, 12% fully right); a lighting correction script raised that to 68% fully right and 7.5% error. Most failures were missing fields (317 of 900 fields) rather than wrong ones (18). The confidence score caught about half of the wrong values, and a subtotal plus tax check caught every wrong total. Includes a test plan for any OCR API.",
     description:
-      "Why finance teams are quietly ripping out manual data entry and what an OCR API actually does (without the jargon).",
+      "We read 300 receipts under six capture conditions. Character error was 4% to 6%, but only 32% to 68% of receipts were fully right. See why and how to test an OCR API.",
     primary_keyword: "ocr api",
-    secondary_keywords: [
-      "ocr api integration",
-      "receipt ocr api",
-      "invoice ocr api",
-      "finance ocr",
-      "document api",
-    ],
+    secondary_keywords: ["receipt ocr api", "receipt ocr accuracy", "ocr api accuracy", "how to test an ocr api", "expense receipt ocr"],
     datePublished: "2025-05-12T00:00:00.000Z",
-    dateModified: DATE_MODIFIED,
-    last_updated: LAST_UPDATED,
-    tags: ["OCR API", "finance", "automation", "developer"],
+    dateModified: "2026-11-10T00:00:00.000Z",
+    last_updated: "November 10, 2026",
+    tags: ["OCR API", "receipts", "finance", "accuracy"],
     cluster: "ocr",
     faq: [
       {
         question: "What is an OCR API?",
         answer:
-          "An OCR API is an HTTP endpoint you call with an image or PDF, and it returns structured text, usually as JSON. It hides the OCR engine, pre-processing, and post-correction behind a single request so your app doesn't need to manage models.",
+          "An OCR API is an HTTP endpoint you send an image or PDF to, and it returns the text, often with word positions and confidence scores, and sometimes named fields. Finance teams use it to replace typing receipts and invoices into expense reports and ledgers.",
       },
       {
-        question: "How much does an OCR API cost?",
+        question: "What accuracy should I expect from OCR on receipts?",
         answer:
-          "Most production APIs price per page or per document. Expect $0.001-$0.02 per page for plain OCR, $0.02-$0.10 per document for structured extraction with classification. Volume discounts apply above 100K pages/month.",
+          "It depends on the capture. In our Tesseract test, a flat scan scored 0.2% character error and 100% of receipts fully right. A phone photo scored 6.4% error and 42% fully right, a faded receipt 4.4% and 32%, and a shadow 52.4% and 12%.",
+      },
+      {
+        question: "Why is character accuracy misleading for receipts?",
+        answer:
+          "Because the fields that matter are a small part of the page and mostly digits, and one wrong digit makes a whole field wrong. A page can be 94% to 96% right by character while only 32% to 68% of receipts have every field right.",
+      },
+      {
+        question: "What hurts receipt OCR the most?",
+        answer:
+          "In our test, shadows (52.4% character error) and combinations of shadow, fade and a phone angle (66.4%). Fade mostly hurt the small digits: the total was right 64% of the time and the tax 50%, while the large merchant name stayed at 100%.",
+      },
+      {
+        question: "Does correcting the lighting before OCR help?",
+        answer:
+          "For shadows, yes: receipts with all four fields right went from 12% to 68%. It barely changed phone angle, fade or crumpled receipts, because it fixes uneven brightness, not perspective, contrast or bent lines. We only tested synthetic receipts.",
+      },
+      {
+        question: "How do I test an OCR API before buying?",
+        answer:
+          "Use 100 of your own receipts or invoices, type the answer key once, and report character accuracy, accuracy for each field and the share of documents with every field right. Count missing and wrong fields separately, and check how well the confidence score and a subtotal plus tax check catch the wrong ones.",
+      },
+      {
+        question: "Do confidence scores catch OCR errors?",
+        answer:
+          "Partly. Flagging fields with a word confidence below 90 caught 12 of 18 wrong values on the raw read and 10 of 23 after lighting correction, and flagged 8% and 6% of correct fields. A subtotal plus tax equals total check caught every wrong total.",
       },
     ],
   },
@@ -323,26 +344,52 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
   },
 
   "transforming-financial-services-the-complete-guide-to-document-automation": {
+    summary:
+      "In Tesseract 5.5.2 tests on 570 pairs of generated documents (1,140 pages), exact comparison accepted 0 of 300 true matches because formats differ. Fuzzy matching at 0.90 accepted all 300 true matches and all 90 pairs that differed by one house number digit; at 0.85 it also accepted 72 of 90 household members. A field rule (house number and ZIP exact, name and street words fuzzy) accepted 300 of 300 true matches and 0 of 270 mismatches. Includes the tested script and a checklist that links the measured results across the document automation series.",
     description:
-      "Document automation in financial services, the real benchmarks, the regulated edge cases, and how to start without breaking compliance.",
-    primary_keyword: "document automation financial services",
-    secondary_keywords: [
-      "financial document automation",
-      "banking ocr",
-      "fintech ocr",
-      "loan document automation",
-      "compliance automation",
-    ],
+      "We tested name and address matching on 570 document pairs. Exact match rejected every true pair, fuzzy 0.90 accepted every wrong house number. A field rule fixed both.",
+    primary_keyword: "document automation for financial services",
+    secondary_keywords: ["financial services document automation", "name and address matching", "cross document verification", "kyc document matching", "fuzzy matching false accept"],
     datePublished: "2025-06-09T00:00:00.000Z",
-    dateModified: DATE_MODIFIED,
-    last_updated: LAST_UPDATED,
-    tags: ["financial services", "document automation", "compliance"],
+    dateModified: "2026-11-10T00:00:00.000Z",
+    last_updated: "November 10, 2026",
+    tags: ["document automation", "financial services", "KYC", "verification"],
     cluster: "industry-trends",
     faq: [
       {
-        question: "Is document automation compliant with KYC/AML rules?",
+        question: "What is document automation for financial services?",
         answer:
-          "Yes, when implemented with audit trails, encrypted storage, role-based access, and verifiable extraction logs. The compliance burden actually shrinks because every decision is logged.",
+          "It is a pipeline that captures documents such as statements, pay stubs, IDs and invoices, classifies them, extracts their fields, verifies them and routes the result to a decision system or a person. Most losses happen in the verification and routing steps, not in the reading.",
+      },
+      {
+        question: "Why can't I match names and addresses with an exact comparison?",
+        answer:
+          "Because each document prints the same identity differently, for example SMITH, JOHN A and John A. Smith, or AVE and Avenue. In our test, exact comparison accepted 0 of 300 true matches, even on clean pages.",
+      },
+      {
+        question: "Is fuzzy matching safe for KYC and lending?",
+        answer:
+          "Not on its own. A fuzzy similarity of 0.90 accepted all 90 pairs where only one house number digit differed, and 0.85 also accepted 72 of 90 pairs where a different person lived at the same address.",
+      },
+      {
+        question: "How should numbers such as house numbers and ZIP codes be matched?",
+        answer:
+          "Exactly. In our test, requiring the house number and ZIP to match exactly and allowing the name and street words a similarity of 0.85 accepted 300 of 300 true matches and 0 of 270 mismatches.",
+      },
+      {
+        question: "What should an automated lending flow check?",
+        answer:
+          "Read the page in the right layout, keep the sign on amounts, check fields rather than characters, match identity by field, verify authenticity separately, and send doubtful items to a person with the reason. Each step is measured in our guides.",
+      },
+      {
+        question: "What does this test not cover?",
+        answer:
+          "It uses synthetic English documents with two layouts, a five digit ZIP and numeric house numbers. It does not cover nicknames, maiden names, transliterated names, ID cards or business names, and the rough scan level produced no digit errors in house numbers or ZIP codes.",
+      },
+      {
+        question: "What security and access terms does DocsAPI have?",
+        answer:
+          "DocsAPI was built by HyperVerge. It is SOC 2 Type II and ISO 27001 compliant, HIPAA eligible with a business associate agreement, does not train on customer documents, and has configurable retention with a short default. Access starts with a demo and then a free 30 day trial for qualified lenders.",
       },
     ],
   },
@@ -394,26 +441,52 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
   },
 
   "revolutionizing-finance-how-automated-bank-statement-analysis-transforms-lending-decisions": {
+    summary:
+      "In Tesseract 5.5.2 tests on 600 synthetic bank statements (7,056 rows, five sign formats, three scan qualities), 46 of the 50 wrong rows had a wrong sign and only 5 had a wrong amount. The minus sign format lost the sign on rough copies (372 of 408 rows right, 10 of 34 statements fully right), while brackets, CR and DR suffixes and separate debit and credit columns held up. A wrong sign moves net cash flow by twice the amount: the average error on bad statements was $6,455.83 against an average absolute net flow of $2,507.64. A signed running balance check flagged all 46 bad statements and 17 of 554 good ones. Includes the tested check.",
     description:
-      "Automated bank statement analysis is changing underwriting, here's what lenders actually extract, validate, and decide on.",
+      "In 600 statements, 46 of 50 wrong rows were lost signs, not wrong digits. See which formats fail, what it does to cash flow, and a check that caught all 46.",
     primary_keyword: "automated bank statement analysis",
-    secondary_keywords: [
-      "bank statement analysis",
-      "lending automation",
-      "ai underwriting",
-      "loan automation",
-      "cash flow analysis",
-    ],
+    secondary_keywords: ["bank statement analysis", "bank statement ocr", "bank statement sign convention", "running balance check", "cash flow analysis from bank statements"],
     datePublished: "2025-06-18T00:00:00.000Z",
-    dateModified: "2026-07-12T00:00:00.000Z",
-    last_updated: "July 12, 2026",
-    tags: ["lending", "bank statements", "underwriting", "AI"],
+    dateModified: "2026-11-10T00:00:00.000Z",
+    last_updated: "November 10, 2026",
+    tags: ["bank statements", "OCR", "lending", "verification"],
     cluster: "industry-trends",
     faq: [
       {
-        question: "Can automated bank statement analysis replace human underwriters?",
+        question: "What is automated bank statement analysis?",
         answer:
-          "For straight-through approvals on standard products, yes, for the data extraction and rule-based checks. Human underwriters still review exceptions and judgment calls. Automation handles 60-80% of files end-to-end at most lenders running it well.",
+          "It is a pipeline that reads a statement into dated, signed transaction rows, checks that the rows add up, and then computes figures such as deposits, average balance and overdraft counts. Extraction errors carry straight into those figures, so the verification step matters as much as the reading.",
+      },
+      {
+        question: "Which bank statement format loses the minus sign?",
+        answer:
+          "On a rough copy (rotated, halved in size, blurred and compressed), the leading minus format scored 372 of 408 rows right, and only 10 of 34 statements were fully right. Brackets had no errors in 1,428 rows, and CR or DR suffixes and separate debit and credit columns each had one error. We saw the minus dropped or read as a tilde.",
+      },
+      {
+        question: "Does OCR get digits or signs wrong more often on bank statements?",
+        answer:
+          "Signs, in our test. Across 7,056 rows, 46 had a wrong sign and 5 had a wrong amount. A parser that reads the amount correctly can still report a debit as a credit.",
+      },
+      {
+        question: "Why does a wrong sign matter so much?",
+        answer:
+          "A debit read as a credit changes net cash flow by twice the amount. On the statements with an error, the average error in net cash flow was $6,455.83, compared with an average absolute net cash flow of $2,507.64 across all statements. The amounts were generated, so treat the dollar figures as a guide.",
+      },
+      {
+        question: "How do you check a bank statement extraction?",
+        answer:
+          "Check that each row's balance equals the previous balance plus its signed amount, and that the opening balance plus all signed amounts equals the closing balance. This flagged all 46 bad statements in our test. A check that only compares the size of the balance change cannot see a sign error.",
+      },
+      {
+        question: "Can the balance check give false alarms?",
+        answer:
+          "Yes. It flagged 17 of 554 fully correct statements (3.1%), usually because a balance was misread. That costs a human look. Statements with no running balance column remove the strongest check, and we did not test them.",
+      },
+      {
+        question: "How accurate is DocsAPI on bank statements?",
+        answer:
+          "On its own 2026 benchmark of 1,700 documents, DocsAPI scored 91% on multi-page bank statements, where the other engines tested scored 64% to 79%. That benchmark is separate from the Tesseract tests in this guide.",
       },
     ],
   },

@@ -91,14 +91,15 @@ export const blog32: BlogPost = {
     <h2>What I'd do today</h2>
 
     <p>For an enterprise under 5M documents/month with standard document types: buy a full-stack IDP platform and negotiate hard on the professional-services line items, which is where enterprise IDP vendors make their margin. For 5M+ documents/month or unusual document types, build the hybrid: builder OCR API for extraction, your own orchestration and governance layer, point solutions for specialized workflows. Either way, score vendors on the four enterprise requirements (volume, compliance, integration, governance) before accuracy, and run a pilot that stresses all four. Accuracy is table stakes at the enterprise tier; the four requirements are what actually determine success. (For the broader finance-vertical context, see our <a href="/resources/blogs/ocr-finance">OCR in finance pillar</a>. For the OCR-vs-IDP distinction, our <a href="/resources/blogs/idp-vs-ocr-understanding-the-key-differences-for-automation-success">IDP vs OCR guide</a>. For document classification specifically, our <a href="/resources/blogs/document-classification-software">document classification software guide</a>. <a href="/author/nupura-ughade">More on enterprise document architecture decisions</a>.)</p>
+    <p>Mixed layouts are where a single page setting fails. See the test of eight Tesseract page modes on nine layouts in <a href="/resources/blogs/optical-character-reader-2026">optical character reader settings</a>.</p>
   `,
   image: "/images/intelligent-document-processing.png",
   featuredImage: "/images/intelligent-document-processing.png",
   category: "AI Document Intelligence",
   date: "July 16, 2026",
   datePublished: "2026-07-16T00:00:00.000Z",
-  dateModified: "2026-10-29T00:00:00.000Z",
-  last_updated: "October 29, 2026",
+  dateModified: "2026-11-10T00:00:00.000Z",
+  last_updated: "November 10, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "enterprise document ocr",

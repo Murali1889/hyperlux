@@ -69,14 +69,15 @@ export const blogBl14: BlogPost = {
     <p>Cash flow underwriting is a genuinely better signal than a lagging credit report in many cases, but only when the metrics behind that claim are actually defined, calculated, and built on correctly categorized transaction data. A general description of "using bank data" without naming the formulas is not a methodology, it is a category, and the difference between the two is exactly what determines whether the resulting decision is trustworthy or simply looks sophisticated because it draws on a richer data source than a credit report while quietly making the same kind of averaging mistake a simpler model would have made anyway. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
 
     <p>Related guides: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a> and <a href="/resources/blogs/ocr-bank-statement-technology-revolutionizing-financial-data-processing">OCR for bank statements, checks and utility bills</a> and <a href="/resources/blogs/smb-lending-automation-document-processing">SMB lending automation tools for document processing</a>.</p>
+    <p>Cash flow figures inherit every sign error from extraction. In our test, a statement with an error had an average net cash flow error of $6,455.83, which is covered in <a href="/resources/blogs/revolutionizing-finance-how-automated-bank-statement-analysis-transforms-lending-decisions">where bank statement OCR loses the sign</a>.</p>
   `,
   image: "/images/ocr-process.png",
   featuredImage: "/images/ocr-process.png",
   category: "Lending",
   date: "August 20, 2026",
   datePublished: "2026-08-20T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  dateModified: "2026-11-10T00:00:00.000Z",
+  last_updated: "November 10, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "cash flow underwriting ocr",

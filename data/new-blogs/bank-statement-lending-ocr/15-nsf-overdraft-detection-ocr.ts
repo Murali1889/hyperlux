@@ -64,14 +64,15 @@ export const blogBl15: BlogPost = {
     <p>Counting fee line items is the easy, visible half of NSF and overdraft detection. The harder, more accurate half requires reconstructing what the account balance actually was at each transaction moment and recognizing the transfers that quietly kept it from going negative, and it is exactly the layer that determines whether a frequency threshold is measuring real financial behavior or just which applicants happen to have overdraft protection enabled on their specific account. Two applicants who behave identically in every way that matters to a lender can end up on opposite sides of a decline threshold purely because one bank's product happened to intervene before a fee ever printed on the statement, which is not a distinction any underwriting policy actually intends to make. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
 
     <p>Related guides: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a> and <a href="/resources/blogs/ocr-bank-statement-technology-revolutionizing-financial-data-processing">OCR for bank statements, checks and utility bills</a>.</p>
+    <p>One extraction risk matters especially here: a debit read as a credit hides an overdraft. We measured how often that happens and which statement formats lose the sign in <a href="/resources/blogs/revolutionizing-finance-how-automated-bank-statement-analysis-transforms-lending-decisions">automated bank statement analysis</a>.</p>
   `,
   image: "/images/ocr-bank-statement-technology.png",
   featuredImage: "/images/ocr-bank-statement-technology.png",
   category: "Lending",
   date: "August 20, 2026",
   datePublished: "2026-08-20T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-11-10T00:00:00.000Z",
+  last_updated: "November 10, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "nsf overdraft detection ocr",

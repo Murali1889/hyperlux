@@ -133,14 +133,15 @@ export const blog30: BlogPost = {
       <li>NetSuite Bill Capture limits: Oracle's <a href="https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article_0417034348.html" target="_blank" rel="noopener">Bill Capture considerations</a>.</li>
       <li>Accuracy numbers: our <a href="/resources/blogs/ocr-accuracy-benchmark-2026">2026 OCR accuracy benchmark</a>. The cost model uses example inputs, labeled as such; replace them with your own.</li>
     </ul>
+    <p>Character accuracy can hide how many documents still need a person. In our receipt test, 94% to 96% character accuracy left only 32% to 68% of receipts fully right, and we explain how to test for it in <a href="/resources/blogs/ocr-apis-the-secret-weapon-smart-finance-teams-are-using-right-now">OCR API for receipts</a>.</p>
   `,
   image: "/images/invoice-processing.png",
   featuredImage: "/images/invoice-processing.png",
   category: "AI Document Intelligence",
   date: "July 1, 2026",
   datePublished: "2026-07-01T00:00:00.000Z",
-  dateModified: "2026-10-28T00:00:00.000Z",
-  last_updated: "October 14, 2026",
+  dateModified: "2026-11-10T00:00:00.000Z",
+  last_updated: "November 10, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "accounts payable ocr",

@@ -82,14 +82,15 @@ export const blog33: BlogPost = {
     <p>If you're a legal team with a large contract portfolio and no clause database: start with a dedicated contract-AI platform (Kira, Evisort). The turn-key extraction plus CLM is worth it, and legal-specific tools handle clause language better out of the box. If you're a builder integrating contract intake into an existing system: use an OCR API (DocsAPI, Textract) for extraction and build the clause-normalization layer on top, ideally with an LLM for the language-understanding step. Either way, start with the renewal date. Extracting renewal and termination deadlines across your portfolio prevents the single most expensive contract mistake (the unwanted auto-renewal) and usually pays for the whole project on its own. (<a href="/author/nupura-ughade">More on document extraction architecture</a>.)</p>
 
     <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
+    <p>Contracts often use two columns, which every full page Tesseract mode read in the wrong order in our test until the columns were split. See <a href="/resources/blogs/optical-character-reader-2026">optical character reader settings</a>.</p>
   `,
   image: "/images/legal-document-automation.png",
   featuredImage: "/images/legal-document-automation.png",
   category: "AI Document Intelligence",
   date: "July 16, 2026",
   datePublished: "2026-07-16T00:00:00.000Z",
-  dateModified: "2026-09-28T00:00:00.000Z",
-  last_updated: "September 28, 2026",
+  dateModified: "2026-11-10T00:00:00.000Z",
+  last_updated: "November 10, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "contract ocr",
