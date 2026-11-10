@@ -90,14 +90,15 @@ export const blogLd19: BlogPost = {
     <p>None of this argues that title examination should stay entirely manual. Chasing a chain of title by hand through decades of grantor-grantee index entries does not scale any better than manual contract review does, and a properly built reconciliation pipeline can surface discrepancies, like a mismatched name or a stale exception, faster and more consistently than an examiner working under deadline pressure across a high volume of files. It is a reason to be specific about what "title document OCR" actually means before trusting it with anything that touches insurability, and to ask a vendor to show reconciliation logic, not just transcription accuracy. For the closing side of this same workflow, particularly how remote and electronic notarization documents get verified before recording, our coverage of <a href="/resources/blogs/remote-online-notarization-verification">remote online notarization verification</a> covers an adjacent piece of the same closing package, and our piece on <a href="/resources/blogs/due-diligence-data-room-software">due diligence data room software</a> covers the same document-classification discipline applied to a commercial real estate or M&amp;A transaction rather than a residential title chain. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
 
     <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
+    <p>Old scans with uneven lighting are the case where a background correction step took error from 45.1% to 0.1% in our test. See <a href="/resources/blogs/ocr-image-preprocessing-what-helps-what-hurts">which OCR preprocessing steps help and which hurt</a> before adding a cleanup stage.</p>
   `,
   image: "/images/ocr-accuracy.png",
   featuredImage: "/images/ocr-accuracy.png",
   category: "Legal",
   date: "September 17, 2026",
   datePublished: "2026-09-17T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-11-10T00:00:00.000Z",
+  last_updated: "November 10, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "title document ocr",

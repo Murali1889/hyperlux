@@ -78,14 +78,15 @@ export const blogLd12: BlogPost = {
     <p>None of this argues that transcript extraction should stay manual. A litigation team manually retyping or hand-verifying every page:line citation across a multi-day deposition does not scale any better than manual contract review does, and is not obviously more accurate than a properly validated pipeline. It is a reason to be specific about what "OCR" means for a transcript before trusting its citations, and to test a vendor's claims against a messy real page rather than a clean one. For the broader mechanics of getting structured data out of legal filings more generally, our <a href="/resources/blogs/contract-ocr">contract OCR overview</a> covers the extraction layer this fits into, and our coverage of <a href="/documents/legal-docs">chain of custody documentation</a> touches the same underlying problem, that a document's evidentiary value depends on preserving structure exactly, not just extracting readable text. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
 
     <p>Related guide: <a href="/resources/blogs/ocr-for-legal-documents">OCR for legal documents</a>.</p>
+    <p>Before adding a cleanup stage to a transcript scanning pipeline, check whether the pages need one. We measured 12 steps on 14 image problems in <a href="/resources/blogs/ocr-image-preprocessing-what-helps-what-hurts">OCR preprocessing</a>.</p>
   `,
   image: "/images/revolutionizing-finance.png",
   featuredImage: "/images/revolutionizing-finance.png",
   category: "Legal",
   date: "September 10, 2026",
   datePublished: "2026-09-10T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-11-10T00:00:00.000Z",
+  last_updated: "November 10, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "deposition transcript ocr",

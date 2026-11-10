@@ -143,14 +143,15 @@ export const blog13: BlogPost = {
     <p>Once you decide OCR is the right layer for the bulk, our free <a href="/tools/which-ocr">OCR selector tool</a> helps you pick the engine: six questions on your document type, quality, and volume, mapped to the tools that won those categories in our benchmark.</p>
 
     <p>Related guide: <a href="/resources/blogs/how-to-measure-ocr-accuracy">how to measure OCR accuracy</a>.</p>
+    <p>Classic engines react to noise and tiny text in specific ways, and a fixed cleanup pipeline did not beat doing nothing in our test. The numbers are in <a href="/resources/blogs/ocr-image-preprocessing-what-helps-what-hurts">OCR preprocessing</a>.</p>
   `,
   image: "/images/idp-vs-ocr.png",
   featuredImage: "/images/idp-vs-ocr.png",
   category: "AI Document Intelligence",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-10-29T00:00:00.000Z",
-  last_updated: "October 29, 2026",
+  dateModified: "2026-11-10T00:00:00.000Z",
+  last_updated: "November 10, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "vlm",

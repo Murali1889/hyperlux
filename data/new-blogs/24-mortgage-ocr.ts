@@ -89,14 +89,15 @@ saving per file       = manual cost - OCR cost</code></pre>
       <li>Ask for the vendor's own per-type numbers on business returns and appraisals. A vendor who cannot give them has not measured them.</li>
     </ol>
     <p>For more on judging OCR claims, see the <a href="/resources/blogs/ocr-pdf-honest-guide">honest guide to OCR</a>. The wider context is in <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a> and <a href="/resources/blogs/transforming-financial-services-the-complete-guide-to-document-automation">financial services document automation</a>. For the foundations, see the <a href="/resources/blogs/optical-character-reader-2026">optical character reader guide</a> and, for the regulatory side, <a href="/resources/blogs/ocr-technology-in-banking">OCR in banking</a>.</p>
+    <p>Loan packets arrive as scans of mixed quality. For which cleanup steps are worth running and which make results worse, see <a href="/resources/blogs/ocr-image-preprocessing-what-helps-what-hurts">OCR preprocessing: which steps help and which hurt</a>.</p>
   `,
   image: "/images/transforming-financial-services.png",
   featuredImage: "/images/transforming-financial-services.png",
   category: "Industry Trends",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-10-29T00:00:00.000Z",
-  last_updated: "October 29, 2026",
+  dateModified: "2026-11-10T00:00:00.000Z",
+  last_updated: "November 10, 2026",
   readTime: "8 min read",
   author: nupuraUghade,
   primary_keyword: "mortgage ocr",
