@@ -25,6 +25,13 @@ const nextConfig = {
         destination: "/resources/blogs/ocr-finance",
         permanent: true,
       },
+      {
+        // Consolidated: "OCR meaning in finance" split the same queries (ocr finance, ocr accounting,
+        // ocr in finance) with the pillar guide at avg positions 85+ vs 50 to 80. Folded into ocr-finance.
+        source: "/resources/blogs/ocr-meaning-in-finance",
+        destination: "/resources/blogs/ocr-finance",
+        permanent: true,
+      },
     ]
   },
 }

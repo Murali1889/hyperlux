@@ -44,13 +44,16 @@ export default function UseCasesHero() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
+            <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-indigo-200">
+              Unlock business value with AI-OCR
+            </p>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               className="text-4xl md:text-5xl font-bold mb-6"
             >
-              Unlock Business Value with AI-OCR Use Cases
+              OCR Use Cases for Lending, KYC and Invoices
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}

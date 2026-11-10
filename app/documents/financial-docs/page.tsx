@@ -100,7 +100,6 @@ const GUIDE_GROUPS: GuideGroup[] = [
     intro: "Where OCR fits across finance work.",
     slugs: [
       "ocr-finance",
-      "ocr-meaning-in-finance",
       "ocr-accounting",
       "ocr-technology-in-banking",
       "ocr-apis-the-secret-weapon-smart-finance-teams-are-using-right-now",

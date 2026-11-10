@@ -8,10 +8,10 @@ export default function ProductsHero() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
           <div className="space-y-6">
             <div className="inline-block px-3 py-1 text-sm font-medium text-indigo-700 bg-indigo-100 rounded-full">
-              AI-Powered OCR Software
+              Intelligent document automation
             </div>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-              Intelligent Document Automation for Financial Services
+              OCR and Document AI API for Financial Services
             </h1>
             <p className="text-xl font-semibold text-gray-900 max-w-2xl">
               DocsAPI is an API that classifies, reads and checks documents such as bank statements, invoices and IDs, and

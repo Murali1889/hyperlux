@@ -15,7 +15,7 @@ export const blog29: BlogPost = {
   content: `
     <p>I have built finance OCR pipelines that processed 4 million pages a month and OCR pipelines that died at 200 pages a week. The difference was never the engine, it was matching the right tool to the document type and writing the validation rules that catch the errors before they reach accounting. This is the pillar guide for OCR in finance: what it does, what it actually costs, and which tools win in 2026 by use case.</p>
 
-    <p>If you want the definitional explainer first, our <a href="/resources/blogs/ocr-meaning-in-finance">OCR meaning in finance guide</a> covers the basics in plain English. This page is for teams ready to pick a tool and ship.</p>
+    <p>OCR stands for optical character recognition: software that reads a picture of a document and returns the text and numbers in it as data. This page is for teams ready to pick a tool and ship.</p>
 
     <h2>What is OCR in finance?</h2>
 
@@ -191,6 +191,11 @@ export const blog29: BlogPost = {
   tags: ["OCR", "finance", "fintech", "AP automation", "lending"],
   cluster: "ocr",
   faq: [
+    {
+      question: "What does OCR stand for in finance?",
+      answer:
+        "OCR stands for optical character recognition. In finance it means software that reads invoices, bank statements, receipts and tax forms and turns them into data that accounting, lending or ERP systems can use, instead of someone typing it in by hand.",
+    },
     {
       question: "What is OCR in finance?",
       answer:

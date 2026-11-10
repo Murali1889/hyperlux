@@ -9,12 +9,12 @@ const TODAY = "2026-07-31"
 // lastModified defaults to TODAY unless overridden below — only override
 // for routes whose actual content changed, to avoid fake freshness signals.
 const STATIC_ROUTES: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]; lastModified?: string }[] = [
-  { path: "", priority: 1.0, changeFrequency: "weekly", lastModified: "2026-10-08" },
-  { path: "/products", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-10-08" },
-  { path: "/use-cases", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-10-06" },
+  { path: "", priority: 1.0, changeFrequency: "weekly", lastModified: "2026-11-10" },
+  { path: "/products", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-11-10" },
+  { path: "/use-cases", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-11-10" },
   { path: "/use-cases/invoice-processing", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-06" },
   { path: "/use-cases/loan-verification", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-06" },
-  { path: "/use-cases/id-proofing", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-06" },
+  { path: "/use-cases/id-proofing", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-11-10" },
   { path: "/use-cases/contract-abstraction", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-14" },
   { path: "/use-cases/digital-archiving", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-06" },
   { path: "/solutions/finance-automation", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-06" },
@@ -34,8 +34,8 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Metadata
   { path: "/documents/identity-docs/national-ids", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-10-06" },
   { path: "/documents/legal-docs", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-10-06" },
   { path: "/documents/medical-docs", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-10-06" },
-  { path: "/documents/shipping-docs", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-11-08" },
-  { path: "/resources", priority: 0.7, changeFrequency: "weekly", lastModified: "2026-10-06" },
+  { path: "/documents/shipping-docs", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-11-10" },
+  { path: "/resources", priority: 0.7, changeFrequency: "weekly", lastModified: "2026-11-10" },
   { path: "/resources/blogs", priority: 0.8, changeFrequency: "weekly", lastModified: "2026-08-08" },
   { path: "/tools/which-ocr", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-08" },
   { path: "/tools/free-ocr", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-28" },

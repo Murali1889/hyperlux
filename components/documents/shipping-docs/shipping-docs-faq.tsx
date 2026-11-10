@@ -17,7 +17,7 @@ export default function ShippingDocsFaq() {
     {
       question: "Can your system OCR multiple languages in shipping documents?",
       answer:
-        "Yes, our OCR platform supports over 40 languages for shipping document processing, including English, Spanish, French, German, Chinese, Japanese, Arabic, and Russian. This is particularly valuable for international shipping documents that may contain multiple languages within the same document, such as bills of lading with both origin and destination country languages.",
+        "Yes. DocsAPI reads documents in more than one language, and it scored 81% on multilingual documents in its own 2026 benchmark. Shipping documents often mix languages, for example a bill of lading with origin and destination country text, so try a sample of yours with the languages you need in the demo.",
     },
     {
       question: "Are barcodes and QR codes supported in document processing?",

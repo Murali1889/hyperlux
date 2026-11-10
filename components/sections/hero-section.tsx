@@ -9,10 +9,10 @@ export default function HeroSection() {
           <div className="space-y-6 z-10">
             <div className="inline-flex items-center rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-700">
               <span className="flex h-2 w-2 rounded-full bg-indigo-600 mr-2"></span>
-              AI-Powered OCR Software for Lending
+              Intelligent document automation for smarter lending
             </div>
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-              <span className="text-indigo-700">Intelligent</span> Document Automation for Smarter Lending
+              <span className="text-indigo-700">OCR API</span> and Document AI for Lenders
             </h1>
             <p className="text-xl font-semibold text-slate-900 md:text-2xl max-w-[600px]">
               DocsAPI reads your business and identity documents (bank statements, pay stubs, IDs, invoices, tax forms)

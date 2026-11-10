@@ -6,8 +6,11 @@ export default function ResourcesHero() {
     <section className="relative bg-indigo-900 py-16 md:py-24">
       <div className="container relative z-10 px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-indigo-200">
+            No-fluff guides from 4M pages a month
+          </p>
           <h1 className="mb-6 text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
-            No-Fluff Guides From 4M Pages a Month
+            OCR and Document AI Guides With Real Test Data
           </h1>
           <p className="mb-8 text-xl text-indigo-100 md:text-2xl">
             Everything we've learned running OCR, KYC, and document automation in production, written by the team

@@ -10,8 +10,8 @@ export default function IdProofingFaq() {
       question: "What types of IDs are supported?",
       answer: (
         <>
-          Our platform supports a wide range of government-issued identity documents from over 190 countries,
-          including passports, driver licenses, national ID cards, residence permits, and voter IDs. See our{" "}
+          Our platform reads government-issued identity documents, including passports, driver licenses and
+          national ID cards. See our{" "}
           <Link href="/resources/blogs/national-id-verification-ocr" className="underline hover:text-indigo-700">
             national ID verification guide
           </Link>{" "}

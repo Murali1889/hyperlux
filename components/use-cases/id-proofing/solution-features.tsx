@@ -8,7 +8,7 @@ export default function SolutionFeatures() {
     {
       title: "Advanced OCR Extraction",
       description:
-        "Our AI-powered OCR technology accurately extracts data from machine-readable zones (MRZ), barcodes, and text fields on government IDs. The system processes multiple ID types including passports, driver licenses, and national ID cards from over 190 countries, with support for various languages and character sets.",
+        "Our AI-powered OCR technology accurately extracts data from machine-readable zones (MRZ), barcodes, and text fields on government IDs. The system processes multiple ID types including passports, driver licenses, and national ID cards.",
       icon: (
         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path
