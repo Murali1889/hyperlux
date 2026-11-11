@@ -98,14 +98,15 @@ export const blogMd05: BlogPost = {
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
 
     <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
+    <p>Claim forms depend on tick boxes and signatures, and OCR text is a poor way to read them: in our test it told checked from empty about as well as chance. A fill ratio check and a review rule are in <a href="/resources/blogs/ocr-checkbox-and-signature-detection">OCR checkbox and signature detection</a>.</p>
   `,
   image: "/images/revolutionizing-finance.png",
   featuredImage: "/images/revolutionizing-finance.png",
   category: "Healthcare",
   date: "September 3, 2026",
   datePublished: "2026-09-03T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-11-11T00:00:00.000Z",
+  last_updated: "November 11, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "cms-1500 form processing",

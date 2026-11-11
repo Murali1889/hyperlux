@@ -102,14 +102,15 @@ export const blogMd07: BlogPost = {
     <p>Getting a prior authorization approved is a real administrative win worth automating, and the documented burden, 13 hours a week, 40 requests per physician, staff hired to do nothing else, justifies the investment on its own. But an approved authorization sitting disconnected from the claims process is a denial waiting to happen the moment any one of five common fields drifts between request and billing, and that drift is common precisely because two separate documents, created weeks apart by different people, are expected to agree with each other without anything actually checking. The mismatch denials that result are frequently lumped in with the same reason codes covered in our <a href="/resources/blogs/denial-code-extraction">denial code extraction</a> piece, but they're preventable in a way most denials aren't, because the information needed to catch them exists in full at the moment the claim is built. Nobody has to guess what was authorized. It's already written down. It just has to actually get checked. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
 
     <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
+    <p>Authorization forms often rely on marked boxes and signed pages. We measured how to detect marks and signatures, and when to send a form to a person, in <a href="/resources/blogs/ocr-checkbox-and-signature-detection">checkboxes and signatures on forms</a>.</p>
   `,
   image: "/images/transforming-financial-services.png",
   featuredImage: "/images/transforming-financial-services.png",
   category: "Healthcare",
   date: "September 5, 2026",
   datePublished: "2026-09-05T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-11-11T00:00:00.000Z",
+  last_updated: "November 11, 2026",
   readTime: "11 min read",
   author: nupuraUghade,
   primary_keyword: "prior authorization automation",

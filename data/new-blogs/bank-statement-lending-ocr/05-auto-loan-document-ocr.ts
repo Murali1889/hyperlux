@@ -63,14 +63,15 @@ export const blogBl05: BlogPost = {
     <p>Reading a title document accurately is the well-solved part of auto loan processing. Whether that reading translates into a correctly perfected lien, a properly risk-adjusted loan, and a legally compliant disclosure depends on routing logic sitting one layer downstream of extraction, and that layer is where most of the real risk in this document type actually lives. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
 
     <p>Related guide: <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a>.</p>
+    <p>Credit applications mix text with tick boxes and signature lines. For how to detect marks and signatures and what a threshold costs, see <a href="/resources/blogs/ocr-checkbox-and-signature-detection">OCR checkbox and signature detection</a>.</p>
   `,
   image: "/images/ocr-process.png",
   featuredImage: "/images/ocr-process.png",
   category: "Lending",
   date: "August 17, 2026",
   datePublished: "2026-08-17T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-11-11T00:00:00.000Z",
+  last_updated: "November 11, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "auto loan document ocr",
