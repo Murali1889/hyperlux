@@ -27,7 +27,7 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Metadata
   { path: "/documents/financial-docs", priority: 0.75, changeFrequency: "monthly", lastModified: "2026-10-14" },
   { path: "/documents/financial-docs/bank-statements", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-10-06" },
   { path: "/documents/financial-docs/invoices", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-10-06" },
-  { path: "/documents/financial-docs/purchase-orders", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-10-14" },
+  { path: "/documents/financial-docs/purchase-orders", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-11-13" },
   { path: "/documents/identity-docs", priority: 0.75, changeFrequency: "monthly", lastModified: "2026-10-06" },
   { path: "/documents/identity-docs/passports", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-10-06" },
   { path: "/documents/identity-docs/driver-licences", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-10-06" },

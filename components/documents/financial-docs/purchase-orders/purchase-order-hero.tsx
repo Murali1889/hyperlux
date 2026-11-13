@@ -15,7 +15,7 @@ export default function PurchaseOrderHero() {
           transition={{ duration: 0.5 }}
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-indigo-900 mb-6">
-            Digitise Purchase Orders in Seconds
+            Purchase Order OCR and PO Data Extraction
           </h1>
           <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
             Transform paper and PDF purchase orders into structured data that seamlessly integrates with your

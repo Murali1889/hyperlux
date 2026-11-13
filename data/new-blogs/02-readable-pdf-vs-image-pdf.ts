@@ -3,85 +3,71 @@ import { nupuraUghade } from "../authors"
 
 export const blog02: BlogPost = {
   id: "new-02",
-  title: "Readable PDF vs Image PDF: How to Tell the Difference Fast",
+  title: "Readable PDF vs Image PDF: How to Tell, Tested",
   slug: "readable-pdf-vs-image-pdf",
   excerpt:
-    "Your PDF looks normal but Ctrl+F finds nothing. That means it is an image PDF, not a readable one. Here is the 2-second test and the simple fix.",
+    "A search that finds a word on page one passed all 50 two-page files whose page two was a plain scan. We tested 390 PDFs to see what each check can and cannot tell you.",
   description:
-    "Readable PDF vs image PDF, a 2-second test to tell them apart, why it matters more than you think, and how to convert one into the other.",
-  metaTag: "Readable PDF vs Image PDF: The 2-Second Test (2026)",
+    "A readable PDF has text, an image PDF has a picture, and one file can be both. We tested 390 PDFs for per-page checks and ways to catch wrong OCR text.",
+  metaTag: "Readable PDF vs Image PDF: A Page-by-Page Test (2026)",
   content: `
-    <p>A client emailed me a "searchable PDF" on a Tuesday at 6 PM. I pressed Ctrl+F. Nothing. We went back and forth for twenty minutes before we figured out what was wrong. The PDF looked perfect. It just wasn't actually searchable.</p>
-    <p>This happens to smart people every week. The reason is simple: there are two kinds of PDFs and they look identical on the outside. This guide explains the difference in plain English, with a test you can run in 2 seconds.</p>
+<p>A readable PDF stores its text as characters, so you can search, select and copy it. An image PDF stores each page as a picture, so you cannot. The catch is that one file can be both: text on page one, a plain scan on page two, or a picture with an invisible OCR text layer that may be right or may be wrong. In our test of 390 generated PDFs, a search that found a word on page one passed all 50 two-page files whose second page was a plain scan.</p>
+<p>This guide gives the two-second check, then the numbers behind what each check can and cannot tell you: 440 pages across nine kinds of PDF, a short script that labels every page, and a second check for text layers that exist but are wrong. We ran everything with PyMuPDF 1.26.5 and Tesseract 5.5.2. The test pages are synthetic, and the limits are listed near the end.</p>
 
-    <h2>The Two Kinds of PDFs (Explained Like You Are 10)</h2>
-    <p>A PDF is a container. Anyone can put almost anything inside. There are two main things people put in:</p>
-    <p><strong>Kind 1, Readable PDFs.</strong> These have real text inside. Think of a Word document saved as PDF. The letters are stored as actual letters. Your computer knows that "Hello" is H-E-L-L-O. You can search for words. You can copy and paste. Screen readers can read it out loud.</p>
-    <p><strong>Kind 2, Image PDFs.</strong> These are stacks of pictures. Think of taking a photo of a page and saving the photo as a PDF. Your computer sees colorful shapes. It does not know those shapes are letters. Ctrl+F finds nothing because there is no text to find.</p>
-    <p>The problem is that both look exactly the same when you open them. You cannot tell which kind you have just by looking. Your eyes work fine on both. Your computer only works on Kind 1.</p>
-    <p>The easiest analogy: a readable PDF is like a printed page. An image PDF is like a photograph of that printed page. Both show the same words. Only the printed page lets you point to a specific letter and say "this is an L."</p>
+<h2>What is the difference between a readable PDF and an image PDF?</h2>
+<p>A readable PDF (also called text-based or searchable) has a text layer: the letters on the page are stored as characters with positions. An image PDF has no text layer; the page is a picture, usually one picture per page, and your computer sees pixels. Search, copy, screen readers, form filling and text extraction all work on characters, so they work on the first kind and find nothing on the second.</p>
+<p>Two other states hide inside "looks like a normal PDF". A scan can carry an invisible text layer added by an OCR program, and that layer can be accurate or full of misread words. And a page can show crisp text that is really drawn as vector shapes, with no characters and no picture behind it. We measured both, along with plain text pages, plain scans, phone-style photos and mixed files.</p>
 
-    <h2>The 2-Second Test: Which Kind Do You Have?</h2>
-    <p>Open the PDF. Now do this:</p>
-    <ol>
-      <li>Press <strong>Ctrl+F</strong> on Windows or <strong>Cmd+F</strong> on Mac.</li>
-      <li>A little search bar pops up at the top.</li>
-      <li>Type any word you can see on the page.</li>
-      <li>Hit Enter.</li>
-    </ol>
-    <p>If your word lights up: it is a <strong>readable PDF</strong>. You can search, copy, and work with the text normally. You are done.</p>
-    <p>If nothing happens or you get "0 results": it is an <strong>image PDF</strong>. Time to fix it. Our guide on <a href="/resources/blogs/make-pdf-searchable">making a PDF searchable in 30 seconds</a> walks through three fast ways.</p>
-    <p>There is a backup test if you want to double-check. Try to drag your mouse across just one word. If you can highlight that one word, the PDF is readable. If your mouse selects a giant rectangle covering the whole page, the PDF is an image.</p>
+<h2>How do I check one PDF in two seconds?</h2>
+<p>Open the PDF, press Ctrl+F (Cmd+F on a Mac), type a word you can see on the page and press Enter. If the word is highlighted, that page has a text layer. If you get no results, try dragging across a single word: if you can select that one word, the page has text, and if the selection is a big rectangle over the whole page, it is a picture.</p>
+<p>This check answers one question: does this page have text? It does not tell you whether every page has text, and it does not tell you whether the text is correct. The next sections show where each of those gaps is.</p>
 
-    <h2>Why Should Anyone Care About This?</h2>
-    <p>It feels like a tiny detail. It is not. Here is what an image PDF blocks you from doing:</p>
-    <ul>
-      <li><strong>Ctrl+F search.</strong> You cannot find a single word inside the document. Useless for long PDFs.</li>
-      <li><strong>Copy and paste.</strong> You cannot copy out a phone number, a date, or a name.</li>
-      <li><strong>Screen readers.</strong> Tools that read pages aloud to blind users will not work. In some countries (US, EU, Canada) this can be a real legal problem.</li>
-      <li><strong>Form fields.</strong> If the PDF has boxes you should be able to type into, they will not work.</li>
-      <li><strong>Auto-fill.</strong> Browser auto-fill will not recognize anything.</li>
-      <li><strong>AI tools.</strong> ChatGPT, Claude, contract review tools, anything that needs text will either fail or hallucinate when given an image PDF.</li>
-    </ul>
-    <p>I watched a finance team waste two weeks reconciling invoices because their AP automation tool was silently receiving image PDFs from one vendor. The tool tried to extract text. Got nothing. Matched against an empty string. The numbers were off by $400,000 before someone noticed. The fix took ten minutes. Catching the problem at intake would have cost zero.</p>
+<h2>How did we test 390 PDFs?</h2>
+<p>Every test page started as the same kind of page: a US letter page with 40 lines of 11-point Helvetica, about 440 words per page. The words came from a system dictionary, with some amounts (such as 8,386.62) and invoice-style numbers (INV-48213) mixed in, so a page carries both words and figures. We then turned each page into nine kinds of PDF.</p>
+<table>
+  <thead><tr><th>Kind</th><th>How we made it</th><th>Files</th></tr></thead>
+  <tbody>
+    <tr><td>Native text</td><td>Text written straight into the PDF</td><td>50</td></tr>
+    <tr><td>Scan</td><td>Page rendered at 300 DPI, shrunk to 200 DPI, slight blur and noise, stored as one picture</td><td>50</td></tr>
+    <tr><td>Phone-style photo</td><td>Rotated up to 1.5 degrees, 150 DPI, blur, heavier noise, JPEG quality 45</td><td>50</td></tr>
+    <tr><td>Scan with a good OCR layer</td><td>The 200 DPI scan run through Tesseract's PDF output</td><td>50</td></tr>
+    <tr><td>Scan with a poor OCR layer</td><td>The page shrunk to 30% to 55% of 300 DPI with blur, heavy noise and JPEG quality 45, then Tesseract's PDF output</td><td>50</td></tr>
+    <tr><td>Text drawn as shapes</td><td>Letter outlines traced from a 300 DPI render and drawn as one vector path</td><td>50</td></tr>
+    <tr><td>Mixed file</td><td>Native text page followed by a plain scan page</td><td>50 (100 pages)</td></tr>
+    <tr><td>Blank page</td><td>An empty page</td><td>20</td></tr>
+    <tr><td>Ruled form</td><td>Lines and a border, no text</td><td>20</td></tr>
+  </tbody>
+</table>
+<p>That is 390 files and 440 pages. We kept the true text of every page, so we could measure how much of it each PDF's text layer actually held.</p>
 
-    <h2>Where Do Image PDFs Come From?</h2>
-    <p>Image PDFs almost always start when something <strong>scans</strong> or <strong>photographs</strong> a piece of paper. The most common sources:</p>
+<h2>Which label does each kind of PDF get?</h2>
+<p>We labelled every page with a short rule: count the characters of extractable text, and measure how much of the page a picture covers. Text with little picture is "text". A picture covering most of the page with no text is "image". Both together is "image+text layer". The script is in the next section; here are the results.</p>
+<table>
+  <thead><tr><th>Kind</th><th>Pages</th><th>Characters of text found</th><th>Label</th></tr></thead>
+  <tbody>
+    <tr><td>Native text</td><td>50</td><td>Over 25 on 50 of 50</td><td>text, 50 of 50</td></tr>
+    <tr><td>Scan</td><td>50</td><td>0 on 50 of 50</td><td>image, 50 of 50</td></tr>
+    <tr><td>Phone-style photo</td><td>50</td><td>0 on 50 of 50</td><td>image, 50 of 50</td></tr>
+    <tr><td>Scan with good OCR layer</td><td>50</td><td>Over 25 on 50 of 50</td><td>image+text layer, 50 of 50</td></tr>
+    <tr><td>Scan with poor OCR layer</td><td>50</td><td>Over 25 on 50 of 50</td><td>image+text layer, 50 of 50</td></tr>
+    <tr><td>Mixed file, page 1</td><td>50</td><td>Over 25 on 50 of 50</td><td>text, 50 of 50</td></tr>
+    <tr><td>Mixed file, page 2</td><td>50</td><td>0 on 50 of 50</td><td>image, 50 of 50</td></tr>
+  </tbody>
+</table>
+<p>Two things stand out. First, a plain scan and a phone-style photo both returned zero characters on all 100 pages, so "is there any text at all" cleanly separates pictures from text. Second, the 50 scans with a good OCR layer and the 50 with a poor one received the same label, because both have a picture and a text layer. The label says a text layer exists. It does not say the text layer is right.</p>
 
-    <h3>Office Scanners</h3>
-    <p>Every office printer-scanner-copier you have ever used produces image PDFs by default. The "searchable PDF" option exists but is usually buried in a menu. Three out of four scanners ship with OCR turned off out of the box, because OCR adds a few seconds per page and was historically a paid feature.</p>
+<h2>Why is checking one page not enough?</h2>
+<p>Because the file passes if any page passes, in the way people usually test. In the 50 mixed files, page one had text and page two was a plain scan. A search for any word on page one succeeds on every file, and nothing about that search touches page two. The per-page label caught all of it: page one "text", page two "image", 50 of 50 each.</p>
+<p>This matters in practice for packets that are assembled from different sources, such as a typed form with a scanned signature page or a statement with an inserted scan. It also matters for extraction pipelines, where a file-level "has text" flag sends the whole file down the text path and the picture pages come out empty. For those pipelines, label each page, then route the pages. Our guide on <a href="/resources/blogs/document-detection-before-ocr">document detection before OCR</a> covers the routing side.</p>
 
-    <h3>Phone Scan Apps</h3>
-    <p>Adobe Scan, iOS Notes "Scan Documents", CamScanner, Microsoft Lens, and Google Drive Scan all produce image PDFs unless you turn on text recognition. Most apps offer it as a paid upgrade or hide it in settings.</p>
-
-    <h3>Print-to-PDF From an Image</h3>
-    <p>Open a JPG photo. Click File → Print → Save as PDF. You just made an image PDF. The PDF looks legit but contains zero text. This is the single most common way people accidentally create image PDFs.</p>
-
-    <h3>Fax Machines and Fax-to-Email</h3>
-    <p>Faxes are pictures by definition. Anything coming out of a fax-to-email service is an image PDF. (Yes, fax is still a thing in healthcare, law, and government, it is not going away soon.)</p>
-
-    <h3>Cheap Online "PDF Compressors"</h3>
-    <p>Some compression tools convert your readable PDF into an image PDF as a way to shrink the file size. The PDF gets smaller. It also gets unsearchable. Beware free compression sites.</p>
-
-    <h2>The Hybrid Case: A Half-Readable PDF</h2>
-    <p>This is the trickiest case. A PDF can be <em>partly</em> readable and <em>partly</em> image, and that is more confusing than a fully image PDF.</p>
-    <p>Common example: a contract template typed in Word, exported to PDF, then the signature page was printed, signed, scanned, and inserted back in. Pages 1-9 are readable. Page 10 is an image. Ctrl+F finds your terms in pages 1-9 but never on page 10.</p>
-    <p>Another example: an old document where some pages were OCR'd years ago and others were not. Search "feels" broken because it works sometimes and not others.</p>
-    <p>If you suspect this, do the 2-second test on a few different pages. If results are inconsistent across the document, you have a hybrid. The fix is the same, run OCR on the whole thing. <a href="/resources/blogs/document-detection-before-ocr">Document detection</a> in a good OCR pipeline catches and corrects this automatically.</p>
-
-    <h2>The Sneaky Case: A "Searchable" PDF With Broken Text</h2>
-    <p>This one is the most annoying. Sometimes OCR ran on a PDF but did a terrible job. The text layer exists but it is gibberish. Ctrl+F returns results, but the matches are nonsense.</p>
-    <p>You can usually catch this by copying a sentence out and pasting it somewhere. If what you paste is "dl0w !@@# Tcv$" instead of "Total amount due $4,200", the text layer is broken. The fix: strip the bad layer and re-OCR fresh. Tools like <code>ocrmypdf --force-ocr</code> do this in one command. Modern OCR APIs do it automatically.</p>
-
-    <h2>Checking a Whole Folder of PDFs With Code</h2>
-    <p>Ctrl+F works for one file. It does not work for 4,000 files that arrived overnight. To sort them, check each page for two things: how much text it has, and how much of the page is covered by a picture. A page with text and little image coverage is readable. A page with a full-page picture and no text is an image page. A page with both is a scan that already has an OCR layer, and that layer is the one to spot-check.</p>
-    <p>Here is a short Python script that does it, using PyMuPDF. It labels every page, not just the file, so hybrid PDFs show up.</p>
-    <pre><code>import sys
+<h2>What is the script that labels every page?</h2>
+<p>This is the script we ran, unchanged. <code>classify_page</code> is the per-page label; <code>layer_agreement</code> is the second check, described below. It needs <code>pip install pymupdf</code> and the <code>tesseract</code> command on your path (only for <code>layer_agreement</code>).</p>
+<pre><code>import os, re, subprocess, sys, tempfile
 import fitz  # PyMuPDF: pip install pymupdf
 
 def classify_page(page, min_chars=25):
     text = page.get_text().strip()
-    has_text = len(text) >= min_chars
+    has_text = len(text) &gt;= min_chars
     page_area = page.rect.width * page.rect.height
     image_area = 0
     for img in page.get_image_info():
@@ -93,109 +79,133 @@ def classify_page(page, min_chars=25):
     if not has_text and mostly_image:
         return "image"
     if has_text and mostly_image:
-        return "image+text layer"  # a scan with an OCR layer: spot-check it
+        return "image+text layer"      # a scan that already has OCR text on it
+    if sum(len(d["items"]) for d in page.get_drawings()) &gt; 2000:
+        return "vector shapes only"    # text drawn as outlines: no text layer, no picture
     return "blank/other"
 
-for path in sys.argv[1:]:
-    doc = fitz.open(path)
-    print(path, [classify_page(p) for p in doc])</code></pre>
-    <p>I ran it on four test files I generated: a two-page text PDF, the same two pages rendered to pictures, a hybrid with one text page and one picture page, and a picture page with invisible text laid over it. The output was:</p>
-    <pre><code>text.pdf ['text', 'text']
-image.pdf ['image', 'image']
-hybrid.pdf ['text', 'image']
-ghost.pdf ['image+text layer']</code></pre>
-    <p>That last label matters. A page can be a picture of a document with a text layer from an older OCR run sitting on top. The script cannot tell you whether that layer is good. For those pages, compare the extracted text against what the page shows, or re-run OCR and diff the two. The 25-character and 80 percent thresholds are my choices, so adjust them if your files are mostly stamps or logos.</p>
-    <p>If you only need a quick shell check, <code>pdftotext file.pdf - | wc -w</code> gives a word count for the whole file. Zero words means image PDF, but a hybrid with one text page will still pass, which is why the per-page script is the safer routine. For the OCR step itself, see <a href="/resources/blogs/ocr-pdf-honest-guide">our honest guide to OCR on PDFs</a>, and for sorting mixed files before extraction, <a href="/resources/blogs/document-detection-before-ocr">document detection before OCR</a>.</p>
+def words(s):
+    return re.findall(r"[A-Za-z0-9][A-Za-z0-9,.\\-]*", s)
 
-    <h2>How to Fix an Image PDF (Three Fast Ways)</h2>
-    <p>If you have an image PDF and need a readable one, here is the simple ranking. Pick based on your situation.</p>
-    <table>
-      <thead>
-        <tr><th>Method</th><th>Speed</th><th>Cost</th><th>Best for</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>API call (DocsAPI, AWS, Google)</td><td>30 seconds</td><td>~$0.01/page</td><td>Long documents, recurring workflows</td></tr>
-        <tr><td>Google Drive trick</td><td>1-2 minutes</td><td>Free</td><td>One-page receipts, short notes</td></tr>
-        <tr><td>Tesseract on your laptop</td><td>3-20 minutes</td><td>Free</td><td>Private content, offline work</td></tr>
-      </tbody>
-    </table>
-    <p>The full step-by-step for each is in our <a href="/resources/blogs/make-pdf-searchable">make a PDF searchable guide</a>. The 30-second drag-and-drop on the DocsAPI dashboard is the fastest for most people.</p>
+def layer_agreement(page):
+    """Share of the page's text-layer words that a fresh Tesseract read of the page also finds."""
+    layer = [w.lower() for w in words(page.get_text())]
+    fd, png = tempfile.mkstemp(suffix=".png"); os.close(fd)
+    try:
+        page.get_pixmap(dpi=200, colorspace=fitz.csGRAY).save(png)
+        out = subprocess.run(["tesseract", png, "stdout", "--psm", "6"], capture_output=True, text=True).stdout
+    finally:
+        os.remove(png)
+    fresh = {w.lower() for w in words(out)}
+    return sum(w in fresh for w in layer) / max(1, len(layer))
 
-    <h2>How to Stop Receiving Image PDFs in the First Place</h2>
-    <p>If image PDFs keep showing up at your work, fix the source. A few practical moves:</p>
-    <ul>
-      <li><strong>Turn on OCR in your office scanner.</strong> Look for "Searchable PDF" or "OCR" in the scanner settings. Most modern multifunction printers have it. It is usually a single checkbox.</li>
-      <li><strong>Tell vendors what format you need.</strong> If a vendor keeps sending image PDFs, ask them politely to send native exports from their system. Most large vendors can do this.</li>
-      <li><strong>Add a check at intake.</strong> If you build software that receives PDFs, count the number of searchable characters per page. Below 50 characters per page usually means an image PDF. Auto-route those to OCR before anything else.</li>
-      <li><strong>Skip cheap online compressors.</strong> Use a proper compression tool that preserves the text layer.</li>
-    </ul>
-    <p>This is one of those operational details that looks small but pays huge dividends. Every team I have introduced this check to caught at least one quiet broken pipeline within a week.</p>
+if __name__ == "__main__":
+    for path in sys.argv[1:]:
+        doc = fitz.open(path)
+        print(path, [classify_page(p) for p in doc])</code></pre>
+<p>The 25-character floor and the 80% picture coverage are our choices. A page that is mostly stamps or logos may need different values, and a page with only a few words of real text may fall under the floor.</p>
 
-    <h2>The Way I Explain It to Non-Tech People</h2>
-    <p>I keep two analogies in my back pocket for explaining this to my mom or to a salesperson.</p>
-    <p>Analogy 1: <strong>The recipe card</strong>. A readable PDF is like a recipe written in pen on a card, you can read it, the computer can read it. An image PDF is like a photo of that card. You can still read it because your eyes are amazing. The computer can't, because the computer only sees colors.</p>
-    <p>Analogy 2: <strong>The library book</strong>. A readable PDF is a library book where every word is printed. An image PDF is a stack of photocopies of every page. Both let you read the book. Only the printed version lets the librarian's computer find every chapter on World War II in one search.</p>
-    <p>Pick whichever one lands better with whoever you are talking to. Both work.</p>
+<h2>What if the PDF has text, but the text is wrong?</h2>
+<p>Then the label "image+text layer" is where you stop trusting the file and start measuring it. We measured how many of each page's true words appeared in its text layer. The 50 scans with a good OCR layer held 100% of their words on every page. The 50 with a poor layer, made from low-resolution noisy scans, held 93.4% on average, with the worst page at 67.8%. Of those 50, 22 pages were below 95%, and 28 were at or above it.</p>
+<p>Nothing in the label separates these two groups, and Ctrl+F will not either: a search for a word that was read correctly succeeds on a page where a third of the other words are wrong. The signal we tried is cheap to state. Read the page again with a fresh OCR pass, then check what share of the existing layer's words the new read also finds. We call that agreement. A layer that agrees with a second read is probably fine, and a layer that does not is worth a closer look.</p>
 
-    <h2>What Is Inside an Image PDF</h2>
-    <p>An image PDF is usually one picture per page inside a PDF wrapper, so the quality of that picture decides the result. Three things in the picture file mattered in our tests: a DPI number that does not match the pixels, a photo stored sideways, and a noisy fax that is enlarged before it is cleaned. We measured each one in <a href="/resources/blogs/convert-fax-tiff-jpg-png-to-text">converting fax, TIFF, JPG and PNG to text</a>. We did not test PDF files themselves in that guide, only the image formats that go inside them.</p>
+<h2>How well does the agreement check catch bad text layers?</h2>
+<p>We ran <code>layer_agreement</code> on the 200 pages that had a text layer: the 50 native pages, the 50 page-one halves of the mixed files, the 50 good OCR layers and the 50 poor ones. A page counted as bad when under 95% of its true words were in the layer. That made 22 bad pages and 178 good ones.</p>
+<table>
+  <thead><tr><th>Flag a page when agreement is under</th><th>Bad layers caught (of 22)</th><th>Good layers flagged (of 178)</th></tr></thead>
+  <tbody>
+    <tr><td>0.90</td><td>11</td><td>0</td></tr>
+    <tr><td>0.95</td><td>20</td><td>0</td></tr>
+    <tr><td>0.97</td><td>22</td><td>7</td></tr>
+    <tr><td>0.98</td><td>22</td><td>14</td></tr>
+  </tbody>
+</table>
+<p>At 0.95 the check caught 20 of 22 bad layers and flagged no good ones. The two it missed had 94.7% and 94.3% of their words right, so they were close to the line we drew. At 0.97 it caught all 22 and flagged 7 good pages, about 4%, which a person would clear in a minute each. We chose the thresholds after seeing the first run, so we also split the files in half by seed: on seeds 0 to 24 the 0.95 setting caught 10 of 10 and flagged 0 of 90, and on seeds 25 to 49 it caught 10 of 12 and flagged 0 of 88. The split gives the same picture, but it is the same kind of synthetic page, not a new test set.</p>
+<p>One honest caveat: the second read uses the same page image, so a mistake that Tesseract makes both times will look like agreement. On our pages the poor layers came from blurred, shrunken scans, so a read of the stored image at 200 DPI usually disagreed with them. A layer produced by a different engine, or from a different scan, would be a better comparison. If you already pay for an OCR service, compare against that instead.</p>
 
-    <h2>What I'd Do Today</h2>
-    <p>If you are a regular person dealing with one PDF: do the 2-second test. If it is an image, drag-and-drop into the <a href="/products">DocsAPI dashboard</a> for a free trial. Thirty seconds and you have a real searchable PDF.</p>
-    <p>If you are an engineer building software that consumes PDFs: stop assuming PDFs are readable. Add a one-line check at intake. Auto-route image PDFs to OCR before downstream processing. Most production bugs that trace back to "the PDF was weird" would have been caught by this check.</p>
-    <p>If you work in finance, legal, healthcare, or anywhere documents move through long workflows: audit one week of incoming PDFs. Count how many are image-only. The number is almost always higher than people guess. Fixing the intake step usually removes a whole category of "the data is wrong" tickets. (<a href="/author/nupura-ughade">I write about these patterns a lot</a>.)</p>
+<h2>What about text that is drawn as shapes?</h2>
+<p>Some PDFs show crisp text that is not text at all. Design tools can export letters as outlines, so the page has neither characters nor a picture. Our first version of the script had no rule for this and labelled all 50 of these pages "blank/other", which would send a full page of text to a person as if it were empty.</p>
+<p>In the PDF's drawing data these pages look nothing like a blank page. Each of our 50 held a single path with between 128,000 and 133,000 line segments. A ruled form, with 26 line segments, is the other extreme. The final script counts path segments and calls the page "vector shapes only" above 2,000, a threshold we chose to sit well between the two. With it, all 50 outlined pages got that label, and all 20 blank pages and all 20 ruled forms stayed "blank/other". A page labelled "vector shapes only" needs OCR on a rendered image, because there is no text to extract.</p>
+
+<h2>How long do the checks take?</h2>
+<p>The page label is cheap. Opening the PDF, extracting text, reading the image boxes and labelling a page took about 12 milliseconds per page on our laptop. The agreement check is a full OCR pass: between 2.2 and 2.7 seconds per page at 200 DPI on one Tesseract thread.</p>
+<p>The cost difference sets the order of operations. Label every page first. Run the agreement check only on pages labelled "text" or "image+text layer", and for a large archive, run it on a sample of each source instead of every page. If a sample from one scanner or vendor fails, run the full check on that source. Our guide on <a href="/resources/blogs/bulk-and-high-volume-ocr-processing">bulk OCR processing</a> covers throughput.</p>
+
+<h2>What should I do with each label?</h2>
+<table>
+  <thead><tr><th>Label</th><th>What it means</th><th>What to do</th></tr></thead>
+  <tbody>
+    <tr><td>text</td><td>Characters on the page, little or no picture</td><td>Extract the text directly. No OCR needed.</td></tr>
+    <tr><td>image</td><td>A picture and no text</td><td>Run OCR. See <a href="/resources/blogs/make-pdf-searchable">how to make a PDF searchable</a>.</td></tr>
+    <tr><td>image+text layer</td><td>A picture with text on top, from a past OCR run</td><td>Run the agreement check. Under your threshold, redo the OCR.</td></tr>
+    <tr><td>vector shapes only</td><td>Text drawn as outlines</td><td>Render the page to an image and run OCR.</td></tr>
+    <tr><td>blank/other</td><td>Nothing readable detected</td><td>Look at it. It may be truly blank, a form template or a stamp-only page.</td></tr>
+  </tbody>
+</table>
+<p>For images that come out of the OCR step poorly, the cause is usually the picture, not the PDF. We measured what helps and what hurts in <a href="/resources/blogs/ocr-image-preprocessing-what-helps-what-hurts">our preprocessing tests</a>, and the fixes for sideways pages are in <a href="/resources/blogs/ocr-upside-down-sideways-pages">upside-down and sideways pages</a>.</p>
+
+<h2>Where do image PDFs come from?</h2>
+<p>Image PDFs start whenever something captures a page as pixels. A scanner or a phone camera produces a picture, and the PDF wraps it. Saving a JPG or PNG as a PDF makes a one-picture PDF. Fax output is a picture by nature. Our test files stand in for these: the scan kind for a flatbed scan, the phone-style kind for a camera, and the layered kinds for a scanner or app that ran OCR on the way out. The formats inside such files, such as TIFF and JPG, are the subject of <a href="/resources/blogs/convert-fax-tiff-jpg-png-to-text">converting fax, TIFF, JPG and PNG to text</a>.</p>
+<p>If image PDFs keep arriving from one source, the cheapest fix is at the source: switch on text recognition in the scanner or scanning app, or ask the sender for the original export. Where that is not possible, add the page label at intake so those files are routed before anything downstream reads them as empty.</p>
+
+<h2>What did we not test?</h2>
+<p>Our pages are synthetic: one font, English dictionary words, no tables, no columns, no stamps, no handwriting, no non-Latin scripts. Real documents are messier, and a scan of a real invoice will behave differently from our pages. The thresholds (25 characters, 80% coverage, 2,000 segments, 0.95 agreement) are our choices and are worth re-tuning on your own files.</p>
+<p>We also did not test a fourth failure that exists in the wild: native text whose font map is broken, so the page looks right and copying it gives garbled characters. The agreement check would likely flag such a page, because a fresh read of the rendered page would not match the garbled layer, but we have not measured it. We also did not test encrypted or password-protected files. Finally, the agreement check used Tesseract on both sides of the comparison for the OCR-layered pages, so it measures consistency, not truth.</p>
+
+<h2>Where does DocsAPI fit?</h2>
+<p>DocsAPI reads scans and photographed pages and returns structured data. In our 2026 benchmark of 1,700 documents it read clean typed text at 97% to 99% and about 1.1 seconds per page. Pricing starts at $0.02 per page, and access begins with a demo. The page label above is a routing step you can run before any engine, ours or someone else's. See <a href="/products">the products page</a> for what DocsAPI reads, and <a href="/pricing">pricing</a> for the per-page rate.</p>
+<p>If you are deciding how much of this to build, start with the 12-millisecond label on every page. It tells you which pages are pictures, which are text and which need a closer look, and it costs almost nothing to run.</p>
   `,
   image: "/images/idp-vs-ocr.png",
   featuredImage: "/images/idp-vs-ocr.png",
   category: "OCR How-To",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-11-05T00:00:00.000Z",
-  last_updated: "November 5, 2026",
-  readTime: "10 min read",
+  dateModified: "2026-11-13T00:00:00.000Z",
+  last_updated: "November 13, 2026",
+  readTime: "13 min read",
   author: nupuraUghade,
-  primary_keyword: "readable pdf",
+  primary_keyword: "readable pdf vs image pdf",
   secondary_keywords: [
     "image pdf vs readable pdf",
     "searchable pdf",
     "pdf text layer",
-    "pdf vs image",
-    "scanned pdf",
-    "pdf format",
+    "how to tell if a pdf is scanned",
     "pdf not searchable",
+    "scanned pdf with text layer",
   ],
-  tags: ["PDF", "OCR", "diagnostics", "beginner"],
+  tags: ["PDF", "OCR", "diagnostics"],
   cluster: "ocr",
   faq: [
     {
-      question: "What does readable PDF mean exactly?",
+      question: "What is the difference between a readable PDF and an image PDF?",
       answer:
-        "A readable PDF (also called searchable or text-based) has a live text layer. Characters are stored as actual letters, not pixels. You can search, copy, and select individual words. Screen readers can read it aloud.",
+        "A readable PDF stores its text as characters, so you can search, select and copy it. An image PDF stores each page as a picture, so none of that works. A file can mix both, with text on some pages and pictures on others, and a picture can carry an invisible OCR text layer that may be accurate or wrong.",
     },
     {
-      question: "Why is my scanned PDF an image PDF by default?",
+      question: "How do I check if a PDF is searchable?",
       answer:
-        "Almost every scanner produces image PDFs by default because OCR was historically a paid feature and adds time per page. Most scanners have a 'searchable PDF' setting buried in the menu. Phone apps often require in-app purchase.",
+        "Press Ctrl+F (Cmd+F on a Mac), type a word you can see and press Enter. If it is highlighted, that page has a text layer. This checks one page only. In our test, a search that found a word on page one passed all 50 mixed files whose second page was a plain scan, so check each page when it matters.",
     },
     {
-      question: "Can a PDF be partly readable and partly image?",
+      question: "Can a PDF be partly readable and partly an image?",
       answer:
-        "Yes. Documents combining native text with embedded scans (a contract with a scanned signature page) have searchable text on some pages and image-only on others. Ctrl+F finds half your terms and misses the rest.",
+        "Yes. In our test of 50 two-page mixed files, page one had text and page two was a plain scan. A per-page label gave 'text' for page one and 'image' for page two on all 50 files, while a search for a page-one word succeeded on every file.",
     },
     {
-      question: "Will Ctrl+F always tell me if my PDF is readable?",
+      question: "Can a scanned PDF have text that is wrong?",
       answer:
-        "Usually, but not always. If the document has a broken text layer, Ctrl+F may return results that look correct but point to nonsense characters. Double-check by copying a sentence into a notepad, if the paste is garbled, the text layer is broken.",
-    },
-    {
-      question: "Can image PDFs be smaller in file size?",
-      answer:
-        "Often yes, especially after compression. Some 'PDF shrinker' tools convert readable PDFs into image PDFs to make them smaller. The file is smaller, but you lost search and copy. Use a proper compression tool that preserves the text layer.",
+        "Yes. In our test, 50 scans carried OCR text made from low-resolution noisy images. On average 93.4% of each page's true words were in the text layer, and the worst page held 67.8%. 22 of the 50 pages were under 95%. Ctrl+F cannot tell you this, because a search for a correctly read word still succeeds.",
     },
     {
       question: "How do I find image-only pages in a folder of PDFs?",
       answer:
-        "Check each page for extractable text and for how much of the page a picture covers. A page with almost no text and a full-page picture is an image page. A page with both is a scan with an OCR layer that needs a spot-check. The article includes a short PyMuPDF script that labels every page this way, so hybrid files are not missed.",
+        "Label every page, not just every file. Count the characters of text and measure how much of the page a picture covers: a page with no text and a full-page picture is an image page. The post includes a PyMuPDF script that does this in about 12 milliseconds per page in our tests and also flags pages whose text is drawn as shapes.",
+    },
+    {
+      question: "How do I check if an OCR text layer is accurate?",
+      answer:
+        "Read the page again with a fresh OCR pass and measure what share of the existing layer's words the new read also finds. In our test, flagging pages under 0.95 agreement caught 20 of 22 bad layers and flagged none of 178 good ones. The check costs about 2.2 to 2.7 seconds per page on one Tesseract thread, so run it on a sample for large archives.",
     },
   ],
 }

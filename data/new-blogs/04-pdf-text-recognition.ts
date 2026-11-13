@@ -14,7 +14,7 @@ export const blog04: BlogPost = {
     <p>Tesseract is free, open source and has been around for a long time. For clean, typed, single-column text it is often the right answer. This guide is the honest version of when it stops being the right answer.</p>
 
     <h2>What "PDF Text Recognition" Actually Means</h2>
-    <p>PDF text recognition is the simple-sounding job of taking a PDF and pulling the readable words out. If the PDF was made on a computer (typed in Word, exported from a website, etc.), the words are already in there as real text. No recognition needed, just open and read.</p>
+    <p>PDF text recognition is the simple-sounding job of taking a PDF and pulling the readable words out. If the PDF was made on a computer (typed in Word, exported from a website, etc.), the words are already in there as real text. No recognition needed, just open and read. To check page by page which kind you have, see our <a href="/resources/blogs/readable-pdf-vs-image-pdf">readable PDF vs image PDF test</a>.</p>
     <p>The interesting case is when the PDF is a stack of pictures. Maybe it was scanned. Maybe it came from a fax. Maybe a phone took photos and saved them as a PDF. The pages look like words but the file does not contain any actual letters, just colored pixels.</p>
     <p>To find the words, you run an <strong>OCR engine</strong>. OCR stands for Optical Character Recognition, which is a fancy way of saying "looks at pictures of letters and recognizes them as letters." Tesseract is the most popular free OCR engine. It powers about 80% of the free OCR tools you have ever used.</p>
     <p>If this whole topic is new to you, our <a href="/resources/blogs/make-pdf-searchable">make a PDF searchable guide</a> is the friendly starting point. This article assumes you have already tried Tesseract and want to know when it is not enough.</p>
@@ -100,8 +100,8 @@ export const blog04: BlogPost = {
   category: "OCR How-To",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-10-29T00:00:00.000Z",
-  last_updated: "October 29, 2026",
+  dateModified: "2026-11-13T00:00:00.000Z",
+  last_updated: "November 13, 2026",
   readTime: "9 min read",
   author: nupuraUghade,
   primary_keyword: "pdf text recognition",

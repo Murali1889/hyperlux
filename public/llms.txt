@@ -18,7 +18,7 @@ DocsAPI processes around 4 million PDF pages per month for lenders, fintechs, an
 - [Best OCR software in 2026, by use case](https://docsapi.co/resources/blogs/best-ocr-software-2026)
 - [How to make a PDF searchable in 30 seconds](https://docsapi.co/resources/blogs/make-pdf-searchable)
 - [OCR a PDF: honest guide from 4M pages a month](https://docsapi.co/resources/blogs/ocr-pdf-honest-guide)
-- [Readable PDF vs image PDF](https://docsapi.co/resources/blogs/readable-pdf-vs-image-pdf)
+- [Readable PDF vs image PDF](https://docsapi.co/resources/blogs/readable-pdf-vs-image-pdf): 390 PDFs of nine kinds (Tesseract 5.5.2, PyMuPDF 1.26.5); a file-level search passed all 50 mixed files whose page two was a scan; a per-page label got 50 of 50 on each kind; an agreement check caught 20 of 22 wrong OCR text layers with 0 of 178 good ones flagged; tested script included
 - [Context engineering for document AI](https://docsapi.co/resources/blogs/context-engineering-document-ai)
 - [Document detection: the step everyone skips before OCR](https://docsapi.co/resources/blogs/document-detection-before-ocr)
 - [KYC document verification: what auditors look for](https://docsapi.co/resources/blogs/kyc-document-verification)
