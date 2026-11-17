@@ -237,6 +237,8 @@ left, right = gray[:, :cut], gray[:, cut:]   # OCR each half separately</code></
       <li><strong>Mixed document streams:</strong> classify first so each type gets the right extraction, as in <a href="/resources/blogs/document-classification-software">document classification software</a>. For lending files, <a href="/resources/blogs/ocr-for-lending-and-underwriting">OCR for lending and underwriting</a> shows where statements fit.</li>
     </ul>
 
+    <p>If your tables come from scans, we measured what works in <a href="/resources/blogs/extract-tables-from-scanned-pdf">extracting tables from scanned PDFs</a>: 300 tables, with and without ruled lines, from native files to phone photos.</p>
+
     <p>DocsAPI extracts fields and tables, flags low-confidence fields for review, and includes table extraction and classification in its price of $0.02 per page and up. The benchmark was run by DocsAPI, so cite it as DocsAPI's own and verify it on your documents. If your volume is large, <a href="/resources/blogs/bulk-and-high-volume-ocr-processing">bulk OCR processing</a> covers speed, cost and review time, and <a href="/resources/blogs/data-normalization-extracted-documents">data normalization for extracted documents</a> covers cleaning the values once they are out.</p>
   `,
   image: "/images/ocr-process.png",
@@ -244,8 +246,8 @@ left, right = gray[:, :cut], gray[:, cut:]   # OCR each half separately</code></
   category: "AI Document Intelligence",
   date: "November 3, 2026",
   datePublished: "2026-11-03T00:00:00.000Z",
-  dateModified: "2026-11-03T00:00:00.000Z",
-  last_updated: "November 3, 2026",
+  dateModified: "2026-11-16T00:00:00.000Z",
+  last_updated: "November 16, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "ocr layout analysis",

@@ -38,3 +38,11 @@ So 2M is a stretch north star, not a forecast. Track the weekly growth rate, and
 - `/documents/financial-docs` is a soft 404 in Google even though the live page is fine. About half the text blocks render at opacity 0 until scrolled (framer-motion `whileInView`). Unproven cause. Check with a URL Inspection live test.
 - The benchmark post says "8 engines" but names 7.
 - Anecdote-style first-person openings in several posts are unverified.
+
+## Status 2026-11-17 (day 26 of 60, window ends 2026-12-21). The 2M goal stays.
+- Search Console data runs to Nov 15. Cumulative since Oct 22: about 14,700 impressions. Daily: about 500 until Nov 11, 1,360 to 1,690 on Nov 13 to 15 (overlaps the Nov 10 core update, which should finish about Nov 24, so the jump may not hold).
+- Required pace to reach 2M by Dec 21: about 55,000 a day. Flat at 1,600 a day gives about 73,000; 4% daily growth gives about 146,000.
+- 42% of impressions are accounts payable terms at positions 40 to 80 (AP guide moved to about 15 on Nov 15). Long question queries are only about 2.5% of impressions, so the regex-filter workflow is cheap but small.
+- Queries like "what ocr api captures shipment details from packing list files?" rank at 3 to 7 with zero clicks, and look like AI query fan-out rather than human searches.
+- Work queue (one audited, tested post at a time; each needs new data, no reuse of the purchase order data): 1 done, `extract-tables-from-scanned-pdf`; 2 done, `duplicate-invoice-detection-ocr` (AP cluster, links both ways to the AP guide); next candidates from AP and invoice queries: invoice number and date field accuracy by layout, scanned invoice to Excel, bank statement OCR errors that break balances.
+- Do not edit or judge pages changed Nov 3 to 16 until about Dec 1 (core update rollout plus a week).

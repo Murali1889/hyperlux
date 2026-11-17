@@ -82,6 +82,8 @@ export const blog23: BlogPost = {
     <p>Imagine the security guard at a bank entrance. He looks at every ID. He knows what real IDs from your state look like. He notices if the photo seems off, if the date of birth does not make sense for the person standing in front of him, if the card feels wrong. He cannot catch everything, a perfect fake gets through occasionally, but he stops 95% of obvious fraud at the door.</p>
     <p>Document fraud detection API is that security guard, applied to every document your company receives, running in 2 seconds, at a few cents per check. The bank is still the bank. The decisions are still yours. The obvious fraud just stops being your problem.</p>
 
+    <p>For one narrow case, duplicate invoices, we measured how often each matching rule catches a re-sent invoice from OCR reads in <a href="/resources/blogs/duplicate-invoice-detection-ocr">duplicate invoice detection with OCR</a>.</p>
+
     <h2>What I'd Do Today</h2>
     <p>If you are starting a KYC workflow from scratch: pick a vendor with the five checks and proven banking customers. Do not build your own.</p>
     <p>If you have an existing KYC system with weak fraud detection: add a fraud check API in front of your existing workflow. The five checks alone will catch most of what you are missing.</p>
@@ -94,8 +96,8 @@ export const blog23: BlogPost = {
   category: "Compliance",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-10-19T00:00:00.000Z",
-  last_updated: "October 19, 2026",
+  dateModified: "2026-11-17T00:00:00.000Z",
+  last_updated: "November 17, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "document fraud detection api",

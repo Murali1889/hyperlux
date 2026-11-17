@@ -184,6 +184,8 @@ if __name__ == "__main__":
     <p>DocsAPI is not built on a single OCR engine. It uses a layout-aware proprietary engine with a vision-language model fallback for complex cases, and it extracts fields and tables, runs document checks, and flags low-confidence fields for a person to review. It was built by HyperVerge. In DocsAPI's own 2026 benchmark of 1,700 documents it scored 97 to 99% on clean typed text, 93% on invoice line items and 91% on multi-page bank statement tables. Those figures come from that benchmark, not from the Tesseract tests in this guide, and we did not run the shift, tilt or scale tests on DocsAPI, so we make no claim about how it behaves on them.</p>
     <p>If your documents vary in layout, the useful step is to test with your own worst pages, and to read how DocsAPI's figures were measured in the <a href="/resources/blogs/ocr-accuracy-benchmark-2026">2026 accuracy benchmark</a>. DocsAPI is available as a demo, then a free 30-day trial for qualified lenders. Pricing starts from $0.02 per page, with volume discounts above 100,000 pages a month. Take 50 of your documents, include the crooked and oddly sized ones, and count how many fields come back right on the first read and how many wrong values come back without a flag.</p>
 
+    <p>Zonal OCR needs a fixed layout. When a table has a variable number of rows, read the words with their positions and rebuild the columns, as we tested in <a href="/resources/blogs/extract-tables-from-scanned-pdf">extracting tables from scanned PDFs</a>.</p>
+
     <h2>Sources and how we checked this</h2>
     <p>All figures come from our own runs on 6 November 2026 with Tesseract 5.5.2: 640 synthetic invoices (16 conditions, 40 invoices each), four methods, eight fields, checked against the raw per-field results. The script test used 40 other invoices per condition and a separate random seed, and the script printed here is the file we ran. Millimetre values are pixels divided by 300 DPI and multiplied by 25.4. The 45 pixel figure for a 1 degree tilt is 2,550 pixels times the sine of 1 degree. We reviewed vendor pages describing zonal OCR while checking the topic; none we found published measured accuracy by shift, tilt or scale, and one vendor's 95 to 99% accuracy claim for consistent layouts could not be verified, which is why we ran these tests ourselves. DocsAPI figures are from its own 2026 benchmark on 1,700 documents.</p>
 
@@ -193,8 +195,8 @@ if __name__ == "__main__":
   category: "AI Document Intelligence",
   date: "November 6, 2026",
   datePublished: "2026-11-06T00:00:00.000Z",
-  dateModified: "2026-11-06T00:00:00.000Z",
-  last_updated: "November 6, 2026",
+  dateModified: "2026-11-16T00:00:00.000Z",
+  last_updated: "November 16, 2026",
   readTime: "15 min read",
   author: nupuraUghade,
   primary_keyword: "zonal ocr",

@@ -178,6 +178,8 @@ def prep(a, noise_max=20, bg_max=40, min_height=7, max_angle=1.0):
   <li>Color photographs, handwriting, stamps and other languages were not part of this run.</li>
 </ul>
 
+<p>For tables with ruled lines, erasing the lines before OCR took ruled scans from 0.0% to 99.7% of cells right in our <a href="/resources/blogs/extract-tables-from-scanned-pdf">table extraction test</a>.</p>
+
 <h2>Sources and how we checked this</h2>
 <p>All results are from our own runs: 5,040 reads for the step by condition matrix (12 steps, 14 conditions, 30 pages) and 1,440 reads for the held-out comparison (3 methods, 16 conditions, 30 pages), 6,480 in total, with Tesseract 5.5.2 in single block mode. The script above is the version we ran for the held-out test. Public guides to improving Tesseract accuracy, including a vendor guide that lists contrast, binarization, noise removal and deskewing as standard steps, give advice and a few illustrative figures but, in the ones we read, no measured error rates by step and condition, which is why we measured them.</p>
   `,
@@ -186,8 +188,8 @@ def prep(a, noise_max=20, bg_max=40, min_height=7, max_angle=1.0):
   category: "AI Document Intelligence",
   date: "November 10, 2026",
   datePublished: "2026-11-10T00:00:00.000Z",
-  dateModified: "2026-11-10T00:00:00.000Z",
-  last_updated: "November 10, 2026",
+  dateModified: "2026-11-16T00:00:00.000Z",
+  last_updated: "November 16, 2026",
   readTime: "15 min read",
   author: nupuraUghade,
   primary_keyword: "ocr preprocessing",

@@ -197,6 +197,8 @@ def read_iban(img):
     <p>Four things. First, the images are clean renders with added blur and noise, and real scans fail in worse ways (folds, stamps over digits, shadow). Second, we tested one engine, Tesseract; a modern layout and language model reads these fields differently and the swap table above would not carry over. Third, the fields were cropped and isolated, while a real page needs the field found first, which is a separate source of error covered in the <a href="/resources/blogs/ocr-layout-analysis-and-key-value-extraction">layout guide</a>. Fourth, we tested English-language Latin characters only, in four fonts.</p>
     <p>Treat the percentages as a way to rank fixes on your own documents, not as expected accuracy. The ranking is the part we trust: validate first, retry second, whitelist where the field allows it, and never accept a format check as proof of a correct read.</p>
 
+    <p>For errors in table cells specifically, including wrong numbers that an arithmetic check can catch, see <a href="/resources/blogs/extract-tables-from-scanned-pdf">extracting tables from scanned PDFs</a>.</p>
+
     <h2>Where does DocsAPI fit?</h2>
     <p>DocsAPI reads documents, extracts fields and tables, runs format and document checks, and flags low-confidence fields for a person to review. It was built by HyperVerge. In DocsAPI's own 2026 benchmark of 1,700 documents it scored 93% on invoice line items and 91% on multi-page bank statements, against 64 to 79% for other tools on the statements. Those figures come from that benchmark, not from the Tesseract tests above, and the two should not be compared. The benchmark is described in <a href="/resources/blogs/ocr-accuracy-benchmark-2026">our 2026 accuracy benchmark</a>.</p>
     <p>If you want to see how it handles your own difficult fields, the path is a demo, then a free 30-day trial for qualified lenders. Pricing starts from $0.02 per page, with volume discounts above 100,000 pages a month. Whatever tool you choose, run the same test: take 50 of your worst fields, count how many are right on the first read, and count how many wrong values the tool lets through without a flag. The second number is the one that costs money. The <a href="/resources/blogs/paddleocr-vs-tesseract-vs-docsapi">PaddleOCR, Tesseract and DocsAPI comparison</a> has a method for doing this side by side.</p>
@@ -209,8 +211,8 @@ def read_iban(img):
   category: "AI Document Intelligence",
   date: "November 4, 2026",
   datePublished: "2026-11-04T00:00:00.000Z",
-  dateModified: "2026-11-04T00:00:00.000Z",
-  last_updated: "November 4, 2026",
+  dateModified: "2026-11-16T00:00:00.000Z",
+  last_updated: "November 16, 2026",
   readTime: "13 min read",
   author: nupuraUghade,
   primary_keyword: "how to fix ocr errors",

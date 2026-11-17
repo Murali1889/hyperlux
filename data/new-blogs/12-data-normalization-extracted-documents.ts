@@ -88,6 +88,8 @@ parse_date("05/04/2025", day_first=True)   # "2025-04-05"</code></pre>
     </ul>
     <p>The same discipline shows up in compliance work, where amounts have to be numbers before monitoring can use them. See <a href="/resources/blogs/aml-document-checks">AML document checks</a>.</p>
 
+    <p>One place normalization pays off at once is invoice numbers. In our test of 1,800 OCR reads, normalizing and folding look-alike characters took duplicate detection from 28% to 97.5%; see <a href="/resources/blogs/duplicate-invoice-detection-ocr">duplicate invoice detection with OCR</a>.</p>
+
     <h2>What should you do first?</h2>
     <p>If extracted data feeds other systems, build the normalization layer before you scale up OCR, because cleaning up later is harder. If you already have messy data, start with the field that causes the most downstream bugs, usually dates or vendor names, and fix that one first. When you evaluate a document AI vendor, ask what normalization it does, whether it is locale-aware, and whether it returns the raw value next to the clean one. For the wider limits of OCR itself, see the <a href="/resources/blogs/ocr-pdf-honest-guide">honest guide to OCR</a>.</p>
   `,
@@ -96,8 +98,8 @@ parse_date("05/04/2025", day_first=True)   # "2025-04-05"</code></pre>
   category: "AI Document Intelligence",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-10-29T00:00:00.000Z",
-  last_updated: "October 29, 2026",
+  dateModified: "2026-11-17T00:00:00.000Z",
+  last_updated: "November 17, 2026",
   readTime: "8 min read",
   author: nupuraUghade,
   primary_keyword: "data normalization",

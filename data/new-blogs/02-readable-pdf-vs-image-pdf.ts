@@ -152,6 +152,8 @@ if __name__ == "__main__":
 <p>Our pages are synthetic: one font, English dictionary words, no tables, no columns, no stamps, no handwriting, no non-Latin scripts. Real documents are messier, and a scan of a real invoice will behave differently from our pages. The thresholds (25 characters, 80% coverage, 2,000 segments, 0.95 agreement) are our choices and are worth re-tuning on your own files.</p>
 <p>We also did not test a fourth failure that exists in the wild: native text whose font map is broken, so the page looks right and copying it gives garbled characters. The agreement check would likely flag such a page, because a fresh read of the rendered page would not match the garbled layer, but we have not measured it. We also did not test encrypted or password-protected files. Finally, the agreement check used Tesseract on both sides of the comparison for the OCR-layered pages, so it measures consistency, not truth.</p>
 
+<p>If the file is a scan and the page holds a table, see <a href="/resources/blogs/extract-tables-from-scanned-pdf">how to extract tables from a scanned PDF</a>, where we tested table tools on OCR text layers.</p>
+
 <h2>Where does DocsAPI fit?</h2>
 <p>DocsAPI reads scans and photographed pages and returns structured data. In our 2026 benchmark of 1,700 documents it read clean typed text at 97% to 99% and about 1.1 seconds per page. Pricing starts at $0.02 per page, and access begins with a demo. The page label above is a routing step you can run before any engine, ours or someone else's. See <a href="/products">the products page</a> for what DocsAPI reads, and <a href="/pricing">pricing</a> for the per-page rate.</p>
 <p>If you are deciding how much of this to build, start with the 12-millisecond label on every page. It tells you which pages are pictures, which are text and which need a closer look, and it costs almost nothing to run.</p>
@@ -161,8 +163,8 @@ if __name__ == "__main__":
   category: "OCR How-To",
   date: "June 17, 2026",
   datePublished: "2026-06-17T00:00:00.000Z",
-  dateModified: "2026-11-13T00:00:00.000Z",
-  last_updated: "November 13, 2026",
+  dateModified: "2026-11-16T00:00:00.000Z",
+  last_updated: "November 16, 2026",
   readTime: "13 min read",
   author: nupuraUghade,
   primary_keyword: "readable pdf vs image pdf",

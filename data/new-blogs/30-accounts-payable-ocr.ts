@@ -126,6 +126,8 @@ export const blog30: BlogPost = {
       <li><strong>You process receipts and purchase orders too:</strong> our <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">guide to OCR for invoices, receipts and purchase orders</a> covers each document type.</li>
     </ul>
 
+    <p>For the duplicate check specifically, we tested six rules on 1,800 OCR reads in <a href="/resources/blogs/duplicate-invoice-detection-ocr">duplicate invoice detection with OCR</a>.</p>
+
     <h2>Sources and how we checked this</h2>
     <ul>
       <li>Invoice processing cost, processing time and exception rates: Ardent Partners, <a href="https://payablesplace.ardentpartners.com/2026/01/state-of-epayables-part-nine-ap-benchmarks-and-best-in-class-performance/" target="_blank" rel="noopener">State of ePayables 2025, AP benchmarks and best-in-class performance</a> (January 22, 2026).</li>
@@ -140,8 +142,8 @@ export const blog30: BlogPost = {
   category: "AI Document Intelligence",
   date: "July 1, 2026",
   datePublished: "2026-07-01T00:00:00.000Z",
-  dateModified: "2026-11-10T00:00:00.000Z",
-  last_updated: "November 10, 2026",
+  dateModified: "2026-11-17T00:00:00.000Z",
+  last_updated: "November 17, 2026",
   readTime: "12 min read",
   author: nupuraUghade,
   primary_keyword: "accounts payable ocr",
