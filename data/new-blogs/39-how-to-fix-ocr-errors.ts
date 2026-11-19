@@ -116,7 +116,7 @@ export const blog39: BlogPost = {
 
     <h2>Why is a checksum the strongest fix?</h2>
     <p>Because it tells you whether a read is wrong, which nothing else here does. An IBAN carries two check digits. Move the first four characters to the end, turn letters into numbers (A is 10, B is 11, and so on), read the result as one big integer and divide by 97. A valid IBAN leaves a remainder of 1. Change one digit anywhere and the remainder changes, which is plain arithmetic: the value moves by a digit difference times a power of ten, and that is never a multiple of the prime 97. Random garbage still passes about once in 97 tries, so the check is strong, not absolute.</p>
-    <p>We applied one rule: the read must look like DE followed by 20 digits and pass the mod 97 test. If a read failed, we tried the whitelist read, then the 2x read, then the 3x read, and accepted the first one that passed. Any rule you can write down works the same way. Our guide to <a href="/resources/blogs/mrz-passport-verification">MRZ passport verification</a> shows the equivalent check for passports, with a worked example.</p>
+    <p>We applied one rule: the read must look like DE followed by 20 digits and pass the mod 97 test. If a read failed, we tried the whitelist read, then the 2x read, then the 3x read, and accepted the first one that passed. Any rule you can write down works the same way, and a bank statement already carries one in its running balance, which we tested in <a href="/resources/blogs/bank-statement-ocr-errors-balance-check">bank statement OCR errors</a>. Our guide to <a href="/resources/blogs/mrz-passport-verification">MRZ passport verification</a> shows the equivalent check for passports, with a worked example.</p>
     <table>
       <thead><tr><th>Field and quality</th><th>Right on first read</th><th>Fixed by retry</th><th>Still flagged</th><th>Wrong but accepted</th><th>Right with no human</th></tr></thead>
       <tbody>
@@ -211,8 +211,8 @@ def read_iban(img):
   category: "AI Document Intelligence",
   date: "November 4, 2026",
   datePublished: "2026-11-04T00:00:00.000Z",
-  dateModified: "2026-11-16T00:00:00.000Z",
-  last_updated: "November 16, 2026",
+  dateModified: "2026-11-19T00:00:00.000Z",
+  last_updated: "November 19, 2026",
   readTime: "13 min read",
   author: nupuraUghade,
   primary_keyword: "how to fix ocr errors",

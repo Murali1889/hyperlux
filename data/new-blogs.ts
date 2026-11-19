@@ -47,6 +47,7 @@ import { blog45 } from "./new-blogs/45-ocr-image-preprocessing-what-helps-what-h
 import { blog46 } from "./new-blogs/46-ocr-checkbox-and-signature-detection"
 import { blog47 } from "./new-blogs/47-extract-tables-from-scanned-pdf"
 import { blog48 } from "./new-blogs/48-duplicate-invoice-detection-ocr"
+import { blog49 } from "./new-blogs/49-bank-statement-ocr-errors-balance-check"
 
 // Invoice/AP-OCR cluster (topic 1 of 3, 21 posts) — see
 // docs/superpowers/specs/2026-08-07-invoice-ap-ocr-cluster-design.md
@@ -241,6 +242,7 @@ export const newBlogs: BlogPost[] = [
   blog46,
   blog47,
   blog48,
+  blog49,
   blogAp01,
   blogAp02,
   blogAp03,

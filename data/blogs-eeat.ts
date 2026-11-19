@@ -448,8 +448,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
     primary_keyword: "automated bank statement analysis",
     secondary_keywords: ["bank statement analysis", "bank statement ocr", "bank statement sign convention", "running balance check", "cash flow analysis from bank statements"],
     datePublished: "2025-06-18T00:00:00.000Z",
-    dateModified: "2026-11-10T00:00:00.000Z",
-    last_updated: "November 10, 2026",
+    dateModified: "2026-11-19T00:00:00.000Z",
+    last_updated: "November 19, 2026",
     tags: ["bank statements", "OCR", "lending", "verification"],
     cluster: "industry-trends",
     faq: [
