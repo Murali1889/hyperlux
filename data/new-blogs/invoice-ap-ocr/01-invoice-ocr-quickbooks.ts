@@ -51,7 +51,7 @@ export const blogAp01: BlogPost = {
     <ol>
       <li><strong>Vendor matching by name instead of ID.</strong> "Acme Supply Co" and "Acme Supply Co." are different strings. Match on VendorRef ID against a fuzzy-matched vendor master, not on the raw extracted name, or your vendor list grows a near-duplicate every few weeks.</li>
       <li><strong>GL coding is not an OCR problem.</strong> Optical extraction can read that a line item cost $340. It cannot know that line item belongs in "Office Supplies" versus "COGS, Materials" without a separate rules layer trained on your historical coding or an explicit chart-of-accounts mapping.</li>
-      <li><strong>QuickBooks does not check the invoice total for you.</strong> TotalAmt is read only, and QuickBooks overwrites whatever you send with its own sum of the lines. If the extracted lines add up to $4,999.98 and the invoice states $5,000.00, the bill posts at $4,999.98 and nothing warns you. A reconciliation step before the API call, comparing the printed total with the summed lines and allowing a small rounding tolerance, is the only thing that catches it.</li>
+      <li><strong>QuickBooks does not check the invoice total for you.</strong> TotalAmt is read only, and QuickBooks overwrites whatever you send with its own sum of the lines. If the extracted lines add up to $4,999.98 and the invoice states $5,000.00, the bill posts at $4,999.98 and nothing warns you. A reconciliation step before the API call, comparing the printed total with the summed lines and allowing a small rounding tolerance, is the only thing that catches it. The same arithmetic catches OCR misreads: in our <a href="/resources/blogs/extract-invoice-data-to-excel">test of 600 scanned invoices read into Excel</a>, checking that subtotal plus tax equals the printed total flagged 15 of the 16 wrong subtotal and tax amounts, and the 16th was flagged as a missing field.</li>
       <li><strong>Closed accounting periods reject postings quietly.</strong> If TxnDate falls inside a period the company file has closed, the Bill will not post. Check the close date before attempting the write, not after it fails.</li>
       <li><strong>Multi-currency adds a step single-currency companies never see.</strong> CurrencyRef and exchange rate handling only matter once multi-currency is enabled, but teams that started single-currency and later expanded internationally often miss this when a new vendor invoice arrives in a foreign currency.</li>
     </ol>
@@ -94,8 +94,8 @@ export const blogAp01: BlogPost = {
   category: "Accounts Payable",
   date: "August 9, 2026",
   datePublished: "2026-08-09T00:00:00.000Z",
-  dateModified: "2026-10-22T00:00:00.000Z",
-  last_updated: "October 22, 2026",
+  dateModified: "2026-11-20T00:00:00.000Z",
+  last_updated: "November 20, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "invoice ocr quickbooks integration",

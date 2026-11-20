@@ -54,7 +54,7 @@ export const blogAp06: BlogPost = {
 
     <h2>Where OCR extraction quality changes the false-positive rate</h2>
 
-    <p>Composite matching only works if the underlying extracted data is consistent. If your OCR reads the same physical invoice differently on two separate scans, misreading a "1" as a "7" in the invoice number on one pass, the matching logic sees two different invoice numbers for what should be an identical, non-duplicate submission and never flags it as related at all, which is a false negative caused by extraction inconsistency rather than a logic failure. Our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">benchmark</a> found layout-aware extraction reaching 93% on invoice line items, and the practical implication here is specific: consistent extraction quality matters as much to duplicate detection as it does to the field values themselves, because the matching logic is only as reliable as the two independent readings it is comparing.</p>
+    <p>Composite matching only works if the underlying extracted data is consistent. If your OCR reads the same physical invoice differently on two separate scans, misreading a "1" as a "7" in the invoice number on one pass, the matching logic sees two different invoice numbers for what should be an identical, non-duplicate submission and never flags it as related at all, which is a false negative caused by extraction inconsistency rather than a logic failure. In our test of 600 scanned invoices read into Excel, 17 invoice numbers came out wrong and 10 of them passed every check on the page, because a misread character still looks like a valid number; the details are in our guide to <a href="/resources/blogs/extract-invoice-data-to-excel">extracting invoice data to Excel</a>. Our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">benchmark</a> found layout-aware extraction reaching 93% on invoice line items, and the practical implication here is specific: consistent extraction quality matters as much to duplicate detection as it does to the field values themselves, because the matching logic is only as reliable as the two independent readings it is comparing.</p>
 
     <h2>What actually costs money: duplicate detection after payment, not before</h2>
 
@@ -78,8 +78,8 @@ export const blogAp06: BlogPost = {
   category: "Accounts Payable",
   date: "August 10, 2026",
   datePublished: "2026-08-10T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
+  dateModified: "2026-11-20T00:00:00.000Z",
+  last_updated: "November 20, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "duplicate invoice detection",
