@@ -40,6 +40,7 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Metadata
   { path: "/tools/which-ocr", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-08" },
   { path: "/tools/free-ocr", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-09-28" },
   { path: "/pricing", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-10-28" },
+  { path: "/about", priority: 0.6, changeFrequency: "monthly", lastModified: "2026-11-25" },
   { path: "/book-demo", priority: 0.7, changeFrequency: "yearly", lastModified: "2026-10-08" },
   { path: "/llms.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-10-28" },
   { path: "/llms-full.txt", priority: 0.3, changeFrequency: "monthly", lastModified: "2026-10-28" },
