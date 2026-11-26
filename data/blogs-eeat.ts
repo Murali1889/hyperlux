@@ -249,9 +249,9 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
 
   "intelligent-document-processing-the-future-of-automated-data-extraction": {
     summary:
-      "Intelligent document processing (IDP) automatically classifies documents, extracts the data that matters and validates it before sending it to business systems. It builds on OCR but adds an understanding of document types and checks, so the output can be used without retyping.",
+      "Intelligent document processing (IDP) reads a document, identifies its type, extracts the fields and tables you need, checks them against rules and sends only the failures to a person. OCR is one step inside it: OCR turns a page image into text, and IDP turns that text into checked data. IDP is worth it when documents arrive in many layouts, the data feeds a system of record and a wrong value costs money; if you only need searchable text, OCR alone is enough.",
     description:
-      "A practical look at intelligent document processing, what it is, where it beats OCR, and how to deploy it without overengineering.",
+      "What intelligent document processing is, how IDP differs from OCR, one invoice through each stage, where each stage fails, and what to test first.",
     primary_keyword: "intelligent document processing",
     secondary_keywords: [
       "idp",
@@ -261,15 +261,35 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "ai document processing",
     ],
     datePublished: "2025-05-28T00:00:00.000Z",
-    dateModified: "2026-09-28T00:00:00.000Z",
-    last_updated: "September 28, 2026",
+    dateModified: "2026-11-26T00:00:00.000Z",
+    last_updated: "November 26, 2026",
     tags: ["IDP", "automation", "document AI"],
     cluster: "ai-doc",
     faq: [
       {
         question: "What is intelligent document processing?",
         answer:
-          "Intelligent document processing (IDP) is the combination of OCR, computer vision, NLP, and machine learning that ingests a document, identifies what it is, extracts the data that matters, validates it against business rules, and pushes it into downstream systems, usually with no human in the loop for standard cases.",
+          "Intelligent document processing (IDP) is software that reads a document, works out what kind of document it is, pulls out the fields and tables you need and checks them against rules. Clean results go to the system that uses them, and a person sees only what fails a check.",
+      },
+      {
+        question: "What is the difference between IDP and OCR?",
+        answer:
+          "OCR turns the picture of a page into text and stops there. IDP uses that text to classify the document, extract named fields and table rows with confidence scores, check them with arithmetic, format, check digit and lookup rules, and send the failures to a person.",
+      },
+      {
+        question: "When is OCR enough instead of IDP?",
+        answer:
+          "OCR alone is enough when the output is text for people or search, such as a searchable archive or page text for a search index. OCR plus your own code can work for one stable layout at low volume. IDP earns its cost when documents come in many layouts or mixed packets, the values feed an ERP or loan system, and a wrong value moves money.",
+      },
+      {
+        question: "Where does intelligent document processing fail?",
+        answer:
+          "Classification misses boundaries between two documents of the same type, fixed templates break when the layout shifts, and checks only protect fields that take part in a rule. In a Tesseract test on 120 generated loan packets, splitting by page type alone got 8 of 120 right. In a test on 640 synthetic invoices, a 1.7 mm shift took tight fixed zones from 97.2% to 0%.",
+      },
+      {
+        question: "How do you test an IDP tool before buying?",
+        answer:
+          "Run it on your own documents, including phone photos, faxes and multi-page statements, and score each field as right or wrong. Sort the results into right and passed, wrong and flagged, right but flagged, and wrong but passed. The last group is your risk, and a reviewed random sample of passed documents is how you measure it.",
       },
     ],
   },

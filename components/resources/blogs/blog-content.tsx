@@ -30,7 +30,11 @@ function prepareContent(html: string) {
     })
     .replace(/<table/g, '<div class="table-wrap"><table')
     .replace(/<\/table>/g, "</table></div>")
-    .replace(/<a ([^>]*href="https?:\/\/[^"]*"[^>]*)>/g, '<a rel="noopener" $1>');
+    // Add rel="noopener" only when the link has no rel of its own: a second rel attribute is
+    // ignored by browsers and crawlers, so prepending one used to drop the author's "nofollow".
+    .replace(/<a ([^>]*href="https?:\/\/[^"]*"[^>]*)>/g, (tag: string, attrs: string) =>
+      /\brel=/.test(attrs) ? tag : `<a rel="noopener" ${attrs}>`,
+    );
   return { html: out, toc };
 }
 
