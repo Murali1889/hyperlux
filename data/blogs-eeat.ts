@@ -529,9 +529,9 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
   "the-ultimate-guide-to-small-business-lending-automation-revolutionizing-sba-loans-and-financing":
     {
     summary:
-      "Small business lending automation uses OCR, data extraction and rules to collect and check loan documents such as bank statements, tax returns and business records, so lenders reach decisions faster and with fewer manual errors. It speeds up SBA and other small business loans without replacing the underwriter's judgment.",
+      "Small business lending automation for SBA 7(a) loans can collect the documents, split a mixed upload, read tax returns, bank statements and personal financial statements, and check the file against SOP 50 10 8.1 before underwriting. It cannot make the calls SBA leaves to the lender: credit elsewhere, cash flow add-backs, equity, collateral and how to resolve a gap between a return and its IRS transcript.",
       description:
-        "SBA loan automation explained: which documents to automate first, how bank statement and tax return extraction fit in, and the three kinds of vendors.",
+        "SBA loan automation under SOP 50 10 8.1: what a 7(a) file must hold, what software can check, one file checked step by step, and what to ask vendors.",
       primary_keyword: "small business lending automation",
       secondary_keywords: [
         "sba loan automation",
@@ -547,9 +547,29 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       cluster: "industry-trends",
       faq: [
         {
-          question: "How much faster are automated SBA loans?",
+          question: "What parts of an SBA 7(a) loan file can be automated?",
           answer:
-            "It depends on where your files wait today. The time saved comes from automated document collection, extraction, eligibility pre-screening and completeness checks, so measure your current time per step before and after.",
+            "Collecting documents, splitting a combined PDF, reading tax returns, bank statements and personal financial statements, comparing the file with the SOP 50 10 8.1 document list, comparing IRS transcripts with returns, and running SAM.gov and OFAC searches. The credit memo, add-backs, equity, collateral and any transcript difference stay with the lender.",
+        },
+        {
+          question: "How recent must a personal financial statement be for an SBA 7(a) loan?",
+          answer:
+            "SOP 50 10 8.1 says it must be signed and dated within 90 days of submission to SBA. The Form 413 header says 120 days for 7(a), so build the check to the SOP's 90 days until SBA aligns them.",
+        },
+        {
+          question: "Who must give a guaranty and a personal financial statement on an SBA 7(a) loan?",
+          answer:
+            "Anyone owning 20% or more must give an unlimited full guaranty, and so must each spouse owning less than 20% when the spouses and minor children together own 20% or more. Every guarantor except a Supplemental Guarantor also gives a personal financial statement.",
+        },
+        {
+          question: "Which transcript should an SBA lender request on Form 4506-C?",
+          answer:
+            "Pick a type that shows changes made after filing. Form 4506-C's instructions say a Return Transcript does not, while a Record of Account combines the Return and Account Transcripts. Each 4506-C takes one tax form number, and the IRS must receive it within 120 days of signing.",
+        },
+        {
+          question: "How much time does SBA loan automation save?",
+          answer:
+            "There is no general figure to rely on. Log the next 20 SBA files with timestamps for collection, spreading, the credit memo and tax verification, then log the first 20 after automation, and compare medians along with counts of borrower requests and fields fixed by hand.",
         },
       ],
     },
