@@ -15,13 +15,13 @@ export default function VerificationWorkflow() {
     {
       icon: <GitCompare className="h-8 w-8 text-indigo-700" />,
       title: "Data Fusion & Validity Check",
-      description: "Front OCR data is cross-referenced with barcode data to ensure consistency and detect tampering.",
+      description: "The printed front is compared with the barcode data, and a mismatch is flagged as possible tampering.",
     },
     {
       icon: <ShieldCheck className="h-8 w-8 text-indigo-700" />,
       title: "Fraud Score Output",
       description:
-        "A comprehensive fraud score is generated based on multiple verification factors and security features.",
+        "The checks are combined into one fraud score, so a reviewer knows which licenses to look at closely.",
     },
   ]
 
@@ -30,7 +30,7 @@ export default function VerificationWorkflow() {
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Verification Workflow</h2>
         <p className="text-lg text-gray-700 mb-12 text-center max-w-3xl mx-auto">
-          Our four-step process ensures accurate data extraction and fraud detection for driver licences.
+          Four steps, from photo to fraud score.
         </p>
 
         <div className="relative">

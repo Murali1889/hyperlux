@@ -9,7 +9,7 @@ export default function KeyFeatures() {
       icon: <FileText className="w-10 h-10 text-indigo-600" />,
       title: "Bank statement OCR and parsing",
       description:
-        "Our advanced OCR technology automatically extracts and categorizes transaction data from bank statements issued by many different banks. The system identifies deposits, withdrawals, recurring payments, and calculates average balances. It handles multiple statement formats including PDFs, images, and digital statements, with 91% row accuracy on multi-page statement tables in our 2026 benchmark. Rows the engine is unsure about are flagged for review, and nobody has to retype a statement.",
+        "Transaction data is extracted and categorized from statements issued by many different banks. The system identifies deposits, withdrawals, recurring payments, and calculates average balances. It handles multiple statement formats including PDFs, images, and digital statements, with 91% row accuracy on multi-page statement tables in our 2026 benchmark. Rows the engine is unsure about are flagged for review, and nobody has to retype a statement.",
       features: ["Multi-bank support", "Transaction categorization", "Balance calculation", "Format flexibility"],
     },
     {
@@ -23,7 +23,7 @@ export default function KeyFeatures() {
       icon: <ShieldAlert className="w-10 h-10 text-indigo-600" />,
       title: "Fraud detection flags",
       description:
-        "Our AI-powered fraud detection system automatically identifies potential document tampering, inconsistencies, and suspicious patterns. It checks for pixel-level alterations, font inconsistencies, and mathematical discrepancies in financial documents. The system compares data across multiple documents to identify contradictions, and flags reach loan officers so they can investigate before a decision is made.",
+        "Fraud checks look for tampering, numbers that do not agree, and suspicious patterns. It checks for pixel-level alterations, font inconsistencies, and mathematical discrepancies in financial documents. The system compares data across multiple documents to identify contradictions, and flags reach loan officers so they can investigate before a decision is made.",
       features: [
         "Document tampering detection",
         "Cross-document verification",
@@ -35,7 +35,7 @@ export default function KeyFeatures() {
       icon: <ClipboardCheck className="w-10 h-10 text-indigo-600" />,
       title: "Audit-ready reporting",
       description:
-        "Generate comprehensive, compliance-focused verification reports that document every step of the verification process. Each report includes data sources, extraction confidence scores, validation checks performed, and exception handling. The system maintains a complete audit trail of all verification activities, including user actions and system processes. Reports are customizable to meet specific regulatory requirements including TILA-RESPA, Ability-to-Repay, and Fair Lending standards. This ensures your verification process is fully transparent and audit-ready.",
+        "Each file gets a verification report that records every step. Each report includes data sources, extraction confidence scores, validation checks performed, and exception handling. The system maintains a complete audit trail of all verification activities, including user actions and system processes. Reports are customizable to meet specific regulatory requirements including TILA-RESPA, Ability-to-Repay, and Fair Lending standards. So when an auditor asks why a file was approved, the answer is on record.",
       features: [
         "Comprehensive documentation",
         "Compliance alignment",
@@ -57,8 +57,7 @@ export default function KeyFeatures() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Key Features</h2>
           <p className="text-lg text-slate-600">
-            Our AI-powered loan verification solution offers comprehensive capabilities to transform your lending
-            process
+            What loan verification covers
           </p>
         </motion.div>
 

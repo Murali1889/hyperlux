@@ -38,7 +38,7 @@ export default function DeveloperOutput() {
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Developer Output</h2>
         <p className="text-lg text-gray-700 mb-10 text-center max-w-3xl mx-auto">
-          Our API returns a comprehensive JSON response with extracted fields, barcode data, and validity scores.
+          The API returns JSON with the extracted fields, the decoded barcode data and a validity score.
         </p>
 
         <div className="bg-gray-900 rounded-xl shadow-xl overflow-hidden">

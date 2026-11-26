@@ -17,8 +17,7 @@ export default function ProductIntegrations() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">OCR Software Integrations</h2>
           <p className="text-xl text-gray-600">
-            Our AI document processing software integrates seamlessly with your existing tech stack for streamlined
-            lending workflows
+            Results come back as JSON through one API, so they fit into the systems you already run
           </p>
         </div>
 

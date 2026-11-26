@@ -28,7 +28,7 @@ export default function DemoAnimation() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">See Finance Automation in Action</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Watch how our AI transforms unstructured documents into structured data in seconds
+            Watch a document turn into structured data
           </p>
         </motion.div>
 

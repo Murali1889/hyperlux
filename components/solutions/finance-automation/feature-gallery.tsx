@@ -28,7 +28,7 @@ export default function FeatureGallery() {
       icon: <FileCheck className="h-10 w-10 text-white" />,
       title: "Audit-Pack Builder",
       description:
-        "Generate comprehensive audit packs with a single click. Compile all necessary documentation and maintain compliance with regulatory requirements automatically.",
+        "Export an audit pack in one click. Compile all necessary documentation and maintain compliance with regulatory requirements automatically.",
     },
   ]
 
@@ -43,10 +43,10 @@ export default function FeatureGallery() {
           className="text-center mb-16"
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-indigo-900 mb-4">
-            Comprehensive Finance Automation Suite
+            What the Finance Tools Do
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Our AI-powered solutions transform your finance operations end-to-end
+            From invoice intake to audit pack
           </p>
         </motion.div>
 

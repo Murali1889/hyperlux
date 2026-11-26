@@ -11,7 +11,7 @@ export default function HowItWorks() {
     {
       title: "AI-Powered Extraction",
       description:
-        "Our specialized legal AI identifies and extracts clauses, dates, parties, and other key information with high precision.",
+        "Clauses, dates, parties and other key terms are extracted, and low-confidence ones are flagged for review.",
       icon: <Brain className="h-10 w-10 text-indigo-700" />,
     },
     {
@@ -37,8 +37,7 @@ export default function HowItWorks() {
               How It Works
             </h2>
             <p className="max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Our streamlined process transforms complex legal documents into structured, actionable data in four simple
-              steps.
+              Four steps from a scanned contract to fields your team can check.
             </p>
           </div>
         </div>

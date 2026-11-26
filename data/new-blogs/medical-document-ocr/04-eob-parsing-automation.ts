@@ -6,13 +6,13 @@ export const blogMd04: BlogPost = {
   title: "EOB Parsing Automation: Why It's Harder Than 835 Parsing",
   slug: "eob-parsing-automation",
   excerpt:
-    "An EOB and a remittance advice are not the same document. Here is the real structural difference and which fields actually matter for reconciliation.",
+    "An EOB and a remittance advice are different documents. The structural difference, and the fields that matter for reconciliation.",
   description:
     "The EOB is not the 835 in a different font. The real structural difference, why EOB layouts vary by payer, and the fields that matter for reconciliation.",
   metaTag: "EOB Parsing Automation: Why It's Harder Than 835 Parsing",
   content: `
     <p>An Explanation of Benefits and a remittance advice describe the exact same adjudicated claim, and treating them as interchangeable is where most EOB parsing projects go wrong. The remittance advice is a standardized EDI transaction. The EOB is not. They get built from the same underlying claim data at the payer, then diverge into two documents with different audiences, different regulatory obligations, and, critically for anyone trying to automate extraction, completely different levels of structural predictability. If you are building or buying a system to parse EOBs for reconciliation against billed charges, that distinction is the whole ballgame.</p>
-    <p>This post covers what actually separates an EOB from a remittance advice, why no payer is required to format an EOB the way claim forms are standardized, and which specific fields you need to pull out reliably for automated reconciliation to work. If you are working across the broader set of healthcare documents that feed a revenue cycle or a medical financing workflow, our <a href="/documents/medical-docs">medical document processing</a> page covers the full range these systems typically handle.</p>
+    <p>This post covers what separates an EOB from a remittance advice, why no payer is required to format an EOB the way claim forms are standardized, and which specific fields you need to pull out reliably for automated reconciliation to work. If you are working across the broader set of healthcare documents that feed a revenue cycle or a medical financing workflow, our <a href="/documents/medical-docs">medical document processing</a> page covers the full range these systems typically handle.</p>
 
     <h2>Same claim, two different documents</h2>
     <p>When a payer finishes adjudicating a claim, it generates two outputs from the same adjudication record. One goes to the provider: the remittance advice, sent electronically as an ANSI ASC X12 835 transaction (or, less often now, on paper as a "provider EOB"). The other goes to the patient: the Explanation of Benefits, a plain-language summary of what was billed, what the plan covered, and what the patient may owe.</p>
@@ -24,7 +24,7 @@ export const blogMd04: BlogPost = {
     <p>Nothing in HIPAA mandates an EOB format. The EOB is a consumer disclosure, closer in regulatory spirit to a bank statement than to an EDI transaction. Some states impose content requirements on EOBs through insurance codes (for example, requiring specific denial language or appeal rights language), but none of those rules dictate a layout, a column order, or a field name. A payer is free to lay out billed amount, allowed amount, and patient responsibility in three columns or in a paragraph, on one page or across four, with a code legend on the same page or in a glossary the patient has to look up on the payer's website. Two payers processing the identical claim scenario can produce EOBs that share zero column headers in common.</p>
     <p>This is the core reason EOB parsing is a harder engineering problem than 835 parsing, even though they represent the same underlying event. The 835 problem is "parse a known schema, handle real-world encoding noise." The EOB problem is "identify semantically equivalent fields across an open-ended and growing set of payer-specific, marketing-department-designed layouts, with no schema to check yourself against."</p>
 
-    <h2>What the 835 actually looks like structurally</h2>
+    <h2>What the 835 looks like structurally</h2>
     <p>It helps to see the standardized side of this concretely, because it is the yardstick you are working without on the EOB side. The X12 835 organizes claim payment data into loops and segments. The relevant ones for reconciliation:</p>
     <ul>
       <li><strong>Loop 2100, CLP segment</strong>, Claim Payment Information. One CLP segment per claim, carrying the claim's total charge, total paid amount, patient responsibility amount, and a claim status code.</li>
@@ -84,20 +84,20 @@ export const blogMd04: BlogPost = {
     </table>
     <p>If your team is already handling 835 files, our piece on <a href="/resources/blogs/835-remittance-advice-processing">835 remittance advice processing</a> goes deeper into extracting the CLP and CAS loops directly from EDI. This post is specifically about the harder, less standardized side: the document sent to the patient.</p>
 
-    <h2>The fields that actually matter for reconciliation</h2>
+    <h2>The fields that matter for reconciliation</h2>
     <p>Most EOB layouts, however different they look, are trying to communicate the same seven pieces of information. If your extraction pipeline reliably captures these, by meaning rather than by whatever header text a given payer happened to use, you can reconcile against billed charges regardless of layout:</p>
     <ul>
       <li><strong>Billed charge</strong> (sometimes "provider charge," "amount billed," "charges"). What the provider originally billed for the service. This is the number you check against your own accounts receivable.</li>
-      <li><strong>Allowed amount</strong> (or "plan allowed," "negotiated rate," "eligible amount"). What the plan's contract with the provider actually permits as the payable base, before cost-sharing is applied.</li>
+      <li><strong>Allowed amount</strong> (or "plan allowed," "negotiated rate," "eligible amount"). What the plan's contract with the provider permits as the payable base, before cost-sharing is applied.</li>
       <li><strong>Plan discount / contractual adjustment</strong>. The gap between billed and allowed. In-network, this is usually the largest single reduction and the one most likely to trigger a false "why didn't we get paid in full" flag if your reconciliation logic does not expect it.</li>
-      <li><strong>Amount paid by plan</strong>. What the payer actually disbursed, whether directly to the provider or, for out-of-network claims, sometimes to the patient.</li>
+      <li><strong>Amount paid by plan</strong>. What the payer disbursed, whether directly to the provider or, for out-of-network claims, sometimes to the patient.</li>
       <li><strong>Patient responsibility broken into its components</strong>: deductible applied, copay, and coinsurance. These three often appear as separate line items and need to be summed correctly, not treated as one field, because deductible-applied amounts behave differently in year-to-date accumulator tracking than copay or coinsurance do.</li>
       <li><strong>Denial or adjustment reason</strong>, whatever form the payer expresses it in. Even without a standardized code, capturing the text (or an internal payer code plus its definition, which is usually printed on the same page) is what lets you route "not medically necessary" differently from "duplicate claim" differently from "prior authorization missing."</li>
       <li><strong>Claim, member, and provider identifiers</strong>. The claim number is what links this EOB back to the provider's own billing record and, if you also receive the 835 for the same claim, is the join key that lets you cross-check the two documents against each other.</li>
     </ul>
 
     <h2>A worked reconciliation example</h2>
-    <p>Take a straightforward in-network office visit and lab panel. The provider bills $420 across two service lines. The EOB the patient receives shows the following, laid out (as many payers actually do it) as separate lines rather than one summary row:</p>
+    <p>Take a straightforward in-network office visit and lab panel. The provider bills $420 across two service lines. The EOB the patient receives shows the following, laid out (as many payers do it) as separate lines rather than one summary row:</p>
     <table>
       <thead>
         <tr>

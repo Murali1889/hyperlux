@@ -37,8 +37,7 @@ export default function ArchivingHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              Transform paper and scanned documents into fully searchable digital archives with AI-powered OCR, metadata
-              tagging, and intelligent indexing for faster retrieval and regulatory compliance.
+              Turn paper and scanned documents into a searchable archive, with OCR text, metadata tags and an index, so records can be found when an auditor asks.
             </motion.p>
             <motion.div
               className="mt-8 flex flex-wrap gap-4"

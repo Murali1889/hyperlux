@@ -46,9 +46,9 @@ export default function AnimatedJourney() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">The Customer Journey, Step by Step</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">What the Customer Sees, Step by Step</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            See how our technology transforms the customer onboarding experience from minutes to seconds.
+            From upload to verified, one step at a time.
           </p>
         </motion.div>
 
@@ -225,7 +225,7 @@ export default function AnimatedJourney() {
                         <div className="h-5 w-5 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
                           <span className="text-indigo-700 text-xs">3</span>
                         </div>
-                        <span className="text-gray-700">Glare and blur detection ensures quality capture</span>
+                        <span className="text-gray-700">Glare and blur are caught at capture</span>
                       </li>
                     </ul>
                   )}

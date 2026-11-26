@@ -25,8 +25,8 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "ocr document management system",
     ],
     datePublished: "2025-05-12T00:00:00.000Z",
-    dateModified: "2026-09-28T00:00:00.000Z",
-    last_updated: "September 28, 2026",
+    dateModified: "2026-11-26T00:00:00.000Z",
+    last_updated: "November 26, 2026",
     tags: ["OCR", "document management", "AI", "automation", "fintech"],
     cluster: "ocr",
     faq: [
@@ -496,7 +496,7 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
     summary:
       "Small business lending automation uses OCR, data extraction and rules to collect and check loan documents such as bank statements, tax returns and business records, so lenders reach decisions faster and with fewer manual errors. It speeds up SBA and other small business loans without replacing the underwriter's judgment.",
       description:
-        "How small business lending automation is shrinking SBA loan timelines from 45 days to under a week, without sacrificing compliance.",
+        "SBA loan automation explained: which documents to automate first, how bank statement and tax return extraction fit in, and the three kinds of vendors.",
       primary_keyword: "small business lending automation",
       secondary_keywords: [
         "sba loan automation",
@@ -506,15 +506,15 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
         "fintech lending",
       ],
       datePublished: "2025-06-27T00:00:00.000Z",
-      dateModified: "2026-09-28T00:00:00.000Z",
-      last_updated: "September 28, 2026",
+      dateModified: "2026-11-26T00:00:00.000Z",
+      last_updated: "November 26, 2026",
       tags: ["SBA loans", "lending", "automation", "small business"],
       cluster: "industry-trends",
       faq: [
         {
           question: "How much faster are automated SBA loans?",
           answer:
-            "Traditional SBA timelines: 30-45 days. With end-to-end automation: 5-10 business days for standard 7(a) applications. The savings come from automated document collection, extraction, eligibility pre-screening, and compliance checks.",
+            "It depends on where your files wait today. The time saved comes from automated document collection, extraction, eligibility pre-screening and completeness checks, so measure your current time per step before and after.",
         },
       ],
     },

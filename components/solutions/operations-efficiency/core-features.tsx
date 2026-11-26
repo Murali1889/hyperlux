@@ -17,7 +17,7 @@ export default function CoreFeatures() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">Core Features</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Our comprehensive suite of document processing tools streamlines your entire supply chain operation.
+            The documents a supply chain runs on, read and checked.
           </p>
         </motion.div>
 
@@ -60,8 +60,7 @@ export default function CoreFeatures() {
             <div className="p-6">
               <h3 className="text-xl font-bold text-indigo-900 mb-3">Packing-Slip Scan</h3>
               <p className="text-gray-700">
-                Process packing slips to verify contents against orders. Extract item codes, quantities, weights, and
-                special handling instructions to ensure accurate shipment verification. See our{" "}
+                Process packing slips to verify contents against orders. Extract item codes, quantities, weights and handling instructions, then check them against the shipment. See our{" "}
                 <Link href="/resources/blogs/packing-list-reconciliation" className="underline hover:text-indigo-700">
                   packing list reconciliation guide
                 </Link>

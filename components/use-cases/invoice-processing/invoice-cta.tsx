@@ -15,10 +15,9 @@ export default function InvoiceCta() {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Start Transforming Invoice Processing</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Try It on Your Own Invoices</h2>
           <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-            Join hundreds of companies that have revolutionized their accounts payable workflows with our AI-powered
-            invoice automation.
+            93% line-item accuracy in our 2026 benchmark. See what it does with your invoices.
           </p>
           <Button asChild size="lg" className="bg-white text-indigo-700 hover:bg-indigo-50">
             <Link href="/book-demo">Request Demo</Link>

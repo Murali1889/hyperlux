@@ -30,7 +30,7 @@ export default function LegalFAQ() {
     {
       question: "What redaction standards does your solution comply with?",
       answer:
-        "Our redaction technology adheres to the highest security standards, including NIST SP 800-171 for controlled unclassified information. The system performs true redaction, not just visual masking, ensuring that sensitive data cannot be recovered from the document. All redactions are applied at the binary level, removing the underlying data completely. The solution supports pattern-based redaction for PII (including names, addresses, SSNs, and financial information), as well as context-aware redaction that can identify sensitive information based on surrounding content. Each redaction is logged for compliance and audit purposes.",
+        "Our redaction technology adheres to the highest security standards, including NIST SP 800-171 for controlled unclassified information. It removes the redacted text from the file instead of covering it, so it cannot be copied back out. All redactions are applied at the binary level, removing the underlying data completely. The solution supports pattern-based redaction for PII (including names, addresses, SSNs, and financial information), as well as context-aware redaction that can identify sensitive information based on surrounding content. Each redaction is logged for compliance and audit purposes.",
     },
     {
       question: "How does the version comparison feature work?",

@@ -39,7 +39,7 @@ export default function PainPointTrio() {
             Common Finance Operation Challenges
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Organizations face these critical pain points that impact financial efficiency and accuracy
+            Where finance teams lose time today
           </p>
         </motion.div>
 

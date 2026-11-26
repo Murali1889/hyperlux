@@ -8,10 +8,10 @@ export default function MedicalDocsCta() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
-              Streamline Medical Data Capture Today
+              Test It on Your Own Medical Documents
             </h2>
             <p className="max-w-[900px] text-indigo-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Join leading healthcare organizations in transforming document processing with AI-powered OCR technology.
+              HIPAA-eligible, with a BAA on request. Start with a demo on your own documents.
             </p>
           </div>
           <div className="flex flex-col gap-2 min-[400px]:flex-row">

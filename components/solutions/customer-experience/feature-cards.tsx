@@ -25,7 +25,7 @@ export default function FeatureCards() {
       icon: <MessageSquare className="w-10 h-10 text-white" />,
       title: "Chatbot Vision",
       description:
-        "Enhance your customer support chatbots with document vision capabilities. Customers can share screenshots, receipts, or product images directly in chat, and our AI instantly extracts relevant information. That context means fewer follow-up questions for the customer.",
+        "Let your support chatbot read the documents customers send in. Customers can share screenshots, receipts, or product images directly in chat, and our AI instantly extracts relevant information. That context means fewer follow-up questions for the customer.",
     },
     {
       icon: <TicketCheck className="w-10 h-10 text-white" />,
@@ -46,11 +46,10 @@ export default function FeatureCards() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">
-            Intelligent Document Processing for Better CX
+            Faster Document Steps in Onboarding
           </h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Our AI-powered solutions transform how customers interact with your business through intelligent document
-            processing.
+            Where document reading shows up in the customer experience.
           </p>
         </motion.div>
 

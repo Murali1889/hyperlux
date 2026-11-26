@@ -20,7 +20,7 @@ export const metadata: Metadata = buildPageMetadata({ title: TITLE, description:
 
 const CONTENT = {
   intro:
-    "Invoice processing is the workflow that takes an incoming vendor invoice from arrival to a paid, reconciled entry in your accounting system. Done manually, someone keys every field and the invoice waits in a queue for days. Done with invoice processing OCR, the fields are read and checked as the invoice arrives, and only the unclear ones wait for a person. This page explains how automated invoice processing works, what it saves, and how to move your accounts payable team from manual data entry to a touchless pipeline.",
+    "Invoice processing is the workflow that takes an incoming vendor invoice from arrival to a paid, reconciled entry in your accounting system. Done manually, someone keys every field and the invoice waits in a queue for days. Done with invoice processing OCR, the fields are read and checked as the invoice arrives, and only the unclear ones wait for a person. This page covers how automated invoice processing works, what it saves, and how an AP team moves from typing invoices to a pipeline that only stops for exceptions.",
   sections: [
     {
       heading: "How automated invoice processing works",

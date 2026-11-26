@@ -38,7 +38,7 @@ export default function ContractLifecycleDiagram() {
           className="max-w-3xl mx-auto text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">Contract Lifecycle Management</h2>
-          <p className="text-xl text-gray-700">Our end-to-end solution streamlines the entire contract process</p>
+          <p className="text-xl text-gray-700">One contract, from intake to signature</p>
         </motion.div>
 
         {/* Desktop version with horizontal line */}
@@ -95,14 +95,9 @@ export default function ContractLifecycleDiagram() {
           className="max-w-3xl mx-auto text-center"
         >
           <p className="text-gray-700">
-            Our integrated contract lifecycle management system transforms how legal teams handle documents from
-            creation to execution. The process begins with intelligent intake, automatically classifying incoming
-            contracts by type and priority. Our advanced OCR technology then extracts key information, identifying
-            clauses, parties, dates, and obligations with remarkable precision. The structured data flows seamlessly
-            into your contract management system, creating a searchable repository of all agreements. Finally, our
+            How a contract moves through the system, from intake to signature. It starts at intake: each incoming contract is sorted by type and priority. OCR then pulls out the clauses, parties, dates and obligations. That data goes into your contract management system, so every agreement is searchable. Finally, our
             secure e-signature integration allows for rapid execution, with automatic archiving and renewal tracking.
-            This end-to-end approach eliminates silos, reduces manual work, and provides unprecedented visibility into
-            your contract portfolio.
+            Less manual work, and one place to see every contract.
           </p>
         </motion.div>
       </div>

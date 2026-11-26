@@ -23,7 +23,7 @@ export default function FAQSection() {
     {
       question: "Can it handle GST e-Invoices and compliance?",
       answer:
-        "Absolutely. Our system is fully compliant with GST e-Invoice requirements in India. It can extract data from GST e-Invoices, validate the information against the GST portal, and ensure compliance with the latest regulations. The system also helps in preparing GST returns by categorizing transactions correctly and maintaining the required documentation.",
+        "Absolutely. Our system is fully compliant with GST e-Invoice requirements in India. It reads GST e-invoices and checks the details against the GST portal. The system also helps in preparing GST returns by categorizing transactions correctly and maintaining the required documentation.",
     },
     {
       question: "How does the system integrate with SAP and other ERPs?",
@@ -34,8 +34,7 @@ export default function FAQSection() {
           <Link href="/resources/blogs/invoice-ocr-sap" className="underline hover:text-indigo-700">
             invoice OCR for SAP guide
           </Link>{" "}
-          for the integration specifics. The integration is bidirectional, allowing for seamless data flow between
-          systems. We support both API-based real-time integration and batch processing through secure file
+          for the integration specifics. The integration works both ways: data goes into your system and status comes back. We support both API-based real-time integration and batch processing through secure file
           transfers, depending on your requirements and ERP configuration.
         </>
       ),
@@ -43,7 +42,7 @@ export default function FAQSection() {
     {
       question: "What are your data retention and security policies?",
       answer:
-        "We maintain strict data security and retention policies. All data is encrypted both in transit and at rest using industry-standard encryption protocols. By default, we retain processed documents for 7 years to meet audit requirements, but this period is customizable based on your regulatory needs. We are compliant with GDPR, ISO 27001, and SOC 2 Type II standards, ensuring your financial data remains secure and private.",
+        "We maintain strict data security and retention policies. All data is encrypted both in transit and at rest using industry-standard encryption protocols. By default, we retain processed documents for 7 years to meet audit requirements, but this period is customizable based on your regulatory needs. We are compliant with GDPR, ISO 27001 and SOC 2 Type II.",
     },
   ]
 

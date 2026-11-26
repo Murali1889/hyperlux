@@ -20,8 +20,7 @@ export default function OperationsHero() {
               Streamline Supply-Chain Paperwork
             </h1>
             <p className="text-lg md:text-xl text-gray-700 mb-8">
-              Transform manual document processing into automated data extraction, reducing errors and accelerating your
-              supply chain operations.
+              Read packing slips, proofs of delivery and shipment logs automatically, so your team checks flagged fields instead of typing every page.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-4 sm:py-6 rounded-md w-full sm:w-auto">

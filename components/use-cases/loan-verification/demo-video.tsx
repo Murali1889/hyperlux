@@ -27,7 +27,7 @@ export default function DemoVideo() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">See It In Action</h2>
           <p className="text-lg text-slate-600">
-            Watch how our AI-powered loan verification solution transforms the lending process
+            Watch a loan file get verified
           </p>
         </motion.div>
 
@@ -124,9 +124,8 @@ export default function DemoVideo() {
           <div className="p-6">
             <h3 className="text-xl font-semibold mb-2 text-slate-900">Loan Verification Workflow Demo</h3>
             <p className="text-slate-600">
-              This demonstration shows how our AI-powered solution processes bank statements, pay stubs, and tax
-              documents to verify income and employment information. Watch as the system automatically extracts data,
-              validates it against lending criteria, and generates a comprehensive verification report.
+              The demo runs bank statements, pay stubs and tax documents through income and employment checks. Watch as the system automatically extracts data,
+              validates it against lending criteria, and produces a verification report.
             </p>
           </div>
         </motion.div>

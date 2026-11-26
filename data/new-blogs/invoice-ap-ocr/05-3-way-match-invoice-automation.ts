@@ -6,22 +6,22 @@ export const blogAp05: BlogPost = {
   title: "3-Way Invoice Match Automation: Where It Breaks Down",
   slug: "3-way-match-invoice-automation",
   excerpt:
-    "We audited real 3-way match exception queues. A meaningful share were not real mismatches, they were OCR misreads. Here is how to tell them apart.",
+    "A share of 3-way match exceptions are OCR misreads, not real mismatches. How to tell the two apart.",
   description:
     "3-way match automation flags correct invoices as mismatches. The cause is often OCR misreads, not real errors. A diagnostic framework to tell them apart.",
   metaTag: "3-Way Match Invoice Automation: Why It Breaks (2026)",
   content: `
-    <p>A controller I worked with in early 2026 pulled up her AP exception queue and counted 214 invoices flagged as quantity mismatches that month. She sampled 30 of them by hand, pulling the original PDF for each one. Nineteen were not real mismatches. The <a href="/documents/financial-docs/purchase-orders">purchase order</a> was right, the delivery was right, the invoice total was right. Somewhere in the pipeline, OCR had misread a "3" as an "8" on a faxed copy, or dropped a decimal point, or split one line item into two rows. Her team was spending roughly six hours a week chasing exceptions that did not exist.</p>
+    <p>Try this on your own AP exception queue: take 30 invoices flagged as quantity mismatches and check each one against the original PDF. Some will not be real mismatches. The <a href="/documents/financial-docs/purchase-orders">purchase order</a> is right, the delivery is right, the invoice total is right, and somewhere in the pipeline OCR misread a "3" as an "8" on a faxed copy, dropped a decimal point, or split one line item into two rows. Every one of those is time spent chasing an exception that does not exist.</p>
 
     <p>That is the part of <a href="/solutions/finance-automation">3-way match automation</a> nobody selling AP workflow software talks about. The matching logic is not what breaks first. The extraction underneath it is, and no amount of better approval rules fixes a number that was wrong before it ever reached the matching engine.</p>
 
-    <h2>What 3-way matching actually checks</h2>
+    <h2>What 3-way matching checks</h2>
 
-    <p>3-way matching compares three documents before an invoice gets approved for payment: the purchase order (what you agreed to buy), the goods receipt or packing slip (what actually arrived), and the supplier invoice (what you are being billed). If quantity, unit price, and total agree across all three, the invoice pays. If any of them disagree, the system holds the invoice and routes it to a human.</p>
+    <p>3-way matching compares three documents before an invoice gets approved for payment: the purchase order (what you agreed to buy), the goods receipt or packing slip (what arrived), and the supplier invoice (what you are being billed). If quantity, unit price, and total agree across all three, the invoice pays. If any of them disagree, the system holds the invoice and routes it to a human.</p>
 
     <p>The three documents come from three different places and three different points in time. The PO is created when you order. The receipt is created (or should be) when goods arrive. The invoice arrives separately from the vendor, often weeks later, often as a scan, fax, or forwarded PDF of wildly inconsistent quality. Matching software is comparing data extracted from three documents that were never designed to be machine-read together.</p>
 
-    <p>Most teams also run into 2-way and 4-way matching. 2-way match compares only the PO and invoice, skipping the receipt check, faster but blind to whether anything actually arrived. 4-way match adds an inspection or quality-acceptance step on top of 3-way, common in manufacturing and regulated goods. Neither changes the core problem this article is about: whatever the matching tier, the comparison is only as good as the extraction feeding it.</p>
+    <p>Most teams also run into 2-way and 4-way matching. 2-way match compares only the PO and invoice, skipping the receipt check, faster but blind to whether anything arrived. 4-way match adds an inspection or quality-acceptance step on top of 3-way, common in manufacturing and regulated goods. Neither changes the core problem this article is about: whatever the matching tier, the comparison is only as good as the extraction feeding it.</p>
 
     <h2>Why "automated" matching still throws hundreds of false exceptions</h2>
 
@@ -38,7 +38,7 @@ export const blogAp05: BlogPost = {
         <tr><th>Discrepancy the matcher flags</th><th>What a real mismatch looks like</th><th>What an OCR misread looks like</th><th>Fastest way to tell them apart</th></tr>
       </thead>
       <tbody>
-        <tr><td>Quantity mismatch</td><td>PO says 500, invoice says 800, vendor genuinely shipped more (backorder fill, over-ship)</td><td>PO says 500, invoice says 800, but the invoice was faxed and a "5" got read as an "8"</td><td>Pull the source image and zoom in on the exact digit before you call the vendor</td></tr>
+        <tr><td>Quantity mismatch</td><td>PO says 500, invoice says 800, vendor shipped more (backorder fill, over-ship)</td><td>PO says 500, invoice says 800, but the invoice was faxed and a "5" got read as an "8"</td><td>Pull the source image and zoom in on the exact digit before you call the vendor</td></tr>
         <tr><td>Price mismatch</td><td>List price changed, or a volume-discount tier shifted since the PO was cut</td><td>Decimal point or currency symbol dropped: $42.50 read as $4,250 or $425.0</td><td>Ask whether the "wrong" price is a plausible round-number change or looks like a decimal-shift artifact</td></tr>
         <tr><td>Missing line item</td><td>Partial shipment, backorder, or a legitimately split invoice</td><td>A table row crossed a page break, or a wrapped line item got read as two separate lines</td><td>Open the raw PDF first and check the page break and line-wrap points</td></tr>
         <tr><td>Unit of measure mismatch</td><td>PO issued in cases, invoice billed in each, and nobody set the conversion</td><td>Almost never OCR. Both numbers are usually read correctly, just denominated differently</td><td>Fix the PO-to-invoice unit conversion table, not the extraction layer</td></tr>
@@ -74,7 +74,7 @@ export const blogAp05: BlogPost = {
 
     <p><strong>Vendor master mismatches.</strong> A vendor that merges, rebrands, or bills through a different legal entity than the one on file will trip a match every time, forever, until the vendor master record includes the alias. This is a data-governance problem wearing a matching-exception costume. No OCR fix touches it.</p>
 
-    <h2>What actually cuts false-positive exceptions</h2>
+    <h2>What cuts false-positive exceptions</h2>
 
     <p>Five things move the number in practice, roughly in order of effort versus payoff:</p>
 
@@ -86,11 +86,11 @@ export const blogAp05: BlogPost = {
       <li><strong>Track false-exception rate as its own metric</strong>, separate from touchless rate. A system can hit 80% touchless and still waste hours a week if the other 20% is mostly noise instead of mostly real work.</li>
     </ol>
 
-    <p>This is also where document AI genuinely earns its keep over a rules-only matching engine: a layout-aware extraction layer that understands table structure across page breaks removes the single biggest source of phantom exceptions before matching logic ever runs. We built <a href="/products">DocsAPI</a> around that layer specifically because we kept seeing teams tune approval workflows to fix a problem that was actually upstream.</p>
+    <p>This is also where document AI earns its keep over a rules-only matching engine: a layout-aware extraction layer that understands table structure across page breaks removes the single biggest source of phantom exceptions before matching logic ever runs. We built <a href="/products">DocsAPI</a> around that layer specifically because we kept seeing teams tune approval workflows to fix a problem that was upstream.</p>
 
     <h2>What I would check this week if the exception queue is drowning</h2>
 
-    <p>Pull last month's quantity and price mismatches, the two categories most likely to hide OCR errors, and hand-check 20 of them against source documents. If more than 1 in 5 turns out to be an extraction error rather than a real discrepancy, the fix is not more approval steps, it is better table extraction on multi-page POs and receipts. If most of them are real, the fix is unit-of-measure and vendor-master cleanup, not a new OCR vendor. Knowing which problem you actually have before you spend money on either is the entire point of this exercise.</p>
+    <p>Pull last month's quantity and price mismatches, the two categories most likely to hide OCR errors, and hand-check 20 of them against source documents. If more than 1 in 5 turns out to be an extraction error rather than a real discrepancy, the fix is not more approval steps, it is better table extraction on multi-page POs and receipts. If most of them are real, the fix is unit-of-measure and vendor-master cleanup, not a new OCR vendor. Knowing which problem you have before you spend money on either is the entire point of this exercise.</p>
     <p>Sources: fraud-control context on matching as an internal control draws on the Association of Certified Fraud Examiners' <a href="https://legacy.acfe.com/report-to-the-nations/2024/" target="_blank" rel="noopener">Report to the Nations</a>, which puts the typical organization's fraud loss at roughly 5% of annual revenue. For the extraction-accuracy numbers cited above, see our full <a href="/resources/blogs/ocr-accuracy-benchmark-2026">OCR accuracy benchmark</a>. For the broader AP OCR buying process, see our <a href="/resources/blogs/accounts-payable-ocr">accounts payable OCR guide</a>. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
 
     <p>Related guide: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a>.</p>
@@ -100,8 +100,8 @@ export const blogAp05: BlogPost = {
   category: "Accounts Payable",
   date: "August 10, 2026",
   datePublished: "2026-08-10T00:00:00.000Z",
-  dateModified: "2026-10-14T00:00:00.000Z",
-  last_updated: "October 14, 2026",
+  dateModified: "2026-11-26T00:00:00.000Z",
+  last_updated: "November 26, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "3-way match invoice automation",
@@ -125,10 +125,10 @@ export const blogAp05: BlogPost = {
     {
       question: "What is the difference between 2-way and 3-way matching?",
       answer:
-        "2-way matching compares only the purchase order and the invoice. It is faster but cannot catch cases where the invoice bills for goods that were never actually received, since it skips the receipt check entirely. 3-way matching adds the goods receipt as a third check specifically to close that gap.",
+        "2-way matching compares only the purchase order and the invoice. It is faster but cannot catch cases where the invoice bills for goods that were never received, since it skips the receipt check entirely. 3-way matching adds the goods receipt as a third check specifically to close that gap.",
     },
     {
-      question: "Why does 3-way matching flag invoices that are actually correct?",
+      question: "Why does 3-way matching flag invoices that are correct?",
       answer:
         "Most false flags trace back to OCR extraction errors on the underlying documents, not real discrepancies. A misread digit, a dropped decimal point, or a table row split across a page break produces a number that looks like a mismatch to the matching engine even though the original documents agree. Checking the source image before escalating catches most of these.",
     },

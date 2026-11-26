@@ -6,7 +6,7 @@ export const blog09: BlogPost = {
   title: "Context Engineering for Document AI (Beyond RAG, 2026)",
   slug: "context-engineering-document-ai",
   excerpt:
-    "My first RAG demo for invoice Q&A failed in front of the CFO. The fix was not better embeddings, it was better context engineering. Here is what I learned.",
+    "My first RAG demo for invoice Q&A failed in front of the CFO. The fix was better context engineering, not better embeddings.",
   description:
     "Context engineering for document AI, why RAG alone falls short, the four-layer context stack that works, and the patterns that scale.",
   metaTag: "Context Engineering for Document AI: Beyond Plain RAG",
@@ -97,7 +97,7 @@ export const blog09: BlogPost = {
     <p>Context engineering is the work of preparing what the assistant sees. The smarter your preparation, the better the answer. The model is the easy part. The context is the hard part.</p>
 
     <h2>What I'd Do Today</h2>
-    <p>If you are starting a document AI project: do structured extraction first. Build the JSON index of your documents before you build the chat interface. The chat interface is glamorous; the JSON index is what actually answers questions correctly.</p>
+    <p>If you are starting a document AI project: do structured extraction first. Build the JSON index of your documents before you build the chat interface. The chat interface is glamorous; the JSON index is what answers questions correctly.</p>
     <p>If you already have a RAG system that disappoints: add a question router. Classify questions by type, route to different context stacks. The accuracy lift is dramatic and the engineering is small.</p>
     <p>If you are evaluating vendors: ask them what their context stack looks like for cross-document questions. If the answer is "we use RAG", expect failures on anything beyond definitional questions. The good vendors have hybrid stacks. (<a href="/author/nupura-ughade">I write about these patterns a lot</a>.)</p>
   `,

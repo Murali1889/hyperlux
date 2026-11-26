@@ -29,8 +29,7 @@ export default function IdProofingHero() {
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Instant, Accurate ID Proofing</h1>
             <p className="text-lg md:text-xl text-slate-200 max-w-lg">
-              Verify passports, national IDs, and driver licenses in seconds with AI-powered OCR and biometric face
-              matching, ensuring regulatory compliance while accelerating customer onboarding.
+              Read and check passports, national IDs and driver licenses in seconds, with face matching against a selfie, so onboarding does not stall on the ID step.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <Button asChild size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white">

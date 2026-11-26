@@ -8,7 +8,7 @@ export default function VerificationWorkflow() {
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Verification Workflow</h2>
             <p className="max-w-[900px] text-slate-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Streamlined process for fast and accurate identity verification
+              How an ID gets checked, step by step
             </p>
           </div>
         </div>
@@ -49,8 +49,7 @@ export default function VerificationWorkflow() {
             </div>
             <h3 className="text-xl font-bold">Optional Face Match & Fraud Checks</h3>
             <p className="text-slate-500">
-              Perform biometric face matching and advanced fraud detection to ensure document authenticity and prevent
-              identity theft.
+              Match the ID photo to a selfie and run fraud checks on the document itself.
             </p>
           </div>
         </div>

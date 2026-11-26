@@ -6,7 +6,7 @@ export const blogMd10: BlogPost = {
   title: "DEA Number Verification: The Check Digit Formula, Worked",
   slug: "dea-number-verification",
   excerpt:
-    "Two DEA numbers that look equally plausible. One passes a nine-second arithmetic check, the other fails it. Here is the exact formula and why it matters.",
+    "Two DEA numbers can look equally plausible while one fails a nine-second arithmetic check. The formula, and why it matters.",
   description:
     "The real DEA number check digit algorithm, a full worked example computing and verifying it, and why this weighted-sum check is a checkable fraud control.",
   metaTag: "DEA Number Verification: The Check Digit Formula",
@@ -15,7 +15,7 @@ export const blogMd10: BlogPost = {
 
     <p>This post does that. It covers the exact weighted-sum formula the DEA uses to embed a checksum into every registration number, a full worked example computing that checksum from scratch, a second worked example showing what happens when someone fabricates or garbles a number, and, just as important, what this specific check can and cannot tell you about a prescription's legitimacy. If you're building or evaluating a system that processes prescriptions, referrals, or any document carrying a prescriber's DEA number, this is the mechanism worth understanding in detail rather than skimming, and it's one piece of the broader document-verification problem covered across our <a href="/documents/medical-docs">medical document processing</a> resources.</p>
 
-    <h2>What a DEA number is actually built from</h2>
+    <h2>What a DEA number is built from</h2>
 
     <p>A DEA registration number is nine characters: two letters followed by seven digits. It is not an arbitrary identifier assigned in sequence. The structure carries information, and the final digit carries a mathematical check.</p>
 
@@ -70,7 +70,7 @@ export const blogMd10: BlogPost = {
 
     <h2>What the check digit proves, and what it deliberately does not</h2>
 
-    <p>This is the part that gets skipped most often in explanations of DEA number verification, and it's the difference between a checksum and full verification. A passing check digit tells you exactly one thing: the number is internally consistent with the DEA's issuance formula. It does not tell you that the number was ever actually assigned to anyone. It does not tell you the registration is currently active rather than expired, retired, or surrendered. And critically, it does not tell you that the number belongs to the person whose name is attached to this particular prescription.</p>
+    <p>This is the part that gets skipped most often in explanations of DEA number verification, and it's the difference between a checksum and full verification. A passing check digit tells you exactly one thing: the number is internally consistent with the DEA's issuance formula. It does not tell you that the number was ever assigned to anyone. It does not tell you the registration is currently active rather than expired, retired, or surrendered. And critically, it does not tell you that the number belongs to the person whose name is attached to this particular prescription.</p>
 
     <p>That last gap is a real, documented fraud pattern, not a theoretical one. A forger who copies a legitimate, currently active DEA number off an old prescription, a stolen pad, or a leaked record produces a number that passes the check digit test perfectly, because it's a real number, correctly formed, just attached to the wrong transaction. The checksum can't distinguish "this number was legitimately issued" from "this number is legitimately issued to someone else and is being used without authorization." Catching that second case requires cross-referencing against the actual DEA registrant record, confirming the registration is active, confirming it's authorized for the specific drug schedule being prescribed, and in a well-run pharmacy workflow, checking the state prescription drug monitoring program for a pattern that doesn't match the prescriber's normal activity.</p>
 
@@ -82,7 +82,7 @@ export const blogMd10: BlogPost = {
         <tr><td>Randomly invented or guessed digit sequences</td><td>A real, active DEA number stolen or copied from a legitimate registrant</td></tr>
         <tr><td>Typos and manual data entry mistakes</td><td>A registration that has expired, been surrendered, or been revoked</td></tr>
         <tr><td>OCR misreads and digit transpositions from scanned documents</td><td>A number correctly formed but issued for a different drug schedule than what's being prescribed</td></tr>
-        <tr><td>Structurally malformed numbers (wrong length, wrong character types)</td><td>Whether the name attached to the number actually matches the registrant of record</td></tr>
+        <tr><td>Structurally malformed numbers (wrong length, wrong character types)</td><td>Whether the name attached to the number matches the registrant of record</td></tr>
       </tbody>
     </table>
 
@@ -109,7 +109,7 @@ export const blogMd10: BlogPost = {
 
     <p>In a manual pharmacy workflow, a pharmacist mentally or manually applies this check, if they apply it at all, which in a busy setting under time pressure is inconsistent at best. In an automated document intake pipeline, the check digit calculation is trivial to run on every single extracted DEA number, every single time, with zero marginal cost per document and zero chance of a tired human skipping it during a rush.</p>
 
-    <p>A practical implementation runs the checksum as the very first validation step immediately after OCR extraction pulls the DEA number field off a prescription, referral, or intake form, before that field ever gets written into a downstream system. A passing checksum lets the document proceed to the next validation layer, matching the registrant type letter against the prescriber's known credentials, confirming active registration status, and checking schedule authorization for the specific drug being prescribed. A failing checksum stops the document immediately and routes it to a human reviewer with the specific mismatch flagged, computed digit versus stated digit, rather than a vague "review this prescription" flag that gives the reviewer no starting point. That specificity is what separates a genuinely checkable control from a box-ticking compliance step, and it's the same design principle that shows up in verification workflows across other structured healthcare identifiers, including the <a href="/resources/blogs/npi-verification-api">NPI checksum</a> and the structured fields inside <a href="/resources/blogs/cms-1500-form-processing">CMS-1500 claim forms</a>.</p>
+    <p>A practical implementation runs the checksum as the very first validation step immediately after OCR extraction pulls the DEA number field off a prescription, referral, or intake form, before that field ever gets written into a downstream system. A passing checksum lets the document proceed to the next validation layer, matching the registrant type letter against the prescriber's known credentials, confirming active registration status, and checking schedule authorization for the specific drug being prescribed. A failing checksum stops the document immediately and routes it to a human reviewer with the specific mismatch flagged, computed digit versus stated digit, rather than a vague "review this prescription" flag that gives the reviewer no starting point. That specificity is what separates a checkable control from a box-ticking compliance step, and it's the same design principle that shows up in verification workflows across other structured healthcare identifiers, including the <a href="/resources/blogs/npi-verification-api">NPI checksum</a> and the structured fields inside <a href="/resources/blogs/cms-1500-form-processing">CMS-1500 claim forms</a>.</p>
 
     <p>None of this replaces the DEA's own registrant lookup, and it shouldn't be sold as if it does. What it does is cheap, fast, and deterministic in a way that a registrant database call is not: it turns a plausible-looking nine-character string into either a mathematically consistent number worth checking further, or a number that's already, provably, wrong, before anyone has to pick up a phone or wait on an external API. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
 
@@ -154,7 +154,7 @@ export const blogMd10: BlogPost = {
     {
       question: "What can the DEA check digit not catch?",
       answer:
-        "It cannot confirm the registration is currently active, that it authorizes the specific drug schedule being prescribed, or that the number actually belongs to the prescriber named on the document. A real, active DEA number used without authorization by someone other than its registrant will pass the checksum every time.",
+        "It cannot confirm the registration is currently active, that it authorizes the specific drug schedule being prescribed, or that the number belongs to the prescriber named on the document. A real, active DEA number used without authorization by someone other than its registrant will pass the checksum every time.",
     },
     {
       question: "What does the first letter of a DEA number mean?",

@@ -96,8 +96,7 @@ export default function DriverLicenceHero() {
                 Fast, Reliable Driver Licence OCR
               </h1>
               <p className="text-xl text-gray-700 max-w-2xl">
-                Extract data from both front and back sides of licenses with advanced PDF417 and QR code decoding,
-                supporting global formats with industry-leading accuracy.
+                Read both sides of a license, including the PDF417 or QR barcode on the back, so the barcode data can be checked against the printed front.
               </p>
               <div className="pt-4">
                 <Button className="bg-indigo-700 hover:bg-indigo-800 text-white px-8 py-6 text-lg rounded-lg">

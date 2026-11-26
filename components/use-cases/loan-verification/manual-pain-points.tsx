@@ -15,7 +15,7 @@ export default function ManualPainPoints() {
       icon: <AlertTriangle className="w-10 h-10 text-indigo-600" />,
       title: "Risk of human errors",
       description:
-        "Manual data entry from complex financial documents introduces significant error potential. Misinterpreted income figures, overlooked transactions, or incorrectly calculated debt-to-income ratios can lead to improper loan decisions. These errors not only create compliance risks but can result in poor-quality loans that increase portfolio risk and potentially lead to defaults.",
+        "Typing numbers off bank statements and tax returns by hand introduces errors. Misinterpreted income figures, overlooked transactions, or incorrectly calculated debt-to-income ratios can lead to improper loan decisions. These errors not only create compliance risks but can result in poor-quality loans that increase portfolio risk and potentially lead to defaults.",
     },
     {
       icon: <FileWarning className="w-10 h-10 text-indigo-600" />,
@@ -37,8 +37,7 @@ export default function ManualPainPoints() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Manual Verification Pain Points</h2>
           <p className="text-lg text-slate-600">
-            Traditional loan verification processes create significant challenges for lenders and borrowers alike. Here
-            are the key issues our AI-powered solution addresses:
+            Verifying a loan file by hand is slow for the lender and the borrower. Here is what goes wrong, and what DocsAPI does about it:
           </p>
         </motion.div>
 

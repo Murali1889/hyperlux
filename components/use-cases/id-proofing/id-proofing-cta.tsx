@@ -17,8 +17,7 @@ export default function IdProofingCta() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Secure your onboarding process today.</h2>
           <p className="text-lg text-indigo-100 mb-8">
-            Join hundreds of organizations that have transformed their identity verification process with our AI-powered
-            ID proofing solution.
+            Book a demo with your own ID samples and see what passes and what gets flagged.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg" className="bg-white text-indigo-700 hover:bg-indigo-50">

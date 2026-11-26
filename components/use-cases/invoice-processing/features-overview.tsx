@@ -8,13 +8,13 @@ const features = [
     icon: <FileUp className="h-8 w-8 text-indigo-600" />,
     title: "Multi-format Invoice Ingestion",
     description:
-      "Process invoices in any format including PDF, scanned images, emails, and EDI. Our intelligent document recognition automatically identifies invoice types, handles multi-page documents, and supports batch processing for high-volume scenarios. The system adapts to your existing invoice formats without requiring supplier changes.",
+      "Process invoices in any format including PDF, scanned images, emails, and EDI. It recognizes the invoice type, handles multi-page invoices and takes large batches. The system adapts to your existing invoice formats without requiring supplier changes.",
   },
   {
     icon: <Table className="h-8 w-8 text-indigo-600" />,
     title: "Line-item and Header Data Extraction",
     description:
-      "Extract complete invoice data including header information, line items, tax details, and payment terms, at 93% line-item accuracy in our 2026 benchmark. Our AI engine recognizes complex table structures, handles varying layouts, and captures crucial metadata like invoice numbers, dates, and vendor information. The system also supports multi-currency invoices and tax jurisdictions.",
+      "Extract complete invoice data including header information, line items, tax details, and payment terms, at 93% line-item accuracy in our 2026 benchmark. It reads complex tables and varied layouts, and captures invoice numbers, dates and vendor details. The system also supports multi-currency invoices and tax jurisdictions.",
   },
   {
     icon: <CheckCircle className="h-8 w-8 text-indigo-600" />,
@@ -26,7 +26,7 @@ const features = [
     icon: <ArrowRightLeft className="h-8 w-8 text-indigo-600" />,
     title: "ERP Integration",
     description:
-      "Seamlessly integrate with leading ERP systems including SAP, Oracle, Microsoft Dynamics, and NetSuite. Our pre-built connectors enable bi-directional data flow, synchronizing vendor information, purchase orders, and payment status. The flexible API architecture supports custom integrations with legacy systems and specialized accounting software.",
+      "Send invoices to SAP, Oracle, Microsoft Dynamics or NetSuite. The connectors work both ways, syncing vendor records, purchase orders and payment status. The API also covers custom integrations with older systems and niche accounting software.",
   },
 ]
 
@@ -42,11 +42,10 @@ export default function FeaturesOverview() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            Comprehensive Invoice Automation Features
+            Invoice Automation Features
           </h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Our AI-powered invoice processing solution delivers end-to-end automation with advanced capabilities
-            designed for modern finance teams.
+            What happens to an invoice from intake to posting.
           </p>
         </motion.div>
 

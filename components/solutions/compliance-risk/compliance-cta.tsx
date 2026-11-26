@@ -18,8 +18,7 @@ export default function ComplianceCTA() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Prove compliance on every document.</h2>
 
           <p className="text-lg text-indigo-100 mb-8">
-            Transform your compliance operations from a cost center to a competitive advantage with automated document
-            processing, complete audit trails, and regulator-ready reporting.
+            See how the audit trail and reports look on your own documents before you commit.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">

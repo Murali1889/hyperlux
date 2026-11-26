@@ -5,7 +5,7 @@ export default function FieldReference() {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Comprehensive Field Extraction</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Fields We Extract</h2>
 
         <Tabs defaultValue="standard" className="w-full">
           <TabsList className="grid w-full grid-cols-2 mb-8">

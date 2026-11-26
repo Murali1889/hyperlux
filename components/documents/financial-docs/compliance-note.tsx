@@ -24,8 +24,7 @@ export default function ComplianceNote() {
               <p className="text-gray-700">
                 Every document processed through our system maintains a complete audit trail from ingestion to
                 extraction. Track who uploaded the document, when it was processed, and any manual corrections made.
-                This comprehensive audit trail ensures compliance with internal controls and simplifies regulatory
-                audits.
+                That record of who changed what is what auditors ask for when they test internal controls.
               </p>
             </div>
 
@@ -35,8 +34,7 @@ export default function ComplianceNote() {
                 <h3 className="text-xl font-bold text-indigo-900">GST e-Invoice Support</h3>
               </div>
               <p className="text-gray-700">
-                Our system fully supports GST e-Invoice requirements in India. It can extract data from GST e-Invoices,
-                validate the information against the GST portal, and ensure compliance with the latest regulations. The
+                Our system fully supports GST e-Invoice requirements in India. It reads GST e-invoices and checks the details against the GST portal. The
                 system also helps in preparing GST returns by categorizing transactions correctly.
               </p>
             </div>

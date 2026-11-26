@@ -9,28 +9,28 @@ export default function FeaturesOverview() {
       icon: <Upload className="w-10 h-10 text-indigo-600" />,
       title: "Bulk Document Ingestion and Indexing",
       description:
-        "Process thousands of documents simultaneously with our high-throughput scanning and ingestion pipeline. The AI-powered system automatically categorizes documents by type, source, and date, creating a structured repository without manual intervention. Support for batch uploads accelerates the transition from physical to digital archives.",
+        "Ingest large batches of documents at once. Documents are sorted by type, source and date as they come in, with no manual filing. Support for batch uploads accelerates the transition from physical to digital archives.",
       tags: ["Batch Processing", "Auto-Categorization", "Scalable"],
     },
     {
       icon: <FileText className="w-10 h-10 text-indigo-600" />,
       title: "OCR with Metadata Tagging",
       description:
-        "Transform scanned images and PDFs into fully searchable text with our advanced OCR technology. The system automatically extracts and tags key metadata fields specific to each document type, including dates, reference numbers, entities, and custom fields. Handwritten text recognition capabilities ensure complete data capture from all document sources.",
+        "Scanned images and PDFs become searchable text. The system automatically extracts and tags key metadata fields specific to each document type, including dates, reference numbers, entities, and custom fields. Handwriting is read too, at 78% character accuracy on handwritten forms in our 2026 benchmark, so plan to check those pages.",
       tags: ["Text Extraction", "Auto-Tagging", "Handwriting Recognition"],
     },
     {
       icon: <Search className="w-10 h-10 text-indigo-600" />,
       title: "Full-Text and Field-Level Search",
       description:
-        "Find exactly what you need instantly with powerful search capabilities across your entire document repository. Users can search by specific fields, full-text content, or combinations of criteria. Advanced filtering options allow for precise document retrieval based on date ranges, document types, and custom metadata fields.",
+        "Search the whole archive by field or by full text. Users can search by specific fields, full-text content, or combinations of criteria. Filter by date range, document type or your own metadata fields.",
       tags: ["Instant Retrieval", "Advanced Filtering", "Content Search"],
     },
     {
       icon: <ShieldCheck className="w-10 h-10 text-indigo-600" />,
       title: "Audit Trails and Retention Policies",
       description:
-        "Maintain regulatory compliance with comprehensive audit trails tracking all document access and modifications. Automated retention policies ensure documents are preserved for required periods and securely deleted when no longer needed. Role-based access controls provide granular security while ensuring authorized personnel can access critical information.",
+        "Every access and change is logged for audits. Retention rules keep each document as long as required and delete it after. Role-based access means each person sees only the records they should.",
       tags: ["Compliance", "Data Lifecycle", "Access Control"],
     },
   ]
@@ -47,8 +47,7 @@ export default function FeaturesOverview() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Features Overview</h2>
           <p className="mt-4 text-xl text-slate-600 max-w-3xl mx-auto">
-            Our AI-powered digital archiving solution transforms how organizations store, retrieve, and manage
-            documents.
+            What the archive does, from intake to deletion.
           </p>
         </motion.div>
 

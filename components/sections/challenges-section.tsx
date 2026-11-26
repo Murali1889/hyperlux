@@ -22,7 +22,7 @@ export default function ChallengesSection() {
     <Section background="muted" id="challenges">
       <SectionHeader
         title="The Challenges of Manual Document Processing"
-        description="Financial institutions face significant challenges with manual document processing, from mortgage origination to small business lending. Our AI-powered OCR software addresses these pain points with intelligent automation."
+        description="Lenders still retype a lot of paper, from mortgage packets to small business bank statements. DocsAPI reads these documents into data and flags what it is unsure about."
       />
 
       <div className="mb-16">

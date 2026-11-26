@@ -12,7 +12,7 @@ export default function WorkflowCanvas() {
       id: "erp",
       title: "ERP Integration",
       icon: <Database className="h-10 w-10 text-white" />,
-      description: "Connect seamlessly with your existing ERP system",
+      description: "Connects to the ERP you already use",
       details:
         "Our platform integrates with SAP, Oracle, Microsoft Dynamics, and other major ERP systems with pre-built connectors.",
       color: "bg-indigo-700",
@@ -23,7 +23,7 @@ export default function WorkflowCanvas() {
       icon: <FileSearch className="h-10 w-10 text-white" />,
       description: "Extract line items, totals and vendor details from every invoice",
       details:
-        "Our AI-powered OCR extracts line items, totals, tax information, and vendor details from invoices in multiple languages.",
+        "Line items, totals, tax and vendor details are read from invoices in multiple languages.",
       color: "bg-indigo-700",
     },
     {
@@ -50,9 +50,9 @@ export default function WorkflowCanvas() {
     <section className="py-20 bg-indigo-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">Seamless Finance Workflow Integration</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">How It Fits Your Finance Workflow</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Our platform integrates with your existing systems to create an end-to-end automated finance workflow
+            How the pieces connect to the systems you already run
           </p>
         </div>
 

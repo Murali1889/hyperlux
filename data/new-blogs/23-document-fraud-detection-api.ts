@@ -6,12 +6,12 @@ export const blog23: BlogPost = {
   title: "Document Fraud Detection API, Honest Builder Guide",
   slug: "document-fraud-detection-api",
   excerpt:
-    "I have shipped three document fraud detection systems. The first cost us $200K to learn that 'AI fraud detection' is mostly five boring checks. Here are the five checks, in order.",
+    "Document fraud detection is mostly five deterministic checks run in order, whatever the AI label says. The five checks, what each one catches, and the order to run them.",
   description:
     "Document fraud detection API, the five checks every fraud pipeline needs, the vendors worth using, and what to build versus buy in 2026.",
   metaTag: "Document Fraud Detection API, Builder's Guide",
   content: `
-    <p>The first document fraud detection system I shipped cost us $200K and three months of engineering before I realized "AI fraud detection" is mostly five boring checks running in order. Vendors charge a premium for the AI label, but the underlying work is mostly deterministic. This guide is the version I wish I had when I started.</p>
+    <p>Most of what is sold as AI fraud detection for documents is five deterministic checks running in order. Vendors charge a premium for the AI label, but the underlying work is mostly rules. This guide walks through the five checks in the order they should run.</p>
     <p>If you are building a workflow that needs to verify a document is real before trusting it, KYC, AML, lending, insurance, payments, read this before paying anyone six figures.</p>
 
     <h2>What "Document Fraud Detection API" Actually Means</h2>
@@ -96,8 +96,8 @@ export const blog23: BlogPost = {
   category: "Compliance",
   date: "June 18, 2026",
   datePublished: "2026-06-18T00:00:00.000Z",
-  dateModified: "2026-11-17T00:00:00.000Z",
-  last_updated: "November 17, 2026",
+  dateModified: "2026-11-26T00:00:00.000Z",
+  last_updated: "November 26, 2026",
   readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "document fraud detection api",

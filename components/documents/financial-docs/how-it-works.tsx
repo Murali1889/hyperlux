@@ -49,7 +49,7 @@ export default function HowItWorks() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">How It Works for Finance</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Our intelligent document processing platform handles financial documents with a simple four-step process
+            Four steps from file to checked data
           </p>
         </motion.div>
 

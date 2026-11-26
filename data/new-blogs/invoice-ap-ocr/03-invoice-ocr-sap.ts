@@ -6,14 +6,14 @@ export const blogAp03: BlogPost = {
   title: "Invoice OCR to SAP: The Real BAPI Field Mapping (2026)",
   slug: "invoice-ocr-sap",
   excerpt:
-    "Most invoice OCR content skips SAP's actual posting mechanics. Here is the real BAPI_INCOMINGINVOICE_CREATE field map and where MM vs FI invoices diverge.",
+    "How OCR-read invoices post into SAP through BAPI_INCOMINGINVOICE_CREATE, the field map, and where MM and FI invoices diverge.",
   description:
     "The real SAP BAPI_INCOMINGINVOICE_CREATE field mapping for invoice OCR, why MM and FI invoices post through different paths, and where automation breaks.",
   metaTag: "Invoice OCR to SAP MM/FI: Real BAPI Field Map (2026)",
   content: `
-    <p>An SAP-side integration engineer told me in 2025 that his company had spent four months building an OCR-to-SAP pipeline before anyone asked whether the invoices they were posting had purchase order references. Half did, half did not. The half with PO references needed MM's invoice verification path, matched against goods receipt. The half without needed to post straight to FI. Nobody had designed for two paths, so every FI-only invoice (utilities, subscriptions, professional services) failed validation against a purchase order that never existed. This is the single most common architectural mistake in SAP invoice automation, and almost nothing written about "OCR for SAP" mentions it, because it requires actually understanding SAP's posting logic rather than just describing OCR in general terms with SAP's name attached.</p>
+    <p>An SAP-side integration engineer told me in 2025 that his company had spent four months building an OCR-to-SAP pipeline before anyone asked whether the invoices they were posting had purchase order references. Half did, half did not. The half with PO references needed MM's invoice verification path, matched against goods receipt. The half without needed to post straight to FI. Nobody had designed for two paths, so every FI-only invoice (utilities, subscriptions, professional services) failed validation against a purchase order that never existed. This is the single most common architectural mistake in SAP invoice automation, and almost nothing written about "OCR for SAP" mentions it, because it requires understanding SAP's posting logic rather than just describing OCR in general terms with SAP's name attached.</p>
 
-    <p>This is the real field mapping for posting an OCR-extracted invoice into SAP, the MM-versus-FI distinction that most guides skip, and where <a href="/solutions/finance-automation">invoice automation</a> actually breaks once you are past the demo.</p>
+    <p>This is the real field mapping for posting an OCR-extracted invoice into SAP, the MM-versus-FI distinction that most guides skip, and where <a href="/solutions/finance-automation">invoice automation</a> breaks once you are past the demo.</p>
 
     <h2>MM invoice vs. FI invoice: the distinction that decides everything downstream</h2>
 
@@ -45,7 +45,7 @@ export const blogAp03: BlogPost = {
       </tbody>
     </table>
 
-    <p>FI-only invoices skip the PO_NUMBER, PO_ITEM, and goods-receipt-reference fields entirely and post through a different mechanism tied to a G/L account and cost object (cost center, internal order, or WBS element) instead of a purchase order line. Building one extraction pipeline that correctly routes to either path based on whether a PO reference actually exists on the source document, rather than assuming one path for everything, is the architectural decision that determines whether your SAP invoice automation works for the whole AP volume or just the PO-backed half of it.</p>
+    <p>FI-only invoices skip the PO_NUMBER, PO_ITEM, and goods-receipt-reference fields entirely and post through a different mechanism tied to a G/L account and cost object (cost center, internal order, or WBS element) instead of a purchase order line. Building one extraction pipeline that correctly routes to either path based on whether a PO reference exists on the source document, rather than assuming one path for everything, is the architectural decision that determines whether your SAP invoice automation works for the whole AP volume or just the PO-backed half of it.</p>
 
     <h2>BAPI vs. IDoc: two different posting paths, not interchangeable</h2>
 
@@ -57,11 +57,11 @@ export const blogAp03: BlogPost = {
 
     <h2>Tolerance rules: why a "correct" invoice still fails to post</h2>
 
-    <p>SAP's invoice verification tolerance rules, configured in OMR6, define acceptable variance between the invoice, the PO, and the goods receipt, on price, quantity, and date. These rules are usually set up once during implementation and rarely revisited as the business changes. A tolerance configured for a company's pricing reality in 2019 can silently block a large share of otherwise-correct invoices years later if unit prices have drifted beyond the configured band, and the failure looks identical to a genuine pricing error from the extraction side. Before assuming an OCR pipeline is misreading prices, check whether the block is actually a stale tolerance rule rejecting a real, correct invoice.</p>
+    <p>SAP's invoice verification tolerance rules, configured in OMR6, define acceptable variance between the invoice, the PO, and the goods receipt, on price, quantity, and date. These rules are usually set up once during implementation and rarely revisited as the business changes. A tolerance configured for a company's pricing reality in 2019 can silently block a large share of otherwise-correct invoices years later if unit prices have drifted beyond the configured band, and the failure looks identical to a genuine pricing error from the extraction side. Before assuming an OCR pipeline is misreading prices, check whether the block is a stale tolerance rule rejecting a real, correct invoice.</p>
 
-    <p>The practical diagnostic: pull a sample of blocked invoices from the exception queue and check what percentage cluster around the same vendor or the same tolerance key (price variance vs. quantity variance vs. date variance). A stale tolerance rule tends to produce a lopsided pattern, most blocks on one specific tolerance type from vendors whose pricing has genuinely shifted, rather than a random scatter across vendors and variance types. A random scatter looks more like a genuine extraction accuracy problem. The pattern tells you which one you are dealing with faster than debugging individual invoices one at a time.</p>
+    <p>The practical diagnostic: pull a sample of blocked invoices from the exception queue and check what percentage cluster around the same vendor or the same tolerance key (price variance vs. quantity variance vs. date variance). A stale tolerance rule tends to produce a lopsided pattern, most blocks on one specific tolerance type from vendors whose pricing has shifted, rather than a random scatter across vendors and variance types. A random scatter looks more like a genuine extraction accuracy problem. The pattern tells you which one you are dealing with faster than debugging individual invoices one at a time.</p>
 
-    <h2>Where extraction accuracy actually matters most in this pipeline</h2>
+    <h2>Where extraction accuracy matters most in this pipeline</h2>
 
     <p>Line-item accuracy on multi-page invoices determines whether ITEM_AMOUNT and QUANTITY reconcile against the PO and goods receipt within tolerance on the first attempt, or whether the invoice lands in the exception queue for a reason that has nothing to do with a real pricing or quantity discrepancy. Our own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">accuracy benchmark</a> measured layout-aware line-item extraction at 93% against 81 to 87% for engines with weaker multi-page table handling, and that gap shows up directly as false tolerance-rule rejections at the MIRO stage, not as an obviously mislabeled OCR error. We built <a href="/products">DocsAPI</a> with multi-page table stitching specifically because SAP's tolerance-based matching punishes small extraction errors more visibly than systems with looser validation, since a mismatch does not just get flagged, it blocks the posting outright.</p>
 

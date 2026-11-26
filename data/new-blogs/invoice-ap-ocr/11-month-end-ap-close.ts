@@ -6,22 +6,22 @@ export const blogAp11: BlogPost = {
   title: "Why AP Is the Real Bottleneck at Month-End Close (2026)",
   slug: "month-end-ap-close-bottleneck",
   excerpt:
-    "Every close guide says accrue unprocessed invoices without saying how. Here is the actual estimation method, and why AP is usually the real bottleneck.",
+    "Accruing unprocessed invoices at month end needs an estimate. The estimation method, and why AP is usually the bottleneck in the close.",
   description:
     "Why accounts payable is usually the real month-end close bottleneck, and the actual three-method methodology for accruing invoices not yet received.",
   metaTag: "AP Month-End Close: The Real Accrual Math (2026)",
   content: `
-    <p>Every month-end close guide I read while researching this piece lists "post accruals for unprocessed invoices" as a step, and not one of them explains how to actually estimate that number. It gets treated as if the accrual amount is simply known, when in practice it is one of the more judgment-heavy calculations in the whole close, and getting it wrong in either direction (over-accruing or under-accruing) distorts the period's financials in a way that quietly compounds if nobody notices, month after month, until a variance shows up that nobody can immediately explain.</p>
+    <p>Every month-end close guide I read while researching this piece lists "post accruals for unprocessed invoices" as a step, and not one of them explains how to estimate that number. It gets treated as if the accrual amount is simply known, when in practice it is one of the more judgment-heavy calculations in the whole close, and getting it wrong in either direction (over-accruing or under-accruing) distorts the period's financials in a way that quietly compounds if nobody notices, month after month, until a variance shows up that nobody can immediately explain.</p>
 
     <p>This is the actual accrual methodology, plus the reason <a href="/solutions/finance-automation">accounts payable</a> specifically, more than any other close workstream, ends up as the pacing bottleneck for the whole close.</p>
 
     <h2>Why AP is structurally the slowest workstream to close</h2>
 
-    <p>Most close workstreams close on data your company already has: bank transactions are already posted, payroll runs on a known schedule, revenue recognition works off contracts and delivery dates you control. AP close depends on data you do not control at all, when a vendor actually sends an invoice for services already rendered. A vendor who provides a service in month N but does not invoice until three weeks into month N+1 creates a structural gap: the expense belongs in month N's financials, but the source document that would let you record it precisely does not exist yet when you are trying to close month N's books. Every other close workstream can move as fast as your own team works. AP close is gated by other companies' invoicing habits, which is why it is so often the thing everyone is waiting on.</p>
+    <p>Most close workstreams close on data your company already has: bank transactions are already posted, payroll runs on a known schedule, revenue recognition works off contracts and delivery dates you control. AP close depends on data you do not control at all, when a vendor sends an invoice for services already rendered. A vendor who provides a service in month N but does not invoice until three weeks into month N+1 creates a structural gap: the expense belongs in month N's financials, but the source document that would let you record it precisely does not exist yet when you are trying to close month N's books. Every other close workstream can move as fast as your own team works. AP close is gated by other companies' invoicing habits, which is why it is so often the thing everyone is waiting on.</p>
 
     <h2>The accrual estimation methodology nobody writes down</h2>
 
-    <p>There are three practical methods, matched to how much visibility you actually have into the underlying spend, ranked from most precise to most estimated.</p>
+    <p>There are three practical methods, matched to how much visibility you have into the underlying spend, ranked from most precise to most estimated.</p>
 
     <table>
       <thead>
@@ -50,9 +50,9 @@ export const blogAp11: BlogPost = {
 
     <p>AP is rarely the last workstream anyone is waiting on by coincidence. FP&A cannot finalize a variance analysis against budget until expense numbers are final, which means a slow AP close delays every downstream report that depends on it, board materials, investor updates, department budget reviews. This cascading effect is easy to underestimate because AP's own delay looks small in isolation (two extra days to finalize accruals) while its downstream cost is not small at all (an entire finance team's reporting calendar compresses into the days remaining after AP finally closes). Treating AP close speed as an AP-team metric alone undercounts its actual organizational cost.</p>
 
-    <h2>Where invoice processing speed actually helps close, and where it does not</h2>
+    <h2>Where invoice processing speed helps close, and where it does not</h2>
 
-    <p>Faster invoice OCR and extraction shrinks the population of invoices still sitting in a processing queue when close starts, which reduces the accrual estimation burden directly, fewer invoices need to be estimated because more of them have already been processed with real numbers. What faster extraction cannot fix is the upstream gap, invoices vendors have not sent yet regardless of how fast you could process them if they arrived today. This is why AP automation genuinely accelerates close (shrinking the "received but not yet processed" bucket) without eliminating the accrual problem entirely (the "not yet received at all" bucket persists no matter how fast your own pipeline runs). Both buckets need attention; solving only one leaves the other as the new pacing constraint.</p>
+    <p>Faster invoice OCR and extraction shrinks the population of invoices still sitting in a processing queue when close starts, which reduces the accrual estimation burden directly, fewer invoices need to be estimated because more of them have already been processed with real numbers. What faster extraction cannot fix is the upstream gap, invoices vendors have not sent yet regardless of how fast you could process them if they arrived today. This is why AP automation accelerates close (shrinking the "received but not yet processed" bucket) without eliminating the accrual problem entirely (the "not yet received at all" bucket persists no matter how fast your own pipeline runs). Both buckets need attention; solving only one leaves the other as the new pacing constraint.</p>
 
     <p>Our own <a href="/resources/blogs/accounts-payable-ocr">accounts payable OCR guide</a> covers the processing-speed side of this in depth; the accrual methodology above is specifically the part that speed alone does not solve, and it is worth budgeting time for even after your extraction pipeline is already fast.</p>
 
@@ -60,7 +60,7 @@ export const blogAp11: BlogPost = {
 
     <p>Applying the direct RNI method to every single open PO, down to a $40 office-supplies order, is real effort with almost no payoff, since the aggregate error from skipping small-dollar items is immaterial to the financial statements. A practical threshold: apply direct RNI tracking to POs above a set dollar amount (calibrated to your company's own materiality threshold, commonly a fraction of a percent of monthly revenue or expense), use recurring-vendor carryforward for known repeat vendors regardless of size, and let statistical lag estimation absorb the long tail of small, one-off, non-PO spend that would otherwise consume disproportionate close-team time for negligible accuracy gain.</p>
 
-    <p>This tiered approach is also where a lot of "AP close takes too long" complaints actually originate: a team treating every invoice with the same manual rigor regardless of dollar size is spending real hours achieving precision on amounts too small to matter, time that would close the books faster if redirected entirely toward the handful of large-dollar items where getting the number right actually changes anything material.</p>
+    <p>This tiered approach is also where a lot of "AP close takes too long" complaints originate: a team treating every invoice with the same manual rigor regardless of dollar size is spending real hours achieving precision on amounts too small to matter, time that would close the books faster if redirected entirely toward the handful of large-dollar items where getting the number right changes anything material.</p>
 
     <h2>Building a close-ready AP calendar</h2>
 
@@ -99,7 +99,7 @@ export const blogAp11: BlogPost = {
     {
       question: "Why does accounts payable usually take the longest to close each month?",
       answer:
-        "Because AP close depends on data outside your own company's control, when vendors actually send invoices for services already rendered. Other close workstreams run on data you already have; AP is gated by other companies' invoicing habits.",
+        "Because AP close depends on data outside your own company's control, when vendors send invoices for services already rendered. Other close workstreams run on data you already have; AP is gated by other companies' invoicing habits.",
     },
     {
       question: "How do you calculate an accrual for invoices not yet received at month-end?",

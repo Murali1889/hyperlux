@@ -102,7 +102,7 @@ export default function CompetitiveAdvantage() {
           href="/book-demo"
           className="inline-flex items-center gap-2 text-indigo-600 font-medium hover:text-indigo-700"
         >
-          See how DocsAPI can transform your lending operations
+          See what DocsAPI does with your own lending documents
           <svg
             className="w-5 h-5"
             fill="none"

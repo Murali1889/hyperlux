@@ -35,8 +35,7 @@ export default function DocumentTypesSupported() {
               Document Types Supported
             </h2>
             <p className="max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Our OCR technology is optimized for a wide range of legal documents with specialized extraction models for
-              each type.
+              Each legal document type below has its own extraction model.
             </p>
           </div>
         </div>

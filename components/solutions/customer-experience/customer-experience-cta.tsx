@@ -19,8 +19,7 @@ export default function CustomerExperienceCta() {
             Turn documents into real-time CX wins.
           </h2>
           <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-            Join leading companies that have transformed their customer experience with our intelligent document
-            processing solutions.
+            Book a demo with your own ID and form samples.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

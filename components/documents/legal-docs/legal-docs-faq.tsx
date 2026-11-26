@@ -10,7 +10,7 @@ export default function LegalDocsFAQ() {
     {
       question: "Can the system handle multilingual contracts?",
       answer:
-        "Yes, our OCR system supports documents in over 25 languages, including English, Spanish, French, German, Chinese, Japanese, and Arabic. The system can process contracts with mixed languages and automatically detect the primary language of each document. For specialized legal terminology, we offer industry-specific language models that understand context-specific meanings across different jurisdictions and legal systems.",
+        "Yes, our OCR system supports documents in over 25 languages, including English, Spanish, French, German, Chinese, Japanese, and Arabic. The system can process contracts with mixed languages and automatically detect the primary language of each document. For specialized legal terminology, there are language models trained on how terms are used in different jurisdictions.",
     },
     {
       question: "Can DocsAPI run on-premise?",
@@ -20,7 +20,7 @@ export default function LegalDocsFAQ() {
     {
       question: "How is sensitive data protected?",
       answer:
-        "We implement multiple layers of security to protect sensitive data. All documents are encrypted both in transit and at rest using AES-256 encryption. Our platform includes automated PII detection and redaction capabilities that can be configured to your specific compliance requirements. Access controls allow you to define precisely who can view, process, or export different document types. Additionally, comprehensive audit logs track all document access and processing activities for compliance purposes.",
+        "We implement multiple layers of security to protect sensitive data. All documents are encrypted both in transit and at rest using AES-256 encryption. Our platform includes automated PII detection and redaction capabilities that can be configured to your specific compliance requirements. Access controls allow you to define precisely who can view, process, or export different document types. Audit logs also record every time a document is opened or processed.",
     },
   ]
 

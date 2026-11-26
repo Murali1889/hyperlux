@@ -7,12 +7,12 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 const integrations = [
   {
     name: "SAP",
-    description: "Seamless integration with SAP ERP and S/4HANA for real-time data synchronization.",
+    description: "Connects to SAP ERP and S/4HANA and keeps the data in sync.",
     logo: "SAP",
   },
   {
     name: "Oracle",
-    description: "Connect with Oracle SCM Cloud and NetSuite for end-to-end supply chain visibility.",
+    description: "Connect with Oracle SCM Cloud and NetSuite.",
     logo: "Oracle",
   },
   {
@@ -22,12 +22,12 @@ const integrations = [
   },
   {
     name: "Blue Yonder",
-    description: "Sync with Blue Yonder (formerly JDA) for logistics and distribution optimization.",
+    description: "Sync with Blue Yonder (formerly JDA) for logistics and distribution.",
     logo: "BlueYonder",
   },
   {
     name: "Infor",
-    description: "Connect with Infor CloudSuite for comprehensive supply chain management.",
+    description: "Connect with Infor CloudSuite.",
     logo: "Infor",
   },
   {
@@ -103,7 +103,7 @@ export default function IntegrationsCarousel() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">Integrations</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Our solution integrates seamlessly with your existing supply chain systems.
+            It connects to the supply chain systems you already run.
           </p>
         </motion.div>
 

@@ -6,14 +6,14 @@ export const blogAp13: BlogPost = {
   title: "Email Invoice Parsing: What Breaks in Real Inboxes",
   slug: "email-invoice-parsing",
   excerpt:
-    "Email parsing guides cover attachments and receipts. None cover forwarded threads or sender verification, what actually breaks in production.",
+    "Attachments and receipts are the easy part of email invoice parsing. Forwarded threads and sender verification are what break in production.",
   description:
     "Email invoice parsing beyond attachments: forwarded-thread noise, the email-is-the-invoice problem, and why sender verification belongs in the pipeline.",
   metaTag: "Email Invoice Parsing: What Actually Breaks (2026)",
   content: `
-    <p>Email invoice parsing guides do a genuinely good job covering the basics now: PDF attachments, HTML receipts where the email itself is the invoice (Stripe, AWS, Uber for Business style), even batches of multiple attachments in one message. What almost none of them cover is what actually breaks once a real AP inbox is running at volume: invoices buried three replies deep in a forwarded thread, and the fact that email is the single most common vector for the exact fraud pattern our own <a href="/resources/blogs/invoice-fraud-detection">document forensics guide</a> covers, yet email-parsing content and fraud-prevention content almost never reference each other.</p>
+    <p>Email invoice parsing guides do a good job covering the basics now: PDF attachments, HTML receipts where the email itself is the invoice (Stripe, AWS, Uber for Business style), even batches of multiple attachments in one message. What almost none of them cover is what breaks once a real AP inbox is running at volume: invoices buried three replies deep in a forwarded thread, and the fact that email is the single most common vector for the exact fraud pattern our own <a href="/resources/blogs/invoice-fraud-detection">document forensics guide</a> covers, yet email-parsing content and fraud-prevention content almost never reference each other.</p>
 
-    <p>This is what actually goes wrong with <a href="/solutions/finance-automation">invoice automation</a> built on email intake, past the attachment-parsing basics every other guide already handles well.</p>
+    <p>This is what goes wrong with <a href="/solutions/finance-automation">invoice automation</a> built on email intake, past the attachment-parsing basics every other guide already handles well.</p>
 
     <h2>The inbox-to-ERP pipeline, step by step</h2>
 
@@ -51,13 +51,13 @@ export const blogAp13: BlogPost = {
 
     <p>Two checks belong in the extraction pipeline itself, not as a separate manual process: verify the sending domain matches the vendor's known, previously-verified domain rather than a close look-alike (a single character swap, an extra letter, a different top-level domain), and flag any email where the reply-to address differs from the visible sender address, a classic spoofing pattern. Neither check is complex to implement, and both catch a meaningful share of the fraud attempts that arrive specifically because AP inboxes are treated as pure data-entry sources rather than a security-relevant intake point, the same underlying blind spot as trusting a document simply because it looks like a real invoice.</p>
 
-    <h2>What "zero-setup" vendor onboarding actually means, and where it still needs a rule</h2>
+    <h2>What "zero-setup" vendor onboarding means, and where it still needs a rule</h2>
 
-    <p>Modern email-parsing tools market "zero-setup" onboarding, no per-vendor template configuration required before extraction works. This is genuinely true for the extraction step itself, layout-aware models handle unfamiliar invoice formats reasonably well without prior training on that specific vendor. It is not true for the two checks that matter most in this piece: sender verification and the email-is-the-invoice classification both still need an explicit rule or reference list, since neither is a pure extraction problem the model can infer from the document content alone. A new vendor's first invoice has no verified sending domain on file yet by definition, which means the same higher-scrutiny treatment that applies to a brand-new vendor's non-PO invoice, covered in our <a href="/resources/blogs/non-po-invoice-exception-routing">exception routing guide</a>, should apply here too.</p>
+    <p>Modern email-parsing tools market "zero-setup" onboarding, no per-vendor template configuration required before extraction works. This is true for the extraction step itself, layout-aware models handle unfamiliar invoice formats reasonably well without prior training on that specific vendor. It is not true for the two checks that matter most in this piece: sender verification and the email-is-the-invoice classification both still need an explicit rule or reference list, since neither is a pure extraction problem the model can infer from the document content alone. A new vendor's first invoice has no verified sending domain on file yet by definition, which means the same higher-scrutiny treatment that applies to a brand-new vendor's non-PO invoice, covered in our <a href="/resources/blogs/non-po-invoice-exception-routing">exception routing guide</a>, should apply here too.</p>
 
     <p>The practical implication for evaluating any "zero-setup" claim: ask specifically whether that zero-setup promise covers extraction alone, or covers the security-relevant checks as well. Most vendors mean the former even when their marketing language does not draw that distinction clearly, and assuming it covers both leaves a real gap in exactly the checks this piece is about.</p>
 
-    <h2>Attachment handling that actually matches how vendors send invoices</h2>
+    <h2>Attachment handling that matches how vendors send invoices</h2>
 
     <p>Real vendor emails do not always follow the one-email-one-invoice pattern the cleanest demos show. A single email can contain multiple invoice attachments (a vendor batching several jobs into one message), a mix of an invoice PDF and an unrelated attachment (a W-9 form, a certificate of insurance), or an invoice embedded as an image within the email body rather than as a proper attachment. Extraction needs to classify each attachment independently rather than assuming the first PDF found is the only relevant document, and needs to handle inline images the same way it handles the more common attachment case, since the underlying content is identical even though the delivery mechanism differs. A pipeline that only handles the single-clean-PDF case will silently drop real invoices the moment a vendor's actual sending habits deviate from that pattern, and most vendors deviate from it more often than any demo suggests.</p>
 
@@ -65,7 +65,7 @@ export const blogAp13: BlogPost = {
 
     <p>Once data is extracted and posted to the ERP, the original email itself still matters, and it gets discarded or lost more often than it should. An auditor asking to verify an invoice needs the actual email, including the sending address and full headers, not just the extracted data or even the attached PDF in isolation, since the email metadata is part of the evidence that the invoice came from a legitimate source. A pipeline that extracts data and then relies on a personal mailbox's own retention policy (which might auto-archive or delete after a fixed period) for the source record is one inbox cleanup away from losing the evidence trail entirely.</p>
 
-    <p>The practical fix: archive the complete original email, headers included, to a system with a retention policy set deliberately for audit purposes, not whatever your email provider defaults to, at the same time extraction happens, not as an afterthought. This is a small addition to build once and easy to forget entirely if nobody explicitly owns the retention decision, and it costs almost nothing compared to the cost of not having the record when it is actually needed.</p>
+    <p>The practical fix: archive the complete original email, headers included, to a system with a retention policy set deliberately for audit purposes, not whatever your email provider defaults to, at the same time extraction happens, not as an afterthought. This is a small addition to build once and easy to forget entirely if nobody explicitly owns the retention decision, and it costs almost nothing compared to the cost of not having the record when it is needed.</p>
 
     <h2>What I would check in your current email intake pipeline</h2>
 

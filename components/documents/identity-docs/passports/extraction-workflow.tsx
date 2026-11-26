@@ -15,7 +15,7 @@ export default function ExtractionWorkflow() {
     {
       icon: <ShieldCheck className="h-8 w-8 text-indigo-700" />,
       title: "Check Digits Validation",
-      description: "System validates MRZ check digits to ensure document authenticity and data integrity.",
+      description: "MRZ check digits are recalculated, so a misread character fails the check instead of passing silently.",
     },
     {
       icon: <UserCheck className="h-8 w-8 text-indigo-700" />,

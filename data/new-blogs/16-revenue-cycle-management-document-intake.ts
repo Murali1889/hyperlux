@@ -6,7 +6,7 @@ export const blog16: BlogPost = {
   title: "RCM: Why 12-Day Document Intake Is Killing Your AR (2026)",
   slug: "revenue-cycle-management-document-intake",
   excerpt:
-    "When cash is slow, the cause is often upstream of payment: the days between a document arriving and its data reaching your system. Here is how to measure that gap and shorten it.",
+    "When cash is slow, the cause is often upstream of payment: the days between a document arriving and its data reaching your system. How to measure that gap and shorten it.",
   description:
     "Our AR aging blamed customers. The real problem was 12-day document intake. Find your own stuck step and cut RCM intake from days to hours in 2026.",
   metaTag: "RCM: 12-Day Intake Is Killing Your AR (Fix in 2026)",

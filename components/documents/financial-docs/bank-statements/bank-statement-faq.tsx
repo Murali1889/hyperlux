@@ -15,7 +15,7 @@ export default function BankStatementFAQ() {
     {
       question: "Can you process passbook scans and physical statements?",
       answer:
-        "Yes, our OCR engine is optimized for both digital statements and scanned physical documents. For passbook scans, we apply additional image preprocessing techniques to handle handwritten entries, stamps, and varying scan qualities. Digital statements exported from online banking give the best results. Scanned passbooks depend heavily on scan quality, and rows the engine is unsure about are flagged for a reviewer instead of guessed.",
+        "Yes. It reads both digital PDF statements and scanned paper ones. For passbook scans, we apply additional image preprocessing techniques to handle handwritten entries, stamps, and varying scan qualities. Digital statements exported from online banking give the best results. Scanned passbooks depend heavily on scan quality, and rows the engine is unsure about are flagged for a reviewer instead of guessed.",
     },
   ]
 

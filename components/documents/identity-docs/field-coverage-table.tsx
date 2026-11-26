@@ -24,7 +24,7 @@ export default function FieldCoverageTable() {
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Field Coverage</h2>
             <p className="max-w-[900px] text-slate-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Comprehensive data extraction across all identity document types
+              The fields we read from each identity document type
             </p>
           </div>
         </div>

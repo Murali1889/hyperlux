@@ -18,7 +18,7 @@ export default function PurchaseOrderCta() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Automate purchase orders now.</h2>
           <p className="text-xl text-indigo-100 mb-8">
-            Transform your procurement process with our AI-powered purchase order OCR solution. Request a demo or
+            Try it on your own purchase orders before you commit. Request a demo or
             contact our sales team to learn more.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

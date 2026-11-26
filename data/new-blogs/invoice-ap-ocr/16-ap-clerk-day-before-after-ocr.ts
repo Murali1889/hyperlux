@@ -6,18 +6,18 @@ export const blogAp16: BlogPost = {
   title: "An AP Clerk's Day, Before and After Invoice OCR (2026)",
   slug: "ap-clerk-day-before-after-ocr",
   excerpt:
-    "Invoice processing stats compare days and dollars. Here is what actually changes hour by hour for the person doing the work, task by task.",
+    "What changes hour by hour for the AP clerk once invoices are read by OCR, task by task.",
   description:
     "A real hour-by-hour breakdown of an AP clerk's day before and after invoice OCR, task by task, not just aggregate cost-per-invoice statistics from vendors.",
   metaTag: "The AP Clerk's Real Day: Before and After OCR (2026)",
   content: `
-    <p>Every invoice processing statistics page tells you the same aggregate numbers: 14.2 days per invoice manually, 12 minutes of touch time, 5 invoices an hour. All true, and none of it tells you what that actually looks like for the person sitting at the desk. I sat with an AP clerk, Marcus, at a mid-market distributor for a full day in early 2026, before their OCR rollout and again three months after, to see where the hours actually went, not just the headline number the vendor's own case study would have led with.</p>
+    <p>Every invoice processing statistics page tells you the same aggregate numbers: 14.2 days per invoice manually, 12 minutes of touch time, 5 invoices an hour. All true, and none of it tells you what that looks like for the person sitting at the desk. I sat with an AP clerk, Marcus, at a mid-market distributor for a full day in early 2026, before their OCR rollout and again three months after, to see where the hours went, not just the headline number the vendor's own case study would have led with.</p>
 
-    <p>This is that day, hour by hour, plus the task-level time breakdown behind the aggregate statistics every other <a href="/solutions/finance-automation">invoice automation</a> comparison page shows you without ever explaining where the time actually goes.</p>
+    <p>This is that day, hour by hour, plus the task-level time breakdown behind the aggregate statistics every other <a href="/solutions/finance-automation">invoice automation</a> comparison page shows you without ever explaining where the time goes.</p>
 
     <h2>8:00 to 9:15, before: sorting the overnight pile</h2>
 
-    <p>Marcus's day started with the inbox and the physical mail tray, both accumulated overnight. Emails with PDF attachments, a few faxes, three envelopes from vendors who still mail paper invoices. The very first task of the day was not data entry, it was simple triage: which of these are actually invoices versus statements, remittance advices, or vendor marketing that happened to land in the AP inbox. On a bad morning, this sorting step alone took 45 minutes before a single invoice got entered into the system.</p>
+    <p>Marcus's day started with the inbox and the physical mail tray, both accumulated overnight. Emails with PDF attachments, a few faxes, three envelopes from vendors who still mail paper invoices. The very first task of the day was not data entry, it was simple triage: which of these are invoices versus statements, remittance advices, or vendor marketing that happened to land in the AP inbox. On a bad morning, this sorting step alone took 45 minutes before a single invoice got entered into the system.</p>
 
     <h2>9:15 to 11:30, before: data entry, one field at a time</h2>
 
@@ -33,7 +33,7 @@ export const blogAp16: BlogPost = {
 
     <h2>3:30 to 5:00, before: filing, approvals, and the day's total</h2>
 
-    <p>The last stretch was routing approved invoices to the payment queue, filing the physical paperwork, and following up on two approvals still pending from two days earlier. End-of-day total: 22 invoices fully processed, 3 still sitting in some intermediate state, a normal day, not a bad one, and also not one where Marcus ever felt like he had a moment of genuinely uninterrupted focus.</p>
+    <p>The last stretch was routing approved invoices to the payment queue, filing the physical paperwork, and following up on two approvals still pending from two days earlier. End-of-day total: 22 invoices fully processed, 3 still sitting in some intermediate state, a normal day, not a bad one, and also not one where Marcus ever felt like he had a moment of uninterrupted focus.</p>
 
     <h2>The part of the "before" day that no statistic captures at all</h2>
 
@@ -61,7 +61,7 @@ export const blogAp16: BlogPost = {
 
     <h2>What the aggregate statistics get right, and what they hide</h2>
 
-    <p>The widely cited numbers, manual processing averaging 12 minutes of touch time and 14.2 days of cycle time, automated processing dropping to a fraction of both, are directionally accurate and match what Marcus's team actually experienced. What they hide is the distribution: the time savings concentrate almost entirely in the clean, routine invoices, while the genuinely hard cases (real discrepancies, unfamiliar vendors, complex multi-page documents) barely move. A team evaluating OCR ROI purely on the aggregate average will overestimate how much the hardest 20% of their volume improves, because that 20% was never the part OCR was going to fix.</p>
+    <p>The widely cited numbers, manual processing averaging 12 minutes of touch time and 14.2 days of cycle time, automated processing dropping to a fraction of both, are directionally accurate and match what Marcus's team experienced. What they hide is the distribution: the time savings concentrate almost entirely in the clean, routine invoices, while the hard cases (real discrepancies, unfamiliar vendors, complex multi-page documents) barely move. A team evaluating OCR ROI purely on the aggregate average will overestimate how much the hardest 20% of their volume improves, because that 20% was never the part OCR was going to fix.</p>
 
     <p>This has a practical staffing implication most ROI pitches skip entirely. If a team sizes its post-automation AP headcount purely off the average time-savings percentage, applied uniformly across all volume, it will systematically understaff the exception queue, because the hard 20% did not shrink at anywhere near the rate the average suggests. The right sizing question splits the calculation: how many hours does the easy 80% now take, and separately, how many hours does the stubborn 20% still take, then sum those two numbers rather than applying one blended percentage to total volume.</p>
 
@@ -69,19 +69,19 @@ export const blogAp16: BlogPost = {
 
     <p>The team's leadership faced the decision every AP automation rollout eventually forces: redeploy the reclaimed hours toward other work, or reduce headcount and pocket the savings directly. They chose a middle path, reassigning roughly a third of Marcus's freed time toward vendor relationship work (proactively resolving recurring formatting issues with repeat vendors rather than just reacting to them invoice by invoice) and leaving the rest as genuine slack that absorbed volume growth without needing to hire. Neither a pure headcount-reduction case nor a pure redeployment case; a blend, which is the more common real outcome than either extreme that ROI pitches tend to assume.</p>
 
-    <p>This decision is worth naming explicitly before an OCR rollout starts, not after, because the answer changes what "success" looks like in the post-rollout review. A team that measured success purely as headcount reduction would call this rollout a partial disappointment, since headcount stayed flat. A team that measured it as capacity gained without new hires, plus meaningfully reduced vendor friction, would call it a clear win. Same underlying facts, different verdict, depending on which goal was actually set at the start.</p>
+    <p>This decision is worth naming explicitly before an OCR rollout starts, not after, because the answer changes what "success" looks like in the post-rollout review. A team that measured success purely as headcount reduction would call this rollout a partial disappointment, since headcount stayed flat. A team that measured it as capacity gained without new hires, plus meaningfully reduced vendor friction, would call it a clear win. Same underlying facts, different verdict, depending on which goal was set at the start.</p>
 
     <h2>What changed for Marcus that no statistic captures</h2>
 
-    <p>The most noticeable change three months in was not the time saved, it was the shift in what kind of work filled the freed-up time. Marcus spent less time on data entry and more time actually talking to vendors about genuine discrepancies, the work that actually needs a human's judgment rather than their typing speed. This is the part every ROI calculation misses by only counting time saved rather than what the saved time gets redirected toward, and it is also the part that determines whether an AP team feels like automation helped them or replaced the interesting parts of their job with something worse.</p>
+    <p>The most noticeable change three months in was not the time saved, it was the shift in what kind of work filled the freed-up time. Marcus spent less time on data entry and more time talking to vendors about genuine discrepancies, the work that needs a human's judgment rather than their typing speed. This is the part every ROI calculation misses by only counting time saved rather than what the saved time gets redirected toward, and it is also the part that determines whether an AP team feels like automation helped them or replaced the interesting parts of their job with something worse.</p>
 
     <p>There is a version of this rollout that goes badly even with identical time-savings numbers: one where the reclaimed hours simply get filled with more volume at the same headcount, with no change in the nature of the work itself, just more of the same repetitive verification tasks at a faster pace. Whether a rollout lands as the good version or that version depends entirely on decisions made by AP leadership after the extraction technology already works, not on the technology itself.</p>
 
     <h2>What I would ask before evaluating your own OCR ROI</h2>
 
-    <p>Do not just ask how much average processing time drops. Ask what happens to the specific person doing this work, hour by hour, on both a clean-invoice day and a hard-invoice day, and whether the freed-up time gets redirected toward genuinely more valuable work or just absorbed into a smaller headcount with the same workload. The aggregate statistic and the lived daily experience can both be true at once, and only one of them tells you whether the change actually worked for the team living it.</p>
+    <p>Do not just ask how much average processing time drops. Ask what happens to the specific person doing this work, hour by hour, on both a clean-invoice day and a hard-invoice day, and whether the freed-up time gets redirected toward more valuable work or just absorbed into a smaller headcount with the same workload. The aggregate statistic and the lived daily experience can both be true at once, and only one of them tells you whether the change worked for the team living it.</p>
 
-    <p>Ask the AP team itself, not just the numbers, what changed. Marcus's own answer, three months in, was not about the time saved in the abstract, it was that he stopped dreading the last hour of a Friday afternoon spent re-keying the same fields into the same system for the two-hundredth time that week. That answer does not show up in a cost-per-invoice spreadsheet, and it is arguably the more honest measure of whether the rollout actually improved the job, not just the metric.</p>
+    <p>Ask the AP team itself, not just the numbers, what changed. Marcus's own answer, three months in, was not about the time saved in the abstract, it was that he stopped dreading the last hour of a Friday afternoon spent re-keying the same fields into the same system for the two-hundredth time that week. That answer does not show up in a cost-per-invoice spreadsheet, and it is arguably the more honest measure of whether the rollout improved the job, not just the metric.</p>
     <p>Names in this piece are changed at the team's request; the numbers and the day itself are real. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
 
     <p>Related guides: <a href="/resources/blogs/smarter-invoice-processing-the-ocr-advantage-for-finance-departments">OCR for invoices, receipts and purchase orders</a> and <a href="/resources/blogs/best-ocr-software-for-accounts-payable">best OCR software for accounts payable</a>.</p>
@@ -108,7 +108,7 @@ export const blogAp16: BlogPost = {
   cluster: "industry-trends",
   faq: [
     {
-      question: "How much time does invoice OCR actually save an AP clerk per day?",
+      question: "How much time does invoice OCR save an AP clerk per day?",
       answer:
         "Widely cited benchmarks put manual touch time at roughly 12 minutes per invoice versus 1 to 3 minutes with AI-assisted extraction, but the savings concentrate heavily on clean, routine invoices, not exception cases.",
     },
@@ -125,7 +125,7 @@ export const blogAp16: BlogPost = {
     {
       question: "How should a team measure OCR ROI beyond the average time-savings statistic?",
       answer:
-        "Track the distribution of time savings across easy versus hard invoices, not just the average, and track what the freed-up time actually gets redirected toward.",
+        "Track the distribution of time savings across easy versus hard invoices, not just the average, and track what the freed-up time gets redirected toward.",
     },
     {
       question: "Does manual invoice data entry get less accurate later in the day?",

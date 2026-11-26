@@ -19,8 +19,7 @@ export default function ComplianceHero() {
               Stay Audit-Ready, Automatically
             </h1>
             <p className="text-lg md:text-xl text-gray-700 mb-8">
-              Streamline compliance with intelligent document processing for AML/KYC verification, SOX section 404
-              controls, and GDPR PII redaction, all with complete audit trails.
+              Document processing for AML and KYC checks, SOX section 404 controls and GDPR redaction of personal data, with an audit trail on every step.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-4 sm:py-6 text-base sm:text-lg w-full sm:w-auto">

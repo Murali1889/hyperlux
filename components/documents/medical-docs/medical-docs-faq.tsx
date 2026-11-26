@@ -15,12 +15,12 @@ export default function MedicalDocsFAQ() {
     {
       question: "How is patient data protected?",
       answer:
-        "We implement comprehensive security measures including end-to-end encryption (AES-256), role-based access controls, and detailed audit logs. DocsAPI is HIPAA-eligible, with a BAA available, and customer documents are not used to train models. We also offer automatic redaction of sensitive information and configurable data retention policies to meet regulatory requirements.",
+        "Data is encrypted, access is role-based, and every action is logged. DocsAPI is SOC 2 Type II certified and HIPAA-eligible with a BAA. DocsAPI is HIPAA-eligible, with a BAA available, and customer documents are not used to train models. We also offer automatic redaction of sensitive information and configurable data retention policies to meet regulatory requirements.",
     },
     {
       question: "What formats are supported?",
       answer:
-        "Our system supports a wide range of document formats including PDF, TIFF, JPEG, PNG, and BMP. We can process scanned documents, digital PDFs, faxes, and even photos taken with mobile devices. For multi-page documents, our system maintains page relationships and can extract data across pages. We also support various medical document layouts including standard forms, custom templates, and unstructured documents.",
+        "It reads PDF, TIFF, JPEG, PNG and BMP files. We can process scanned documents, digital PDFs, faxes, and even photos taken with mobile devices. For multi-page documents, our system maintains page relationships and can extract data across pages. Standard forms, custom templates and unstructured documents all work.",
     },
   ]
 

@@ -10,12 +10,12 @@ export default function NationalIdFAQ() {
     {
       question: "Is there an offline mode for ID verification?",
       answer:
-        "Yes, we offer an offline SDK for iOS and Android that can perform ID verification without an internet connection. The offline mode includes core OCR capabilities, barcode scanning, and basic tamper detection. For enhanced security features like duplicate detection or advanced fraud checks, an online connection is required. The offline SDK periodically requires connectivity to update security models and templates.",
+        "Yes, we offer an offline SDK for iOS and Android that can perform ID verification without an internet connection. The offline mode includes core OCR capabilities, barcode scanning, and basic tamper detection. Duplicate detection and the fraud checks need an online connection. The offline SDK periodically requires connectivity to update security models and templates.",
     },
     {
       question: "What languages and scripts are supported for ID processing?",
       answer:
-        "Our system supports over 100 languages and multiple scripts including Latin, Cyrillic, Arabic, Chinese, Japanese, Korean, Thai, and Devanagari. For non-Latin scripts, we provide both the original text and romanized versions in the API response. Our multi-language capabilities ensure accurate extraction from IDs worldwide, with specialized models for region-specific ID formats and layouts.",
+        "Our system supports over 100 languages and multiple scripts including Latin, Cyrillic, Arabic, Chinese, Japanese, Korean, Thai, and Devanagari. For non-Latin scripts, we provide both the original text and romanized versions in the API response. Region-specific models handle local ID formats and layouts.",
     },
   ]
 

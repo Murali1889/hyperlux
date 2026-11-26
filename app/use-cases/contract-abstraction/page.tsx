@@ -26,13 +26,13 @@ const CONTENT = {
       heading: "Why contract abstraction is different from invoice extraction",
       paragraphs: [
         "An invoice is a structured form: the total sits in roughly the same place every time. A contract is unstructured legal prose, where a termination clause might appear on page 3 or page 47, phrased as 'either party may terminate,' 'this agreement shall cease,' or 'upon 30 days written notice.' Contract abstraction needs layout-aware OCR to read the document plus a language-understanding layer, increasingly LLM-based, to locate and normalize each clause no matter how it is written or where it sits.",
-        "That second layer is what makes contract abstraction hard and valuable. Well-structured clauses like effective dates and party names extract reliably. Nuanced clauses like liability caps and complex renewal conditions are harder, because the legal language is genuinely ambiguous, so they need a reviewer. The practical result is that contract abstraction speeds up legal review rather than replacing it: it surfaces the clauses for a human to confirm on the agreements that matter.",
+        "That second layer is the hard part, and the part worth paying for. Well-structured clauses like effective dates and party names extract reliably. Nuanced clauses like liability caps and complex renewal conditions are harder, because the legal language is genuinely ambiguous, so they need a reviewer. The practical result is that contract abstraction speeds up legal review rather than replacing it: it surfaces the clauses for a human to confirm on the agreements that matter.",
       ],
     },
     {
       heading: "Where contract abstraction pays off most",
       paragraphs: [
-        "The biggest single win is preventing the unwanted auto-renewal. Organizations routinely re-sign contracts they meant to cancel because the renewal-notice deadline was buried in a clause nobody re-read. Extracting renewal and termination dates across a portfolio, then feeding them into a contract management system that alerts before each deadline, is often the most valuable single field to start with.",
+        "The biggest single win is preventing the unwanted auto-renewal. Organizations routinely re-sign contracts they meant to cancel because the renewal-notice deadline was buried in a clause nobody re-read. Extracting renewal and termination dates across a portfolio, then feeding them into a contract management system that alerts before each deadline, is often the best single field to start with.",
         "The second is contract lifecycle management intake: bulk-importing thousands of legacy contracts into a searchable database instead of a document dump. The third is mergers and acquisitions diligence, where an acquirer must review a target's entire contract portfolio for change-of-control clauses and material obligations in weeks. In each case, abstraction turns a stack of PDFs into a queryable dataset the business can actually act on.",
       ],
     },

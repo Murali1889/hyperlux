@@ -17,7 +17,7 @@ export default function FinancialDocsCta() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Extract finance data in seconds.</h2>
           <p className="text-xl text-indigo-100 mb-8">
-            Transform your financial document processing with our AI-powered OCR solution. Reduce costs, save time, and
+            Send a few of your own invoices and statements and see what comes back. Reduce costs, save time, and
             improve accuracy.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

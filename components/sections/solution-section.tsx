@@ -6,13 +6,13 @@ const solutions = [
   {
     title: "AI-Powered Document Classification",
     description:
-      "Leverage machine learning to automatically classify and categorize various document types, streamlining your lending workflows.",
+      "Each upload is sorted by document type first, so a bank statement and a pay stub each go to the right extractor.",
     icon: "brain-circuit",
   },
   {
     title: "Automated Data Extraction & Capture",
     description:
-      "Automatically extract and capture key data points from documents, eliminating manual data entry and reducing errors.",
+      "Key fields come out as data, and fields the model is unsure about are flagged for a person.",
     icon: "database",
   },
   {

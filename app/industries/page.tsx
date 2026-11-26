@@ -57,7 +57,7 @@ export default function IndustriesPage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Banking</h3>
               <p className="text-gray-600">
-                Streamline document processing for loan origination, account opening, and KYC verification.
+                Read the documents behind loan origination, account opening and KYC checks.
               </p>
             </div>
 
@@ -103,7 +103,7 @@ export default function IndustriesPage() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Credit Unions</h3>
               <p className="text-gray-600">
-                Enhance member experience with efficient document processing and faster loan approvals.
+                Member loan documents get read and checked sooner, so approvals stop waiting on data entry.
               </p>
             </div>
 
@@ -140,8 +140,7 @@ export default function IndustriesPage() {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Banking</h2>
               <p className="text-lg text-gray-600 mb-6">
-                Our AI OCR software transforms document processing for banks, reducing loan origination costs and
-                accelerating account opening workflows. MRZ check digits are validated and unclear fields are flagged for
+                For banks, DocsAPI reads loan and account opening documents into fields, so staff check the flagged ones instead of retyping every page. MRZ check digits are validated and unclear fields are flagged for
                 review, so banks can automate KYC verification and compliance checks without trusting blind output.
               </p>
               <ul className="space-y-4">
@@ -161,7 +160,7 @@ export default function IndustriesPage() {
                   <svg className="h-6 w-6 text-indigo-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Enhance fraud detection with document tampering alerts</span>
+                  <span>Flag documents that show signs of tampering</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="h-6 w-6 text-indigo-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -447,9 +446,7 @@ export default function IndustriesPage() {
             <div className="order-1 lg:order-2">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Fintech</h2>
               <p className="text-lg text-gray-600 mb-6">
-                Fintech lenders leverage our intelligent document automation to scale operations and improve customer
-                experience. Our AI-powered OCR extracts data from various financial documents, enabling faster decisions
-                and reduced operational costs.
+                For fintech lenders, DocsAPI reads bank statements, pay stubs and IDs at about 1.1 seconds per page, with unclear fields flagged for a person. The data comes back as fields, so decisions do not wait on someone typing.
               </p>
               <ul className="space-y-4">
                 <li className="flex items-start">
@@ -462,7 +459,7 @@ export default function IndustriesPage() {
                   <svg className="h-6 w-6 text-indigo-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Integrate seamlessly with existing lending platforms via API</span>
+                  <span>Send results to your lending platform through the API</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="h-6 w-6 text-indigo-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -474,7 +471,7 @@ export default function IndustriesPage() {
                   <svg className="h-6 w-6 text-indigo-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
-                  <span>Reduce fraud with AI-powered document verification</span>
+                  <span>Catch altered documents before they reach underwriting</span>
                 </li>
               </ul>
             </div>
@@ -489,8 +486,7 @@ export default function IndustriesPage() {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Credit Unions</h2>
               <p className="text-lg text-gray-600 mb-6">
-                Credit unions enhance member experience with our OCR software that streamlines loan processing and
-                account services. Our solution helps credit unions compete with larger institutions by automating
+                For credit unions, DocsAPI reads member loan and account documents, so staff review flagged fields instead of typing them in. Our solution helps credit unions compete with larger institutions by automating
                 document-heavy processes.
               </p>
               <ul className="space-y-4">
@@ -881,7 +877,7 @@ export default function IndustriesPage() {
       {/* CTA Section */}
       <div className="bg-indigo-700 py-16 px-4 sm:px-6 lg:px-8 text-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to transform document processing in your industry?</h2>
+          <h2 className="text-3xl font-bold mb-6">Want to see it on your own documents?</h2>
           <p className="text-xl max-w-3xl mx-auto mb-8">
             Book a demo to see how our AI OCR software can automate workflows, reduce costs, and improve accuracy for
             your specific industry needs.

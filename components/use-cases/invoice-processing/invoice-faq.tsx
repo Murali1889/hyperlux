@@ -37,12 +37,12 @@ const faqItems = [
   {
     question: "How does the system handle exceptions and discrepancies?",
     answer:
-      "Our system includes a comprehensive exception management workflow. When discrepancies are detected (such as price variances, missing PO numbers, or quantity mismatches), the system automatically routes the invoice to designated approvers based on configurable business rules. The exception dashboard provides clear visibility into all pending issues, with drill-down capabilities to quickly resolve discrepancies and maintain audit trails of all decisions.",
+      "Invoices that fail a check go to an exception queue for a person. When discrepancies are detected (such as price variances, missing PO numbers, or quantity mismatches), the system automatically routes the invoice to designated approvers based on configurable business rules. The exception dashboard provides clear visibility into all pending issues, with drill-down capabilities to quickly resolve discrepancies and maintain audit trails of all decisions.",
   },
   {
     question: "Which ERP systems can the invoice processing solution integrate with?",
     answer:
-      "Our solution offers pre-built connectors for all major ERP systems including SAP, Oracle, Microsoft Dynamics, NetSuite, Sage, and QuickBooks. We also provide a flexible API that enables custom integrations with proprietary or legacy systems. The integration is bi-directional, allowing master data synchronization from your ERP and pushing processed invoice data back to your financial systems.",
+      "Our solution offers pre-built connectors for all major ERP systems including SAP, Oracle, Microsoft Dynamics, NetSuite, Sage, and QuickBooks. The API also covers custom integrations with your own or older systems. The integration is bi-directional, allowing master data synchronization from your ERP and pushing processed invoice data back to your financial systems.",
   },
 ]
 

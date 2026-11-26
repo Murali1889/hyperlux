@@ -20,8 +20,7 @@ export default function LegalHero() {
                 Turn Contracts Into Structured Data
               </h1>
               <p className="text-xl text-gray-700 mb-8">
-                Automate clause extraction, get timely renewal alerts, and streamline NDA redaction with our AI-powered
-                legal document solution.
+                Pull clauses out of contracts, get alerts before renewals, and redact NDAs without doing it by hand.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild className="bg-indigo-700 hover:bg-indigo-800 text-white px-6 py-3 rounded-md text-lg w-full sm:w-auto">

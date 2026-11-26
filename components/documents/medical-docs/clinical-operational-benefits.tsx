@@ -34,8 +34,7 @@ export default function ClinicalOperationalBenefits() {
               Clinical & Operational Benefits
             </h2>
             <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              Transform your healthcare operations with automated document processing that improves accuracy, speed, and
-              patient care.
+              What changes for clinical and admin staff when documents stop being retyped.
             </p>
           </div>
         </div>

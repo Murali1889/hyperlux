@@ -6,7 +6,7 @@ export const blogKa16: BlogPost = {
   title: "KYC Document Expiry Automation: The Parsing Trap",
   slug: "kyc-document-expiry-automation",
   excerpt:
-    "Expiry tracking content says a passport expiring next month is treated as expired today. Almost none explains why, or how a misread date breaks the check.",
+    "A passport expiring next month is often treated as expired today. Why, and how one misread date breaks the expiry check.",
   description:
     "KYC document expiry automation: why near-expiry documents get treated as expired now, the date-format parsing trap, and RBI's risk-tiered re-KYC cadence.",
   metaTag: "KYC Document Expiry Automation: The Parsing Trap",
@@ -17,11 +17,11 @@ export const blogKa16: BlogPost = {
 
     <h2>Why a near-expiry document gets treated as already expired</h2>
 
-    <p>Treating a document expiring within a defined window as functionally expired now is not an arbitrary strictness setting, it is a response to how long the surrounding process actually takes. A lending decision, an account opening, or a compliance review frequently spans weeks between the moment a document is submitted and the moment the underlying relationship it supports, a funded loan, an active account, actually concludes. A passport or ID valid for another three weeks at submission time may not remain valid through underwriting, funding, and any post-decision cooling-off period, and a verification built around a document valid strictly on the day of submission alone, with no forward buffer, produces an approval built on a document that may have already expired by the time anyone relies on it.</p>
+    <p>Treating a document expiring within a defined window as functionally expired now is not an arbitrary strictness setting, it is a response to how long the surrounding process takes. A lending decision, an account opening, or a compliance review frequently spans weeks between the moment a document is submitted and the moment the underlying relationship it supports, a funded loan, an active account, concludes. A passport or ID valid for another three weeks at submission time may not remain valid through underwriting, funding, and any post-decision cooling-off period, and a verification built around a document valid strictly on the day of submission alone, with no forward buffer, produces an approval built on a document that may have already expired by the time anyone relies on it.</p>
 
     <h2>The bigger, less-discussed problem: how the expiry date got read in the first place</h2>
 
-    <p>A buffer window is only meaningful if the expiry date it is measured against was extracted correctly, and that extraction step is where a much larger and less-discussed failure mode actually lives. National ID documents write dates in genuinely different orders depending on the issuing country, day-month-year in most of the world, month-day-year in the US, and year-month-day in several others, frequently using the same separators and no explicit label distinguishing which convention a given field follows. A visual OCR extraction pulling a raw date string off a printed field has no inherent way to know which format applies unless the pipeline explicitly maps that specific document type to its correct date convention before parsing.</p>
+    <p>A buffer window is only meaningful if the expiry date it is measured against was extracted correctly, and that extraction step is where a much larger and less-discussed failure mode lives. National ID documents write dates in different orders depending on the issuing country, day-month-year in most of the world, month-day-year in the US, and year-month-day in several others, frequently using the same separators and no explicit label distinguishing which convention a given field follows. A visual OCR extraction pulling a raw date string off a printed field has no inherent way to know which format applies unless the pipeline explicitly maps that specific document type to its correct date convention before parsing.</p>
 
     <h2>A worked example: the same six digits, three different dates</h2>
 
@@ -38,9 +38,9 @@ export const blogKa16: BlogPost = {
       </tbody>
     </table>
 
-    <h2>Why this is a genuinely dangerous failure mode, not just an inconvenience</h2>
+    <h2>Why this is a dangerous failure mode, not just an inconvenience</h2>
 
-    <p>A misread date fails in both directions and neither direction announces itself. Reading a valid document's expiry date under the wrong convention can produce a date in the past, rejecting a genuinely valid document and pushing a legitimate customer into unnecessary friction or manual review. The more consequential failure runs the other way: reading an already-expired document's date under the wrong convention can produce a plausible-looking future date, passing an expired document as valid with no error surfaced anywhere in the pipeline, since the extraction succeeded and produced a syntactically correct date, just the wrong one.</p>
+    <p>A misread date fails in both directions and neither direction announces itself. Reading a valid document's expiry date under the wrong convention can produce a date in the past, rejecting a valid document and pushing a legitimate customer into unnecessary friction or manual review. The more consequential failure runs the other way: reading an already-expired document's date under the wrong convention can produce a plausible-looking future date, passing an expired document as valid with no error surfaced anywhere in the pipeline, since the extraction succeeded and produced a syntactically correct date, just the wrong one.</p>
 
     <h2>Why machine-readable fields solve this specific problem and printed fields do not</h2>
 
@@ -48,7 +48,7 @@ export const blogKa16: BlogPost = {
 
     <h2>What to do when only a printed date is available</h2>
 
-    <p>Not every document carries an MRZ or a standardized barcode, and for the ones that do not, the correct mitigation is not a smarter guessing heuristic applied to the raw digits, it is an explicit, maintained mapping from document type and issuing country to that document's known date convention, applied deterministically before any date arithmetic runs. A pipeline that infers the convention case by case from the digits alone, assuming values over twelve must be a day rather than a month, for instance, still fails silently on the meaningful share of dates where all three components could plausibly be a month, a genuinely common occurrence for dates in the first through twelfth of any month.</p>
+    <p>Not every document carries an MRZ or a standardized barcode, and for the ones that do not, the correct mitigation is not a smarter guessing heuristic applied to the raw digits, it is an explicit, maintained mapping from document type and issuing country to that document's known date convention, applied deterministically before any date arithmetic runs. A pipeline that infers the convention case by case from the digits alone, assuming values over twelve must be a day rather than a month, for instance, still fails silently on the meaningful share of dates where all three components could plausibly be a month, a common occurrence for dates in the first through twelfth of any month.</p>
 
     <h2>Why the mapping has to be maintained, not built once and left alone</h2>
 
@@ -65,7 +65,7 @@ export const blogKa16: BlogPost = {
     <h2>What I would check in your current document expiry pipeline</h2>
 
     <p>Ask whether your pipeline reads expiry dates from a machine-readable field, MRZ or a standardized barcode, whenever one is present on the document, rather than defaulting to visual OCR extraction of the printed date even when a more reliable source is available. Then ask whether printed-date extraction, for the documents that carry no machine-readable alternative, applies a deterministic, maintained mapping of date convention by document type and issuing country, rather than a heuristic guess applied uniformly to every document regardless of origin. Confirm your forward buffer window before treating a document as functionally expired is grounded in your actual process timeline, not an arbitrary default, and that it accounts for the realistic gap between submission and the point the underlying relationship concludes. Finally, confirm your pipeline tracks risk-tiered periodic update requirements as a separate trigger from individual document expiry, the same layered compliance logic covered in our <a href="/resources/blogs/perpetual-kyc-monitoring">perpetual KYC monitoring piece</a>, since a customer's documents remaining technically valid does not exempt them from a separate periodic refresh obligation.</p>
-    <p>"Expiring next month counts as expired today" is a genuinely correct operational rule, grounded in how long a real verification process actually takes. It is not, on its own, useful if the date it is measured against was extracted under the wrong convention in the first place, since a confidently wrong date defeats a well-designed buffer just as thoroughly as having no buffer at all.</p>
+    <p>"Expiring next month counts as expired today" is a correct operational rule, grounded in how long a real verification process takes. It is not, on its own, useful if the date it is measured against was extracted under the wrong convention in the first place, since a confidently wrong date defeats a well-designed buffer just as thoroughly as having no buffer at all.</p>
 
     <p>None of this argues against automating expiry tracking. Manually checking every document's date by hand does not solve the format-ambiguity problem either, it just moves the same risk of misreading a date onto a human reviewer instead of a parser. It is a reason to confirm your pipeline prioritizes machine-readable expiry fields where they exist, applies a deterministic date-convention mapping where they do not, and tracks risk-tiered periodic obligations as a distinct trigger from document-level expiry, rather than assuming a buffer window alone is sufficient protection against a date that was never read correctly to begin with. Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
 

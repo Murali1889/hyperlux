@@ -5,12 +5,12 @@ export default function PassportFAQ() {
     {
       question: "How does the system handle non-Latin passports?",
       answer:
-        "Our OCR engine supports multi-script recognition including Arabic, Cyrillic, Chinese, Japanese, and Korean characters. For non-Latin scripts, we extract both the native script data and the Latin transliteration from the MRZ, ensuring accurate processing of passports from all countries.",
+        "Our OCR engine supports multi-script recognition including Arabic, Cyrillic, Chinese, Japanese, and Korean characters. For non-Latin scripts, we extract both the native script data and the Latin transliteration from the MRZ, so you get both versions of the name.",
     },
     {
       question: "How does the system handle glare and blur in passport images?",
       answer:
-        "Our AI includes advanced image preprocessing that automatically corrects for glare, blur, and poor lighting conditions. The system can enhance image quality in real-time before OCR processing, and will provide confidence scores for each extracted field so you can implement appropriate fallback workflows for low-confidence extractions.",
+        "Images are cleaned up before reading to reduce glare, blur and poor lighting. The image is cleaned up before it is read, and each field comes back with a confidence score, so low-confidence fields can go to a person.",
     },
     {
       question: "What are the differences between on-device and server processing?",

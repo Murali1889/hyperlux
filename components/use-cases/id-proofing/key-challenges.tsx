@@ -7,7 +7,7 @@ export default function KeyChallenges() {
     {
       title: "Slow Manual ID Checks",
       description:
-        "Traditional identity verification requires staff to manually review documents, comparing photos and validating information. This process can take days, frustrating customers and delaying account openings. In competitive markets, these delays directly impact conversion rates and revenue.",
+        "Traditional identity verification requires staff to manually review documents, comparing photos and validating information. That can take days, and the account opening waits with it. In competitive markets, these delays directly impact conversion rates and revenue.",
       icon: (
         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path
@@ -37,7 +37,7 @@ export default function KeyChallenges() {
     {
       title: "High Customer Drop-off Rates",
       description:
-        "Complex verification processes with multiple steps and document uploads lead to significant customer abandonment. Every extra step in the verification flow gives people another reason to leave, which directly impacts customer acquisition costs and overall business growth.",
+        "Every extra step and upload loses applicants. Every extra step in the verification flow gives people another reason to leave, which directly impacts customer acquisition costs and overall business growth.",
       icon: (
         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -60,8 +60,7 @@ export default function KeyChallenges() {
             Key Challenges in Identity Verification
           </h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Organizations face significant hurdles when verifying customer identities, impacting onboarding, security,
-            and compliance.
+            Checking IDs by hand slows onboarding and still lets fakes through.
           </p>
         </motion.div>
 

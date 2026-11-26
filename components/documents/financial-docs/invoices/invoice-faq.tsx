@@ -18,7 +18,7 @@ export default function InvoiceFAQ() {
     {
       question: "How are PDFs with multiple invoices handled?",
       answer:
-        "Our system can process PDFs containing multiple invoices in two ways. First, it can automatically detect page boundaries between different invoices in a single PDF and process each as a separate document. Second, for complex cases where invoices span multiple pages or have irregular boundaries, our intelligent document splitting feature identifies where one invoice ends and another begins based on header patterns, totals, and other structural elements. Each detected invoice is then processed individually with its own extraction results.",
+        "Our system can process PDFs containing multiple invoices in two ways. First, it can automatically detect page boundaries between different invoices in a single PDF and process each as a separate document. Second, for complex cases where invoices span multiple pages or have irregular boundaries, document splitting finds where one invoice ends and the next begins from headers, totals and other layout cues. Each detected invoice is then processed individually with its own extraction results.",
     },
   ]
 

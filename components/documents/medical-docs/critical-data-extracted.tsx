@@ -139,8 +139,7 @@ export default function CriticalDataExtracted() {
               </pre>
             </div>
             <p className="mt-4 text-sm text-gray-500">
-              Structured data output enables seamless integration with EHR systems, pharmacy management software, and
-              billing platforms.
+              Output is structured JSON, so it can go straight into an EHR, a pharmacy system or a billing platform.
             </p>
           </div>
         </div>

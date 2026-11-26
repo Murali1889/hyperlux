@@ -20,12 +20,11 @@ export default function CustomerExperienceBenefit() {
             </div>
 
             <div className="w-full md:w-2/3">
-              <h3 className="text-2xl font-semibold text-indigo-800 mb-4">From Days to Hours: Transforming Lending</h3>
+              <h3 className="text-2xl font-semibold text-indigo-800 mb-4">From Days to Hours</h3>
               <p className="text-gray-700 mb-6 leading-relaxed">
                 With automated bank statement analysis, loan officers can approve applications within hours instead of
                 days. This dramatic improvement in turnaround time creates a competitive advantage in lending markets
-                where speed matters. Customers experience a seamless process that feels modern and efficient, increasing
-                satisfaction and referral rates.
+                where speed matters. Applicants upload a statement and move on, instead of waiting days for someone to key it in.
               </p>
 
               <div className="grid grid-cols-3 gap-4">

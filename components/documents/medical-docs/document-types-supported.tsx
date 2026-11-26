@@ -36,8 +36,7 @@ export default function DocumentTypesSupported() {
               Document Types Supported
             </h2>
             <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-              Our medical OCR technology supports a wide range of healthcare documents with specialized extraction for
-              each type.
+              The healthcare documents we read, each with its own set of fields.
             </p>
           </div>
         </div>

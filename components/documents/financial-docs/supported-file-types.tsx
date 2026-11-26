@@ -41,7 +41,7 @@ export default function SupportedFileTypes() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">Supported File Types</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Our AI engine processes all common financial document formats with industry-leading accuracy
+            PDFs, scans and photos, with accuracy published by document type
           </p>
         </motion.div>
 

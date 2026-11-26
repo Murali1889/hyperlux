@@ -8,7 +8,7 @@ export default function PrivacySecurity() {
     {
       icon: <Shield className="h-10 w-10 text-indigo-700" />,
       title: "HIPAA Compliance",
-      description: "End-to-end compliance with all HIPAA requirements for PHI handling, storage, and transmission.",
+      description: "HIPAA-eligible, with a Business Associate Agreement available for PHI handling, storage and transmission.",
     },
     {
       icon: <Lock className="h-10 w-10 text-indigo-700" />,
@@ -19,7 +19,7 @@ export default function PrivacySecurity() {
     {
       icon: <FileText className="h-10 w-10 text-indigo-700" />,
       title: "Audit Logs",
-      description: "Comprehensive audit trails for all document access, processing, and user interactions.",
+      description: "Audit trails for every document access, processing step and user action.",
     },
     {
       icon: <Database className="h-10 w-10 text-indigo-700" />,
@@ -67,9 +67,7 @@ export default function PrivacySecurity() {
             <div>
               <h3 className="text-xl font-bold mb-4 text-indigo-700">Our Commitment to Data Security</h3>
               <p className="text-gray-600 mb-4">
-                DocsAPI's medical document OCR platform is built with security as a foundational principle. Our
-                infrastructure undergoes regular penetration testing and security audits to ensure the highest level of
-                protection for sensitive patient information.
+                DocsAPI's medical document OCR platform is built with security as a foundational principle. DocsAPI is SOC 2 Type II and ISO 27001 certified, so these controls are checked by outside auditors.
               </p>
               <p className="text-gray-600">
                 DocsAPI is HIPAA-eligible with a BAA, and SOC 2 Type II and ISO 27001 certified. Customer documents are

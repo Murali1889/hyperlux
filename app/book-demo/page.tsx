@@ -28,7 +28,7 @@ export default function BookDemoPage() {
               <div>
                 <h3 className="text-lg font-medium">Personalized Demonstration</h3>
                 <p className="text-muted-foreground">
-                  Our product specialists will walk you through our platform, tailored to your specific lending needs.
+                  Someone from our team runs your documents through DocsAPI and answers questions about your lending workflow.
                 </p>
               </div>
             </div>
@@ -50,7 +50,7 @@ export default function BookDemoPage() {
               <div>
                 <h3 className="text-lg font-medium">Bring Your Team</h3>
                 <p className="text-muted-foreground">
-                  Invite colleagues from risk, compliance, and operations to get a comprehensive understanding.
+                  Bring someone from risk, compliance or operations if they will own the decision.
                 </p>
               </div>
             </div>

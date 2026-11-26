@@ -4,8 +4,8 @@ export default function TransformationSection() {
   return (
     <Section id="transformation">
       <SectionHeader
-        title="Transforming Small Business Lending with AI"
-        description="The world is transforming with AI, and so is small business lending. We're the friend who helps you cross to the new age without fear."
+        title="What AI Changes in Small Business Lending"
+        description="Small business lending still runs on bank statements, tax returns and pay stubs, and reading them is the slow part. We're the friend who helps you cross to the new age without fear."
         className="mt-16"
       />
 
@@ -188,7 +188,7 @@ export default function TransformationSection() {
                       d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                     />
                   </svg>
-                  <span>Seamless integration with existing systems</span>
+                  <span>Results through one API</span>
                 </li>
               </ul>
             </div>

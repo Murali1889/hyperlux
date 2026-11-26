@@ -13,11 +13,10 @@ export default function CTASection() {
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-            Ready to Transform Your Document Processing?
+            Want to Try It on Your Own Documents?
           </h2>
           <p className="text-lg text-indigo-100">
-            Book a demo today to see how our AI-powered OCR software can automate your document workflows, enhance fraud
-            detection, and streamline lending decisions.
+            Book a demo with your own bank statements, pay stubs or IDs and see what DocsAPI reads, what it flags, and how fast.
           </p>
           <ul className="space-y-3">
             <li className="flex items-center gap-3">

@@ -20,8 +20,7 @@ export default function InvoiceHero() {
               Automate Invoice Processing End-to-End
             </h1>
             <p className="text-xl text-indigo-100 mb-8 max-w-xl mx-auto lg:mx-0">
-              Transform your accounts payable with AI-powered invoice OCR that extracts line-items, supports multiple
-              currencies, and integrates with your ERP system.
+              Invoice OCR that reads line items, handles multiple currencies and sends the data to your ERP.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button asChild size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white">

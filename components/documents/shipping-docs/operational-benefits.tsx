@@ -34,7 +34,7 @@ export default function OperationalBenefits() {
   const benefits = [
     {
       icon: <Clock className="h-10 w-10 text-indigo-600" />,
-      title: "Reduce Manual Data Entry",
+      title: "Stop Retyping Shipment Details",
       description:
         "Stop rekeying shipment data by hand, along with the typos that cause shipping delays and billing disputes.",
     },
@@ -42,7 +42,7 @@ export default function OperationalBenefits() {
       icon: <CheckSquare className="h-10 w-10 text-indigo-600" />,
       title: "Improve Delivery Accuracy",
       description:
-        "Reduce delivery disputes by ensuring consignee information, delivery instructions, and shipment details are correctly captured.",
+        "Fewer delivery disputes, because consignee details, delivery instructions and shipment data are captured as written and checked.",
     },
     {
       icon: <BarChart4 className="h-10 w-10 text-indigo-600" />,
@@ -79,7 +79,7 @@ export default function OperationalBenefits() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Operational Benefits & Time Savings</h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
-              Transform your logistics operations with real-time data visibility and reduced manual processing.
+              What you get when shipping documents stop being keyed in by hand.
             </p>
           </div>
 
@@ -103,11 +103,10 @@ export default function OperationalBenefits() {
           </motion.div>
 
           <div className="mt-12 p-6 bg-indigo-50 rounded-lg">
-            <h3 className="text-xl font-semibold mb-3 text-indigo-800">Enhanced Supply Chain Transparency</h3>
+            <h3 className="text-xl font-semibold mb-3 text-indigo-800">See Shipment Problems Sooner</h3>
             <p className="text-slate-700">
               By digitalizing shipping documents in real-time, stakeholders gain immediate visibility into shipment
-              status, inventory levels, and delivery estimates. This transparency enables proactive issue resolution,
-              optimized resource allocation, and improved customer satisfaction through accurate delivery predictions.
+              status, inventory levels, and delivery estimates. When shipment data arrives as fields instead of paper, problems show up while there is still time to fix them.
             </p>
           </div>
         </div>

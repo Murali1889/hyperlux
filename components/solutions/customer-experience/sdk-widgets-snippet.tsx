@@ -90,8 +90,7 @@ export default function SdkWidgetsSnippet() {
             </div>
             <p className="text-gray-700 mt-4">
               Our SDK provides a simple, secure way to integrate document scanning and verification into your web and
-              mobile applications. The lightweight implementation ensures fast loading times and a seamless user
-              experience.
+              mobile applications. The widget is small, so it loads fast and does not slow your page down.
             </p>
           </motion.div>
 

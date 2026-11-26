@@ -11,7 +11,7 @@ export default function IdentityDocsCta() {
               Verify identities in seconds.
             </h2>
             <p className="max-w-[600px] text-indigo-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Start automating identity verification today with our industry-leading OCR technology.
+              See how it reads your own ID samples before you decide.
             </p>
           </div>
           <div className="flex flex-col gap-2 min-[400px]:flex-row">

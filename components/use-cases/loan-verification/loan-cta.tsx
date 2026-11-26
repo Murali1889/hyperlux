@@ -15,10 +15,9 @@ export default function LoanCta() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Transform your loan verification process.</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Try it on your own loan files.</h2>
           <p className="text-xl text-indigo-100 mb-8">
-            Join leading lenders who have accelerated their verification process, reduced costs, and improved compliance
-            with our AI-powered solution.
+            Start with a demo on your own loan files. Qualified lenders then get a free 30-day trial.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

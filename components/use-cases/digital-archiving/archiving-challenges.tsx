@@ -15,13 +15,13 @@ export default function ArchivingChallenges() {
       icon: <Search className="w-10 h-10 text-indigo-600" />,
       title: "Difficulty Finding Documents Quickly",
       description:
-        "Physical archives and poorly indexed digital repositories make document retrieval a frustrating, time-consuming process. Critical information gets buried in filing cabinets or scattered across disconnected systems, causing delays in decision-making and customer service responses.",
+        "In paper archives and badly indexed folders, finding one document can take an afternoon. Critical information gets buried in filing cabinets or scattered across disconnected systems, causing delays in decision-making and customer service responses.",
     },
     {
       icon: <ShieldAlert className="w-10 h-10 text-indigo-600" />,
       title: "Compliance Risk Due to Poor Records Management",
       description:
-        "Inadequate archiving practices expose organizations to significant compliance and audit risks. Without proper document classification, retention policies, and audit trails, companies struggle to meet regulatory requirements, potentially facing penalties and reputation damage.",
+        "When records cannot be found, audits and compliance reviews go badly. Without proper document classification, retention policies, and audit trails, companies struggle to meet regulatory requirements, potentially facing penalties and reputation damage.",
     },
   ]
 
@@ -37,7 +37,7 @@ export default function ArchivingChallenges() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Challenges in Digital Archiving</h2>
           <p className="mt-4 text-xl text-slate-600 max-w-3xl mx-auto">
-            Organizations face significant hurdles when managing document archives without AI-powered solutions.
+            Paper and scanned archives cause the same problems everywhere.
           </p>
         </motion.div>
 

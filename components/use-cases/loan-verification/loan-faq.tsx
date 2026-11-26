@@ -13,8 +13,7 @@ export default function LoanFaq() {
       question: "What document formats are supported?",
       answer: (
         <>
-          Our system supports a wide range of document formats including PDF, JPEG, PNG, TIFF, and even scanned
-          documents. We can process bank statements from over 10,000 financial institutions, tax documents (
+          It reads PDF, JPEG, PNG and TIFF files, including scans. We can process bank statements from over 10,000 financial institutions, tax documents (
           <Link href="/resources/blogs/w2-1099-tax-form-ocr-underwriting" className="underline hover:text-indigo-700">
             W-2, 1099, 1040
           </Link>
@@ -35,7 +34,7 @@ export default function LoanFaq() {
     {
       question: "Can it integrate with loan origination systems?",
       answer:
-        "Yes, our solution offers seamless integration with all major loan origination systems including Encompass, Calyx Point, Mortgage Cadence, and custom LOS platforms. We provide RESTful APIs, webhooks, and pre-built connectors to facilitate easy integration. The system can be configured to automatically push verified data directly into your LOS, eliminating manual data entry. Our professional services team provides comprehensive support for custom integrations to ensure a smooth implementation process.",
+        "Yes. Verified data goes to your loan origination system through the API, including custom LOS platforms. We provide RESTful APIs, webhooks, and pre-built connectors to facilitate easy integration. It can push verified data straight into your LOS, so nobody retypes it. Our team helps with custom integrations during setup.",
     },
     {
       question: "Can it detect forged documents?",
@@ -48,8 +47,7 @@ export default function LoanFaq() {
           </Link>{" "}
           for the specifics. It analyzes documents at the pixel level to detect inconsistencies in fonts, spacing,
           and formatting that might indicate tampering. The system also performs cross-document validation to
-          identify discrepancies between related documents. Additionally, it checks for mathematical inconsistencies
-          and compares extracted data against known patterns of fraudulent activity. When potential fraud is
+          identify discrepancies between related documents. It also checks that the numbers add up and compares the data against known fraud patterns. When potential fraud is
           detected, the system flags the document for human review and provides detailed information about the
           suspicious elements.
         </>

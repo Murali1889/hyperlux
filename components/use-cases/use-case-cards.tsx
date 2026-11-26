@@ -16,7 +16,7 @@ const useCases = [
   {
     title: "Loan Verification",
     description:
-      "Streamline loan processing by automatically extracting and validating data from bank statements, pay stubs, and tax documents.",
+      "Read and check bank statements, pay stubs and tax documents for loan files.",
     icon: <CreditCard className="h-8 w-8 text-indigo-600" />,
     href: "/documents/financial-docs/bank-statements",
     color: "bg-indigo-50",
@@ -24,7 +24,7 @@ const useCases = [
   {
     title: "ID Proofing",
     description:
-      "Verify identity documents in seconds with advanced fraud detection capabilities for passports, driver's licenses, and national IDs.",
+      "Check passports, driver licenses and national IDs in seconds, with fraud checks on each.",
     icon: <UserCheck className="h-8 w-8 text-indigo-600" />,
     href: "/use-cases/id-proofing",
     color: "bg-indigo-50",
@@ -32,7 +32,7 @@ const useCases = [
   {
     title: "Contract Abstraction",
     description:
-      "Extract key clauses, terms, and obligations from legal contracts to accelerate review processes and ensure compliance.",
+      "Pull key clauses, terms and obligations out of contracts so review goes faster.",
     icon: <FileSignature className="h-8 w-8 text-indigo-600" />,
     href: "/use-cases/contract-abstraction",
     color: "bg-indigo-50",
@@ -40,7 +40,7 @@ const useCases = [
   {
     title: "Digital Archiving",
     description:
-      "Transform physical documents into searchable digital archives with metadata extraction for easy retrieval and compliance.",
+      "Turn paper into a searchable archive, with metadata so records are easy to find.",
     icon: <Database className="h-8 w-8 text-indigo-600" />,
     href: "/use-cases/digital-archiving",
     color: "bg-indigo-50",
@@ -58,9 +58,9 @@ export default function UseCaseCards() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Powerful Use Cases for Every Industry</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Where Teams Use It</h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Discover how our AI-powered OCR solutions can transform your document-intensive processes
+            Where document reading saves the most time
           </p>
         </motion.div>
 

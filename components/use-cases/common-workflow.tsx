@@ -17,12 +17,12 @@ const workflowSteps = [
   },
   {
     title: "Validation",
-    description: "Automated checks ensure data quality and completeness",
+    description: "Automated checks catch missing and wrong fields",
     icon: <CheckCircle className="h-8 w-8 text-indigo-600" />,
   },
   {
     title: "Delivery",
-    description: "Seamless integration with your business systems",
+    description: "Results go to your systems through the API",
     icon: <Share2 className="h-8 w-8 text-indigo-600" />,
   },
   {
@@ -63,7 +63,7 @@ export default function CommonWorkflow() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Common AI-OCR Workflow</h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Our standardized approach ensures consistent results across all document types
+            The same steps for every document type
           </p>
         </motion.div>
 

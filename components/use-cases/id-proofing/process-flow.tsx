@@ -117,8 +117,7 @@ export default function ProcessFlow() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">ID Verification Process Flow</h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Our streamlined verification process delivers results in seconds, not minutes or hours, with
-            industry-leading accuracy.
+            Results come back in seconds, with unclear fields flagged for review.
           </p>
         </motion.div>
 

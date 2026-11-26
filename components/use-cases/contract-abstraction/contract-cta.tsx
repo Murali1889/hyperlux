@@ -17,7 +17,7 @@ export default function ContractCta() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Simplify your contract review process.</h2>
           <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
-            Join leading organizations that have transformed their contract management with our AI-powered solution.
+            Book a demo with a few of your own contracts.
           </p>
           <Button size="lg" className="bg-white text-indigo-700 hover:bg-indigo-50 text-base font-medium" asChild>
             <Link href="/book-demo">Book a Demo</Link>

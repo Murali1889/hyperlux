@@ -8,7 +8,7 @@ export default function LegalDocsHero() {
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
           <div className="space-y-4">
             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-indigo-900">
-              Transform Legal Documents into Structured Data Instantly
+              Turn Legal Documents into Structured Data
             </h1>
             <p className="max-w-[600px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Automatically extract clauses, key dates, and confidential information from contracts, NDAs, and

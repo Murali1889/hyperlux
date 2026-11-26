@@ -20,8 +20,7 @@ export default function ComplianceNote() {
               <h3 className="font-bold">ICAO 9303 Standards</h3>
             </div>
             <p className="text-slate-600 text-sm">
-              Our OCR technology complies with International Civil Aviation Organization (ICAO) 9303 standards for
-              machine-readable travel documents, ensuring global compatibility.
+              Passports are read to the International Civil Aviation Organization (ICAO) 9303 standard, the specification behind the machine readable zone on passports worldwide.
             </p>
           </div>
 
@@ -42,8 +41,7 @@ export default function ComplianceNote() {
               <h3 className="font-bold">GDPR Data Controls</h3>
             </div>
             <p className="text-slate-600 text-sm">
-              Built-in data retention controls and privacy-by-design principles ensure compliance with GDPR, CCPA, and
-              other privacy regulations for sensitive identity information.
+              Retention controls set how long identity data is kept, to meet GDPR, CCPA and similar privacy rules.
             </p>
           </div>
         </div>

@@ -25,7 +25,7 @@ export default function HowItWorks() {
     {
       number: 4,
       title: "System Integration",
-      description: "Seamlessly integrate with your WMS, TMS, ERP, or tracking systems through our robust APIs.",
+      description: "Send the data to your WMS, TMS, ERP or tracking system through the API.",
       icon: "/placeholder-we2zj.png",
     },
   ]
@@ -36,7 +36,7 @@ export default function HowItWorks() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">How It Works</h2>
           <p className="text-slate-600 max-w-2xl mx-auto">
-            Our platform transforms paper-based shipping documents into structured data in just four simple steps.
+            Four steps from a paper shipping document to structured data.
           </p>
         </div>
 

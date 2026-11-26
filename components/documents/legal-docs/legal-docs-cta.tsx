@@ -11,8 +11,7 @@ export default function LegalDocsCta() {
               Automate Your Legal Document Review Today
             </h2>
             <p className="max-w-[700px] text-indigo-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Transform your legal operations with AI-powered document processing that saves time, reduces risk, and
-              improves accuracy.
+              Run it on a few of your own contracts and judge the output yourself.
             </p>
           </div>
           <div className="flex flex-col gap-2 min-[400px]:flex-row">

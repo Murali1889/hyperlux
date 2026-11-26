@@ -34,7 +34,7 @@ export default function TemplateLibraryExplainer() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-indigo-900 mb-4">How the Template Library Works</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Our intelligent document processing platform handles any document format with a simple three-step process
+            Three steps, whatever the file format
           </p>
         </motion.div>
 

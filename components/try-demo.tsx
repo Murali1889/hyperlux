@@ -16,7 +16,7 @@ export default function TryDemo() {
                             Try DocsAPI
                         </h2>
                         <p className="mt-4 text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed animate-fade-in-up animation-delay-200">
-                            Experience the power of our enterprise OCR software. Upload a sample document to see data extraction in
+                            Try it on a document of your own. Upload a sample document to see data extraction in
                             action.
                         </p>
                     </div>

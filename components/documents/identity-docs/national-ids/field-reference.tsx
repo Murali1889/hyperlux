@@ -22,7 +22,7 @@ export default function FieldReference() {
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Field Reference</h2>
             <p className="max-w-[900px] text-slate-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Comprehensive data extraction from all types of national identity documents
+              The fields we read from national ID cards
             </p>
           </div>
         </div>

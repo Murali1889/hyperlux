@@ -46,7 +46,7 @@ export default function ComplianceFAQ() {
     {
       question: "How do you manage change control for compliance workflows?",
       answer:
-        "All changes to compliance workflows follow a strict change management process. Changes are first deployed to a staging environment for validation, with comprehensive audit logs of who requested, approved, and implemented each change. Version control allows rollback to previous configurations if needed. Compliance officers receive notifications of pending changes and can approve or reject them. A complete history of all workflow changes is maintained for audit purposes.",
+        "All changes to compliance workflows follow a strict change management process. Changes are first deployed to a staging environment for validation, with an audit log of who requested, approved and made each change. Version control allows rollback to previous configurations if needed. Compliance officers receive notifications of pending changes and can approve or reject them. A complete history of all workflow changes is maintained for audit purposes.",
     },
   ]
 

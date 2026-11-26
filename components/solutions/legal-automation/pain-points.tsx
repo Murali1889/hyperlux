@@ -9,19 +9,19 @@ export default function PainPoints() {
       icon: <Clock className="h-10 w-10 text-indigo-700" />,
       title: "Clause hunt takes hours",
       description:
-        "Legal teams spend countless hours manually searching through contracts to locate specific clauses. This tedious process is not only time-consuming but also prone to human error, especially when dealing with lengthy agreements containing complex legal language. The inefficiency increases exponentially with contract volume, creating bottlenecks in legal operations and delaying critical business decisions.",
+        "Legal teams spend hours searching contracts for one clause. It is slow, and on long agreements people miss things. The inefficiency increases exponentially with contract volume, creating bottlenecks in legal operations and delaying critical business decisions.",
     },
     {
       icon: <AlertTriangle className="h-10 w-10 text-indigo-700" />,
       title: "Renewals slip through cracks",
       description:
-        "Without automated tracking, important contract renewal dates are easily missed. These oversights can lead to automatic renewals of unfavorable terms, missed opportunities to renegotiate, or even unintended contract terminations. The financial implications can be significant, with organizations often paying for services they no longer need or missing chances to optimize spending through timely renegotiations.",
+        "Without automated tracking, important contract renewal dates are easily missed. These oversights can lead to automatic renewals of unfavorable terms, missed opportunities to renegotiate, or even unintended contract terminations. Miss a renewal date and you keep paying for a service you meant to cancel, or lose the window to renegotiate.",
     },
     {
       icon: <FileSearch className="h-10 w-10 text-indigo-700" />,
       title: "PII redaction is tedious",
       description:
-        "Manually identifying and redacting personally identifiable information (PII) from legal documents is painstakingly slow and error-prone. Missing sensitive information can lead to compliance violations and potential data breaches. The process requires meticulous attention to detail, consuming valuable time that legal professionals could otherwise spend on strategic work. As privacy regulations tighten globally, this burden only increases.",
+        "Manually identifying and redacting personally identifiable information (PII) from legal documents is painstakingly slow and error-prone. Missing sensitive information can lead to compliance violations and potential data breaches. It needs close attention to detail, and it eats lawyer hours that should go to judgment calls. As privacy regulations tighten globally, this burden only increases.",
     },
   ]
 

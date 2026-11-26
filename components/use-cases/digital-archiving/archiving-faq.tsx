@@ -10,8 +10,7 @@ export default function ArchivingFaq() {
       question: "What file formats are supported for digital archiving?",
       answer: (
         <>
-          Our digital archiving solution supports a wide range of file formats, including PDF, TIFF, JPEG, PNG,
-          Microsoft Office documents (Word, Excel, PowerPoint), email formats (MSG, EML), and plain text files. See
+          It accepts PDF, TIFF, JPEG and PNG, Microsoft Office files (Word, Excel, PowerPoint), email (MSG, EML) and plain text. See
           our{" "}
           <Link href="/resources/blogs/make-pdf-searchable" className="underline hover:text-indigo-700">
             making PDFs searchable guide
@@ -45,7 +44,7 @@ export default function ArchivingFaq() {
     {
       question: "Does the solution integrate with popular document management systems?",
       answer:
-        "Our digital archiving solution offers pre-built integrations with leading document management systems including SharePoint, Box, Dropbox, Google Drive, and OneDrive. We also provide a comprehensive API for custom integrations with proprietary systems or other DMS solutions. The integration allows for bi-directional syncing, ensuring your archives stay current regardless of where documents are added or modified.",
+        "Our digital archiving solution offers pre-built integrations with leading document management systems including SharePoint, Box, Dropbox, Google Drive, and OneDrive. There is also an API for connecting other document management systems or your own. Syncing works both ways, so the archive stays current wherever a document is added or changed.",
     },
   ]
 

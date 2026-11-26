@@ -16,7 +16,7 @@ export default function WorkflowVisualization() {
     {
       icon: <BrainCircuit className="w-8 h-8" />,
       title: "OCR",
-      description: "Extract text and metadata with AI-powered OCR technology",
+      description: "Extract text and metadata with OCR",
     },
     {
       icon: <Database className="w-8 h-8" />,
@@ -31,7 +31,7 @@ export default function WorkflowVisualization() {
     {
       icon: <FileSearch className="w-8 h-8" />,
       title: "Retrieve",
-      description: "Instantly find and access documents through powerful search",
+      description: "Find documents by field or full text",
     },
   ]
 
@@ -47,8 +47,7 @@ export default function WorkflowVisualization() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Workflow Visualization</h2>
           <p className="mt-4 text-xl text-slate-600 max-w-3xl mx-auto">
-            Our streamlined document archiving process integrates seamlessly with your existing document management
-            system.
+            The archiving steps, and where they connect to your current document management system.
           </p>
         </motion.div>
 

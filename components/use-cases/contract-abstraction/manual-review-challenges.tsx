@@ -8,7 +8,7 @@ const challenges = [
     icon: <Clock className="h-8 w-8 text-red-500" />,
     title: "Time-intensive clause review",
     description:
-      "Legal professionals spend long hours manually reviewing contracts to identify key clauses, obligations, and potential risks. This tedious process creates bottlenecks in business operations and increases costs significantly.",
+      "Legal professionals spend long hours manually reviewing contracts to identify key clauses, obligations, and potential risks. It slows deals down and costs real money.",
   },
   {
     icon: <AlertTriangle className="h-8 w-8 text-amber-500" />,
@@ -20,7 +20,7 @@ const challenges = [
     icon: <Files className="h-8 w-8 text-blue-500" />,
     title: "Difficulty in managing large contract volumes",
     description:
-      "As businesses grow, contract volumes increase exponentially. Legal teams struggle to maintain visibility across thousands of agreements, making it nearly impossible to track obligations, identify risks, or leverage favorable terms across the contract portfolio.",
+      "As businesses grow, contract volumes increase exponentially. With thousands of agreements, nobody can keep every obligation, risk or favorable term in their head.",
   },
 ]
 

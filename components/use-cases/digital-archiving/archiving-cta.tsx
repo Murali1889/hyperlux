@@ -68,8 +68,7 @@ export default function ArchivingCta() {
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Digitize and organize your archives.</h2>
           <p className="text-xl text-indigo-100 max-w-3xl mx-auto mb-10">
-            Transform your document management with AI-powered digital archiving. Reduce search times, ensure
-            compliance, and improve operational efficiency.
+            See how your own scanned files come out. Less time searching, and records ready when an auditor asks.
           </p>
 
           <motion.div

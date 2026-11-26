@@ -6,16 +6,16 @@ export const blogSd08: BlogPost = {
   title: "Container Number Verification: The ISO 6346 Check Digit",
   slug: "container-number-verification",
   excerpt:
-    "A container arrives stenciled HLXU 659847. The manifest says HLXU 659347. One digit apart, and the check digit catches it instantly. Here is the exact math.",
+    "A container arrives stenciled HLXU 659847 and the manifest says HLXU 659347. The check digit catches that one-digit difference instantly, and the math takes a minute to learn.",
   description:
     "The full ISO 6346 check digit algorithm for container number verification, a worked example, and why it catches OCR misreads before they become tracking errors.",
   metaTag: "Container Number Verification: ISO 6346 Explained",
   content: `
-    <p>Two container numbers, one digit apart: HLXU 659347 and HLXU 659847. A human glancing at a scanned bill of lading would probably not notice the swap, a 3 that got read as an 8 in a slightly smudged stencil photo. But run either string through the ISO 6346 check digit calculation and the difference stops being subtle. The real container's check digit is 7. The misread version demands a check digit of 9. Nothing about the two strings looks obviously wrong to a person, and everything about them is distinguishable to an algorithm that takes eleven characters seriously. That gap, between what looks fine and what actually validates, is the entire reason container number verification exists as a discrete step in a shipping document pipeline rather than something you assume OCR gets right because the text extraction confidence score said 98 percent.</p>
+    <p>Two container numbers, one digit apart: HLXU 659347 and HLXU 659847. A human glancing at a scanned bill of lading would probably not notice the swap, a 3 that got read as an 8 in a slightly smudged stencil photo. But run either string through the ISO 6346 check digit calculation and the difference stops being subtle. The real container's check digit is 7. The misread version demands a check digit of 9. Nothing about the two strings looks obviously wrong to a person, and everything about them is distinguishable to an algorithm that takes eleven characters seriously. That gap, between what looks fine and what validates, is the entire reason container number verification exists as a discrete step in a shipping document pipeline rather than something you assume OCR gets right because the text extraction confidence score said 98 percent.</p>
 
     <p>This post walks through the actual published algorithm behind that check digit, computes it by hand on a real container number, then breaks it deliberately to show what a single misread digit does to the math. If you are building or evaluating a system that extracts container numbers from bills of lading, container gate receipts, or terminal EDI messages as part of a broader <a href="/documents/shipping-docs">shipping document processing</a> pipeline, this is the layer that turns "we extracted some text" into "we extracted a container number we can trust downstream."</p>
 
-    <h2>What an ISO 6346 container number actually contains</h2>
+    <h2>What an ISO 6346 container number contains</h2>
 
     <p>Every standard shipping container carries an eleven character identifier defined by ISO 6346, the international standard governing freight container coding, identification, and marking. The identifier is not a random serial number. It is built from four distinct fields, each with a fixed length and a fixed job.</p>
 
@@ -54,7 +54,7 @@ export const blogSd08: BlogPost = {
       </tbody>
     </table>
 
-    <p>Notice what is missing from that sequence: 11, 22, and 33 never appear as a letter value. That is not an oversight, it is deliberate. The final step of the algorithm divides by 11, and if a letter value were itself a multiple of 11, it could interact with that division in a way that produces ambiguous or degenerate results for certain character combinations. Skipping those three values keeps every letter's contribution to the final sum mathematically well behaved under a modulo 11 check. It is a small design choice, but it is the kind of detail that separates a standard someone actually stress tested against edge cases from one that just seemed to work on the examples someone happened to try.</p>
+    <p>Notice what is missing from that sequence: 11, 22, and 33 never appear as a letter value. That is not an oversight, it is deliberate. The final step of the algorithm divides by 11, and if a letter value were itself a multiple of 11, it could interact with that division in a way that produces ambiguous or degenerate results for certain character combinations. Skipping those three values keeps every letter's contribution to the final sum mathematically well behaved under a modulo 11 check. It is a small design choice, but it is the kind of detail that separates a standard someone stress tested against edge cases from one that just seemed to work on the examples someone happened to try.</p>
 
     <h2>The weighted sum algorithm, step by step</h2>
 
@@ -134,7 +134,7 @@ export const blogSd08: BlogPost = {
 
     <h2>What check digit verification does not catch</h2>
 
-    <p>It is worth being precise about the limits here, because a check digit is not a spell checker for the entire container number. The algorithm verifies internal mathematical consistency among the eleven characters, nothing more. If an OCR engine misreads two characters in a way that happens to produce the same check digit as the correct string, and that can happen, a check digit collision is mathematically possible, the error passes through undetected. Similarly, if a container's stenciled digits are correctly read but the container itself is the wrong one entirely, a legitimate, internally consistent number belonging to a different box, the check digit offers no help, because ISO 6346 has no way to know which specific physical container a given valid number should be attached to. Check digit verification is a necessary filter against transcription and OCR errors within a single field. It is not a substitute for cross-referencing the container number against a booking confirmation, a bill of lading, or a gate transaction to confirm the right container is actually the one in question.</p>
+    <p>It is worth being precise about the limits here, because a check digit is not a spell checker for the entire container number. The algorithm verifies internal mathematical consistency among the eleven characters, nothing more. If an OCR engine misreads two characters in a way that happens to produce the same check digit as the correct string, and that can happen, a check digit collision is mathematically possible, the error passes through undetected. Similarly, if a container's stenciled digits are correctly read but the container itself is the wrong one entirely, a legitimate, internally consistent number belonging to a different box, the check digit offers no help, because ISO 6346 has no way to know which specific physical container a given valid number should be attached to. Check digit verification is a necessary filter against transcription and OCR errors within a single field. It is not a substitute for cross-referencing the container number against a booking confirmation, a bill of lading, or a gate transaction to confirm the right container is the one in question.</p>
 
     <h2>Building this into a document pipeline</h2>
 

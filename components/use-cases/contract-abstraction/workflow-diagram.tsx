@@ -56,8 +56,7 @@ export default function WorkflowDiagram() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Workflow Diagram</h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Our streamlined process transforms complex contracts into structured, actionable data in minutes instead of
-            hours.
+            From a signed contract to structured fields in minutes, not hours.
           </p>
         </motion.div>
 
@@ -101,8 +100,7 @@ export default function WorkflowDiagram() {
         >
           <p className="text-slate-700">
             <span className="font-semibold">Time savings:</span> Every contract is read the same way, and
-            reviewers only check the clauses that are flagged. Our AI-powered workflow enables legal teams to focus on high-value
-            analysis rather than tedious document review.
+            reviewers only check the clauses that are flagged. Lawyers spend their time on judgment calls instead of reading for dates.
           </p>
         </motion.div>
       </div>

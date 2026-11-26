@@ -15,7 +15,7 @@ export default function SecurityCompliance() {
     {
       title: "Secure Audit Trails",
       description:
-        "Comprehensive logging of all document access, processing, and modifications for compliance purposes",
+        "A log of every access, processing step and change, for your compliance records",
       icon: <FileCheck className="h-6 w-6 text-indigo-700" />,
     },
   ]

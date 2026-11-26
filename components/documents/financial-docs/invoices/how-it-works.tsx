@@ -20,12 +20,12 @@ export default function HowItWorks() {
       icon: <FileText className="h-10 w-10 text-white" />,
       title: "OCR + Table Parsing",
       description:
-        "Advanced OCR extracts all text while our table detection algorithm captures line items with precision.",
+        "OCR reads the text, and table detection pulls out each line item as its own row.",
     },
     {
       icon: <CheckCircle className="h-10 w-10 text-white" />,
       title: "Validation Rules",
-      description: "Automatic verification of tax calculations, totals, and other fields to ensure data integrity.",
+      description: "Tax lines and totals are recalculated, and anything that does not add up is flagged.",
     },
   ]
 
