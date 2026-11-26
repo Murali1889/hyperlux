@@ -9,128 +9,114 @@ const existingBlogsRaw: BlogPost[] = [
     title: "OCR Document Management: The 5 Layers, Not 1",
     slug: "revolutionizing-document-management-with-ocr-technology",
     excerpt:
-      "Document management vendors sell one layer and call it the whole stack. Here's the actual 5-layer map, real 2026 cost data, and the 90-day rollout that gets it right.",
-    content: `
-      <p>When I first started working with document processing systems a decade ago, my team spent countless hours manually inputting data from stacks of invoices and forms. We'd joke about developing carpal tunnel syndrome by 40. Fast forward to today, and I'm still amazed at how OCR technology has completely changed the game.</p>
-      <h2>The Document Dilemma We All Face</h2>
-      <p>Let's face it, paperwork is the necessary evil of business life. Whether you're drowning in invoices, wrestling with purchase orders, or trying to make sense of handwritten forms, managing documents can eat up hours of your day. I remember one client who discovered they were spending nearly $30 per invoice just on manual processing costs!</p>
-      <p>This is exactly where OCR (Optical Character Recognition) steps in as a lifesaver, not just a tool.</p>
-      <h2>OCR Explained (Without the Tech Jargon)</h2>
-      <p>Think of OCR as your tireless digital assistant with extremely good eyes. It looks at images or scanned documents and picks out the text, just like you would, but at lightning speed and without needing coffee breaks.</p>
-      <p>Here's what happens behind the scenes:</p>
-      <ol>
-          <li>You scan a document or snap a photo of it</li>
-          <li>The OCR system cleans up the image (fixing things like weird angles or shadows)</li>
-          <li>It examines the document to find the text</li>
-          <li>It converts those visual patterns into actual digital text</li>
-          <li>Voilà! You now have searchable, editable content instead of a static image</li>
-      </ol>
-      <p>Early OCR systems were limited: if a page was not perfectly aligned or used an unusual font, the output was gibberish.</p>
-      <h2>The AI Revolution That Changed Everything</h2>
-      <p>The OCR systems of yesterday were like stubborn toddlers, they needed everything just so, threw tantrums with unusual documents, and required constant supervision.</p>
-      <p>Traditional OCR software struggled with:</p>
-      <ul>
-          <li>Documents that weren't perfectly straight (which, let's be honest, is most of them)</li>
-          <li>Anything handwritten (forget about doctors' notes!)</li>
-          <li>Understanding the difference between a table and a paragraph</li>
-          <li>Different document layouts without extensive programming</li>
-      </ul>
-      <p>But then AI entered the scene and completely rewrote the rules.</p>
-      <p>Modern AI-powered OCR feels almost magical by comparison. I watched a client's jaw literally drop when our new system correctly processed a coffee-stained, crumpled receipt that had been sitting in someone's wallet for weeks. The previous system would have just given up!</p>
-      <p>Today's smart OCR can:</p>
-      <ul>
-          <li><strong>Figure out what it's looking at</strong> without being explicitly told</li>
-          <li><strong>Get better over time</strong> as it processes more documents</li>
-          <li><strong>Handle messy handwriting</strong> (even mine, which my own mother struggles to read)</li>
-          <li><strong>Understand document context</strong>, knowing an invoice number is different from a date</li>
-          <li><strong>Extract specific information</strong> you need without grabbing everything</li>
-      </ul>
-      <h2>Real-World OCR Heroes: Where It's Making a Difference</h2>
-      <p>OCR is changing operations across industries, and a few applications really stand out:</p>
-      <h3>Finance Departments Finding Freedom</h3>
-      <p>Finance teams feel the change first. An AP clerk who used to spend Fridays in a panic processing invoices before month-end can move to reviewing the exceptions instead.</p>
-      <p>OCR helps with:</p>
-      <ul>
-          <li>Pulling vendor details, amounts, and due dates from invoices</li>
-          <li>Digitizing those annoying little expense receipts everyone hates to manage</li>
-          <li>Converting financial statements from PDFs into data you can actually analyze</li>
-      </ul>
-      <h3>Customer Experience Leaps</h3>
-      <p>Remember the last time you had to fill out the same information on multiple forms? Maddening, right? Smart companies are using OCR to eliminate this frustration.</p>
-      <h3>Document Management That Actually Works</h3>
-      <p>We've all been there, trying to find that one critical document in a sea of files. "I know I saved it somewhere..." becomes your mantra as you waste precious time searching.</p>
-      <h2>Finding Your Perfect OCR Match</h2>
-      <p>With so many options out there, how do you choose the right OCR solution? Having helped dozens of companies through this process, here's my real-world advice:</p>
-      <h3>Accuracy vs. Speed: The Eternal Tradeoff</h3>
-      <p>If you're processing medical records or legal documents, you'll need the highest possible accuracy, even at the cost of throughput. For high-volume workflows like invoice processing, a small accuracy hit is acceptable if it means 10x throughput. The right OCR tool depends on which side of that tradeoff dominates your use case. For finance and legal workflows, target 97-99% field-level accuracy. For high-volume archival, 92-95% is fine if you have a review layer for exceptions.</p>
-
-      <h3>Cloud vs on-premise: what's actually forced</h3>
-      <p>Cloud OCR APIs win on cost, developer experience, and time-to-value. On-premise wins in exactly three cases: regulated industries where data can't leave your infrastructure (HIPAA-restricted healthcare workflows in some jurisdictions, defense contractors, some financial services), massive volumes where per-page cloud costs exceed dedicated infrastructure ROI (usually above 5-10 million pages per month), or air-gapped environments. If none of those apply, cloud wins.</p>
-
-      <h2>The document management stack in 2026 (five layers, not one)</h2>
-      <p>The biggest confusion I see when finance and operations leaders evaluate OCR is treating it as one thing. Modern document management is a stack of five distinct layers, and the "OCR question" is really a question about which layers you buy vs build. Understanding this map is the difference between a $10K-per-month project that ships in eight weeks and a $500K-per-year project that never quite works.</p>
-
-      <ol>
-        <li><strong>Capture:</strong> How documents arrive, email attachments, portal uploads, phone photos, mailroom scans, EDI feeds. Tools: your existing email/portal + tools like DocSpace or your CRM.</li>
-        <li><strong>OCR:</strong> The raw text extraction from images. Tools: Tesseract (free), AWS Textract, Google Document AI, DocsAPI, ABBYY.</li>
-        <li><strong>Classification + field extraction:</strong> What type of document is this? Which values matter? Tools: DocsAPI, Mindee, Rossum, or custom-trained models.</li>
-        <li><strong>Validation + normalization:</strong> Do extracted totals reconcile? Are dates parseable? Do vendor names match your master? Usually custom code + business rules.</li>
-        <li><strong>Routing + integration:</strong> Push structured data into ERP/AP/lending system with exception queue for humans. Tools: workflow platforms (Bill.com, AvidXchange) or custom orchestration.</li>
-      </ol>
-
-      <p>When someone says "we have OCR," ask which of the five layers they mean. Most enterprises need all five; most "OCR platforms" cover only two or three.</p>
-
-      <h2>Cost comparison across the document management approaches</h2>
-      <p>Real numbers for a mid-market team processing 50,000 documents per month (mixed invoices, statements, forms). Honest ranges from 2026 vendor quotes plus internal build estimates. Your numbers will vary by 20-40% depending on document mix and stack.</p>
-
-      <table>
-        <thead><tr><th>Approach</th><th>Annual cost</th><th>Setup time</th><th>Best for</th></tr></thead>
-        <tbody>
-          <tr><td>Manual data entry (3 FTEs)</td><td>$240K-$360K</td><td>Zero (already in place)</td><td>Under 500 docs/month or as fallback</td></tr>
-          <tr><td>ABBYY FlexiCapture enterprise</td><td>$150K-$300K</td><td>3-6 months</td><td>Regulated on-prem workflows</td></tr>
-          <tr><td>Turn-key IDP (Bill.com, AvidXchange)</td><td>$80K-$180K</td><td>2-4 weeks</td><td>SMB/mid-market AP-heavy</td></tr>
-          <tr><td>Cloud OCR API + custom orchestration</td><td>$40K-$90K</td><td>6-12 weeks</td><td>Multi-workflow, engineering-capable teams</td></tr>
-          <tr><td>Free OCR (Tesseract) + custom pipeline</td><td>$0 + engineering</td><td>3-6 months + ongoing</td><td>Only where regulatory forces DIY</td></tr>
-        </tbody>
-      </table>
-
-      <p>The cloud-API path wins on total cost of ownership for most workflows below the massive-volume threshold. For deeper cost math and the failure modes of each approach, our <a href="/resources/blogs/ocr-finance">OCR in finance pillar</a> covers the volume tiers in detail.</p>
-
-      <h2>The 90-day rollout for document management</h2>
-      <p>Most organizations trying to modernize document management skip planning and jump straight to buying a tool. That backfires. The 90-day playbook that consistently works:</p>
-
-      <p><strong>Month 1, audit + design.</strong> Inventory your document flow (what arrives, from whom, what's done with it, how long it takes). Pick the ONE document type that's the biggest pain point AND has the cleanest ROI, usually invoices or bank statements. Design the target-state process end-to-end before touching any tool.</p>
-
-      <p><strong>Month 2, pilot on top-5 sources.</strong> Trial 2-3 vendors on your real documents. Not their demos, your actual worst-case invoices. Pick a winner. Cut over your top-5 highest-volume document sources first. Build the exception queue with defined SLAs.</p>
-
-      <p><strong>Month 3, expand + measure.</strong> Add 5-10 sources per week. Track touchless rate, error rate, cycle time. Compare monthly cost per document against your baseline. By end of Month 3, most teams see 60-80% document volume automated with the exception queue processing the remaining 20-40% within same-day SLA.</p>
-
-      <p>What kills projects: skipping Month 1 (buying before understanding the flow), overexpanding in Month 2 (adding vendors faster than the exception queue can absorb), and not measuring in Month 3 (running the automation but never proving the ROI to leadership).</p>
-
-      <h2>Frequently asked questions about OCR document management</h2>
-
-      <h3>What is OCR document management?</h3>
-      <p>OCR document management uses optical character recognition to convert scanned documents and PDFs into searchable, editable data, then routes that structured data into ERP, AP, or CRM systems. Modern AI-powered OCR also classifies documents and extracts specific fields (vendor, total, invoice number) without pre-built templates, at 95-99% accuracy on clean documents.</p>
-
-      <h3>How accurate is modern OCR in 2026?</h3>
-      <p>97-99% character accuracy on clean printed documents from major vendors. 92-97% on scanned or photographed documents. 85-92% on poor-quality scans or complex multi-page layouts. Field-level accuracy is what actually matters for business use, most production pipelines validate every extracted field against business rules before letting data reach downstream systems.</p>
-
-      <h3>What's the difference between OCR and IDP for document management?</h3>
-      <p>OCR is the text-reading layer only. IDP (intelligent document processing) bundles OCR with classification, field extraction, validation, and routing into one platform. OCR sells per-page and hands you raw text; IDP sells per-document and hands you structured, validated fields ready for downstream systems. See our <a href="/resources/blogs/idp-vs-ocr-understanding-the-key-differences-for-automation-success">IDP vs OCR guide</a> for the full comparison.</p>
-
-      <h3>How much does OCR document management cost?</h3>
-      <p>Cloud OCR APIs run $0.01-$0.05 per page. Full IDP platforms run $5-$40 per document depending on tier. Enterprise on-prem (ABBYY FlexiCapture, Kofax) starts at ~$150K/year. Manual data entry runs $10-$20 per document fully loaded. For teams processing 500+ documents per month, OCR pays back within one quarter.</p>
-
-      <h3>Which industries benefit most from OCR document management?</h3>
-      <p>Finance and lending (bank statements, invoices, loan packets), healthcare (patient records, insurance forms), legal (contract redlining, e-discovery), logistics (bills of lading, customs docs), and government (form processing at scale). Any industry where documents are the bottleneck for a downstream decision benefits.</p>
-
-      <h3>How long does an OCR document management rollout take?</h3>
-      <p>For a single document type via a turn-key platform: 2-4 weeks. For a custom multi-workflow build on cloud APIs: 8-12 weeks. For enterprise on-prem (ABBYY, Kofax): 3-6 months. The slow part is never the OCR, it's the validation rules, exception queue, and downstream integration.</p>`,
+      "How to set up OCR document management for a scanned archive: capture settings, text layer checks, which fields to index, retention and access rules, and a test on your own files.",
+    content: `<p>OCR document management turns a pile of scanned files into an archive you can search and file by rule. Every page gets a text layer from OCR, every document gets a type and a few index fields, and checks run before anything is filed. Rules then decide where each document goes, who can open it and when it can be deleted. The OCR is the easy part, and most of the work is choosing what to index and proving it worked.</p>
+<p>To make one PDF searchable, <a href="/resources/blogs/make-pdf-searchable">making a PDF searchable</a> and the <a href="/resources/blogs/scanned-pdf-searchable">Mac, Windows and Linux steps</a> are quicker. To turn documents into checked data for another system, such as invoice totals, see <a href="/resources/blogs/intelligent-document-processing-the-future-of-automated-data-extraction">intelligent document processing</a> and the <a href="/resources/blogs/idp-vs-ocr-understanding-the-key-differences-for-automation-success">IDP vs OCR comparison</a>.</p>
+<h2>What are the five layers of OCR document management?</h2>
+<p>An archive uses the same five layers as an extraction pipeline. The difference is the goal: a document someone can find years later, not a number pushed into an ERP.</p>
+<table>
+  <thead><tr><th>Layer</th><th>Its job in an archive</th><th>What you decide</th></tr></thead>
+  <tbody>
+    <tr><td>Capture</td><td>Get pages in at a quality people can still read later</td><td>Resolution, color mode and file format.</td></tr>
+    <tr><td>OCR</td><td>Add a text layer to every page that lacks one</td><td>What to do with pages that already have text.</td></tr>
+    <tr><td>Classification and fields</td><td>Give each document a type and its index fields</td><td>Which fields people will search by.</td></tr>
+    <tr><td>Validation</td><td>Check types and fields before filing</td><td>Which failures go to a person.</td></tr>
+    <tr><td>Routing</td><td>File the document, start its retention clock, set its access group</td><td>The retention rule per type, and who can open what.</td></tr>
+  </tbody>
+</table>
+<p>A scanner and an OCR tool cover the first two rows. The other three decide whether a search for one customer's statements returns the right files and nothing else.</p>
+<h2>Which capture settings matter for an archive?</h2>
+<p>Resolution serves two readers: the OCR engine now and a person reading the image later. Tesseract's guide to <a href="https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html" rel="nofollow noopener" target="_blank">improving output quality</a> says the engine "works best on images which have a DPI of at least 300 dpi".</p>
+<p>Lower settings can still read clean print. In our <a href="/resources/blogs/ocr-image-preprocessing-what-helps-what-hurts">preprocessing test</a>, synthetic pages at 100 DPI read with 0.2% character error, while 66 DPI text read at 22.9% until it was enlarged. Our <a href="/resources/blogs/bulk-and-high-volume-ocr-processing">bulk OCR test</a> found 150 DPI took 27% less time per page than 300. For an archive that saving is small, because a coarse scan cannot be redone once the paper is gone.</p>
+<p>Color mode is next. A black and white scan keeps one bit per pixel, so faint signatures, stamps and pencil notes can drop out for good. Grayscale keeps them, at a larger file size.</p>
+<p>Then the format. PDF/A is the ISO 19005 family of PDF made for long-term keeping, and the Library of Congress <a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000318.shtml" rel="nofollow noopener" target="_blank">format description</a> says it embeds all fonts and disallows encryption. So protection has to come from the storage system, not from a password on the file.</p>
+<p>If OCRmyPDF adds your text layer, check what it wrote. Its <a href="https://ocrmypdf.readthedocs.io/en/latest/advanced.html" rel="nofollow noopener" target="_blank">advanced options page</a> says version 17 changed the default output from pdfa to auto, which writes a standard PDF when Ghostscript is missing and conversion fails. Run a PDF/A validator on a few outputs first.</p>
+<p>Also switch on the --rotate-pages and --deskew options from OCRmyPDF's <a href="https://ocrmypdf.readthedocs.io/en/latest/cookbook.html" rel="nofollow noopener" target="_blank">cookbook</a>. In our <a href="/resources/blogs/ocr-upside-down-sideways-pages">rotation tests</a>, default Tesseract made about 92% to 94% character errors on pages that were upside down or turned 270 degrees.</p>
+<h2>What is a text layer, and how do you check that a file has one?</h2>
+<p>A text layer is invisible text placed behind the page image, each word where it appears on the page. Search, copy and screen readers use it, while the image stays as it was.</p>
+<p>Checking one page is not enough. In our <a href="/resources/blogs/readable-pdf-vs-image-pdf">test of 390 PDFs</a>, a search for a word on page one passed all 50 files whose second page was a plain scan. A per-page label, which counts extractable characters and measures how much of the page is a picture, sorted every kind of test page correctly in about 12 milliseconds per page.</p>
+<p>A text layer can also exist and be wrong, for example one added by an earlier OCR pass on a poor scan. In the same test, poor layers held 93.4% of their words on average, and as few as 67.8%. A fresh OCR read compared with the old layer caught 20 of 22 bad layers at a 0.95 agreement threshold, with no false alarms on 178 good pages.</p>
+<p>By default, OCRmyPDF stops without changing a file when a page "seems to have text". Skip mode leaves such pages alone and redo mode replaces old invisible OCR text. Force mode turns every page into an image and also flattens form fields, so keep it for pages your check flagged.</p>
+<h2>Which fields should you index?</h2>
+<p>Full-text search finds words. It cannot answer "every bank statement for this borrower from 2024", because that question needs fields. Choose them from the questions people ask the archive, and keep one short list that every source uses.</p>
+<p>NARA's <a href="https://www.archives.gov/records-mgmt/bulletins/2015/2015-04.html" rel="nofollow noopener" target="_blank">metadata guidance for permanent electronic records</a> sets a useful minimum: file name, record ID, title, description, creator, creation date and rights, meaning access limits. A business archive can start there and add what its own searches need.</p>
+<table>
+  <thead><tr><th>Field</th><th>Example</th><th>Why it is there</th></tr></thead>
+  <tbody>
+    <tr><td>Record ID</td><td>A unique number per document</td><td>A stable reference when names change.</td></tr>
+    <tr><td>Document type</td><td>bank_statement</td><td>Search, retention and access all depend on it.</td></tr>
+    <tr><td>Party</td><td>The customer's legal name, normalized</td><td>The most common search.</td></tr>
+    <tr><td>Document date</td><td>Statement period end</td><td>Search by period.</td></tr>
+    <tr><td>Reference number</td><td>Account ending 4471</td><td>Tells two documents of one type apart.</td></tr>
+    <tr><td>Retention trigger date</td><td>Date of the credit decision</td><td>Starts the retention clock.</td></tr>
+    <tr><td>Access group</td><td>lending-ops</td><td>Decides who can open it.</td></tr>
+    <tr><td>Source and OCR status</td><td>Scanner 2, OCR added</td><td>Lets you redo one bad source.</td></tr>
+    <tr><td>Page count</td><td>3</td><td>Shows lost or extra pages.</td></tr>
+  </tbody>
+</table>
+<p>File names should repeat the main fields so a file makes sense in an export or an email, as in 2024-02-29_example-llc_bank-statement_4471.pdf. Year-first dates sort in order, and lowercase names with hyphens avoid trouble with spaces and case.</p>
+<p>Type and party are what a classifier fills, and <a href="/resources/blogs/document-classification-software">document classification software</a> compares how tools make that call. Mixed scans need splitting first. In our <a href="/resources/blogs/split-loan-packet-pdf">loan packet test</a>, splitting wherever the page type changed got 8 of 120 packets right, and a splitter that also read page numbers, account numbers and statement periods got 118. <a href="/resources/blogs/data-normalization-extracted-documents">Normalize names and dates</a> before indexing, or one customer ends up under three spellings.</p>
+<h2>How do you check the index before trusting it?</h2>
+<p>A wrong index field hides a document as well as a missing file does. Run checks between extraction and filing, and send failures to a person instead of filing them under a guess.</p>
+<ul>
+  <li>The document date parses, falls in a plausible range and is not later than the scan date.</li>
+  <li>The type is on your list, and the page count fits the footer, so "Page 3 of 4" means four pages.</li>
+  <li>Reference numbers match their format, and IDs with a check digit pass it. In our <a href="/resources/blogs/how-to-fix-ocr-errors">tests on poor scans</a>, a checksum plus a second read took IBANs from 61% to 92% correct.</li>
+  <li>The party name matches a record in your customer or vendor list.</li>
+  <li>The file's hash is not already in the archive, which catches the same scan uploaded twice.</li>
+  <li>Pages with an old OCR layer pass the agreement check above.</li>
+</ul>
+<p>Sample some documents that passed, too. A check only catches the errors it was written for, and a random sample is how you find the rest.</p>
+<h2>How long should you keep each document, and who can open it?</h2>
+<p>Retention rules attach to document types, and most start from an event rather than the scan date. That is why the index carries a trigger date.</p>
+<p>For US tax records, the IRS page on <a href="https://www.irs.gov/businesses/small-businesses-self-employed/how-long-should-i-keep-records" rel="nofollow noopener" target="_blank">how long to keep records</a> gives 3 years in the general case, and 6 or 7 years in some situations. Employment tax records stay at least 4 years after the tax is due or paid, whichever is later.</p>
+<p>Lenders have a separate clock. Regulation B, at <a href="https://www.consumerfinance.gov/rules-policy/regulations/1002/12/" rel="nofollow noopener" target="_blank">12 CFR 1002.12(b)</a>, keeps consumer credit application records for 25 months after the applicant is told of the action taken. For business credit it is 12 months, or 60 days for a business with gross revenues above $1 million unless it asks in writing for reasons or retention. The official interpretation accepts copies "produced by any other accurate retrieval system", which is where a scanned archive fits.</p>
+<p>If you plan to shred the paper, read the IRS conditions first. <a href="https://www.irs.gov/pub/irs-irbs/irb97-13.pdf" rel="nofollow noopener" target="_blank">Rev. Proc. 97-22</a>, still cited on the IRS <a href="https://www.irs.gov/businesses/automated-records" rel="nofollow noopener" target="_blank">automated records page</a>, requires an indexing system, controls against unauthorized changes or deletion, and regular checks of stored records. A reader must be able to identify every letter and numeral in a stored copy. Originals may be destroyed only after you have tested the system and set up procedures to keep it compliant.</p>
+<p>Give each document type an access group, so payroll records and ID documents are not open to everyone who can search. The revenue procedure also asks for controls on the index itself, since editing an entry can hide a record. Deletion should run on a schedule from the trigger date and the type's rule, paused for any document under a <a href="/resources/blogs/litigation-hold-software">litigation hold</a> or open audit.</p>
+<h2>A worked example: indexing one folder of scanned loan files</h2>
+<p>This example is a plan, not a measured result. A small lender has loan files scanned from 2019 to 2025, one PDF per borrower mixing statements, pay stubs, tax returns and an application.</p>
+<ol>
+  <li>Count files and pages per year and per scanner, and run the per-page label on every page.</li>
+  <li>Run OCR on the image pages with rotation and deskew on. Write PDF/A, plus a --sidecar text file of the recognized text for the search index. Pages with an old OCR layer get the agreement check.</li>
+  <li>Split each borrower PDF into documents, give each a type, and fill the index fields.</li>
+  <li>Run the checks, and send failures to a review list with the page image next to the field.</li>
+  <li>File each document under its new name and let the retention job set its deletion date.</li>
+</ol>
+<p>One record might look like this. The borrower name and numbers are made up.</p>
+<pre><code>{
+  "record_id": "LN-2021-00417-003",
+  "file_name": "2021-03-31_example-bakery-llc_bank-statement_4471.pdf",
+  "type": "bank_statement",
+  "party": "Example Bakery LLC",
+  "document_date": "2021-03-31",
+  "account_ending": "4471",
+  "retention_trigger": { "event": "credit_decision", "date": "2021-05-12" },
+  "retention_rule": "loan_file_policy",
+  "access_group": "lending-ops",
+  "source": "scanner-2, scanned 2021-05-03",
+  "text_layer": "ocr added, agreement check passed",
+  "pages": 3
+}</code></pre>
+<p>The record stores a trigger and a rule name, not a deletion date, so a policy change means editing one rule instead of thousands of records. Regulation B sets only a minimum, and your own policy may ask for longer.</p>
+<h2>How do you test the setup on your own files?</h2>
+<p>Test before converting the whole archive, and again whenever a scanner, source or setting changes. Pick about 50 files across your sources and years, including the worst ones. A sample that size shows whether something is broken but cannot separate two close accuracy figures, as <a href="/resources/blogs/how-to-measure-ocr-accuracy">how to measure OCR accuracy</a> explains.</p>
+<ol>
+  <li>For each file, note a name, a reference number and an amount someone would search for. Count how many searches lead to the right file.</li>
+  <li>Compare every index field with the page and count wrong values per field. Fix the worst field first.</li>
+  <li>Run the per-page label on the output. No sampled page should still be a picture with no text.</li>
+  <li>Ask someone who did not build the system to retrieve five documents, as an auditor would, and time it.</li>
+  <li>Zoom a few pages to 100% and confirm every digit in amounts and account numbers is readable.</li>
+</ol>
+<p>Record the results with the date and settings, since the IRS procedure asks for a description of the storage and indexing systems and for regular evaluations. For finance documents, see the <a href="/resources/blogs/ocr-finance">OCR in finance guide</a>.</p>
+<h2>Where does DocsAPI fit?</h2>
+<p>DocsAPI, built by HyperVerge, is a document intelligence API for SMB lending and fintech. In an archive setup it covers the middle layers: reading scans, classifying each document, returning fields and tables as JSON and flagging low-confidence fields for review. It is not a document management system. Documents and extracted data are kept only for a short, configurable retention period and then deleted, so the archive and its index stay in your own storage.</p>
+<p>It processes about 4 million pages a month, at about 1.1 seconds per page. In its own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">2026 benchmark on 1,700 real documents</a>, it scored 97 to 99% on clean typed English, 93% on invoice line items and 91% on multi-page bank statement tables. It scored 81% on multilingual pages, 78% on handwritten forms and 76% on phone-photographed receipts.</p>
+<p>DocsAPI ran that benchmark itself, so run the test above on your own files. <a href="/pricing">Pricing</a> starts at $0.02 per page with classification and tables included, and volume discounts begin above 100K pages a month. Access starts with a demo, then a free 30-day trial for qualified lenders.</p>`,
     image: "/images/ocr-process.png",
     featuredImage: "",
     category: "Industry Trends",
     date: "May 12, 2025",
-    readTime: "10 min read",
+    readTime: "9 min read",
     author: nupuraUghade,
     metaTag: "OCR Document Management: The 5 Layers, Not 1",
   },

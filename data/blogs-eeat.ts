@@ -6,9 +6,9 @@ const DATE_MODIFIED = "2026-06-18T00:00:00.000Z"
 export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
   "revolutionizing-document-management-with-ocr-technology": {
     summary:
-      "OCR document management makes scanned and photographed documents searchable and usable by turning images into text. A working setup has five layers: capture, OCR, classification and field extraction, validation, and routing into your systems. Most projects fail in the layers after OCR, not in the OCR itself.",
+      "OCR document management turns scanned files into an archive you can search and file by rule: every page gets a text layer, every document gets a type and index fields, and checks run before anything is filed. Most of the work is in capture settings, the fields you index, retention clocks and access, not in the OCR engine. Test the setup on about 50 of your own files before converting the whole archive.",
     description:
-      "OCR document management in 2026: the five-layer stack, cost comparison across 5 approaches ($0 to $360K/year), 90-day rollout playbook, and 6 FAQs.",
+      "How to set up OCR document management for a scanned archive: scan settings, text layer checks, index fields, retention rules and a test on your own files.",
     primary_keyword: "ocr document management",
     secondary_keywords: [
       "ocr document management software",
@@ -33,27 +33,27 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       {
         question: "What is OCR document management?",
         answer:
-          "OCR document management uses optical character recognition to convert scanned documents and images into searchable, editable digital text, then organizes that data into systems like ERPs or CRMs. Modern AI-powered OCR also classifies documents and extracts specific fields without templates.",
+          "It is the setup that turns scanned files into an archive you can search and file by rule. OCR adds a text layer to each page, each document gets a type and index fields such as party, date and reference number, and checks run before filing. Rules then set where each document goes, who can open it and when it is deleted.",
       },
       {
-        question: "How accurate is modern OCR?",
+        question: "What DPI should you scan documents at for OCR?",
         answer:
-          "Top OCR engines hit 95-99% accuracy on clean printed documents and 85-95% on handwritten or low-quality scans. Accuracy drops on rotated, faded, or table-heavy documents. Pre-processing and AI post-correction recover most of that gap.",
+          "Tesseract's documentation says it works best on images of at least 300 DPI. In our preprocessing test, clean synthetic pages at 100 DPI still read with 0.2% character error, but 66 DPI text read at 22.9%. For an archive, scan at 300 DPI, because a coarse scan cannot be redone once the paper is gone.",
       },
       {
-        question: "Is OCR worth it for a small finance team?",
+        question: "How do you check whether a PDF has a text layer?",
         answer:
-          "Yes if you process 200+ documents per month. The break-even point is typically under 6 months once you factor in the cost of manual data entry, error correction, and late payment penalties.",
+          "Search for a word on every page, not only the first, or run a per-page check that counts extractable characters and measures how much of the page is a picture. In our test of 390 PDFs, a search on page one passed all 50 files whose second page was a plain scan. A text layer can also be wrong, so compare a sample against a fresh OCR read.",
       },
       {
-        question: "What should you look for in OCR document management software?",
+        question: "Which fields should a scanned document archive index?",
         answer:
-          "Check four things: how documents get in (email, scanner, upload), whether search covers the OCR text inside scanned files, whether it classifies documents and extracts key fields, and how it connects to the systems you already use. Cloud-based OCR document management suits most teams; keep documents on-premise only when regulation requires it.",
+          "Start with a record ID, document type, party name, document date, a reference number such as an account ending, a retention trigger date, an access group, the source and OCR status, and the page count. NARA's minimum for permanent electronic records also includes a title, description, creator and rights.",
       },
       {
-        question: "Is a document management system with OCR worth it for a small team?",
+        question: "Can you shred paper records after scanning them?",
         answer:
-          "Usually, if you scan paper or receive PDFs you need to find later. Using OCR for document management makes scanned files searchable, and a document management system with OCR can also pull out fields such as dates and amounts. For a few documents a week, the OCR built into your scanner software or cloud storage may be enough.",
+          "For US tax records, IRS Rev. Proc. 97-22 allows destroying the originals only after you have tested the electronic storage system and set up procedures to keep it compliant. The system needs an index, controls against unauthorized changes or deletion, regular checks and legible copies. Check any other rules that apply to your records before shredding.",
       },
     ],
   },

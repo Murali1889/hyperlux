@@ -18,6 +18,11 @@ Counts: Reads AI: rewrite 4, Reads AI: frozen until Dec 1 23, Partly fixed, rewr
 - For the owner: unverified claims left in place: GDPR and CCPA compliance, 'over 100 languages' (national ID FAQ), pre-built connectors (SAP, Oracle, Dynamics, NetSuite, Sage, QuickBooks, SharePoint, Box), penetration testing, TLS 1.3 and AES-256 in the compliance FAQ. First-person stories credited to the author that we cannot verify are marked below.
 - Dead code: a commented-out testimonials block on /industries quotes 'Global Lending' and 'CIMB Bank' with a 99.9% accuracy claim. Not live; should be deleted.
 
+## Update later on 2026-11-26: full rewrites done
+- Rewritten from scratch, every number sourced or dropped, checker score 0.0: intelligent-document-processing-the-future-of-automated-data-extraction, legal-document-automation-the-complete-guide-for-modern-law-firms (old title's $500K claim and "15+ law firms I've helped evaluate" removed), the SBA post (now built on SOP 50 10 8.1), revolutionizing-document-management-with-ocr-technology (more invented stories found and removed: "When I first started working with document processing systems a decade ago", a "$30 per invoice" client, "Having helped dozens of companies", plus an unsourced cost table).
+- Blog renderer bug fixed: external links got a second rel attribute, so nofollow was dropped site wide.
+- First-person stories awaiting the owner (real or cut?): context-engineering-document-ai, credit-card-statement-ocr ("I once had to reconcile 400 expense reports", "Most lenders I have advised"), ocr-accounting ("I watched a five-person accounts payable team work Saturdays for 18 months"), make-pdf-searchable, scanned-pdf-searchable, invoice-ocr-quickbooks-integration, idp-vs-ocr-understanding-the-key-differences-for-automation-success, ocr-finance, ocr-pdf-honest-guide.
+
 ## Every page
 
 | Verdict | Page | Score | Why |
