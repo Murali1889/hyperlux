@@ -332,9 +332,9 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
   
   "legal-document-automation-the-complete-guide-for-modern-law-firms": {
     summary:
-      "Legal document automation uses templates, data extraction and workflow software to draft, review and manage legal documents faster and with fewer errors. It pays off most on high-volume, repeatable documents, and attorneys still review anything that carries legal judgment.",
+      "Legal document automation drafts a document from a template the firm has approved, filled from intake answers, with conditions that include or drop clauses. It suits documents drafted often from a few variations, such as engagement letters and NDAs, and it does not replace a lawyer's review. A worked engagement letter shows which clauses fire under California Business and Professions Code sections 6146 to 6148 and New York's Part 1215, followed by where templates break, the review side (extraction, redlining, discovery) and questions for vendors.",
     description:
-      "Practical guide to legal document automation: what works, what doesn't, and the change-management traps law firms keep falling into.",
+      "How legal document automation drafts from templates and intake answers, one engagement letter traced rule by rule, where it breaks, and what to ask vendors.",
     primary_keyword: "legal document automation",
     secondary_keywords: [
       "document automation for lawyers",
@@ -345,20 +345,35 @@ export const eeatMetadataBySlug: Record<string, Partial<BlogPost>> = {
       "document assembly",
     ],
     datePublished: "2025-06-05T00:00:00.000Z",
-    dateModified: "2026-10-22T00:00:00.000Z",
-    last_updated: "October 22, 2026",
+    dateModified: "2026-11-26T00:00:00.000Z",
+    last_updated: "November 26, 2026",
     tags: ["legal", "automation", "law firm", "document assembly"],
     cluster: "industry-trends",
     faq: [
       {
         question: "What is legal document automation?",
         answer:
-          "Software that generates legal documents from templates and structured client data, contracts, pleadings, wills, intake forms, without manual copy-paste.",
+          "Software that drafts a document from a template the firm has approved and a set of intake answers. The template holds fixed wording, variables such as names and rates, and conditions that include or drop clauses based on the answers.",
       },
       {
-        question: "Is document automation for lawyers worth it at a small firm?",
+        question: "Which document should a law firm automate first?",
         answer:
-          "Usually, if the firm drafts the same kinds of documents again and again, such as engagement letters, NDAs, wills or standard pleadings. Document automation for lawyers pays off through fewer drafting errors and faster turnaround; one-off, bespoke work gains little. Start by automating your five most-used templates.",
+          "One drafted every week from a short list of variations, with stable rules and one owner. Engagement letters are a good candidate, since in states such as California and New York the rules already list much of what goes in. Avoid starting with the firm's most complex agreement.",
+      },
+      {
+        question: "Where does legal document automation go wrong?",
+        answer:
+          "In combinations of conditions no one tested, rules that differ by state or change over time, templates that drift when lawyers fix a draft instead of the template, and wrong intake answers. An approved template is not an approved document, so each draft still needs review.",
+      },
+      {
+        question: "Does document automation remove the need for attorney review?",
+        answer:
+          "No. A lawyer approved the clauses, not each combination of them with each set of facts. For tools that use generative AI, the State Bar of California's 2026 guidance says an attorney remains fully responsible for the outputs and must review, verify and correct them.",
+      },
+      {
+        question: "How do you measure whether document automation is working?",
+        answer:
+          "Before building, time 20 hand drafts from intake to a draft ready for review and count the corrections the reviewing lawyer makes. Do the same for the first 20 assembled drafts, by template version. Corrections matter more than speed.",
       },
     ],
   },
