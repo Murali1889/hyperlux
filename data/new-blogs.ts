@@ -50,6 +50,7 @@ import { blog48 } from "./new-blogs/48-duplicate-invoice-detection-ocr"
 import { blog49 } from "./new-blogs/49-bank-statement-ocr-errors-balance-check"
 import { blog50 } from "./new-blogs/50-extract-invoice-data-to-excel"
 import { blog51 } from "./new-blogs/51-split-loan-packet-pdf"
+import { blog52 } from "./new-blogs/52-detect-edited-bank-statement-pdf"
 
 // Invoice/AP-OCR cluster (topic 1 of 3, 21 posts) — see
 // docs/superpowers/specs/2026-08-07-invoice-ap-ocr-cluster-design.md
@@ -247,6 +248,7 @@ export const newBlogs: BlogPost[] = [
   blog49,
   blog50,
   blog51,
+  blog52,
   blogAp01,
   blogAp02,
   blogAp03,
