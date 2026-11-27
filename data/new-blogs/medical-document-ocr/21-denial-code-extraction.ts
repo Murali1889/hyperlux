@@ -6,113 +6,86 @@ export const blogMd21: BlogPost = {
   title: "Denial Code Extraction: Why CARC and RARC Must Pair Up",
   slug: "denial-code-extraction",
   excerpt:
-    "The same CARC code can call for two opposite actions, so automated appeals have to read the CARC and the remark code together.",
+    "Denial code extraction has to keep the group code, CARC and remark codes together. CARC 96 alone can mean bill the patient or refund the patient, depending on the other two.",
   description:
-    "CARC and RARC codes are not two versions of the same information. A worked denial example shows why automated appeals routing breaks when it reads only one.",
+    "Denial code extraction: why CARC 96 can mean bill the patient or refund them, and how to read the group code, CARC and RARC together to route denials.",
   metaTag: "Denial Code Extraction: Why CARC and RARC Must Pair Up",
   content: `
-    <p>Two claims came back from the same payer in the same week carrying the identical adjustment code: CARC 16, "Claim/service lacks information or has submission/billing error(s)." One needed nothing more than a corrected procedure code and a same-day resubmission. The other could not be appealed at all, it had to be thrown out and refiled as a brand new claim. The CARC on both remittance advices was word for word the same. What told the two apart was a second code sitting next to it, three characters long, that a lot of denial management systems don't weight with anywhere near the same rigor: the RARC.</p>
-    <p>This post is about that structural distinction, why an automated appeals engine that parses Claim Adjustment Reason Codes without also parsing the accompanying Remittance Advice Remark Codes will misroute a predictable slice of its denial queue, and a worked example, built from the actual published code definitions, showing exactly how that misrouting happens. If you're building extraction across the full range of documents that feed a revenue cycle, our <a href="/documents/medical-docs">medical document processing</a> page covers the broader set this kind of pipeline typically has to handle.</p>
+    <p>Denial code extraction means pulling three codes for every adjustment on a remittance: the group code, the claim adjustment reason code (CARC) and any remittance advice remark codes (RARCs). Store them as one record. The same CARC can call for opposite actions, and only the other two codes tell you which one applies.</p>
+    <p>Medicare's own rules give the clearest case. CARC 96 with group code PR and remark code N124 means the patient agreed in writing to pay and can be billed. CARC 96 with CO and N125 means the patient cannot be billed and any money collected must be refunded within 30 days.</p>
 
-    <h2>What a CARC tells you</h2>
-    <p>A Claim Adjustment Reason Code explains why the amount a payer paid differs from the amount a provider billed. It's the code that sits in the CAS segment of an ANSI X12 835 remittance advice, and every compliant payer draws from the same centrally maintained list, published through X12's code list infrastructure at x12.org/codes. CARC 1 means a deductible was applied. CARC 45 means the charge exceeds the fee schedule or contracted allowable. CARC 96 means the charge isn't covered under the plan. CARC 197 means required precertification or authorization was missing. Each CARC also carries a Claim Adjustment Group Code, a two-letter prefix, CO for Contractual Obligation, PR for Patient Responsibility, OA for Other Adjustment, PI for Payer Initiated Reductions, that determines who is financially on the hook for the adjusted amount. A CO-16 tells you the provider absorbs the write-off. A PR-16 tells you the balance can be passed to the patient. That single letter pair is doing real financial-routing work.</p>
-    <p>What a CARC does not reliably tell you is what specifically to fix. Some CARCs are narrow and self-explanatory. CARC 1, deductible applied, needs no further detail, there's nothing to appeal. But a meaningful share of the CARC list is deliberately broad. CARC 16, the one in the example above, covers everything from a missing modifier to a mismatched date of service to an invalid diagnosis pointer. CARC 251, "the attachment/other documentation that was received was incomplete or deficient," covers everything from a missing signature to an entirely absent chart note. Read in isolation, these catch-all codes tell an automated system that something is wrong and, via the group code, who eventually pays for it, but not what the something is.</p>
-
-    <h2>What a RARC adds that a CARC can't</h2>
-    <p>A Remittance Advice Remark Code supplies the detail the CARC leaves out. RARCs come in two flavors. Supplemental RARCs elaborate on a specific adjustment already reported by a CARC, telling you exactly what was wrong or what's needed next. Informational RARCs, prefaced with the word "Alert," carry general processing information not tied to a dollar adjustment at all, things like appeal-rights notices or payment-schedule reminders. RARC M1 flags that an X-ray wasn't taken within the required window before the service. RARC N56 says the procedure code billed isn't correct or valid for the service billed or its date of service. RARC MA130 says the claim contains incomplete or invalid information, is unprocessable, and carries no appeal rights at all, the provider has to submit a fresh claim rather than contest the existing one.</p>
-    <p>Notice what those three RARCs have in common: none of them tell you a dollar figure or a group code. They tell you a mechanism. And the mechanism is exactly what determines the next action in an appeals workflow, whether that action is "fix the code and resend," "attach the missing record and appeal," or "don't bother appealing, refile from scratch." A CARC without a RARC gives you the shape of the problem. A RARC without its CARC gives you a fix instruction with no idea what dollar amount or financial responsibility it's attached to. Neither one, alone, is a complete instruction.</p>
-
-    <h2>The rule most denial systems underweight: some CARCs require a RARC</h2>
-    <p>This isn't a soft best practice. It's written into the CARC definition itself. X12's published description of CARC 16 includes this sentence: "Claim/service lacks information or has submission/billing error(s). At least one Remark Code must be provided (may be comprised of either the NCPDP Reject Reason Code, or Remittance Advice Remark Code that is not an ALERT.)" That sentence is part of the code's official definition, not a footnote some vendor added. A CARC 16 with no accompanying non-alert remark code is, by X12's own usage rule, an incompletely reported denial. CARC 96 (non-covered charges) carries that identical remark-code requirement in its own official text, not just the same spirit of one. CARC 197 (missing precertification) is a similarly broad catch-all category where, even without an identical explicit clause, the remark code is where nearly all the actionable, routable detail lives.</p>
-    <p>This matters for extraction pipelines because it means the CARC and RARC aren't two independent facts about a denial, they're one compound signal with a defined dependency between them. An extraction system that treats the RARC as an optional enrichment field, nice to capture if present but not load-bearing, is misreading the standard's own intent for codes like 16. The RARC isn't decoration on top of the CARC. For a meaningful subset of denials, it's the only field that carries the information needed to route the claim anywhere useful.</p>
-
-    <h2>CARC and RARC, side by side</h2>
+    <h2>What do the three codes on a denial mean?</h2>
+    <p>A CARC says why a claim or service line was paid differently than it was billed. The <a href="https://x12.org/codes/claim-adjustment-reason-codes" rel="nofollow noopener" target="_blank">X12 reason code list</a> had 298 active codes on November 27, 2026, plus 110 deactivated ones. CARC 1 is a deductible, CARC 45 is a charge above the fee schedule or contracted rate, and CARC 16 is a claim with missing information or a billing error.</p>
+    <p>The group code says who carries the adjusted amount. The valid ones are CO (contractual obligation), OA (other adjustment), PI (payer initiated reduction) and PR (patient responsibility). A fifth, CR, is not to be used in version 005010 and later. CMS's <a href="https://www.cms.gov/Regulations-and-Guidance/Guidance/Manuals/Downloads/clm104c22.pdf" rel="nofollow noopener" target="_blank">remittance advice manual chapter</a> calls CO amounts "generally" a write-off that is "not billed to the patient," and says PR amounts "may be billed to the patient."</p>
+    <p>A RARC adds the detail a CARC cannot. Most are supplemental and explain an adjustment a CARC already reported. The rest start with "Alert:" and, in X12's words, "are never related to a specific adjustment or CARC." Of the 1,145 active codes on the <a href="https://x12.org/codes/remittance-advice-remark-codes" rel="nofollow noopener" target="_blank">X12 remark code list</a>, 194 are alerts.</p>
+    <p>The lists have different owners. CMS's manual says CMS maintains the remark codes and a separate committee maintains the reason codes. Both change three times a year, around March 1, July 1 and November 1.</p>
     <table>
       <thead>
-        <tr>
-          <th>Dimension</th>
-          <th>CARC (Claim Adjustment Reason Code)</th>
-          <th>RARC (Remittance Advice Remark Code)</th>
-        </tr>
+        <tr><th>Code</th><th>What it answers</th><th>Example</th><th>Where it sits in an 835</th></tr>
       </thead>
       <tbody>
-        <tr>
-          <td>What it answers</td>
-          <td>Why the paid amount differs from the billed amount</td>
-          <td>Additional detail on that adjustment, or general remittance information</td>
-        </tr>
-        <tr>
-          <td>Carries a group code</td>
-          <td>Yes, CO/PR/OA/PI determines who is financially responsible</td>
-          <td>No, RARCs carry no financial responsibility designation of their own</td>
-        </tr>
-        <tr>
-          <td>Segment location in 835</td>
-          <td>CAS segment, Loop 2100 or Loop 2110</td>
-          <td>LQ segment, referenced alongside the CAS or MOA/MIA segments</td>
-        </tr>
-        <tr>
-          <td>Specificity</td>
-          <td>Ranges from narrow (deductible applied) to broad catch-all categories</td>
-          <td>Usually narrower and more actionable than the CARC it accompanies</td>
-        </tr>
-        <tr>
-          <td>Two subtypes</td>
-          <td>No subtypes; one list</td>
-          <td>Supplemental (ties to a specific adjustment) and Informational/Alert (general notice)</td>
-        </tr>
-        <tr>
-          <td>Required pairing</td>
-          <td>Certain CARCs, CARC 16 explicitly, require at least one non-alert remark code by definition</td>
-          <td>Meaningless for routing without the CARC it's attached to</td>
-        </tr>
-        <tr>
-          <td>Maintained by</td>
-          <td>X12, published at x12.org/codes</td>
-          <td>X12, same registry, same publication cadence</td>
-        </tr>
+        <tr><td>Group code</td><td>Who carries the amount.</td><td>CO, PR</td><td>CAS01.</td></tr>
+        <tr><td>CARC</td><td>Why payment differs from the charge.</td><td>96, non-covered charge(s)</td><td>CAS02, then CAS05, CAS08 and on.</td></tr>
+        <tr><td>RARC</td><td>What exactly is wrong, or a general notice.</td><td>N125, MA130</td><td>LQ for a line; MOA or MIA for a whole claim.</td></tr>
       </tbody>
     </table>
-    <p>If you're already extracting the surrounding remittance advice, our post on <a href="/resources/blogs/835-remittance-advice-processing">835 remittance advice processing</a> covers pulling the CLP and CAS loops these codes live inside, and our piece on <a href="/resources/blogs/eob-parsing-automation">EOB parsing automation</a> covers the patient-facing document that describes the same denial in plain language, usually without any CARC or RARC at all.</p>
 
-    <h2>Worked example: same CARC, opposite required action</h2>
-    <p>Take a behavioral health clinic billing an established-patient office visit, CPT 99214, to the same commercial payer on two separate dates of service. Both claims come back on the 835 with the same group code and the same CARC.</p>
+    <h2>Where do denial codes sit in an 835 and on paper?</h2>
+    <p>In an 835 electronic remittance, each adjustment goes in a CAS segment. CAS01 holds the group code, followed by up to six sets of reason code, amount and quantity, from CAS02 to CAS04 through CAS17 to CAS19. An <a href="https://x12.org/resources/requests-for-interpretation/rfi-1811-837-multi-cas-wsame-group" rel="nofollow noopener" target="_blank">X12 interpretation</a> quotes that rule. <a href="https://x12.org/resources/requests-for-interpretation/rfi-2353-can-cas03-be-zero" rel="nofollow noopener" target="_blank">Another one</a> confirms that claim-level adjustments use the CAS segment in loop 2100 and line-level ones use loop 2110.</p>
+    <p>Remark codes live elsewhere. CMS's manual puts line-level remark codes in the LQ segment and claim-level ones in the MOA segment, or MIA for inpatient claims. So a remark code belongs to a line or a claim, not to one reason code. If the extractor drops the line it came from, the pairing is gone. Our post on <a href="/resources/blogs/835-remittance-advice-processing">835 remittance advice processing</a> walks through the CLP and CAS loops.</p>
+    <p>On a paper remittance or a payer PDF, the group code and CARC can print as one token. X12's reason code page gives "PR32" and "CO286" as examples of what a provider might see. The OCR step has to split off the two letters, then find the remark codes, which may print in their own column or in a code glossary. The guide to <a href="/resources/blogs/eob-parsing-automation">EOB parsing automation</a> covers the patient-facing version of the same document.</p>
+
+    <h2>Worked example: one CARC, opposite actions</h2>
+    <p>Take three lines from a hypothetical Medicare remittance to a medical equipment supplier. Lines 1 and 2 use the notices CMS prescribes for certain denied equipment and supply claims in <a href="https://www.cms.gov/Regulations-and-Guidance/Guidance/Manuals/Downloads/clm104c30.pdf" rel="nofollow noopener" target="_blank">chapter 30, section 150.8</a> of its claims processing manual. Line 3 uses codes that CGS, a Medicare contractor, lists for claims it returns.</p>
     <table>
       <thead>
-        <tr>
-          <th>Field</th>
-          <th>Claim A</th>
-          <th>Claim B</th>
-        </tr>
+        <tr><th>Field</th><th>Line 1</th><th>Line 2</th><th>Line 3</th></tr>
       </thead>
       <tbody>
-        <tr><td>Procedure billed</td><td>CPT 99214</td><td>CPT 99214</td></tr>
-        <tr><td>Group code</td><td>CO</td><td>CO</td></tr>
-        <tr><td>CARC</td><td>16, claim/service lacks information or has submission/billing error(s)</td><td>16, claim/service lacks information or has submission/billing error(s)</td></tr>
-        <tr><td>RARC</td><td>N56, procedure code billed is not correct/valid for the services billed or the date of service billed</td><td>MA130, claim contains incomplete and/or invalid information, no appeal rights afforded because the claim is unprocessable, submit a new claim</td></tr>
+        <tr><td>What happened</td><td>Billed with modifier GA: signed advance notice on file.</td><td>Billed with modifier GZ: no signed advance notice.</td><td>HCPCS code not valid on the date of service.</td></tr>
+        <tr><td>Group code</td><td>PR</td><td>CO</td><td>CO</td></tr>
+        <tr><td>CARC</td><td>96, non-covered charge(s).</td><td>96, non-covered charge(s).</td><td>16, missing information or billing error.</td></tr>
+        <tr><td>RARCs</td><td>N124</td><td>N125</td><td>M20, MA130</td></tr>
+        <tr><td>What the RARC says</td><td>The patient is liable, having been told in writing and agreed to pay.</td><td>Refund anything collected from the patient within 30 days.</td><td>Invalid HCPCS; no appeal rights, submit a new claim.</td></tr>
+        <tr><td>Next action</td><td>Bill the patient.</td><td>Do not bill; refund; decide on an appeal.</td><td>Fix the code and send a new claim.</td></tr>
       </tbody>
     </table>
-    <p>Read CARC 16 alone, and Claim A and Claim B look identical: a submission or billing error, provider-side financial responsibility because of the CO group code, and, on the surface, something to fix and appeal. A denial routing engine that only keys off the CARC would send both to the same queue, most likely a general "resubmit with corrected documentation" bucket.</p>
-    <p>Bring in the RARC and the two claims split into completely different remediation paths. On Claim A, N56 says specifically that the procedure code doesn't match the service or the date it was billed for, which points to a coding error, likely the wrong CPT was selected for that visit type, or an annual code-set update changed which code applied on that date. The fix is a corrected claim with the right procedure code, resubmitted through the normal claim-correction channel. No formal appeal needed, and treating it as one just adds weeks of turnaround for a five-minute fix.</p>
-    <p>On Claim B, MA130 says something categorically different: the claim is "unprocessable," a specific payer term meaning it never entered real adjudication, and there are no appeal rights attached to it at all. Routing this claim into an appeals workflow, attaching supporting documentation, requesting reconsideration, wastes staff time on a process the payer has already told you, in the remark code itself, will not be honored. The only correct action is to submit an entirely new claim with corrected information from scratch.</p>
-    <p>A routing engine built to read only the CARC treats both claims the same and gets both wrong in different ways: it over-processes Claim A as a formal appeal it never needed, and it wastes an appeal attempt on Claim B that the payer has explicitly foreclosed. A routing engine that reads only the RARC and drops the CARC has a different failure: it knows what N56 or MA130 means in isolation, but it has lost the group code, and without the group code it can't tell whether the resulting balance, if any survives correction, is a contractual write-off or something billable to the patient. Both codes have to be read as one unit for the routing decision to be right in either direction.</p>
+    <p>Lines 1 and 2 carry the same CARC and need opposite handling. On line 1, PR and N124 say the patient owes the amount, so it goes to patient billing. On line 2, CO and N125 say the supplier owns the loss, and any payment taken from the patient goes back. The post on <a href="/resources/blogs/advance-beneficiary-notice-processing">advance beneficiary notice processing</a> covers the signed notice that decides which line you get.</p>
+    <p>Line 2 also has a clock. The section 150.8 notice says an appeal filed within 30 days lets the supplier hold the refund until the decision, and an appeal can be filed any time within 120 days. If the appeal fails, the refund is due within 15 days. A router keyed on CARC 96 alone either bills a protected patient or writes off money a patient agreed to pay.</p>
+    <p>Line 3 shows a remark code that removes options. MA130 reads "no appeal rights are afforded because the claim is unprocessable." The <a href="https://cgsmedicare.com/partb/education/cse_data.html" rel="nofollow noopener" target="_blank">CGS page on returned claims</a> says such claims cannot be fixed through a redetermination or a reopening and must be sent as new claims. CMS instructions for returned claims, such as <a href="https://www.cms.gov/regulations-and-guidance/guidance/transmittals/downloads/r3475cp.pdf" rel="nofollow noopener" target="_blank">transmittal 3475</a>, pair CARC 16 with group code CO.</p>
+    <p>Sending line 3 to appeals also burns time. Under <a href="https://www.cms.gov/Regulations-and-Guidance/Guidance/Manuals/Downloads/clm104c01.pdf" rel="nofollow noopener" target="_blank">chapter 1 of the same manual</a>, a Medicare claim generally must be filed within 12 months of the date of service. A submission with an invalid procedure code does not count as a claim, so the corrected one still has to beat that deadline.</p>
 
-    <h2>Why CARC-only routing fails at scale</h2>
-    <p>The Claim A and Claim B pattern isn't a hand-picked edge case, it's the normal shape of the broad CARC codes. CARC 16 is one of the most frequently reported adjustment reasons across commercial and government payers precisely because it's a catch-all, which means the population of claims sitting behind it is unusually diverse in what needs to happen next. A team that builds routing logic keyed on CARC value alone will, for narrow codes like CARC 1, get correct behavior almost by accident, there's only one thing a deductible adjustment can mean. For broad codes like 16, 96, and 197, the same CARC-only logic collapses different remediation paths, a coding fix, a documentation appeal, a prior-authorization backfill, a total refile, into a single bucket and picks one default action for all of them.</p>
-    <p>The practical cost shows up as two separate failure modes rather than one obvious error. Claims that needed a fast correction get slow-walked through an appeals process that was never necessary. Claims that had no appeal rights get appealed anyway and simply time out or bounce, burning the calendar days before someone notices the payer already said no and the claim needs to be refiled, not resubmitted. Neither failure looks like a crash. Both look like a denial queue that's technically being worked but is quietly slower and less accurate than it should be.</p>
+    <h2>Which CARCs need a remark code?</h2>
+    <p>X12 writes the rule into some definitions. CARC 16 says "at least one Remark Code must be provided," and that it can be an NCPDP reject reason code or any RARC that is not an alert. CMS's manual explains why: some CARCs "are so generic that the reason for adjustment cannot be communicated clearly without at least one remark code," so the remark code carries the meaning.</p>
+    <p>A count of the X12 list as published on November 27, 2026 finds the same requirement in 15 of the 298 active CARCs. They are 16, 96, 129, 148, 201, 226, 227, 234, 237, 250, 251, 252, 267, 307 and A1. Separately, 23 active CARCs limit which group code goes with them. CARC 18, an exact duplicate, takes OA unless state workers' compensation rules require CO, and CARC 45 takes CO or PR "depending upon liability."</p>
+    <p>Usage notes also rule things out. CARC 16 says "Do not use this code for claims attachment(s)/other documentation." Attachments have their own codes: 252 when one is needed, 251 when the one received was incomplete, and 250 when it was the wrong document. A rule that sends every CO-16 to a "send the records" queue reads the code against its own definition.</p>
 
-    <h2>Building extraction that treats CARC and RARC as one signal</h2>
-    <p>The fix isn't exotic. It's extracting the CAS segment's adjustment trio, group code, CARC, and dollar amount, together with whatever LQ-segment remark codes are attached to that same adjustment, and keeping them joined as a single record rather than as two independently indexed fields. A few things follow from that:</p>
+    <h2>Where does automated denial routing go wrong?</h2>
+    <p>Keying on the CARC alone is the obvious failure. Five others show up once the basic pairing works.</p>
+    <h3>Remark codes on the wrong line</h3>
+    <p>Flatten every remark code on a claim into one list and a code from line 3 can land beside line 1's CARC. Keep the claim and line identity on every adjustment. Apply MOA or MIA remark codes to the whole claim and LQ codes only to their own line.</p>
+    <h3>Alerts read as reasons</h3>
+    <p>MA01 is an alert telling the provider it may appeal within 120 days. It sets a deadline, but it never explains why money was cut. MA13, another alert, warns: "You may be subject to penalties if you bill the patient for amounts not reported with the PR (patient responsibility) group code." Wire that rule into any patient billing step.</p>
+    <h3>OCR misreads that still look valid</h3>
+    <p>On printed remittances, the letter O and the digit 0 swap easily, and so do I and 1. A misread I turns the group code PI into P1, which is itself a valid CARC for property and casualty claims. A "letters then digits" pattern check lets that through. Check the group code against the four valid values and the reason code against the list, separately.</p>
+    <h3>Stale code lists</h3>
+    <p>Codes start and stop. N29, "Missing documentation/orders/notes/summary/report/chart," stopped on March 1, 2016. Validate each code against the list as it stood on the remittance date, and refresh the list after each update.</p>
+    <h3>Medicare rules applied to every payer</h3>
+    <p>The 30-day refund, the 120-day appeal and the MA130 rule are Medicare rules. Commercial payers use the same codes, but their appeal windows and corrected claim rules come from contracts and companion guides. The CAQH CORE operating rule limits which code combinations a health plan may use for each business scenario, per CMS <a href="https://www.cms.gov/regulations-and-guidance/guidance/transmittals/downloads/r1281otn.pdf" rel="nofollow noopener" target="_blank">transmittal 1281</a>. It does not say what the provider should do next.</p>
+
+    <h2>What should a denial code extractor check?</h2>
     <ul>
-      <li><strong>Never resolve a CARC to an action without checking for an attached remark code first.</strong> If the CARC's own definition requires one, as CARC 16's does explicitly, the absence of a parsed remark code should be treated as an extraction gap to investigate, not as "no additional detail available."</li>
-      <li><strong>Build the routing table on CARC-plus-RARC pairs, not on CARC alone, for the broad catch-all codes.</strong> CARC 16 paired with N56 routes to coding correction. CARC 16 paired with MA130 routes to full refile with no appeal step. CARC 16 paired with a documentation-related remark routes to the appeals team with the missing record attached. The CARC narrows the category; the RARC picks the specific path within it.</li>
-      <li><strong>Keep the group code attached through the whole pipeline, not just at ingestion.</strong> Whether a corrected claim, once resolved, leaves a balance the patient can be billed hinges on CO versus PR, and that distinction has to survive into whatever system generates patient statements downstream.</li>
-      <li><strong>Treat Alert-prefixed RARCs differently from supplemental ones.</strong> An Alert RARC is general information, an appeal-rights reminder or a payment-schedule note, and shouldn't be parsed as if it were describing the specific defect in the claim the way a supplemental RARC does.</li>
+      <li>Store one record per adjustment: claim, line, group code, CARC, amount and quantity, plus the RARCs for that line and for the claim.</li>
+      <li>Accept only CO, OA, PI or PR as group codes, and only CARCs and RARCs that were active on the remittance date.</li>
+      <li>Flag any of the 15 remark-required CARCs that arrives with no supplemental RARC at the line or claim. It is either a missed field or a payer error.</li>
+      <li>Check the group code rules written into the CARC text, such as OA for CARC 18. A mismatch usually means a misread.</li>
+      <li>Keep alerts in their own field for notices and deadlines, never as the reason.</li>
+      <li>Route on the full combination of group code, CARC and supplemental RARCs. Send combinations missing from the routing table to a person, not a default queue.</li>
+      <li>Pull patient balances from PR amounts only.</li>
+      <li>Put dates on the record: the refund deadline for an N125, the appeal window, and the filing limit for any claim that must be sent again.</li>
     </ul>
-    <p>None of this requires guessing. X12 publishes the full CARC and RARC lists, including which codes are Alert-only, at x12.org/codes, and the CAS and LQ segment structures in the 835 are fixed by the HIPAA-mandated transaction standard, so the join between a CARC and its remark codes is a parsing task against a known schema, not a heuristic. Our post on <a href="/resources/blogs/medical-coding-automation">medical coding automation</a> covers the adjacent problem of getting the original procedure and diagnosis codes right in the first place, which is often the upstream fix that a correctly routed N56-style denial points back to.</p>
-
-    <h2>What this means for an appeals workflow</h2>
-    <p>If you're building or evaluating automated denial and appeals routing, the practical takeaway is to stop treating the RARC as a nice-to-have enrichment on top of the CARC. For a large share of real-world denials, especially the broad catch-all CARCs that make up a disproportionate share of the denial queue, the RARC is where the actionable instruction lives, and the CARC's group code is where the financial-responsibility answer lives. Extraction that captures one without reliably joining it to the other produces a system that looks like it's automating appeals while automating a coin flip between the wrong action and the right one. Get the pairing right, respect the cases where the standard itself says a remark code is required, and the same denial queue that used to need a person reading each remittance advice line by line can be routed correctly without one.</p>
+    <p>Before trusting the router, replay a past quarter of remittances through it and compare each routed action with what the billing team did. Each disagreement is a missing combination, a misread code or a human error worth knowing about. For returns like line 3, the fix usually sits upstream, in the codes covered in our post on <a href="/resources/blogs/medical-coding-automation">medical coding automation</a>.</p>
+    <p>When remittances arrive as scans or PDFs instead of 835 files, the codes have to be read off the page first. DocsAPI, built by HyperVerge, is a document intelligence API that classifies documents such as EOBs and remittance advice and extracts their fields and tables. In its own <a href="/resources/blogs/ocr-accuracy-benchmark-2026">2026 benchmark on 1,700 real documents</a>, it read clean typed English at 97 to 99% and multi-page bank statement tables at 91%, so the code checks above still apply. Pricing starts at $0.02 per page, and access starts with a demo. The <a href="/documents/medical-docs">medical documents</a> page lists the other files it reads.</p>
     <p>Written by <a href="/author/nupura-ughade">Nupura Ughade</a>.</p>
 
     <p>Related guide: <a href="/resources/blogs/ocr-for-medical-documents">OCR for medical documents</a>.</p>
@@ -122,9 +95,9 @@ export const blogMd21: BlogPost = {
   category: "Healthcare",
   date: "September 19, 2026",
   datePublished: "2026-09-19T00:00:00.000Z",
-  dateModified: "2026-09-21T00:00:00.000Z",
-  last_updated: "September 21, 2026",
-  readTime: "11 min read",
+  dateModified: "2026-11-27T00:00:00.000Z",
+  last_updated: "November 27, 2026",
+  readTime: "10 min read",
   author: nupuraUghade,
   primary_keyword: "denial code extraction",
   secondary_keywords: [
@@ -141,32 +114,27 @@ export const blogMd21: BlogPost = {
     {
       question: "What is the difference between a CARC and a RARC?",
       answer:
-        "A Claim Adjustment Reason Code (CARC) explains why a payer paid an amount different from what was billed and carries a group code (CO, PR, OA, or PI) that determines who is financially responsible for the difference. A Remittance Advice Remark Code (RARC) adds specific detail about that adjustment, or conveys general processing information when prefaced with Alert. The CARC gives the category and financial responsibility; the RARC gives the actionable detail.",
+        "A CARC (claim adjustment reason code) says why a claim or service line was paid differently than it was billed, and it always comes with a group code such as CO or PR that says who carries the amount. A RARC (remittance advice remark code) adds detail about that adjustment. Remark codes that start with \"Alert:\" are general notices and never explain a specific adjustment.",
     },
     {
-      question: "Why do some CARC codes require a RARC to be complete?",
+      question: "Can the same CARC call for opposite actions?",
       answer:
-        "X12's own published definition for CARC 16 states that at least one non-Alert remark code must be provided alongside it. Broad catch-all CARCs like 16, 96, and 197 cover a wide range of underlying issues, so the remark code is where most of the specific, actionable detail lives. Without it, the CARC alone doesn't tell you what to fix.",
+        "Yes. In Medicare's notices for certain denied equipment and supply claims, CARC 96 with group code PR and RARC N124 means the patient agreed in writing to pay and can be billed. CARC 96 with group code CO and RARC N125 means the patient cannot be billed and anything collected must be refunded within 30 days. An appeal filed within those 30 days lets the supplier hold the refund until the decision.",
     },
     {
-      question: "What does CARC 16 mean and why does it show up so often?",
+      question: "Which CARCs require a remark code?",
       answer:
-        "CARC 16 means the claim or service lacks information or has a submission or billing error. It's broad by design, covering everything from a mismatched procedure code to missing documentation, which is exactly why it appears frequently across payers and why the accompanying remark code is essential to figuring out the specific fix.",
+        "On the X12 list as published on November 27, 2026, 15 of the 298 active CARCs say at least one remark code that is not an alert must be provided: 16, 96, 129, 148, 201, 226, 227, 234, 237, 250, 251, 252, 267, 307 and A1. If one of these arrives with no supplemental remark code, either a field was missed or the payer made an error.",
     },
     {
-      question: "Can the same CARC code require two completely different fixes?",
+      question: "Can you appeal a claim returned with CARC 16 and MA130?",
       answer:
-        "Yes. CARC 16 paired with a remark code like N56, which flags an invalid or mismatched procedure code, points to a straightforward coding correction and resubmission. The same CARC 16 paired with a remark code like MA130, which states the claim is unprocessable with no appeal rights, means the claim cannot be appealed at all and must be refiled as a new claim. The CARC is identical in both cases; the required action is opposite.",
+        "Not in Medicare. MA130 says no appeal rights are afforded because the claim is unprocessable. Medicare contractor CGS says these claims cannot be fixed through a redetermination or a reopening and must be corrected and sent as new claims, and the new claim still has to meet Medicare's 12-month filing limit.",
     },
     {
-      question: "What do the CO, PR, OA, and PI group codes mean?",
+      question: "Where are CARC and RARC codes in an 835 file?",
       answer:
-        "These two-letter prefixes attached to a CARC assign financial responsibility for the adjustment. CO stands for Contractual Obligation, meaning the provider absorbs the amount and cannot bill the patient. PR stands for Patient Responsibility, meaning the balance can be passed to the patient. OA is Other Adjustment and PI is Payer Initiated Reductions. A fifth code, CR for Corrections and Reversals, is not used in the current 5010 transaction version.",
-    },
-    {
-      question: "Why does automated denial routing built on CARC alone produce errors?",
-      answer:
-        "Because broad CARC codes collapse different remediation paths, a coding correction, a documentation appeal, or a full refile with no appeal rights, into a single code value. A routing engine that ignores the accompanying RARC picks one default action for all of them, which either sends fixable claims through an unnecessary appeals process or wastes an appeal attempt on a claim the payer has already stated cannot be appealed.",
+        "Adjustments are in CAS segments. CAS01 is the group code, followed by up to six sets of reason code, amount and quantity. Claim-level CAS segments sit in loop 2100 and line-level ones in loop 2110. Remark codes for a service line go in the LQ segment, and remark codes for a whole claim go in the MOA segment, or MIA for inpatient claims.",
     },
   ],
 }
